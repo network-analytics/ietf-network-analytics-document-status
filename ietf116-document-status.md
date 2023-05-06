@@ -108,7 +108,7 @@ https://datatracker.ietf.org/meeting/116/session/grow
 
 ### draft-cppy-grow-bmp-path-marking-tlv
 **URL**: https://datatracker.ietf.org/doc/draft-cppy-grow-bmp-path-marking-tlv/
-* **State**: Presented -12 at GROW 116
+* **State**: Presented -12 at GROW 116, adoptional call ended at April 21st, only 3 replied
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-cppy-grow-bmp-path-marking-tlv
 
 ### draft-francois-grow-bmp-loc-peer
