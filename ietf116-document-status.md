@@ -3,8 +3,11 @@
 IETF 116 Meeting minutes
 https://datatracker.ietf.org/doc/minutes-116-opsawg-202303280030/
 
+IETF 116 Meeting session
+https://datatracker.ietf.org/meeting/116/session/opsawg
+
 ### draft-ietf-opsawg-ipfix-srv6-srh
-* **URL**: URL: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-srv6-srh/
+* **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-srv6-srh/
 * **State**: -08 adopted at OPSAWG, IESG last call Telechat May 25th, SECDIR feedback addressed to add one sentence in operational considerational section, feedback pending
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-srv6-srh
 
@@ -20,6 +23,9 @@ https://datatracker.ietf.org/doc/minutes-116-opsawg-202303280030/
 
 IETF 116 Meeting minutes
 https://datatracker.ietf.org/doc/minutes-116-netconf-202303270400/
+
+IETF 116 Meeting session
+https://datatracker.ietf.org/meeting/116/session/netconf
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
@@ -60,6 +66,9 @@ https://datatracker.ietf.org/doc/minutes-116-netconf-202303270400/
 IETF 116 Meeting minutes
 https://datatracker.ietf.org/doc/minutes-116-ippm-202303270030/
 
+IETF 116 Meeting session
+https://datatracker.ietf.org/meeting/116/session/ippm
+
 ### draft-ahuang-ioam-on-path-delay
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-ioam-on-path-delay/
 * **State**: Presented -00 at IPPM 116, updated acknowledgement section
@@ -79,27 +88,30 @@ https://datatracker.ietf.org/doc/minutes-116-ippm-202303270030/
 IETF 116 Meeting minutes
 https://datatracker.ietf.org/doc/minutes-116-grow-202303300400/
 
+IETF 116 Meeting session
+https://datatracker.ietf.org/meeting/116/session/grow
+
 ### draft-ietf-grow-bmp-tlv
 **URL**: https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-tlv/
 * **State**: Presented -12 at GROW 116
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/ippm/?q=draft-ietf-grow-bmp-tlv
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-ietf-grow-bmp-tlv
 
 ### draft-ietf-grow-bmp-tlv-ebit
 **URL**: https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-tlv-ebit/
 * **State**: Presented -02 at GROW 116
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/ippm/?q=draft-ietf-grow-bmp-tlv-ebit
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-ietf-grow-bmp-tlv-ebit
 
 ### draft-ietf-grow-bmp-yang
 **URL**: https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-yang/
 * **State**: Presented -01 at GROW 116
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/ippm/?q=draft-ietf-grow-bmp-yang
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-ietf-grow-bmp-yang
 
 ### draft-cppy-grow-bmp-path-marking-tlv
 **URL**: https://datatracker.ietf.org/doc/draft-cppy-grow-bmp-path-marking-tlv/
 * **State**: Presented -12 at GROW 116
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/ippm/?q=draft-cppy-grow-bmp-path-marking-tlv
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-cppy-grow-bmp-path-marking-tlv
 
 ### draft-francois-grow-bmp-loc-peer
 **URL**: https://datatracker.ietf.org/doc/draft-francois-grow-bmp-loc-peer/
 * **State**: Presented -00 at GROW 116
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/ippm/?q=draft-francois-grow-bmp-loc-peer
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-francois-grow-bmp-loc-peer
