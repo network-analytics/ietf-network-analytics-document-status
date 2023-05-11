@@ -8,7 +8,7 @@ https://datatracker.ietf.org/meeting/116/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-srv6-srh
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-srv6-srh/
-* **State**: -08 adopted at OPSAWG, IESG last call Telechat May 25th, SECDIR feedback addressed to add one sentence in operational considerational section, feedback pending
+* **State**: -09 adopted at OPSAWG, IESG last call Telechat May 25th, SECDIR and RTGDIR feedback addressed, additional feedback from Med (Shepard) received, https://github.com/network-analytics/draft-ietf-opsawg-ipfix-srv6-srh/pull/24
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-srv6-srh
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
