@@ -11,6 +11,7 @@ https://datatracker.ietf.org/meeting/116/session/opsawg
 * **State**: -10 adopted at OPSAWG, IESG last call Telechat May 25th, SECDIR, TSVART and RTGDIR feedback addressed, several additional feedback from Paul (IANA) Med (Shepard) received and addressed in -10
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-srv6-srh
 * **History**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-srv6-srh/history/
+* **Ballot**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-srv6-srh/ballot/
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
