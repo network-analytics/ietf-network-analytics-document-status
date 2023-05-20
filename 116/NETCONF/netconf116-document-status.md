@@ -25,8 +25,9 @@ https://datatracker.ietf.org/meeting/116/session/netconf
 
 ### draft-tgraf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-notifications-versioning/
-* **State**: -03 adoption call at NETCONF will start soon, how to address revision changes in augmented YANG models need to be addressed in -04
+* **State**: -03 adoption call at NETCONF started on May 15th and ends May 31st, how to address revision changes in augmented YANG models needs to be addressed in -04, subscription section 2 based on Andy's input corrected to allign with section 4.1
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-notifications-versioning
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-yang-notifications-versioning/master/draft-tgraf-netconf-yang-notifications-versioning-03.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-yang-notifications-versioning/master/draft-tgraf-netconf-yang-notifications-versioning-04.txt
 
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
