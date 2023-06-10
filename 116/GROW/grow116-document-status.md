@@ -18,12 +18,12 @@ https://datatracker.ietf.org/meeting/116/session/grow
 
 ### draft-ietf-grow-bmp-yang
 **URL**: https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-yang/
-* **State**: Presented -01 at GROW 116
+* **State**: Presented -01 at GROW 116. Camilo sent new revision for review.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-ietf-grow-bmp-yang
 
 ### draft-cppy-grow-bmp-path-marking-tlv
 **URL**: https://datatracker.ietf.org/doc/draft-cppy-grow-bmp-path-marking-tlv/
-* **State**: Presented -12 at GROW 116, adoptional call ended at April 21st, only 3 replied
+* **State**: Presented -12 at GROW 116, adoptional call concluded sucessfully. -13 can be published to GROW.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/grow/?q=draft-cppy-grow-bmp-path-marking-tlv
 
 ### draft-francois-grow-bmp-loc-peer
