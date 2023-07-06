@@ -15,6 +15,6 @@ https://datatracker.ietf.org/meeting/116/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Presented -02 at OPSAWG 116, -02 adopted at OPSAWG, -03 addes examples and was sent out on June 9th to the mailing list, sync with Al Morton on IP Performance Registry pending
+* **State**: Presented -02 at OPSAWG 116, -02 adopted at OPSAWG, -03 addes examples and was sent out on June 9th to the mailing list, -04 on July 6th corrected the examples based on Benoit input, sync with Al Morton on IP Performance Registry pending
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
-* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/main/draft-ietf-opsawg-ipfix-on-path-telemetry-02.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/main/draft-ietf-opsawg-ipfix-on-path-telemetry-03.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/main/draft-ietf-opsawg-ipfix-on-path-telemetry-02.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/main/draft-ietf-opsawg-ipfix-on-path-telemetry-04.txt
