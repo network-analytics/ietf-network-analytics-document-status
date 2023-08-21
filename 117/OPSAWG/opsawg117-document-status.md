@@ -15,5 +15,5 @@ https://datatracker.ietf.org/meeting/117/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Presented -04 at OPSAWG 117, Fluvia XDP/eBPF implementation work in progress at hackathon 117
+* **State**: Presented -04 at OPSAWG 117, Fluvia XDP/eBPF implementation work in progress at hackathon 117, sync with IPPM on IP Performance Registry pending
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry

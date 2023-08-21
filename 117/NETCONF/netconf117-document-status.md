@@ -8,12 +8,13 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Presented -10 at NETCONF 117, feedback xxx
+* **State**: Presented -10 at NETCONF 117, pending updates tracked
+* **Tasks**: https://github.com/network-analytics/draft-ietf-netconf-udp-notif/issues/11
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -10 at NETCONF 117, feedback xxx
+* **State**: Presented -10 at NETCONF 117, agreed to update domain observation id terminology
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
 
 ### draft-ahuang-netconf-notif-yang
