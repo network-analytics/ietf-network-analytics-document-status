@@ -9,7 +9,7 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
 * **State**: Presented -10 at NETCONF 117, pending updates tracked
-* **Tasks**: https://github.com/network-analytics/draft-ietf-netconf-udp-notif/issues/11
+* **Tasks**: https://github.com/network-analytics/draft-ietf-netconf-udp-notif/issues/11 , externalise udp-client grouping to a dedicated draft
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 
 ### draft-ietf-netconf-distributed-notif
@@ -19,7 +19,7 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 
 ### draft-ahuang-netconf-notif-yang
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-notif-yang/
-* **State**: Mentioned -02 at NETCONF 117, feedback on mailing list
+* **State**: Mentioned -02 at NETCONF 117, feedback on mailing list, agreed to send an email to WG chairs and AD about how to manage CBOR SIDs
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ahuang-netconf-notif-yang
 
 ### draft-tgraf-netconf-yang-notifications-versioning
