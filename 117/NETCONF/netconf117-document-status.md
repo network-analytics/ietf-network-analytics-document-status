@@ -11,6 +11,7 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 * **State**: Presented -10 at NETCONF 117, pending updates tracked, applicability section update pending review, externalise udp-client grouping to a dedicated draft
 * **Tasks**: https://github.com/network-analytics/draft-ietf-netconf-udp-notif/issues/11
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/main/draft-ietf-netconf-udp-notif-10.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/main/draft-ietf-netconf-udp-notif-11.txt
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
