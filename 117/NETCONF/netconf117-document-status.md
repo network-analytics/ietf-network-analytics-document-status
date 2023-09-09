@@ -17,6 +17,7 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
 * **State**: Presented -10 at NETCONF 117, agreed to update domain observation id terminology
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/main/draft-ietf-netconf-distributed-notif-07.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/main/draft-ietf-netconf-distributed-notif-08.txt
 
 ### draft-ahuang-netconf-notif-yang
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-notif-yang/
@@ -30,8 +31,9 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
-* **State**: Presented -01 at NETCONF 116
+* **State**: Presented -01 at NETCONF 116, agreed to allign publisher id terminology
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-notif-sequencing
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-notif-sequencing/main/draft-tgraf-netconf-notif-sequencing-01.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-notif-sequencing/main/draft-tgraf-netconf-notif-sequencing-02.txt
 
 ### draft-tgraf-netconf-yang-push-observation-time
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
