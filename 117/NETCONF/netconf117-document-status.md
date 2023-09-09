@@ -17,7 +17,7 @@ https://datatracker.ietf.org/meeting/117/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
 * **State**: Presented -10 at NETCONF 117, agreed to update domain observation id terminology
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
-* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/main/draft-ietf-netconf-distributed-notif-07.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/main/draft-ietf-netconf-distributed-notif-08.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/master/draft-ietf-netconf-distributed-notif-07.txt&url2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/master/draft-ietf-netconf-distributed-notif-08.txt
 
 ### draft-ahuang-netconf-notif-yang
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-notif-yang/
