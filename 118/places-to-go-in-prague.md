@@ -47,9 +47,6 @@ Cafe Louvre - Traditional Czech
 https://www.cafelouvre.cz/en
 https://www.tripadvisor.com/Restaurant_Review-g274707-d809264-Reviews-Cafe_Louvre-Prague_Bohemia.html
 
-Nominanza River - Outdoor
-https://www.tripadvisor.com/Restaurant_Review-g274707-d4604801-Reviews-Nominanza_River-Prague_Bohemia.html
-
 Pepenero - Italian
 https://pepenero.cz/
 
