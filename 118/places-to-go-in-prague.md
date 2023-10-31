@@ -62,3 +62,9 @@ https://www.tripadvisor.com/Attraction_Review-g274707-d12411551-Reviews-Crazy_Da
 Tiki Taky Bar
 https://tikitaky.cz/?lang=en
 https://www.tripadvisor.com/Restaurant_Review-g274707-d2293268-Reviews-Tiki_Taky-Prague_Bohemia.html
+
+Hemingway Bar
+https://maps.app.goo.gl/rDaji9XBc6i8R8gU9
+
+Black Angel's Bar
+https://maps.app.goo.gl/UtLBeLMoctwUYiLz7
