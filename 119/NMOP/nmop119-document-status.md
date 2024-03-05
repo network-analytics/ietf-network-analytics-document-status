@@ -8,5 +8,11 @@ https://datatracker.ietf.org/meeting/119/session/nmop
 
 ### draft-netana-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-nmrg-network-anomaly-semantics/
-* **State**: Presented -01 at IEPG, NMRG and Hackathon 118, updated Table 2 with BMP peer_down reason codes and BMP events in rroute-monitoring according to BGP upper bound input from latest postmortem, need to allign ietf-incident-semantic-metadata with draft-feng-opsawg-incident-management and feedback Qin Wu
+* **State**: Presented -01 at IEPG, NMRG and Hackathon 118, updated Table 2 with BMP peer_down reason codes and BMP events in route-monitoring according to BGP upper bound input from latest postmortem. Alligned and referenced to draft-netana-nmop-network-anomaly-lifecycle
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmrg/?q=draft-netana-opsawg-nmrg-network-anomaly-semantics
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-opsawg-nmrg-network-anomaly-semantics
+
+### draft-netana-nmop-yang-kafka-integration
+* **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-kafka-integration/
+* **State**: Published on February 24th and sent to NMOP mailing list. Ahmed will review https://github.com/network-analytics/draft-netana-nmop-yang-kafka-integration/blob/main/draft-netana-nmop-yang-kafka-integration-00.txt#L681, https://github.com/network-analytics/draft-netana-nmop-yang-kafka-integration/blob/main/draft-netana-nmop-yang-kafka-integration-00.txt#L802 and https://github.com/network-analytics/draft-netana-nmop-yang-kafka-integration/blob/main/draft-netana-nmop-yang-kafka-integration-00.txt#L812 and reference draft-aelhassany-using-yang-library-to-validate-anydata 
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-yang-kafka-integration
