@@ -1,0 +1,3640 @@
+(6wind_yang-push) root@mtcubuntu02:/home/mtc/6wind_yang-push# python yp-6wind-test-suite-yb.py -a -v
+starting tcpdump: 6wind-yp-test-20240308-170956.pcap
+starting udp-listener on port: 10003
+UDP server up and listening on port: 10003
+WARNING:root:Since logging.warning is enabled you will see all actions and packets received inline
+A summary is given at the end.
+tcpdump: listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:8221cb39-ec10-4172-8777-32f8dd45f878">
+        <data/>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- TEST 1 - YANG Push periodical subscription ---
+WARNING:root:sending info packet with SYSLOG: --- Step 1.0: config subscriptionyp-6wind-test-yp-periodic-3000cs.xml
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+    <id>12345678</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters</datastore-xpath-filter>
+    <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <period>3000</period>
+    </periodic>
+    <encoding>encode-json</encoding>
+    <purpose>send notifications</purpose>
+    <source-address>203.0.113.58</source-address>
+    <receivers>
+    <receiver>
+        <name>udpnotifdestination</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+    </receiver>
+    </receivers>
+</subscription>
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+    <name>udpnotifdaemon</name>
+    <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+        <remote-address>100.105.30.10</remote-address>
+        <remote-port>10003</remote-port>
+    </udp-notif-receiver>
+    </receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:10:02.175903116+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1481,
+  "ietf-subscribed-notifications:subscription-started": {
+   "id": 12345678,
+   "ietf-yang-push:datastore": "ietf-datastores:operational",
+   "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']/counters",
+   "transport": "ietf-udp-notif-transport:udp-notif",
+   "encoding": "encode-json",
+   "purpose": "send notifications",
+   "ietf-yang-push:periodic": {
+    "period": 3000
+   }
+  }
+ }
+}
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:b48e5560-8d3d-4d65-b5f3-326e95394934">
+        <data>
+                <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+                        <subscription>
+                                <id>12345678</id>
+                                <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+                                <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters</datastore-xpath-filter>
+                                <encoding>encode-json</encoding>
+                                <purpose>send notifications</purpose>
+                                <source-address>203.0.113.58</source-address>
+                                <configured-subscription-state>valid</configured-subscription-state>
+                                <receivers>
+                                        <receiver>
+                                                <name>udpnotifdestination</name>
+                                                <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+                                        </receiver>
+                                        <receiver>
+                                                <name>CONFIG notif 12345678</name>
+                                                <sent-event-records>1</sent-event-records>
+                                                <excluded-event-records>0</excluded-event-records>
+                                                <state>active</state>
+                                        </receiver>
+                                </receivers>
+                                <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+                                        <period>3000</period>
+                                </periodic>
+                        </subscription>
+                        <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+                                <receiver-instance>
+                                        <name>udpnotifdaemon</name>
+                                        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+                                                <remote-address>100.105.30.10</remote-address>
+                                                <remote-port>10003</remote-port>
+                                        </udp-notif-receiver>
+                                </receiver-instance>
+                        </receiver-instances>
+                </subscriptions>
+        </data>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- Step 1.1: start of wait 300s
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:10:32.161541885+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1482,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8150384",
+           "in-unicast-pkts": "21684",
+           "in-discards": "17266",
+           "in-errors": "0",
+           "out-octets": "35215236",
+           "out-unicast-pkts": "392099",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:11:02.133535524+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1483,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8151497",
+           "in-unicast-pkts": "21687",
+           "in-discards": "17268",
+           "in-errors": "0",
+           "out-octets": "35218625",
+           "out-unicast-pkts": "392141",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:11:32.121527184+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1484,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8152267",
+           "in-unicast-pkts": "21689",
+           "in-discards": "17270",
+           "in-errors": "0",
+           "out-octets": "35226437",
+           "out-unicast-pkts": "392190",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:12:02.122817549+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1485,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8153380",
+           "in-unicast-pkts": "21692",
+           "in-discards": "17272",
+           "in-errors": "0",
+           "out-octets": "35229694",
+           "out-unicast-pkts": "392230",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:12:32.126627656+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1486,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8154150",
+           "in-unicast-pkts": "21694",
+           "in-discards": "17274",
+           "in-errors": "0",
+           "out-octets": "35233210",
+           "out-unicast-pkts": "392273",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:13:02.120194167+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1487,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8155263",
+           "in-unicast-pkts": "21697",
+           "in-discards": "17276",
+           "in-errors": "0",
+           "out-octets": "35236537",
+           "out-unicast-pkts": "392314",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:13:32.129935768+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1488,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8156033",
+           "in-unicast-pkts": "21699",
+           "in-discards": "17278",
+           "in-errors": "0",
+           "out-octets": "35240449",
+           "out-unicast-pkts": "392363",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:14:02.137446051+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1489,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8157146",
+           "in-unicast-pkts": "21702",
+           "in-discards": "17280",
+           "in-errors": "0",
+           "out-octets": "35243788",
+           "out-unicast-pkts": "392404",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:14:32.129547566+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1490,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8157916",
+           "in-unicast-pkts": "21704",
+           "in-discards": "17282",
+           "in-errors": "0",
+           "out-octets": "35247420",
+           "out-unicast-pkts": "392449",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:15:02.122622955+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1491,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8159029",
+           "in-unicast-pkts": "21707",
+           "in-discards": "17284",
+           "in-errors": "0",
+           "out-octets": "35250821",
+           "out-unicast-pkts": "392491",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 1.2: end of wait 300s
+WARNING:root:sending info packet with SYSLOG: --- TEST 1b - YANG Push periodical change interval subscription ---
+WARNING:root:sending info packet with SYSLOG: --- Step 1b.0: config subscriptionyp-6wind-test-yp-periodic-4500cs.xml
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+    <id>12345678</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters</datastore-xpath-filter>
+    <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <period>4500</period>
+    </periodic>
+    <encoding>encode-json</encoding>
+    <purpose>send notifications</purpose>
+    <source-address>203.0.113.58</source-address>
+    <receivers>
+    <receiver>
+        <name>udpnotifdestination</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+    </receiver>
+    </receivers>
+</subscription>
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+    <name>udpnotifdaemon</name>
+    <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+        <remote-address>100.105.30.10</remote-address>
+        <remote-port>10003</remote-port>
+    </udp-notif-receiver>
+    </receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config><===
+
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:996bcd4c-9985-40d0-8d0f-ce2748e08e1e">
+        <data>
+                <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+                        <subscription>
+                                <id>12345678</id>
+                                <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+                                <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters</datastore-xpath-filter>
+                                <encoding>encode-json</encoding>
+                                <purpose>send notifications</purpose>
+                                <source-address>203.0.113.58</source-address>
+                                <configured-subscription-state>valid</configured-subscription-state>
+                                <receivers>
+                                        <receiver>
+                                                <name>udpnotifdestination</name>
+                                                <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+                                        </receiver>
+                                        <receiver>
+                                                <name>CONFIG notif 12345678</name>
+                                                <sent-event-records>11</sent-event-records>
+                                                <excluded-event-records>0</excluded-event-records>
+                                                <state>active</state>
+                                        </receiver>
+                                </receivers>
+                                <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+                                        <period>4500</period>
+                                </periodic>
+                        </subscription>
+                        <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+                                <receiver-instance>
+                                        <name>udpnotifdaemon</name>
+                                        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+                                                <remote-address>100.105.30.10</remote-address>
+                                                <remote-port>10003</remote-port>
+                                        </udp-notif-receiver>
+                                </receiver-instance>
+                        </receiver-instances>
+                </subscriptions>
+        </data>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- Step 1b.1: start of wait 300s
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:15:32.128723010+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1492,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8159799",
+           "in-unicast-pkts": "21709",
+           "in-discards": "17286",
+           "in-errors": "0",
+           "out-octets": "35258177",
+           "out-unicast-pkts": "392552",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:16:02.121884066+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1493,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8160912",
+           "in-unicast-pkts": "21712",
+           "in-discards": "17288",
+           "in-errors": "0",
+           "out-octets": "35261520",
+           "out-unicast-pkts": "392593",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:16:32.124380684+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1494,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8161682",
+           "in-unicast-pkts": "21714",
+           "in-discards": "17290",
+           "in-errors": "0",
+           "out-octets": "35269246",
+           "out-unicast-pkts": "392641",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:17:02.133342509+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1495,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8162795",
+           "in-unicast-pkts": "21717",
+           "in-discards": "17292",
+           "in-errors": "0",
+           "out-octets": "35272565",
+           "out-unicast-pkts": "392682",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:17:32.125329777+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1496,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8163565",
+           "in-unicast-pkts": "21719",
+           "in-discards": "17294",
+           "in-errors": "0",
+           "out-octets": "35276243",
+           "out-unicast-pkts": "392728",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:18:02.126370225+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1497,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8164678",
+           "in-unicast-pkts": "21722",
+           "in-discards": "17296",
+           "in-errors": "0",
+           "out-octets": "35279558",
+           "out-unicast-pkts": "392769",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:18:32.126383696+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1498,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8165448",
+           "in-unicast-pkts": "21724",
+           "in-discards": "17298",
+           "in-errors": "0",
+           "out-octets": "35283458",
+           "out-unicast-pkts": "392818",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:19:02.119221456+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1499,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8166561",
+           "in-unicast-pkts": "21727",
+           "in-discards": "17300",
+           "in-errors": "0",
+           "out-octets": "35286751",
+           "out-unicast-pkts": "392858",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:19:32.124499926+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1500,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8167331",
+           "in-unicast-pkts": "21729",
+           "in-discards": "17302",
+           "in-errors": "0",
+           "out-octets": "35290383",
+           "out-unicast-pkts": "392903",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:20:02.122431853+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1501,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "8168444",
+           "in-unicast-pkts": "21732",
+           "in-discards": "17304",
+           "in-errors": "0",
+           "out-octets": "35293640",
+           "out-unicast-pkts": "392943",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 1b.2: end of wait 300s
+WARNING:root:sending info packet with SYSLOG: --- TEST 2 - change yp periodic interval time and xpath with same subscription ID---
+WARNING:root:sending info packet with SYSLOG: --- Step 2.0: config subscriptionyp-6wind-test-yp-periodic-12000cs-anchored.xml
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+    <id>12345678</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']</datastore-xpath-filter>
+    <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <period>12000</period>
+    <anchor-time>2024-04-06T11:51:15Z</anchor-time>
+    </periodic>
+    <encoding>encode-json</encoding>
+    <purpose>send notifications</purpose>
+    <source-address>203.0.113.58</source-address>
+    <receivers>
+    <receiver>
+        <name>udpnotifdestination</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+    </receiver>
+    </receivers>
+</subscription>
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+    <name>udpnotifdaemon</name>
+    <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+        <remote-address>100.105.30.10</remote-address>
+        <remote-port>10003</remote-port>
+    </udp-notif-receiver>
+    </receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 48468)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:20:03.520570812+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1502,
+  "ietf-subscribed-notifications:subscription-terminated": {
+   "id": 12345678,
+   "reason": "no-such-subscription"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:20:03.527043317+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1503,
+  "ietf-subscribed-notifications:subscription-started": {
+   "id": 12345678,
+   "ietf-yang-push:datastore": "ietf-datastores:operational",
+   "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']",
+   "transport": "ietf-udp-notif-transport:udp-notif",
+   "encoding": "encode-json",
+   "purpose": "send notifications",
+   "ietf-yang-push:periodic": {
+    "period": 12000,
+    "anchor-time": "2024-04-06T11:51:15+00:00"
+   }
+  }
+ }
+}
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:96989a6d-1029-45be-88de-f320e8f586ee">
+        <data>
+                <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+                        <subscription>
+                                <id>12345678</id>
+                                <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+                                <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']</datastore-xpath-filter>
+                                <encoding>encode-json</encoding>
+                                <purpose>send notifications</purpose>
+                                <source-address>203.0.113.58</source-address>
+                                <configured-subscription-state>valid</configured-subscription-state>
+                                <receivers>
+                                        <receiver>
+                                                <name>udpnotifdestination</name>
+                                                <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+                                        </receiver>
+                                        <receiver>
+                                                <name>CONFIG notif 12345678</name>
+                                                <sent-event-records>1</sent-event-records>
+                                                <excluded-event-records>0</excluded-event-records>
+                                                <state>active</state>
+                                        </receiver>
+                                </receivers>
+                                <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+                                        <period>12000</period>
+                                        <anchor-time>2024-04-06T11:51:15+00:00</anchor-time>
+                                </periodic>
+                        </subscription>
+                        <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+                                <receiver-instance>
+                                        <name>udpnotifdaemon</name>
+                                        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+                                                <remote-address>100.105.30.10</remote-address>
+                                                <remote-port>10003</remote-port>
+                                        </udp-notif-receiver>
+                                </receiver-instance>
+                        </receiver-instances>
+                </subscriptions>
+        </data>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- Step 2.1: start of wait 600s
+..
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:21:15.306728137+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1504,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "mtu": 1500,
+          "promiscuous": false,
+          "enabled": true,
+          "port": "pci-b11s0",
+          "rx-cp-protection": false,
+          "rx-cp-protection-offload": false,
+          "tx-cp-protection": false,
+          "oper-status": "UP",
+          "counters": {
+           "in-octets": "8170327",
+           "in-unicast-pkts": "21737",
+           "in-discards": "17308",
+           "in-errors": "0",
+           "out-octets": "35310455",
+           "out-unicast-pkts": "393072",
+           "out-discards": "0",
+           "out-errors": "0"
+          },
+          "ipv4": {
+           "enabled": true
+          },
+          "ipv6": {
+           "address": [
+            {
+             "ip": "fe80::250:56ff:fe82:3391/64"
+            }
+           ],
+           "enabled": true
+          },
+          "network-stack": {
+           "ipv4": {
+            "send-redirects": true,
+            "accept-redirects": false,
+            "accept-source-route": false,
+            "arp-announce": "any",
+            "arp-filter": false,
+            "arp-ignore": "any",
+            "arp-proxy": false,
+            "log-invalid-addresses": false
+           },
+           "ipv6": {
+            "autoconfiguration": true,
+            "accept-duplicate-address-detection": "always",
+            "accept-router-advert": "never",
+            "accept-redirects": false,
+            "accept-segment-routing": false,
+            "accept-source-route": false,
+            "router-solicitations": -1,
+            "use-temporary-addresses": "never"
+           }
+          },
+          "ethernet": {
+           "mac-address": "00:50:56:82:33:91",
+           "auto-negotiate": false,
+           "duplex-mode": "full",
+           "port-speed": "10gb",
+           "flow-control-rx": false,
+           "flow-control-tx": false
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+..
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:23:15.328124601+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1505,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "mtu": 1500,
+          "promiscuous": false,
+          "enabled": true,
+          "port": "pci-b11s0",
+          "rx-cp-protection": false,
+          "rx-cp-protection-offload": false,
+          "tx-cp-protection": false,
+          "oper-status": "UP",
+          "counters": {
+           "in-octets": "8174093",
+           "in-unicast-pkts": "21747",
+           "in-discards": "17316",
+           "in-errors": "0",
+           "out-octets": "35323894",
+           "out-unicast-pkts": "393248",
+           "out-discards": "0",
+           "out-errors": "0"
+          },
+          "ipv4": {
+           "enabled": true
+          },
+          "ipv6": {
+           "address": [
+            {
+             "ip": "fe80::250:56ff:fe82:3391/64"
+            }
+           ],
+           "enabled": true
+          },
+          "network-stack": {
+           "ipv4": {
+            "send-redirects": true,
+            "accept-redirects": false,
+            "accept-source-route": false,
+            "arp-announce": "any",
+            "arp-filter": false,
+            "arp-ignore": "any",
+            "arp-proxy": false,
+            "log-invalid-addresses": false
+           },
+           "ipv6": {
+            "autoconfiguration": true,
+            "accept-duplicate-address-detection": "always",
+            "accept-router-advert": "never",
+            "accept-redirects": false,
+            "accept-segment-routing": false,
+            "accept-source-route": false,
+            "router-solicitations": -1,
+            "use-temporary-addresses": "never"
+           }
+          },
+          "ethernet": {
+           "mac-address": "00:50:56:82:33:91",
+           "auto-negotiate": false,
+           "duplex-mode": "full",
+           "port-speed": "10gb",
+           "flow-control-rx": false,
+           "flow-control-tx": false
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:25:15.320023778+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1506,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "mtu": 1500,
+          "promiscuous": false,
+          "enabled": true,
+          "port": "pci-b11s0",
+          "rx-cp-protection": false,
+          "rx-cp-protection-offload": false,
+          "tx-cp-protection": false,
+          "oper-status": "UP",
+          "counters": {
+           "in-octets": "8177859",
+           "in-unicast-pkts": "21757",
+           "in-discards": "17324",
+           "in-errors": "0",
+           "out-octets": "35337109",
+           "out-unicast-pkts": "393420",
+           "out-discards": "0",
+           "out-errors": "0"
+          },
+          "ipv4": {
+           "enabled": true
+          },
+          "ipv6": {
+           "address": [
+            {
+             "ip": "fe80::250:56ff:fe82:3391/64"
+            }
+           ],
+           "enabled": true
+          },
+          "network-stack": {
+           "ipv4": {
+            "send-redirects": true,
+            "accept-redirects": false,
+            "accept-source-route": false,
+            "arp-announce": "any",
+            "arp-filter": false,
+            "arp-ignore": "any",
+            "arp-proxy": false,
+            "log-invalid-addresses": false
+           },
+           "ipv6": {
+            "autoconfiguration": true,
+            "accept-duplicate-address-detection": "always",
+            "accept-router-advert": "never",
+            "accept-redirects": false,
+            "accept-segment-routing": false,
+            "accept-source-route": false,
+            "router-solicitations": -1,
+            "use-temporary-addresses": "never"
+           }
+          },
+          "ethernet": {
+           "mac-address": "00:50:56:82:33:91",
+           "auto-negotiate": false,
+           "duplex-mode": "full",
+           "port-speed": "10gb",
+           "flow-control-rx": false,
+           "flow-control-tx": false
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+..
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:27:15.308217852+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1507,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "mtu": 1500,
+          "promiscuous": false,
+          "enabled": true,
+          "port": "pci-b11s0",
+          "rx-cp-protection": false,
+          "rx-cp-protection-offload": false,
+          "tx-cp-protection": false,
+          "oper-status": "UP",
+          "counters": {
+           "in-octets": "8181625",
+           "in-unicast-pkts": "21767",
+           "in-discards": "17332",
+           "in-errors": "0",
+           "out-octets": "35354642",
+           "out-unicast-pkts": "393599",
+           "out-discards": "0",
+           "out-errors": "0"
+          },
+          "ipv4": {
+           "enabled": true
+          },
+          "ipv6": {
+           "address": [
+            {
+             "ip": "fe80::250:56ff:fe82:3391/64"
+            }
+           ],
+           "enabled": true
+          },
+          "network-stack": {
+           "ipv4": {
+            "send-redirects": true,
+            "accept-redirects": false,
+            "accept-source-route": false,
+            "arp-announce": "any",
+            "arp-filter": false,
+            "arp-ignore": "any",
+            "arp-proxy": false,
+            "log-invalid-addresses": false
+           },
+           "ipv6": {
+            "autoconfiguration": true,
+            "accept-duplicate-address-detection": "always",
+            "accept-router-advert": "never",
+            "accept-redirects": false,
+            "accept-segment-routing": false,
+            "accept-source-route": false,
+            "router-solicitations": -1,
+            "use-temporary-addresses": "never"
+           }
+          },
+          "ethernet": {
+           "mac-address": "00:50:56:82:33:91",
+           "auto-negotiate": false,
+           "duplex-mode": "full",
+           "port-speed": "10gb",
+           "flow-control-rx": false,
+           "flow-control-tx": false
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+..
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:29:15.308877288+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1508,
+  "ietf-yang-push:push-update": {
+   "id": 12345678,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "mtu": 1500,
+          "promiscuous": false,
+          "enabled": true,
+          "port": "pci-b11s0",
+          "rx-cp-protection": false,
+          "rx-cp-protection-offload": false,
+          "tx-cp-protection": false,
+          "oper-status": "UP",
+          "counters": {
+           "in-octets": "8185391",
+           "in-unicast-pkts": "21777",
+           "in-discards": "17340",
+           "in-errors": "0",
+           "out-octets": "35367687",
+           "out-unicast-pkts": "393768",
+           "out-discards": "0",
+           "out-errors": "0"
+          },
+          "ipv4": {
+           "enabled": true
+          },
+          "ipv6": {
+           "address": [
+            {
+             "ip": "fe80::250:56ff:fe82:3391/64"
+            }
+           ],
+           "enabled": true
+          },
+          "network-stack": {
+           "ipv4": {
+            "send-redirects": true,
+            "accept-redirects": false,
+            "accept-source-route": false,
+            "arp-announce": "any",
+            "arp-filter": false,
+            "arp-ignore": "any",
+            "arp-proxy": false,
+            "log-invalid-addresses": false
+           },
+           "ipv6": {
+            "autoconfiguration": true,
+            "accept-duplicate-address-detection": "always",
+            "accept-router-advert": "never",
+            "accept-redirects": false,
+            "accept-segment-routing": false,
+            "accept-source-route": false,
+            "router-solicitations": -1,
+            "use-temporary-addresses": "never"
+           }
+          },
+          "ethernet": {
+           "mac-address": "00:50:56:82:33:91",
+           "auto-negotiate": false,
+           "duplex-mode": "full",
+           "port-speed": "10gb",
+           "flow-control-rx": false,
+           "flow-control-tx": false
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}
+.WARNING:root:sending info packet with SYSLOG: --- Step 2.2: end of wait 600s
+WARNING:root:sending info packet with SYSLOG: --- Step 2.3: remove subscription
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><id>12345678</id></subscription></subscriptions>
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 38975)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:30:04.237878911+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1509,
+  "ietf-subscribed-notifications:subscription-terminated": {
+   "id": 12345678,
+   "reason": "no-such-subscription"
+  }
+ }
+}
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers"><receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><name>udpnotifdaemon</name></receiver-instance></receiver-instances>
+</subscriptions>
+</config><===
+
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:8a82410f-893c-4e7c-885b-139cd61e37a9">
+        <data/>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- TEST 3 - YANG Push on-change sync-on-start ---
+WARNING:root:sending info packet with SYSLOG: --- Step 3.0: config subscriptionyp-6wind-test-yp-on-change.xml
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+    <id>12345678</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/l3vrf/interface/loopback/enabled</datastore-xpath-filter>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <sync-on-start>true</sync-on-start>    
+    </on-change>
+    <encoding>encode-json</encoding>
+    <purpose>send notifications</purpose>
+    <source-address>203.0.113.58</source-address>
+    <receivers>
+    <receiver>
+        <name>udpnotifdestination</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+    </receiver>
+    </receivers>
+</subscription>
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+    <name>udpnotifdaemon</name>
+    <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+        <remote-address>100.105.30.10</remote-address>
+        <remote-port>10003</remote-port>
+    </udp-notif-receiver>
+    </receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:30:05.294641502+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1511,
+  "ietf-subscribed-notifications:subscription-started": {
+   "id": 12345678,
+   "ietf-yang-push:datastore": "ietf-datastores:operational",
+   "ietf-yang-push:datastore-xpath-filter": "/state/vrf/l3vrf/interface/loopback/enabled",
+   "transport": "ietf-udp-notif-transport:udp-notif",
+   "encoding": "encode-json",
+   "purpose": "send notifications",
+   "ietf-yang-push:on-change": {
+    "sync-on-start": true
+   }
+  }
+ }
+}
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:544e0736-d930-4d9c-a42c-6486f7b1624c">
+        <data>
+                <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+                        <subscription>
+                                <id>12345678</id>
+                                <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+                                <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/l3vrf/interface/loopback/enabled</datastore-xpath-filter>
+                                <encoding>encode-json</encoding>
+                                <purpose>send notifications</purpose>
+                                <source-address>203.0.113.58</source-address>
+                                <configured-subscription-state>valid</configured-subscription-state>
+                                <receivers>
+                                        <receiver>
+                                                <name>udpnotifdestination</name>
+                                                <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
+                                        </receiver>
+                                        <receiver>
+                                                <name>CONFIG notif 12345678</name>
+                                                <sent-event-records>1</sent-event-records>
+                                                <excluded-event-records>0</excluded-event-records>
+                                                <state>active</state>
+                                        </receiver>
+                                </receivers>
+                                <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+                                        <sync-on-start>true</sync-on-start>
+                                </on-change>
+                        </subscription>
+                        <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+                                <receiver-instance>
+                                        <name>udpnotifdaemon</name>
+                                        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+                                                <remote-address>100.105.30.10</remote-address>
+                                                <remote-port>10003</remote-port>
+                                        </udp-notif-receiver>
+                                </receiver-instance>
+                        </receiver-instances>
+                </subscriptions>
+        </data>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- Step 3.1: start of wait 60s
+.WARNING:root:sending info packet with SYSLOG: --- Step 3.2: end of wait 60s
+WARNING:root:sending info packet with SYSLOG: --- Step 3.3: Set Loopback down
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><config xmlns="urn:6wind:vrouter">
+<vrf>
+  <name>main</name>
+  <l3vrf>
+    <name>A9</name>
+    <interface xmlns="urn:6wind:vrouter/interface">
+      <loopback xmlns="urn:6wind:vrouter/loopback">
+        <name>Loopback-A9</name>
+        <enabled>false</enabled>
+      </loopback>
+    </interface>
+  </l3vrf>
+</vrf>
+</config>
+
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:31:06.102691304+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1512,
+  "ietf-yang-push:push-change-update": {
+   "id": 12345678,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-1",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": false
+       }
+      }
+     ]
+    }
+   },
+   "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:31:06.102579323+00:00"
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 3.4: start of wait 60s
+.WARNING:root:sending info packet with SYSLOG: --- Step 3.5: end of wait 60s
+WARNING:root:sending info packet with SYSLOG: --- Step 3.6: Set Loopback up
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><config xmlns="urn:6wind:vrouter">
+<vrf>
+  <name>main</name>
+  <l3vrf>
+    <name>A9</name>
+    <interface xmlns="urn:6wind:vrouter/interface">
+      <loopback xmlns="urn:6wind:vrouter/loopback">
+        <name>Loopback-A9</name>
+        <enabled>true</enabled>
+      </loopback>
+    </interface>
+  </l3vrf>
+</vrf>
+</config>
+
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:32:06.576540679+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1513,
+  "ietf-yang-push:push-change-update": {
+   "id": 12345678,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-2",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": true
+       }
+      }
+     ]
+    }
+   },
+   "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:32:06.576436622+00:00"
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 3.7: start of wait 60s
+.WARNING:root:sending info packet with SYSLOG: --- Step 3.8: end of wait 60s
+WARNING:root:sending info packet with SYSLOG: --- Step 3.9: Set Loopback down
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><config xmlns="urn:6wind:vrouter">
+<vrf>
+  <name>main</name>
+  <l3vrf>
+    <name>A9</name>
+    <interface xmlns="urn:6wind:vrouter/interface">
+      <loopback xmlns="urn:6wind:vrouter/loopback">
+        <name>Loopback-A9</name>
+        <enabled>false</enabled>
+      </loopback>
+    </interface>
+  </l3vrf>
+</vrf>
+</config>
+
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:33:07.280759330+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1514,
+  "ietf-yang-push:push-change-update": {
+   "id": 12345678,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-3",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": false
+       }
+      }
+     ]
+    }
+   },
+   "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:33:07.280660240+00:00"
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 3.10: start of wait 60s
+.WARNING:root:sending info packet with SYSLOG: --- Step 3.11: end of wait 60s
+WARNING:root:sending info packet with SYSLOG: --- Step 3.12: Set Loopback up
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><config xmlns="urn:6wind:vrouter">
+<vrf>
+  <name>main</name>
+  <l3vrf>
+    <name>A9</name>
+    <interface xmlns="urn:6wind:vrouter/interface">
+      <loopback xmlns="urn:6wind:vrouter/loopback">
+        <name>Loopback-A9</name>
+        <enabled>true</enabled>
+      </loopback>
+    </interface>
+  </l3vrf>
+</vrf>
+</config>
+
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:34:07.776844449+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1515,
+  "ietf-yang-push:push-change-update": {
+   "id": 12345678,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-4",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": true
+       }
+      }
+     ]
+    }
+   },
+   "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:34:07.776739137+00:00"
+  }
+ }
+}
+WARNING:root:sending info packet with SYSLOG: --- Step 3.13: start of wait 60s
+.WARNING:root:sending info packet with SYSLOG: --- Step 3.14: end of wait 60s
+WARNING:root:sending info packet with SYSLOG: --- Step 3.15: remove subscription
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><id>12345678</id></subscription></subscriptions>
+</config><===
+
+
+
+Client IP Address:('203.0.113.58', 58642)
+{
+ "ietf-subscribed-notifications:notification": {
+  "eventTime": "2024-03-08T16:35:08.202189484+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "publisherId": 0,
+  "sequenceNumber": 1516,
+  "ietf-subscribed-notifications:subscription-terminated": {
+   "id": 12345678,
+   "reason": "no-such-subscription"
+  }
+ }
+}
+WARNING:root:===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers"><receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><name>udpnotifdaemon</name></receiver-instance></receiver-instances>
+</subscriptions>
+</config><===
+
+WARNING:root:===> Get YP subscriptions:
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9ee9f530-fb77-4616-976f-69837ea28f2f">
+        <data/>
+</rpc-reply>
+<===
+
+WARNING:root:sending info packet with SYSLOG: --- Step 3.6: wait 60s for last msgs
+.WARNING:root:sending info packet with SYSLOG: --- END OF TESTS \---
+
+
+ ============================== TEST SUMMARY ==============================
+
+Packets received: 
+ ------------------------------ 
+
+0000 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0001 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0002 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0003 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0004 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0005 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0006 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0007 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0008 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0009 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0010 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0011 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0012 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0013 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0014 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0015 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0016 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0017 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0018 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0019 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0020 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0021 Ether / IP / UDP 203.0.113.58:48468 > 100.105.30.10:10003 / Raw
+0022 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0023 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0024 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0025 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0026 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0027 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0028 Ether / IP / UDP 203.0.113.58:38975 > 100.105.30.10:10003 / Raw
+0029 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+0030 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+0031 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+0032 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+0033 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+0034 Ether / IP / UDP 203.0.113.58:58642 > 100.105.30.10:10003 / Raw
+------------------------------
+length of capture: 35
+
+ ====================  DETAILS  ==================== 
+
+eventTime 2024-03-08T16:10:02.175903116+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1481
+ietf-subscribed-notifications:subscription-started length( 7 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:10:32.161541885+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1482
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:11:02.133535524+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1483
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:11:32.121527184+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1484
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:12:02.122817549+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1485
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:12:32.126627656+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1486
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:13:02.120194167+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1487
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:13:32.129935768+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1488
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:14:02.137446051+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1489
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:14:32.129547566+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1490
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:15:02.122622955+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1491
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:15:32.128723010+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1492
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:16:02.121884066+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1493
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:16:32.124380684+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1494
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:17:02.133342509+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1495
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:17:32.125329777+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1496
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:18:02.126370225+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1497
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:18:32.126383696+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1498
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:19:02.119221456+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1499
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:19:32.124499926+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1500
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:20:02.122431853+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1501
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:20:03.520570812+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1502
+ietf-subscribed-notifications:subscription-terminated length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:20:03.527043317+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1503
+ietf-subscribed-notifications:subscription-started length( 7 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:21:15.306728137+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1504
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:23:15.328124601+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1505
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:25:15.320023778+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1506
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:27:15.308217852+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1507
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:29:15.308877288+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1508
+ietf-yang-push:push-update length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:30:04.237878911+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1509
+ietf-subscribed-notifications:subscription-terminated length( 2 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:30:05.294641502+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1511
+ietf-subscribed-notifications:subscription-started length( 7 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:31:06.102691304+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1512
+ietf-yang-push:push-change-update length( 3 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:32:06.576540679+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1513
+ietf-yang-push:push-change-update length( 3 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:33:07.280759330+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1514
+ietf-yang-push:push-change-update length( 3 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:34:07.776844449+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1515
+ietf-yang-push:push-change-update length( 3 )
+
+ -------------------------------------------------- 
+
+eventTime 2024-03-08T16:35:08.202189484+00:00
+sysName daisy-ietf-ipf-zbl1843-r-daisy-58
+publisherId 0
+sequenceNumber 1516
+ietf-subscribed-notifications:subscription-terminated length( 2 )
+
+ -------------------------------------------------- 
+
+====================ALL PACKETS RECEIVED==================== 
+ [
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:10:02.175903116+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1481,
+   "ietf-subscribed-notifications:subscription-started": {
+    "id": 12345678,
+    "ietf-yang-push:datastore": "ietf-datastores:operational",
+    "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']/counters",
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "encode-json",
+    "purpose": "send notifications",
+    "ietf-yang-push:periodic": {
+     "period": 3000
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:10:32.161541885+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1482,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8150384",
+            "in-unicast-pkts": "21684",
+            "in-discards": "17266",
+            "in-errors": "0",
+            "out-octets": "35215236",
+            "out-unicast-pkts": "392099",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:11:02.133535524+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1483,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8151497",
+            "in-unicast-pkts": "21687",
+            "in-discards": "17268",
+            "in-errors": "0",
+            "out-octets": "35218625",
+            "out-unicast-pkts": "392141",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:11:32.121527184+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1484,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8152267",
+            "in-unicast-pkts": "21689",
+            "in-discards": "17270",
+            "in-errors": "0",
+            "out-octets": "35226437",
+            "out-unicast-pkts": "392190",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:12:02.122817549+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1485,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8153380",
+            "in-unicast-pkts": "21692",
+            "in-discards": "17272",
+            "in-errors": "0",
+            "out-octets": "35229694",
+            "out-unicast-pkts": "392230",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:12:32.126627656+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1486,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8154150",
+            "in-unicast-pkts": "21694",
+            "in-discards": "17274",
+            "in-errors": "0",
+            "out-octets": "35233210",
+            "out-unicast-pkts": "392273",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:13:02.120194167+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1487,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8155263",
+            "in-unicast-pkts": "21697",
+            "in-discards": "17276",
+            "in-errors": "0",
+            "out-octets": "35236537",
+            "out-unicast-pkts": "392314",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:13:32.129935768+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1488,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8156033",
+            "in-unicast-pkts": "21699",
+            "in-discards": "17278",
+            "in-errors": "0",
+            "out-octets": "35240449",
+            "out-unicast-pkts": "392363",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:14:02.137446051+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1489,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8157146",
+            "in-unicast-pkts": "21702",
+            "in-discards": "17280",
+            "in-errors": "0",
+            "out-octets": "35243788",
+            "out-unicast-pkts": "392404",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:14:32.129547566+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1490,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8157916",
+            "in-unicast-pkts": "21704",
+            "in-discards": "17282",
+            "in-errors": "0",
+            "out-octets": "35247420",
+            "out-unicast-pkts": "392449",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:15:02.122622955+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1491,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8159029",
+            "in-unicast-pkts": "21707",
+            "in-discards": "17284",
+            "in-errors": "0",
+            "out-octets": "35250821",
+            "out-unicast-pkts": "392491",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:15:32.128723010+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1492,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8159799",
+            "in-unicast-pkts": "21709",
+            "in-discards": "17286",
+            "in-errors": "0",
+            "out-octets": "35258177",
+            "out-unicast-pkts": "392552",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:16:02.121884066+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1493,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8160912",
+            "in-unicast-pkts": "21712",
+            "in-discards": "17288",
+            "in-errors": "0",
+            "out-octets": "35261520",
+            "out-unicast-pkts": "392593",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:16:32.124380684+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1494,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8161682",
+            "in-unicast-pkts": "21714",
+            "in-discards": "17290",
+            "in-errors": "0",
+            "out-octets": "35269246",
+            "out-unicast-pkts": "392641",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:17:02.133342509+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1495,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8162795",
+            "in-unicast-pkts": "21717",
+            "in-discards": "17292",
+            "in-errors": "0",
+            "out-octets": "35272565",
+            "out-unicast-pkts": "392682",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:17:32.125329777+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1496,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8163565",
+            "in-unicast-pkts": "21719",
+            "in-discards": "17294",
+            "in-errors": "0",
+            "out-octets": "35276243",
+            "out-unicast-pkts": "392728",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:18:02.126370225+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1497,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8164678",
+            "in-unicast-pkts": "21722",
+            "in-discards": "17296",
+            "in-errors": "0",
+            "out-octets": "35279558",
+            "out-unicast-pkts": "392769",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:18:32.126383696+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1498,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8165448",
+            "in-unicast-pkts": "21724",
+            "in-discards": "17298",
+            "in-errors": "0",
+            "out-octets": "35283458",
+            "out-unicast-pkts": "392818",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:19:02.119221456+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1499,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8166561",
+            "in-unicast-pkts": "21727",
+            "in-discards": "17300",
+            "in-errors": "0",
+            "out-octets": "35286751",
+            "out-unicast-pkts": "392858",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:19:32.124499926+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1500,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8167331",
+            "in-unicast-pkts": "21729",
+            "in-discards": "17302",
+            "in-errors": "0",
+            "out-octets": "35290383",
+            "out-unicast-pkts": "392903",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:20:02.122431853+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1501,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "8168444",
+            "in-unicast-pkts": "21732",
+            "in-discards": "17304",
+            "in-errors": "0",
+            "out-octets": "35293640",
+            "out-unicast-pkts": "392943",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:20:03.520570812+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1502,
+   "ietf-subscribed-notifications:subscription-terminated": {
+    "id": 12345678,
+    "reason": "no-such-subscription"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:20:03.527043317+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1503,
+   "ietf-subscribed-notifications:subscription-started": {
+    "id": 12345678,
+    "ietf-yang-push:datastore": "ietf-datastores:operational",
+    "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']",
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "encode-json",
+    "purpose": "send notifications",
+    "ietf-yang-push:periodic": {
+     "period": 12000,
+     "anchor-time": "2024-04-06T11:51:15+00:00"
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:21:15.306728137+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1504,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "mtu": 1500,
+           "promiscuous": false,
+           "enabled": true,
+           "port": "pci-b11s0",
+           "rx-cp-protection": false,
+           "rx-cp-protection-offload": false,
+           "tx-cp-protection": false,
+           "oper-status": "UP",
+           "counters": {
+            "in-octets": "8170327",
+            "in-unicast-pkts": "21737",
+            "in-discards": "17308",
+            "in-errors": "0",
+            "out-octets": "35310455",
+            "out-unicast-pkts": "393072",
+            "out-discards": "0",
+            "out-errors": "0"
+           },
+           "ipv4": {
+            "enabled": true
+           },
+           "ipv6": {
+            "address": [
+             {
+              "ip": "fe80::250:56ff:fe82:3391/64"
+             }
+            ],
+            "enabled": true
+           },
+           "network-stack": {
+            "ipv4": {
+             "send-redirects": true,
+             "accept-redirects": false,
+             "accept-source-route": false,
+             "arp-announce": "any",
+             "arp-filter": false,
+             "arp-ignore": "any",
+             "arp-proxy": false,
+             "log-invalid-addresses": false
+            },
+            "ipv6": {
+             "autoconfiguration": true,
+             "accept-duplicate-address-detection": "always",
+             "accept-router-advert": "never",
+             "accept-redirects": false,
+             "accept-segment-routing": false,
+             "accept-source-route": false,
+             "router-solicitations": -1,
+             "use-temporary-addresses": "never"
+            }
+           },
+           "ethernet": {
+            "mac-address": "00:50:56:82:33:91",
+            "auto-negotiate": false,
+            "duplex-mode": "full",
+            "port-speed": "10gb",
+            "flow-control-rx": false,
+            "flow-control-tx": false
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:23:15.328124601+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1505,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "mtu": 1500,
+           "promiscuous": false,
+           "enabled": true,
+           "port": "pci-b11s0",
+           "rx-cp-protection": false,
+           "rx-cp-protection-offload": false,
+           "tx-cp-protection": false,
+           "oper-status": "UP",
+           "counters": {
+            "in-octets": "8174093",
+            "in-unicast-pkts": "21747",
+            "in-discards": "17316",
+            "in-errors": "0",
+            "out-octets": "35323894",
+            "out-unicast-pkts": "393248",
+            "out-discards": "0",
+            "out-errors": "0"
+           },
+           "ipv4": {
+            "enabled": true
+           },
+           "ipv6": {
+            "address": [
+             {
+              "ip": "fe80::250:56ff:fe82:3391/64"
+             }
+            ],
+            "enabled": true
+           },
+           "network-stack": {
+            "ipv4": {
+             "send-redirects": true,
+             "accept-redirects": false,
+             "accept-source-route": false,
+             "arp-announce": "any",
+             "arp-filter": false,
+             "arp-ignore": "any",
+             "arp-proxy": false,
+             "log-invalid-addresses": false
+            },
+            "ipv6": {
+             "autoconfiguration": true,
+             "accept-duplicate-address-detection": "always",
+             "accept-router-advert": "never",
+             "accept-redirects": false,
+             "accept-segment-routing": false,
+             "accept-source-route": false,
+             "router-solicitations": -1,
+             "use-temporary-addresses": "never"
+            }
+           },
+           "ethernet": {
+            "mac-address": "00:50:56:82:33:91",
+            "auto-negotiate": false,
+            "duplex-mode": "full",
+            "port-speed": "10gb",
+            "flow-control-rx": false,
+            "flow-control-tx": false
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:25:15.320023778+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1506,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "mtu": 1500,
+           "promiscuous": false,
+           "enabled": true,
+           "port": "pci-b11s0",
+           "rx-cp-protection": false,
+           "rx-cp-protection-offload": false,
+           "tx-cp-protection": false,
+           "oper-status": "UP",
+           "counters": {
+            "in-octets": "8177859",
+            "in-unicast-pkts": "21757",
+            "in-discards": "17324",
+            "in-errors": "0",
+            "out-octets": "35337109",
+            "out-unicast-pkts": "393420",
+            "out-discards": "0",
+            "out-errors": "0"
+           },
+           "ipv4": {
+            "enabled": true
+           },
+           "ipv6": {
+            "address": [
+             {
+              "ip": "fe80::250:56ff:fe82:3391/64"
+             }
+            ],
+            "enabled": true
+           },
+           "network-stack": {
+            "ipv4": {
+             "send-redirects": true,
+             "accept-redirects": false,
+             "accept-source-route": false,
+             "arp-announce": "any",
+             "arp-filter": false,
+             "arp-ignore": "any",
+             "arp-proxy": false,
+             "log-invalid-addresses": false
+            },
+            "ipv6": {
+             "autoconfiguration": true,
+             "accept-duplicate-address-detection": "always",
+             "accept-router-advert": "never",
+             "accept-redirects": false,
+             "accept-segment-routing": false,
+             "accept-source-route": false,
+             "router-solicitations": -1,
+             "use-temporary-addresses": "never"
+            }
+           },
+           "ethernet": {
+            "mac-address": "00:50:56:82:33:91",
+            "auto-negotiate": false,
+            "duplex-mode": "full",
+            "port-speed": "10gb",
+            "flow-control-rx": false,
+            "flow-control-tx": false
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:27:15.308217852+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1507,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "mtu": 1500,
+           "promiscuous": false,
+           "enabled": true,
+           "port": "pci-b11s0",
+           "rx-cp-protection": false,
+           "rx-cp-protection-offload": false,
+           "tx-cp-protection": false,
+           "oper-status": "UP",
+           "counters": {
+            "in-octets": "8181625",
+            "in-unicast-pkts": "21767",
+            "in-discards": "17332",
+            "in-errors": "0",
+            "out-octets": "35354642",
+            "out-unicast-pkts": "393599",
+            "out-discards": "0",
+            "out-errors": "0"
+           },
+           "ipv4": {
+            "enabled": true
+           },
+           "ipv6": {
+            "address": [
+             {
+              "ip": "fe80::250:56ff:fe82:3391/64"
+             }
+            ],
+            "enabled": true
+           },
+           "network-stack": {
+            "ipv4": {
+             "send-redirects": true,
+             "accept-redirects": false,
+             "accept-source-route": false,
+             "arp-announce": "any",
+             "arp-filter": false,
+             "arp-ignore": "any",
+             "arp-proxy": false,
+             "log-invalid-addresses": false
+            },
+            "ipv6": {
+             "autoconfiguration": true,
+             "accept-duplicate-address-detection": "always",
+             "accept-router-advert": "never",
+             "accept-redirects": false,
+             "accept-segment-routing": false,
+             "accept-source-route": false,
+             "router-solicitations": -1,
+             "use-temporary-addresses": "never"
+            }
+           },
+           "ethernet": {
+            "mac-address": "00:50:56:82:33:91",
+            "auto-negotiate": false,
+            "duplex-mode": "full",
+            "port-speed": "10gb",
+            "flow-control-rx": false,
+            "flow-control-tx": false
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:29:15.308877288+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1508,
+   "ietf-yang-push:push-update": {
+    "id": 12345678,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "mtu": 1500,
+           "promiscuous": false,
+           "enabled": true,
+           "port": "pci-b11s0",
+           "rx-cp-protection": false,
+           "rx-cp-protection-offload": false,
+           "tx-cp-protection": false,
+           "oper-status": "UP",
+           "counters": {
+            "in-octets": "8185391",
+            "in-unicast-pkts": "21777",
+            "in-discards": "17340",
+            "in-errors": "0",
+            "out-octets": "35367687",
+            "out-unicast-pkts": "393768",
+            "out-discards": "0",
+            "out-errors": "0"
+           },
+           "ipv4": {
+            "enabled": true
+           },
+           "ipv6": {
+            "address": [
+             {
+              "ip": "fe80::250:56ff:fe82:3391/64"
+             }
+            ],
+            "enabled": true
+           },
+           "network-stack": {
+            "ipv4": {
+             "send-redirects": true,
+             "accept-redirects": false,
+             "accept-source-route": false,
+             "arp-announce": "any",
+             "arp-filter": false,
+             "arp-ignore": "any",
+             "arp-proxy": false,
+             "log-invalid-addresses": false
+            },
+            "ipv6": {
+             "autoconfiguration": true,
+             "accept-duplicate-address-detection": "always",
+             "accept-router-advert": "never",
+             "accept-redirects": false,
+             "accept-segment-routing": false,
+             "accept-source-route": false,
+             "router-solicitations": -1,
+             "use-temporary-addresses": "never"
+            }
+           },
+           "ethernet": {
+            "mac-address": "00:50:56:82:33:91",
+            "auto-negotiate": false,
+            "duplex-mode": "full",
+            "port-speed": "10gb",
+            "flow-control-rx": false,
+            "flow-control-tx": false
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:30:04.237878911+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1509,
+   "ietf-subscribed-notifications:subscription-terminated": {
+    "id": 12345678,
+    "reason": "no-such-subscription"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:30:05.294641502+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1511,
+   "ietf-subscribed-notifications:subscription-started": {
+    "id": 12345678,
+    "ietf-yang-push:datastore": "ietf-datastores:operational",
+    "ietf-yang-push:datastore-xpath-filter": "/state/vrf/l3vrf/interface/loopback/enabled",
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "encode-json",
+    "purpose": "send notifications",
+    "ietf-yang-push:on-change": {
+     "sync-on-start": true
+    }
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:31:06.102691304+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1512,
+   "ietf-yang-push:push-change-update": {
+    "id": 12345678,
+    "datastore-changes": {
+     "yang-patch": {
+      "patch-id": "patch-1",
+      "edit": [
+       {
+        "edit-id": "edit-1",
+        "operation": "replace",
+        "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+        "value": {
+         "vrouter-loopback:enabled": false
+        }
+       }
+      ]
+     }
+    },
+    "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:31:06.102579323+00:00"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:32:06.576540679+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1513,
+   "ietf-yang-push:push-change-update": {
+    "id": 12345678,
+    "datastore-changes": {
+     "yang-patch": {
+      "patch-id": "patch-2",
+      "edit": [
+       {
+        "edit-id": "edit-1",
+        "operation": "replace",
+        "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+        "value": {
+         "vrouter-loopback:enabled": true
+        }
+       }
+      ]
+     }
+    },
+    "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:32:06.576436622+00:00"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:33:07.280759330+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1514,
+   "ietf-yang-push:push-change-update": {
+    "id": 12345678,
+    "datastore-changes": {
+     "yang-patch": {
+      "patch-id": "patch-3",
+      "edit": [
+       {
+        "edit-id": "edit-1",
+        "operation": "replace",
+        "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+        "value": {
+         "vrouter-loopback:enabled": false
+        }
+       }
+      ]
+     }
+    },
+    "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:33:07.280660240+00:00"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:34:07.776844449+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1515,
+   "ietf-yang-push:push-change-update": {
+    "id": 12345678,
+    "datastore-changes": {
+     "yang-patch": {
+      "patch-id": "patch-4",
+      "edit": [
+       {
+        "edit-id": "edit-1",
+        "operation": "replace",
+        "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+        "value": {
+         "vrouter-loopback:enabled": true
+        }
+       }
+      ]
+     }
+    },
+    "ietf-yang-push-netobs-timestamping:state-changed-observation-time": "2024-03-08T16:34:07.776739137+00:00"
+   }
+  }
+ },
+ {
+  "ietf-subscribed-notifications:notification": {
+   "eventTime": "2024-03-08T16:35:08.202189484+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "publisherId": 0,
+   "sequenceNumber": 1516,
+   "ietf-subscribed-notifications:subscription-terminated": {
+    "id": 12345678,
+    "reason": "no-such-subscription"
+   }
+  }
+ }
+]
+stopped tcpdump: 6wind-yp-test-20240308-170956.pcap
+66 packets captured
+99 packets received by filter
+0 packets dropped by kernel
+
+terminating udp-listener on port: 10003 
+BYE
+
+(6wind_yang-push) root@mtcubuntu02:/home/mtc/6wind_yang-push# ................................
