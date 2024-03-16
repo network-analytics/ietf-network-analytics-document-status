@@ -10,6 +10,9 @@ El Torito
 http://eltoritomexican.com.au/
 https://www.tripadvisor.com.au/Restaurant_Review-g255068-d810484-Reviews-El_Torito-Brisbane_Brisbane_Region_Queensland.html
 
+O Brasileiro
+www.obrasileirorestaurant.com.au
+
 
 ### Jazz Places
 The Burrow
