@@ -1,0 +1,111 @@
+telemetry ietf
+ #
+ filter DAISY type datastore
+  xpath /huawei-ifm:ifm/interfaces/interface
+ #
+ receiver DAISY
+  ipv4-address 138.187.58.24 port 10003
+ #
+ subscription 1
+  local-source-interface LoopBack0
+  transport udp-notif
+  encoding json
+  distribute enable
+  update-trigger period 6000
+  filter DAISY type datastore
+  #
+  receiver DAISY
+   bind-receiver DAISY
+ #
+#
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1709085368258">
+  <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <filter type="subtree">
+      <subscription-started xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+      <subscription-terminated xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+    </filter>
+  </create-subscription>
+</rpc>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2024-03-12T23:20:24Z</eventTime>
+  <subscription-started xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+    <id>1</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ifm="urn:huawei:yang:huawei-ifm">/ifm:ifm/ifm:interfaces/ifm:interface</datastore-xpath-filter>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+    <encoding>encode-json</encoding>
+    <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"><period>60000</period></periodic>
+    <module-version xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">
+      <module-name>huawei-ifm</module-name>
+      <revision>2024-01-23</revision>
+      <revision-label>1.0.0</revision-label>
+    </module-version>
+  </subscription-started>
+</notification>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2024-03-12T23:19:54Z</eventTime>
+  <subscription-terminated xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+    <id>1</id>
+    <reason>filter-unavailable</reason>
+  </subscription-terminated>
+</notification>
+
+{
+  "event_type": "log",
+  "seq": 3823,
+  "timestamp": "1710558121.500040",
+  "telemetry_node": "203.0.113.21",
+  "telemetry_port": 51622,
+  "label": {
+    "nkey": "ipf-zbl1243-r-daisy-21",
+    "pkey": "Huawei-VRP"
+  },
+  "telemetry_data": {
+    "ietf-notification:notification": {
+      "eventTime": "2024-03-16T03:02:01Z",
+      "ietf-yang-push:push-update": {
+        "id": 1,
+        "datastore-contents": {
+          "huawei-ifm:ifm": {
+            "interfaces": {
+              "interface": [
+                {
+                  "name": "GigabitEthernet0/3/9.565",
+                  "class": "sub-interface",
+                  "type": "GigabitEthernet",
+                  "parent-name": "GigabitEthernet0/3/9",
+                  "number": "565",
+                  "description": "PE56 via Nexus Daisy",
+                  "admin-status": "up",
+                  "link-protocol": "ethernet",
+                  "router-type": "broadcast",
+                  "clear-ip-df": false,
+                  "link-up-down-trap-enable": true,
+                  "statistic-enable": false,
+                  "statistic-mode": "interface-based",
+                  "spread-mtu-flag": false,
+                  "vrf-name": "_public_",
+                  "l2-mode-enable": false,
+                  "index": 67,
+                  "is-l2-switch": false,
+                  "vs-name": "Admin-VS",
+                  "l2-switch-port-index": 0,
+                  "service-type": "none",
+                  "encapsulation-type": "vlan-type"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "serialization": "json",
+  "writer_id": "ietfcolright01pmtelemetrydudpnotifleft01c 20240314.1.7fae9b2-1.el8"
+}
