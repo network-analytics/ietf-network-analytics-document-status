@@ -23,3 +23,4 @@ https://datatracker.ietf.org/meeting/119/session/nmop
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-kafka-integration/
 * **State**: Presented -01 at NMOP 119, received positivee feedback, generalize message broker integration and use Apache Kafka as example
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-yang-kafka-integration
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-kafka-integration-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/main/draft-netana-nmop-yang-message-broker-integration-00.txt
