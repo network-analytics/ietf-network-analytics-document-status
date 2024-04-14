@@ -31,8 +31,9 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-notifications-versioning/
-* **State**: Presented -03 at NETCONF 118, received no feedback.
+* **State**: Presented -03 at NETCONF 118, added implementation status section.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-notifications-versioning
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/master/draft-ietf-netconf-yang-notifications-versioning-04.txt
 
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
@@ -42,5 +43,6 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 
 ### draft-tgraf-netconf-yang-push-observation-time
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
-* **State**: Presented -00 at NETCONF 116, added minor changes in example and described how the observation-time ensures correct time buck indexing and submitted to netconf, YANG validation errors will be resolved by Alex
+* **State**: Presented -00 at NETCONF 116, added implementation status section, YANG validation errors will be resolved by Alex
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-push-observation-time
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-yang-push-observation-time-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-yang-push-observation-time/master/draft-tgraf-netconf-yang-push-observation-time-01.txt
