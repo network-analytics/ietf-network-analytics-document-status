@@ -51,6 +51,9 @@ https://www.gyu-kaku.com/vancouver/
 Shabusen Yakiniku House
 https://www.shabusen-yakiniku.com/
 
+The Ramen Butcher
+https://theramenbutcher.com/
+
 
 ### Jazz Places
 Guilt & Co.
