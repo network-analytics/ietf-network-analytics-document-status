@@ -32,9 +32,9 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-notifications-versioning/
-* **State**: Presented -03 at NETCONF 118, added implementation status section and resolved issue with duplicated list name.
+* **State**: Presented -03 at NETCONF 118, added implementation status section and resolved issue with duplicated list name and sent update to mailing list.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-notifications-versioning
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/master/draft-ietf-netconf-yang-notifications-versioning-04.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/master/draft-ietf-netconf-yang-notifications-versioning-05.txt
 
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
