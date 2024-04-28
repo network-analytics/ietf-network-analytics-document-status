@@ -20,7 +20,7 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -08 at NETCONF 118, requested working group last call together with draft-ietf-netconf-udp-notif, added message-publisher-id in push-update and push-change-update and added 6WIND in implementation status section. Removed "ordered-by user" on message-publisher-id leaf-list and updated descriptions.
+* **State**: Presented -08 at NETCONF 118, requested working group last call together with draft-ietf-netconf-udp-notif, added message-publisher-id in push-update and push-change-update and added 6WIND in implementation status section. Removed "ordered-by user" on message-publisher-id leaf-list and updated descriptions. Published -09 and requested feedback from working group.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-08&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/master/draft-ietf-netconf-distributed-notif-09.txt
 
