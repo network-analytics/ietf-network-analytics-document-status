@@ -31,6 +31,15 @@ https://www.rosewoodhotels.com/en/hotel-georgia-vancouver/dining/1927-lobby-loun
 Speakeasy
 http://speakeasyongranville.com/
 
+Tap & Barrel • Olympic Village
+https://tapandbarrel.com/
+
+CRAFT Beer Market False Creek
+https://www.craftbeermarket.ca/
+
+BREWHALL
+https://brewhall.com/
+
 
 ### Restaurants
 El Guapo
@@ -53,6 +62,21 @@ https://www.shabusen-yakiniku.com/
 
 The Ramen Butcher
 https://theramenbutcher.com/
+
+The Vancouver Fish Company
+https://vanfish.com/
+
+Go Fish
+https://www.tripadvisor.com/Restaurant_Review-g154943-d1062512-Reviews-Go_Fish-Vancouver_British_Columbia.html
+
+Market Grill
+publicmarketgrill.com
+
+Granville Island Public Market
+https://granvilleisland.com/public-market
+
+Ophelia
+https://opheliakitchen.ca/
 
 
 ### Jazz Places
