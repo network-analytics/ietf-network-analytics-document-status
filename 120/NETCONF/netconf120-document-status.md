@@ -13,12 +13,14 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-12&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/main/draft-ietf-netconf-udp-notif-13.txt
 
-### draft-ahuang-netconf-udp-client-server
+### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-udp-client-server/
-* **State**: Presented -01 at NETCONF 119. Adopted in working group, feedback tracked in issue 2 and addressed in -02. Pending publication.
-* **Tasks**: https://github.com/network-analytics/draft-ahuang-netconf-udp-client-server-grouping/issues/2, 
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ahuang-netconf-udp-client-server
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-client-server-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-udp-client-server-grouping/master/draft-ietf-netconf-udp-client-server-02.txt
+* **State**: Presented -01 at NETCONF 119. Adopted in working group, feedback tracked in issue 2 and addressed in -02.
+* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/j-2Hh6PO-QcHZetZ0ebujxsVLL0/, 
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-client-server
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-client-server-01&doc_2=draft-ietf-netconf-udp-client-server-02
+
+https://mailarchive.ietf.org/arch/msg/netconf/j-2Hh6PO-QcHZetZ0ebujxsVLL0/
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
@@ -29,15 +31,15 @@ https://datatracker.ietf.org/meeting/119/session/netconf
 ### draft-ahuang-netconf-notif-yang
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-notif-yang/
 * **State**: Presented -04 at NETCONF 119, document will be fast tracked due to gap within RFC 8639 and RFC 8641 specification, adoption call in progress. 
-* **Tasks**: Draft should update RFC 5277, RFC 8639 and RFC 7951 instead of RFC 5277 only since updating RFC 5277 impacts RFC 8639 and RFC 7951, new section should describe relationship to RFC 5277, RFC 8639 and RFC 7951 like https://datatracker.ietf.org/doc/html/rfc8639#section-1.4, scope should exclude Restconf RFC 8040 since https://datatracker.ietf.org/doc/html/rfc8040#section-6 already describes how notifications in Restconf with JSON is defined. Pending publication.
+* **Tasks**: Draft should update RFC 5277, RFC 8639 and RFC 7951 instead of RFC 5277 only since updating RFC 5277 impacts RFC 8639 and RFC 7951, new section should describe relationship to RFC 5277, RFC 8639 and RFC 7951 like https://datatracker.ietf.org/doc/html/rfc8639#section-1.4, scope should exclude Restconf RFC 8040 since https://datatracker.ietf.org/doc/html/rfc8040#section-6 already describes how notifications in Restconf with JSON is defined. -05 published and feedback received from Med.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ahuang-netconf-notif-yang
 * **Adoption Call Blocker**: https://mailarchive.ietf.org/arch/msg/netconf/Q4S-qPV323F-1KsCSVNf5W1ungc/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ahuang-netconf-notif-yang-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/master/draft-ahuang-netconf-notif-yang-05.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-notifications-versioning/
-* **State**: Presented -03 at NETCONF 118, resolved issue that within  a "case" statement identifiers need to be unique. Pending publication.
-* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-notifications-versioning
+* **State**: Presented -03 at NETCONF 118, resolved issue that within  a "case" statement identifiers need to be unique. -05 published.
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/main/draft-ietf-netconf-yang-notifications-versioning-05.txt
 
 ### draft-tgraf-netconf-notif-sequencing
