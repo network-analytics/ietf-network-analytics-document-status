@@ -37,10 +37,10 @@ https://mailarchive.ietf.org/arch/msg/netconf/j-2Hh6PO-QcHZetZ0ebujxsVLL0/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ahuang-netconf-notif-yang-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/master/draft-ahuang-netconf-notif-yang-05.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
-* **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-notifications-versioning/
+* **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
 * **State**: Presented -03 at NETCONF 118, resolved issue that within  a "case" statement identifiers need to be unique. -05 published.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/main/draft-ietf-netconf-yang-notifications-versioning-05.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-04&doc_2=draft-ietf-netconf-yang-notifications-versioning-05
 
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
