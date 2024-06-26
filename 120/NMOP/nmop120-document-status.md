@@ -24,7 +24,7 @@ https://datatracker.ietf.org/meeting/119/session/nmop
 * **State**: Presented -01 at NMOP 119, adoption call succeeded, received feedback from Dhruv, Andy, Fend and Qin and merged input in -01. -02 published with minor editorial changes.
 * **Tasks**: https://github.com/ietf-wg-nmop/draft-ietf-nmop-yang-message-broker-integration/issues
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/main/draft-ietf-nmop-yang-message-broker-integration-01.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-00&doc_2=draft-ietf-nmop-yang-message-broker-integration-02
 
 ### draft-netana-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-architecture/
