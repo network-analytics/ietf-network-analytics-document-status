@@ -1,0 +1,1935 @@
+starting tcpdump: 6wind-yp-test-20240628-135056.pcap
+starting udp-listener on port: 10003
+UDP server up and listening on port: 10003
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:50:57.586754369+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 52,
+  "ietf-subscribed-notifications:subscription-started": {
+   "id": 12345678,
+   "ietf-yang-push:datastore": "ietf-datastores:operational",
+   "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']/counters",
+   "transport": "ietf-udp-notif-transport:udp-notif",
+   "encoding": "encode-json",
+   "purpose": "send notifications",
+   "ietf-distributed-notif:message-publisher-ids": [
+    0
+   ],
+   "ietf-yang-push:periodic": {
+    "period": 3000
+   },
+   "ietf-yang-push-revision:module-version": [
+    {
+     "module-name": "vrouter-interface",
+     "revision": "2024-04-22"
+    }
+   ]
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:50:57.955620925+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 53,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "451004732",
+           "in-unicast-pkts": "2570812",
+           "in-discards": "446",
+           "in-errors": "0",
+           "out-octets": "423625698",
+           "out-unicast-pkts": "2177946",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:50:57.956173343+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+starting tcpdump: 6wind-yp-test-20240628-135140.pcap
+starting udp-listener on port: 10003
+UDP server up and listening on port: 10003
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:52:27.937620432+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 56,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "457033603",
+           "in-unicast-pkts": "2605089",
+           "in-discards": "452",
+           "in-errors": "0",
+           "out-octets": "429295765",
+           "out-unicast-pkts": "2207028",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:52:27.938105459+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:52:57.943609051+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 57,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "459042675",
+           "in-unicast-pkts": "2616478",
+           "in-discards": "454",
+           "in-errors": "0",
+           "out-octets": "431184641",
+           "out-unicast-pkts": "2216722",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:52:57.944107859+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:53:27.925231500+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 58,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "461042175",
+           "in-unicast-pkts": "2627848",
+           "in-discards": "456",
+           "in-errors": "0",
+           "out-octets": "433069648",
+           "out-unicast-pkts": "2226413",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:53:27.925710483+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:53:57.941771529+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 59,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "463051436",
+           "in-unicast-pkts": "2639326",
+           "in-discards": "458",
+           "in-errors": "0",
+           "out-octets": "434959086",
+           "out-unicast-pkts": "2236116",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:53:57.942263635+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:54:27.952195827+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 60,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "465051078",
+           "in-unicast-pkts": "2650745",
+           "in-discards": "460",
+           "in-errors": "0",
+           "out-octets": "436842437",
+           "out-unicast-pkts": "2245831",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:54:27.952671637+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:54:57.945138482+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 61,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "467052511",
+           "in-unicast-pkts": "2662157",
+           "in-discards": "462",
+           "in-errors": "0",
+           "out-octets": "438724604",
+           "out-unicast-pkts": "2255526",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:54:57.945649834+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:55:27.935954640+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 62,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "469055712",
+           "in-unicast-pkts": "2673592",
+           "in-discards": "464",
+           "in-errors": "0",
+           "out-octets": "440603743",
+           "out-unicast-pkts": "2265209",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:55:27.936481446+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:55:57.952025616+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 63,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "471062343",
+           "in-unicast-pkts": "2685007",
+           "in-discards": "466",
+           "in-errors": "0",
+           "out-octets": "442486831",
+           "out-unicast-pkts": "2274898",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:55:57.952534897+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:56:27.938721168+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 64,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "473048337",
+           "in-unicast-pkts": "2696328",
+           "in-discards": "468",
+           "in-errors": "0",
+           "out-octets": "444357655",
+           "out-unicast-pkts": "2284516",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:56:27.939394352+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:56:57.941560430+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 65,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "475067593",
+           "in-unicast-pkts": "2707793",
+           "in-discards": "470",
+           "in-errors": "0",
+           "out-octets": "446254650",
+           "out-unicast-pkts": "2294256",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:56:57.942167923+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:57:27.942926865+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 66,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "477073974",
+           "in-unicast-pkts": "2719189",
+           "in-discards": "472",
+           "in-errors": "0",
+           "out-octets": "448139782",
+           "out-unicast-pkts": "2303936",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:57:27.943518399+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:57:57.933409759+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 67,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "479083324",
+           "in-unicast-pkts": "2730614",
+           "in-discards": "474",
+           "in-errors": "0",
+           "out-octets": "450026342",
+           "out-unicast-pkts": "2313628",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:57:57.933945352+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:58:27.945802063+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 68,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "481100639",
+           "in-unicast-pkts": "2742081",
+           "in-discards": "476",
+           "in-errors": "0",
+           "out-octets": "451912467",
+           "out-unicast-pkts": "2323314",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:58:27.946357308+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:58:57.939559030+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 69,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "483110409",
+           "in-unicast-pkts": "2753529",
+           "in-discards": "478",
+           "in-errors": "0",
+           "out-octets": "453807341",
+           "out-unicast-pkts": "2333023",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:58:57.940072718+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:59:27.951737449+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 70,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "485117101",
+           "in-unicast-pkts": "2764961",
+           "in-discards": "480",
+           "in-errors": "0",
+           "out-octets": "455695328",
+           "out-unicast-pkts": "2342742",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:59:27.952270589+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T11:59:57.943002597+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 71,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "487118046",
+           "in-unicast-pkts": "2776366",
+           "in-discards": "482",
+           "in-errors": "0",
+           "out-octets": "457574366",
+           "out-unicast-pkts": "2352429",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T11:59:57.943533545+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:00:27.927290161+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 72,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "489115814",
+           "in-unicast-pkts": "2787785",
+           "in-discards": "483",
+           "in-errors": "0",
+           "out-octets": "459452052",
+           "out-unicast-pkts": "2362111",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:00:27.927778623+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:00:57.960605933+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 73,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "491114213",
+           "in-unicast-pkts": "2799162",
+           "in-discards": "484",
+           "in-errors": "0",
+           "out-octets": "461334975",
+           "out-unicast-pkts": "2371803",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:00:57.961116938+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:01:27.954201169+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 74,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "493111175",
+           "in-unicast-pkts": "2810578",
+           "in-discards": "486",
+           "in-errors": "0",
+           "out-octets": "463204867",
+           "out-unicast-pkts": "2381423",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:01:27.954970829+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:01:57.970712108+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 75,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "495123244",
+           "in-unicast-pkts": "2822008",
+           "in-discards": "488",
+           "in-errors": "0",
+           "out-octets": "465092556",
+           "out-unicast-pkts": "2391127",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:01:57.971236350+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:02:27.953050410+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 76,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "497133046",
+           "in-unicast-pkts": "2833433",
+           "in-discards": "490",
+           "in-errors": "0",
+           "out-octets": "466983142",
+           "out-unicast-pkts": "2400843",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:02:27.953559298+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:02:57.932958271+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 77,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "499147656",
+           "in-unicast-pkts": "2844884",
+           "in-discards": "492",
+           "in-errors": "0",
+           "out-octets": "468870776",
+           "out-unicast-pkts": "2410537",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:02:57.933491878+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:03:27.955246528+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 78,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "501148325",
+           "in-unicast-pkts": "2856251",
+           "in-discards": "494",
+           "in-errors": "0",
+           "out-octets": "470756674",
+           "out-unicast-pkts": "2420223",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:03:27.955781738+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:03:57.929748314+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 79,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "503156307",
+           "in-unicast-pkts": "2867697",
+           "in-discards": "496",
+           "in-errors": "0",
+           "out-octets": "472650190",
+           "out-unicast-pkts": "2429923",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:03:57.930245630+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:04:27.940752131+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 80,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "505167552",
+           "in-unicast-pkts": "2879163",
+           "in-discards": "498",
+           "in-errors": "0",
+           "out-octets": "474536503",
+           "out-unicast-pkts": "2439611",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:04:27.941241728+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:04:57.952760579+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 81,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "507179262",
+           "in-unicast-pkts": "2890600",
+           "in-discards": "500",
+           "in-errors": "0",
+           "out-octets": "476430767",
+           "out-unicast-pkts": "2449337",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:04:57.953305419+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:05:27.937049468+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 82,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "509185740",
+           "in-unicast-pkts": "2902043",
+           "in-discards": "502",
+           "in-errors": "0",
+           "out-octets": "478310564",
+           "out-unicast-pkts": "2459025",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:05:27.937538494+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:05:57.943138247+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 83,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "511188421",
+           "in-unicast-pkts": "2913467",
+           "in-discards": "504",
+           "in-errors": "0",
+           "out-octets": "480188212",
+           "out-unicast-pkts": "2468713",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:05:57.943725287+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:06:27.937598841+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 84,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "513176394",
+           "in-unicast-pkts": "2924807",
+           "in-discards": "506",
+           "in-errors": "0",
+           "out-octets": "482053644",
+           "out-unicast-pkts": "2478332",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:06:27.938091935+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:06:57.944862088+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 85,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "515182771",
+           "in-unicast-pkts": "2936245",
+           "in-discards": "508",
+           "in-errors": "0",
+           "out-octets": "483937649",
+           "out-unicast-pkts": "2488026",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:06:57.945365668+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:07:27.928565983+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 86,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "517185422",
+           "in-unicast-pkts": "2947657",
+           "in-discards": "510",
+           "in-errors": "0",
+           "out-octets": "485820224",
+           "out-unicast-pkts": "2497708",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:07:27.929100211+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:07:57.957276577+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 87,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "519197248",
+           "in-unicast-pkts": "2959093",
+           "in-discards": "512",
+           "in-errors": "0",
+           "out-octets": "487710189",
+           "out-unicast-pkts": "2507428",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:07:57.957944844+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:08:27.928845982+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 88,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "521198166",
+           "in-unicast-pkts": "2970446",
+           "in-discards": "514",
+           "in-errors": "0",
+           "out-octets": "489594798",
+           "out-unicast-pkts": "2517109",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:08:27.929323544+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:08:57.966050264+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 89,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "523208362",
+           "in-unicast-pkts": "2981883",
+           "in-discards": "516",
+           "in-errors": "0",
+           "out-octets": "491490799",
+           "out-unicast-pkts": "2526817",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:08:57.966544763+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:09:27.932873294+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 90,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "525213069",
+           "in-unicast-pkts": "2993280",
+           "in-discards": "518",
+           "in-errors": "0",
+           "out-octets": "493376666",
+           "out-unicast-pkts": "2536500",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:09:27.933348233+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:09:57.951573665+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 91,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "527234921",
+           "in-unicast-pkts": "3004785",
+           "in-discards": "520",
+           "in-errors": "0",
+           "out-octets": "495268418",
+           "out-unicast-pkts": "2546220",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:09:57.952268052+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:10:27.923311439+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 92,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "529242036",
+           "in-unicast-pkts": "3016216",
+           "in-discards": "522",
+           "in-errors": "0",
+           "out-octets": "497155883",
+           "out-unicast-pkts": "2555914",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:10:27.923795613+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:10:57.924004651+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 93,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "531243078",
+           "in-unicast-pkts": "3027611",
+           "in-discards": "524",
+           "in-errors": "0",
+           "out-octets": "499037357",
+           "out-unicast-pkts": "2565605",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:10:57.924509121+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:11:27.957524396+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 94,
+  "ietf-yang-push:push-update": {
+   "id": 3,
+   "datastore-contents": {
+    "vrouter:state": {
+     "vrf": [
+      {
+       "name": "main",
+       "vrouter-interface:interface": {
+        "physical": [
+         {
+          "name": "ens192",
+          "counters": {
+           "in-octets": "533241626",
+           "in-unicast-pkts": "3039011",
+           "in-discards": "526",
+           "in-errors": "0",
+           "out-octets": "500914596",
+           "out-unicast-pkts": "2575288",
+           "out-discards": "0",
+           "out-errors": "0"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:11:27.958028243+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 37321)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:11:43.811094942+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 95,
+  "ietf-subscribed-notifications:subscription-terminated": {
+   "id": 12345678,
+   "reason": "no-such-subscription"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+{
+ "error": "was not json parsable",
+ "raw": "b'\\x01\\x0c\\x02\\xad\\x00\\x00\\x00\\x00\\x00\\x00\\x00`{\"ietf-notifications:notification\":{\"eventTime\":\"2024-06-28T12:11:44.491178527+00:00\",\"sysName\":\"daisy-ietf-ipf-zbl1843-r-daisy-58\",\"sequenceNumber\":96,\"ietf-subscribed-notifications:subscription-started\":{\"id\":12345678,\"ietf-yang-push:datastore\":\"ietf-datastores:operational\",\"ietf-yang-push:datastore-xpath-filter\":\"/state/vrf/l3vrf/interface/loopback/enabled\",\"transport\":\"ietf-udp-notif-transport:udp-notif\",\"encoding\":\"encode-json\",\"purpose\":\"send notifications\",\"ietf-distributed-notif:message-publisher-ids\":[0],\"ietf-yang-push:on-change\":{\"sync-on-start\":true},\"ietf-yang-push-revision:module-version\":[{\"module-name\":\"vrouter-loopback\",\"revision\":\"2024-04-22\"}]}}}\\x01\\x0c\\x02C\\x00\\x00\\x00\\x00\\x00\\x00\\x00a{\"ietf-notifications:notification\":{\"eventTime\":\"2024-06-28T12:11:44.480817788+00:00\",\"sysName\":\"daisy-ietf-ipf-zbl1843-r-daisy-58\",\"sequenceNumber\":97,\"ietf-yang-push:push-update\":{\"id\":4,\"datastore-contents\":{\"vrouter:state\":{\"vrf\":[{\"name\":\"main\",\"l3vrf\":[{\"name\":\"A9\",\"vrouter-interface:interface\":{\"vrouter-loopback:loopback\":[{\"name\":\"Loopback-A9\",\"enabled\":true}]}}]}]}},\"ietf-distributed-notif:message-publisher-id\":0,\"ietf-yp-observation-time:observation-time\":\"2024-06-28T12:11:44.497663265+00:00\",\"ietf-yp-observation-time:point-in-time\":\"current-state\"}}}'"
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:12:45.349707188+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 98,
+  "ietf-yang-push:push-change-update": {
+   "id": 4,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-1",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": "false"
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:12:45.349983339+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:13:45.876930287+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 99,
+  "ietf-yang-push:push-change-update": {
+   "id": 4,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-2",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": "true"
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:13:45.877135896+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+no subscription to delete
+no subscription to delete
+
+
+ ============================== TEST SUMMARY ==============================
+
+Packets received: 
+ ------------------------------ 
+
+0000 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0001 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0002 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0003 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0004 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0005 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0006 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0007 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0008 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0009 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0010 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0011 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0012 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0013 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0014 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0015 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0016 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0017 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0018 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0019 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0020 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0021 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0022 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0023 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0024 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0025 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0026 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0027 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0028 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0029 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0030 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0031 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0032 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0033 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0034 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0035 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0036 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0037 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0038 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0039 Ether / IP / UDP 203.0.113.58:37321 > 100.105.33.20:documentum_s / Raw
+0040 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+0041 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+0042 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+0043 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+0044 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+0045 Ether / IP / UDP 203.0.113.58:33513 > 100.105.33.20:documentum_s / Raw
+------------------------------
+length of capture: 46
+
+ ====================  DETAILS  ==================== 
+
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:14:46.508991067+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 100,
+  "ietf-yang-push:push-change-update": {
+   "id": 4,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-3",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": "false"
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:14:46.509201571+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:15:46.977583820+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 101,
+  "ietf-yang-push:push-change-update": {
+   "id": 4,
+   "datastore-changes": {
+    "yang-patch": {
+     "patch-id": "patch-4",
+     "edit": [
+      {
+       "edit-id": "edit-1",
+       "operation": "replace",
+       "target": "/vrouter:state/vrf[name='main']/l3vrf[name='A9']/vrouter-interface:interface/vrouter-loopback:loopback[name='Loopback-A9']/enabled",
+       "value": {
+        "vrouter-loopback:enabled": "true"
+       }
+      }
+     ]
+    }
+   },
+   "ietf-distributed-notif:message-publisher-id": 0,
+   "ietf-yp-observation-time:observation-time": "2024-06-28T12:15:46.979418450+00:00",
+   "ietf-yp-observation-time:point-in-time": "current-state"
+  }
+ }
+}
+
+
+Client IP Address:('203.0.113.58', 33513)
+{
+ "ietf-notifications:notification": {
+  "eventTime": "2024-06-28T12:16:47.223265577+00:00",
+  "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+  "sequenceNumber": 102,
+  "ietf-subscribed-notifications:subscription-terminated": {
+   "id": 12345678,
+   "reason": "no-such-subscription"
+  }
+ }
+}
