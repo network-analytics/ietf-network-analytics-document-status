@@ -8,7 +8,7 @@ https://datatracker.ietf.org/meeting/119/session/nmop
 
 ### draft-netana-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-nmrg-network-anomaly-semantics/
-* **State**: Presented -01 at NMOP 119, changed from source to annotator.
+* **State**: Presented -01 at NMOP 119, changed from source to annotator. updated YANG module, added terminology and removed data mesh and outlier detection section
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmrg/?q=draft-netana-opsawg-nmrg-network-anomaly-semantics
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-opsawg-nmrg-network-anomaly-semantics
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-network-anomaly-semantics-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/main/draft-netana-nmop-network-anomaly-semantics-02.txt
