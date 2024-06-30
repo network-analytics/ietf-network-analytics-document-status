@@ -26,6 +26,12 @@ https://www.freehouse.co/locations/stock-room?utm_source=google&utm_medium=organ
 1927 Lobby Lounge
 https://www.rosewoodhotels.com/en/hotel-georgia-vancouver/dining/1927-lobby-lounge
 
+The Shameful Tiki Room
+https://shamefultikiroom.com/vancouver/
+
+Tocador
+https://www.tocador.ca/
+
 
 ### Pubs
 Speakeasy
@@ -39,6 +45,9 @@ https://www.craftbeermarket.ca/
 
 BREWHALL
 https://brewhall.com/
+
+Portland Craft
+https://www.portlandcraft.com/
 
 
 ### Restaurants
