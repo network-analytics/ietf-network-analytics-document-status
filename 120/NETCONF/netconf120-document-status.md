@@ -45,12 +45,12 @@ https://mailarchive.ietf.org/arch/msg/netconf/j-2Hh6PO-QcHZetZ0ebujxsVLL0/
 ### draft-tgraf-netconf-notif-sequencing
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-notif-sequencing/
 * **State**: Presented -02 at NETCONF 118, requested working group adoption. Have you read the notif-sequencing draft? YES: 6, NO: 13, ?: 38. 
-* **Tasks**: Defined new notification capability and describe RFC 9196 discovery mechanism how a system detects that a YANG-Push publisher supports draft-tgraf-netconf-notif-sequencing in -05. Pending publication.
+* **Tasks**: Defined new notification capability and describe RFC 9196 discovery mechanism how a system detects that a YANG-Push publisher supports draft-tgraf-netconf-notif-sequencing in -06.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-notif-sequencing
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-notif-sequencing-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-notif-sequencing/main/draft-tgraf-netconf-notif-sequencing-05.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-notif-sequencing-04&doc_2=draft-tgraf-netconf-notif-sequencing-06
 
 ### draft-tgraf-netconf-yang-push-observation-time
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
-* **State**: Presented -00 at NETCONF 116, added implementation status section, changed observation time semantics in 01. Pending publication.
+* **State**: Presented -00 at NETCONF 116, added implementation status section, changed observation time semantics in -02.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-push-observation-time
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-yang-push-observation-time-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-yang-push-observation-time/main/draft-tgraf-netconf-yang-push-observation-time-01.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-yang-push-observation-time-01&doc_2=draft-tgraf-netconf-yang-push-observation-time-02
