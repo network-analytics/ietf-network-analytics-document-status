@@ -53,4 +53,4 @@ https://mailarchive.ietf.org/arch/msg/netconf/j-2Hh6PO-QcHZetZ0ebujxsVLL0/
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
 * **State**: Presented -00 at NETCONF 116, added implementation status section, changed observation time semantics in -02.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-tgraf-netconf-yang-push-observation-time
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-yang-push-observation-time-01&doc_2=draft-tgraf-netconf-yang-push-observation-time-02
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-tgraf-netconf-yang-push-observation-time-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-tgraf-netconf-yang-push-observation-time/main/draft-tgraf-netconf-yang-push-observation-time-02.txt
