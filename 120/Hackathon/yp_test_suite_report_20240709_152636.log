@@ -1,31 +1,12 @@
-starting tcpdump:6wind-yp-test-20240704-100659.pcap
+starting tcpdump:./pcaps/yp-test-20240709-152636.pcap
 UDP server up and listening on port: 10003
 Since logging.warning is enabled you will see all actions and packets received inline
 A summary is given at the end.
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:539c764b-5ce2-467a-9df9-14e25f69be5e">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:3da8544c-badb-4902-a05d-2fbc80a27c1a">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
-			<subscription>
-				<id>12345678</id>
-				<datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
-				<datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters</datastore-xpath-filter>
-				<encoding>encode-json</encoding>
-				<purpose>send notifications</purpose>
-				<source-address>203.0.113.58</source-address>
-				<configured-subscription-state>valid</configured-subscription-state>
-				<receivers>
-					<receiver>
-						<name>udpnotifdestination</name>
-						<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon</receiver-instance-ref>
-					</receiver>
-				</receivers>
-				<message-publisher-ids xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-ids>
-				<periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
-					<period>3000</period>
-				</periodic>
-			</subscription>
 			<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
 				<receiver-instance>
 					<name>udpnotifdaemon</name>
@@ -41,10 +22,10 @@ A summary is given at the end.
 <===
 
 sending info packet with SYSLOG: --- TEST 0 - Capabilities ---
-sending info packet with SYSLOG: --- Step 0.0: get discover-yang.xml
+sending info packet with SYSLOG: --- Step 0.0: get ./xmls/discover-yang.xml
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:61d48c4e-4d76-4ae7-a3fc-3586a3ebbc5f">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:46840f98-3827-4ceb-af8f-38600bc580d3">
 	<data>
 		<netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
 			<schemas>
@@ -2728,10 +2709,10 @@ sending info packet with SYSLOG: --- Step 0.0: get discover-yang.xml
 </rpc-reply>
 <===
 
-sending info packet with SYSLOG: --- Step 0.1: RFC 8525 -  get get-yang-library.xml
+sending info packet with SYSLOG: --- Step 0.1: RFC 8525 -  get ./xmls/get-yang-library.xml
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:df98fd94-bb6e-4ee2-86b3-b72766040474">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:fc78bfae-4da9-4b71-abd9-1ff4f34cc2f9">
 	<data>
 		<modules-state xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
 			<module>
@@ -4098,8 +4079,14 @@ sending info packet with SYSLOG: --- Step 0.1: RFC 8525 -  get get-yang-library.
 </rpc-reply>
 <===
 
+sending info packet with SYSLOG: --- Step 0.2: remove YP config on router (if leftover from last test)
+===> Sending NC config:
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><id>12345678</id></subscription></subscriptions>
+</config><===
+
 sending info packet with SYSLOG: --- TEST 1 - YANG Push periodical subscription ---
-sending info packet with SYSLOG: --- Step 1.0: config subscriptionyp-6wind-test-yp-periodic-3000cs.xml
+sending info packet with SYSLOG: --- Step 1.0: config subscription./xmls/yp-6wind-test-yp-periodic-3000cs.xml
 ===> Sending NC config:
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 <subscription>
@@ -4133,7 +4120,7 @@ sending info packet with SYSLOG: --- Step 1.0: config subscriptionyp-6wind-test-
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:c42ce15c-7372-42dc-9737-9e7648a830da">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:0a7fa4f3-0efa-43b3-8df0-28ae8f325f8f">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<subscription>
@@ -4172,7 +4159,7 @@ sending info packet with SYSLOG: --- Step 1.0: config subscriptionyp-6wind-test-
 sending info packet with SYSLOG: --- Step 1.1: start of wait 300s
 sending info packet with SYSLOG: --- Step 1.2: end of wait 300s
 sending info packet with SYSLOG: --- TEST 1b - YANG Push periodical change interval subscription ---
-sending info packet with SYSLOG: --- Step 1b.0: config subscriptionyp-6wind-test-yp-periodic-4500cs.xml
+sending info packet with SYSLOG: --- Step 1b.0: config subscription./xmls/yp-6wind-test-yp-periodic-4500cs.xml
 ===> Sending NC config:
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 <subscription>
@@ -4206,7 +4193,7 @@ sending info packet with SYSLOG: --- Step 1b.0: config subscriptionyp-6wind-test
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:74ff2a54-4473-4e1e-bd1f-6efb7378f681">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:21ee5053-c62f-4d5e-b838-ec83f305130b">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<subscription>
@@ -4245,7 +4232,7 @@ sending info packet with SYSLOG: --- Step 1b.0: config subscriptionyp-6wind-test
 sending info packet with SYSLOG: --- Step 1b.1: start of wait 300s
 sending info packet with SYSLOG: --- Step 1b.2: end of wait 300s
 sending info packet with SYSLOG: --- TEST 2 - change yp periodic interval time and xpath with same subscription ID---
-sending info packet with SYSLOG: --- Step 2.0: config subscriptionyp-6wind-test-yp-periodic-12000cs-anchored.xml
+sending info packet with SYSLOG: --- Step 2.0: config subscription./xmls/yp-6wind-test-yp-periodic-12000cs-anchored.xml
 ===> Sending NC config:
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 <subscription>
@@ -4280,7 +4267,7 @@ sending info packet with SYSLOG: --- Step 2.0: config subscriptionyp-6wind-test-
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:753cce29-5600-4f26-90c9-e03413e7da8b">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9ce14e64-efbf-4fc2-a57f-e86f19f43aaa">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<subscription>
@@ -4327,7 +4314,7 @@ sending info packet with SYSLOG: --- Step 2.3: remove subscription
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:3d8434d6-1cba-49c5-9713-f897d4a378a5">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:2df4aac1-1445-4a4b-85f0-305dc9ca22b1">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
@@ -4345,7 +4332,7 @@ sending info packet with SYSLOG: --- Step 2.3: remove subscription
 <===
 
 sending info packet with SYSLOG: --- TEST 3 - YANG Push on-change sync-on-start ---
-sending info packet with SYSLOG: --- Step 3.0: config subscriptionyp-6wind-test-yp-on-change.xml
+sending info packet with SYSLOG: --- Step 3.0: config subscription./xmls/yp-6wind-test-yp-on-change.xml
 ===> Sending NC config:
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 <subscription>
@@ -4379,7 +4366,7 @@ sending info packet with SYSLOG: --- Step 3.0: config subscriptionyp-6wind-test-
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:f019b5bf-5bc2-4920-bea4-34c385433bff">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:ffe6a776-a18a-477b-b60f-b77b90dfa1ee">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<subscription>
@@ -4509,7 +4496,7 @@ sending info packet with SYSLOG: --- Step 3.15: remove subscription
 
 ===> Get YP subscriptions:
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:a19ee337-a0b9-472a-a459-34c85f91c0a8">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:e322e501-9e74-4b60-bf10-4bd1263eeee7">
 	<data>
 		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 			<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
@@ -4535,378 +4522,394 @@ sending info packet with SYSLOG: --- END OF TESTS \---
 Packets received: 
 ------------------------------
 
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:48227 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
-Ether / IP / UDP 203.0.113.58:38040 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:42850 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
+Ether / IP / UDP 203.0.113.58:59952 > 100.105.33.20:documentum_s / Raw
 ------------------------------
-length of capture:47
+length of capture:49
 
 ==================== DETAILS ====================
 
-eventTime: 2024-07-04T08:07:18.239208437+00:00
+eventTime: 2024-07-09T13:26:53.295857916+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 441
+sequenceNumber: 855
+ietf-subscribed-notifications:subscription-started length(9)
+
+--------------------------------------------------
+
+eventTime: 2024-07-09T13:26:53.639132814+00:00
+sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
+sequenceNumber: 856
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:07:48.216647896+00:00
+eventTime: 2024-07-09T13:27:23.619822325+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 442
+sequenceNumber: 857
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:08:18.207501988+00:00
+eventTime: 2024-07-09T13:27:53.637594258+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 443
+sequenceNumber: 858
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:08:48.240343426+00:00
+eventTime: 2024-07-09T13:28:23.635716799+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 444
+sequenceNumber: 859
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:09:18.243993799+00:00
+eventTime: 2024-07-09T13:28:53.629743215+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 445
+sequenceNumber: 860
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:09:48.230331763+00:00
+eventTime: 2024-07-09T13:29:23.632002050+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 446
+sequenceNumber: 861
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:10:18.202007350+00:00
+eventTime: 2024-07-09T13:29:53.641929917+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 447
+sequenceNumber: 862
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:10:48.196788290+00:00
+eventTime: 2024-07-09T13:30:23.647516906+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 448
+sequenceNumber: 863
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:11:18.220820038+00:00
+eventTime: 2024-07-09T13:30:53.629721358+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 449
+sequenceNumber: 864
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:11:48.279623247+00:00
+eventTime: 2024-07-09T13:31:23.618600884+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 450
+sequenceNumber: 865
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:12:18.203325047+00:00
+eventTime: 2024-07-09T13:31:53.632712492+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 451
+sequenceNumber: 866
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:12:48.227558654+00:00
+eventTime: 2024-07-09T13:32:23.628262547+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 452
+sequenceNumber: 867
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:13:18.226553881+00:00
+eventTime: 2024-07-09T13:32:53.666862781+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 453
+sequenceNumber: 868
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:13:48.211402216+00:00
+eventTime: 2024-07-09T13:33:23.673799017+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 454
+sequenceNumber: 869
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:14:18.256134102+00:00
+eventTime: 2024-07-09T13:33:53.657927098+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 455
+sequenceNumber: 870
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:14:48.209653448+00:00
+eventTime: 2024-07-09T13:34:23.655411895+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 456
+sequenceNumber: 871
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:15:18.214095460+00:00
+eventTime: 2024-07-09T13:34:53.655194954+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 457
+sequenceNumber: 872
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:15:48.263706791+00:00
+eventTime: 2024-07-09T13:35:23.653892256+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 458
+sequenceNumber: 873
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:16:18.205269337+00:00
+eventTime: 2024-07-09T13:35:53.657224584+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 459
+sequenceNumber: 874
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:16:48.264907401+00:00
+eventTime: 2024-07-09T13:36:23.623100626+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 460
+sequenceNumber: 875
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:17:18.206840469+00:00
+eventTime: 2024-07-09T13:36:53.624478333+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 461
+sequenceNumber: 876
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:17:48.216137782+00:00
+eventTime: 2024-07-09T13:37:23.640486883+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 462
+sequenceNumber: 877
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:18:18.218928362+00:00
+eventTime: 2024-07-09T13:37:53.620523237+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 463
+sequenceNumber: 878
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:18:48.209776155+00:00
+eventTime: 2024-07-09T13:38:23.635545605+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 464
+sequenceNumber: 879
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:19:18.247399523+00:00
+eventTime: 2024-07-09T13:38:53.632619355+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 465
+sequenceNumber: 880
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:19:48.217183351+00:00
+eventTime: 2024-07-09T13:39:23.626231699+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 466
+sequenceNumber: 881
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:20:18.195441428+00:00
+eventTime: 2024-07-09T13:39:53.622934223+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 467
+sequenceNumber: 882
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:20:48.212321204+00:00
+eventTime: 2024-07-09T13:40:23.623081062+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 468
+sequenceNumber: 883
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:21:18.206330882+00:00
+eventTime: 2024-07-09T13:40:53.627246128+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 469
+sequenceNumber: 884
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:21:48.197020497+00:00
+eventTime: 2024-07-09T13:41:23.634097869+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 470
+sequenceNumber: 885
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:22:18.200595656+00:00
+eventTime: 2024-07-09T13:41:53.622362618+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 471
+sequenceNumber: 886
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:22:48.229123832+00:00
+eventTime: 2024-07-09T13:42:23.625710849+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 472
+sequenceNumber: 887
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:23:18.193999063+00:00
+eventTime: 2024-07-09T13:42:53.630048905+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 473
+sequenceNumber: 888
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:23:48.219156357+00:00
+eventTime: 2024-07-09T13:43:23.622724525+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 474
+sequenceNumber: 889
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:24:18.234542892+00:00
+eventTime: 2024-07-09T13:43:53.620115589+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 475
+sequenceNumber: 890
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:24:48.218110850+00:00
+eventTime: 2024-07-09T13:44:23.619496636+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 476
+sequenceNumber: 891
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:25:18.197397990+00:00
+eventTime: 2024-07-09T13:44:53.621836808+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 477
+sequenceNumber: 892
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:25:48.204670075+00:00
+eventTime: 2024-07-09T13:45:23.634770615+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 478
+sequenceNumber: 893
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:26:18.204434436+00:00
+eventTime: 2024-07-09T13:45:53.647866555+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 479
+sequenceNumber: 894
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:26:48.198136797+00:00
+eventTime: 2024-07-09T13:46:23.659784064+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 480
+sequenceNumber: 895
 ietf-yang-push:push-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:27:11.727512641+00:00
+eventTime: 2024-07-09T13:46:53.665452328+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 481
+sequenceNumber: 896
+ietf-yang-push:push-update length(5)
+
+--------------------------------------------------
+
+eventTime: 2024-07-09T13:46:55.350806538+00:00
+sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
+sequenceNumber: 897
 ietf-subscribed-notifications:subscription-terminated length(2)
 
 --------------------------------------------------
 
 ERROR WITH j.get("ietf-notifications:notification")
 {'msg': 'error'}
-eventTime: 2024-07-04T08:28:13.299974220+00:00
+eventTime: 2024-07-09T13:47:56.887480682+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 484
+sequenceNumber: 900
 ietf-yang-push:push-change-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:29:13.760619126+00:00
+eventTime: 2024-07-09T13:48:57.368250103+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 485
+sequenceNumber: 901
 ietf-yang-push:push-change-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:30:14.082176404+00:00
+eventTime: 2024-07-09T13:49:57.880152377+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 486
+sequenceNumber: 902
 ietf-yang-push:push-change-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:31:14.635630770+00:00
+eventTime: 2024-07-09T13:50:58.354726467+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 487
+sequenceNumber: 903
 ietf-yang-push:push-change-update length(5)
 
 --------------------------------------------------
 
-eventTime: 2024-07-04T08:32:14.859811800+00:00
+eventTime: 2024-07-09T13:51:58.649438169+00:00
 sysName: daisy-ietf-ipf-zbl1843-r-daisy-58
-sequenceNumber: 488
+sequenceNumber: 904
 ietf-subscribed-notifications:subscription-terminated length(2)
 
 --------------------------------------------------
@@ -4915,11 +4918,38 @@ ietf-subscribed-notifications:subscription-terminated length(2)
 [
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:07:18.239208437+00:00",
+   "eventTime": "2024-07-09T13:26:53.295857916+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 441,
+   "sequenceNumber": 855,
+   "ietf-subscribed-notifications:subscription-started": {
+    "id": 12345678,
+    "ietf-yang-push:datastore": "ietf-datastores:operational",
+    "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']/counters",
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "encode-json",
+    "purpose": "send notifications",
+    "ietf-distributed-notif:message-publisher-ids": [
+     0
+    ],
+    "ietf-yang-push:periodic": {
+     "period": 3000
+    },
+    "ietf-yang-push-revision:module-version": [
+     {
+      "module-name": "vrouter-interface",
+      "revision": "2024-04-22"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "ietf-notifications:notification": {
+   "eventTime": "2024-07-09T13:26:53.639132814+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "sequenceNumber": 856,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -4930,12 +4960,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34221870960",
-            "in-unicast-pkts": "194988764",
-            "in-discards": "33776",
+            "in-octets": "63737841728",
+            "in-unicast-pkts": "363468169",
+            "in-discards": "63556",
             "in-errors": "0",
-            "out-octets": "32133392508",
-            "out-unicast-pkts": "165255188",
+            "out-octets": "59818287210",
+            "out-unicast-pkts": "307633998",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -4947,18 +4977,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:07:18.239676169+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:26:53.639692477+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:07:48.216647896+00:00",
+   "eventTime": "2024-07-09T13:27:23.619822325+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 442,
+   "sequenceNumber": 857,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -4969,12 +4999,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34223877561",
-            "in-unicast-pkts": "195000204",
-            "in-discards": "33778",
+            "in-octets": "63739845240",
+            "in-unicast-pkts": "363479575",
+            "in-discards": "63558",
             "in-errors": "0",
-            "out-octets": "32135276169",
-            "out-unicast-pkts": "165264875",
+            "out-octets": "59820174830",
+            "out-unicast-pkts": "307643701",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -4986,18 +5016,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:07:48.217306433+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:27:23.620300507+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:08:18.207501988+00:00",
+   "eventTime": "2024-07-09T13:27:53.637594258+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 443,
+   "sequenceNumber": 858,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5008,12 +5038,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34225888663",
-            "in-unicast-pkts": "195011666",
-            "in-discards": "33780",
+            "in-octets": "63741832582",
+            "in-unicast-pkts": "363490920",
+            "in-discards": "63560",
             "in-errors": "0",
-            "out-octets": "32137160864",
-            "out-unicast-pkts": "165274560",
+            "out-octets": "59822044620",
+            "out-unicast-pkts": "307653326",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5025,18 +5055,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:08:18.208038898+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:27:53.638076669+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:08:48.240343426+00:00",
+   "eventTime": "2024-07-09T13:28:23.635716799+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 444,
+   "sequenceNumber": 859,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5047,12 +5077,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34227900411",
-            "in-unicast-pkts": "195023132",
-            "in-discards": "33782",
+            "in-octets": "63743835186",
+            "in-unicast-pkts": "363502382",
+            "in-discards": "63562",
             "in-errors": "0",
-            "out-octets": "32139062207",
-            "out-unicast-pkts": "165284294",
+            "out-octets": "59823924774",
+            "out-unicast-pkts": "307663009",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5064,18 +5094,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:08:48.240891078+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:28:23.636192052+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:09:18.243993799+00:00",
+   "eventTime": "2024-07-09T13:28:53.629743215+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 445,
+   "sequenceNumber": 860,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5086,12 +5116,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34229912855",
-            "in-unicast-pkts": "195034613",
-            "in-discards": "33784",
+            "in-octets": "63745842601",
+            "in-unicast-pkts": "363513826",
+            "in-discards": "63564",
             "in-errors": "0",
-            "out-octets": "32140948231",
-            "out-unicast-pkts": "165293981",
+            "out-octets": "59825820639",
+            "out-unicast-pkts": "307672745",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5103,18 +5133,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:09:18.244566082+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:28:53.630235509+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:09:48.230331763+00:00",
+   "eventTime": "2024-07-09T13:29:23.632002050+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 446,
+   "sequenceNumber": 861,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5125,12 +5155,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34231916095",
-            "in-unicast-pkts": "195046012",
-            "in-discards": "33786",
+            "in-octets": "63747843371",
+            "in-unicast-pkts": "363525233",
+            "in-discards": "63566",
             "in-errors": "0",
-            "out-octets": "32142833115",
-            "out-unicast-pkts": "165303669",
+            "out-octets": "59827702786",
+            "out-unicast-pkts": "307682428",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5142,18 +5172,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:09:48.230861466+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:29:23.632527365+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:10:18.202007350+00:00",
+   "eventTime": "2024-07-09T13:29:53.641929917+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 447,
+   "sequenceNumber": 862,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5164,12 +5194,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34233918569",
-            "in-unicast-pkts": "195057433",
-            "in-discards": "33788",
+            "in-octets": "63749845299",
+            "in-unicast-pkts": "363536625",
+            "in-discards": "63568",
             "in-errors": "0",
-            "out-octets": "32144714940",
-            "out-unicast-pkts": "165313355",
+            "out-octets": "59829585337",
+            "out-unicast-pkts": "307692119",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5181,18 +5211,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:10:18.202574924+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:29:53.642420313+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:10:48.196788290+00:00",
+   "eventTime": "2024-07-09T13:30:23.647516906+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 448,
+   "sequenceNumber": 863,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5203,12 +5233,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34235910379",
-            "in-unicast-pkts": "195068820",
-            "in-discards": "33790",
+            "in-octets": "63751852561",
+            "in-unicast-pkts": "363548053",
+            "in-discards": "63570",
             "in-errors": "0",
-            "out-octets": "32146587170",
-            "out-unicast-pkts": "165322984",
+            "out-octets": "59831468473",
+            "out-unicast-pkts": "307701799",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5220,18 +5250,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:10:48.201637321+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:30:23.647987865+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:11:18.220820038+00:00",
+   "eventTime": "2024-07-09T13:30:53.629721358+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 449,
+   "sequenceNumber": 864,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5242,12 +5272,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34237914767",
-            "in-unicast-pkts": "195080237",
-            "in-discards": "33792",
+            "in-octets": "63753855749",
+            "in-unicast-pkts": "363559473",
+            "in-discards": "63572",
             "in-errors": "0",
-            "out-octets": "32148466967",
-            "out-unicast-pkts": "165332669",
+            "out-octets": "59833355957",
+            "out-unicast-pkts": "307711493",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5259,18 +5289,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:11:18.221407998+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:30:53.630242148+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:11:48.279623247+00:00",
+   "eventTime": "2024-07-09T13:31:23.618600884+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 450,
+   "sequenceNumber": 865,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5281,12 +5311,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34239920171",
-            "in-unicast-pkts": "195091694",
-            "in-discards": "33794",
+            "in-octets": "63755866296",
+            "in-unicast-pkts": "363570913",
+            "in-discards": "63574",
             "in-errors": "0",
-            "out-octets": "32150353127",
-            "out-unicast-pkts": "165342388",
+            "out-octets": "59835241712",
+            "out-unicast-pkts": "307721179",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5298,18 +5328,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:11:48.281569071+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:31:23.619109767+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:12:18.203325047+00:00",
+   "eventTime": "2024-07-09T13:31:53.632712492+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 451,
+   "sequenceNumber": 866,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5320,12 +5350,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34241932481",
-            "in-unicast-pkts": "195103215",
-            "in-discards": "33796",
+            "in-octets": "63757869563",
+            "in-unicast-pkts": "363582298",
+            "in-discards": "63576",
             "in-errors": "0",
-            "out-octets": "32152236828",
-            "out-unicast-pkts": "165352084",
+            "out-octets": "59837127926",
+            "out-unicast-pkts": "307730871",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5337,18 +5367,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:12:18.203852336+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:31:53.633194562+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:12:48.227558654+00:00",
+   "eventTime": "2024-07-09T13:32:23.628262547+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 452,
+   "sequenceNumber": 867,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5359,12 +5389,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34243939584",
-            "in-unicast-pkts": "195114666",
-            "in-discards": "33798",
+            "in-octets": "63759877593",
+            "in-unicast-pkts": "363593737",
+            "in-discards": "63578",
             "in-errors": "0",
-            "out-octets": "32154121863",
-            "out-unicast-pkts": "165361777",
+            "out-octets": "59839013029",
+            "out-unicast-pkts": "307740568",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5376,18 +5406,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:12:48.228150829+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:32:23.628741546+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:13:18.226553881+00:00",
+   "eventTime": "2024-07-09T13:32:53.666862781+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 453,
+   "sequenceNumber": 868,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5398,12 +5428,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34245946553",
-            "in-unicast-pkts": "195126091",
-            "in-discards": "33800",
+            "in-octets": "63761887389",
+            "in-unicast-pkts": "363605201",
+            "in-discards": "63580",
             "in-errors": "0",
-            "out-octets": "32156006021",
-            "out-unicast-pkts": "165371460",
+            "out-octets": "59840905081",
+            "out-unicast-pkts": "307750292",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5415,18 +5445,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:13:18.227122318+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:32:53.667372902+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:13:48.211402216+00:00",
+   "eventTime": "2024-07-09T13:33:23.673799017+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 454,
+   "sequenceNumber": 869,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5437,12 +5467,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34247963636",
-            "in-unicast-pkts": "195137573",
-            "in-discards": "33802",
+            "in-octets": "63763902068",
+            "in-unicast-pkts": "363616654",
+            "in-discards": "63582",
             "in-errors": "0",
-            "out-octets": "32157902439",
-            "out-unicast-pkts": "165381179",
+            "out-octets": "59842786972",
+            "out-unicast-pkts": "307759979",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5454,18 +5484,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:13:48.211942365+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:33:23.674279218+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:14:18.256134102+00:00",
+   "eventTime": "2024-07-09T13:33:53.657927098+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 455,
+   "sequenceNumber": 870,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5476,12 +5506,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34249975178",
-            "in-unicast-pkts": "195149022",
-            "in-discards": "33804",
+            "in-octets": "63765897758",
+            "in-unicast-pkts": "363628019",
+            "in-discards": "63584",
             "in-errors": "0",
-            "out-octets": "32159789395",
-            "out-unicast-pkts": "165390871",
+            "out-octets": "59844663907",
+            "out-unicast-pkts": "307769615",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5493,18 +5523,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:14:18.256587820+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:33:53.658418257+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:14:48.209653448+00:00",
+   "eventTime": "2024-07-09T13:34:23.655411895+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 456,
+   "sequenceNumber": 871,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5515,12 +5545,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34251986310",
-            "in-unicast-pkts": "195160479",
-            "in-discards": "33806",
+            "in-octets": "63767909151",
+            "in-unicast-pkts": "363639520",
+            "in-discards": "63586",
             "in-errors": "0",
-            "out-octets": "32161678134",
-            "out-unicast-pkts": "165400566",
+            "out-octets": "59846543605",
+            "out-unicast-pkts": "307779297",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5532,18 +5562,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:14:48.210173255+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:34:23.655899412+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:15:18.214095460+00:00",
+   "eventTime": "2024-07-09T13:34:53.655194954+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 457,
+   "sequenceNumber": 872,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5554,12 +5584,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34253994319",
-            "in-unicast-pkts": "195171924",
-            "in-discards": "33808",
+            "in-octets": "63769911989",
+            "in-unicast-pkts": "363650939",
+            "in-discards": "63588",
             "in-errors": "0",
-            "out-octets": "32163562793",
-            "out-unicast-pkts": "165410251",
+            "out-octets": "59848427259",
+            "out-unicast-pkts": "307788992",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5571,18 +5601,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:15:18.214595803+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:34:53.655668392+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:15:48.263706791+00:00",
+   "eventTime": "2024-07-09T13:35:23.653892256+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 458,
+   "sequenceNumber": 873,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5593,12 +5623,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34256001451",
-            "in-unicast-pkts": "195183417",
-            "in-discards": "33810",
+            "in-octets": "63771919981",
+            "in-unicast-pkts": "363662364",
+            "in-discards": "63590",
             "in-errors": "0",
-            "out-octets": "32165444845",
-            "out-unicast-pkts": "165419939",
+            "out-octets": "59850316180",
+            "out-unicast-pkts": "307798704",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5610,18 +5640,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:15:48.264204755+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:35:23.654432588+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:16:18.205269337+00:00",
+   "eventTime": "2024-07-09T13:35:53.657224584+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 459,
+   "sequenceNumber": 874,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5632,12 +5662,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34257987290",
-            "in-unicast-pkts": "195194754",
-            "in-discards": "33812",
+            "in-octets": "63773918829",
+            "in-unicast-pkts": "363673759",
+            "in-discards": "63592",
             "in-errors": "0",
-            "out-octets": "32167314436",
-            "out-unicast-pkts": "165429562",
+            "out-octets": "59852199458",
+            "out-unicast-pkts": "307808393",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5649,18 +5679,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:16:18.205749128+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:35:53.657711562+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:16:48.264907401+00:00",
+   "eventTime": "2024-07-09T13:36:23.623100626+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 460,
+   "sequenceNumber": 875,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5671,12 +5701,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34259991615",
-            "in-unicast-pkts": "195206212",
-            "in-discards": "33814",
+            "in-octets": "63775922375",
+            "in-unicast-pkts": "363685162",
+            "in-discards": "63594",
             "in-errors": "0",
-            "out-octets": "32169201394",
-            "out-unicast-pkts": "165439282",
+            "out-octets": "59854084009",
+            "out-unicast-pkts": "307818076",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5688,18 +5718,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:16:48.265368594+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:36:23.623593845+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:17:18.206840469+00:00",
+   "eventTime": "2024-07-09T13:36:53.624478333+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 461,
+   "sequenceNumber": 876,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5710,12 +5740,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34262003557",
-            "in-unicast-pkts": "195217726",
-            "in-discards": "33816",
+            "in-octets": "63777930504",
+            "in-unicast-pkts": "363696579",
+            "in-discards": "63596",
             "in-errors": "0",
-            "out-octets": "32171086261",
-            "out-unicast-pkts": "165448982",
+            "out-octets": "59855972410",
+            "out-unicast-pkts": "307827772",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5727,18 +5757,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:17:18.207370964+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:36:53.624942955+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:17:48.216137782+00:00",
+   "eventTime": "2024-07-09T13:37:23.640486883+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 462,
+   "sequenceNumber": 877,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5749,12 +5779,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34264010059",
-            "in-unicast-pkts": "195229192",
-            "in-discards": "33818",
+            "in-octets": "63779943969",
+            "in-unicast-pkts": "363708045",
+            "in-discards": "63598",
             "in-errors": "0",
-            "out-octets": "32172966781",
-            "out-unicast-pkts": "165458668",
+            "out-octets": "59857861398",
+            "out-unicast-pkts": "307837470",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5766,18 +5796,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:17:48.216619795+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:37:23.640982443+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:18:18.218928362+00:00",
+   "eventTime": "2024-07-09T13:37:53.620523237+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 463,
+   "sequenceNumber": 878,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5788,12 +5818,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34266019565",
-            "in-unicast-pkts": "195240647",
-            "in-discards": "33820",
+            "in-octets": "63781949948",
+            "in-unicast-pkts": "363719467",
+            "in-discards": "63600",
             "in-errors": "0",
-            "out-octets": "32174848899",
-            "out-unicast-pkts": "165468350",
+            "out-octets": "59859748028",
+            "out-unicast-pkts": "307847163",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5805,18 +5835,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:18:18.219610863+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:37:53.621027232+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:18:48.209776155+00:00",
+   "eventTime": "2024-07-09T13:38:23.635545605+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 464,
+   "sequenceNumber": 879,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5827,12 +5857,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34268031696",
-            "in-unicast-pkts": "195252132",
-            "in-discards": "33822",
+            "in-octets": "63783953997",
+            "in-unicast-pkts": "363730864",
+            "in-discards": "63602",
             "in-errors": "0",
-            "out-octets": "32176748914",
-            "out-unicast-pkts": "165478082",
+            "out-octets": "59861634155",
+            "out-unicast-pkts": "307856848",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5844,18 +5874,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:18:48.210322537+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:38:23.636062853+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:19:18.247399523+00:00",
+   "eventTime": "2024-07-09T13:38:53.632619355+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 465,
+   "sequenceNumber": 880,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5866,12 +5896,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34270037701",
-            "in-unicast-pkts": "195263561",
-            "in-discards": "33824",
+            "in-octets": "63785955082",
+            "in-unicast-pkts": "363742279",
+            "in-discards": "63604",
             "in-errors": "0",
-            "out-octets": "32178633411",
-            "out-unicast-pkts": "165487764",
+            "out-octets": "59863526435",
+            "out-unicast-pkts": "307866558",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5883,18 +5913,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:19:18.247832440+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:38:53.633098596+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:19:48.217183351+00:00",
+   "eventTime": "2024-07-09T13:39:23.626231699+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 466,
+   "sequenceNumber": 881,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5905,12 +5935,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34272042690",
-            "in-unicast-pkts": "195275006",
-            "in-discards": "33826",
+            "in-octets": "63787959872",
+            "in-unicast-pkts": "363753701",
+            "in-discards": "63606",
             "in-errors": "0",
-            "out-octets": "32180519216",
-            "out-unicast-pkts": "165497453",
+            "out-octets": "59865412486",
+            "out-unicast-pkts": "307876273",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5922,18 +5952,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:19:48.217749042+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:39:23.626764574+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:20:18.195441428+00:00",
+   "eventTime": "2024-07-09T13:39:53.622934223+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 467,
+   "sequenceNumber": 882,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5944,12 +5974,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34274054623",
-            "in-unicast-pkts": "195286500",
-            "in-discards": "33828",
+            "in-octets": "63789960411",
+            "in-unicast-pkts": "363765101",
+            "in-discards": "63608",
             "in-errors": "0",
-            "out-octets": "32182405136",
-            "out-unicast-pkts": "165507138",
+            "out-octets": "59867290577",
+            "out-unicast-pkts": "307885960",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -5961,18 +5991,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:20:18.195929935+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:39:53.623462145+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:20:48.212321204+00:00",
+   "eventTime": "2024-07-09T13:40:23.623081062+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 468,
+   "sequenceNumber": 883,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -5983,12 +6013,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34276050040",
-            "in-unicast-pkts": "195297875",
-            "in-discards": "33830",
+            "in-octets": "63791955124",
+            "in-unicast-pkts": "363776520",
+            "in-discards": "63610",
             "in-errors": "0",
-            "out-octets": "32184280434",
-            "out-unicast-pkts": "165516771",
+            "out-octets": "59869160142",
+            "out-unicast-pkts": "307895587",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6000,18 +6030,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:20:48.212834544+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:40:23.623516698+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:21:18.206330882+00:00",
+   "eventTime": "2024-07-09T13:40:53.627246128+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 469,
+   "sequenceNumber": 884,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6022,12 +6052,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34278062468",
-            "in-unicast-pkts": "195309337",
-            "in-discards": "33832",
+            "in-octets": "63793957939",
+            "in-unicast-pkts": "363787947",
+            "in-discards": "63612",
             "in-errors": "0",
-            "out-octets": "32186168341",
-            "out-unicast-pkts": "165526488",
+            "out-octets": "59871044588",
+            "out-unicast-pkts": "307905279",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6039,18 +6069,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:21:18.206840643+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:40:53.627802705+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:21:48.197020497+00:00",
+   "eventTime": "2024-07-09T13:41:23.634097869+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 470,
+   "sequenceNumber": 885,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6061,12 +6091,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34280074593",
-            "in-unicast-pkts": "195320818",
-            "in-discards": "33834",
+            "in-octets": "63795964415",
+            "in-unicast-pkts": "363799363",
+            "in-discards": "63614",
             "in-errors": "0",
-            "out-octets": "32188050555",
-            "out-unicast-pkts": "165536179",
+            "out-octets": "59872931511",
+            "out-unicast-pkts": "307914988",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6078,18 +6108,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:21:48.197473547+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:41:23.634616198+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:22:18.200595656+00:00",
+   "eventTime": "2024-07-09T13:41:53.622362618+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 471,
+   "sequenceNumber": 886,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6100,12 +6130,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34282075612",
-            "in-unicast-pkts": "195332250",
-            "in-discards": "33836",
+            "in-octets": "63797973823",
+            "in-unicast-pkts": "363810798",
+            "in-discards": "63616",
             "in-errors": "0",
-            "out-octets": "32189929619",
-            "out-unicast-pkts": "165545860",
+            "out-octets": "59874816944",
+            "out-unicast-pkts": "307924681",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6117,18 +6147,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:22:18.201102624+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:41:53.622851556+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:22:48.229123832+00:00",
+   "eventTime": "2024-07-09T13:42:23.625710849+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 472,
+   "sequenceNumber": 887,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6139,12 +6169,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34284081897",
-            "in-unicast-pkts": "195343684",
-            "in-discards": "33838",
+            "in-octets": "63799982607",
+            "in-unicast-pkts": "363822234",
+            "in-discards": "63618",
             "in-errors": "0",
-            "out-octets": "32191812798",
-            "out-unicast-pkts": "165555556",
+            "out-octets": "59876702314",
+            "out-unicast-pkts": "307934365",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6156,18 +6186,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:22:48.229698707+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:42:23.626206580+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:23:18.193999063+00:00",
+   "eventTime": "2024-07-09T13:42:53.630048905+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 473,
+   "sequenceNumber": 888,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6178,12 +6208,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34286091353",
-            "in-unicast-pkts": "195355200",
-            "in-discards": "33840",
+            "in-octets": "63801991524",
+            "in-unicast-pkts": "363833662",
+            "in-discards": "63620",
             "in-errors": "0",
-            "out-octets": "32193693005",
-            "out-unicast-pkts": "165565239",
+            "out-octets": "59878590453",
+            "out-unicast-pkts": "307944057",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6195,18 +6225,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:23:18.194485233+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:42:53.630551771+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:23:48.219156357+00:00",
+   "eventTime": "2024-07-09T13:43:23.622724525+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 474,
+   "sequenceNumber": 889,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6217,12 +6247,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34288098230",
-            "in-unicast-pkts": "195366636",
-            "in-discards": "33842",
+            "in-octets": "63804012901",
+            "in-unicast-pkts": "363845168",
+            "in-discards": "63622",
             "in-errors": "0",
-            "out-octets": "32195588907",
-            "out-unicast-pkts": "165574968",
+            "out-octets": "59880476462",
+            "out-unicast-pkts": "307953741",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6234,18 +6264,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:23:48.219657861+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:43:23.623374903+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:24:18.234542892+00:00",
+   "eventTime": "2024-07-09T13:43:53.620115589+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 475,
+   "sequenceNumber": 890,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6256,12 +6286,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34290103309",
-            "in-unicast-pkts": "195378051",
-            "in-discards": "33844",
+            "in-octets": "63806015209",
+            "in-unicast-pkts": "363856579",
+            "in-discards": "63624",
             "in-errors": "0",
-            "out-octets": "32197472892",
-            "out-unicast-pkts": "165584652",
+            "out-octets": "59882368904",
+            "out-unicast-pkts": "307963446",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6273,18 +6303,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:24:18.235069137+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:43:53.620597552+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:24:48.218110850+00:00",
+   "eventTime": "2024-07-09T13:44:23.619496636+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 476,
+   "sequenceNumber": 891,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6295,12 +6325,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34292114290",
-            "in-unicast-pkts": "195389537",
-            "in-discards": "33846",
+            "in-octets": "63808023255",
+            "in-unicast-pkts": "363868010",
+            "in-discards": "63626",
             "in-errors": "0",
-            "out-octets": "32199360104",
-            "out-unicast-pkts": "165594342",
+            "out-octets": "59884258295",
+            "out-unicast-pkts": "307973163",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6312,18 +6342,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:24:48.218689176+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:44:23.620004936+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:25:18.197397990+00:00",
+   "eventTime": "2024-07-09T13:44:53.621836808+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 477,
+   "sequenceNumber": 892,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6334,12 +6364,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34294106558",
-            "in-unicast-pkts": "195400884",
-            "in-discards": "33848",
+            "in-octets": "63810010607",
+            "in-unicast-pkts": "363879347",
+            "in-discards": "63628",
             "in-errors": "0",
-            "out-octets": "32201233422",
-            "out-unicast-pkts": "165603965",
+            "out-octets": "59886129087",
+            "out-unicast-pkts": "307982793",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6351,18 +6381,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:25:18.197904372+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:44:53.622328526+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:25:48.204670075+00:00",
+   "eventTime": "2024-07-09T13:45:23.634770615+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 478,
+   "sequenceNumber": 893,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6373,12 +6403,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34296112527",
-            "in-unicast-pkts": "195412307",
-            "in-discards": "33850",
+            "in-octets": "63812005979",
+            "in-unicast-pkts": "363890733",
+            "in-discards": "63630",
             "in-errors": "0",
-            "out-octets": "32203119563",
-            "out-unicast-pkts": "165613653",
+            "out-octets": "59888006819",
+            "out-unicast-pkts": "307992476",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6390,18 +6420,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:25:48.205184517+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:45:23.635276975+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:26:18.204434436+00:00",
+   "eventTime": "2024-07-09T13:45:53.647866555+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 479,
+   "sequenceNumber": 894,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6412,12 +6442,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34298121876",
-            "in-unicast-pkts": "195423786",
-            "in-discards": "33852",
+            "in-octets": "63814015298",
+            "in-unicast-pkts": "363902196",
+            "in-discards": "63632",
             "in-errors": "0",
-            "out-octets": "32205004226",
-            "out-unicast-pkts": "165623338",
+            "out-octets": "59889892000",
+            "out-unicast-pkts": "308002195",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6429,18 +6459,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:26:18.204925197+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:45:53.648345301+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:26:48.198136797+00:00",
+   "eventTime": "2024-07-09T13:46:23.659784064+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 480,
+   "sequenceNumber": 895,
    "ietf-yang-push:push-update": {
-    "id": 45,
+    "id": 68,
     "datastore-contents": {
      "vrouter:state": {
       "vrf": [
@@ -6451,12 +6481,12 @@ ietf-subscribed-notifications:subscription-terminated length(2)
           {
            "name": "ens192",
            "counters": {
-            "in-octets": "34300126434",
-            "in-unicast-pkts": "195435230",
-            "in-discards": "33854",
+            "in-octets": "63816020948",
+            "in-unicast-pkts": "363913601",
+            "in-discards": "63634",
             "in-errors": "0",
-            "out-octets": "32206888848",
-            "out-unicast-pkts": "165633033",
+            "out-octets": "59891774752",
+            "out-unicast-pkts": "308011880",
             "out-discards": "0",
             "out-errors": "0"
            }
@@ -6468,16 +6498,55 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:26:48.198686635+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:46:23.660283821+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:27:11.727512641+00:00",
+   "eventTime": "2024-07-09T13:46:53.665452328+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 481,
+   "sequenceNumber": 896,
+   "ietf-yang-push:push-update": {
+    "id": 68,
+    "datastore-contents": {
+     "vrouter:state": {
+      "vrf": [
+       {
+        "name": "main",
+        "vrouter-interface:interface": {
+         "physical": [
+          {
+           "name": "ens192",
+           "counters": {
+            "in-octets": "63818028547",
+            "in-unicast-pkts": "363925077",
+            "in-discards": "63636",
+            "in-errors": "0",
+            "out-octets": "59893659372",
+            "out-unicast-pkts": "308021570",
+            "out-discards": "0",
+            "out-errors": "0"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    },
+    "ietf-distributed-notif:message-publisher-id": 0,
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:46:53.665948008+00:00",
+    "ietf-yp-observation-time:point-in-time": "current-state"
+   }
+  }
+ },
+ {
+  "ietf-notifications:notification": {
+   "eventTime": "2024-07-09T13:46:55.350806538+00:00",
+   "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+   "sequenceNumber": 897,
    "ietf-subscribed-notifications:subscription-terminated": {
     "id": 12345678,
     "reason": "no-such-subscription"
@@ -6489,11 +6558,11 @@ ietf-subscribed-notifications:subscription-terminated length(2)
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:28:13.299974220+00:00",
+   "eventTime": "2024-07-09T13:47:56.887480682+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 484,
+   "sequenceNumber": 900,
    "ietf-yang-push:push-change-update": {
-    "id": 46,
+    "id": 69,
     "datastore-changes": {
      "yang-patch": {
       "patch-id": "patch-1",
@@ -6510,18 +6579,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:28:13.300234159+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:47:56.887798493+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:29:13.760619126+00:00",
+   "eventTime": "2024-07-09T13:48:57.368250103+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 485,
+   "sequenceNumber": 901,
    "ietf-yang-push:push-change-update": {
-    "id": 46,
+    "id": 69,
     "datastore-changes": {
      "yang-patch": {
       "patch-id": "patch-2",
@@ -6538,18 +6607,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:29:13.760840411+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:48:57.368453690+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:30:14.082176404+00:00",
+   "eventTime": "2024-07-09T13:49:57.880152377+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 486,
+   "sequenceNumber": 902,
    "ietf-yang-push:push-change-update": {
-    "id": 46,
+    "id": 69,
     "datastore-changes": {
      "yang-patch": {
       "patch-id": "patch-3",
@@ -6566,18 +6635,18 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:30:14.082404523+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:49:57.880350918+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:31:14.635630770+00:00",
+   "eventTime": "2024-07-09T13:50:58.354726467+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 487,
+   "sequenceNumber": 903,
    "ietf-yang-push:push-change-update": {
-    "id": 46,
+    "id": 69,
     "datastore-changes": {
      "yang-patch": {
       "patch-id": "patch-4",
@@ -6594,16 +6663,16 @@ ietf-subscribed-notifications:subscription-terminated length(2)
      }
     },
     "ietf-distributed-notif:message-publisher-id": 0,
-    "ietf-yp-observation-time:observation-time": "2024-07-04T08:31:14.637366815+00:00",
+    "ietf-yp-observation-time:observation-time": "2024-07-09T13:50:58.356945514+00:00",
     "ietf-yp-observation-time:point-in-time": "current-state"
    }
   }
  },
  {
   "ietf-notifications:notification": {
-   "eventTime": "2024-07-04T08:32:14.859811800+00:00",
+   "eventTime": "2024-07-09T13:51:58.649438169+00:00",
    "sysName": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-   "sequenceNumber": 488,
+   "sequenceNumber": 904,
    "ietf-subscribed-notifications:subscription-terminated": {
     "id": 12345678,
     "reason": "no-such-subscription"
@@ -6611,10 +6680,11 @@ ietf-subscribed-notifications:subscription-terminated length(2)
   }
  }
 ]
-stopped tcpdump: 6wind-yp-test-20240704-100659.pcap
+
+stopped tcpdump: ./pcaps/yp-test-20240709-152636.pcap
 
 terminating udp-listener on port: 10003
 BYE
 
-Logfile: yp_test_suite_report_20240704_100659.log
+Logfile: ./logs/yp_test_suite_report_20240709_152636.log
 
