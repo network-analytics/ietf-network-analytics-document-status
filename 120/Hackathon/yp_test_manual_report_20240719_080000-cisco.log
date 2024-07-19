@@ -1,0 +1,410 @@
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:00:59.784 CEST
+yang-push
+ subscription 1
+  filter xpath Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+  encoding json
+  receiver 100.105.33.2 port 10005
+  transport tcp
+  update-policy on-change
+  source-interface Loopback0
+ !
+!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#yang-push
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yang-push)# subscription 1
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  filter xpath Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  encoding json
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  receiver 100.105.33.2 port 10005
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  transport tcp
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  update-policy on-change
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  source-interface Loopback0
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)# !
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#commit
+end
+
+Fri Jul 19 17:01:00.132 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:01:29.556 CEST
+interface Loopback12
+shut
+commit
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#interface Loopback12
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#shut
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#commit
+Fri Jul 19 17:01:29.884 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#no shut
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#commit
+Fri Jul 19 17:01:58.837 CEST
+end
+
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:02:26.938 CEST
+yang-push
+ subscription 2
+  filter xpath Cisco-IOS-XR-ipv6-ma-oper:ipv6-network
+  encoding json
+  receiver 100.105.33.2 port 10005
+  transport tcp
+  update-policy on-change
+  source-interface Loopback0
+ !
+!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#yang-push
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yang-push)# subscription 2
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  filter xpath Cisco-IOS-XR-ipv6-ma-oper:ipv6-network
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  encoding json
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  receiver 100.105.33.2 port 10005
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  transport tcp
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  update-policy on-change
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  source-interface Loopback0
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)# !
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#commit
+end
+
+Fri Jul 19 17:02:27.270 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:03:03.820 CEST
+interface Loopback12
+ ipv6 address 2001:db8:192::190/128
+commitRP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#interface Loopback12
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)# ipv6 address 2001:db8:192::190/128
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#commit
+Fri Jul 19 17:03:05.948 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)# ipv6 address 2001:db8:192::90/128
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#commit
+Fri Jul 19 17:03:24.833 CEST
+end
+
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-if)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:03:58.171 CEST
+no yang-push
+commit
+end
+
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#no yang-push
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#commit
+Fri Jul 19 17:03:58.502 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:04:59.168 CEST
+yang-push
+ subscription 1
+  filter xpath Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+  encoding json
+  receiver 100.105.33.2 port 10005
+  transport tcp
+  update-policy on-change
+  source-interface Loopback0
+ !
+!
+commit
+end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#yang-push
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yang-push)# subscription 1
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  filter xpath Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  encoding json
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  receiver 100.105.33.2 port 10005
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  transport tcp
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  update-policy on-change
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  source-interface Loopback0
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)# !
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#commit
+Fri Jul 19 17:04:59.518 CEST
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#end
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90#configure
+Fri Jul 19 17:05:06.773 CEST
+yang-push
+ subscription 2
+  filter xpath Cisco-IOS-XR-ipv6-ma-oper:ipv6-network
+  encoding json
+  receiver 100.105.33.2 port 10005
+  transport tcp
+  update-policy on-change
+  source-interface Loopback0
+ !
+!
+commit
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config)#yang-push
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yang-push)# subscription 2
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  filter xpath Cisco-IOS-XR-ipv6-ma-oper:ipv6-network
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  encoding json
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  receiver 100.105.33.2 port 10005
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  transport tcp
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  update-policy on-change
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#  source-interface Loopback0
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)# !
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#!
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#commit
+Fri Jul 19 17:05:07.108 CEST
+end
+
+RP/0/RP0/CPU0:ipf-zbl1327-r-daisy-90(config-yp-subs)#end
+
+----
+
+[
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:01:00.300Z",
+      "ietf-subscribed-notifications:subscription-started": {
+        "id": 1,
+        "stream-xpath-filter": "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces",
+        "transport": "transport",
+        "encoding": "encode-json"
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:01:30.175Z",
+      "ietf-yang-push:push-change-update": {
+        "id": 1,
+        "datastore-changes": {
+          "yang-patch": {
+            "patch-id": "TODO - insert patch-id here",
+            "edit": [
+              {
+                "edit-id": "1",
+                "operation": "replace",
+                "target": "/Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface[interface-name='Loopback12']",
+                "value": {
+                  "Cisco-IOS-XR-pfi-im-cmd-oper:interface": {
+                    "interface-name": "Loopback12",
+                    "interface-handle": "Loopback12",
+                    "interface-type": "IFT_LOOPBACK",
+                    "hardware-type-string": "Loopback interface(s)",
+                    "state": "im-state-admin-down",
+                    "line-state": "im-state-admin-down",
+                    "encapsulation": "loopback",
+                    "encapsulation-type-string": "Loopback",
+                    "mtu": 1500,
+                    "is-l2-transport-enabled": false,
+                    "state-transition-count": 10,
+                    "last-state-transition-time": "1721401289960121958",
+                    "is-dampening-enabled": false,
+                    "bandwidth": "0",
+                    "max-bandwidth": "0",
+                    "is-l2-looped": false,
+                    "loopback-configuration": "no-loopback",
+                    "ip-information": {
+                      "ip-address": "192.0.2.90",
+                      "subnet-mask-length": 32
+                    },
+                    "fast-shutdown": false,
+                    "if-index": 154,
+                    "is-intf-logical": true,
+                    "is-intf-type-management": false,
+                    "is-intf-type-cpu": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:01:59.130Z",
+      "ietf-yang-push:push-change-update": {
+        "id": 1,
+        "datastore-changes": {
+          "yang-patch": {
+            "patch-id": "TODO - insert patch-id here",
+            "edit": [
+              {
+                "edit-id": "1",
+                "operation": "replace",
+                "target": "/Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface[interface-name='Loopback12']",
+                "value": {
+                  "Cisco-IOS-XR-pfi-im-cmd-oper:interface": {
+                    "interface-name": "Loopback12",
+                    "interface-handle": "Loopback12",
+                    "interface-type": "IFT_LOOPBACK",
+                    "hardware-type-string": "Loopback interface(s)",
+                    "state": "im-state-up",
+                    "line-state": "im-state-up",
+                    "encapsulation": "loopback",
+                    "encapsulation-type-string": "Loopback",
+                    "mtu": 1500,
+                    "is-l2-transport-enabled": false,
+                    "state-transition-count": 11,
+                    "last-state-transition-time": "1721401318916586996",
+                    "is-dampening-enabled": false,
+                    "bandwidth": "0",
+                    "max-bandwidth": "0",
+                    "is-l2-looped": false,
+                    "loopback-configuration": "no-loopback",
+                    "ip-information": {
+                      "ip-address": "192.0.2.90",
+                      "subnet-mask-length": 32
+                    },
+                    "fast-shutdown": false,
+                    "if-index": 154,
+                    "is-intf-logical": true,
+                    "is-intf-type-management": false,
+                    "is-intf-type-cpu": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:02:27.426Z",
+      "ietf-subscribed-notifications:subscription-started": {
+        "id": 2,
+        "stream-xpath-filter": "Cisco-IOS-XR-ipv6-ma-oper:ipv6-network",
+        "transport": "transport",
+        "encoding": "encode-json"
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:03:06.247Z",
+      "ietf-yang-push:push-change-update": {
+        "id": 2,
+        "datastore-changes": {
+          "yang-patch": {
+            "patch-id": "TODO - insert patch-id here",
+            "edit": [
+              {
+                "edit-id": "1",
+                "operation": "replace",
+                "target": "/Cisco-IOS-XR-ipv6-ma-oper:ipv6-network/nodes/node[node-name='0/RP0/CPU0']/interface-data/vrfs/vrf[vrf-name='A2']/global-briefs/global-brief[interface-name='Loopback12']",
+                "value": {
+                  "Cisco-IOS-XR-ipv6-ma-oper:global-brief": {
+                    "interface-name": "Loopback12",
+                    "line-state": "up",
+                    "vrf-name": "A2",
+                    "address": [
+                      {
+                        "address": "2001:db8:192::90",
+                        "prefix-length": 128,
+                        "address-state": "active",
+                        "is-anycast": false,
+                        "route-tag": 0,
+                        "algorithm": 0,
+                        "arm-flags": 0
+                      },
+                      {
+                        "address": "2001:db8:192::190",
+                        "prefix-length": 128,
+                        "address-state": "active",
+                        "is-anycast": false,
+                        "route-tag": 0,
+                        "algorithm": 0,
+                        "arm-flags": 0
+                      }
+                    ],
+                    "link-local-address": {
+                      "address": "fe80::601f:67ff:fead:3bd1",
+                      "prefix-length": 128,
+                      "address-state": "active",
+                      "is-anycast": false,
+                      "route-tag": 0,
+                      "algorithm": 0,
+                      "arm-flags": 0
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:03:06.258Z",
+      "ietf-yang-push:push-change-update": {
+        "id": 1,
+        "datastore-changes": {
+          "yang-patch": {
+            "patch-id": "TODO - insert patch-id here",
+            "edit": [
+              {
+                "edit-id": "1",
+                "operation": "replace",
+                "target": "/Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface[interface-name='Loopback12']",
+                "value": {
+                  "Cisco-IOS-XR-pfi-im-cmd-oper:interface": {
+                    "interface-name": "Loopback12",
+                    "interface-handle": "Loopback12",
+                    "interface-type": "IFT_LOOPBACK",
+                    "hardware-type-string": "Loopback interface(s)",
+                    "state": "im-state-up",
+                    "line-state": "im-state-up",
+                    "encapsulation": "loopback",
+                    "encapsulation-type-string": "Loopback",
+                    "mtu": 1500,
+                    "is-l2-transport-enabled": false,
+                    "state-transition-count": 11,
+                    "last-state-transition-time": "1721401318916586996",
+                    "is-dampening-enabled": false,
+                    "bandwidth": "0",
+                    "max-bandwidth": "0",
+                    "is-l2-looped": false,
+                    "loopback-configuration": "no-loopback",
+                    "ip-information": {
+                      "ip-address": "192.0.2.90",
+                      "subnet-mask-length": 32
+                    },
+                    "fast-shutdown": false,
+                    "if-index": 154,
+                    "is-intf-logical": true,
+                    "is-intf-type-management": false,
+                    "is-intf-type-cpu": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:03:58.590Z",
+      "ietf-subscribed-notifications:subscription-terminated": {
+        "id": 1,
+        "reason": "no-such-subscription"
+      }
+    }
+  },
+  {
+    "ietf-notification:notification": {
+      "eventTime": "2024-07-19T15:03:58.591Z",
+      "ietf-subscribed-notifications:subscription-terminated": {
+        "id": 2,
+        "reason": "no-such-subscription"
+      }
+    }
+  }
+]
+
