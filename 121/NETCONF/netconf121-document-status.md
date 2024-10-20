@@ -10,10 +10,10 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Presented -14 at NETCONF 120, requested working group last call, updated document on segmentation use
+* **State**: Presented -14 at NETCONF 120, requested working group last call, updated document on segmentation use and frequency vs. velocity consitency, UDP reasoning and definition of unsecure networks according to transport directorate feedback
 * **Tasks**: https://github.com/network-analytics/draft-ietf-netconf-udp-notif/issues/15, https://mailarchive.ietf.org/arch/msg/netconf/49eYiriNYLsVYXnvX9EeQX442QI/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-14&doc_2=draft-ietf-netconf-udp-notif-15
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-14&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/main/draft-ietf-netconf-udp-notif-16.txt
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-udp-client-server/
