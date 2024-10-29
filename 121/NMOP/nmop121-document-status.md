@@ -9,8 +9,9 @@ https://datatracker.ietf.org/meeting/120/session/nmop
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
 * **State**: Presented -04 at NMOP 120, added draft-netana-netconf-yp-transport-capabilities and draft-netana-netconf-notif-envelope references and updated examples accordingly, updated milestones and open points
+* **Tasks"": Update ietf-yang-library-augmentedby reference and consider draft-ietf-opsawg-collected-data-manifest reference.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-04&doc_2=draft-ietf-nmop-yang-message-broker-integration-05
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-06.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
