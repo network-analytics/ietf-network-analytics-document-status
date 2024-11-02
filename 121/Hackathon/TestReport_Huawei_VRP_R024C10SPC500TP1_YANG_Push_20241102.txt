@@ -1,0 +1,258 @@
+telemetry ietf
+ #
+ filter DAISY type datastore
+  xpath /huawei-ifm:ifm/interfaces/interface
+ #
+ filter DAISY2 type datastore
+  xpath /huawei-ifm:ifm/interfaces/interface/dynamic/link-status
+  xpath /huawei-ifm:ifm/interfaces/interface/dynamic/oper-status
+  xpath /huawei-ifm:ifm/interfaces/interface/dynamic/physical-status
+ #
+ receiver DAISY
+  ipv4-address 138.187.58.24 port 10003
+  fragment enable
+  fragment max-size 1000
+ #
+ subscription 1
+  local-source-interface LoopBack0
+  transport udp-notif
+  encoding json
+  distribute enable
+  update-trigger period 6000
+  filter DAISY type datastore
+  #
+  receiver DAISY
+   bind-receiver DAISY
+ #
+ subscription 5
+  local-source-interface LoopBack0
+  transport udp-notif
+  encoding json
+  distribute enable
+  update-trigger on-change
+  filter DAISY2 type datastore
+  #
+  receiver DAISY
+   bind-receiver DAISY
+#
+
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>]]>]]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1709085368258">
+  <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <filter type="subtree">
+      <subscription-started xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+      <subscription-terminated xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+    </filter>
+  </create-subscription>
+</rpc>]]>]]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<notification
+	xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+	<eventTime>2024-11-02T10:30:30Z</eventTime>
+	<subscription-started
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+		<id>1</id>
+		<datastore
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+			xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running
+		</datastore>
+		<datastore-xpath-filter
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+			xmlns:debug="urn:huawei:yang:huawei-debug"
+			xmlns:ifm="urn:huawei:yang:huawei-ifm"
+			xmlns:pic="urn:huawei:yang:huawei-pic"
+			xmlns:ni="urn:huawei:yang:huawei-network-instance"
+			xmlns:l3vpn="urn:huawei:yang:huawei-l3vpn"
+			xmlns:rt="urn:huawei:yang:huawei-routing">/debug:debug/debug:board-resouce-states/debug:board-resouce-state|/debug:debug/debug:cpu-infos/debug:cpu-info|/debug:debug/debug:memory-infos/debug:memory-info|/ifm:ifm/ifm:interfaces/ifm:interface|/ifm:ifm/ifm:interfaces/ifm:interface/ifm:dynamic|/ifm:ifm/ifm:interfaces/ifm:interface/ifm:mib-statistics|/ifm:ifm/ifm:interfaces/ifm:interface/ifm:mib-statistics/pic:eth-port-err-sts|/ni:network-instance/ni:instances/ni:instance/l3vpn:afs/l3vpn:af/rt:routing/rt:routing-manage/rt:topologys/rt:topology/rt:routes/rt:ipv4-prefix-statistics|/ni:network-instance/ni:instances/ni:instance/l3vpn:afs/l3vpn:af/rt:routing/rt:routing-manage/rt:topologys/rt:topology/rt:routes/rt:ipv4-route-statistics/rt:ipv4-route-statistic|/ni:network-instance/ni:instances/ni:instance/l3vpn:afs/l3vpn:af/rt:routing/rt:routing-manage/rt:topologys/rt:topology/rt:routes/rt:ipv6-prefix-statistics|/ni:network-instance/ni:instances/ni:instance/l3vpn:afs/l3vpn:af/rt:routing/rt:routing-manage/rt:topologys/rt:topology/rt:routes/rt:ipv6-route-statistics/rt:ipv6-route-statistic
+		</datastore-xpath-filter>
+		<transport
+			xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+		</transport>
+		<encoding>encode-json</encoding>
+		<message-publisher-ids
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">16974828
+		</message-publisher-ids>
+		<message-publisher-ids
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">16973828
+		</message-publisher-ids>
+		<message-publisher-ids
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">16974839
+		</message-publisher-ids>
+		<periodic
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+			<period>6000</period>
+		</periodic>
+		<module-version
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">
+			<module-name>huawei-debug</module-name>
+			<revision>2024-06-19</revision>
+			<revision-label>1.0.0</revision-label>
+		</module-version>
+		<module-version
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">
+			<module-name>huawei-ifm</module-name>
+			<revision>2024-07-25</revision>
+			<revision-label>1.0.0</revision-label>
+		</module-version>
+		<module-version
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">
+			<module-name>huawei-pic</module-name>
+			<revision>2024-06-22</revision>
+			<revision-label>1.0.0</revision-label>
+		</module-version>
+		<module-version
+			xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">
+			<module-name>huawei-routing</module-name>
+			<revision>2024-07-17</revision>
+			<revision-label>1.0.0</revision-label>
+		</module-version>
+	</subscription-started></notification>
+]]>]]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<notification
+	xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+	<eventTime>2024-11-02T10:31:44Z</eventTime>
+	<subscription-terminated
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+		<id>1</id>
+		<reason
+			xmlns:sn-ext="urn:huawei:yang:huawei-ietf-subscribed-notif-ext">sn-ext:receiver-unavailable
+		</reason>
+	</subscription-terminated>
+</notification>
+]]>]]>
+
+
+{
+  "event_type": "log",
+  "seq": 238107,
+  "timestamp": "1730543572.433222",
+  "telemetry_node": "203.0.113.21",
+  "telemetry_port": 54908,
+  "label": {
+    "nkey": "ipf-zbl1243-r-daisy-21",
+    "pkey": "Huawei-VRP"
+  },
+  "telemetry_data": {
+    "ietf-notification:notification": {
+      "eventTime": "2024-11-02T10:32:52Z",
+      "ietf-notification-sequencing:sysName": "ipf-zbl1243-r-daisy-21",
+      "ietf-notification-sequencing:sequenceNumber": 37,
+      "ietf-yang-push:push-update": {
+        "id": 1,
+        "ietf-yp-observation:timestamp": "2024-11-02T10:32:52Z",
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "ietf-distributed-notif:message-publisher-id": 16974853,
+        "datastore-contents": {
+          "huawei-ifm:ifm": {
+            "interfaces": {
+              "interface": [
+                {
+                  "name": "GigabitEthernet0/3/9",
+                  "mib-statistics": {
+                    "receive-byte": "13535296516",
+                    "send-byte": "11190568592",
+                    "receive-packet": "65268191",
+                    "send-packet": "57173728",
+                    "receive-unicast-packet": "64528713",
+                    "receive-multicast-packet": "739475",
+                    "receive-broad-packet": "3",
+                    "send-unicast-packet": "57173728",
+                    "send-multicast-packet": "0",
+                    "send-broad-packet": "0",
+                    "receive-error-packet": "0",
+                    "receive-drop-packet": "0",
+                    "send-error-packet": "0",
+                    "send-drop-packet": "0",
+                    "in-bit-rate": "106594",
+                    "in-packet-rate": "61",
+                    "out-bit-rate": "121035",
+                    "out-packet-rate": "70"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "serialization": "json",
+  "writer_id": "ietfcolright01pmtelemetrydudpnotifright01c 20241030.1.5a90644-1.el8"
+}
+
+
+{
+  "event_type": "log",
+  "seq": 238421,
+  "timestamp": "1730543937.771826",
+  "telemetry_node": "203.0.113.21",
+  "telemetry_port": 54908,
+  "label": {
+    "nkey": "ipf-zbl1243-r-daisy-21",
+    "pkey": "Huawei-VRP"
+  },
+  "telemetry_data": {
+    "ietf-notification:notification": {
+      "eventTime": "2024-11-02T10:38:57Z",
+      "ietf-notification-sequencing:sysName": "ipf-zbl1243-r-daisy-21",
+      "ietf-notification-sequencing:sequenceNumber": 72,
+      "ietf-yang-push:push-change-update": {
+        "id": 5,
+        "ietf-yp-observation:timestamp": "2024-11-02T10:38:57Z",
+        "ietf-yp-observation:point-in-time": "state-changed",
+        "ietf-distributed-notif:message-publisher-id": 16974841,
+        "datastore-changes": {
+          "yang-patch": {
+            "patch-id": 20,
+            "edit": [
+              {
+                "edit-id": "edit1",
+                "operation": "merge",
+                "target": "/huawei-ifm:ifm/interfaces/interface[name=GigabitEthernet0/3/9]/dynamic",
+                "value": {
+                  "dynamic": {
+                    "link-status": "up"
+                  }
+                }
+              },
+              {
+                "edit-id": "edit2",
+                "operation": "merge",
+                "target": "/huawei-ifm:ifm/interfaces/interface[name=GigabitEthernet0/3/9.564]/dynamic",
+                "value": {
+                  "dynamic": {
+                    "link-status": "up"
+                  }
+                }
+              },
+              {
+                "edit-id": "edit3",
+                "operation": "merge",
+                "target": "/huawei-ifm:ifm/interfaces/interface[name=GigabitEthernet0/3/9.584]/dynamic",
+                "value": {
+                  "dynamic": {
+                    "link-status": "up"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "serialization": "json",
+  "writer_id": "ietfcolright01pmtelemetrydudpnotifright01c 20241030.1.5a90644-1.el8"
+}
