@@ -24,7 +24,7 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-archite
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-semantics/
 * **State**: Presented -02 at NMOP 120, updated YANG module and relevant-state augmentations, merged terminology input from Adrian and cleaned up document.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-network-anomaly-semantics-02&doc_2=draft-netana-nmop-network-anomaly-semantics-03
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-network-anomaly-semantics-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-netana-nmop-network-anomaly-semantics-04.txt
 
 ### draft-netana-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-lifecycle/
