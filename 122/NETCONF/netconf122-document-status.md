@@ -10,7 +10,7 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Presented -15 at NETCONF 121, working group last call should start soon, updated document on segmentation use and frequency vs. velocity consistency, UDP reasoning and definition of unsecure networks according to transport directorate feedback, await confirmation. Input from Andy: max-segment-size should be uint16 instead of uint32.
+* **State**: Presented -15 at NETCONF 121, working group last call should start soon, updated document on segmentation use and frequency vs. velocity consistency, UDP reasoning and definition of unsecure networks according to transport directorate feedback, await confirmation. Input from Andy: max-segment-size should be uint16 instead of uint32. Input from Carsten: SHOULD vs. MUST on segmentation.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-17&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-18.txt
 
@@ -36,13 +36,13 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-netconf-notif-envelope/
 * **State**: Presented draft-netana-netconf-notif-envelope-01 at NETCONF 121, requested feedback on mailing list which extensions should be included.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-netana-netconf-notif-envelope
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-netconf-notif-envelope-00&doc_2=draft-netana-netconf-notif-envelope-01
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-netconf-notif-envelope-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-netana-netconf-notif-envelope-02.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
 * **State**: Presented -05 at NETCONF 120, updated implementation status section in -06.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-05&doc_2=draft-ietf-netconf-yang-notifications-versioning-06
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/refs/heads/main/draft-ietf-netconf-yang-notifications-versioning-07.txt
 
 ### draft-tgraf-netconf-yang-push-observation-time
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
