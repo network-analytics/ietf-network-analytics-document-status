@@ -29,10 +29,10 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 
 ### draft-netana-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-netconf-yp-transport-capabilities/
-* **State**: Replaces draft-tao-netconf-data-export-capabilities-07. Addreeses feedback from Kent that udp-notif should be discoverable. Requested confirmation and feedback on mailing list.
+* **State**: Replaces draft-tao-netconf-data-export-capabilities-07. Addresses feedback from Kent that udp-notif should be discoverable. Received feedback editorial and YANG identity related feedback from Med which is addressed in -01. 
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-netana-netconf-yp-transport-capabilities
 * **Diff**: https://author-tools.ietf.org/iddiff?doc_1=draft-netana-netconf-yp-transport-capabilities-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-netconf-yang-push-transport-capabilities/refs/heads/main/draft-netana-netconf-yp-transport-capabilities-01.txt
-* **Status -01: OK (Alex), Await (Qiufang and Med), Ask (Carsten)
+* **Status -01: OK (Alex, Med), Await (Qiufang)
 
 ### draft-netana-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-netconf-notif-envelope/
