@@ -43,10 +43,10 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
-* **State**: Presented -05 at NETCONF 120, updated implementation status section in -06.
+* **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/refs/heads/main/draft-ietf-netconf-yang-notifications-versioning-07.txt
-* **Status -07: NOK (Alex asked refinement), OK (Qiufang), Await (Rob, Ebben and James)
+* **Status -07: NOK (Alex and Benoit asked refinement), OK (Qiufang), Await (Rob, Ebben and James)
 
 ### draft-tgraf-netconf-yang-push-observation-time
 * **URL**: https://datatracker.ietf.org/doc/draft-tgraf-netconf-yang-push-observation-time/
