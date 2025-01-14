@@ -10,10 +10,10 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Presented -15 at NETCONF 121, working group last call should start soon, updated document on segmentation use and frequency vs. velocity consistency, UDP reasoning and definition of unsecure networks according to transport directorate feedback, await confirmation. Input from Andy: max-segment-size should be uint16 instead of uint32. Input from Carsten: SHOULD vs. MUST on segmentation.
+* **State**: Presented -15 at NETCONF 121, working group last call should start soon, updated document on segmentation use and frequency vs. velocity consistency, UDP reasoning and definition of unsecure networks according to transport directorate feedback, await confirmation. Input from Andy: max-segment-size should be uint16 instead of uint32. Input from Carsten: SHOULD vs. MUST on segmentation. Published -18 and asked for feedback.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-17&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-18.txt
-* **Status -18: OK (Alex), Await (Rob, Paolo, Qiufang, James, Ebben, Samuel/Jeremie), Ask (Carsten)
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-17&doc_2=draft-ietf-netconf-udp-notif-18
+* **Status -18: OK (Alex, Paolo), Await (Rob, Qiufang, James, Ebben, Samuel/Jeremie), Ask (Carsten)
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ahuang-netconf-udp-client-server/
