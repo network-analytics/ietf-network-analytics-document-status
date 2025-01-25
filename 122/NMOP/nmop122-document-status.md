@@ -9,7 +9,7 @@ https://datatracker.ietf.org/meeting/121/session/nmop
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
 * **State**: Presented -05 at NMOP 121, added draft-netana-netconf-yp-transport-capabilities and draft-netana-netconf-notif-envelope references and updated examples accordingly, updated milestones and open points
-* **Tasks"": Update ietf-yang-library-augmentedby reference and consider draft-ietf-opsawg-collected-data-manifest reference. Add in Section 4.7 how a YANG consumer is able to detect loss with sequence-number and describe message replication among message broker use case.
+* **Tasks"": Update ietf-yang-library-augmentedby reference and consider draft-ietf-opsawg-collected-data-manifest reference. Added data product terminology. Added in section 4.3 how subscription state changes are detected and in section 4.7 how loss/delay is measured.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-06.txt
 
