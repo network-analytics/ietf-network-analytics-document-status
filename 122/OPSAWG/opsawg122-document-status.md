@@ -8,8 +8,8 @@ https://datatracker.ietf.org/meeting/121/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Presented -10 at OPSAWG 120, last call concluded. Feedback from Giuseppe adressed in -14. Normative dependency to draft-ietf-opsawg-oam-characterization. RFC 4897 could mitigate dependency.
+* **State**: Presented -10 at OPSAWG 120, last call concluded. Normative dependency to draft-ietf-opsawg-oam-characterization where issues were raised in WGLC. RFC 4897 could mitigate dependency. Propose -15 where OAM terms are being defined and merged nput from Paul Aitken, Menachem Dodge and Martin Duke.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/opsawg/KZ1eLLHgDb2WIucySnZJHUuneIM/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
 * **Mailinglist**: https://mailarchive.ietf.org/arch/msg/opsawg/kxbpNMihi5BBS1r0DvfMcM-U60M/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-13&doc_2=draft-ietf-opsawg-ipfix-on-path-telemetry-14
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-14&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-15.txt
