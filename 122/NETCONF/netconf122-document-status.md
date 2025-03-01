@@ -27,7 +27,7 @@ https://datatracker.ietf.org/doc/agenda-interim-2024-netconf-02-netconf-01/
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
 * **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Feedback from Qin and Camilo included.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-10&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-11.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-11&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-12.txt
 
 ### draft-netana-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-netconf-yp-transport-capabilities/
