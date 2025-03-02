@@ -23,6 +23,15 @@ The Iron Fairies Music Bar Bangkok
 https://www.facebook.com/ironfairiesbkk/
 
 
+### Outdoor Bars
+
+342 Bar
+https://www.facebook.com/342Bar
+
+Sheepshank Public House
+https://www.sheepshankpublichouse.com/
+
+
 ### Cocktail Bars
 
 Propaganda Bar
