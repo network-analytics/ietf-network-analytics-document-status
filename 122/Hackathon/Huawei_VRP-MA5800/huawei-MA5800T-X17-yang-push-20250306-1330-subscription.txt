@@ -1,0 +1,215 @@
+tcpdump -i mgmt -vvv -n host 10.190.64.79 and port 10003 -w huawei-MA5800T-X17-yang-push-20250306-1330.pcap
+
+ssh -p 830 ncroot@ipd-zbl1535-s-fh-79 -s netconf
+
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>]]>]]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="100">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+    <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+        <receiver-instance>
+        <name>udpnotifdaemon</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+            <address>10.212.242.71</address>
+            <port>10003</port>
+			<enable-segmentation>true</enable-segmentation>
+			<max-segment-size>1400</max-segment-size>
+        </udp-notif-receiver>
+        </receiver-instance>
+    </receiver-instances>
+	</subscriptions>
+    </config>
+  </edit-config>
+</rpc>]]>]]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc
+	xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1734015665650">
+	<edit-config>
+		<target>
+			<running />
+		</target>
+		<config>
+			<subscriptions
+				xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+				<subscription>
+					<id>1</id>
+					<datastore
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running
+					</datastore>
+					<datastore-xpath-filter
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+						xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces-state/if:interface[if:type='ianaift:ethernetCsmacd']/if:statistics
+					</datastore-xpath-filter>
+					<dscp>0</dscp>
+					<transport
+						xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+					</transport>
+					<encoding>encode-json</encoding>
+					<purpose />
+					<source-address>10.190.64.79</source-address>
+					<receivers>
+						<receiver>
+							<name>udpnotifdaemon</name>
+							<receiver-instance-ref
+								xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon
+							</receiver-instance-ref>
+						</receiver>
+					</receivers>
+					<periodic
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+						<period>500</period>
+					</periodic>
+				</subscription>
+				<subscription>
+					<id>2</id>
+					<datastore
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running
+					</datastore>
+					<datastore-xpath-filter
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+						xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces-state/if:interface[if:type='ianaift:gpon']/if:statistics
+					</datastore-xpath-filter>
+					<dscp>0</dscp>
+					<transport
+						xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+					</transport>
+					<encoding>encode-json</encoding>
+					<purpose />
+					<source-address>10.190.64.79</source-address>
+					<receivers>
+						<receiver>
+							<name>udpnotifdaemon</name>
+							<receiver-instance-ref
+								xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon
+							</receiver-instance-ref>
+						</receiver>
+					</receivers>
+					<periodic
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+						<period>500</period>
+					</periodic>
+				</subscription>
+			</subscriptions>
+		</config>
+	</edit-config>
+</rpc>]]>]]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc
+	xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1734015665650">
+	<edit-config>
+		<target>
+			<running />
+		</target>
+		<config>
+			<subscriptions
+				xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+				<subscription>
+					<id>20</id>
+					<datastore
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running
+					</datastore>
+					<datastore-xpath-filter
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+						xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces-state/if:interface[if:type='ianaift:ethernetCsmacd']
+					</datastore-xpath-filter>
+					<dscp>0</dscp>
+					<transport
+						xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+					</transport>
+					<encoding>encode-json</encoding>
+					<purpose />
+					<source-address>10.190.64.79</source-address>
+					<receivers>
+						<receiver>
+							<name>udpnotifdaemon</name>
+							<receiver-instance-ref
+								xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon
+							</receiver-instance-ref>
+						</receiver>
+					</receivers>
+					<on-change
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+						<dampening-period>5000</dampening-period>
+						<sync-on-start>true</sync-on-start>
+					</on-change>
+				</subscription>
+				<subscription>
+					<id>21</id>
+					<datastore
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running
+					</datastore>
+					<datastore-xpath-filter
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+						xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+						xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces-state/if:interface[if:type='ianaift:gpon']
+					</datastore-xpath-filter>
+					<dscp>0</dscp>
+					<transport
+						xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+					</transport>
+					<encoding>encode-json</encoding>
+					<purpose />
+					<source-address>10.190.64.79</source-address>
+					<receivers>
+						<receiver>
+							<name>udpnotifdaemon</name>
+							<receiver-instance-ref
+								xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">udpnotifdaemon
+							</receiver-instance-ref>
+						</receiver>
+					</receivers>
+					<on-change
+						xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+						<dampening-period>5000</dampening-period>
+						<sync-on-start>true</sync-on-start>
+					</on-change>
+				</subscription>
+			</subscriptions>
+		</config>
+	</edit-config>
+</rpc>]]>]]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+  <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="4">
+    <edit-config>
+      <target>
+        <running />
+      </target>
+    <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+        <subscription xc:operation="delete">
+          <id>1</id>
+        </subscription>
+        <subscription xc:operation="delete">
+          <id>2</id>
+        </subscription>
+        <subscription xc:operation="delete">
+          <id>20</id>
+        </subscription>
+        <subscription xc:operation="delete">
+          <id>21</id>
+        </subscription>
+      </subscriptions>
+    </config>
+  </edit-config>
+</rpc>]]>]]>
