@@ -28,11 +28,10 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-archite
 
 ### draft-netana-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-semantics/
-* **State**: Presented -04 at NMOP 121, Updated YANG module with URI and change information in service and URI in anomaly.
-* **Tasks**: Remove Antonio as co-author in next revision, https://github.com/ietf-wg-nmop/draft-ietf-nmop-network-anomaly-semantics/actions/runs/12270994096/job/34237113628
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, added anomalies container and applied https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#appendix-B. 
 * **Tasks**: Resolve YANG module errors https://mailarchive.ietf.org/arch/msg/nmop/Du0qPVM8eHsnmCJL_rtFkBGuRc4/ and add inventory references.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-02.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-03.txt
 
 ### draft-netana-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-lifecycle/
