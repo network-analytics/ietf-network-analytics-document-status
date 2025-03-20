@@ -1,0 +1,12 @@
+<edit-config>
+<target>
+<candidate />
+</target>
+<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription xc:operation="delete">
+<id>45</id>
+</subscription>
+</subscriptions>
+</config>
+</edit-config>

@@ -1,0 +1,40 @@
+<edit-config>
+<target>
+<candidate />
+</target>
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+<id>1</id>
+<receivers>
+<receiver>
+<name>DAISY</name>
+<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+</receiver>
+</receivers>
+<encoding>encode-json</encoding>
+<source-interface>Loopback0</source-interface>
+<periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+<period>10000</period>
+</periodic>
+<datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">
+ds:operational
+</datastore>
+<datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+</datastore-xpath-filter>
+</subscription>
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+<receiver-instance>
+<name>DAISY</name>
+<udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+<remote-port>10003</remote-port>
+<remote-address>138.187.58.24</remote-address>
+</udp-notif-receiver>
+</receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config>
+</edit-config>
+

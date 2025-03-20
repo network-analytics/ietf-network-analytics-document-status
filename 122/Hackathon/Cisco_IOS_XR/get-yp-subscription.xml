@@ -1,0 +1,6 @@
+<get>
+<filter type="subtree">
+<streams xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications"/>
+</filter>
+</get>

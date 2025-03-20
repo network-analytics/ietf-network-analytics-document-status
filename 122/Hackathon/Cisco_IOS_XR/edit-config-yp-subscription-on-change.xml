@@ -1,0 +1,28 @@
+<edit-config>
+<target>
+<candidate />
+</target>
+<config>
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<subscription>
+<id>2</id>
+<receivers>
+<receiver>
+<name>DAISY</name>
+<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+</receiver>
+</receivers>
+<datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational
+</datastore>
+<datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+</datastore-xpath-filter>
+<encoding>encode-json</encoding>
+<source-interface>Loopback0</source-interface>
+<on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+<sync-on-start>true</sync-on-start>
+</on-change>
+</subscription>
+</subscriptions>
+</config>
+</edit-config>

@@ -1,0 +1,14 @@
+<edit-config>
+<target>
+<candidate />
+</target>
+<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+<receiver-instance xc:operation="delete">
+<name>DAISY</name>
+</receiver-instance>
+</receiver-instances>
+</subscriptions>
+</config>
+</edit-config>

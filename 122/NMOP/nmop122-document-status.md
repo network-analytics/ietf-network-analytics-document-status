@@ -20,11 +20,11 @@ https://datatracker.ietf.org/meeting/121/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, added Knowledge Graph references for rule and symptom definitions, merged input from Adrian on terminology
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes
 * **Tasks"": Add description Apache Iceberg integration
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-00&doc_2=draft-ietf-nmop-network-anomaly-architecture-01
+https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-02.txt
 
 ### draft-netana-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-network-anomaly-semantics/

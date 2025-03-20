@@ -1,0 +1,5 @@
+	<get>
+		<filter type="subtree">
+			<system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities" />
+		</filter>
+	</get>
