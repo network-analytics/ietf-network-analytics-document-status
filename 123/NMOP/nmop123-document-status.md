@@ -1,10 +1,10 @@
 ## NMOP Working Group
 
-IETF 121 Meeting minutes
-https://notes.ietf.org/notes-ietf-121-nmop#
+IETF 122 Meeting minutes
+https://notes.ietf.org/notes-ietf-122-nmop#
 
-IETF 121 Meeting session
-https://datatracker.ietf.org/meeting/121/session/nmop
+IETF 122 Meeting session
+https://datatracker.ietf.org/meeting/122/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
