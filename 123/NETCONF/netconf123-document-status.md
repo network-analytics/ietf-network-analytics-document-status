@@ -33,7 +33,7 @@ https://datatracker.ietf.org/meeting/122/session/netconf
 
 ### draft-ietf-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
-* **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. 
+* **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. Feedback from Rob to change from “The ‘contents’ element SHOULD be located at the end of notif envelope structure" to "MUST".
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-01
 
