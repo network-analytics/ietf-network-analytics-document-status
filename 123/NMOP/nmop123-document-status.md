@@ -19,7 +19,7 @@ https://datatracker.ietf.org/meeting/122/session/nmop
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/uyraumNT5U_ZopzVqQcT_Sx2cjo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/USAk1v1jmFWe-61r3FAdJ2_GjQI/
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-netana-message-broker-telemetry-message-msg-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-message-broker-telemetry-message-msg/refs/heads/main/draft-netana-message-broker-telemetry-message-01.txt
+https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-telemetry-message-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-message-broker-telemetry-message/refs/heads/main/draft-netana-nmop-message-broker-telemetry-message-01.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
