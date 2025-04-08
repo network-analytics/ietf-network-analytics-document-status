@@ -31,7 +31,7 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-archite
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, added anomalies container and applied https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#appendix-B. 
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, added anomalies container and applied https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#appendix-B. Merged input from Alex and Wanting on decomposed AVRO schema. Pending feedback from Vincenzo and Vivek.
 * **Tasks**: Resolve YANG module errors https://mailarchive.ietf.org/arch/msg/nmop/Du0qPVM8eHsnmCJL_rtFkBGuRc4/ and add inventory references.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-semantics
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-03.txt
