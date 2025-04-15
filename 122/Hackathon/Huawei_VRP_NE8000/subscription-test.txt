@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1741665071780">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+      <subscription>
+        <id>10</id>
+        <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">DAISY</selection-filter-ref>
+        <dscp>0</dscp>
+        <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+        <encoding xmlns:sn="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">sn:encode-json</encoding>
+        <source-vrf>__LOCAL_OAM_VPN__</source-vrf>
+        <distribute xmlns="urn:huawei:yang:huawei-ietf-subscribed-notif-ext" />
+        <receivers>
+          <receiver>
+            <name>DAISY3</name>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY3</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>1000</period>
+        </periodic>
+      </subscription>
+        <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+          <receiver-instance>
+            <name>DAISY3</name>
+            <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+            <port>10003</port>
+            <address>1.2.3.4</address>
+            </udp-notif-receiver>
+          </receiver-instance>
+        </receiver-instances>
+    </subscriptions>
+    </config>
+  </edit-config>
+</rpc>]]>]]>
+

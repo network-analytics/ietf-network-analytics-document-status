@@ -5,15 +5,16 @@
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
 <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
 <subscription>
-<id>1</id>
+<id>10</id>
 <receivers>
 <receiver>
-<name>DAISY</name>
-<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+<name>DAISY3</name>
+<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY3</receiver-instance-ref>
 </receiver>
 </receivers>
 <encoding>encode-json</encoding>
-<source-interface>Loopback0</source-interface>
+<source-interface>GigabitEthernet0/0/0</source-interface>
+<source-vrf>__LOCAL_OAM_VPN__</source-vrf>
 <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
 <period>10000</period>
 </periodic>
@@ -22,12 +23,12 @@ xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">
 ds:operational
 </datastore>
 <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
-Cisco-IOS-XR-pfi-im-cmd-oper:interfaces
+huawei-ifm:ifm/interfaces/interface
 </datastore-xpath-filter>
 </subscription>
 <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
 <receiver-instance>
-<name>DAISY</name>
+<name>DAISY3</name>
 <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
 <remote-port>10003</remote-port>
 <remote-address>138.187.58.24</remote-address>
