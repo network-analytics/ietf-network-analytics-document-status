@@ -27,7 +27,7 @@ https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-teleme
 * **Tasks"": Add description Apache Iceberg integration
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-03.txt
+https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-03.txt
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
