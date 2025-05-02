@@ -14,9 +14,9 @@ https://datatracker.ietf.org/meeting/122/session/netconf
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
-* **State**: Presented -05 at NETCONF 121. Working group last call in progress, Feedback from Andy, Med and Rob addressed in -06.
+* **State**: Presented -05 at NETCONF 121. Working group last call concluded, Feedback from Andy, Med and Rob addressed in -06. Feedback from YANG doctors review addressed in -07 but not published yet.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-client-server
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-client-server-06
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-client-server-06&url_2=https://raw.githubusercontent.com/netconf-wg/udp-client-server/refs/heads/master/draft-ietf-netconf-udp-client-server-07.txt
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
