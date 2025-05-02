@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/122/session/netconf
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Presented -15 at NETCONF 121, working group last call on -18 will conclude soon. -20 to address Med's review
+* **State**: Shepherd and YANG doctor review input merged in -21 and pending.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-20
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-20&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-21.txt
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
