@@ -29,7 +29,7 @@ https://datatracker.ietf.org/meeting/122/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
 * **State**: Working group last call in progress. Feedback from Reshad and Jan incorporated.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yp-transport-capabilities
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-netconf-yang-push-transport-capabilities/refs/heads/main/draft-ietf-netconf-yp-transport-capabilities-02.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-netconf-yang-push-transport-capabilities/refs/heads/main/draft-ietf-netconf-yp-transport-capabilities-03.txt
 
 ### draft-ietf-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
