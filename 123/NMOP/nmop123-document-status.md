@@ -41,7 +41,7 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-archite
 * **State**: Presented -05 at NMOP 121, terminology input from Adrian, update relevant-state yang module. 
 * **Tasks**: Resolve YANG module errors https://mailarchive.ietf.org/arch/msg/nmop/K-puzaIHw8D8_Jgxf8VUIaJFimM/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-02.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-03.txt
 
 
 
