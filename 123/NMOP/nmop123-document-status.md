@@ -23,25 +23,20 @@ https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-teleme
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns.
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 in -04.
 * **Tasks"": Add description Apache Iceberg integration
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-03.txt
+https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-04.txt
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, added anomalies container and applied https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#appendix-B. Merged input from Alex and Wanting on decomposed AVRO schema. Pending feedback from Vincenzo and Vivek.
-* **Tasks**: Resolve YANG module errors https://mailarchive.ietf.org/arch/msg/nmop/Du0qPVM8eHsnmCJL_rtFkBGuRc4/ and add inventory references.
+* **State**: Presented -02 at NMOP 122. Merged terminology input from Adrian (https://mailarchive.ietf.org/arch/msg/nmop/ufL-6RdA09pR7gzxHaNtSb-a-54/), Updated YANG modules. Added "template" and "season" into ietf-network-anomaly-symptom-cbl and maintenance related information into ietf-network-anomaly-service-topology, Added in Section 4.4 Apache AVRO data model translation, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Added normative reference to Service Model, RFC 8969 and descried service model context, Added Cosmos Bright Lights in Implementation status section
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-03.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-network-anomaly-semantics-03
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
-* **State**: Presented -05 at NMOP 121, terminology input from Adrian, update relevant-state yang module. 
-* **Tasks**: Resolve YANG module errors https://mailarchive.ietf.org/arch/msg/nmop/K-puzaIHw8D8_Jgxf8VUIaJFimM/
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-03.txt
-
-
-
+* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-network-anomaly-lifecycle-03
