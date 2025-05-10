@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/122/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Presented -16 at OPSAWG 122, Merged input from Giuseppe's shepherd review in -17.
+* **State**: Presented -16 at OPSAWG 122, Merged input from Giuseppe's shepherd review in -17. Merged editorial input from Mahesh and Behcet in -18,
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-16&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-17.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-17&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-18.txt
 
 ### draft-netana-opsawg-ipfix-gpon-gem
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
