@@ -16,4 +16,4 @@ https://datatracker.ietf.org/meeting/122/session/opsawg
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
 * **State**: Present -00 at CCAMP interim on April 10th.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-netana-opsawg-ipfix-gpon-gem
-* **Diff**:
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-opsawg-ipfix-gpon-gem-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-opsawg-ipfix-gpon-gem/refs/heads/main/draft-netana-opsawg-ipfix-gpon-gem-01.txt
