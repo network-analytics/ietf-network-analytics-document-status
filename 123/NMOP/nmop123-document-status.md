@@ -13,7 +13,7 @@ https://datatracker.ietf.org/meeting/122/session/nmop
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-07.txt
 
 ### draft-netana-message-broker-telemetry-message
-* **URL**: https://datatracker.ietf.org/doc/draft-netana-message-broker-telemetry-message/
+* **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-message-broker-telemetry-message/
 * **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-message-broker-telemetry-message
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/uyraumNT5U_ZopzVqQcT_Sx2cjo/
