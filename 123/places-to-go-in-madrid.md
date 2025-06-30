@@ -7,8 +7,14 @@ https://maps.app.goo.gl/J2C6P5BRLiAEnWtK7
 
 ### Live Music Bars
 
+Moe Club
+https://moeclub.com/
+
 Recoletos Jazz Madrid
 https://www.recoletosjazz.com/
+
+Karaoke Kapikas
+https://www.kapikas.es/
 
 
 ### Outdoor Bars
@@ -37,6 +43,18 @@ https://yataimarkets.com/
 
 O'Puplo
 https://www.opulpo.com/
+
+Miho Sushi
+https://mihosushi.es/
+
+Mesón Txistu
+https://www.mesontxistu.com/
+
+La Infanta
+https://lainfantabar.com/
+
+Casa Sotero
+https://casasotero.org/
 
 
 ### Pubs
