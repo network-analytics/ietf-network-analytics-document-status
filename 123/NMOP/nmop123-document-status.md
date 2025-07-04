@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/122/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
-* **State**: Presented -05 at NMOP 121, draft-netana-message-broker-telemetry-message reference added, detailed YANG library usage and subscription started example
+* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-07.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-07&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-08.txt
 
 ### draft-netana-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
