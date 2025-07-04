@@ -23,7 +23,7 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetr
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 in -04.
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04.
 * **Tasks"": Add description Apache Iceberg integration
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
 * **Diff**: 

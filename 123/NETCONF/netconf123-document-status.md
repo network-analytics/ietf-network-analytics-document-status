@@ -20,10 +20,10 @@ https://datatracker.ietf.org/meeting/122/session/netconf
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 addressed.
+* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 addressed.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/P4jw95lRc29WzGP17FVYxPSKdmI/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-13&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-14.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-14&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-15.txt
 
 ### draft-ietf-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/

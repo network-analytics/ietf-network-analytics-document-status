@@ -4,6 +4,9 @@ https://maps.app.goo.gl/J2C6P5BRLiAEnWtK7
 
 ### Breakfast
 
+Chocolateria San Ginés
+https://chocolateriasangines.com/
+
 
 ### Live Music Bars
 
