@@ -14,12 +14,12 @@ https://datatracker.ietf.org/meeting/122/session/nmop
 
 ### draft-netana-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
-* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01.
+* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/uyraumNT5U_ZopzVqQcT_Sx2cjo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/USAk1v1jmFWe-61r3FAdJ2_GjQI/
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-message-broker-telemetry-message/refs/heads/main/draft-ietf-nmop-message-broker-telemetry-message-01.txt
+https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-message-broker-telemetry-message/refs/heads/main/draft-ietf-nmop-message-broker-telemetry-message-02.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
