@@ -23,11 +23,12 @@ https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetr
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04.
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05.
 * **Tasks"": Add description Apache Iceberg integration
+* **Tasks"": https://github.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/issues/4
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
 * **Diff**: 
-https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-04.txt
+https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-05.txt
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
