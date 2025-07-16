@@ -1,0 +1,19 @@
+module: Cisco-IOS-XR-pfi-im-cmd-oper
+  +--ro interfaces
+     +--ro interface-briefs
+        +--ro interface-brief* [interface-name]
+           +--ro interface-name                xr:Interface-name
+           +--ro interface?                    xr:Interface-name
+           +--ro parent-interface?             xr:Interface-name
+           +--ro type?                         string
+           +--ro state?                        Im-state-enum
+           +--ro actual-state?                 Im-state-enum
+           +--ro line-state?                   Im-state-enum
+           +--ro actual-line-state?            Im-state-enum
+           +--ro encapsulation?                string
+           +--ro encapsulation-type-string?    string
+           +--ro mtu?                          uint32
+           +--ro sub-interface-mtu-overhead?   uint32
+           +--ro l2-transport?                 boolean
+           +--ro bandwidth?                    uint32
+           +--ro bandwidth64-bit?              uint64

@@ -1,0 +1,1334 @@
+module vrouter-system {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/system";
+  prefix vrouter-system;
+  import iana-timezones {
+    prefix iana-tz;
+  }
+  import vrouter {
+    prefix vrouter;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-commands {
+    prefix vr-cmd;
+  }
+  import vrouter-extensions {
+    prefix vr-ext;
+  }
+  import vrouter-inet-types {
+    prefix vr-inet;
+  }
+  import vrouter-types {
+    prefix vr-types;
+  }
+  import vrouter-ip {
+    prefix vr-ip;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter system management.";
+  revision 2022-02-01 {
+    description
+      "Correct source leaf of traceroute rpc.
+       Add source-interface leaf to traceroute rpc.";
+    reference
+      "";
+  }
+  revision 2021-07-15 {
+    description
+      "Add new information table about neighbors accessible with command:
+       show neighbors [family ipv4|ipv6] [vrf VRF] [interface INTERFACE].";
+    reference
+      "";
+  }
+  revision 2020-12-04 {
+    description
+      "Add traffic capture RPCs.";
+    reference
+      "revision 2020-12-04";
+  }
+  revision 2020-11-12 {
+    description
+      "Conntrack and neighbor containers are now removed.";
+    reference
+      "revision 2020-11-12";
+  }
+  revision 2019-12-06 {
+    description
+      "Deprecated conntrack and neighbor containers are now obsolete.";
+    reference
+      "revision 2019-05-07";
+  }
+  revision 2019-07-05 {
+    description
+      "Add banner rpc.";
+    reference
+      "";
+  }
+  revision 2019-05-07 {
+    description
+      "Move conntrack and neighbor configuration in the network-stack container.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  feature per-vrf-bridge-call-filter {
+    description
+      "Per vrf bridge calling filter configuration is available.";
+  }
+  identity system-uptime {
+    base vr-types:METRIC;
+    description
+      "The system uptime.";
+  }
+  grouping system-neighbor {
+    description
+      "Neighbor advanced configuration.";
+    container neighbor {
+      description
+        "Neighbor advanced configuration.";
+      leaf ipv4-max-entries {
+        type uint32 {
+          range "16..400000";
+        }
+        description
+          "Maximum number of IPv4 neighbors.";
+      }
+      leaf ipv6-max-entries {
+        type uint32 {
+          range "16..400000";
+        }
+        description
+          "Maximum number of IPv6 neighbors.";
+      }
+      leaf ipv4-base-reachable-time {
+        type uint32;
+        units "seconds";
+        description
+          "Time during which an IPv4 neighbor entry stays reachable.";
+      }
+      leaf ipv6-base-reachable-time {
+        type uint32;
+        units "seconds";
+        description
+          "Time during which an IPv6 neighbor entry stays reachable.";
+      }
+    }
+  }
+  grouping system-conntrack {
+    description
+      "Conntrack advanced configuration.";
+    container conntrack {
+      description
+        "Conntrack advanced configuration.";
+      leaf max-entries {
+        type uint32 {
+          range "16..10000000";
+        }
+        description
+          "Maximum number of Netfilter conntracks.";
+      }
+      leaf tcp-timeout-close {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout close.";
+      }
+      leaf tcp-timeout-close-wait {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout close wait.";
+      }
+      leaf tcp-timeout-established {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout established.";
+      }
+      leaf tcp-timeout-fin-wait {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout fin wait.";
+      }
+      leaf tcp-timeout-last-ack {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout last ack.";
+      }
+      leaf tcp-timeout-max-retrans {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout max retrans.";
+      }
+      leaf tcp-timeout-syn-recv {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout syn recv.";
+      }
+      leaf tcp-timeout-syn-sent {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout syn sent.";
+      }
+      leaf tcp-timeout-time-wait {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout time wait.";
+      }
+      leaf tcp-timeout-unacknowledged {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack TCP timeout unacknowledged.";
+      }
+      leaf udp-timeout {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack UDP timeout.";
+      }
+      leaf udp-timeout-stream {
+        type uint32 {
+          range "0..8589934";
+        }
+        description
+          "Conntrack UDP timeout stream.";
+      }
+    }
+  }
+  grouping system-global-config {
+    description
+      "System-wide configuration parameters.";
+    leaf hostname {
+      type union {
+        type vr-inet:domain-name {
+          pattern '.*_.*' {
+            modifier invert-match;
+          }
+        }
+        type vr-inet:domain-name {
+          vr-ext:nc-cli-message "Underscores are not allowed in hostname (see RFC952 and RFC1123).\nThey are automatically replaced by hyphens.\nThe model will be updated to reject the underscores in the 24q1 release.\nPlease fix your configuration.";
+          pattern '.*_.*';
+        }
+      }
+      description
+        "The hostname of the device -- should be a single domain
+         label, without the domain.";
+    }
+    leaf cp-mask {
+      vr-ext:feature "product";
+      type union {
+        type enumeration {
+          enum "default" {
+            description
+              "Use all cores except fast path ones for control plane.";
+          }
+        }
+        type vr-types:coremask;
+      }
+      default "default";
+      description
+        "Cores on which control plane applications run.";
+    }
+  }
+  grouping system-network-stack {
+    description
+      "Global network stack default parameters.";
+    container network-stack {
+      vr-ext:feature "product";
+      presence "Makes network-stack configuration available.";
+      description
+        "Network stack parameters.";
+      container bridge {
+        description
+          "Bridge default parameters.";
+        leaf call-ipv4-filtering {
+          type boolean;
+          description
+            "Call IPv4 filtering hooks on bridges.";
+        }
+        leaf call-ipv6-filtering {
+          type boolean;
+          description
+            "Call IPv6 filtering hooks on bridges.";
+        }
+      }
+      container icmp {
+        description
+          "ICMP default parameters.";
+        leaf ignore-icmp-echo-broadcast {
+          type boolean;
+          description
+            "Ignore all ICMP ECHO and TIMESTAMP requests sent via broadcast or multicast.";
+        }
+        leaf rate-limit-icmp {
+          type uint16 {
+            range "0..1000";
+          }
+          units "milliseconds";
+          description
+            "The minimum time space that separates the sending of two consecutive ICMP packets.
+             By default, such space is 1000 ms.";
+        }
+        leaf rate-mask-icmp {
+          type bits {
+            bit echo-reply {
+              description
+                "Echo Reply.";
+            }
+            bit destination-unreachable {
+              description
+                "Destination Unreachable.";
+            }
+            bit source-quench {
+              description
+                "Source Quench.";
+            }
+            bit redirect {
+              description
+                "Redirect.";
+            }
+            bit echo-request {
+              description
+                "Echo Request.";
+            }
+            bit time-exceeded {
+              description
+                "Time Exceeded.";
+            }
+            bit parameter-problem {
+              description
+                "Parameter Problem.";
+            }
+            bit timestamp-request {
+              description
+                "Timestamp Request.";
+            }
+            bit timestamp-reply {
+              description
+                "Timestamp Reply.";
+            }
+            bit info-request {
+              description
+                "Info Request.";
+            }
+            bit info-reply {
+              description
+                "Info Reply.";
+            }
+            bit address-mask-request {
+              description
+                "Address Mask Request.";
+            }
+            bit address-mask-reply {
+              description
+                "Address Mask Reply.";
+            }
+          }
+          description
+            "Mask made of ICMP types for which rates are being limited.";
+        }
+      }
+      container ipv4 {
+        description
+          "IPv4 default parameters.";
+        uses vr-ip:ipv4-parameters;
+      }
+      container ipv6 {
+        description
+          "IPv6 default parameters.";
+        uses vr-ip:ipv6-parameters;
+      }
+      uses system-neighbor;
+      uses system-conntrack;
+    }
+  }
+  grouping banner-grouping {
+    description
+      "Login banner grouping.";
+    leaf message {
+      type string;
+      description
+        "Message to display.";
+    }
+    leaf reset {
+      type empty;
+      description
+        "Reset message to factory defaults.";
+    }
+  }
+  grouping poweroff-grouping {
+    description
+      "Poweroff grouping.";
+    leaf delay {
+      type uint32;
+      units "seconds";
+      default "60";
+      description
+        "The number of seconds to wait before poweroff.
+         During that time, it is possible to cancel the poweroff.";
+    }
+    leaf cancel {
+      type empty;
+      description
+        "If defined, cancel a pending poweroff.";
+    }
+  }
+  grouping reboot-grouping {
+    description
+      "Reboot grouping.";
+    leaf delay {
+      type uint32;
+      units "seconds";
+      default "60";
+      description
+        "The number of seconds to wait before reboot.
+         During that time, it is possible to cancel the reboot.";
+    }
+    leaf cancel {
+      type empty;
+      description
+        "If defined, cancel a pending reboot.";
+    }
+  }
+  grouping traffic-grouping {
+    description
+      "Traffic grouping.";
+    leaf vrf {
+      vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+      type string;
+      default "main";
+      description
+        "The VRF in which to capture traffic. This must be the VRF the
+         interface belongs to. By default, the interface is assumed to
+         be in the 'main' vrf.";
+    }
+    leaf count {
+      type uint16 {
+        range "1..1000";
+      }
+      description
+        "Stop after capturing count packets.";
+    }
+    leaf no-promiscuous {
+      type empty;
+      description
+        "Don't put the interface into promiscuous mode. This option has no
+         effect if the interface is already in promiscous mode.";
+    }
+    leaf details {
+      type empty;
+      description
+        "Show additional packet fields like time to live, total length, IP
+         options.";
+    }
+    leaf filter {
+      type string {
+        vr-ext:nc-cli-shortdesc "<pcap-expr>";
+      }
+      description
+        "Optional filter expression. This must be a valid PCAP filter.
+         See https://www.tcpdump.org/manpages/pcap-filter.7.html for more
+         details.";
+    }
+    leaf interface {
+      vr-ext:nc-cli-no-name;
+      vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter-interface:interface/*/*[local-name()='name']";
+      type string {
+        vr-ext:nc-cli-shortdesc "<ifname>";
+      }
+      mandatory true;
+      description
+        "The name of the network interface on which to monitor traffic.";
+    }
+  }
+  augment "/vrouter:config" {
+    description
+      "Global system configuration.";
+    container system {
+      presence "Makes global system configuration available";
+      description
+        "Global system configuration.";
+      uses system-global-config;
+      uses system-network-stack {
+        refine "network-stack/bridge/call-ipv4-filtering" {
+          default "false";
+        }
+        refine "network-stack/bridge/call-ipv6-filtering" {
+          default "false";
+        }
+        refine "network-stack/icmp/ignore-icmp-echo-broadcast" {
+          default "false";
+        }
+        refine "network-stack/icmp/rate-limit-icmp" {
+          default "1000";
+        }
+        refine "network-stack/icmp/rate-mask-icmp" {
+          default "destination-unreachable
+           source-quench
+           time-exceeded
+           parameter-problem";
+        }
+        refine "network-stack/ipv4/forwarding" {
+          default "true";
+        }
+        refine "network-stack/ipv4/send-redirects" {
+          default "true";
+        }
+        refine "network-stack/ipv4/accept-redirects" {
+          default "false";
+        }
+        refine "network-stack/ipv4/accept-source-route" {
+          default "false";
+        }
+        refine "network-stack/ipv4/arp-accept-gratuitous" {
+          default "never";
+        }
+        refine "network-stack/ipv4/arp-announce" {
+          default "any";
+        }
+        refine "network-stack/ipv4/arp-filter" {
+          default "false";
+        }
+        refine "network-stack/ipv4/arp-ignore" {
+          default "any";
+        }
+        refine "network-stack/ipv4/arp-proxy" {
+          default "false";
+        }
+        refine "network-stack/ipv4/log-invalid-addresses" {
+          default "false";
+        }
+        refine "network-stack/ipv6/forwarding" {
+          default "true";
+        }
+        refine "network-stack/ipv6/autoconfiguration" {
+          default "true";
+        }
+        refine "network-stack/ipv6/accept-duplicate-address-detection" {
+          default "always";
+        }
+        refine "network-stack/ipv6/accept-router-advert" {
+          default "never";
+        }
+        refine "network-stack/ipv6/accept-redirects" {
+          default "false";
+        }
+        refine "network-stack/ipv6/accept-segment-routing" {
+          default "false";
+        }
+        refine "network-stack/ipv6/accept-source-route" {
+          default "false";
+        }
+        refine "network-stack/ipv6/router-solicitations" {
+          default "-1";
+        }
+        refine "network-stack/ipv6/use-temporary-addresses" {
+          default "never";
+        }
+      }
+      leaf timezone {
+        type union {
+          type enumeration {
+            enum "UTC" {
+              description
+                "Coordinated Universal Time.";
+            }
+            enum "GMT" {
+              description
+                "Greenwich Mean Time.";
+            }
+          }
+          type iana-tz:iana-timezone;
+        }
+        description
+          "The timezone of the device.";
+      }
+    }
+  }
+  augment "/vrouter:state" {
+    description
+      "Global system state.";
+    container system {
+      presence "Makes system state available.";
+      description
+        "Global system operational state data.";
+      uses system-global-config;
+      uses system-network-stack;
+      leaf timezone {
+        type string;
+        description
+          "The timezone of the device.";
+      }
+      leaf date {
+        type string;
+        description
+          "The local time of the device.";
+      }
+      container uptime {
+        description
+          "The system uptime.";
+        leaf value {
+          type string;
+          units "seconds";
+          description
+            "The value in seconds.";
+        }
+        leaf string {
+          vr-ext:state-metric "system-uptime";
+          vr-ext:metric-alias "system:uptime";
+          type string;
+          description
+            "A human readable value (e.g DD days, HH:mm:ss).";
+        }
+      }
+      leaf-list troubleshooting-report {
+        vr-ext:pushed;
+        type string;
+        description
+          "The existing troubleshooting reports available on the system.";
+      }
+      leaf-list traffic-capture {
+        vr-ext:pushed;
+        type string;
+        description
+          "The existing traffic captures available on the system.";
+      }
+    }
+  }
+  augment "/vrouter:config/vrouter:vrf" {
+    description
+      "Vrf system configuration.";
+    uses system-network-stack {
+      refine "network-stack" {
+        description
+          "Default network stack parameters for this VRF (overrides global).";
+      }
+      refine "network-stack/bridge" {
+        if-feature "per-vrf-bridge-call-filter";
+      }
+    }
+  }
+  augment "/vrouter:state/vrouter:vrf" {
+    description
+      "Vrf system state.";
+    uses system-network-stack {
+      refine "network-stack" {
+        description
+          "Default network stack parameters for this VRF (overrides global).";
+      }
+    }
+  }
+  rpc banner {
+    vr-ext:nc-cli-cmd "banner";
+    vr-ext:protected;
+    description
+      "Manage login banner.";
+    input {
+      vr-ext:nc-cli-exclusive;
+      container pre-login {
+        description
+          "Manage banner before a user logs in.";
+        uses banner-grouping;
+      }
+      container post-login {
+        description
+          "Manage banner after a user logs in.";
+        uses banner-grouping;
+      }
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc reboot {
+    vr-ext:protected;
+    description
+      "Schedule a system reboot after a grace period.";
+    input {
+      uses reboot-grouping;
+    }
+    output {
+      leaf reboot-time {
+        type string;
+        description
+          "The time at which the system will reboot.";
+      }
+    }
+  }
+  rpc reboot-cli {
+    vr-ext:nc-cli-cmd "reboot";
+    vr-ext:protected;
+    vr-api:internal;
+    description
+      "Schedule a system reboot after a grace period.";
+    input {
+      uses reboot-grouping;
+      leaf force {
+        type empty;
+        description
+          "If defined, force reboot even if startup configuration is different
+           than running configuration.";
+      }
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc poweroff {
+    vr-ext:protected;
+    description
+      "Schedule a system poweroff after a grace period.";
+    input {
+      uses poweroff-grouping;
+    }
+    output {
+      leaf poweroff-time {
+        type string;
+        description
+          "The time at which the system will be powered off.";
+      }
+    }
+  }
+  rpc poweroff-cli {
+    vr-ext:nc-cli-cmd "poweroff";
+    vr-ext:protected;
+    vr-api:internal;
+    description
+      "Schedule a system poweroff after a grace period.";
+    input {
+      uses poweroff-grouping;
+      leaf force {
+        type empty;
+        description
+          "If defined, force poweroff even if startup configuration is different
+           than running configuration.";
+      }
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc ping {
+    vr-ext:nc-cli-cmd "ping";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Send ICMP ECHO_REQUEST messages to network hosts and print their
+       responses.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which to send the ICMP ECHO_REQUESTs.
+           By default, they are sent in the 'main' vrf.";
+      }
+      leaf l3vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter:name |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter:name";
+        type string;
+        description
+          "Specify the l3vrf.";
+      }
+      leaf count {
+        type uint16;
+        description
+          "Stop after sending count ECHO_REQUEST packets.";
+      }
+      leaf packetsize {
+        type uint16;
+        description
+          "Specifies the number of data bytes to be sent.
+           The default is 56, which  translates into 64 ICMP data bytes
+           when combined with the 8 bytes of ICMP header data.";
+      }
+      leaf nodns {
+        type empty;
+        description
+          "Numeric output only.  No attempt will be made to lookup
+           symbolic names for host addresses.";
+      }
+      leaf ipv6 {
+        type empty;
+        description
+          "Force IPv6 operation only. By default, it is detected from the
+           destination. If destination is a host name, ipv4 is used by default
+           unless this flag is set.";
+      }
+      leaf source {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name']";
+        type string;
+        description
+          "Either an address, or an interface name.
+           If interface is an address, it sets source address to specified
+           interface address.  If interface in an interface name, it sets
+           source interface to specified interface.
+           For IPv6, when doing ping to a link-local scope address, link
+           specification (by the '%'-notation in destination, or by this
+           option) is required.";
+      }
+      leaf rate {
+        type uint16 {
+          range "1..1000";
+        }
+        description
+          "The number of packets to send per second. By default, 1 packet is
+           sent every second.";
+      }
+      leaf dont-fragment {
+        type empty;
+        description
+          "Prohibit fragmentation, even local one.";
+      }
+      leaf destination {
+        vr-ext:nc-cli-no-name;
+        type string {
+          vr-ext:nc-cli-shortdesc "<destination>";
+        }
+        mandatory true;
+        description
+          "The destination host (name or IP address).";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traceroute {
+    vr-ext:nc-cli-cmd "traceroute";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Display the route (path) that was used to connect to a certain IP
+       address or hostname. It also measures the transit delays among hops.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which the packets are sent by traceroute.
+           By default, they are sent in the 'main' vrf.";
+      }
+      leaf l3vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter:name |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter:l3vrf/vrouter:name";
+        type string;
+        description
+          "Specify the l3vrf.";
+      }
+      leaf nodns {
+        type empty;
+        description
+          "Do not try to map IP addresses to host names when displaying them.";
+      }
+      leaf ipv6 {
+        type empty;
+        description
+          "Force IPv6 operation only. By default, it is detected from the
+           destination. If destination is a host name, ipv4 is used by default
+           unless this flag is set.";
+      }
+      leaf source {
+        type vr-inet:ip-address;
+        description
+          "Chooses an alternative source address. Note that an address
+           of one of the interfaces must be selected. By default, the
+           address of the outgoing interface is used.";
+      }
+      leaf source-interface {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name']";
+        type string;
+        description
+          "Specifies the interface through which traceroute should send packets.
+           By default, the interface is selected according to the routing table.";
+      }
+      leaf host {
+        vr-ext:nc-cli-no-name;
+        type string {
+          vr-ext:nc-cli-shortdesc "<host>";
+        }
+        mandatory true;
+        description
+          "The destination host (name or IP address).";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc flush-conntracks {
+    vr-ext:nc-cli-flush "conntracks";
+    vr-api:internal;
+    description
+      "Flush conntracks.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which to flush the conntracks.";
+      }
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc show-conntracks {
+    vr-ext:nc-cli-show "conntracks";
+    vr-api:internal;
+    description
+      "Show conntracks.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which to show the conntracks.";
+      }
+      leaf family {
+        type union {
+          type enumeration {
+            enum "ipv4" {
+              description
+                "IPv4 only.";
+            }
+            enum "ipv6" {
+              description
+                "IPv6 only.";
+            }
+          }
+          type string;
+        }
+        default "ipv4";
+        description
+          "Display only this layer 3 family.";
+      }
+      leaf protocol {
+        type union {
+          type enumeration {
+            enum "tcp" {
+              description
+                "TCP only.";
+            }
+            enum "udp" {
+              description
+                "UDP only.";
+            }
+          }
+          type string;
+        }
+        description
+          "Display only this layer 4 protocol.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc show-product {
+    vr-ext:nc-cli-show "product";
+    vr-api:internal;
+    description
+      "Show the product name and version.";
+    input {
+      leaf name {
+        type empty;
+        description
+          "Display the product name.";
+      }
+      leaf version {
+        type empty;
+        description
+          "Display the product version.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traffic-capture {
+    vr-ext:nc-cli-cmd "traffic-capture";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Print traffic flowing on a network interface. By default, the
+       promiscuous mode is set to the monitored interface.";
+    input {
+      uses traffic-grouping;
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traffic-capture-new {
+    vr-ext:nc-cli-cmd "traffic-capture new";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Capture traffic flowing on a network interface. By default, the
+       promiscuous mode is set to the monitored interface.";
+    input {
+      leaf name {
+        type string {
+          vr-ext:nc-cli-shortdesc "<name>";
+          pattern '[-A-Za-z0-9._@]+';
+        }
+        description
+          "The name of the capture file. If not set a unique name will be
+           automatically chosen (in format YYYY-MM-DD_HH-MM-SS.<ifname>.pcap).
+           otherwise, if the file already exists it will be overwritten.";
+      }
+      uses traffic-grouping;
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traffic-capture-list {
+    vr-ext:nc-cli-cmd "traffic-capture list";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "List captured traffic flow.";
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traffic-capture-flush {
+    vr-ext:nc-cli-cmd "traffic-capture flush";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Flush all captured traffic flow.";
+  }
+  rpc traffic-capture-read {
+    vr-ext:nc-cli-cmd "traffic-capture read";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Read a captured traffic flow.";
+    input {
+      leaf name {
+        vr-ext:nc-cli-no-name;
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-system:system/traffic-capture";
+        type string {
+          vr-ext:nc-cli-shortdesc "<name>";
+          pattern '[-A-Za-z0-9._@]+';
+        }
+        mandatory true;
+        description
+          "The name of the capture to read.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc traffic-capture-delete {
+    vr-ext:nc-cli-cmd "traffic-capture delete";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Delete a captured traffic flow.";
+    input {
+      leaf name {
+        vr-ext:nc-cli-no-name;
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-system:system/traffic-capture";
+        type string {
+          vr-ext:nc-cli-shortdesc "<name>";
+          pattern '[-A-Za-z0-9._@]+';
+        }
+        mandatory true;
+        description
+          "The name of the capture to delete.";
+      }
+    }
+  }
+  rpc traffic-capture-export {
+    vr-ext:nc-cli-cmd "traffic-capture export";
+    vr-ext:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Export a captured traffic flow.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which remote access is done.
+           By default, they are sent in the 'main' vrf.";
+      }
+      leaf url {
+        type union {
+          type vr-types:sftp-url;
+          type vr-types:scp-url;
+          type vr-types:smtp-url;
+          type vr-types:ftp-url;
+          type vr-types:tftp-url;
+          type vr-types:http-url;
+        }
+        mandatory true;
+        description
+          "The destination URL.";
+      }
+      uses vr-types:url-user-password;
+      leaf name {
+        vr-ext:nc-cli-no-name;
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-system:system/traffic-capture";
+        type string {
+          vr-ext:nc-cli-shortdesc "<name>";
+          pattern '[-A-Za-z0-9._@]+';
+        }
+        mandatory true;
+        description
+          "The name of the capture to export.";
+      }
+      leaf source {
+        type vr-inet:ip-address;
+        description
+          "The source address used to reach the remote machine.";
+      }
+    }
+  }
+  rpc troubleshooting-report {
+    vr-ext:protected;
+    vr-ext:nc-cli-cmd "troubleshooting-report";
+    vr-api:internal;
+    description
+      "Manage troubleshooting reports.";
+    input {
+      vr-ext:nc-cli-exclusive;
+      must 'count(*) = 1' {
+        error-message
+          "One (and only one) action must be specified.";
+      }
+      leaf list {
+        type empty;
+        description
+          "List existing troubleshooting reports.";
+      }
+      container delete {
+        presence "makes delete available";
+        description
+          "Delete an existing troubleshooting report.";
+        leaf name {
+          vr-ext:nc-cli-no-name;
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-system:system/troubleshooting-report";
+          type string {
+            vr-ext:nc-cli-shortdesc "<name>";
+          }
+          mandatory true;
+          description
+            "The name of the report to delete.";
+        }
+      }
+      leaf flush {
+        type empty;
+        description
+          "Delete all existing troubleshooting reports.";
+      }
+      leaf new {
+        type empty;
+        description
+          "Generate a new troubleshooting report.";
+      }
+      container export {
+        presence "makes export available";
+        description
+          "Export an existing troubleshooting report to a remote server
+           via SFTP.";
+        leaf vrf {
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+          type string;
+          default "main";
+          description
+            "The VRF in which remote access is done.
+             By default, they are sent in the 'main' vrf.";
+        }
+        leaf url {
+          type union {
+            type vr-types:sftp-url;
+            type vr-types:scp-url;
+            type vr-types:smtp-url;
+            type vr-types:ftp-url;
+            type vr-types:tftp-url;
+            type vr-types:http-url;
+          }
+          mandatory true;
+          description
+            "The destination URL.";
+        }
+        uses vr-types:url-user-password;
+        leaf name {
+          vr-ext:nc-cli-no-name;
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-system:system/troubleshooting-report";
+          type string {
+            vr-ext:nc-cli-shortdesc "<name>";
+          }
+          mandatory true;
+          description
+            "The name of the report to export.";
+        }
+        leaf source {
+          type vr-inet:ip-address;
+          description
+            "The source address used to reach the remote machine.";
+        }
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-output;
+      uses vr-cmd:long-cmd-status;
+    }
+  }
+  rpc show-date {
+    vr-ext:nc-cli-show "date";
+    vr-api:internal;
+    description
+      "Show date information.";
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc show-neighbors {
+    vr-ext:nc-cli-text-output;
+    vr-ext:nc-cli-show "neighbors";
+    vr-ext:feature "product";
+    vr-api:internal;
+    description
+      "Show neighbors information.";
+    input {
+      leaf family {
+        vr-ext:nc-cli-no-name;
+        type enumeration {
+          enum "ipv4" {
+            description
+              "IPv4 only.";
+          }
+          enum "ipv6" {
+            description
+              "IPv6 only.";
+          }
+        }
+        description
+          "Display only this layer 3 family.";
+      }
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "The VRF in which to show the neighbors.";
+      }
+      leaf interface {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name'] |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-system:vrf)]/vrouter-interface:interface/*/*[local-name()='name']";
+        type string {
+          vr-ext:nc-cli-shortdesc "<ifname>";
+        }
+        description
+          "Interface name.";
+      }
+    }
+    output {
+      list neighbor {
+        key "neighbor interface";
+        description
+          "Neighbor entries in ARP table.";
+        leaf neighbor {
+          type string;
+          description
+            "IPv4 or IPv6 address.";
+        }
+        leaf interface {
+          type string;
+          description
+            "Interface name.";
+        }
+        leaf state {
+          type string;
+          description
+            "System state (REACHABLE/PERMANENT/STATE/DELAY).";
+        }
+        leaf link-layer-address {
+          type string;
+          description
+            "The link-layer address.";
+        }
+      }
+    }
+  }
+  rpc flush-neighbors {
+    vr-ext:feature "product";
+    vr-ext:nc-cli-flush "neighbors";
+    vr-api:internal;
+    description
+      "Flush the neighbors.";
+    input {
+      leaf family {
+        vr-ext:nc-cli-no-name;
+        type enumeration {
+          enum "ipv4" {
+            description
+              "IPv4 (ARP).";
+          }
+          enum "ipv6" {
+            description
+              "IPv6 (NDP).";
+          }
+        }
+        description
+          "Specify the neighbors protocol family.";
+      }
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type vrouter:vrf-name;
+        default "main";
+        description
+          "The VRF in which to flush the neighbors.";
+      }
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+}

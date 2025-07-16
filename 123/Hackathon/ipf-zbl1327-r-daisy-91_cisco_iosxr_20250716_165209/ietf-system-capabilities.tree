@@ -1,0 +1,8 @@
+module: ietf-system-capabilities
+  +--ro system-capabilities
+     +--ro datastore-capabilities* [datastore]
+        +--ro datastore                -> /yanglib:yang-library/datastore/name
+        +--ro per-node-capabilities* []
+           +--ro (node-selection)?
+              +--:(node-selector)
+                 +--ro node-selector?   nacm:node-instance-identifier

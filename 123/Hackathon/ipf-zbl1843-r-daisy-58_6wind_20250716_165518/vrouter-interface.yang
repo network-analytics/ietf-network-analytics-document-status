@@ -1,0 +1,790 @@
+module vrouter-interface {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/interface";
+  prefix vrouter-interface;
+  import vrouter {
+    prefix vrouter;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-commands {
+    prefix vr-cmd;
+  }
+  import vrouter-types {
+    prefix vrouter-types;
+  }
+  import vrouter-if-types {
+    prefix vr-if;
+  }
+  import vrouter-extensions {
+    prefix vrouter-extensions;
+  }
+  import vrouter-ip {
+    prefix vrouter-ip;
+  }
+  import vrouter-system {
+    prefix vrouter-system;
+  }
+  import vrouter-fast-path {
+    prefix vrouter-fast-path;
+  }
+  import vrouter-qos {
+    prefix vrouter-qos;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter network interfaces.";
+  revision 2024-04-22 {
+    description
+      "Move ddos-protection outside of interface-config and interface-state.";
+    reference
+      "";
+  }
+  revision 2024-01-25 {
+    description
+      "Enable DDoS protection per interface.";
+    reference
+      "";
+  }
+  revision 2020-12-10 {
+    description
+      "Add the dhcp-client-renew-lease rpc.";
+    reference
+      "";
+  }
+  revision 2019-06-25 {
+    description
+      "More reserved interface names are now forbidden.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  identity physical {
+    base vrouter-types:INTERFACE_TYPE;
+    description
+      "Physical interface.";
+  }
+  identity network-nic-traffic-stats {
+    base vrouter-types:METRIC;
+    description
+      "The list of traffic statistics per network interface.";
+  }
+  identity network-nic-eth-stats {
+    base vrouter-types:METRIC;
+    description
+      "The list of eth statistics per network interface.";
+  }
+  grouping interface-name-config {
+    description
+      "Interface name.";
+    leaf name {
+      type vrouter-types:ifname;
+      must
+        ". != 'lo' and . != 'gre0' and . != 'gretap0' and
+         . != 'ip6gre0' and . != 'ip6gretap0' and . != 'tunl0' and
+         . != 'sit0' and . != 'ip6tnl0' and . != 'dummy0' and
+         . != 'erspan0' and . != 'ip6_vti0'" {
+        error-message
+          "This interface name is reserved.";
+      }
+      description
+        "The name of the interface.";
+    }
+  }
+  grouping ddos-interface-config {
+    description
+      "Configuration for anti DDoS protection.";
+    container ddos-protection {
+      vrouter-extensions:feature "ddos-protection";
+      description
+        "Configuration for anti DDoS protection.";
+      leaf enabled {
+        type boolean;
+        must "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'" {
+          error-message
+            "Fast path must be started";
+        }
+        description
+          "Enable anti-DDoS Protection.";
+      }
+    }
+  }
+  grouping gtp-rss-interface-config {
+    description
+      "Configuration for GTP RSS.";
+    container gtp-rss {
+      description
+        "Configuration for RSS on inner IP of GTPu tunnels.";
+      leaf enabled {
+        type boolean;
+        must "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'" {
+          error-message
+            "Fast path must be started";
+        }
+        description
+          "Enable GTP RSS. Support for Intel E810 PF/VF and Nvidia ConnectX-6
+           PF/VF has been validated.";
+      }
+    }
+  }
+  grouping interface-config {
+    description
+      "Configuration data for all interfaces.";
+    uses interface-name-config;
+    leaf mtu {
+      type uint32;
+      description
+        "Set the max transmission unit size in octets. IPv6
+         requires an MTU of 1280 octets or greater.";
+    }
+    leaf promiscuous {
+      type boolean;
+      description
+        "Set promiscuous mode.";
+    }
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "The desired (administrative) state of the interface.";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifAdminStatus";
+    }
+    uses vr-if:interface-common-config;
+  }
+  grouping cp-protection-config {
+    description
+      "Configuration for control plane protection.";
+    leaf rx-cp-protection {
+      vr-api:must-added "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'";
+      vr-api:must-added ". = 'false' or count(../vrouter-interface:port) = 0 or count(/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:port[.=string(current()/../vrouter-interface:port)]) = 1";
+      type boolean;
+      must "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'" {
+        error-message
+          "Fast path must be started";
+      }
+      must ". = 'false' or count(../vrouter-interface:port) = 0 or count(/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:port[.=string(current()/../vrouter-interface:port)]) = 1" {
+        error-message
+          "Port must be managed by fast path";
+      }
+      description
+        "Enable Rx Control Plane Protection.";
+    }
+    leaf rx-cp-protection-offload {
+      type boolean;
+      must "../rx-cp-protection = 'true'" {
+        error-message
+          "RX Control Plane Protection should be enabled";
+      }
+      description
+        "Enable Offloading Rx Control Plane Protection into hardware nic.";
+    }
+    leaf tx-cp-protection {
+      vr-api:must-added "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'";
+      vr-api:must-added ". = 'false' or count(../vrouter-interface:port) = 0 or count(/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:port[.=string(current()/../vrouter-interface:port)]) = 1";
+      type boolean;
+      must "/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:enabled = 'true'" {
+        error-message
+          "Fast path must be started";
+      }
+      must ". = 'false' or count(../vrouter-interface:port) = 0 or count(/vrouter:config/vrouter-system:system/vrouter-fast-path:fast-path/vrouter-fast-path:port[.=string(current()/../vrouter-interface:port)]) = 1" {
+        error-message
+          "Port must be managed by fast path";
+      }
+      description
+        "Enable Tx Control Plane Protection.";
+    }
+  }
+  grouping cp-protection-state {
+    description
+      "Configuration for control plane protection.";
+    leaf rx-cp-protection {
+      type boolean;
+      description
+        "Enable Rx Control Plane Protection.";
+    }
+    leaf rx-cp-protection-offload {
+      type boolean;
+      description
+        "Enable Offloading Rx Control Plane Protection into hardware nic.";
+    }
+    leaf tx-cp-protection {
+      type boolean;
+      description
+        "Enable Tx Control Plane Protection.";
+    }
+  }
+  grouping ddos-interface-state {
+    description
+      "Anti DDoS protection state.";
+    container ddos-protection {
+      vrouter-extensions:feature "ddos-protection";
+      description
+        "Anti DDoS protection state.";
+      leaf enabled {
+        type boolean;
+        description
+          "Anti-DDoS Protection status.";
+      }
+    }
+  }
+  grouping gtp-rss-interface-state {
+    description
+      "GTP RSS state.";
+    container gtp-rss {
+      description
+        "GTP RSS state.";
+      leaf enabled {
+        type boolean;
+        description
+          "GTP RSS status.";
+      }
+    }
+  }
+  grouping interface-state {
+    description
+      "State variables for all interfaces.";
+    uses interface-name-config;
+    leaf mtu {
+      type uint32;
+      description
+        "The max transmission unit size in octets.";
+    }
+    leaf promiscuous {
+      type boolean;
+      description
+        "True if the interface is in promiscuous mode, else false.";
+    }
+    leaf enabled {
+      vrouter-extensions:pushed;
+      type boolean;
+      description
+        "The desired (administrative) state of the interface.";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifAdminStatus";
+    }
+    uses vr-if:interface-common-config;
+  }
+  grouping eth-config {
+    description
+      "Configuration data for Ethernet interfaces.";
+    container ethernet {
+      description
+        "Top-level container for Ethernet configuration.";
+      uses vr-if:ethernet-address-config;
+    }
+  }
+  grouping eth-state {
+    description
+      "State variables for Ethernet interfaces.";
+    container ethernet {
+      description
+        "Top-level container for Ethernet state.";
+      uses vr-if:ethernet-address-state;
+    }
+  }
+  grouping physical-state {
+    description
+      "State variables for physical interfaces.";
+    leaf port {
+      type string;
+      description
+        "Reference to a physical network port.";
+    }
+  }
+  grouping physical-config-top {
+    description
+      "Physical interface top configuration.";
+    uses interface-config;
+    uses ddos-interface-config;
+    uses gtp-rss-interface-config;
+    leaf port {
+      vr-api:pattern-added "pci-(d[0-9]+)?(b[0-9]+)(s[0-9]+)(f[0-9]+)?(p[0-9]+)?";
+      vr-api:pattern-added "dt-(.+)";
+      vr-api:pattern-added "hv-(.+)";
+      vr-api:must-added "count(/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:port[current()=.]) + count(/vrouter:config/vrouter:vrf/vrouter:l3vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:port[current()=.]) <= 1";
+      vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter-network-ports:network-port[vrouter-network-ports:type='physical']/vrouter-network-ports:name";
+      type union {
+        type vrouter-types:pci-port-name;
+        type vrouter-types:device-tree-port-name;
+        type vrouter-types:hyper-v-port-name;
+        type vrouter-types:auxiliary-port-name;
+      }
+      must 'count(/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:port[current()=.]) + count(/vrouter:config/vrouter:vrf/vrouter:l3vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:port[current()=.]) <= 1' {
+        error-message
+          "A PCI port can only be bound once.";
+      }
+      mandatory true;
+      description
+        "Reference to a physical network port.";
+    }
+    uses cp-protection-config;
+    uses vrouter-ip:vrouter-ipv6-config;
+    uses vrouter-ip:vrouter-network-stack-parameters;
+    uses eth-config {
+      augment "ethernet" {
+        description
+          "Physical ethernet parameters.";
+        uses vr-if:ethernet-transmission-config;
+      }
+    }
+    uses vrouter-qos:if-phy-qos-config;
+  }
+  grouping physical-state-top {
+    description
+      "Physical interface top state.";
+    uses interface-state;
+    uses ddos-interface-state;
+    uses gtp-rss-interface-state;
+    uses physical-state;
+    uses cp-protection-state;
+    uses vr-if:interface-common-state;
+    uses vr-if:interface-counters-state;
+    uses vrouter-ip:vrouter-ipv4-state;
+    uses vrouter-ip:vrouter-ipv6-state;
+    uses vrouter-ip:vrouter-network-stack-parameters;
+    uses eth-state {
+      augment "ethernet" {
+        description
+          "Physical ethernet parameters.";
+        uses vr-if:ethernet-transmission-config;
+      }
+    }
+    uses vrouter-qos:if-phy-qos-state;
+  }
+  augment "/vrouter:config/vrouter:vrf" {
+    description
+      "Network interfaces configuration.";
+    container interface {
+      vr-api:tree-removed "fpvhost";
+      vr-api:tree-removed "vhost";
+      vr-api:tree-removed "legacy-vti";
+      presence "Makes interface configuration available.";
+      description
+        "Interface configuration.";
+      list physical {
+        key "name";
+        description
+          "The list of physical interfaces on the device.";
+        uses vrouter-ip:vrouter-ipv4-config;
+        uses physical-config-top;
+      }
+    }
+  }
+  augment "/vrouter:state/vrouter:vrf" {
+    description
+      "Network interfaces operational state data.";
+    container interface {
+      vr-api:tree-removed "fpvhost";
+      vr-api:tree-removed "vhost";
+      vr-api:tree-removed "legacy-vti";
+      presence "Makes interface state available.";
+      config false;
+      description
+        "Top-level container for interface state.";
+      list physical {
+        key "name";
+        description
+          "The list of physical interfaces on the device.";
+        uses physical-state-top;
+      }
+    }
+  }
+  augment "/vrouter:config/vrouter:vrf/vrouter:l3vrf" {
+    description
+      "Network interfaces configuration.";
+    container interface {
+      presence "Makes interface configuration available.";
+      description
+        "Interface configuration.";
+      list physical {
+        key "name";
+        description
+          "The list of physical interfaces on the device.";
+        uses vrouter-ip:vrouter-ipv4-config;
+        uses physical-config-top;
+      }
+    }
+  }
+  augment "/vrouter:state/vrouter:vrf/vrouter:l3vrf" {
+    description
+      "Network interfaces operational state data.";
+    container interface {
+      presence "Makes interface state available.";
+      config false;
+      description
+        "Top-level container for interface state.";
+      list physical {
+        key "name";
+        description
+          "The list of physical interfaces on the device.";
+        uses physical-state-top;
+      }
+    }
+  }
+  rpc show-throughput {
+    vrouter-extensions:nc-cli-show "interface throughput";
+    vrouter-extensions:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Show interface throughput every second.";
+    input {
+      leaf vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "VRF to look into.";
+      }
+      leaf type {
+        type identityref {
+          base vrouter-types:INTERFACE_TYPE;
+        }
+        description
+          "Select all interfaces of this type.";
+      }
+      leaf-list name {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+        type string;
+        description
+          "Select this specific interface (may be specified multiple times).";
+      }
+      leaf count {
+        type uint16 {
+          range "1..65535";
+        }
+        description
+          "Stop after the given number of seconds. By default, the throughput
+           is displayed every second until the command is interrupted with
+           `ctrl-c`.";
+      }
+      leaf raw {
+        type empty;
+        description
+          "Show the exact number of packets/bits received/transmitted every
+           second instead of human readable values.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc show-interface {
+    vrouter-extensions:nc-cli-show "interface";
+    vr-api:internal;
+    description
+      "Show interface information.";
+    input {
+      leaf vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "VRF to look into.";
+      }
+      leaf l3vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-interface:vrf)]/vrouter:l3vrf/vrouter:name |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-interface:vrf)]/vrouter:l3vrf/vrouter:name";
+        type string;
+        description
+          "L3vrf to look into.";
+      }
+      leaf type {
+        type identityref {
+          base vrouter-types:INTERFACE_TYPE;
+        }
+        description
+          "Interface type.";
+      }
+      leaf level {
+        vrouter-extensions:nc-cli-no-name;
+        type enumeration {
+          enum "statistics" {
+            description
+              "Display statistics.";
+          }
+          enum "details" {
+            description
+              "Display more details.";
+          }
+          enum "up" {
+            description
+              "Display UP interfaces only.";
+          }
+          enum "hardware-statistics" {
+            description
+              "Display hardware statistics. Implies physical type.";
+          }
+          enum "hardware-features" {
+            description
+              "Display hardware features. Implies physical type.";
+          }
+          enum "hardware-information" {
+            description
+              "Display hardware information. Implies physical type.";
+          }
+          enum "hardware-driver-information" {
+            description
+              "Display hardware driver information. Implies physical type.";
+          }
+        }
+        mandatory true;
+        description
+          "The level of information requested.";
+      }
+      leaf name {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+        type string;
+        description
+          "Display only one interface by this name.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc show-interface-brief {
+    vrouter-extensions:nc-cli-show "interface";
+    vrouter-extensions:nc-cli-text-output;
+    vr-api:internal;
+    description
+      "Show interface brief information.";
+    input {
+      leaf vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type vrouter:vrf-name;
+        default "main";
+        description
+          "VRF to look into.";
+      }
+      leaf l3vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-interface:vrf)]/vrouter:l3vrf/vrouter:name |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-interface:vrf)]/vrouter:l3vrf/vrouter:name";
+        type vrouter:l3vrf-name;
+        description
+          "L3vrf to look into.";
+      }
+      leaf type {
+        type identityref {
+          base vrouter-types:INTERFACE_TYPE;
+        }
+        description
+          "Interface type.";
+      }
+      leaf name {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+        type vrouter-types:ifname;
+        description
+          "Display only one interface by this name.";
+      }
+    }
+    output {
+      list interface {
+        key "name";
+        description
+          "The list of interfaces matching the input filter.";
+        leaf name {
+          type string;
+          description
+            "The name of the interface.";
+        }
+        leaf state {
+          type enumeration {
+            enum "up" {
+              description
+                "The interface is up.";
+            }
+            enum "down" {
+              description
+                "The interface is down.";
+            }
+          }
+          description
+            "The state of the interface.";
+        }
+        leaf l3vrf {
+          type string;
+          description
+            "The l3vrf where the interface is located.";
+        }
+        leaf-list ipv4-address {
+          type string;
+          description
+            "The IPv4 addresses configured on the interface.";
+        }
+        leaf-list ipv6-address {
+          type string;
+          description
+            "The IPv6 addresses configured on the interface.";
+        }
+        leaf description {
+          type string;
+          description
+            "The interface description.";
+        }
+      }
+    }
+  }
+  rpc show-metric-traffic-stats {
+    vr-api:internal;
+    description
+      "Kpi for network-nic-traffic-stats.";
+    input {
+      list interface {
+        key "vrf name";
+        description
+          "Display only those interfaces.";
+        leaf vrf {
+          vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+          type string;
+          description
+            "The VRF where the interface is located.";
+        }
+        leaf name {
+          vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+          type string;
+          description
+            "The interface name.";
+        }
+      }
+    }
+    output {
+      list interface {
+        key "vrf name";
+        description
+          "The list of interfaces with their associated counters.";
+        leaf vrf {
+          type string;
+          description
+            "The interface VRF.";
+        }
+        leaf name {
+          type string;
+          description
+            "The interface name.";
+        }
+        uses vr-if:interface-counters-state {
+          refine "counters" {
+            vrouter-extensions:rpc-metric "network-nic-traffic-stats";
+          }
+        }
+      }
+    }
+  }
+  rpc show-metric-eth-stats {
+    vr-api:internal;
+    vrouter-extensions:rpc-metric "network-nic-eth-stats";
+    description
+      "Kpi for network-nic-eth-stats.";
+    input {
+      list interface {
+        key "vrf name";
+        description
+          "Display only those interfaces.";
+        leaf vrf {
+          vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+          type vrouter:vrf-name;
+          description
+            "The VRF where the interface is located.";
+        }
+        leaf name {
+          vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+          type vrouter-types:ifname;
+          description
+            "The interface name.";
+        }
+      }
+    }
+    output {
+      list interface {
+        key "vrf name";
+        description
+          "The list of interfaces with their associated counters.";
+        leaf vrf {
+          type string;
+          description
+            "The interface VRF.";
+        }
+        leaf name {
+          type string;
+          description
+            "The interface name.";
+        }
+        list statistic {
+          vrouter-extensions:metric-value-list "name value";
+          key "name";
+          description
+            "The driver vendor specific NIC statistics (rx_*, tx_*, etc).";
+          leaf name {
+            type string;
+            description
+              "The statistic name.";
+          }
+          leaf value {
+            type uint64;
+            description
+              "The statistic value.";
+          }
+        }
+      }
+    }
+  }
+  rpc dhcp-client-renew-lease {
+    vrouter-extensions:nc-cli-cmd "dhcp-client renew-lease";
+    vrouter-extensions:nc-cli-command-no-pager;
+    vr-api:internal;
+    description
+      "Renew DHCP client lease period.";
+    input {
+      leaf vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "Specify the VRF.";
+      }
+      leaf l3vrf {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf[vrouter:name=string(current()/vrouter-dns-server:vrf)]/vrouter:l3vrf/vrouter:name |\n/vrouter:state/vrouter:vrf[vrouter:name='main'][not(current()/vrouter-dns-server:vrf)]/vrouter:l3vrf/vrouter:name";
+        type string;
+        description
+          "Specify the l3vrf.";
+      }
+      leaf ifname {
+        vrouter-extensions:nc-cli-no-name;
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+        type vrouter-types:ifname;
+        mandatory true;
+        description
+          "The interface name.";
+      }
+      leaf ip-version {
+        type enumeration {
+          enum "ipv4" {
+            description
+              "Renew the IPv4 lease.";
+          }
+          enum "ipv6" {
+            description
+              "Renew the IPv6 lease.";
+          }
+        }
+        default "ipv4";
+        description
+          "Specify the IP version.";
+      }
+    }
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+}

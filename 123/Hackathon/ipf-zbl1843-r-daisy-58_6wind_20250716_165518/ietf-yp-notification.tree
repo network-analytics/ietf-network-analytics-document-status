@@ -1,0 +1,12 @@
+module: ietf-yp-notification
+
+  augment /sn:subscriptions:
+    +--rw enable-notification-envelope?   boolean
+    +--rw metadata
+
+  notifications:
+    +---n envelope
+       +--ro event-time         yang:date-and-time
+       +--ro hostname?          inet:host
+       +--ro sequence-number?   yang:counter32
+       +--ro contents?          <anydata>

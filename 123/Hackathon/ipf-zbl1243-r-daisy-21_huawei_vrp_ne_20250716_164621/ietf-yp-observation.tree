@@ -1,0 +1,8 @@
+module: ietf-yp-observation
+
+  augment /yp:push-update:
+    +--ro timestamp?       yang:date-and-time
+    +--ro point-in-time?   enumeration
+  augment /yp:push-change-update:
+    +--ro timestamp?       yang:date-and-time
+    +--ro point-in-time?   enumeration

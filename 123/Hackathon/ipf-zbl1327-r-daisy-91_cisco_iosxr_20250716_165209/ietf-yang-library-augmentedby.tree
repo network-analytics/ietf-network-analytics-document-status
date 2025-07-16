@@ -1,0 +1,4 @@
+module: ietf-yang-library-augmentedby
+
+  augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
+    +--ro augmented-by*   -> ../../yanglib:module/name

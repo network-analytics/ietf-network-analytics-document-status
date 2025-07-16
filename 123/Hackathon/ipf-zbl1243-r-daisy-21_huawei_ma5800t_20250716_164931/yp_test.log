@@ -1,0 +1,17 @@
+Error in NC RPC: Unknown element "huawei-system".
+--- TEST 1: netconf_get_sw_version - FAILED: Unknown element "huawei-system".
+Error in NC config: Receiver instance not exist.
+Error: Receiver instance not exist.
+Error in NC RPC: Unknown element "modules-state".
+Error during get-ietf-notification-capabilities.xml: Unknown element "modules-state".
+--- TEST 4: netconf_get_ietf_notification_capabilities - FAILED: Unknown element "modules-state".
+Error in NC RPC: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+Error during get-schema-ietf-notification-transport-capabilities.xml: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+--- TEST 10: netconf_get_schema_ietf_notification_transport_capabilities - FAILED: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+Error in NC RPC: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+Error during get-schema-ietf-yp-transport-capabilities.xml: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+--- TEST 17: netconf_get_schema_ietf_yp_transport_capabilities - FAILED: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+Error in NC config: The subscription filter is invalid.
+--- TEST 20: yangpush_ietf_interface - FAILED: The subscription filter is invalid.
+Error in NC config: Receiver instance not exist.
+Error: Receiver instance not exist.

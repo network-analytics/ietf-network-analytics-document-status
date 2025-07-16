@@ -1,0 +1,2229 @@
+module vrouter-qos {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/qos";
+  prefix vrouter-qos;
+  import vrouter {
+    prefix vrouter;
+  }
+  import vrouter-types {
+    prefix vrouter-types;
+  }
+  import vrouter-inet-types {
+    prefix vr-inet;
+  }
+  import vrouter-extensions {
+    prefix vrouter-extensions;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-commands {
+    prefix vr-commands;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter qos.";
+  revision 2025-03-12 {
+    description
+      "Rename class to classifier.";
+    reference
+      "";
+  }
+  revision 2024-09-18 {
+    description
+      "Add DSCP mapping.";
+    reference
+      "RFC 8837: Differentiated Services Code Point (DSCP) Packet Markings for WebRTC QoS";
+  }
+  revision 2023-01-20 {
+    description
+      "Add selectors and policies.";
+    reference
+      "";
+  }
+  revision 2022-10-21 {
+    description
+      "Move the scheduler stats first in the container.";
+    reference
+      "";
+  }
+  revision 2022-08-25 {
+    description
+      "Add child schedulers.";
+    reference
+      "";
+  }
+  revision 2022-07-06 {
+    description
+      "Add missing stats for sfq scheduler.";
+    reference
+      "";
+  }
+  revision 2022-06-15 {
+    description
+      "Add sfq scheduler.";
+    reference
+      "";
+  }
+  revision 2022-06-14 {
+    description
+      "Add stats for schedulers.";
+    reference
+      "";
+  }
+  revision 2022-04-01 {
+    description
+      "Add htb scheduler.";
+    reference
+      "";
+  }
+  revision 2022-03-15 {
+    description
+      "Deprecate the core parameter of scheduler.";
+    reference
+      "";
+  }
+  revision 2021-02-11 {
+    description
+      "Classes can match critical control plane traffic.";
+    reference
+      "";
+  }
+  revision 2019-07-01 {
+    description
+      "Add shapers and schedulers.";
+    reference
+      "";
+  }
+  revision 2019-03-21 {
+    description
+      "Add shared policers.";
+    reference
+      "";
+  }
+  revision 2018-11-29 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  identity qos {
+    base vrouter-types:SERVICE_LOG_ID;
+    description
+      "QoS service.";
+  }
+  typedef pb-dwrr-prio-t {
+    type enumeration {
+      enum "low" {
+        description
+          "Low priority.";
+      }
+      enum "high" {
+        description
+          "High priority.";
+      }
+    }
+    description
+      "PB-DWRR queue priority.";
+  }
+  typedef rate-t {
+    type uint64 {
+      vrouter-extensions:nc-cli-int-multiplier;
+    }
+    units "bps";
+    description
+      "Rate in bits per second. K/M/G/T multipliers are supported.
+       Example: 1G stands for 1000000000 bps.";
+  }
+  typedef burst-t {
+    type uint64 {
+      vrouter-extensions:nc-cli-int-multiplier;
+    }
+    units "bytes";
+    description
+      "Burst size in bytes. K/M/G/T multipliers are supported.
+       Example: 2K stands for 2000 bytes.";
+  }
+  grouping policer-grouping {
+    description
+      "QoS policer template (Using a Two-Rate, Three-Color Marker, RFC4115).";
+    leaf bandwidth {
+      type rate-t;
+      mandatory true;
+      description
+        "Maximum bandwidth of regular traffic, a.k.a. CIR (Committed Information
+         Rate), in bps. 0 allows no regular traffic.";
+    }
+    leaf burst {
+      vr-api:base-type-removed "uint32";
+      type burst-t;
+      description
+        "Maximum burst size of shaped traffic, a.k.a. CBS (Committed Burst Size),
+         in bytes. The default value is set to bandwidth / 80 to handle
+         a burst of 100 ms at the targeted bandwidth.
+         If not set or set to 0, the default value is applied.";
+    }
+    leaf excess-bandwidth {
+      type rate-t;
+      default "0";
+      description
+        "Maximum bandwidth of excess traffic, a.k.a. EIR (Excess Information
+         Rate), in bps. 0 allows no excess traffic.";
+    }
+    leaf excess-burst {
+      vr-api:base-type-removed "uint32";
+      type burst-t;
+      description
+        "Maximum burst size of excess traffic, a.k.a. EBS (Excess Burst Size),
+         in bytes. The default value is set to excess-bandwidth / 80
+         to handle a burst of 100 ms at the targeted bandwidth.
+         If not set or set to 0, the default value is applied.";
+    }
+  }
+  grouping policer-stats-grouping {
+    description
+      "QoS policer statistics.";
+    leaf pass-packets {
+      type uint64;
+      description
+        "Number of packets passed (regular traffic that conforms to (bandwidth,
+         burst) specification.";
+    }
+    leaf pass-bytes {
+      type uint64;
+      description
+        "Number of bytes passed (regular traffic that conforms to (bandwidth,
+         burst) specification.";
+    }
+    leaf pass-excess-packets {
+      type uint64;
+      description
+        "Number of excess packets passed (excess traffic that conforms to
+         (excess-bandwidth, excess-burst) specification.";
+    }
+    leaf pass-excess-bytes {
+      type uint64;
+      description
+        "Number of excess bytes passed (excess traffic that conforms to
+         (excess-bandwidth, excess-burst) specification.";
+    }
+    leaf drop-packets {
+      type uint64;
+      description
+        "Number of packets dropped (traffic that does not conform to bandwidth or
+         excess-bandwidth).";
+    }
+    leaf drop-bytes {
+      type uint64;
+      description
+        "Number of bytes dropped (traffic that does not conform to bandwidth or
+         excess-bandwidth).";
+    }
+  }
+  grouping shaper-grouping {
+    description
+      "QoS shaper template.";
+    leaf bandwidth {
+      type rate-t;
+      mandatory true;
+      description
+        "Maximum bandwidth of shaped traffic.";
+    }
+    leaf burst {
+      vr-api:base-type-removed "uint32";
+      type burst-t;
+      description
+        "Maximum burst size of shaped traffic.
+         The default value is set to bandwidth / 80 to handle
+         a burst of 100 ms at the targeted bandwidth.
+         If not set or set to 0, the default value is applied.";
+    }
+    leaf layer1-overhead {
+      type uint32;
+      default "0";
+      description
+        "Number of bytes added by the underlying protocol on each packet.";
+    }
+    leaf queue-size {
+      type uint32;
+      default "256";
+      description
+        "Number of packets that can be saved in the delay queue. If a scheduler
+         is also configured on the interface, this value is not used, the queues
+         of the scheduler are used as delay queues. The value is rounded up to
+         the nearest power of 2.";
+    }
+  }
+  grouping shaper-stats-grouping {
+    description
+      "QoS shaper statistics.";
+    leaf pass-packets {
+      vr-api:base-type-removed "uint32";
+      type uint64;
+      description
+        "Number of packets sent.";
+    }
+    leaf drop-packets {
+      vr-api:base-type-removed "uint32";
+      type uint64;
+      description
+        "Number of packets dropped.";
+    }
+  }
+  grouping rate-limit-grouping {
+    description
+      "Full QoS configuration: basic rate limit (policer), shaper and scheduler.";
+    container rate-limit {
+      must 'count(*) <= 1' {
+        error-message
+          "Only one rate-limit method must be specified.";
+      }
+      presence "Rate limit configuration";
+      description
+        "Rate limit configuration.";
+      leaf policer {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policer/vrouter-qos:name";
+        }
+        description
+          "Traffic policer defined in the QoS context.";
+      }
+      leaf shared-policer {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:shared-policer/vrouter-qos:name";
+        }
+        description
+          "Traffic shared policer defined in the QoS context.";
+      }
+    }
+  }
+  grouping if-generic-qos-config {
+    description
+      "QoS configuration common to all interfaces.";
+    container ingress {
+      presence "Ingress QoS configuration";
+      description
+        "Ingress QoS configuration.";
+      uses rate-limit-grouping;
+      leaf-list policy {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policy/vrouter-qos:name";
+        }
+        description
+          "List of QoS policies defined in the QoS context.";
+      }
+    }
+    container egress {
+      presence "Egress QoS configuration";
+      description
+        "Egress QoS configuration.";
+      uses rate-limit-grouping {
+        augment "rate-limit" {
+          description
+            "Add shaper rate-limiting.";
+          leaf shaper {
+            vr-api:must-added "not(current()/../../scheduler and /vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler[vrouter-qos:name=current()/../../scheduler]/vrouter-qos:htb)";
+            type leafref {
+              path "/vrouter:config/vrouter-qos:qos/vrouter-qos:shaper/vrouter-qos:name";
+            }
+            must 'not(current()/../../scheduler and /vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler[vrouter-qos:name=current()/../../scheduler]/vrouter-qos:htb)' {
+              error-message
+                "If an HTB scheduler is configured in egress, a rate-limit
+                 shaper cannot be configured. If you  want to limit the
+                 bandwidth of the scheduler, you can do it via the bandwidth
+                 attribute of its root queue.";
+            }
+            description
+              "Traffic shaper defined in the QoS context.";
+          }
+        }
+      }
+      leaf scheduler {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler/vrouter-qos:name";
+        }
+        description
+          "Scheduler defined in the QoS context.";
+      }
+      leaf-list policy {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policy/vrouter-qos:name";
+        }
+        description
+          "List of QoS policies defined in the QoS context.";
+      }
+    }
+  }
+  grouping if-qos-config {
+    description
+      "QoS configuration for an interface.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "QoS configuration";
+      description
+        "QoS configuration.";
+      uses if-generic-qos-config;
+    }
+  }
+  grouping if-phy-qos-config {
+    description
+      "QoS configuration for a physical interface.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "Makes QoS available.";
+      description
+        "QoS configuration.";
+      uses if-generic-qos-config {
+        augment "ingress" {
+          description
+            "Add DSCP mapping.";
+          container dscp-mapping {
+            presence "Makes DSCP-mapping available.";
+            description
+              "DSCP mapping qos configuration for physical interfaces.";
+            leaf name {
+              type leafref {
+                path "/vrouter:config/vrouter-qos:qos/vrouter-qos:ingress/vrouter-qos:dscp-mapping/vrouter-qos:name";
+                require-instance false;
+              }
+              description
+                "The dscp mapping preset to use.";
+            }
+          }
+        }
+      }
+    }
+  }
+  grouping rate-limit-state-grouping {
+    description
+      "Rate limit basic state.";
+    container rate-limit {
+      presence "Ingress/Egress rate limit configuration";
+      description
+        "Ingress/Egress rate limit configuration.";
+      container policer {
+        description
+          "Traffic policer.";
+        uses policer-grouping;
+        leaf shared-policer {
+          type string;
+          description
+            "Shared policer name.";
+        }
+        container stats {
+          description
+            "Traffic policer statistics.";
+          uses policer-stats-grouping;
+        }
+      }
+    }
+  }
+  grouping scheduler-stats-grouping {
+    description
+      "QoS scheduler statistics.";
+    leaf enqueue-packets {
+      vr-api:base-type-removed "uint32";
+      type uint64;
+      description
+        "Number of packets enqueued.";
+    }
+    leaf enqueue-bytes {
+      type uint64;
+      description
+        "Number of bytes enqueued.";
+    }
+    leaf xmit-packets {
+      vr-api:base-type-removed "uint32";
+      type uint64;
+      description
+        "Number of packets sent.";
+    }
+    leaf xmit-bytes {
+      type uint64;
+      description
+        "Number of bytes sent.";
+    }
+    leaf drop-queue-full {
+      vr-api:base-type-removed "uint32";
+      type uint64;
+      description
+        "Number of packets dropped.";
+    }
+    leaf drop-queue-full-bytes {
+      type uint64;
+      description
+        "Number of bytes dropped.";
+    }
+  }
+  grouping scheduler-queue-state-grouping {
+    description
+      "Common scheduler queue state.";
+    leaf id {
+      type uint32;
+      description
+        "Id of the queue.";
+    }
+    leaf size {
+      type uint32;
+      default "256";
+      description
+        "Size of the queue in packets. The value is rounded up to the nearest
+         power of 2.";
+    }
+    container policer {
+      description
+        "Queue's input policer.";
+      uses policer-grouping;
+      container stats {
+        description
+          "Queue's input policer statistics.";
+        uses policer-stats-grouping;
+      }
+    }
+    container shaper {
+      description
+        "Queue's output shaper.";
+      uses shaper-grouping;
+      container stats {
+        description
+          "Queue's output shaper statistics.";
+        uses shaper-stats-grouping;
+      }
+    }
+    list classifier {
+      key "mark";
+      description
+        "Classifier assigned to the queue.";
+      leaf mark {
+        type string;
+        description
+          "Mark of the classifier.";
+      }
+      container stats {
+        description
+          "Classifier statistics.";
+        leaf match-packets {
+          type uint64;
+          description
+            "Number of packets matched.";
+        }
+      }
+    }
+    list class {
+      key "mark";
+      status deprecated {
+        vrouter-extensions:status-obsoleted-release "25q3";
+        vrouter-extensions:status-deprecated-revision "2025-03-12";
+        vrouter-extensions:status-description "class is deprecated. It has been replaced by classifier.";
+        vrouter-extensions:status-replacement "../classifier";
+      }
+      description
+        "Classes assigned to the queue.";
+      leaf mark {
+        type string;
+        description
+          "Mark of the class.";
+      }
+      container stats {
+        description
+          "Class statistics.";
+        leaf match-packets {
+          vr-api:base-type-removed "uint32";
+          type uint64;
+          description
+            "Number of packets matched.";
+        }
+      }
+    }
+    container stats {
+      description
+        "Queue statistics.";
+      uses scheduler-stats-grouping;
+    }
+    leaf child-scheduler-id {
+      type uint32;
+      description
+        "Child scheduler id within the interface.";
+    }
+  }
+  grouping scheduler-state-grouping {
+    description
+      "Scheduler state.";
+    leaf id {
+      type uint32;
+      description
+        "System scheduler id within the interface.";
+    }
+    leaf is-root {
+      type boolean;
+      description
+        "Is true if the scheduler is root on the interface.";
+    }
+    leaf template-name {
+      type string;
+      description
+        "The template name it has been configured with.";
+    }
+    container pq {
+      presence "Priority Queueing state.";
+      description
+        "Priority Queueing state.";
+      leaf nb-queue {
+        type uint32;
+        mandatory true;
+        description
+          "Number of Priority Queueing queues available in the scheduler.";
+      }
+      leaf default-queue {
+        type uint32;
+        description
+          "The scheduler queue on which the default traffic will be directed.";
+      }
+      container stats {
+        description
+          "Traffic pq scheduler statistics.";
+        uses scheduler-stats-grouping;
+      }
+      list queue {
+        key "id";
+        description
+          "List of Priority Queueing queues.";
+        uses scheduler-queue-state-grouping;
+        leaf priority {
+          type uint32;
+          description
+            "Custom priority of this queue.";
+        }
+      }
+    }
+    container pb-dwrr {
+      presence "Priority-Based Deficit Weighted Round Robin description.";
+      description
+        "Priority-Based Deficit Weighted Round Robin description.";
+      leaf nb-queue {
+        type uint32;
+        mandatory true;
+        description
+          "Number of PB-DWRR queues available in the scheduler.";
+      }
+      leaf default-queue {
+        type uint32;
+        description
+          "The scheduler queue on which the default traffic will be directed.";
+      }
+      container stats {
+        description
+          "Traffic pb-dwrr scheduler statistics.";
+        uses scheduler-stats-grouping;
+      }
+      list queue {
+        key "id";
+        description
+          "List of PB-DWRR queues.";
+        uses scheduler-queue-state-grouping;
+        leaf quantum {
+          type uint32;
+          default "1500";
+          description
+            "Quantum of the queue in bytes. Relevant only if priority is low.";
+        }
+        leaf priority {
+          type pb-dwrr-prio-t;
+          default "low";
+          description
+            "Priority of the queue (low or high).";
+        }
+      }
+    }
+    container htb {
+      presence "Makes Hierarchical Token Bucket available.";
+      description
+        "Hierarchical Token Bucket description.";
+      leaf nb-queue {
+        type uint32;
+        mandatory true;
+        description
+          "Current number of HTB queues in the scheduler.";
+      }
+      leaf default-queue {
+        type union {
+          type uint32;
+          type enumeration {
+            enum "unset" {
+              description
+                "The default queue for HTB scheduler has not been set.";
+            }
+          }
+        }
+        description
+          "The scheduler queue on which the default traffic will be directed.";
+      }
+      leaf divisor {
+        type uint32;
+        description
+          "Divisor used to calculate the default quantum of queues.";
+      }
+      container stats {
+        description
+          "Traffic pq scheduler statistics.";
+        uses scheduler-stats-grouping;
+      }
+      list queue {
+        key "id";
+        description
+          "List of HTB queues.";
+        uses scheduler-queue-state-grouping;
+        leaf bandwidth {
+          type rate-t;
+          description
+            "Guaranteed bandwidth of the queue (bps).";
+        }
+        leaf burst {
+          vr-api:base-type-removed "uint32";
+          type burst-t;
+          description
+            "Guaranteed bandwidth maximum burst size (bytes).";
+        }
+        leaf ceiling {
+          type rate-t;
+          description
+            "Ceiling rate of the queue (bps).";
+        }
+        leaf ceiling-burst {
+          vr-api:base-type-removed "uint32";
+          type burst-t;
+          description
+            "Ceiling rate maximum burst size (bytes).";
+        }
+        leaf ceiling-priority {
+          type uint8;
+          description
+            "Priority of the queue in case of ceiling, used to distribute available
+             ceiling bandwidth to queues by order of priority. Lower is more priority.";
+        }
+        leaf layer1-overhead {
+          type uint32;
+          description
+            "Number of bytes added by the underlying protocol on each packet.";
+        }
+        leaf quantum {
+          type uint32;
+          description
+            "Quantum of the queue, used to distribute available bandwidth
+              between queues of same priorities, in a weighted round robin
+              fashion.";
+        }
+        leaf priority {
+          type uint32;
+          status obsolete {
+            vrouter-extensions:status-obsoleted-release "25q1";
+            vrouter-extensions:status-deprecated-revision "2024-09-26";
+            vrouter-extensions:status-replacement "../ceiling-priority";
+            vrouter-extensions:status-description "Replaced by ceiling-priority. Supported priorities are now restricted in range 0 to 9.\nThe range of priority was too permissive.";
+          }
+          description
+            "Priority of the queue, used to distribute available bandwidth to
+              queues by order of priority.";
+        }
+        leaf-list child-queue {
+          type leafref {
+            path "../../queue/id";
+          }
+          description
+            "List of child HTB queue IDs.";
+        }
+      }
+    }
+    container sfq {
+      presence "Makes Stochastic Fair Queuing available.";
+      description
+        "Stochastic Fair Queuing description.";
+      leaf flows {
+        type uint32;
+        description
+          "Number of flows in which the traffic is distributed.";
+      }
+      leaf quantum {
+        type uint32;
+        description
+          "Amount of bytes a flow is allowed to dequeue during a round of
+            the round robin process.";
+      }
+      leaf limit {
+        type uint32;
+        description
+          "Maximum number of packets that may be enqueued. If the limit is
+            exceeded, half of the fattest flow packets are dropped.";
+      }
+      container stats {
+        description
+          "Traffic sfq scheduler statistics.";
+        uses scheduler-stats-grouping;
+      }
+    }
+  }
+  grouping selector-8-bit-state-grouping {
+    description
+      "8 bit integer selector.";
+    leaf value {
+      type uint8;
+      description
+        "The 8 bit value to match.";
+    }
+    leaf mask {
+      type string;
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-16-bit-state-grouping {
+    description
+      "16 bit integer selector.";
+    leaf value {
+      type uint16;
+      description
+        "The 16 bit value to match.";
+    }
+    leaf mask {
+      type string;
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-32-bit-state-grouping {
+    description
+      "32 bit integer selector.";
+    leaf value {
+      type uint32;
+      description
+        "The 32 bit value to match.";
+    }
+    leaf mask {
+      type string;
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-state-grouping {
+    description
+      "Traffic selector used by QoS policies state.";
+    container match8bits {
+      description
+        "8 bit selector.";
+      uses selector-8-bit-state-grouping;
+      leaf offset {
+        type uint16;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container match16bits {
+      description
+        "16 bit selector.";
+      uses selector-16-bit-state-grouping;
+      leaf offset {
+        type uint32;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container match32bits {
+      description
+        "32 bit selector.";
+      uses selector-32-bit-state-grouping;
+      leaf offset {
+        type uint16;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container ipv4 {
+      description
+        "IPv4 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all IPv4 traffic.";
+      }
+      leaf source {
+        type union {
+          type vr-inet:ipv4-address;
+          type vr-inet:ipv4-prefix;
+        }
+        description
+          "The source address to match.";
+      }
+      leaf destination {
+        type union {
+          type vr-inet:ipv4-address;
+          type vr-inet:ipv4-prefix;
+        }
+        description
+          "The destination address to match.";
+      }
+      container protocol {
+        description
+          "The protocol to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container tos {
+        presence "IPv4 TOS field.";
+        description
+          "The TOS field to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container dscp {
+        presence "IPv4 DSCP field.";
+        description
+          "The DSCP field to match.";
+        leaf value {
+          type uint8;
+          description
+            "The 8 bit value to match.";
+        }
+      }
+    }
+    container ipv6 {
+      description
+        "IPv6 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all IPv6 traffic.";
+      }
+      leaf source {
+        type union {
+          type vr-inet:ipv6-address;
+          type vr-inet:ipv6-prefix;
+        }
+        description
+          "The source address to match.";
+      }
+      leaf destination {
+        type union {
+          type vr-inet:ipv6-address;
+          type vr-inet:ipv6-prefix;
+        }
+        description
+          "The destination address to match.";
+      }
+      container protocol {
+        description
+          "The protocol to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container tos {
+        presence "IPv6 TC field.";
+        description
+          "The TC field to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container dscp {
+        presence "IPv6 DSCP field.";
+        description
+          "The DSCP field to match.";
+        leaf value {
+          type uint8;
+          description
+            "The 8 bit value to match.";
+        }
+      }
+    }
+    container tcp {
+      description
+        "TCP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all TCP traffic.";
+      }
+      container source-port {
+        description
+          "The source port to match.";
+        uses selector-16-bit-state-grouping;
+      }
+      container destination-port {
+        description
+          "The destination port to match.";
+        uses selector-16-bit-state-grouping;
+      }
+    }
+    container udp {
+      description
+        "UDP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all UDP traffic.";
+      }
+      container source-port {
+        description
+          "The source port to match.";
+        uses selector-16-bit-state-grouping;
+      }
+      container destination-port {
+        description
+          "The destination port to match.";
+        uses selector-16-bit-state-grouping;
+      }
+    }
+    container icmp {
+      description
+        "ICMP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all ICMP traffic.";
+      }
+      container type {
+        description
+          "The ICMP type to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container code {
+        description
+          "The ICMP code to match.";
+        uses selector-8-bit-state-grouping;
+      }
+    }
+    container icmpv6 {
+      description
+        "ICMPv6 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all ICMPv6 traffic.";
+      }
+      container type {
+        description
+          "The ICMPv6 type to match.";
+        uses selector-8-bit-state-grouping;
+      }
+      container code {
+        description
+          "The ICMPv6 code to match.";
+        uses selector-8-bit-state-grouping;
+      }
+    }
+  }
+  grouping policy-state-grouping {
+    description
+      "QoS policy state.";
+    leaf name {
+      type string;
+      description
+        "QoS policy name.";
+    }
+    leaf priority {
+      type uint32;
+      description
+        "Priority of the policy (policies are looked up hacked by increasing
+         order of priority).";
+    }
+    list selector {
+      key "name";
+      description
+        "List of traffic selectors.";
+      leaf name {
+        type string;
+        description
+          "Traffic selector name.";
+      }
+      uses selector-state-grouping;
+    }
+    container action {
+      must 'count(*) = 1';
+      description
+        "The policy action.";
+      leaf set-mark {
+        type string {
+          vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+          pattern '0x[0-9a-fA-F]{1,8}';
+        }
+        description
+          "Mark the packet.";
+      }
+      leaf restore-connmark {
+        type empty;
+        description
+          "Copy the connection mark (ctmark) to the packet mark (nfmark):
+           if the packet belongs to a connection in the conntrack module
+           and a ctmark is assigned to this connection, then the mark is
+           copied to the packet nfmark. Otherwise the packet nfmark is
+           reset to 0.";
+      }
+      leaf redirect {
+        type vrouter-types:ifname;
+        description
+          "Redirect the packet to a QoS-hub interface.";
+      }
+      leaf pass {
+        type empty;
+        description
+          "Do not apply any specific QoS processing.";
+      }
+      leaf set-priority {
+        type uint32;
+        description
+          "Set the priority of the packet.";
+      }
+    }
+    container stats {
+      description
+        "Policy statistics.";
+      leaf match-packets {
+        vr-api:base-type-removed "uint32";
+        type uint64;
+        description
+          "Number of packets matched.";
+      }
+      leaf drop-packets {
+        vr-api:base-type-removed "uint32";
+        type uint64;
+        description
+          "Number of packets dropped.";
+      }
+    }
+  }
+  grouping if-generic-qos-state {
+    description
+      "QoS state common to all interfaces.";
+    container ingress {
+      presence "Ingress QoS state.";
+      description
+        "Ingress QoS state.";
+      uses rate-limit-state-grouping;
+      list policy {
+        key "name";
+        description
+          "List of QoS policies.";
+        uses policy-state-grouping;
+      }
+    }
+    container egress {
+      presence "Egress QoS state.";
+      description
+        "Egress QoS state.";
+      uses rate-limit-state-grouping {
+        augment "rate-limit" {
+          description
+            "Add shaper rate-limiting.";
+          container shaper {
+            description
+              "Traffic shaper.";
+            uses shaper-grouping;
+            container stats {
+              description
+                "Traffic shaper statistics.";
+              uses shaper-stats-grouping;
+            }
+          }
+        }
+      }
+      list scheduler {
+        vr-api:node-type-added "list";
+        vr-api:node-type-removed "container";
+        key "id";
+        description
+          "List of schedulers on an interface.";
+        uses scheduler-state-grouping;
+      }
+      list policy {
+        key "name";
+        description
+          "List of QoS policies.";
+        uses policy-state-grouping;
+      }
+    }
+  }
+  grouping if-qos-state {
+    description
+      "QoS state for an interface.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "QoS state";
+      description
+        "QoS state.";
+      uses if-generic-qos-state;
+    }
+  }
+  grouping if-phy-qos-state {
+    description
+      "QoS state for an interface.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "QoS state";
+      description
+        "QoS state.";
+      uses if-generic-qos-state;
+    }
+  }
+  grouping scheduler-queue-grouping {
+    description
+      "Common scheduler queue options.";
+    leaf id {
+      type uint32;
+      must 'number(.) <= number(../../nb-queue) and number(.) != 0' {
+        error-message
+          "Queue id must be less than or equal to the number of queues.";
+      }
+      description
+        "Id of the queue.";
+    }
+    leaf size {
+      type uint32;
+      default "256";
+      description
+        "Size of the queue in packets.";
+    }
+    leaf policer {
+      type leafref {
+        path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policer/vrouter-qos:name";
+      }
+      description
+        "Traffic policer defined in the QoS context applied to incoming traffic.";
+    }
+    leaf shaper {
+      type leafref {
+        path "/vrouter:config/vrouter-qos:qos/vrouter-qos:shaper/vrouter-qos:name";
+      }
+      description
+        "Traffic shaper defined in the QoS context applied to outgoing traffic.";
+    }
+    list classifier {
+      vrouter-extensions:nc-cli-one-liner;
+      key "name";
+      description
+        "List of traffic classifiers bound to this queue.";
+      leaf name {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:classifier/vrouter-qos:name";
+        }
+        description
+          "Classifier name.";
+      }
+    }
+    list class {
+      vrouter-extensions:nc-cli-one-liner;
+      key "name";
+      status deprecated {
+        vrouter-extensions:status-obsoleted-release "25q3";
+        vrouter-extensions:status-deprecated-revision "2025-03-12";
+        vrouter-extensions:status-description "class is deprecated. It has been replaced by classifier.";
+        vrouter-extensions:status-replacement "../classifier";
+      }
+      description
+        "List of traffic classes bound to this queue.";
+      leaf name {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:class/vrouter-qos:name";
+        }
+        description
+          "Class name.";
+      }
+    }
+    leaf child-scheduler {
+      type leafref {
+        path "../../../../scheduler/name";
+        require-instance false;
+      }
+      must '../../../../scheduler[name=current()]/sfq' {
+        error-message
+          "Only an SFQ scheduler can be a child scheduler.";
+      }
+      description
+        "Child scheduler.";
+    }
+  }
+  grouping htb-scheduler-queue-grouping {
+    description
+      "HTB scheduler queue options.";
+    leaf id {
+      type uint32;
+      description
+        "ID of the queue.";
+    }
+    leaf description {
+      type string;
+      description
+        "A comment to describe the queue.";
+    }
+    leaf bandwidth {
+      type rate-t;
+      mandatory true;
+      description
+        "Guaranteed bandwidth of the queue.";
+    }
+    leaf burst {
+      vr-api:base-type-removed "uint32";
+      type burst-t;
+      description
+        "Guaranteed bandwidth maximum burst size. Defaults to
+         bandwidth/80 (100ms of traffic at bandwidth rate).";
+    }
+    leaf ceiling {
+      type rate-t;
+      description
+        "Ceiling rate of the queue. Defaults to bandwidth.";
+    }
+    leaf ceiling-burst {
+      vr-api:base-type-removed "uint32";
+      type burst-t;
+      description
+        "Ceiling rate maximum burst size. Defaults to ceiling/80 (100ms
+         of traffic at ceiling rate).";
+    }
+    leaf ceiling-priority {
+      type uint8 {
+        range "0..9";
+      }
+      description
+        "Priority of the queue in case of ceiling, used to distribute available
+         ceiling bandwidth to queues by order of priority. Lower is more priority.";
+    }
+    leaf layer1-overhead {
+      type uint32;
+      default "0";
+      description
+        "Number of bytes added by the underlying protocol on each packet.";
+    }
+    leaf quantum {
+      type uint32;
+      description
+        "Quantum of the queue, used to distribute available bandwidth between
+         queues of same priorities, in a weighted round robin fashion.
+         Defaults to rate/divisor.";
+    }
+    leaf size {
+      type uint32;
+      default "256";
+      description
+        "Size of the queue in packets. The value is rounded up to the nearest
+         power of 2.";
+    }
+    leaf priority {
+      type uint32 {
+        range "1..max";
+      }
+      status obsolete {
+        vrouter-extensions:status-obsoleted-release "25q1";
+        vrouter-extensions:status-deprecated-revision "26/09/2024";
+        vrouter-extensions:status-replacement "../ceiling-priority";
+        vrouter-extensions:status-description "Replaced by ceiling-priority. Supported priorities are now restricted in range 0 to 9.\nThe range of priority was too permissive.";
+      }
+      description
+        "Priority of the queue, used to distribute available bandwidth to
+         queues by order of priority.";
+    }
+    leaf policer {
+      type leafref {
+        path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policer/vrouter-qos:name";
+      }
+      description
+        "Traffic policer defined in the QoS context applied to incoming traffic.";
+    }
+    list classifier {
+      vrouter-extensions:nc-cli-one-liner;
+      must 'not(../child-queue)' {
+        error-message
+          "Only leaf queues may be bound to a classifier.";
+      }
+      key "name";
+      description
+        "List of traffic classifiers bound to this queue.";
+      leaf name {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:classifier/vrouter-qos:name";
+        }
+        description
+          "Classifier name.";
+      }
+    }
+    list class {
+      vr-api:must-added "not(../child-queue)";
+      vrouter-extensions:nc-cli-one-liner;
+      must 'not(../child-queue)' {
+        error-message
+          "Only leaf queues may be bound to a class.";
+      }
+      key "name";
+      status deprecated {
+        vrouter-extensions:status-obsoleted-release "25q3";
+        vrouter-extensions:status-deprecated-revision "2025-03-12";
+        vrouter-extensions:status-description "class is deprecated. It has been replaced by classifier.";
+        vrouter-extensions:status-replacement "../classifier";
+      }
+      description
+        "List of traffic classes bound to this queue.";
+      leaf name {
+        type leafref {
+          path "/vrouter:config/vrouter-qos:qos/vrouter-qos:class/vrouter-qos:name";
+        }
+        description
+          "Class name.";
+      }
+    }
+    leaf-list child-queue {
+      type leafref {
+        path "../../queue/id";
+      }
+      description
+        "List of child HTB queue IDs.";
+    }
+    leaf child-scheduler {
+      vr-api:must-added "not(../child-queue)";
+      type leafref {
+        path "../../../../scheduler/name";
+        require-instance false;
+      }
+      must '../../../../scheduler[name=current()]/sfq' {
+        error-message
+          "Only an SFQ scheduler can be a child scheduler.";
+      }
+      must 'not(../child-queue)' {
+        error-message
+          "Only leaf queues may have a child scheduler.";
+      }
+      description
+        "Child scheduler.";
+    }
+  }
+  grouping selector-8-bit-grouping {
+    description
+      "8 bit integer selector.";
+    leaf value {
+      type uint8;
+      mandatory true;
+      description
+        "The 8 bit value to match.";
+    }
+    leaf mask {
+      type string {
+        vrouter-extensions:nc-cli-shortdesc "<0x0-0xff>";
+        pattern '0x[0-9a-fA-F]{1,2}';
+      }
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-16-bit-grouping {
+    description
+      "16 bit integer selector.";
+    leaf value {
+      type uint16;
+      mandatory true;
+      description
+        "The 16 bit value to match.";
+    }
+    leaf mask {
+      type string {
+        vrouter-extensions:nc-cli-shortdesc "<0x0-0xffff>";
+        pattern '0x[0-9a-fA-F]{1,4}';
+      }
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-32-bit-grouping {
+    description
+      "32 bit integer selector.";
+    leaf value {
+      type uint32;
+      mandatory true;
+      description
+        "The 32 bit value to match.";
+    }
+    leaf mask {
+      type string {
+        vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+        pattern '0x[0-9a-fA-F]{1,8}';
+      }
+      description
+        "Mask applied to value.";
+    }
+  }
+  grouping selector-grouping {
+    description
+      "Traffic selector used by QoS policies.";
+    container match8bits {
+      presence "8 bit selector.";
+      description
+        "8 bit selector.";
+      uses selector-8-bit-grouping;
+      leaf offset {
+        type uint16;
+        mandatory true;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container match16bits {
+      presence "16 bit selector.";
+      description
+        "16 bit selector.";
+      uses selector-16-bit-grouping;
+      leaf offset {
+        type uint16;
+        mandatory true;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container match32bits {
+      presence "32 bit selector.";
+      description
+        "32 bit selector.";
+      uses selector-32-bit-grouping;
+      leaf offset {
+        type uint16;
+        mandatory true;
+        description
+          "The offset in the frame where the value must match.";
+      }
+    }
+    container ipv4 {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one IPv4 header field must be matched";
+      }
+      presence "IPv4 header selector.";
+      description
+        "IPv4 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all IPv4 traffic.";
+      }
+      leaf source {
+        type union {
+          type vr-inet:ipv4-address;
+          type vr-inet:ipv4-prefix;
+        }
+        description
+          "The source address to match.";
+      }
+      leaf destination {
+        type union {
+          type vr-inet:ipv4-address;
+          type vr-inet:ipv4-prefix;
+        }
+        description
+          "The destination address to match.";
+      }
+      container protocol {
+        presence "IPv4 protocol.";
+        description
+          "The protocol to match.";
+        uses selector-8-bit-grouping;
+      }
+      container tos {
+        presence "IPv4 TOS field.";
+        description
+          "The TOS field to match.";
+        uses selector-8-bit-grouping;
+      }
+      container dscp {
+        presence "IPv4 DSCP field.";
+        description
+          "The DSCP field to match.";
+        leaf value {
+          type uint8 {
+            range "0..63";
+          }
+          mandatory true;
+          description
+            "The 8 bit value to match. This matches the 6 most significant bits
+             of the TOS field.";
+        }
+      }
+    }
+    container ipv6 {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one IPv6 header field must be matched";
+      }
+      presence "IPv6 header selector.";
+      description
+        "IPv6 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all IPv6 traffic.";
+      }
+      leaf source {
+        type union {
+          type vr-inet:ipv6-address;
+          type vr-inet:ipv6-prefix;
+        }
+        description
+          "The source address to match.";
+      }
+      leaf destination {
+        type union {
+          type vr-inet:ipv6-address;
+          type vr-inet:ipv6-prefix;
+        }
+        description
+          "The destination address to match.";
+      }
+      container protocol {
+        presence "IPv6 protocol.";
+        description
+          "The protocol to match.";
+        uses selector-8-bit-grouping;
+      }
+      container tos {
+        presence "IPv6 TC field.";
+        description
+          "The TC field to match.";
+        uses selector-8-bit-grouping;
+      }
+      container dscp {
+        presence "IPv6 DSCP field.";
+        description
+          "The DSCP field to match.";
+        leaf value {
+          type uint8 {
+            range "0..63";
+          }
+          mandatory true;
+          description
+            "The 8 bit value to match. This matches the 6 most significant bits
+             of the TC field.";
+        }
+      }
+    }
+    container tcp {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one TCP header field must be matched";
+      }
+      presence "TCP header selector.";
+      description
+        "TCP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all TCP traffic.";
+      }
+      container source-port {
+        presence "TCP source port.";
+        description
+          "The source port to match.";
+        uses selector-16-bit-grouping;
+      }
+      container destination-port {
+        presence "TCP destination port.";
+        description
+          "The destination port to match.";
+        uses selector-16-bit-grouping;
+      }
+    }
+    container udp {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one UDP header field must be matched";
+      }
+      presence "UDP header selector.";
+      description
+        "UDP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all UDP traffic.";
+      }
+      container source-port {
+        presence "UDP source port.";
+        description
+          "The source port to match.";
+        uses selector-16-bit-grouping;
+      }
+      container destination-port {
+        presence "UDP destination port.";
+        description
+          "The destination port to match.";
+        uses selector-16-bit-grouping;
+      }
+    }
+    container icmp {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one ICMP header field must be matched";
+      }
+      presence "ICMP header selector.";
+      description
+        "ICMP header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all ICMP traffic.";
+      }
+      container type {
+        presence "ICMP type.";
+        description
+          "The ICMP type to match.";
+        uses selector-8-bit-grouping;
+      }
+      container code {
+        presence "ICMP code.";
+        description
+          "The ICMP code to match.";
+        uses selector-8-bit-grouping;
+      }
+    }
+    container icmpv6 {
+      must 'count(*) = 1' {
+        error-message
+          "Exactly one ICMPv6 header field must be matched";
+      }
+      presence "ICMPv6 header selector.";
+      description
+        "ICMPv6 header selector.";
+      leaf match-all {
+        type empty;
+        description
+          "Match all ICMPv6 traffic.";
+      }
+      container type {
+        presence "ICMPv6 type.";
+        description
+          "The ICMPv6 type to match.";
+        uses selector-8-bit-grouping;
+      }
+      container code {
+        presence "ICMPv6 code.";
+        description
+          "The ICMPv6 code to match.";
+        uses selector-8-bit-grouping;
+      }
+    }
+  }
+  grouping policy-grouping {
+    description
+      "QoS policy.";
+    leaf name {
+      type string {
+        length "1..32";
+      }
+      description
+        "QoS policy name.";
+    }
+    leaf description {
+      type string;
+      description
+        "A comment to describe the policy.";
+    }
+    leaf priority {
+      type uint32;
+      mandatory true;
+      description
+        "Priority of the policy (policies are looked up hacked by increasing
+         order of priority).";
+    }
+    leaf-list selector {
+      type leafref {
+        path "/vrouter:config/vrouter-qos:qos/vrouter-qos:selector/vrouter-qos:name";
+      }
+      min-elements 1;
+      description
+        "List of traffic selectors.";
+    }
+    container action {
+      must 'count(*) = 1';
+      description
+        "The policy action.";
+      leaf set-mark {
+        type string {
+          vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+          pattern '0x[0-9a-fA-F]{1,8}';
+        }
+        description
+          "Mark the packet.";
+      }
+      leaf restore-connmark {
+        type empty;
+        description
+          "Copy the connection mark (ctmark) to the packet mark (nfmark):
+           if the packet belongs to a connection in the conntrack module
+           and a ctmark is assigned to this connection, then the mark is
+           copied to the packet nfmark. Otherwise the packet nfmark is
+           reset to 0.";
+      }
+      leaf redirect {
+        vrouter-extensions:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-qos-hub:qos-hub/vrouter-qos-hub:name |\n/vrouter:config/vrouter:vrf/vrouter:l3vrf/vrouter-interface:interface/vrouter-qos-hub:qos-hub/vrouter-qos-hub:name";
+        type vrouter-types:ifname;
+        description
+          "Redirect the packet to QoS-hub interface.";
+      }
+      leaf pass {
+        type empty;
+        description
+          "Do not apply any specific QoS processing.";
+      }
+      leaf set-priority {
+        type uint32;
+        description
+          "Set the priority of the packet.";
+      }
+    }
+  }
+  augment "/vrouter:config" {
+    description
+      "Top-level container for qos configuration.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "QoS configuration";
+      description
+        "QoS configuration.";
+      list policer {
+        key "name";
+        description
+          "List of policer templates.";
+        leaf name {
+          type string;
+          description
+            "Policer template name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the policer template.";
+        }
+        uses policer-grouping;
+      }
+      list shared-policer {
+        key "name";
+        description
+          "List of shared policers.";
+        leaf name {
+          type string;
+          description
+            "Shared policer name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the shared policer.";
+        }
+        leaf policer {
+          type leafref {
+            path "/vrouter:config/vrouter-qos:qos/vrouter-qos:policer/vrouter-qos:name";
+          }
+          description
+            "Traffic policer template defined in the QoS context.";
+        }
+      }
+      list shaper {
+        key "name";
+        description
+          "List of shapers.";
+        leaf name {
+          type string;
+          description
+            "Shaper name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the shaper.";
+        }
+        uses shaper-grouping;
+      }
+      list scheduler {
+        key "name";
+        description
+          "List of schedulers.";
+        leaf name {
+          type string;
+          description
+            "Scheduler name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the scheduler.";
+        }
+        choice algorithm {
+          description
+            "Choose an algorithm.";
+          case pq {
+            container pq {
+              presence "Makes priority queueing available.";
+              description
+                "Priority Queueing description.";
+              leaf nb-queue {
+                type uint32;
+                mandatory true;
+                description
+                  "Number of Priority Queueing queues available in the scheduler.";
+              }
+              leaf default-queue {
+                type leafref {
+                  path "/vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler[name=current()/../../name]/vrouter-qos:pq/vrouter-qos:queue/vrouter-qos:id";
+                  require-instance false;
+                }
+                description
+                  "The scheduler queue on which the default traffic will be
+                   directed.";
+              }
+              list queue {
+                key "id";
+                description
+                  "List of Priority Queueing queues.";
+                uses scheduler-queue-grouping;
+                leaf priority {
+                  type uint32;
+                  description
+                    "Custom priority of this queue.";
+                }
+              }
+            }
+          }
+          case pb-dwrr {
+            container pb-dwrr {
+              presence "Makes Priority-Based Deficit Weighted Round Robin available.";
+              description
+                "Priority-Based Deficit Weighted Round Robin description.";
+              leaf nb-queue {
+                type uint32;
+                mandatory true;
+                description
+                  "Number of PB-DWRR queues available in the scheduler.";
+              }
+              leaf default-queue {
+                type leafref {
+                  path "/vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler[name=current()/../../name]/vrouter-qos:pb-dwrr/vrouter-qos:queue/vrouter-qos:id";
+                  require-instance false;
+                }
+                description
+                  "The scheduler queue on which the default traffic will be
+                   directed.";
+              }
+              list queue {
+                key "id";
+                description
+                  "List of PB-DWRR queues.";
+                uses scheduler-queue-grouping;
+                leaf quantum {
+                  type uint32;
+                  default "1500";
+                  description
+                    "Quantum of the queue. Relevant only if priority is low.";
+                }
+                leaf priority {
+                  type pb-dwrr-prio-t;
+                  must "count(../../queue/priority[text() = 'high']) <= 1" {
+                    error-message
+                      "Only one queue can have the priority high.";
+                  }
+                  default "low";
+                  description
+                    "Priority of the queue (low or high).";
+                }
+              }
+            }
+          }
+          case htb {
+            container htb {
+              vr-api:must-added "count(queue) = count(queue/child-queue) + 1";
+              must 'count(queue) = count(queue/child-queue) + 1' {
+                error-message
+                  "Multiple non child-queues detected.
+                   There can only be a single root queue in htb mode.";
+              }
+              presence "Makes Hierarchical Token bucket available.";
+              description
+                "Hierarchical Token bucket description.";
+              leaf description {
+                type string;
+                description
+                  "A comment to describe the scheduler.";
+              }
+              leaf divisor {
+                type uint32;
+                default "10";
+                description
+                  "Divisor used to calculate the default quantum of queues.
+                   Default quantum = rate / divisor.";
+              }
+              leaf default-queue {
+                type leafref {
+                  path "/vrouter:config/vrouter-qos:qos/vrouter-qos:scheduler[name=current()/../../name]/vrouter-qos:htb/vrouter-qos:queue/vrouter-qos:id";
+                  require-instance false;
+                }
+                description
+                  "The scheduler queue on which the default traffic will be
+                   directed.";
+              }
+              list queue {
+                vrouter-extensions:nc-cli-sort-by "id";
+                key "id";
+                description
+                  "HTB root queue. Only one root queue allowed.";
+                uses htb-scheduler-queue-grouping;
+              }
+            }
+          }
+          case sfq {
+            container sfq {
+              presence "Makes Stochastic Fair Queuing available.";
+              description
+                "Stochastic Fair Queuing description.";
+              leaf description {
+                type string;
+                description
+                  "A comment to describe the scheduler.";
+              }
+              leaf flows {
+                vr-api:range-added "1..32768";
+                type uint32 {
+                  range "1..32768";
+                }
+                default "1024";
+                description
+                  "Number of flows in which the traffic is distributed.";
+              }
+              leaf quantum {
+                vr-api:range-added "1..9000";
+                type uint32 {
+                  range "1..9000";
+                }
+                default "1514";
+                description
+                  "Amount of bytes a flow is allowed to dequeue during a round of
+                   the round robin process.";
+              }
+              leaf limit {
+                vr-api:range-added "1..32768";
+                type uint32 {
+                  range "1..32768";
+                }
+                default "1024";
+                description
+                  "Maximum number of packets that may be enqueued. If the limit is
+                   exceeded, the flow with the greatest number of enqueued packets
+                   is identified, and half of its packets are dropped.";
+              }
+            }
+          }
+        }
+      }
+      leaf class-mask {
+        type string {
+          vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+          pattern '0x[0-9a-fA-F]{1,8}';
+        }
+        default "0xFFFFFFFF";
+        description
+          "Mask applied to marks.";
+      }
+      list classifier {
+        must "match-control-plane-traffic = 'true' or mark" {
+          error-message
+            "Classes that do not relate to critical control plane
+             traffic must specify a mark.";
+        }
+        key "name";
+        description
+          "List of supported classifiers.";
+        leaf name {
+          type string;
+          description
+            "Classifier name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the classifier.";
+        }
+        leaf mark {
+          type string {
+            vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+            pattern '0x[0-9a-fA-F]{1,8}';
+          }
+          description
+            "Classifier mark. Optional if match-control-plane-traffic is true.";
+        }
+        leaf match-control-plane-traffic {
+          type boolean;
+          description
+            "Whether this classifier relates to critical control plane traffic.
+             If unset, match any traffic.
+             If true, only match critical control plane traffic.
+             If false, do not match critical control plane traffic.";
+        }
+      }
+      list class {
+        vr-api:must-added "cp = 'true' or mark";
+        vr-api:must-added "not(../classifier)";
+        must "cp = 'true' or mark" {
+          error-message
+            "Classes that do not relate to critical control plane
+             traffic must specify a mark.";
+        }
+        must 'not(../classifier)' {
+          error-message
+            "Class is obsolete. Do not use class and classifier at the same time.";
+        }
+        key "name";
+        status deprecated {
+          vrouter-extensions:status-obsoleted-release "25q3";
+          vrouter-extensions:status-deprecated-revision "2025-03-12";
+          vrouter-extensions:status-description "class is deprecated. It has been replaced by classifier.";
+          vrouter-extensions:status-replacement "../classifier";
+        }
+        description
+          "List of supported classes.";
+        leaf name {
+          type string;
+          description
+            "Class name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the class.";
+        }
+        leaf mark {
+          type string {
+            vrouter-extensions:nc-cli-shortdesc "<0x0-0xffffffff>";
+            pattern '0x[0-9a-fA-F]{1,8}';
+          }
+          description
+            "Class mark. Optional if cp is true.";
+        }
+        leaf cp {
+          type boolean;
+          description
+            "Whether this class relates to critical control plane traffic.
+             If unset, match any traffic.
+             If true, only match critical control plane traffic.
+             If false, do not match critical control plane traffic.";
+        }
+      }
+      list selector {
+        must "count(*[not(local-name()='name' or local-name()='description')]) = 1" {
+          error-message
+            "Exactly one selector type must be configured.";
+        }
+        key "name";
+        description
+          "List of traffic selectors used by QoS policies.";
+        leaf name {
+          type string {
+            length "1..32";
+          }
+          description
+            "Traffic selector name.";
+        }
+        leaf description {
+          type string;
+          description
+            "A comment to describe the traffic selector.";
+        }
+        uses selector-grouping;
+      }
+      list policy {
+        key "name";
+        description
+          "List of QoS policies.";
+        uses policy-grouping;
+      }
+      container ingress {
+        presence "Makes ingress QoS configuration available.";
+        description
+          "Ingress QoS configuration.";
+        list dscp-mapping {
+          key "name";
+          description
+            "List of QoS policies.";
+          leaf name {
+            type string;
+            description
+              "Name of the mapping.";
+          }
+          list priority {
+            key "priority";
+            description
+              "Ingress priorities.";
+            leaf priority {
+              type uint8 {
+                range "1..255";
+              }
+              description
+                "Define a priority.";
+            }
+            leaf-list dscp {
+              type vr-inet:dscp;
+              description
+                "DSCP values mapped to this priority.";
+            }
+          }
+        }
+      }
+    }
+  }
+  augment "/vrouter:state" {
+    description
+      "Top-level container for qos state.";
+    container qos {
+      vrouter-extensions:feature "product";
+      presence "QoS state";
+      description
+        "QoS state.";
+      list shared-policer {
+        key "name";
+        description
+          "List of shared policers.";
+        leaf name {
+          type string;
+          description
+            "Shared policer name.";
+        }
+        uses policer-grouping;
+        container stats {
+          description
+            "Traffic policer statistics.";
+          uses policer-stats-grouping;
+        }
+      }
+    }
+  }
+  rpc flush-qos-statistics {
+    vrouter-extensions:feature "product";
+    vrouter-extensions:nc-cli-flush "qos statistics";
+    vr-api:internal;
+    description
+      "Flush QoS statistics.";
+    input {
+      leaf type {
+        type enumeration {
+          enum "scheduler" {
+            description
+              "Scheduler statistics.";
+          }
+          enum "filtering" {
+            description
+              "Filtering statistics.";
+          }
+          enum "classification" {
+            description
+              "Classification statistics.";
+          }
+          enum "meter" {
+            description
+              "Meter statistics.";
+          }
+        }
+        description
+          "QoS type used to identify which statistics to flush.";
+      }
+    }
+    output {
+      uses vr-commands:cmd-output-buffer;
+    }
+  }
+}

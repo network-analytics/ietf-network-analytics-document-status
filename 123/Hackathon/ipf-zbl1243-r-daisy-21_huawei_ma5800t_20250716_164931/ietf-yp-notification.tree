@@ -1,0 +1,11 @@
+module: ietf-yp-notification
+
+  augment /sn:subscriptions:
+    +--ro enable-notification-envelope?   boolean
+    +--ro metadata
+
+  rpcs:
+    +---x enable-notif-envelope
+       +---w input
+          +---w enable-notification-envelope?   boolean
+          +---w metadata

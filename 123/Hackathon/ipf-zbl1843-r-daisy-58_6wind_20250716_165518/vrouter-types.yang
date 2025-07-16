@@ -1,0 +1,382 @@
+module vrouter-types {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/types";
+  prefix vrouter-types;
+  import vrouter-extensions {
+    prefix vr-ext;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter yang types.";
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  identity RTG_AUTO_TRACKER {
+    description
+      "Auto-configured tracker identity for routing protocols.
+       Each module that implements a tracker with an automatic configuration
+       system for routing protocols must derive from it.";
+  }
+  identity ROUTE4_FRR_ID {
+    description
+      "Ipv4 routing protocol base identity.
+       Each module that supports ipv4 routing must derive from it.";
+  }
+  identity ROUTE6_FRR_ID {
+    description
+      "Ipv6 routing protocol base identity.
+       Each module that supports ipv6 routing must derive from it.";
+  }
+  identity SERVICE_LOG_ID {
+    description
+      "Log service base identity.
+       Each module that supports logging must derive from it.";
+  }
+  identity INTERFACE_TYPE {
+    description
+      "Interface type.
+       Each module that implements an interface must derive from it.";
+  }
+  identity METRIC {
+    description
+      "Metric type. Each module that implements a metric must derive from it
+       for each metric.";
+  }
+  typedef secret {
+    vr-api:pattern-stable;
+    type string {
+      vr-ext:nc-cli-shortdesc "<6wind-encrypted-base64-string>";
+      pattern '6wind-encrypted-([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]===)';
+    }
+    description
+      "A secret text leaf, that will be ciphered if a master key is set.";
+  }
+  typedef mark {
+    type string {
+      vr-ext:nc-cli-shortdesc "<0x0-0xffffffff>";
+      pattern '0x[0-9a-fA-F]{1,8}';
+    }
+    description
+      "Firewall mark.";
+  }
+  typedef mark-mask {
+    type string {
+      vr-ext:nc-cli-shortdesc "<0x0-0xffffffff/0x0-0xffffffff>";
+      pattern '0x[0-9a-fA-F]{1,8}/0x[0-9a-fA-F]{1,8}';
+    }
+    description
+      "Firewall mark filter.";
+  }
+  typedef ifname {
+    type string {
+      vr-ext:nc-cli-shortdesc "<ifname>";
+      length "1..15";
+      pattern '[-A-Za-z0-9._@]+' {
+        error-message
+          "Interface name can only contain characters from [-A-Za-z0-9._@].";
+      }
+      pattern '.*[A-Za-z].*' {
+        error-message
+          "Interface name must at least contain one letter.";
+      }
+    }
+    description
+      "An interface name.";
+  }
+  typedef ha-group {
+    type string {
+      vr-ext:nc-cli-shortdesc "<ha-group>";
+      length "1..128";
+      pattern '[-A-Za-z0-9._@]+';
+    }
+    description
+      "An high-availability group.";
+  }
+  typedef sftp-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<sftp://[user[:passwd]@]host[:port]/path/to/file>";
+      pattern 'sftp://([a-zA-Z0-9_.%~-]+(:[a-zA-Z0-9_.%~-]+)?@)?([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "An SFTP file URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].
+       The :/?#[]@!$&'()*+,;= characters in the user and password must be
+       percent-encoded (e.g: '?' becomes '%3f'). See RFC 3986 section 2.1.
+       For convenience, you should use the separate user and password fields.";
+  }
+  typedef scp-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<scp://[user[:passwd]@]host[:port]/path/to/file>";
+      pattern 'scp://([a-zA-Z0-9_.%~-]+(:[a-zA-Z0-9_.%~-]+)?@)?([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "An SCP file URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].
+       The :/?#[]@!$&'()*+,;= characters in the user and password must be
+       percent-encoded (e.g: '?' becomes '%3f'). See RFC 3986 section 2.1.
+       For convenience, you should use the separate user and password fields.";
+  }
+  typedef http-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<http[s]://[user[:passwd]@]host[:port]/path/to/file>";
+      pattern 'https?://([a-zA-Z0-9_.%~-]+(:[a-zA-Z0-9_.%~-]+)?@)?([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "An HTTP(S) file URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].
+       The :/?#[]@!$&'()*+,;= characters in the user and password must be
+       percent-encoded (e.g: '?' becomes '%3f'). See RFC 3986 section 2.1.
+       For convenience, you should use the separate user and password fields.";
+  }
+  typedef ftp-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<ftp://[user[:passwd]@]host[:port]/path/to/file>";
+      pattern 'ftp://([a-zA-Z0-9_.%~-]+(:[a-zA-Z0-9_.%~-]+)?@)?([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "An FTP file URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].
+       The :/?#[]@!$&'()*+,;= characters in the user and password must be
+       percent-encoded (e.g: '?' becomes '%3f'). See RFC 3986 section 2.1.
+       For convenience, you should use the separate user and password fields.";
+  }
+  typedef tftp-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<tftp://host[:port]/path/to/file>";
+      pattern 'tftp://([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "A TFTP file URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].";
+  }
+  typedef smtp-url {
+    type string {
+      vr-ext:nc-cli-shortdesc "<smtp[s]://[user[:passwd]@]host/email.addr@domain.tdl>";
+      pattern 'smtps?://([a-zA-Z0-9_.%~-]+(:[a-zA-Z0-9_.%~-]+)?@)?([a-zA-Z0-9.-]+|\[[a-fA-F0-9:]+\])(:[0-9]+)?/.*';
+    }
+    description
+      "An SMTP(S) email URL.
+       IPv6 addresses must be surrounded by square brackets [1234:bada::2].
+       The :/?#[]@!$&'()*+,;= characters in the user and password must be
+       percent-encoded (e.g: '?' becomes '%3f'). See RFC 3986 section 2.1.
+       For convenience, you should use the separate user and password fields.";
+  }
+  typedef timeticks64 {
+    type uint64;
+    description
+      "This type is based on the timeticks type defined in
+       RFC 6991, but with 64-bit width.  It represents the time,
+       modulo 2^64, in hundredths of a second between two epochs.";
+    reference
+      "RFC 6991 - Common YANG Data Types";
+  }
+  typedef counter32 {
+    type uint32;
+    description
+      "A 32-bit counter. A counter value is a monotonically increasing
+       value which is used to express a count of a number of
+       occurrences of a particular event or entity. When a counter64
+       reaches its maximum value, 2^32-1, it loops to zero.
+       Discontinuities in a counter are generally triggered only when
+       the counter is reset to zero, through operator or system
+       intervention.";
+  }
+  typedef counter64 {
+    type uint64;
+    description
+      "A 64-bit counter. A counter value is a monotonically increasing
+       value which is used to express a count of a number of
+       occurrences of a particular event or entity. When a counter64
+       reaches its maximum value, 2^64-1, it loops to zero.
+       Discontinuities in a counter are generally triggered only when
+       the counter is reset to zero, through operator or system
+       intervention.";
+  }
+  typedef date-and-time {
+    vr-ext:nc-cli-truncated-description;
+    type string {
+      vr-ext:nc-cli-shortdesc "<YYYY-MM-DD>T<HH:MM:SS>[. MS]Z|(+|-)HH:MM";
+      pattern '\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})';
+    }
+    description
+      "The date-and-time type is a profile of the ISO 8601
+       standard for representation of dates and times using the
+       Gregorian calendar.  The profile is defined by the
+       date-time production in Section 5.6 of RFC 3339.
+       The date-and-time type is compatible with the dateTime XML
+       schema type with the following notable exceptions:
+       (a) The date-and-time type does not allow negative years.
+       (b) The date-and-time time-offset -00:00 indicates an unknown
+           time zone (see RFC 3339) while -00:00 and +00:00 and Z
+           all represent the same time zone in dateTime.
+       (c) The canonical format (see below) of data-and-time values
+           differs from the canonical format used by the dateTime XML
+           schema type, which requires all times to be in UTC using
+           the time-offset 'Z'.
+       This type is not equivalent to the DateAndTime textual
+       convention of the SMIv2 since RFC 3339 uses a different
+       separator between full-date and full-time and provides
+       higher resolution of time-secfrac.
+       The canonical format for date-and-time values with a known time
+       zone uses a numeric time zone offset that is calculated using
+       the device's configured known offset to UTC time.  A change of
+       the device's offset to UTC time will cause date-and-time values
+       to change accordingly.  Such changes might happen periodically
+       in case a server follows automatically daylight saving time
+       (DST) time zone offset changes.  The canonical format for
+       date-and-time values with an unknown time zone (usually
+       referring to the notion of local time) uses the time-offset
+       -00:00.";
+    reference
+      "RFC 3339: Date and Time on the Internet: Timestamps
+       RFC 2579: Textual Conventions for SMIv2
+       XSD-TYPES: XML Schema Part 2: Datatypes Second Edition";
+  }
+  typedef coremask {
+    type string {
+      vr-ext:nc-cli-shortdesc "<cores-list>";
+      pattern '[0-9]+(-[0-9]+)?(,[0-9]+(-[0-9]+)?)*' {
+        error-message
+          "Invalid core list format. Example: '1,4-7,10-12'";
+      }
+    }
+    description
+      "A comma-separated list of cores or core ranges.
+       Example: '1,4-7,10-12'.";
+  }
+  typedef log-level {
+    type enumeration {
+      enum "emergency" {
+        description
+          "System is unusable.";
+      }
+      enum "alert" {
+        description
+          "Action must be taken immediately.";
+      }
+      enum "critical" {
+        description
+          "Critical conditions.";
+      }
+      enum "error" {
+        description
+          "Error conditions.";
+      }
+      enum "warning" {
+        description
+          "Warning conditions.";
+      }
+      enum "notice" {
+        description
+          "Normal but significant condition.";
+      }
+      enum "info" {
+        description
+          "Informational messages.";
+      }
+      enum "debug" {
+        description
+          "Debug-level messages.";
+      }
+    }
+    description
+      "Logging level message levels.";
+  }
+  typedef cert-name {
+    type string {
+      vr-ext:nc-cli-shortdesc "<cert-name>";
+      length "1..32";
+      pattern '[-A-Za-z0-9._@]+';
+    }
+    description
+      "Certificate name.";
+  }
+  typedef ike-object-name {
+    type string {
+      pattern '[0-9A-Za-z!$&()*+/_|~-]+';
+    }
+    description
+      "IKE object name type.";
+  }
+  typedef pci-port-name {
+    type string {
+      vr-ext:nc-cli-shortdesc "<pci-port>";
+      pattern 'pci-(d[0-9]+)?(b[0-9]+)(s[0-9]+)(f[0-9]+)?(p[0-9]+)?' {
+        error-message
+          "Invalid PCI port name.";
+      }
+    }
+    description
+      "PCI port name.";
+  }
+  typedef pci-bus-addr {
+    type string {
+      vr-ext:nc-cli-shortdesc "<XXXX:XX:XX.X>";
+      pattern '[0-9a-fA-F]{4}:[0-9a-fA-F]{2}:(0[1-9a-fA-F]|[1-9a-fA-F][0-9a-fA-F]).[0-7]' {
+        error-message
+          "Invalid PCI bus address.";
+      }
+    }
+    description
+      "PCI bus address.";
+  }
+  typedef hyper-v-port-name {
+    type string {
+      vr-ext:nc-cli-shortdesc "<device-tree-port>";
+      pattern 'hv-(.+)' {
+        error-message
+          "Invalid Hyper-V port name.";
+      }
+    }
+    description
+      "Hyper-V port name.";
+  }
+  typedef device-tree-port-name {
+    type string {
+      vr-ext:nc-cli-shortdesc "<device-tree-port>";
+      pattern 'dt-(.+)' {
+        error-message
+          "Invalid device tree port name.";
+      }
+    }
+    description
+      "Device tree port name.";
+  }
+  typedef auxiliary-port-name {
+    type string {
+      vr-ext:nc-cli-shortdesc "<auxiliary-port>";
+      pattern 'auxiliary-(.+)' {
+        error-message
+          "Invalid auxiliary port name.";
+      }
+    }
+    description
+      "Auxiliary port name.";
+  }
+  grouping url-user-password {
+    description
+      "Leafs used in RPCs that have optional user/passwords input parameters.";
+    leaf user {
+      type string;
+      description
+        "The URL user name (not percent-encoded).
+         If specified, the user name should not be included in the URL.";
+    }
+    leaf password {
+      vr-ext:nc-cli-hidden-secret;
+      type string;
+      description
+        "The URL password (not percent-encoded).
+         If specified, the user name should not be included in the URL.";
+    }
+  }
+}

@@ -1,0 +1,1206 @@
+NOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
+Executing tcpdump on 10.212.242.2: ssh -i ~/.ssh/dsy_sys dsy_sys@10.212.242.2 sudo tcpdump -s 0 -U -n -w - -i ens224 'host 10.190.64.79' -vvNOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
+
+Executing kcat on 10.212.242.2: ssh -i ~/.ssh/dsy_sys -tt dsy_sys@10.212.242.2 'kcat -q -F /etc/daisy/kafka/kcat.conf -o end -t daisy.ietf.device-json-raw | jq -c | grep 10.190.64.79'
+[32m+------------------------------------------------+[0m
+[32m| --- Backup current YANG Push configuration --- |[0m
+[32m+------------------------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+YANG Push configuration backup saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/yp_config_backup.xml.
+[32m+---------------------------------------------------------------------+[0m
+[32m| Running tests for vendor: huawei_ma5800t and hostname: 10.190.64.79 |[0m
+[32m+---------------------------------------------------------------------+[0m
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_sw_version ===
+
+Description (docstring): Retrieve DUT SW version
+--- TEST 1: netconf_get_sw_version - START
+Vendor: huawei_ma5800t
+Using XML file: get-version.xml in vendor path: ./vendors/huawei_ma5800t/get-version.xml
+XML file: ./vendors/huawei_ma5800t/get-version.xml
+[32m+---------------------------------+[0m
+[32m| -- Get SW version subscriptions |[0m
+[32m+---------------------------------+[0m
+Error in NC RPC: Unknown element "huawei-system".
+--- TEST 1: netconf_get_sw_version - FAILED: Unknown element "huawei-system".
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_delete_subsciptions ===
+
+Description (docstring): Testing IETF Interfaces YANG Push receiver configuration
+    RFC 8639 YANG-Push Subscription
+--- TEST 2: yangpush_delete_subsciptions - START
+[32m+-----------------------------------------+[0m
+[32m| -- Deleting all YANG-Push subscriptions |[0m
+[32m+-----------------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+No subscriptions with receiver DAISYYPTEST found.
+--- TEST 2: yangpush_delete_subsciptions - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_delete_receivers ===
+
+Description (docstring): Testing IETF Interfaces YANG Push receiver configuration
+    RFC 8639 YANG-Push Subscription
+--- TEST 3: yangpush_delete_receivers - START
+[32m+-------------------------------------+[0m
+[32m| -- Deleting all YANG-Push receivers |[0m
+[32m+-------------------------------------+[0m
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+  <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <name>DAISYYPTEST</name>
+  </receiver-instance>
+</receiver-instances>
+</subscriptions>
+
+Error in NC config: Receiver instance not exist.
+Error: Receiver instance not exist.
+--- TEST 3: yangpush_delete_receivers - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_ietf_notification_capabilities ===
+
+Description (docstring): YANG Push test for get-ietf-notification-capabilities.xml
+--- TEST 4: netconf_get_ietf_notification_capabilities - START
+[32m+-----------------------------------------------+[0m
+[32m| -- Get get-ietf-notification-capabilities.xml |[0m
+[32m+-----------------------------------------------+[0m
+Using XML file: get-ietf-notification-capabilities.xml in base path: ./vendors/get-ietf-notification-capabilities.xml
+Error in NC RPC: Unknown element "modules-state".
+Error during get-ietf-notification-capabilities.xml: Unknown element "modules-state".
+--- TEST 4: netconf_get_ietf_notification_capabilities - FAILED: Unknown element "modules-state".
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_ietf_system_capabilities ===
+
+Description (docstring): YANG Push test for get-ietf-system-capabilities.xml
+--- TEST 5: netconf_get_ietf_system_capabilities - START
+[32m+-----------------------------------------+[0m
+[32m| -- Get get-ietf-system-capabilities.xml |[0m
+[32m+-----------------------------------------+[0m
+Using XML file: get-ietf-system-capabilities.xml in base path: ./vendors/get-ietf-system-capabilities.xml
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-ietf-system-capabilities.txt Size: 2867 bytes
+--- TEST 5: netconf_get_ietf_system_capabilities - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_ietf_yang_library ===
+
+Description (docstring): YANG Push test for get-ietf-yang-library.xml
+--- TEST 6: netconf_get_ietf_yang_library - START
+[32m+----------------------------------+[0m
+[32m| -- Get get-ietf-yang-library.xml |[0m
+[32m+----------------------------------+[0m
+Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-ietf-yang-library.txt Size: 287225 bytes
+--- TEST 6: netconf_get_ietf_yang_library - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_ietf_yang_library_augmentedby ===
+
+Description (docstring): YANG Push test for get-ietf-yang-library-augmentedby.xml
+--- TEST 7: netconf_get_ietf_yang_library_augmentedby - START
+[32m+----------------------------------------------+[0m
+[32m| -- Get get-ietf-yang-library-augmentedby.xml |[0m
+[32m+----------------------------------------------+[0m
+Using XML file: get-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-ietf-yang-library-augmentedby.xml
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-ietf-yang-library-augmentedby.txt Size: 42832 bytes
+--- TEST 7: netconf_get_ietf_yang_library_augmentedby - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_list ===
+
+Description (docstring): YANG Push test for get-schema-list.xml
+--- TEST 8: netconf_get_schema_list - START
+[32m+----------------------------+[0m
+[32m| -- Get get-schema-list.xml |[0m
+[32m+----------------------------+[0m
+Using XML file: get-schema-list.xml in base path: ./vendors/get-schema-list.xml
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-schema-list.txt Size: 198851 bytes
+--- TEST 8: netconf_get_schema_list - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_and_validate_yang_library ===
+
+Description (docstring): Fetch YANG Library via NETCONF and validatet using yanglint.
+--- TEST 9: netconf_get_and_validate_yang_library - START
+Getting YANG module schema for ietf-yang-library
+YANGLINT STDERR:libyang err : Data model "ietf-datastores" not found in local searchdirs.
+NETCONF Get schema for YANG:ietf-datastores
+XPATH/schema-node:None
+module: ietf-yang-library
+  +--ro yang-library
+  |  +--ro module-set* [name]
+  |  |  +--ro name    string
+  |  |  +--ro module* [name]
+  |  |  |  +--ro name         yang:yang-identifier
+  |  |  |  +--ro revision?    revision-identifier
+  |  |  |  +--ro namespace    inet:uri
+  |  |  |  +--ro location*    inet:uri
+  |  |  |  +--ro submodule* [name]
+  |  |  |  |  +--ro name        yang:yang-identifier
+  |  |  |  |  +--ro revision?   revision-identifier
+  |  |  |  |  +--ro location*   inet:uri
+  |  |  |  +--ro feature*     yang:yang-identifier
+  |  |  |  +--ro deviation*   -> ../../module/name
+  |  |  +--ro import-only-module* [name revision]
+  |  |     +--ro name         yang:yang-identifier
+  |  |     +--ro revision     union
+  |  |     +--ro namespace    inet:uri
+  |  |     +--ro location*    inet:uri
+  |  |     +--ro submodule* [name]
+  |  |        +--ro name        yang:yang-identifier
+  |  |        +--ro revision?   revision-identifier
+  |  |        +--ro location*   inet:uri
+  |  +--ro schema* [name]
+  |  |  +--ro name          string
+  |  |  +--ro module-set*   -> ../../module-set/name
+  |  +--ro datastore* [name]
+  |  |  +--ro name      ds:datastore-ref
+  |  |  +--ro schema    -> ../../schema/name
+  |  +--ro content-id    string
+  x--ro modules-state
+     x--ro module-set-id    string
+     x--ro module* [name revision]
+        x--ro name                yang:yang-identifier
+        x--ro revision            union
+        x--ro schema?             inet:uri
+        x--ro namespace           inet:uri
+        x--ro feature*            yang:yang-identifier
+        x--ro deviation* [name revision]
+        |  x--ro name        yang:yang-identifier
+        |  x--ro revision    union
+        x--ro conformance-type    enumeration
+        x--ro submodule* [name revision]
+           x--ro name        yang:yang-identifier
+           x--ro revision    union
+           x--ro schema?     inet:uri
+
+  notifications:
+    +---n yang-library-update
+    |  +---- content-id    -> /yanglib:yang-library/yanglib:content-id
+    x---n yang-library-change
+       x---- module-set-id    -> /yanglib:modules-state/yanglib:module-set-id
+
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-library.tree (2145 bytes)
+Getting YANG module schema for ietf-yang-library-augmentedby
+XPATH/schema-node:None
+module: ietf-yang-library-augmentedby
+
+  augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
+    +--rw augmented-by*   -> ../../yanglib:module/yanglib:name
+
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-library-augmentedby.tree (169 bytes)
+Getting YANG module schema for ietf-datastores
+XPATH/schema-node:None
+module: ietf-datastores
+
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-datastores.tree (24 bytes)
+Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
+[32m+--------------------------------------------+[0m
+[32m| -- Get ./vendors/get-ietf-yang-library.xml |[0m
+[32m+--------------------------------------------+[0m
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-ietf-yang-library.xml Size: 287056 bytes
+Running command: yanglint ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-datastores.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-library.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-library-augmentedby.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/get-ietf-yang-library.xml
+--- TEST 9: netconf_get_and_validate_yang_library - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_notification_transport_capabilities ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-notification-transport-capabilities.xml
+--- TEST 10: netconf_get_schema_ietf_notification_transport_capabilities - START
+[32m+----------------------------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-notification-transport-capabilities.xml |[0m
+[32m+----------------------------------------------------------------+[0m
+Using XML file: get-schema-ietf-notification-transport-capabilities.xml in base path: ./vendors/get-schema-ietf-notification-transport-capabilities.xml
+Error in NC RPC: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+Error during get-schema-ietf-notification-transport-capabilities.xml: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+--- TEST 10: netconf_get_schema_ietf_notification_transport_capabilities - FAILED: The value "ietf-notification-transport-capabilitie" of element "identifier" is invalid.
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_udp_notif_transport ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-udp-notif-transport.xml
+--- TEST 11: netconf_get_schema_ietf_udp_notif_transport - START
+[32m+------------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-udp-notif-transport.xml |[0m
+[32m+------------------------------------------------+[0m
+Using XML file: get-schema-ietf-udp-notif-transport.xml in base path: ./vendors/get-schema-ietf-udp-notif-transport.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.tree (0 bytes)
+PYANG STDERR:
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.yang:10: error: module "ietf-subscribed-notif-receivers" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.yang:16: error: module "ietf-udp-client" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.yang:21: error: module "ietf-tls-client" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.yang:26: error: module "ietf-tls-common" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-udp-notif-transport.yang:26: warning: imported module "ietf-tls-common" not used
+
+
+--- TEST 11: netconf_get_schema_ietf_udp_notif_transport - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yang_library_augmentedby ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yang-library-augmentedby.xml
+--- TEST 12: netconf_get_schema_ietf_yang_library_augmentedby - START
+[32m+-----------------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yang-library-augmentedby.xml |[0m
+[32m+-----------------------------------------------------+[0m
+Using XML file: get-schema-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-schema-ietf-yang-library-augmentedby.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-library-augmentedby.tree (161 bytes)
+module: ietf-yang-library-augmentedby
+
+  augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
+    +--ro augmented-by*   -> ../../yanglib:module/name
+
+--- TEST 12: netconf_get_schema_ietf_yang_library_augmentedby - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yang_push ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yang-push.xml
+--- TEST 13: netconf_get_schema_ietf_yang_push - START
+[32m+--------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yang-push.xml |[0m
+[32m+--------------------------------------+[0m
+Using XML file: get-schema-ietf-yang-push.xml in base path: ./vendors/get-schema-ietf-yang-push.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push.tree (6248 bytes)
+module: ietf-yang-push
+
+  augment /sn:establish-subscription/sn:input:
+    +---w (update-trigger)?
+       +--:(periodic)
+       |  +---w periodic!
+       |     +---w period         centiseconds
+       |     +---w anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +---w on-change!
+             +---w dampening-period?   centiseconds
+             +---w sync-on-start?      boolean
+             +---w excluded-change*    change-type
+  augment /sn:establish-subscription/sn:input/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:modify-subscription/sn:input:
+    +---w (update-trigger)?
+       +--:(periodic)
+       |  +---w periodic!
+       |     +---w period         centiseconds
+       |     +---w anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +---w on-change!
+             +---w dampening-period?   centiseconds
+  augment /sn:modify-subscription/sn:input/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscription-started:
+    +--ro (update-trigger)?
+       +--:(periodic)
+       |  +--ro periodic!
+       |     +--ro period         centiseconds
+       |     +--ro anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--ro on-change!
+             +--ro dampening-period?   centiseconds
+             +--ro sync-on-start?      boolean
+             +--ro excluded-change*    change-type
+  augment /sn:subscription-started/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscription-modified:
+    +--ro (update-trigger)?
+       +--:(periodic)
+       |  +--ro periodic!
+       |     +--ro period         centiseconds
+       |     +--ro anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--ro on-change!
+             +--ro dampening-period?   centiseconds
+             +--ro sync-on-start?      boolean
+             +--ro excluded-change*    change-type
+  augment /sn:subscription-modified/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:filters:
+    +--rw selection-filter* [filter-id]
+       +--rw filter-id                         string
+       +--rw (filter-spec)?
+          +--:(datastore-subtree-filter)
+          |  +--rw datastore-subtree-filter?   <anydata> {sn:subtree}?
+          +--:(datastore-xpath-filter)
+             +--rw datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscriptions/sn:subscription:
+    +--rw (update-trigger)?
+       +--:(periodic)
+       |  +--rw periodic!
+       |     +--rw period         centiseconds
+       |     +--rw anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--rw on-change!
+             +--rw dampening-period?   centiseconds
+             +--rw sync-on-start?      boolean
+             +--rw excluded-change*    change-type
+  augment /sn:subscriptions/sn:subscription/sn:target:
+    +--:(datastore)
+       +--rw datastore                               identityref
+       +--rw (selection-filter)?
+          +--:(by-reference)
+          |  +--rw selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +--rw (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +--rw datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +--rw datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+
+  rpcs:
+    +---x resync-subscription {on-change}?
+       +---w input
+          +---w id    sn:subscription-id
+
+  notifications:
+    +---n push-update
+    |  +--ro id?                   sn:subscription-id
+    |  +--ro datastore-contents?   <anydata>
+    |  +--ro incomplete-update?    empty
+    +---n push-change-update {on-change}?
+       +--ro id?                  sn:subscription-id
+       +--ro datastore-changes
+       |  +--ro yang-patch
+       |     +--ro patch-id    string
+       |     +--ro comment?    string
+       |     +--ro edit* [edit-id]
+       |        +--ro edit-id      string
+       |        +--ro operation    enumeration
+       |        +--ro target       target-resource-offset
+       |        +--ro point?       target-resource-offset
+       |        +--ro where?       enumeration
+       |        +--ro value?       <anydata>
+       +--ro incomplete-update?   empty
+
+--- TEST 13: netconf_get_schema_ietf_yang_push - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yang_push_revision ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yang-push-revision.xml
+--- TEST 14: netconf_get_schema_ietf_yang_push_revision - START
+[32m+-----------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yang-push-revision.xml |[0m
+[32m+-----------------------------------------------+[0m
+Using XML file: get-schema-ietf-yang-push-revision.xml in base path: ./vendors/get-schema-ietf-yang-push-revision.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.tree (1563 bytes)
+PYANG STDERR:
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.yang:10: error: module "ietf-yang-revisions" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.yang:22: error: module "ietf-yang-semver" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.yang:33: error: module "ietf-system-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.yang:39: error: module "ietf-notification-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yang-push-revision.yang:39: warning: imported module "ietf-notification-capabilities" not used
+
+module: ietf-yang-push-revision
+
+  augment /sn:establish-subscription/sn:input:
+    +---w module-version-config* [module-name] {yang-push-revision-supported}?
+       +---w module-name       yang:yang-identifier
+       +---w revision?         rev:revision-date
+       +---w revision-label?   ysver:version
+  augment /sn:modify-subscription/sn:input:
+    +---w module-version-config* [module-name] {yang-push-revision-supported}?
+       +---w module-name       yang:yang-identifier
+       +---w revision?         rev:revision-date
+       +---w revision-label?   ysver:version
+  augment /sn:subscription-started:
+    +--ro module-version* [module-name] {yang-push-revision-supported}?
+    |  +--ro module-name       yang:yang-identifier
+    |  +--ro revision          rev:revision-date
+    |  +--ro revision-label?   ysver:version
+    +--ro yang-library-content-id?   -> /yanglib:yang-library/content-id {yang-push-revision-supported}?
+  augment /sn:subscription-modified:
+    +--ro module-version* [module-name] {yang-push-revision-supported}?
+    |  +--ro module-name       yang:yang-identifier
+    |  +--ro revision          rev:revision-date
+    |  +--ro revision-label?   ysver:version
+    +--ro yang-library-content-id?   -> /yanglib:yang-library/content-id {yang-push-revision-supported}?
+  augment /sn:subscriptions/sn:subscription:
+    +--rw module-version-config* [module-name] {yang-push-revision-supported}?
+       +--rw module-name       yang:yang-identifier
+       +--rw revision?         rev:revision-date
+       +--rw revision-label?   ysver:version
+
+--- TEST 14: netconf_get_schema_ietf_yang_push_revision - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yp_notification ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yp-notification.xml
+--- TEST 15: netconf_get_schema_ietf_yp_notification - START
+[32m+--------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yp-notification.xml |[0m
+[32m+--------------------------------------------+[0m
+Using XML file: get-schema-ietf-yp-notification.xml in base path: ./vendors/get-schema-ietf-yp-notification.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-notification.tree (269 bytes)
+PYANG STDERR:
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-notification.yang:20: error: module "ietf-system-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-notification.yang:26: error: module "ietf-notification-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-notification.yang:26: warning: imported module "ietf-notification-capabilities" not used
+
+module: ietf-yp-notification
+
+  augment /sn:subscriptions:
+    +--ro enable-notification-envelope?   boolean
+    +--ro metadata
+
+  rpcs:
+    +---x enable-notif-envelope
+       +---w input
+          +---w enable-notification-envelope?   boolean
+          +---w metadata
+
+--- TEST 15: netconf_get_schema_ietf_yp_notification - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yp_observation ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yp-observation.xml
+--- TEST 16: netconf_get_schema_ietf_yp_observation - START
+[32m+-------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yp-observation.xml |[0m
+[32m+-------------------------------------------+[0m
+Using XML file: get-schema-ietf-yp-observation.xml in base path: ./vendors/get-schema-ietf-yp-observation.xml
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-observation.tree (260 bytes)
+PYANG STDERR:
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-observation.yang:15: error: module "ietf-system-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-observation.yang:21: error: module "ietf-notification-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-yp-observation.yang:21: warning: imported module "ietf-notification-capabilities" not used
+
+module: ietf-yp-observation
+
+  augment /yp:push-update:
+    +--ro timestamp?       yang:date-and-time
+    +--ro point-in-time?   enumeration
+  augment /yp:push-change-update:
+    +--ro timestamp?       yang:date-and-time
+    +--ro point-in-time?   enumeration
+
+--- TEST 16: netconf_get_schema_ietf_yp_observation - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_yp_transport_capabilities ===
+
+Description (docstring): MVP1 tests for get-schema-ietf-yp-transport-capabilities.xml
+--- TEST 17: netconf_get_schema_ietf_yp_transport_capabilities - START
+[32m+------------------------------------------------------+[0m
+[32m| -- Get get-schema-ietf-yp-transport-capabilities.xml |[0m
+[32m+------------------------------------------------------+[0m
+Using XML file: get-schema-ietf-yp-transport-capabilities.xml in base path: ./vendors/get-schema-ietf-yp-transport-capabilities.xml
+Error in NC RPC: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+Error during get-schema-ietf-yp-transport-capabilities.xml: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+--- TEST 17: netconf_get_schema_ietf_yp_transport_capabilities - FAILED: The value "ietf-yp-transport-capabilities" of element "identifier" is invalid.
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_system_capabilities_yang ===
+
+Description (docstring): Testing getting a YANG module schema from the device
+--- TEST 18: netconf_get_schema_ietf_system_capabilities_yang - START
+Getting YANG module schema for ietf-system-capabilities
+[32m+-------------------------------------+[0m
+[32m| -- Get YANG Modules from the device |[0m
+[32m+-------------------------------------+[0m
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-system-capabilities.tree (366 bytes)
+module: ietf-system-capabilities
+  +--ro system-capabilities
+     +--ro datastore-capabilities* [datastore]
+        +--ro datastore                -> /yanglib:yang-library/datastore/name
+        +--ro per-node-capabilities* []
+           +--ro (node-selection)?
+              +--:(node-selector)
+                 +--ro node-selector?   nacm:node-instance-identifier
+
+--- TEST 18: netconf_get_schema_ietf_system_capabilities_yang - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_add_receiver ===
+
+Description (docstring): Testing IETF Interfaces YANG Push receiver configuration
+    RFC 8639 YANG-Push Subscription
+--- TEST 19: yangpush_add_receiver - START
+[32m+------------------------------+[0m
+[32m| -- Adding YANG-Push receiver |[0m
+[32m+------------------------------+[0m
+Using XML file: config-yp-receiver.xml in base path: ./vendors/config-yp-receiver.xml
+[32m+--------------------------------------------------------------------+[0m
+[32m| -- Configuring YANG-Push receiver ./vendors/config-yp-receiver.xml |[0m
+[32m+--------------------------------------------------------------------+[0m
+[32m+----------------------------------------------------------+[0m
+[32m| -- Getting YANG-Push subscriptions after adding receiver |[0m
+[32m+----------------------------------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+Waiting: 10 seconds remainingWaiting: 9 seconds remainingWaiting: 8 seconds remainingWaiting: 7 seconds remainingWaiting: 6 seconds remainingWaiting: 5 seconds remainingWaiting: 4 seconds remainingWaiting: 3 seconds remainingWaiting: 2 seconds remainingWaiting: 1 seconds remainingWaiting: done (10s)!                      
+--- TEST 19: yangpush_add_receiver - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_ietf_interface ===
+
+Description (docstring): Testing IETF Interfaces YANG Push periodic subscription
+    https://datatracker.ietf.org/doc/html/rfc8343
+--- TEST 20: yangpush_ietf_interface - START
+[32m+--------------------------------------+[0m
+[32m| -- YANG Push periodical subscription |[0m
+[32m+--------------------------------------+[0m
+Using XML file: config-yp-periodic-ietf-interface.xml in base path: ./vendors/config-yp-periodic-ietf-interface.xml
+Overriding XML values for test number 20 subscription ID 200.
+[32m+------------------------------------------------------------+[0m
+[32m| -- Config: ./vendors/config-yp-periodic-ietf-interface.xml |[0m
+[32m+------------------------------------------------------------+[0m
+Error in NC config: The subscription filter is invalid.
+--- TEST 20: yangpush_ietf_interface - FAILED: The subscription filter is invalid.
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_vendor_interface ===
+
+Description (docstring): Testing Vendor Interfaces YANG Push periodic and on-change subscription
+--- TEST 21: yangpush_vendor_interface - START
+[32m+----------------------------------------------------+[0m
+[32m| -- YANG Push periodical and on-change subscription |[0m
+[32m+----------------------------------------------------+[0m
+Using XML file: config-yp-periodic-hua-interface.xml in vendor path: ./vendors/huawei_ma5800t/config-yp-periodic-hua-interface.xml
+Overriding XML values for test number 21 subscription ID 210.
+Overridden XML: <subscriptions
+  xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <subscription>
+    <id>210</id>
+    <datastore
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+      xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational
+    </datastore>
+    <datastore-xpath-filter
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+      xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+      xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']/if:statistics
+    </datastore-xpath-filter>
+    <dscp>0</dscp>
+    <transport
+      xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+    </transport>
+    <encoding>encode-json</encoding>
+    <purpose />
+    <source-address>10.190.64.79</source-address>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISYYPTEST</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+      <name>DAISYYPTEST</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+          <remote-address>10.212.242.2</remote-address>
+          <remote-port>10003</remote-port>
+          <enable-segmentation>true</enable-segmentation>
+          <max-segment-size>1400</max-segment-size>
+        </udp-notif-receiver>
+    </receiver-instance>
+  </receiver-instances>
+</subscriptions>
+[32m+--------------------------------------------------------------------------+[0m
+[32m| -- Config: ./vendors/huawei_ma5800t/config-yp-periodic-hua-interface.xml |[0m
+[32m+--------------------------------------------------------------------------+[0m
+Waiting: 70 seconds remainingWaiting: 69 seconds remainingWaiting: 68 seconds remainingWaiting: 67 seconds remainingWaiting: 66 seconds remainingWaiting: 65 seconds remainingWaiting: 64 seconds remainingWaiting: 63 seconds remainingWaiting: 62 seconds remainingWaiting: 61 seconds remainingWaiting: 60 seconds remainingWaiting: 59 seconds remainingWaiting: 58 seconds remainingWaiting: 57 seconds remainingWaiting: 56 seconds remainingWaiting: 55 seconds remainingWaiting: 54 seconds remainingWaiting: 53 seconds remainingWaiting: 52 seconds remainingWaiting: 51 seconds remainingWaiting: 50 seconds remainingWaiting: 49 seconds remainingWaiting: 48 seconds remainingWaiting: 47 seconds remainingWaiting: 46 seconds remainingWaiting: 45 seconds remainingWaiting: 44 seconds remainingWaiting: 43 seconds remainingWaiting: 42 seconds remainingWaiting: 41 seconds remainingWaiting: 40 seconds remainingWaiting: 39 seconds remainingWaiting: 38 seconds remainingWaiting: 37 seconds remainingWaiting: 36 seconds remainingWaiting: 35 seconds remainingWaiting: 34 seconds remainingWaiting: 33 seconds remainingWaiting: 32 seconds remainingWaiting: 31 seconds remainingWaiting: 30 seconds remainingWaiting: 29 seconds remainingWaiting: 28 seconds remainingWaiting: 27 seconds remainingWaiting: 26 seconds remainingWaiting: 25 seconds remainingWaiting: 24 seconds remainingWaiting: 23 seconds remainingWaiting: 22 seconds remainingWaiting: 21 seconds remainingWaiting: 20 seconds remainingWaiting: 19 seconds remainingWaiting: 18 seconds remainingWaiting: 17 seconds remainingWaiting: 16 seconds remainingWaiting: 15 seconds remainingWaiting: 14 seconds remainingWaiting: 13 seconds remainingWaiting: 12 seconds remainingWaiting: 11 seconds remainingWaiting: 10 seconds remainingWaiting: 9 seconds remainingWaiting: 8 seconds remainingWaiting: 7 seconds remainingWaiting: 6 seconds remainingWaiting: 5 seconds remainingWaiting: 4 seconds remainingWaiting: 3 seconds remainingWaiting: 2 seconds remainingWaiting: 1 seconds remainingWaiting: done (70s)!                      
+--- TEST 21: yangpush_vendor_interface - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_get_schema_ietf_interfaces_yang ===
+
+Description (docstring): Testing getting a YANG module schema from the device
+--- TEST 22: netconf_get_schema_ietf_interfaces_yang - START
+[32m+-------------------------------------+[0m
+[32m| -- Get YANG Modules from the device |[0m
+[32m+-------------------------------------+[0m
+Using XML file: get-schema-ietf-interfaces-yang.xml in base path: ./vendors/get-schema-ietf-interfaces-yang.xml
+[32m+-------------------------------------------------------+[0m
+[32m| -- Get: ./vendors/get-schema-ietf-interfaces-yang.xml |[0m
+[32m+-------------------------------------------------------+[0m
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/ietf-interfaces.tree (2915 bytes)
+module: ietf-interfaces
+  +--rw interfaces
+  |  +--rw interface* [name]
+  |     +--rw name                        string
+  |     +--rw description?                string
+  |     +--rw type                        identityref
+  |     +--rw enabled?                    boolean
+  |     +--rw link-up-down-trap-enable?   enumeration {if-mib}?
+  |     +--ro admin-status                enumeration {if-mib}?
+  |     +--ro oper-status                 enumeration
+  |     +--ro last-change?                yang:date-and-time
+  |     +--ro if-index                    int32 {if-mib}?
+  |     +--ro phys-address?               yang:phys-address
+  |     +--ro higher-layer-if*            interface-ref
+  |     +--ro lower-layer-if*             interface-ref
+  |     +--ro speed?                      yang:gauge64
+  |     +--ro statistics
+  |        +--ro discontinuity-time    yang:date-and-time
+  |        +--ro in-octets?            yang:counter64
+  |        +--ro in-unicast-pkts?      yang:counter64
+  |        +--ro in-broadcast-pkts?    yang:counter64
+  |        +--ro in-multicast-pkts?    yang:counter64
+  |        +--ro in-discards?          yang:counter32
+  |        +--ro in-errors?            yang:counter32
+  |        +--ro in-unknown-protos?    yang:counter32
+  |        +--ro out-octets?           yang:counter64
+  |        +--ro out-unicast-pkts?     yang:counter64
+  |        +--ro out-broadcast-pkts?   yang:counter64
+  |        +--ro out-multicast-pkts?   yang:counter64
+  |        +--ro out-discards?         yang:counter32
+  |        +--ro out-errors?           yang:counter32
+  x--ro interfaces-state
+     x--ro interface* [name]
+        x--ro name               string
+        x--ro type               identityref
+        x--ro admin-status       enumeration {if-mib}?
+        x--ro oper-status        enumeration
+        x--ro last-change?       yang:date-and-time
+        x--ro if-index           int32 {if-mib}?
+        x--ro phys-address?      yang:phys-address
+        x--ro higher-layer-if*   interface-state-ref
+        x--ro lower-layer-if*    interface-state-ref
+        x--ro speed?             yang:gauge64
+        x--ro statistics
+           x--ro discontinuity-time    yang:date-and-time
+           x--ro in-octets?            yang:counter64
+           x--ro in-unicast-pkts?      yang:counter64
+           x--ro in-broadcast-pkts?    yang:counter64
+           x--ro in-multicast-pkts?    yang:counter64
+           x--ro in-discards?          yang:counter32
+           x--ro in-errors?            yang:counter32
+           x--ro in-unknown-protos?    yang:counter32
+           x--ro out-octets?           yang:counter64
+           x--ro out-unicast-pkts?     yang:counter64
+           x--ro out-broadcast-pkts?   yang:counter64
+           x--ro out-multicast-pkts?   yang:counter64
+           x--ro out-discards?         yang:counter32
+           x--ro out-errors?           yang:counter32
+
+--- TEST 22: netconf_get_schema_ietf_interfaces_yang - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_yang_schema_tree ===
+
+Description (docstring): Fetch a YANG module via NETCONF, resolve dependencies, and generate a schema tree using yanglint.
+--- TEST 23: netconf_yang_schema_tree - START
+NETCONF Get schema for YANG:huawei-ifm
+YANGLINT STDERR:libyang err : Data model "huawei-pub-type" not found in local searchdirs.
+NETCONF Get schema for YANG:huawei-pub-type
+YANGLINT STDERR:libyang err : Data model "huawei-extension" not found in local searchdirs.
+NETCONF Get schema for YANG:huawei-extension
+YANGLINT STDERR:libyang err : Data model "huawei-network-instance" not found in local searchdirs.
+NETCONF Get schema for YANG:huawei-network-instance
+XPATH/schema-node:None
+module: huawei-ifm
+  +--rw ifm
+     +--rw global
+     |  +--rw statistic-interval?               uint32
+     |  +--rw ipv4-ignore-primary-sub?          boolean
+     |  +--rw sub-interface-link-trap-enable?   boolean
+     |  +--rw ipv4-conflict-enable!
+     |  |  +--rw preempt-enable?   boolean
+     |  +--rw ipv6-conflict-enable!
+     |     +--rw preempt-enable?   boolean
+     +--rw damp!
+     |  +--rw tx-off?    boolean
+     |  +--rw (level)?
+     |     +--:(auto)
+     |     |  +--rw auto
+     |     |     +--rw level?   damp-level-type
+     |     +--:(manual)
+     |        +--rw manual
+     |           +--rw suppress             uint32
+     |           +--rw reuse                uint32
+     |           +--rw max-suppress-time    uint16
+     |           +--rw half-life-period     uint16
+     +--rw auto-recovery-times
+     |  +--rw auto-recovery-time* [error-down-type]
+     |     +--rw error-down-type    error-down-type
+     |     +--rw time-value         uint32
+     +--rw interfaces
+     |  +--rw interface* [name]
+     |     +--rw name                               pub-type:if-name
+     |     +--rw class?                             class-type
+     |     +--rw type?                              port-type
+     |     +--rw parent-name?                       -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+     |     +--rw number?                            string
+     |     +--rw description?                       string
+     |     +--rw admin-status?                      port-status
+     |     +--rw link-protocol?                     link-protocol
+     |     +--rw router-type?                       router-type
+     |     +--rw clear-ip-df?                       boolean
+     |     +--rw link-up-down-trap-enable?          boolean
+     |     +--rw statistic-enable?                  boolean
+     |     +--rw statistic-mode?                    statistic-mode
+     |     +--rw (bandwidth-type)?
+     |     |  +--:(bandwidth-mbps)
+     |     |  |  +--rw bandwidth?   uint32
+     |     |  +--:(bandwidth-kbps)
+     |     |     +--rw bandwidth-kbps?   uint32
+     |     +--rw mtu?                               uint32
+     |     +--rw spread-mtu-flag?                   boolean
+     |     +--rw statistic-interval?                uint32
+     |     +--rw vrf-name?                          -> /ni:network-instance/ni:instances/ni:instance/ni:name
+     |     +--rw l2-mode-enable?                    boolean
+     |     +--rw down-delay-time?                   uint32
+     |     +--rw mac-address?                       pub-type:mac-address
+     |     +--ro index?                             uint32
+     |     +--ro position?                          string
+     |     +--ro aggregation-name?                  pub-type:if-name
+     |     +--ro is-l2-switch?                      boolean
+     |     +--ro vs-name?                           string
+     |     +--ro l2-switch-port-index?              uint32
+     |     +--ro service-type?                      service-type
+     |     +--ro encapsulation-type?                encapsulation-type
+     |     +--rw network-layer-status?              network-layer-state
+     |     +--rw protocol-up-delay-time?            uint32
+     |     +--rw bandwidth-config-effect-service?   empty
+     |     +--rw mac-address-system?                empty
+     |     +--rw control-flap!
+     |     |  +--rw suppress?             uint32
+     |     |  +--rw reuse?                uint32
+     |     |  +--rw ceiling?              uint32
+     |     |  +--rw decay-ok?             uint32
+     |     |  +--rw decay-ng?             uint32
+     |     |  +--ro control-flap-count?   uint32
+     |     +--rw trap-threshold
+     |     |  +--rw input-rising-rate?    uint32
+     |     |  +--rw input-resume-rate?    uint32
+     |     |  +--rw output-rising-rate?   uint32
+     |     |  +--rw output-resume-rate?   uint32
+     |     +--rw (damping)?
+     |     |  +--:(ignore-damp)
+     |     |  |  +--rw ignore-damp
+     |     |  |     +--rw ignore-global-damp?   boolean
+     |     |  +--:(damp)
+     |     |     +--rw damp!
+     |     |        +--rw tx-off?    boolean
+     |     |        +--rw (level)?
+     |     |           +--:(auto)
+     |     |           |  +--rw auto
+     |     |           |     +--rw level?   damp-level-type
+     |     |           +--:(manual)
+     |     |              +--rw manual
+     |     |                 +--rw suppress             uint32
+     |     |                 +--rw reuse                uint32
+     |     |                 +--rw max-suppress-time    uint16
+     |     |                 +--rw half-life-period     uint16
+     |     +--ro damp-state
+     |     |  +--ro suppress-status?     damp-status-type
+     |     |  +--ro suppress?            uint32
+     |     |  +--ro reuse?               uint32
+     |     |  +--ro max-suppress-time?   uint16
+     |     |  +--ro half-life-period?    uint16
+     |     |  +--ro damp-reuse-time?     uint16
+     |     |  +--ro current-penalty?     uint32
+     |     |  +--ro max-penalty?         uint32
+     |     +--ro dynamic
+     |     |  +--ro oper-status?             port-status
+     |     |  +--ro physical-status?         port-status
+     |     |  +--ro link-status?             port-status
+     |     |  +--ro mtu?                     uint32
+     |     |  +--ro bandwidth?               pub-type:band-width
+     |     |  +--ro ipv4-status?             port-status
+     |     |  +--ro ipv6-status?             port-status
+     |     |  +--ro is-control-flap-damp?    boolean
+     |     |  +--ro mac-address?             pub-type:mac-address
+     |     |  +--ro line-protocol-up-time?   yang:date-and-time
+     |     |  +--ro is-offline?              boolean
+     |     |  +--ro link-quality-grade?      link-quality-grade-type
+     |     |  +--ro sub-if-counts?           uint32
+     |     |  +--ro license-active-status?   license-state
+     |     +--ro mib-statistics
+     |     |  +--ro receive-byte?               uint64
+     |     |  +--ro send-byte?                  uint64
+     |     |  +--ro receive-packet?             uint64
+     |     |  +--ro send-packet?                uint64
+     |     |  +--ro receive-unicast-packet?     uint64
+     |     |  +--ro receive-multicast-packet?   uint64
+     |     |  +--ro receive-broad-packet?       uint64
+     |     |  +--ro send-unicast-packet?        uint64
+     |     |  +--ro send-multicast-packet?      uint64
+     |     |  +--ro send-broad-packet?          uint64
+     |     |  +--ro receive-error-packet?       uint64
+     |     |  +--ro receive-drop-packet?        uint64
+     |     |  +--ro send-error-packet?          uint64
+     |     |  +--ro send-drop-packet?           uint64
+     |     |  +--ro in-bit-rate?                uint64
+     |     |  +--ro in-packet-rate?             uint64
+     |     |  +--ro out-bit-rate?               uint64
+     |     |  +--ro out-packet-rate?            uint64
+     |     +--ro common-statistics
+     |     |  +--ro stati-interval?                  uint32
+     |     |  +--ro in-byte-rate?                    uint64
+     |     |  +--ro in-bit-rate?                     uint64
+     |     |  +--ro in-packet-rate?                  uint64
+     |     |  +--ro in-use-rate?                     string
+     |     |  +--ro out-byte-rate?                   uint64
+     |     |  +--ro out-bit-rate?                    uint64
+     |     |  +--ro out-packet-rate?                 uint64
+     |     |  +--ro out-use-rate?                    string
+     |     |  +--ro receive-byte?                    uint64
+     |     |  +--ro send-byte?                       uint64
+     |     |  +--ro receive-packet?                  uint64
+     |     |  +--ro send-packet?                     uint64
+     |     |  +--ro receive-unicast-packet?          uint64
+     |     |  +--ro receive-multicast-packet?        uint64
+     |     |  +--ro receive-broad-packet?            uint64
+     |     |  +--ro send-unicast-packet?             uint64
+     |     |  +--ro send-multicast-packet?           uint64
+     |     |  +--ro send-broad-packet?               uint64
+     |     |  +--ro receive-error-packet?            uint64
+     |     |  +--ro receive-drop-packet?             uint64
+     |     |  +--ro send-error-packet?               uint64
+     |     |  +--ro send-drop-packet?                uint64
+     |     |  +--ro send-unicast-bit?                uint64
+     |     |  +--ro receive-unicast-bit?             uint64
+     |     |  +--ro send-multicast-bit?              uint64
+     |     |  +--ro receive-multicast-bit?           uint64
+     |     |  +--ro send-broad-bit?                  uint64
+     |     |  +--ro receive-broad-bit?               uint64
+     |     |  +--ro send-unicast-bit-rate?           uint64
+     |     |  +--ro receive-unicast-bit-rate?        uint64
+     |     |  +--ro send-multicast-bit-rate?         uint64
+     |     |  +--ro receive-multicast-bit-rate?      uint64
+     |     |  +--ro send-broad-bit-rate?             uint64
+     |     |  +--ro receive-broad-bit-rate?          uint64
+     |     |  +--ro send-unicast-packet-rate?        uint64
+     |     |  +--ro receive-unicast-packet-rate?     uint64
+     |     |  +--ro send-multicast-packet-rate?      uint64
+     |     |  +--ro receive-multicast-packet-rate?   uint64
+     |     |  +--ro send-broadcast-packet-rate?      uint64
+     |     |  +--ro receive-broadcast-packet-rate?   uint64
+     |     +--ro error-down
+     |     |  +--ro cause?            error-down-type
+     |     |  +--ro recovery-time?    uint32
+     |     |  +--ro remainder-time?   uint32
+     |     +--ro virtual-position
+     |     |  +--ro vnfc-name?   string
+     |     |  +--ro board-id?    uint32
+     |     |  +--ro port-id?     uint32
+     |     +--rw mode-flexe!
+     |     |  +--rw bandwidth?   uint32
+     |     +--rw mode-channelize!
+     |     |  +--rw bandwidth?   uint32
+     |     +--ro crc-error-statistics
+     |     |  +--ro crc-err-coefficient?   uint32
+     |     |  +--ro crc-err-power?         uint32
+     |     +--ro fec-error-statistics
+     |        +--ro prefec-ber-coefficient?   uint32
+     |        +--ro prefec-ber-power?         uint32
+     +--ro static-dimension-ranges
+     |  +--ro static-dimension-range* [type]
+     |     +--ro type             port-type
+     |     +--ro chassis-range?   string
+     |     +--ro slot-range?      string
+     |     +--ro card-range?      string
+     |     +--ro port-range?      string
+     +--ro ipv4-interface-count
+     |  +--ro physical-up-count?     uint32
+     |  +--ro physical-down-count?   uint32
+     |  +--ro protocol-up-count?     uint32
+     |  +--ro protocol-down-count?   uint32
+     +--ro remote-interfaces
+     |  +--ro remote-interface* [name]
+     |     +--ro name                       pub-type:if-name
+     |     +--ro index?                     uint32
+     |     +--ro remote-statistics-state
+     |        +--ro last-cleared-time?               pub-type:time
+     |        +--ro in-bit-rate?                     uint64
+     |        +--ro in-packet-rate?                  uint64
+     |        +--ro in-peak-bit-rate?                uint64
+     |        +--ro in-peak-bit-rate-record-time?    pub-type:time
+     |        +--ro out-bit-rate?                    uint64
+     |        +--ro out-packet-rate?                 uint64
+     |        +--ro out-peak-bit-rate?               uint64
+     |        +--ro out-peak-bit-rate-record-time?   pub-type:time
+     |        +--ro in-use-rate?                     string
+     |        +--ro out-use-rate?                    string
+     +--rw if-group-policys
+        +--rw if-group-policy* [if-type]
+           +--rw if-type    port-type
+           +--rw number     uint32
+
+  rpcs:
+    +---x reset-if-counters-by-name
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-counters-by-type
+    |  +---w input
+    |     +---w if-type    port-type
+    +---x reset-if-counters-all
+    |  +---w input
+    |     +---w all-if    boolean
+    +---x reset-if-mib-counters-by-name
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-mib-counters-by-type
+    |  +---w input
+    |     +---w if-type    port-type
+    +---x reset-if-mib-counters-all
+    |  +---w input
+    |     +---w all-if    boolean
+    +---x reset-if-control-flap-penalty
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-control-flap-counts
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-remote-if-counters
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x restart-if
+       +---w input
+          +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/huawei-ifm.tree (12834 bytes)
+--- TEST 23: netconf_yang_schema_tree - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_get_subscriptions ===
+
+Description (docstring): Testing getting YANG-Push subscriptions
+--- TEST 24: yangpush_get_subscriptions - START
+Vendor: huawei_ma5800t
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+XML file: ./vendors/get-ietf-subscriptions.xml
+[32m+--------------------------------+[0m
+[32m| -- Get YANG-Push subscriptions |[0m
+[32m+--------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+
+		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+			<subscription xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+				<id>210</id>
+				<datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+				<datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']/if:statistics</datastore-xpath-filter>
+				<dscp>0</dscp>
+				<transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+				<encoding>encode-json</encoding>
+				<purpose/>
+				<source-address>10.190.64.79</source-address>
+				<configured-subscription-state>valid</configured-subscription-state>
+				<receivers>
+					<receiver>
+						<name>DAISY</name>
+						<state>active</state>
+						<receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISYYPTEST</receiver-instance-ref>
+					</receiver>
+				</receivers>
+				<periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+					<period>6000</period>
+					<anchor-time>2025-01-01T00:00:30Z</anchor-time>
+				</periodic>
+			</subscription>
+			<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+				<receiver-instance xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+					<name>DAISYYPTEST</name>
+					<udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+						<remote-address>10.212.242.2</remote-address>
+						<remote-port>10003</remote-port>
+						<enable-segmentation>true</enable-segmentation>
+						<max-segment-size>1400</max-segment-size>
+					</udp-notif-receiver>
+				</receiver-instance>
+			</receiver-instances>
+			<enable-notification-envelope xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</enable-notification-envelope>
+		</subscriptions>
+	
+--- TEST 24: yangpush_get_subscriptions - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: netconf_delete_all_subscriptions_and_receivers ===
+
+Description (docstring): Delete the YANG-Push subscriptions and receivers configuration
+--- TEST 25: netconf_delete_all_subscriptions_and_receivers - START
+[32m+-----------------------------------------+[0m
+[32m| -- Deleting all YANG-Push subscriptions |[0m
+[32m+-----------------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>210</id>
+  </subscription>
+</subscriptions>
+
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+  <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <name>DAISYYPTEST</name>
+  </receiver-instance>
+</receiver-instances>
+</subscriptions>
+
+--- TEST 25: netconf_delete_all_subscriptions_and_receivers - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== TESTING: yangpush_post_test_cleanup ===
+
+Description (docstring): Post-test cleanup for YANG-Push tests
+--- TEST 26: yangpush_post_test_cleanup - START
+[32m+-----------------------------------------+[0m
+[32m| -- Deleting all YANG-Push subscriptions |[0m
+[32m+-----------------------------------------+[0m
+Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
+No subscriptions with receiver DAISYYPTEST found.
+[32m+-------------------------------------+[0m
+[32m| -- Deleting all YANG-Push receivers |[0m
+[32m+-------------------------------------+[0m
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+<receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+  <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <name>DAISYYPTEST</name>
+  </receiver-instance>
+</receiver-instances>
+</subscriptions>
+
+Error in NC config: Receiver instance not exist.
+Error: Receiver instance not exist.
+--- TEST 26: yangpush_post_test_cleanup - SUCCESS
+
+ --------------------------------------------------------------------------------
+=== Test Results:
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| Test                                                        | Status   | Duration   | Error                                       |
++=============================================================+==========+============+=============================================+
+| netconf_get_sw_version                                      | FAIL     | 0.11s      | Unknown element "huawei-system"....         |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_delete_subsciptions                                | PASS     | 0.12s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_delete_receivers                                   | PASS     | 0.13s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_ietf_notification_capabilities                  | FAIL     | 0.11s      | Unknown element "modules-state"....         |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_ietf_system_capabilities                        | PASS     | 0.14s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_ietf_yang_library                               | PASS     | 0.60s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_ietf_yang_library_augmentedby                   | PASS     | 0.18s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_list                                     | PASS     | 0.50s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_and_validate_yang_library                       | PASS     | 1.14s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_notification_transport_capabilities | FAIL     | 0.06s      | The value "ietf-notification-transport-c... |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_udp_notif_transport                 | PASS     | 0.61s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yang_library_augmentedby            | PASS     | 0.50s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yang_push                           | PASS     | 0.73s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yang_push_revision                  | PASS     | 1.01s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yp_notification                     | PASS     | 0.58s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yp_observation                      | PASS     | 0.58s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_yp_transport_capabilities           | FAIL     | 0.08s      | The value "ietf-yp-transport-capabilitie... |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_system_capabilities_yang            | PASS     | 0.49s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_add_receiver                                       | PASS     | 10.31s     |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_ietf_interface                                     | FAIL     | 0.15s      | The subscription filter is invalid....      |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_vendor_interface                                   | PASS     | 70.37s     |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_get_schema_ietf_interfaces_yang                     | PASS     | 0.77s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_yang_schema_tree                                    | PASS     | 0.64s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_get_subscriptions                                  | PASS     | 0.09s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| netconf_delete_all_subscriptions_and_receivers              | PASS     | 0.62s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+| yangpush_post_test_cleanup                                  | PASS     | 0.25s      |                                             |
++-------------------------------------------------------------+----------+------------+---------------------------------------------+
+Size of file is : 24 bytes
+Size of file (./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/kafka_output.json) is : 0 bytes
+Selected test sequences: []
+Results saved in ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931
+
+Results directory tree:
+ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250716_164931/
+    stdout.log (68051 bytes)
+    udp_notif_capture.pcap (24 bytes)
+    kafka_output.json (0 bytes)
+    yp_config_backup.xml (231 bytes)
+    yp_test.log (1492 bytes)
+    get-ietf-system-capabilities.txt (2867 bytes)
+    get-ietf-yang-library.txt (287225 bytes)
+    get-ietf-yang-library-augmentedby.txt (42832 bytes)
+    get-schema-list.txt (198851 bytes)
+    ietf-yang-library.yang (16159 bytes)
+    ietf-datastores.yang (2594 bytes)
+    ietf-yang-library.tree (2145 bytes)
+    ietf-yang-library-augmentedby.yang (3129 bytes)
+    ietf-yang-library-augmentedby.tree (161 bytes)
+    ietf-datastores.tree (24 bytes)
+    get-ietf-yang-library.xml (287056 bytes)
+    ietf-udp-notif-transport.yang (4502 bytes)
+    ietf-udp-notif-transport.tree (0 bytes)
+    ietf-yang-push.yang (26735 bytes)
+    ietf-yang-push.tree (6248 bytes)
+    ietf-yang-push-revision.yang (8576 bytes)
+    ietf-yang-push-revision.tree (1563 bytes)
+    ietf-yp-notification.yang (6553 bytes)
+    ietf-yp-notification.tree (269 bytes)
+    ietf-yp-observation.yang (4180 bytes)
+    ietf-yp-observation.tree (260 bytes)
+    ietf-system-capabilities.yang (6197 bytes)
+    ietf-system-capabilities.tree (366 bytes)
+    ietf-interfaces.yang (39075 bytes)
+    ietf-interfaces.tree (2915 bytes)
+    huawei-ifm.yang (78421 bytes)
+    huawei-pub-type.yang (9978 bytes)
+    huawei-extension.yang (6276 bytes)
+    huawei-network-instance.yang (3957 bytes)
+    huawei-ifm.tree (12834 bytes)

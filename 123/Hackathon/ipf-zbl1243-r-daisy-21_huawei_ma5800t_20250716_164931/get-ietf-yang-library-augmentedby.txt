@@ -1,0 +1,1204 @@
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:13512fa6-ad8c-4b04-bb30-ab606e2fb420">
+	<data>
+		<yang-library xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+			<module-set>
+				<name>complete</name>
+				<module>
+					<name>yang</name>
+				</module>
+				<module>
+					<name>ietf-inet-types</name>
+				</module>
+				<module>
+					<name>ietf-yang-types</name>
+				</module>
+				<module>
+					<name>ietf-yang-schema-mount</name>
+				</module>
+				<module>
+					<name>ietf-yang-structure-ext</name>
+				</module>
+				<module>
+					<name>ietf-datastores</name>
+				</module>
+				<module>
+					<name>ietf-yang-library</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-library-augmentedby</augmented-by>
+				</module>
+				<module>
+					<name>ietf-netconf-acm</name>
+				</module>
+				<module>
+					<name>ietf-netconf</name>
+				</module>
+				<module>
+					<name>ietf-netconf-monitoring</name>
+				</module>
+				<module>
+					<name>an-alarm-management</name>
+				</module>
+				<module>
+					<name>ietf-alarms</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">an-alarm-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ccsa-an-alarm-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-alarm-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-alarms-x733</augmented-by>
+				</module>
+				<module>
+					<name>an-epon-if-type</name>
+				</module>
+				<module>
+					<name>ietf-interfaces</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policies</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-app-flow</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-app-flow-interface</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-app-flow-qoe</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-app-flow-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-frame-processing-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-sub-interfaces</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-interface-port-reference</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-interface-usage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-interfaces-statistics-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-l2-dhcpv4-relay</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-l2-forwarding</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-ldra</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-pppoe-intermediate-agent</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-enhanced-scheduling-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-traffic-mngt-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policies-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policies-sub-interface-rewrite</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policing-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-traffic-mngt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-sub-interface-tagging</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-subscriber-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-vlan-sub-interface-profile-fp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-vlan-sub-interface-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon-ani-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani-power-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon-statistics-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani-power-shedding</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani-tr069-management-server</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponvani</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponvani-onu-authentication</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-vlan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-multicast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-security</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-tpid</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-traffic-suppress</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-enhanced-scheduling</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-shaping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policing</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-eth-trunk</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ieee802-dot1q-bridge</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-ip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-network-instance</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-interface-statistics-mgt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipfix-psamp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ont-clock-profile</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-otn-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-xpon</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ieee802-ethernet-interface</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-xpon-sub-interfaces</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ieee802-dot1ax</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-if-extensions</augmented-by>
+				</module>
+				<module>
+					<name>bbf-if-type</name>
+				</module>
+				<module>
+					<name>iana-if-type</name>
+				</module>
+				<module>
+					<name>an-epon-onu-transceivers</name>
+				</module>
+				<module>
+					<name>an-epon-pm-olt-running-info</name>
+				</module>
+				<module>
+					<name>an-epon-pm-olt-traffic</name>
+				</module>
+				<module>
+					<name>an-epon-pm-olt-transceivers</name>
+				</module>
+				<module>
+					<name>an-epon-pm-onu-local-info</name>
+				</module>
+				<module>
+					<name>an-epon-pm-onu-remote-info</name>
+				</module>
+				<module>
+					<name>an-epon-pm-onu-traffic</name>
+				</module>
+				<module>
+					<name>an-gpon-onu-transceivers</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-olt-running-info</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-olt-traffic</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-olt-transceivers</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-onu-line-quality</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-onu-local-info</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-onu-remote-info</name>
+				</module>
+				<module>
+					<name>an-gpon-pm-onu-traffic</name>
+				</module>
+				<module>
+					<name>an-inet-types</name>
+				</module>
+				<module>
+					<name>an-pon-protection-group</name>
+				</module>
+				<module>
+					<name>an-protection-group</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">an-pon-protection-group</augmented-by>
+				</module>
+				<module>
+					<name>bbf-xpon-if-type</name>
+				</module>
+				<module>
+					<name>bbf-yang-types</name>
+				</module>
+				<module>
+					<name>iana-crypt-hash</name>
+				</module>
+				<module>
+					<name>an-telemetry</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">an-telemetry-ext</augmented-by>
+				</module>
+				<module>
+					<name>an-telemetry-types</name>
+				</module>
+				<module>
+					<name>an-telemetry-ext</name>
+				</module>
+				<module>
+					<name>bbf-ani-profile</name>
+				</module>
+				<module>
+					<name>bbf-xpon</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-ani-profile</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-uni-profile</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon-traffic-alarm-profile</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani-power-shedding</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xponani-tr069-management-server</augmented-by>
+				</module>
+				<module>
+					<name>bbf-xpon-types</name>
+				</module>
+				<module>
+					<name>bbf-xpon-defects</name>
+				</module>
+				<module>
+					<name>bbf-xpongemtcont</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon-traffic-descriptor-profile</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpongemtcont-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-xpon</augmented-by>
+				</module>
+				<module>
+					<name>bbf-dot1q-types</name>
+				</module>
+				<module>
+					<name>bbf-qos-policies</name>
+				</module>
+				<module>
+					<name>bbf-qos-classifiers</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-composite-filters</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-filters</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policer-envelope-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-policing</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-rate-control</augmented-by>
+				</module>
+				<module>
+					<name>bbf-frame-classification</name>
+				</module>
+				<module>
+					<name>bbf-inet-types</name>
+				</module>
+				<module>
+					<name>bbf-frame-processing-types</name>
+				</module>
+				<module>
+					<name>bbf-qos-types</name>
+				</module>
+				<module>
+					<name>bbf-app-flow</name>
+				</module>
+				<module>
+					<name>bbf-app-flow-types</name>
+				</module>
+				<module>
+					<name>bbf-app-flow-interface</name>
+				</module>
+				<module>
+					<name>bbf-app-flow-qoe</name>
+				</module>
+				<module>
+					<name>bbf-app-flow-state</name>
+				</module>
+				<module>
+					<name>bbf-frame-editing</name>
+				</module>
+				<module>
+					<name>bbf-frame-processing</name>
+				</module>
+				<module>
+					<name>bbf-frame-processing-profiles</name>
+				</module>
+				<module>
+					<name>bbf-sub-interfaces</name>
+				</module>
+				<module>
+					<name>bbf-sub-interface-tagging</name>
+				</module>
+				<module>
+					<name>bbf-hardware-cpu</name>
+				</module>
+				<module>
+					<name>iana-hardware</name>
+				</module>
+				<module>
+					<name>ietf-hardware</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-hardware-cpu</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-hardware-reset-action</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-hardware-storage-drives</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-hardware-transceivers</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-hardware-transceivers-xpon</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-software-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bbf-software-management-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-energy-management-an</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-hardware</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-hardware-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-warranty-info</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-xpon-hardware-transceivers</augmented-by>
+				</module>
+				<module>
+					<name>bbf-hardware-reset-action</name>
+				</module>
+				<module>
+					<name>bbf-hardware-storage-drives</name>
+				</module>
+				<module>
+					<name>bbf-hardware-transceiver-identities</name>
+				</module>
+				<module>
+					<name>bbf-hardware-transceivers</name>
+				</module>
+				<module>
+					<name>bbf-hardware-types</name>
+				</module>
+				<module>
+					<name>bbf-hardware-transceivers-xpon</name>
+				</module>
+				<module>
+					<name>bbf-interface-port-reference</name>
+				</module>
+				<module>
+					<name>bbf-uni-profile</name>
+				</module>
+				<module>
+					<name>bbf-interface-usage</name>
+				</module>
+				<module>
+					<name>bbf-interfaces-statistics-management</name>
+				</module>
+				<module>
+					<name>bbf-ipfix-data-export</name>
+				</module>
+				<module>
+					<name>ietf-tls-client</name>
+				</module>
+				<module>
+					<name>ietf-tls-common</name>
+				</module>
+				<module>
+					<name>ietf-trust-anchors</name>
+				</module>
+				<module>
+					<name>ietf-crypto-types</name>
+				</module>
+				<module>
+					<name>bbf-l2-dhcpv4-relay</name>
+				</module>
+				<module>
+					<name>bbf-l2-dhcpv4-relay-profile-common</name>
+				</module>
+				<module>
+					<name>bbf-subscriber-types</name>
+				</module>
+				<module>
+					<name>bbf-l2-dhcpv4-relay-forwarding</name>
+				</module>
+				<module>
+					<name>bbf-l2-forwarding</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-l2-dhcpv4-relay-forwarding</augmented-by>
+				</module>
+				<module>
+					<name>bbf-ldra</name>
+				</module>
+				<module>
+					<name>bbf-ldra-profile-common</name>
+				</module>
+				<module>
+					<name>bbf-link-table</name>
+				</module>
+				<module>
+					<name>bbf-mgmd</name>
+				</module>
+				<module>
+					<name>bbf-mgmd-types</name>
+				</module>
+				<module>
+					<name>bbf-mgmd-common</name>
+				</module>
+				<module>
+					<name>bbf-pppoe-intermediate-agent</name>
+				</module>
+				<module>
+					<name>bbf-pppoe-intermediate-agent-profile-common</name>
+				</module>
+				<module>
+					<name>bbf-qos-composite-filters</name>
+				</module>
+				<module>
+					<name>ietf-packet-fields</name>
+				</module>
+				<module>
+					<name>ietf-ethertypes</name>
+				</module>
+				<module>
+					<name>bbf-qos-enhanced-scheduling-state</name>
+				</module>
+				<module>
+					<name>bbf-qos-traffic-mngt</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-qos-shaping</augmented-by>
+				</module>
+				<module>
+					<name>bbf-qos-traffic-mngt-state</name>
+				</module>
+				<module>
+					<name>bbf-qos-filters</name>
+				</module>
+				<module>
+					<name>bbf-qos-policies-state</name>
+				</module>
+				<module>
+					<name>bbf-qos-policies-sub-interface-rewrite</name>
+				</module>
+				<module>
+					<name>bbf-qos-policing-state</name>
+				</module>
+				<module>
+					<name>bbf-qos-policing</name>
+				</module>
+				<module>
+					<name>bbf-software-management</name>
+				</module>
+				<module>
+					<name>bbf-subscriber-profile-common</name>
+				</module>
+				<module>
+					<name>bbf-subscriber-profiles</name>
+				</module>
+				<module>
+					<name>ietf-system</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-subscriber-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-system-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-system-para</augmented-by>
+				</module>
+				<module>
+					<name>bbf-vlan-sub-interface-profile-fp</name>
+				</module>
+				<module>
+					<name>bbf-vlan-sub-interface-profiles</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-vlan-sub-interface-profile-fp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-vlan-sub-interface-profile-usage</augmented-by>
+				</module>
+				<module>
+					<name>bbf-vlan-sub-interface-profile-usage</name>
+				</module>
+				<module>
+					<name>bbf-xpon-ani-state</name>
+				</module>
+				<module>
+					<name>bbf-xpon-common-types</name>
+				</module>
+				<module>
+					<name>bbf-xponani</name>
+				</module>
+				<module>
+					<name>bbf-xpon-power-management</name>
+				</module>
+				<module>
+					<name>bbf-xpon-onu-authentication-features</name>
+				</module>
+				<module>
+					<name>bbf-xpon-onu-authentication-types</name>
+				</module>
+				<module>
+					<name>bbf-xpon-onu-power-management</name>
+				</module>
+				<module>
+					<name>bbf-xponani-power-management</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">bbf-xpon-onu-power-management</augmented-by>
+				</module>
+				<module>
+					<name>bbf-xpon-onu-types</name>
+				</module>
+				<module>
+					<name>bbf-xpon-statistics-management</name>
+				</module>
+				<module>
+					<name>bbf-xpon-tr069-common</name>
+				</module>
+				<module>
+					<name>bbf-xpon-traffic-alarm-profile</name>
+				</module>
+				<module>
+					<name>bbf-xpon-traffic-descriptor-profile</name>
+				</module>
+				<module>
+					<name>bbf-xponani-power-shedding</name>
+				</module>
+				<module>
+					<name>bbf-xponani-power-shedding-common</name>
+				</module>
+				<module>
+					<name>bbf-xponani-tr069-management-server</name>
+				</module>
+				<module>
+					<name>bbf-xpongemtcont-qos</name>
+				</module>
+				<module>
+					<name>bbf-xponvani</name>
+				</module>
+				<module>
+					<name>bbf-xponvani-onu-authentication</name>
+				</module>
+				<module>
+					<name>bbf-xponvani-onu-authentication-groupings</name>
+				</module>
+				<module>
+					<name>ccsa-an-alarm-management</name>
+				</module>
+				<module>
+					<name>huawei-acl</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-acl</augmented-by>
+				</module>
+				<module>
+					<name>huawei-network-instance</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l3vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+				</module>
+				<module>
+					<name>huawei-extension</name>
+				</module>
+				<module>
+					<name>huawei-ifm</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-tunnel-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-arp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ethernet</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vlan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifm-trunk</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-dhcpv4-relay</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-pub-type</name>
+				</module>
+				<module>
+					<name>huawei-l3vpn</name>
+				</module>
+				<module>
+					<name>huawei-routing-policy</name>
+				</module>
+				<module>
+					<name>huawei-tunnel-management</name>
+				</module>
+				<module>
+					<name>huawei-xpl</name>
+				</module>
+				<module>
+					<name>huawei-time-range</name>
+				</module>
+				<module>
+					<name>huawei-alarm-management</name>
+				</module>
+				<module>
+					<name>ietf-alarms-x733</name>
+				</module>
+				<module>
+					<name>huawei-alarm-type-an</name>
+				</module>
+				<module>
+					<name>huawei-an-pon-protection-group-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-an-telemetry-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bb-acl</name>
+				</module>
+				<module>
+					<name>huawei-bb-arp</name>
+				</module>
+				<module>
+					<name>huawei-bb-bd</name>
+				</module>
+				<module>
+					<name>huawei-bd</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-bd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ethernet</name>
+				</module>
+				<module>
+					<name>huawei-vlan</name>
+				</module>
+				<module>
+					<name>huawei-ip</name>
+				</module>
+				<module>
+					<name>huawei-ifm-trunk</name>
+				</module>
+				<module>
+					<name>huawei-bb-dhcpv4-relay</name>
+				</module>
+				<module>
+					<name>huawei-bb-service-flow</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-dhcpv4-relay</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-multicast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-pppoe</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-qos</augmented-by>
+				</module>
+				<module>
+					<name>huawei-tc-an</name>
+				</module>
+				<module>
+					<name>huawei-device-common</name>
+				</module>
+				<module>
+					<name>huawei-bb-vlan</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-raio-profiles</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-security</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-vlan-service-profiles</augmented-by>
+				</module>
+				<module>
+					<name>huawei-slice-an</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-nsi</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bb-nerg</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-traffic-suppress</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bb-dhcpv4-relay-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bb-dhcpv6-relay</name>
+				</module>
+				<module>
+					<name>huawei-bb-dpu</name>
+				</module>
+				<module>
+					<name>huawei-bb-iptunnel-qos</name>
+				</module>
+				<module>
+					<name>huawei-bb-mac</name>
+				</module>
+				<module>
+					<name>huawei-bb-multicast</name>
+				</module>
+				<module>
+					<name>huawei-bb-nsi</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-slice-vpn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bb-pppoe</name>
+				</module>
+				<module>
+					<name>huawei-bb-protocol-tunnel</name>
+				</module>
+				<module>
+					<name>huawei-bb-qos</name>
+				</module>
+				<module>
+					<name>huawei-board</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bb-traffic-suppress</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-xpon-board</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bb-qos-acl</name>
+				</module>
+				<module>
+					<name>huawei-bb-raio-profiles</name>
+				</module>
+				<module>
+					<name>huawei-bb-raio-profiles-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bb-ring-check</name>
+				</module>
+				<module>
+					<name>huawei-bb-security</name>
+				</module>
+				<module>
+					<name>huawei-bb-slice-sample</name>
+				</module>
+				<module>
+					<name>huawei-bb-slice-vpn</name>
+				</module>
+				<module>
+					<name>huawei-bb-srv6</name>
+				</module>
+				<module>
+					<name>huawei-bb-tpid</name>
+				</module>
+				<module>
+					<name>huawei-bb-traffic-suppress</name>
+				</module>
+				<module>
+					<name>huawei-bb-vlan-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bb-vlan-service-profiles</name>
+				</module>
+				<module>
+					<name>huawei-bb-vlan-service-profiles-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bbf-app-flow-qoe-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bbf-hardware-transceivers-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-interface-port-reference-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-ipfix-data-export-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bbf-l2-dhcpv4-relay-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bbf-ldra-deviations</name>
+				</module>
+				<module>
+					<name>huawei-bbf-pppoe-intermediate-agent-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-classifiers-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-composite-filters-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-enhanced-scheduling-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>bbf-qos-enhanced-scheduling</name>
+				</module>
+				<module>
+					<name>bbf-qos-shaping</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-filters-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-policer-envelope-profiles-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>bbf-qos-policer-envelope-profiles</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-policies-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-policies-sub-interface-rewrite-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-policies-sub-interfaces-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-policing-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-rate-control-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>bbf-qos-rate-control</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-shaping-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-traffic-mngt-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-qos-traffic-mngt-std-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-software-management-ext</name>
+				</module>
+				<module>
+					<name>huawei-software-management</name>
+				</module>
+				<module>
+					<name>huawei-bbf-sub-interface-tagging-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-sub-interfaces-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-v-enet-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-xpon-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-xponani-common-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-xpongemtcont-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-xpongemtcont-qos-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-bbf-xponvani-common-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-board-deviations</name>
+				</module>
+				<module>
+					<name>huawei-board-running-infos</name>
+				</module>
+				<module>
+					<name>huawei-device</name>
+				</module>
+				<module>
+					<name>huawei-device-capability</name>
+				</module>
+				<module>
+					<name>huawei-device-deviations</name>
+				</module>
+				<module>
+					<name>huawei-diag-info-collection-an</name>
+				</module>
+				<module>
+					<name>huawei-energy-management-an</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-energy-management-an-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-energy-management-an-ext</name>
+				</module>
+				<module>
+					<name>huawei-environment-mngt</name>
+				</module>
+				<module>
+					<name>huawei-epon-ont-line-qualitys</name>
+				</module>
+				<module>
+					<name>huawei-epon-pm-ont-running-info</name>
+				</module>
+				<module>
+					<name>huawei-eth-trunk</name>
+				</module>
+				<module>
+					<name>huawei-ethernet-transceivers</name>
+				</module>
+				<module>
+					<name>huawei-evpl</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+				</module>
+				<module>
+					<name>huawei-evpl-ac</name>
+				</module>
+				<module>
+					<name>huawei-frame</name>
+				</module>
+				<module>
+					<name>huawei-frame-deviations</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-olt-running-info</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-olt-traffic</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-olt-transceivers</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-ont-line-quality</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-ont-running-info</name>
+				</module>
+				<module>
+					<name>huawei-gpon-pm-ont-transceivers</name>
+				</module>
+				<module>
+					<name>huawei-gpon-uni</name>
+				</module>
+				<module>
+					<name>huawei-hardware</name>
+				</module>
+				<module>
+					<name>huawei-hardware-types</name>
+				</module>
+				<module>
+					<name>huawei-ieee802-dot1ab-lldp-deviations</name>
+				</module>
+				<module>
+					<name>ieee802-dot1ab-lldp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ieee802-dot1ab-lldp-ext</augmented-by>
+				</module>
+				<module>
+					<name>ieee802-dot1ab-types</name>
+				</module>
+				<module>
+					<name>ietf-routing</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-ipv4-unicast-routing</augmented-by>
+				</module>
+				<module>
+					<name>ieee802-dot1q-bridge</name>
+				</module>
+				<module>
+					<name>ieee802-types</name>
+				</module>
+				<module>
+					<name>ieee802-dot1q-types</name>
+				</module>
+				<module>
+					<name>huawei-ieee802-dot1ab-lldp-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-diag</name>
+				</module>
+				<module>
+					<name>huawei-ietf-hardware-deviations</name>
+				</module>
+				<module>
+					<name>huawei-ietf-hardware-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-ip-deviations</name>
+				</module>
+				<module>
+					<name>ietf-ip</name>
+				</module>
+				<module>
+					<name>huawei-ietf-ipv4-uni-routing-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>ietf-ipv4-unicast-routing</name>
+				</module>
+				<module>
+					<name>huawei-ietf-keystore-deviations</name>
+				</module>
+				<module>
+					<name>ietf-keystore</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-acm-deviations</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-server-deviations</name>
+				</module>
+				<module>
+					<name>ietf-netconf-server</name>
+				</module>
+				<module>
+					<name>ietf-x509-cert-to-name</name>
+				</module>
+				<module>
+					<name>ietf-ssh-server</name>
+				</module>
+				<module>
+					<name>ietf-ssh-common</name>
+				</module>
+				<module>
+					<name>ietf-tls-server</name>
+				</module>
+				<module>
+					<name>huawei-ietf-network-instance-deviations</name>
+				</module>
+				<module>
+					<name>ietf-network-instance</name>
+				</module>
+				<module>
+					<name>huawei-ietf-routing-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-ietf-snmp-deviations-ias</name>
+				</module>
+				<module>
+					<name>ietf-snmp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-snmp-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-snmp-engine-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ietf-snmp-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-subscribed-notifications-deviations</name>
+				</module>
+				<module>
+					<name>ietf-subscribed-notifications</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-push</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-push-revision</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-subscribed-notif-receivers</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-udp-notif-transport</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-distributed-notif</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-notification</augmented-by>
+				</module>
+				<module>
+					<name>ietf-restconf</name>
+				</module>
+				<module>
+					<name>ietf-yang-push-revision</name>
+				</module>
+				<module>
+					<name>ietf-yang-revisions</name>
+				</module>
+				<module>
+					<name>ietf-yang-semver</name>
+				</module>
+				<module>
+					<name>ietf-system-capabilities</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-push-revision</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-notification-capabilities</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-notification-transport-capabilities</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-notification</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-observation</augmented-by>
+				</module>
+				<module>
+					<name>ietf-notification-capabilities</name>
+				</module>
+				<module>
+					<name>ietf-yang-push</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-distributed-notif</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-push-netobs-timestamping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-observation</augmented-by>
+				</module>
+				<module>
+					<name>ietf-yang-patch</name>
+				</module>
+				<module>
+					<name>ietf-subscribed-notif-receivers</name>
+				</module>
+				<module>
+					<name>huawei-ietf-syslog-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>ietf-syslog</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-syslog-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ietf-syslog-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-syslog-ext-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-capabilities-deviations</name>
+				</module>
+				<module>
+					<name>ietf-notification-transport-capabilities</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-ext-deviations-ias</name>
+				</module>
+				<module>
+					<name>huawei-ietf-trust-anchors-deviations</name>
+				</module>
+				<module>
+					<name>huawei-ietf-udp-notif-transport-deviations</name>
+				</module>
+				<module>
+					<name>ietf-udp-notif-transport</name>
+				</module>
+				<module>
+					<name>ietf-udp-client</name>
+				</module>
+				<module>
+					<name>huawei-ietf-yang-library-deviations</name>
+				</module>
+				<module>
+					<name>huawei-interface-statistics-mgt</name>
+				</module>
+				<module>
+					<name>huawei-ipfix-psamp</name>
+				</module>
+				<module>
+					<name>huawei-ipfix-stream-expired</name>
+				</module>
+				<module>
+					<name>huawei-nvo3</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-nvo3-statistics</name>
+				</module>
+				<module>
+					<name>huawei-nvo3-statistics-deviations</name>
+				</module>
+				<module>
+					<name>huawei-ont-clock-profile</name>
+				</module>
+				<module>
+					<name>huawei-ont-dot1x</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-deviations</name>
+				</module>
+				<module>
+					<name>openconfig-telemetry</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-openconfig-telemetry-ext</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-inet-types</name>
+				</module>
+				<module>
+					<name>openconfig-extensions</name>
+				</module>
+				<module>
+					<name>openconfig-telemetry-types</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-ext</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-ext-deviations</name>
+				</module>
+				<module>
+					<name>huawei-otn-access</name>
+				</module>
+				<module>
+					<name>huawei-pbb-app-kpi</name>
+				</module>
+				<module>
+					<name>huawei-resource-pool-an</name>
+				</module>
+				<module>
+					<name>huawei-snmp-engine-ext</name>
+				</module>
+				<module>
+					<name>huawei-software-management-deviations</name>
+				</module>
+				<module>
+					<name>huawei-system-para</name>
+				</module>
+				<module>
+					<name>huawei-warranty-info</name>
+				</module>
+				<module>
+					<name>huawei-xpon</name>
+				</module>
+				<module>
+					<name>huawei-xpon-types</name>
+				</module>
+				<module>
+					<name>ieee802-ethernet-interface</name>
+				</module>
+				<module>
+					<name>huawei-xpon-board</name>
+				</module>
+				<module>
+					<name>huawei-xpon-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-xpon-hardware-transceivers</name>
+				</module>
+				<module>
+					<name>huawei-xpon-ont-load</name>
+				</module>
+				<module>
+					<name>huawei-xpon-ont-notification</name>
+				</module>
+				<module>
+					<name>huawei-xpon-pm-app-identify</name>
+				</module>
+				<module>
+					<name>huawei-xpon-power-management-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-xpon-sub-interfaces</name>
+				</module>
+				<module>
+					<name>huawei-xpon-sub-interfaces-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-xpon-traffic-descriptor-profile-deviations-MA5800</name>
+				</module>
+				<module>
+					<name>huawei-ztp</name>
+				</module>
+				<module>
+					<name>ieee802-dot1ax</name>
+				</module>
+				<module>
+					<name>ieee802-ethernet-interface-deviations</name>
+				</module>
+				<module>
+					<name>ietf-distributed-notif</name>
+				</module>
+				<module>
+					<name>ietf-if-extensions</name>
+				</module>
+				<module>
+					<name>ietf-netconf-notifications</name>
+				</module>
+				<module>
+					<name>ietf-netconf-notifications-deviations</name>
+				</module>
+				<module>
+					<name>ietf-yang-library-augmentedby</name>
+				</module>
+				<module>
+					<name>ietf-yang-push-netobs-timestamping</name>
+				</module>
+				<module>
+					<name>ietf-yp-notification</name>
+				</module>
+				<module>
+					<name>ietf-yp-observation</name>
+				</module>
+				<module>
+					<name>nc-notifications</name>
+				</module>
+				<module>
+					<name>notifications</name>
+				</module>
+			</module-set>
+		</yang-library>
+	</data>
+</rpc-reply>

@@ -1,0 +1,261 @@
+module: huawei-ifm
+  +--rw ifm
+     +--rw global
+     |  +--rw statistic-interval?               uint32
+     |  +--rw ipv4-ignore-primary-sub?          boolean
+     |  +--rw sub-interface-link-trap-enable?   boolean
+     |  +--rw ipv4-conflict-enable!
+     |  |  +--rw preempt-enable?   boolean
+     |  +--rw ipv6-conflict-enable!
+     |     +--rw preempt-enable?   boolean
+     +--rw damp!
+     |  +--rw tx-off?    boolean
+     |  +--rw (level)?
+     |     +--:(auto)
+     |     |  +--rw auto
+     |     |     +--rw level?   damp-level-type
+     |     +--:(manual)
+     |        +--rw manual
+     |           +--rw suppress             uint32
+     |           +--rw reuse                uint32
+     |           +--rw max-suppress-time    uint16
+     |           +--rw half-life-period     uint16
+     +--rw auto-recovery-times
+     |  +--rw auto-recovery-time* [error-down-type]
+     |     +--rw error-down-type    error-down-type
+     |     +--rw time-value         uint32
+     +--rw interfaces
+     |  +--rw interface* [name]
+     |     +--rw name                               pub-type:if-name
+     |     +--rw class?                             class-type
+     |     +--rw type?                              port-type
+     |     +--rw parent-name?                       -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+     |     +--rw number?                            string
+     |     +--rw description?                       string
+     |     +--rw admin-status?                      port-status
+     |     +--rw link-protocol?                     link-protocol
+     |     +--rw router-type?                       router-type
+     |     +--rw clear-ip-df?                       boolean
+     |     +--rw link-up-down-trap-enable?          boolean
+     |     +--rw statistic-enable?                  boolean
+     |     +--rw statistic-mode?                    statistic-mode
+     |     +--rw (bandwidth-type)?
+     |     |  +--:(bandwidth-mbps)
+     |     |  |  +--rw bandwidth?   uint32
+     |     |  +--:(bandwidth-kbps)
+     |     |     +--rw bandwidth-kbps?   uint32
+     |     +--rw mtu?                               uint32
+     |     +--rw spread-mtu-flag?                   boolean
+     |     +--rw statistic-interval?                uint32
+     |     +--rw vrf-name?                          -> /ni:network-instance/ni:instances/ni:instance/ni:name
+     |     +--rw l2-mode-enable?                    boolean
+     |     +--rw down-delay-time?                   uint32
+     |     +--rw mac-address?                       pub-type:mac-address
+     |     +--ro index?                             uint32
+     |     +--ro position?                          string
+     |     +--ro aggregation-name?                  pub-type:if-name
+     |     +--ro is-l2-switch?                      boolean
+     |     +--ro vs-name?                           string
+     |     +--ro l2-switch-port-index?              uint32
+     |     +--ro service-type?                      service-type
+     |     +--ro encapsulation-type?                encapsulation-type
+     |     +--rw network-layer-status?              network-layer-state
+     |     +--rw protocol-up-delay-time?            uint32
+     |     +--rw bandwidth-config-effect-service?   empty
+     |     +--rw mac-address-system?                empty
+     |     +--rw control-flap!
+     |     |  +--rw suppress?             uint32
+     |     |  +--rw reuse?                uint32
+     |     |  +--rw ceiling?              uint32
+     |     |  +--rw decay-ok?             uint32
+     |     |  +--rw decay-ng?             uint32
+     |     |  +--ro control-flap-count?   uint32
+     |     +--rw trap-threshold
+     |     |  +--rw input-rising-rate?    uint32
+     |     |  +--rw input-resume-rate?    uint32
+     |     |  +--rw output-rising-rate?   uint32
+     |     |  +--rw output-resume-rate?   uint32
+     |     +--rw (damping)?
+     |     |  +--:(ignore-damp)
+     |     |  |  +--rw ignore-damp
+     |     |  |     +--rw ignore-global-damp?   boolean
+     |     |  +--:(damp)
+     |     |     +--rw damp!
+     |     |        +--rw tx-off?    boolean
+     |     |        +--rw (level)?
+     |     |           +--:(auto)
+     |     |           |  +--rw auto
+     |     |           |     +--rw level?   damp-level-type
+     |     |           +--:(manual)
+     |     |              +--rw manual
+     |     |                 +--rw suppress             uint32
+     |     |                 +--rw reuse                uint32
+     |     |                 +--rw max-suppress-time    uint16
+     |     |                 +--rw half-life-period     uint16
+     |     +--ro damp-state
+     |     |  +--ro suppress-status?     damp-status-type
+     |     |  +--ro suppress?            uint32
+     |     |  +--ro reuse?               uint32
+     |     |  +--ro max-suppress-time?   uint16
+     |     |  +--ro half-life-period?    uint16
+     |     |  +--ro damp-reuse-time?     uint16
+     |     |  +--ro current-penalty?     uint32
+     |     |  +--ro max-penalty?         uint32
+     |     +--ro dynamic
+     |     |  +--ro oper-status?             port-status
+     |     |  +--ro physical-status?         port-status
+     |     |  +--ro link-status?             port-status
+     |     |  +--ro mtu?                     uint32
+     |     |  +--ro bandwidth?               pub-type:band-width
+     |     |  +--ro ipv4-status?             port-status
+     |     |  +--ro ipv6-status?             port-status
+     |     |  +--ro is-control-flap-damp?    boolean
+     |     |  +--ro mac-address?             pub-type:mac-address
+     |     |  +--ro line-protocol-up-time?   yang:date-and-time
+     |     |  +--ro is-offline?              boolean
+     |     |  +--ro link-quality-grade?      link-quality-grade-type
+     |     |  +--ro sub-if-counts?           uint32
+     |     |  +--ro license-active-status?   license-state
+     |     +--ro mib-statistics
+     |     |  +--ro receive-byte?               uint64
+     |     |  +--ro send-byte?                  uint64
+     |     |  +--ro receive-packet?             uint64
+     |     |  +--ro send-packet?                uint64
+     |     |  +--ro receive-unicast-packet?     uint64
+     |     |  +--ro receive-multicast-packet?   uint64
+     |     |  +--ro receive-broad-packet?       uint64
+     |     |  +--ro send-unicast-packet?        uint64
+     |     |  +--ro send-multicast-packet?      uint64
+     |     |  +--ro send-broad-packet?          uint64
+     |     |  +--ro receive-error-packet?       uint64
+     |     |  +--ro receive-drop-packet?        uint64
+     |     |  +--ro send-error-packet?          uint64
+     |     |  +--ro send-drop-packet?           uint64
+     |     |  +--ro in-bit-rate?                uint64
+     |     |  +--ro in-packet-rate?             uint64
+     |     |  +--ro out-bit-rate?               uint64
+     |     |  +--ro out-packet-rate?            uint64
+     |     +--ro common-statistics
+     |     |  +--ro stati-interval?                  uint32
+     |     |  +--ro in-byte-rate?                    uint64
+     |     |  +--ro in-bit-rate?                     uint64
+     |     |  +--ro in-packet-rate?                  uint64
+     |     |  +--ro in-use-rate?                     string
+     |     |  +--ro out-byte-rate?                   uint64
+     |     |  +--ro out-bit-rate?                    uint64
+     |     |  +--ro out-packet-rate?                 uint64
+     |     |  +--ro out-use-rate?                    string
+     |     |  +--ro receive-byte?                    uint64
+     |     |  +--ro send-byte?                       uint64
+     |     |  +--ro receive-packet?                  uint64
+     |     |  +--ro send-packet?                     uint64
+     |     |  +--ro receive-unicast-packet?          uint64
+     |     |  +--ro receive-multicast-packet?        uint64
+     |     |  +--ro receive-broad-packet?            uint64
+     |     |  +--ro send-unicast-packet?             uint64
+     |     |  +--ro send-multicast-packet?           uint64
+     |     |  +--ro send-broad-packet?               uint64
+     |     |  +--ro receive-error-packet?            uint64
+     |     |  +--ro receive-drop-packet?             uint64
+     |     |  +--ro send-error-packet?               uint64
+     |     |  +--ro send-drop-packet?                uint64
+     |     |  +--ro send-unicast-bit?                uint64
+     |     |  +--ro receive-unicast-bit?             uint64
+     |     |  +--ro send-multicast-bit?              uint64
+     |     |  +--ro receive-multicast-bit?           uint64
+     |     |  +--ro send-broad-bit?                  uint64
+     |     |  +--ro receive-broad-bit?               uint64
+     |     |  +--ro send-unicast-bit-rate?           uint64
+     |     |  +--ro receive-unicast-bit-rate?        uint64
+     |     |  +--ro send-multicast-bit-rate?         uint64
+     |     |  +--ro receive-multicast-bit-rate?      uint64
+     |     |  +--ro send-broad-bit-rate?             uint64
+     |     |  +--ro receive-broad-bit-rate?          uint64
+     |     |  +--ro send-unicast-packet-rate?        uint64
+     |     |  +--ro receive-unicast-packet-rate?     uint64
+     |     |  +--ro send-multicast-packet-rate?      uint64
+     |     |  +--ro receive-multicast-packet-rate?   uint64
+     |     |  +--ro send-broadcast-packet-rate?      uint64
+     |     |  +--ro receive-broadcast-packet-rate?   uint64
+     |     +--ro error-down
+     |     |  +--ro cause?            error-down-type
+     |     |  +--ro recovery-time?    uint32
+     |     |  +--ro remainder-time?   uint32
+     |     +--ro virtual-position
+     |     |  +--ro vnfc-name?   string
+     |     |  +--ro board-id?    uint32
+     |     |  +--ro port-id?     uint32
+     |     +--rw mode-flexe!
+     |     |  +--rw bandwidth?   uint32
+     |     +--rw mode-channelize!
+     |     |  +--rw bandwidth?   uint32
+     |     +--ro crc-error-statistics
+     |     |  +--ro crc-err-coefficient?   uint32
+     |     |  +--ro crc-err-power?         uint32
+     |     +--ro fec-error-statistics
+     |        +--ro prefec-ber-coefficient?   uint32
+     |        +--ro prefec-ber-power?         uint32
+     +--ro static-dimension-ranges
+     |  +--ro static-dimension-range* [type]
+     |     +--ro type             port-type
+     |     +--ro chassis-range?   string
+     |     +--ro slot-range?      string
+     |     +--ro card-range?      string
+     |     +--ro port-range?      string
+     +--ro ipv4-interface-count
+     |  +--ro physical-up-count?     uint32
+     |  +--ro physical-down-count?   uint32
+     |  +--ro protocol-up-count?     uint32
+     |  +--ro protocol-down-count?   uint32
+     +--ro remote-interfaces
+     |  +--ro remote-interface* [name]
+     |     +--ro name                       pub-type:if-name
+     |     +--ro index?                     uint32
+     |     +--ro remote-statistics-state
+     |        +--ro last-cleared-time?               pub-type:time
+     |        +--ro in-bit-rate?                     uint64
+     |        +--ro in-packet-rate?                  uint64
+     |        +--ro in-peak-bit-rate?                uint64
+     |        +--ro in-peak-bit-rate-record-time?    pub-type:time
+     |        +--ro out-bit-rate?                    uint64
+     |        +--ro out-packet-rate?                 uint64
+     |        +--ro out-peak-bit-rate?               uint64
+     |        +--ro out-peak-bit-rate-record-time?   pub-type:time
+     |        +--ro in-use-rate?                     string
+     |        +--ro out-use-rate?                    string
+     +--rw if-group-policys
+        +--rw if-group-policy* [if-type]
+           +--rw if-type    port-type
+           +--rw number     uint32
+
+  rpcs:
+    +---x reset-if-counters-by-name
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-counters-by-type
+    |  +---w input
+    |     +---w if-type    port-type
+    +---x reset-if-counters-all
+    |  +---w input
+    |     +---w all-if    boolean
+    +---x reset-if-mib-counters-by-name
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-mib-counters-by-type
+    |  +---w input
+    |     +---w if-type    port-type
+    +---x reset-if-mib-counters-all
+    |  +---w input
+    |     +---w all-if    boolean
+    +---x reset-if-control-flap-penalty
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-if-control-flap-counts
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x reset-remote-if-counters
+    |  +---w input
+    |     +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
+    +---x restart-if
+       +---w input
+          +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name

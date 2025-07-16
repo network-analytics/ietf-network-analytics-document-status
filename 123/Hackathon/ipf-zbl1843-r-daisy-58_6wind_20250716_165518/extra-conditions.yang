@@ -1,0 +1,55 @@
+module extra-conditions {
+  yang-version 1.1;
+  namespace "urn:6wind:extra-conditions";
+  prefix extra-conditions;
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND YANG extra conditions.";
+  revision 2019-04-01 {
+    description
+      "Initial revision.";
+    reference
+      "";
+  }
+  extension unique-values {
+    argument xpath;
+    description
+      "This extension acts as 'must' condition that makes sure that
+       there are no duplicate values in the nodes matched by the xpath
+       argument.
+       The argument of this extension must contain a valid xpath
+       expression that represents which leaf node values will be checked
+       for unicity.
+       This extension may have an optional error-message substatement
+       which will be displayed when a duplicate value is detected.";
+  }
+  extension unique-tuple {
+    argument xpaths;
+    description
+      "This extension acts as 'unique' constraint which takes unset
+       leafs into account.
+       The default 'unique' YANG statement explicitly states in RFC 7950
+       Section 7.8.3.1.:
+         List entries which do not have a value for all referenced leafs
+         are not taken into account when the 'unique' constraint is
+         enforced.
+       It also supports XPath expressions on the leaf nodes, which should
+       be surrounded by parentheses (). However, the current libyang API
+       only returns a boolean value. For functions that return integer or string,
+       they are converted to boolean, and it is up to the user to handle them.
+       This extension may have an optional error-message substatement
+       which will be displayed when a list item that violates the unique
+       constraint is detected.";
+  }
+  extension unique-tuple-default {
+    argument xpath;
+    description
+      "This extension combines with a unique-tuple extension to enhance the unique
+       constraint on a leaf. When a leaf is unset, unique-tuple will search its
+       default value in the XPath defined by this extension.
+       This does nothing without unique-tuple extension.";
+  }
+}

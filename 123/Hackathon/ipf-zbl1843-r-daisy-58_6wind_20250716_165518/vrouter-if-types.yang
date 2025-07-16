@@ -1,0 +1,466 @@
+module vrouter-if-types {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/if-types";
+  prefix vrouter-if-types;
+  import vrouter {
+    prefix vrouter;
+  }
+  import vrouter-types {
+    prefix vr-types;
+  }
+  import vrouter-extensions {
+    prefix vr-ext;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import extra-conditions {
+    prefix ext-cond;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter interface related types. Based on
+     openconfig-if-*.";
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  typedef mac-address {
+    type string {
+      pattern '[0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5}';
+    }
+    description
+      "An IEEE 802 MAC address.";
+  }
+  typedef unicast-mac-address {
+    type mac-address {
+      pattern '[0-9a-fA-F][02468aceACE].*' {
+        error-message
+          "mac address must be unicast i.e. the second digit must be even";
+      }
+      pattern '00:00:00:00:00:00' {
+        modifier invert-match;
+        error-message
+          "mac address cannot be 00:00:00:00:00:00";
+      }
+    }
+    description
+      "An IEEE 802 unicast MAC address i.e. the second digit is an even number.
+       Moreover the mac address must not be 00:00:00:00:00:00.";
+  }
+  typedef fdb-state {
+    type enumeration {
+      enum "reachable" {
+        description
+          "The neighbor is known to have been reachable recently (within tens of
+           seconds ago).";
+      }
+      enum "stale" {
+        description
+          "The neighbor is no longer known to be reachable, but until
+           traffic is sent to the neighbor no attempt should be made
+           to verify its reachability.";
+      }
+      enum "permanent" {
+        description
+          "The FDB has been permanently configured.";
+      }
+      enum "static" {
+        description
+          "The FDB has been statically configured.";
+      }
+      enum "other" {
+        description
+          "The FDB state is none of the above.";
+      }
+    }
+    description
+      "FDB operational state.";
+  }
+  grouping interface-common-config {
+    description
+      "Configuration data data nodes common to physical interfaces
+       and subinterfaces.";
+    leaf description {
+      type string;
+      description
+        "A textual description of the interface.";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifAlias";
+    }
+  }
+  grouping interface-link-vrf {
+    description
+      "Link vrf config.";
+    leaf link-vrf {
+      ext-cond:unique-tuple-default "current()/../../vrouter:name";
+      vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter:name[.!=current()/../../vrouter:name]";
+      vr-api:must-added ". = /vrouter:config/vrouter:vrf/vrouter:name";
+      vr-api:must-added ". != ../../../vrouter:name";
+      vr-api:enum-removed "main";
+      type string;
+      must '. != ../../../vrouter:name' {
+        error-message
+          "link-vrf must reference another vrf.";
+      }
+      must '. = /vrouter:config/vrouter:vrf/vrouter:name' {
+        error-message
+          "link-vrf must reference an existing vrf.";
+      }
+      description
+        "The link vrf name.";
+    }
+  }
+  grouping ethernet-address-config {
+    description
+      "Ethernet address config.";
+    leaf mac-address {
+      type unicast-mac-address;
+      description
+        "Assigns a MAC address to the Ethernet interface.  If not
+         specified, the corresponding operational state leaf is
+         expected to show the system-assigned MAC address.";
+    }
+  }
+  grouping ethernet-address-state {
+    description
+      "Ethernet address state.";
+    leaf mac-address {
+      vr-ext:pushed;
+      type mac-address;
+      description
+        "MAC address assigned to the Ethernet interface.";
+    }
+  }
+  grouping ethernet-transmission-config {
+    description
+      "Ethernet transmission config.";
+    leaf auto-negotiate {
+      type boolean;
+      description
+        "Set to true to request the interface to auto-negotiate
+         transmission parameters with its peer interface.  When
+         set to false, the transmission parameters must be specified
+         manually.";
+      reference
+        "IEEE 802.3-2012 auto-negotiation transmission parameters";
+    }
+    leaf duplex-mode {
+      type enumeration {
+        enum "full" {
+          description
+            "Full duplex mode.";
+        }
+        enum "half" {
+          description
+            "Half duplex mode.";
+        }
+      }
+      description
+        "Force the duplex mode. If unspecified and auto-negotiate
+         is true, the interface should negotiate the duplex mode
+         directly (typically full-duplex). When auto-negotiate is
+         false, duplex-mode must be specified.";
+    }
+    leaf port-speed {
+      type enumeration {
+        enum "10mb" {
+          description
+            "10 Mbps Ethernet.";
+        }
+        enum "100mb" {
+          description
+            "100 Mbps Ethernet.";
+        }
+        enum "1gb" {
+          description
+            "1 Gbps Ethernet.";
+        }
+        enum "10gb" {
+          description
+            "10 Gbps Ethernet.";
+        }
+        enum "25gb" {
+          description
+            "25 Gbps Ethernet.";
+        }
+        enum "40gb" {
+          description
+            "40 Gbps Ethernet.";
+        }
+        enum "50gb" {
+          description
+            "50 Gbps Ethernet.";
+        }
+        enum "100gb" {
+          description
+            "100 Gbps Ethernet.";
+        }
+        enum "unknown" {
+          description
+            "Interface speed is unknown.  Systems may report
+             unknown when an interface is down or unpopuplated
+             (e.g., pluggable not present).";
+        }
+      }
+      description
+        "Force the port speed. If unspecified and auto-negotiate
+         is true, the interface should negotiate the port speed
+         directly. When auto-negotiate is false, port-speed must
+         be specified.";
+    }
+    leaf flow-control-rx {
+      type boolean;
+      description
+        "Enable or disable ingress flow control for this interface.
+         Ethernet flow control is a mechanism by which a receiver
+         may send PAUSE frames to a sender to stop transmission for
+         a specified time.
+         This setting should override auto-negotiated flow control
+         settings.  If left unspecified, and auto-negotiate is true,
+         flow control mode is negotiated with the peer interface.";
+      reference
+        "IEEE 802.3x";
+    }
+    leaf flow-control-tx {
+      type boolean;
+      description
+        "Enable or disable egress flow control for this interface.
+         Ethernet flow control is a mechanism by which a receiver
+         may send PAUSE frames to a sender to stop transmission for
+         a specified time.
+         This setting should override auto-negotiated flow control
+         settings.  If left unspecified, and auto-negotiate is true,
+         flow control mode is negotiated with the peer interface.";
+      reference
+        "IEEE 802.3x";
+    }
+  }
+  grouping interface-common-state {
+    description
+      "Operational state data (in addition to intended configuration)
+       at the global level for this interface.";
+    leaf ifindex {
+      type uint32;
+      description
+        "System assigned number for each interface.  Corresponds to
+         ifIndex object in SNMP Interface MIB.";
+      reference
+        "RFC 2863 - The Interfaces Group MIB";
+    }
+    leaf admin-status {
+      type enumeration {
+        enum "UP" {
+          description
+            "Ready to pass packets.";
+        }
+        enum "DOWN" {
+          description
+            "Not ready to pass packets and not in some test mode.";
+        }
+        enum "TESTING" {
+          description
+            "In some test mode.";
+        }
+      }
+      mandatory true;
+      description
+        "The desired state of the interface.  In RFC 7223 this leaf
+         has the same read semantics as ifAdminStatus.  Here, it
+         reflects the administrative state as set by enabling or
+         disabling the interface.";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifAdminStatus";
+    }
+    leaf oper-status {
+      vr-ext:pushed;
+      type enumeration {
+        enum "UP" {
+          value 1;
+          description
+            "Ready to pass packets.";
+        }
+        enum "DOWN" {
+          value 2;
+          description
+            "The interface does not pass any packets.";
+        }
+        enum "TESTING" {
+          value 3;
+          description
+            "In some test mode.  No operational packets can
+             be passed.";
+        }
+        enum "UNKNOWN" {
+          value 4;
+          description
+            "Status cannot be determined for some reason.";
+        }
+        enum "DORMANT" {
+          value 5;
+          description
+            "Waiting for some external event.";
+        }
+        enum "NOT_PRESENT" {
+          value 6;
+          description
+            "Some component (typically hardware) is missing.";
+        }
+        enum "LOWER_LAYER_DOWN" {
+          value 7;
+          description
+            "Down due to state of lower-layer interface(s).";
+        }
+      }
+      mandatory true;
+      description
+        "The current operational state of the interface.
+         This leaf has the same semantics as ifOperStatus.";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifOperStatus";
+    }
+    leaf last-change {
+      type vr-types:timeticks64;
+      units "nanoseconds";
+      description
+        "This timestamp indicates the time of the last state change
+         of the interface (e.g., up-to-down transition). This
+         corresponds to the ifLastChange object in the standard
+         interface MIB.
+         The value is the timestamp in nanoseconds relative to
+         the Unix Epoch (Jan 1, 1970 00:00:00 UTC).";
+      reference
+        "RFC 2863: The Interfaces Group MIB - ifLastChange";
+    }
+  }
+  grouping interface-counters-state {
+    description
+      "Operational state representing interface counters
+       and statistics.";
+    container counters {
+      description
+        "A collection of interface-related statistics objects.";
+      leaf in-octets {
+        vr-ext:metric-alias "bytes-recv";
+        type vr-types:counter64;
+        description
+          "The total number of octets received on the interface,
+           including framing characters.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifHCInOctets";
+      }
+      leaf in-unicast-pkts {
+        type vr-types:counter64;
+        description
+          "The number of packets, delivered by this sub-layer to a
+           higher (sub-)layer, that were not addressed to a
+           multicast or broadcast address at this sub-layer.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifHCInUcastPkts";
+      }
+      leaf in-discards {
+        type vr-types:counter64;
+        description
+          "The number of inbound packets that were chosen to be
+           discarded even though no errors had been detected to
+           prevent their being deliverable to a higher-layer
+           protocol.  One possible reason for discarding such a
+           packet could be to free up buffer space.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifInDiscards";
+      }
+      leaf in-errors {
+        vr-ext:nc-cli-truncated-description;
+        type vr-types:counter64;
+        description
+          "For packet-oriented interfaces, the number of inbound
+           packets that contained errors preventing them from being
+           deliverable to a higher-layer protocol.  For character-
+           oriented or fixed-length interfaces, the number of
+           inbound transmission units that contained errors
+           preventing them from being deliverable to a higher-layer
+           protocol.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifInErrors";
+      }
+      leaf out-octets {
+        vr-ext:metric-alias "bytes-sent";
+        type vr-types:counter64;
+        description
+          "The total number of octets transmitted out of the
+           interface, including framing characters.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifHCOutOctets";
+      }
+      leaf out-unicast-pkts {
+        type vr-types:counter64;
+        description
+          "The total number of packets that higher-level protocols
+           requested be transmitted, and that were not addressed
+           to a multicast or broadcast address at this sub-layer,
+           including those that were discarded or not sent.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifHCOutUcastPkts";
+      }
+      leaf out-discards {
+        type vr-types:counter64;
+        description
+          "The number of outbound packets that were chosen to be
+           discarded even though no errors had been detected to
+           prevent their being transmitted.  One possible reason
+           for discarding such a packet could be to free up buffer
+           space.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifOutDiscards";
+      }
+      leaf out-errors {
+        type vr-types:counter64;
+        description
+          "For packet-oriented interfaces, the number of outbound
+           packets that could not be transmitted because of errors.
+           For character-oriented or fixed-length interfaces, the
+           number of outbound transmission units that could not be
+           transmitted because of errors.
+           Discontinuities in the value of this counter can occur
+           at re-initialization of the management system, and at
+           other times as indicated by the value of
+           'last-clear'.";
+        reference
+          "RFC 2863: The Interfaces Group MIB - ifOutErrors";
+      }
+    }
+  }
+}

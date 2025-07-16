@@ -1,0 +1,148 @@
+module: ietf-yang-push
+
+  augment /sn:establish-subscription/sn:input:
+    +---w (update-trigger)?
+       +--:(periodic)
+       |  +---w periodic!
+       |     +---w period         centiseconds
+       |     +---w anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +---w on-change!
+             +---w dampening-period?   centiseconds
+             +---w sync-on-start?      boolean
+             +---w excluded-change*    change-type
+  augment /sn:establish-subscription/sn:input/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:modify-subscription/sn:input:
+    +---w (update-trigger)?
+       +--:(periodic)
+       |  +---w periodic!
+       |     +---w period         centiseconds
+       |     +---w anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +---w on-change!
+             +---w dampening-period?   centiseconds
+  augment /sn:modify-subscription/sn:input/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscription-started:
+    +--ro (update-trigger)?
+       +--:(periodic)
+       |  +--ro periodic!
+       |     +--ro period         centiseconds
+       |     +--ro anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--ro on-change!
+             +--ro dampening-period?   centiseconds
+             +--ro sync-on-start?      boolean
+             +--ro excluded-change*    change-type
+  augment /sn:subscription-started/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscription-modified:
+    +--ro (update-trigger)?
+       +--:(periodic)
+       |  +--ro periodic!
+       |     +--ro period         centiseconds
+       |     +--ro anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--ro on-change!
+             +--ro dampening-period?   centiseconds
+             +--ro sync-on-start?      boolean
+             +--ro excluded-change*    change-type
+  augment /sn:subscription-modified/sn:target:
+    +--:(datastore)
+       +-- datastore                               identityref
+       +-- (selection-filter)?
+          +--:(by-reference)
+          |  +-- selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +-- (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +-- datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +-- datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:filters:
+    +--rw selection-filter* [filter-id]
+       +--rw filter-id                         string
+       +--rw (filter-spec)?
+          +--:(datastore-subtree-filter)
+          |  +--rw datastore-subtree-filter?   <anydata> {sn:subtree}?
+          +--:(datastore-xpath-filter)
+             +--rw datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+  augment /sn:subscriptions/sn:subscription:
+    +--rw (update-trigger)?
+       +--:(periodic)
+       |  +--rw periodic!
+       |     +--rw period         centiseconds
+       |     +--rw anchor-time?   yang:date-and-time
+       +--:(on-change) {on-change}?
+          +--rw on-change!
+             +--rw dampening-period?   centiseconds
+             +--rw sync-on-start?      boolean
+             +--rw excluded-change*    change-type
+  augment /sn:subscriptions/sn:subscription/sn:target:
+    +--:(datastore)
+       +--rw datastore                               identityref
+       +--rw (selection-filter)?
+          +--:(by-reference)
+          |  +--rw selection-filter-ref              selection-filter-ref
+          +--:(within-subscription)
+             +--rw (filter-spec)?
+                +--:(datastore-subtree-filter)
+                |  +--rw datastore-subtree-filter?   <anydata> {sn:subtree}?
+                +--:(datastore-xpath-filter)
+                   +--rw datastore-xpath-filter?     yang:xpath1.0 {sn:xpath}?
+
+  rpcs:
+    +---x resync-subscription {on-change}?
+       +---w input
+          +---w id    sn:subscription-id
+
+  notifications:
+    +---n push-update
+    |  +--ro id?                   sn:subscription-id
+    |  +--ro datastore-contents?   <anydata>
+    |  +--ro incomplete-update?    empty
+    +---n push-change-update {on-change}?
+       +--ro id?                  sn:subscription-id
+       +--ro datastore-changes
+       |  +--ro yang-patch
+       |     +--ro patch-id    string
+       |     +--ro comment?    string
+       |     +--ro edit* [edit-id]
+       |        +--ro edit-id      string
+       |        +--ro operation    enumeration
+       |        +--ro target       target-resource-offset
+       |        +--ro point?       target-resource-offset
+       |        +--ro where?       enumeration
+       |        +--ro value?       <anydata>
+       +--ro incomplete-update?   empty

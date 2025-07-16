@@ -1,0 +1,26 @@
+module: vrouter-interface
+  +--rw vrouter:config
+     +--rw vrouter:vrf* [name]
+        +--rw vrouter:l3vrf* [name]
+           +--rw interface!
+              +--rw physical* [name]
+                 +--rw ipv4
+                    +--rw address* [ip]
+                    |  +--rw ip      union
+                    |  +--rw peer?   vr-inet:ipv4-address
+                    +--rw enabled?   boolean
+                    +--rw neighbor* [ip]
+                    |  +--rw ip                    vr-inet:ipv4-address
+                    |  +--rw link-layer-address    vr-if:mac-address
+                    +--rw dhcp!
+                       +--rw enabled?                        boolean
+                       +--rw timeout?                        uint32
+                       +--rw retry?                          uint32
+                       +--rw select-timeout?                 uint32
+                       +--rw reboot?                         uint32
+                       +--rw initial-interval?               uint32
+                       +--rw dhcp-lease-time?                uint32
+                       +--rw dhcp-client-identifier-ascii?   string
+                       +--rw dhcp-client-identifier-hexa?    string
+                       +--rw host-name?                      string
+                       +--rw request*                        dhcp-request

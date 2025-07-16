@@ -1,0 +1,324 @@
+module vrouter-extensions {
+  namespace "urn:6wind:vrouter/extensions";
+  prefix vrouter-extensions;
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter extensions.";
+  revision 2020-02-10 {
+    description
+      "Add extension nc-cli-sort-by.";
+    reference
+      "";
+  }
+  revision 2019-01-14 {
+    description
+      "Add extension nc-cli-int-multiplier.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  extension metric-value-list {
+    argument fields;
+    description
+      "Tells, for a list describing data, which field is the name, and which
+       field contains the value. It must be put on a list. It is used for
+       statistics than can not be modelled in yang.";
+  }
+  extension metric-alias {
+    argument name;
+    description
+      "Override the default name for this metric. Must be put on a leaf. Not
+       supported for list keys.";
+  }
+  extension metric-alias-parent {
+    description
+      "Override the default name for this metric and use its parent name.
+       Must be put on a leaf. Not supported for list keys.";
+  }
+  extension pushed-state-metric {
+    argument name;
+    description
+      "Tells that this element is an identified metric of the given name that
+       will be exported to analytics. Can be a container or a list containing
+       leaves, or a leaf. Only the pushed leaves are exported periodically.";
+  }
+  extension state-metric {
+    argument name;
+    description
+      "Tells that this element is an identified metric of the given name that
+       will be exported to analytics. Can be a container or a list containing
+       leaves, or a leaf. All the leaves are exported periodically.";
+  }
+  extension rpc-metric {
+    argument name;
+    description
+      "Tells that this element is an identified metric of the given name
+       that will be exported to analytics. Can be only on an output
+       container, list or leaf in the output of an rpc. It is exported
+       periodically.";
+  }
+  extension pushed {
+    description
+      "Tells that this element is pushed and can be used in a yang-push
+       on-change subscription. Should be put only on state leaves.";
+  }
+  extension status-obsoleted-release {
+    argument release;
+    description
+      "Describes in which version a given node will become obsolete.
+       Only to be used as a substatement of status.";
+  }
+  extension status-description {
+    argument description;
+    description
+      "Describes why a given node has been deprecated or made obsolete.
+       Only to be used as a substatement of status.";
+  }
+  extension status-replacement {
+    argument replacement;
+    description
+      "Describes what replaced this node. Only to be used as a substatement of status.";
+  }
+  extension status-deprecated-revision {
+    argument revision;
+    description
+      "Describes in which module revision a given node has been deprecated or made obsolete.
+       Only to be used as a substatement of status.";
+  }
+  extension nc-cli-shortdesc {
+    argument shortdesc;
+    description
+      "Extend a type to specify what should be displayed as short
+       description in nc-cli. The description should be short (~20
+       characters max), and surrounded by <> if it is a pattern
+       descriptor.";
+  }
+  extension nc-cli-show-key-name {
+    description
+      "Extend a list to specify that the key names should
+       be specified by the user when entering in the list.";
+  }
+  extension nc-cli-text-output {
+    description
+      "Extends a rpc to show that a text output version is available. Not
+       compatible with nc-cli-stdout.";
+  }
+  extension nc-cli-no-name {
+    description
+      "Extend a leaf or a leaf-list so that it is set with its
+       value only, instead of <name> <value>. This option should
+       only be used with defined values (like enums) to avoid
+       defining an ambiguous grammar. The name of the leaf is
+       still used for deletion.";
+  }
+  extension nc-cli-completion-xpath {
+    argument xpath;
+    description
+      "Add nodes matching the xpath in completions list. The xpath can
+       reference config nodes, state nodes, and relative rpc nodes.
+       All node names must be prefixed by the module name (not the module
+       prefix). The 'current()' xpath function points to the parent of
+       the node we are trying to complete. In case of a list key, current()
+       points to the parent of the list node.";
+  }
+  extension nc-cli-hashed-password {
+    argument algorithm;
+    description
+      "Extend a leaf to specify that the stored value is a hashed
+       password. In the cli, the password can be entered as a hashed
+       value, or interactively by typing the password. The argument
+       contains the algorithm to use: md5, sha-256 or sha-512.";
+  }
+  extension nc-cli-one-liner {
+    description
+      "Extend a container or a list to make it configurable using
+       one line only. User cannot enter into the container or list
+       context. All the content is available on one line.";
+  }
+  extension status-rpc {
+    description
+      "Extend a leaf to specify that it contains xml to be sent as rpc input
+       to get further status of a background command.";
+  }
+  extension refresh-rpc {
+    description
+      "Extend a leaf to specify that it contains xml to be sent as rpc input
+       to keep a background command running.";
+  }
+  extension stop-rpc {
+    description
+      "Extend a leaf to specify that it contains xml to be sent as rpc input
+       to stop a background command.";
+  }
+  extension nc-cli-cmd {
+    argument name;
+    description
+      "Extend a rpc to specify that it should be used as a cli command.";
+  }
+  extension nc-cli-show {
+    argument name;
+    description
+      "Extend a rpc to specify that it should be used as a cli show.";
+  }
+  extension nc-cli-flush {
+    argument name;
+    description
+      "Extend a rpc to specify that it should be used as a cli flush.";
+  }
+  extension nc-cli-hidden {
+    description
+      "Extend a leaf/container to specify that it should be hidden from the user.";
+  }
+  extension nc-cli-stdout {
+    description
+      "Specify that a rpc output leaf contains data to be printed as-is
+       to stdout. Not compatible with nc-cli-text-output.";
+  }
+  extension nc-cli-dump-arg {
+    argument uid-leaf;
+    description
+      "Specify that a rpc can be called several times. A uid leaf name is given
+       as an argument, that will be returned with the first rpc call, and should
+       be passed back to each subsequent call.";
+  }
+  extension nc-cli-dump-start {
+    description
+      "Specify that a rpc output leaf (when present) represents the start of
+       this dump iteration.";
+  }
+  extension nc-cli-dump-end {
+    description
+      "Specify that a rpc output leaf (when present) represents the end of
+       this dump iteration.";
+  }
+  extension nc-cli-command-stopped {
+    description
+      "Specify that a rpc output leaf (when present) means that the related
+       command is terminated.";
+  }
+  extension nc-cli-exclusive {
+    description
+      "This extension can be added on a list or a container to
+       ensure that only one child node can be parsed at a time on
+       the a command line. This is useful to implement a choice-like
+       behavior in oneliner commands.";
+  }
+  extension nc-cli-group {
+    argument name;
+    description
+      "This extension can be added on nodes inside the same container
+       or list to ensure that only one node that is member of this
+       group can be parsed at a time on the command line. This is useful
+       to implement a sort of choice in oneliner commands. The argument
+       is a string identifying the group. Several groups can be used
+       simultaneously in the same container.";
+  }
+  extension nc-cli-order {
+    argument order;
+    description
+      "This extension can be added on a leaf/container that is part of a
+       oneliner group to enforce its parsing order on the command line. If other
+       siblings leaves/containers are already parsed with a higher order, this
+       one will not be accepted.
+       Only strictly positive values are valid.";
+  }
+  extension nc-cli-command-no-pager {
+    description
+      "Never use pager for this command. This extension must be added to the
+       rpc node.";
+  }
+  extension nc-cli-int-multiplier {
+    description
+      "Extend an integer type to specify that it may be typed with an optional
+       multiplier (K/M/G/T) and will be displayed with the most compact form,
+       using multipliers if applicable.";
+  }
+  extension nc-cli-identity-name {
+    argument name;
+    description
+      "This extension can be added on an identity to override its name. This
+       name can containe spaces.";
+  }
+  extension feature {
+    argument name;
+    description
+      "The node is considered enabled only if the specified feature
+       is enabled. The list of enabled features is retrieved using a
+       custom RPC.
+       Standard YANG features have some limitations. For instance,
+       they cannot be enabled/disabled dynamically when a transaction
+       (edit-config for example) is in progress. This extension achieves
+       the same purpose than standard YANG features without this
+       limitation.";
+  }
+  extension nc-cli-sort-by {
+    argument name;
+    description
+      "Sort a list according to a leaf value specified with the extension
+       argument. This extension can be set only once per list. If the leaf is
+       not set, the node will be put at the top of the list.";
+  }
+  extension nc-cli-message {
+    argument message;
+    description
+      "Display a message when the node is modified/created (leaf), or when
+       we go into it (container, list).";
+  }
+  extension nc-cli-hidden-secret {
+    description
+      "If a master key is configured, print the encrypted value,
+       6wind-encrypted-<base64>. Otherwise print HIDDEN for secret/password
+       leaf/leaflist. The leaf/leaflist should not ban 'HIDDEN' string in its
+       pattern and should contain vrouter-types:secret as a type in a union.";
+  }
+  extension nc-cli-truncated-description {
+    description
+      "Tell that we did our best to shorten the description of this element but
+       it still won't fit in the maximum help length of nc-cli. The error that
+       would have been raised by the yang linter will be ignored when this
+       extension is set.";
+  }
+  extension nc-cli-ignore-audit {
+    description
+      "Disable audit trail for this RPC.";
+  }
+  extension protected {
+    description
+      "This extension is used to indicate that a config, state, RPC, or
+       notification node is protected. This means that viewer users have no
+       access or execution permission on this node.";
+  }
+  extension nc-cli-force-first-param-any {
+    argument nodes;
+    description
+      "This extension is used to indicate that the list of nodes should be
+       displayed first in the completion. The argument is a list of nodes
+       separated by a comma.";
+  }
+  extension nc-cli-force-first-param-all {
+    argument nodes;
+    description
+      "This extension is used to indicate the mandatory list of nodes that
+       should be displayed first in the completion before any other node.
+       The argument is a list of nodes separated by a comma.";
+  }
+  extension nc-cli-hide-parameter {
+    description
+      "When using this extension, the field is not displayed while entering
+       it in the CLI.";
+  }
+  extension change-implies-service-restart {
+    description
+      "Inform the user that changing the value of the node requires to restart the service
+       to be taken into account. This is either done automatically or refused at configuration
+       apply, depending on service configuration.";
+  }
+}

@@ -1,0 +1,424 @@
+module vrouter-inet-types {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/inet-types";
+  prefix vrouter-inet-types;
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-extensions {
+    prefix vrouter-extensions;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter Internet address related types. Based on
+     openconfig-inet-types.";
+  revision 2023-11-24 {
+    description
+      "Add a FQDN type.";
+    reference
+      "";
+  }
+  revision 2022-07-06 {
+    description
+      "This revision updates the types to become simple
+       typedefs of ietf-inet-types data types when possible.
+       This avoids some duplicated definitions and duplicated
+       code in the libyang plugins.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  typedef host {
+    type inet:host;
+    description
+      "The host type represents either an unzoned IP address or a DNS
+       domain name.";
+  }
+  typedef uri {
+    type inet:uri;
+    description
+      "An ASCII-encoded Uniform Resource Identifier (URI) as defined
+       in RFC 3986.";
+  }
+  typedef domain-name {
+    vrouter-extensions:nc-cli-truncated-description;
+    type inet:domain-name {
+      vrouter-extensions:nc-cli-shortdesc "<host-name>";
+    }
+    description
+      "The domain-name type represents a DNS domain name.
+       Fully quallified left to the models which utilize this type.
+       Internet domain names are only loosely specified.  Section
+       3.5 of RFC 1034 recommends a syntax (modified in Section
+       2.1 of RFC 1123).  The pattern above is intended to allow
+       for current practice in domain name use, and some possible
+       future expansion.  It is designed to hold various types of
+       domain names, including names used for A or AAAA records
+       (host names) and other records, such as SRV records.  Note
+       that Internet host names have a stricter syntax (described
+       in RFC 952) than the DNS recommendations in RFCs 1034 and
+       1123, and that systems that want to store host names in
+       schema nodes using the domain-name type are recommended to
+       adhere to this stricter standard to ensure interoperability.
+       The encoding of DNS names in the DNS protocol is limited
+       to 255 characters.  Since the encoding consists of labels
+       prefixed by a length bytes and there is a trailing NULL
+       byte, only 253 characters can appear in the textual dotted
+       notation.
+       Domain-name values use the US-ASCII encoding.  Their canonical
+       format uses lowercase US-ASCII characters.  Internationalized
+       domain names MUST be encoded in punycode as described in RFC
+       3492.";
+  }
+  typedef fully-qualified-domain-name {
+    type inet:domain-name {
+      vrouter-extensions:nc-cli-shortdesc "<FQDN>";
+      pattern '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])' {
+        modifier invert-match;
+        error-message
+          "A FQDN cannot be an IPv4 address.";
+      }
+    }
+    description
+      "A FQDN string.";
+  }
+  typedef ipv4-address {
+    vr-api:pattern-stable;
+    type inet:ipv4-address-no-zone {
+      vrouter-extensions:nc-cli-shortdesc "<A.B.C.D>";
+    }
+    description
+      "An IPv4 address.";
+  }
+  typedef ipv4-multicast-address {
+    type vrouter-inet-types:ipv4-address {
+      pattern '(2((2[4-9])|(3[0-9]))\.).*' {
+        error-message
+          "Invalid IPv4 multicast address.";
+      }
+    }
+    description
+      "An IPv4 multicast group address, which is in the range of
+       224.0.0.0 to 239.255.255.255.";
+    reference
+      "RFC 1112: Host Extensions for IP Multicasting.";
+  }
+  typedef ipv4-non-multicast-address {
+    type vrouter-inet-types:ipv4-address {
+      pattern '(2((2[4-9])|(3[0-9]))\.).*' {
+        modifier invert-match;
+        error-message
+          "IPv4 multicast address are not allowed.";
+      }
+    }
+    description
+      "An IPv4 address which is not multicast (224.0.0.0 to 239.255.255.255 are
+       rejected).";
+    reference
+      "RFC 1112: Host Extensions for IP Multicasting.";
+  }
+  typedef ipv6-address {
+    vr-api:pattern-stable;
+    type inet:ipv6-address-no-zone {
+      vrouter-extensions:nc-cli-shortdesc "<X:X::X:X>";
+    }
+    description
+      "An IPv6 address.";
+  }
+  typedef ipv6-multicast-address {
+    vr-api:pattern-stable;
+    type ipv6-address {
+      pattern '(([fF]{2}[0-9a-fA-F]{2}):).*' {
+        error-message
+          "Invalid IPv6 multicast address.";
+      }
+    }
+    description
+      "An IPv6 multicast group address, which is in the range of ff00::/8.";
+    reference
+      "RFC 4291: IP Version 6 Addressing Architecture.  Section 2.7.
+       RFC 7346: IPv6 Multicast Address Scopes.";
+  }
+  typedef ipv6-non-multicast-address {
+    vr-api:pattern-stable;
+    type ipv6-address {
+      pattern '(([fF]{2}[0-9a-fA-F]{2}):).*' {
+        modifier invert-match;
+        error-message
+          "IPv6 multicast address are not allowed.";
+      }
+    }
+    description
+      "An IPv6 address which is not multicast (the range of ff00::/8 is
+       rejected).";
+    reference
+      "RFC 4291: IP Version 6 Addressing Architecture.  Section 2.7.
+       RFC 7346: IPv6 Multicast Address Scopes.";
+  }
+  typedef ipv6-link-local-address {
+    vr-api:pattern-stable;
+    type ipv6-address {
+      pattern '[fF][eE]80:.*' {
+        error-message
+          "Invalid IPv6 link-local address.";
+      }
+    }
+    description
+      "An IPv6 link-local address which is in the range of fe80::/10.";
+    reference
+      "RFC 4291: IP Version 6 Addressing Architecture. Section 2.5.6.";
+  }
+  typedef ipv4-prefix {
+    vr-api:pattern-stable;
+    type inet:ipv4-prefix {
+      vrouter-extensions:nc-cli-shortdesc "<A.B.C.D/M>";
+    }
+    description
+      "An IPv4 prefix: address and CIDR mask.";
+  }
+  typedef ipv6-prefix {
+    vr-api:pattern-stable;
+    type inet:ipv6-prefix {
+      vrouter-extensions:nc-cli-shortdesc "<X:X::X:X/M>";
+    }
+    description
+      "An IPv6 prefix: address and CIDR mask.";
+  }
+  typedef masked-ipv4-address {
+    vr-api:pattern-stable;
+    type ipv4-prefix {
+      vrouter-extensions:nc-cli-shortdesc "<A.B.C.D/M>";
+    }
+    description
+      "A masked IPv4 address: address and prefix of that subnet.";
+  }
+  typedef masked-ipv6-address {
+    vr-api:pattern-stable;
+    type ipv6-prefix {
+      vrouter-extensions:nc-cli-shortdesc "<X:X::X:X/M>";
+    }
+    description
+      "A masked IPv6 address: address and prefix of that subnet.";
+  }
+  typedef ipv4-range {
+    vr-api:pattern-stable;
+    type string {
+      vrouter-extensions:nc-cli-shortdesc "<A.A.A.A-B.B.B.B>";
+      pattern '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])-(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])' {
+        error-message
+          "Invalid IPv4 range.";
+      }
+    }
+    description
+      "An IPv4 address range, in the form addr4-addr4.";
+  }
+  typedef ipv6-range {
+    vr-api:pattern-stable;
+    type string {
+      vrouter-extensions:nc-cli-shortdesc "<A:A::A:A-B:B::B:B>";
+      pattern '((:|[0-9a-fA-F]{0,4}):)([0-9a-fA-F]{0,4}:){0,5}((([0-9a-fA-F]{0,4}:)?(:|[0-9a-fA-F]{0,4}))|(((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])))-((:|[0-9a-fA-F]{0,4}):)([0-9a-fA-F]{0,4}:){0,5}((([0-9a-fA-F]{0,4}:)?(:|[0-9a-fA-F]{0,4}))|(((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])))' {
+        error-message
+          "Invalid IPv6 range.";
+      }
+    }
+    description
+      "An IPv6 address range, in the form addr6-addr6.";
+  }
+  typedef ip-address {
+    vr-api:pattern-stable;
+    type union {
+      type ipv4-address;
+      type ipv6-address;
+    }
+    description
+      "An IPv4 or IPv6 address.";
+  }
+  typedef ip-multicast-address {
+    vr-api:pattern-stable;
+    type union {
+      type ipv4-multicast-address;
+      type ipv6-multicast-address;
+    }
+    description
+      "An IPv4 or IPv6 multicast address.";
+  }
+  typedef ip-non-multicast-address {
+    vr-api:pattern-stable;
+    type union {
+      type ipv4-non-multicast-address;
+      type ipv6-non-multicast-address;
+    }
+    description
+      "An IPv4 or IPv6 address which is not a multicast group.";
+  }
+  typedef ip-prefix {
+    vr-api:pattern-stable;
+    type union {
+      type ipv4-prefix;
+      type ipv6-prefix;
+    }
+    description
+      "An IPv4 or IPv6 prefix: address and CIDR mask.";
+  }
+  typedef ipv4-multicast-group-address-prefix {
+    type ipv4-prefix {
+      pattern '(2((2[4-9])|(3[0-9]))\.)(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){2}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(/(([4-9])|([1-2][0-9])|(3[0-2])))';
+    }
+    description
+      "This type represents an IPv4 multicast group prefix,
+       which is in the range from 224.0.0.0 to 239.255.255.255.";
+  }
+  typedef ipv6-multicast-group-address-prefix {
+    type ipv6-prefix {
+      pattern '(((FF|ff)[0-9a-fA-F]{2}):)([0-9a-fA-F]{0,4}:){0,5}((([0-9a-fA-F]{0,4}:)?(:|[0-9a-fA-F]{0,4}))|(((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])))(/((1[6-9])|([2-9][0-9])|(1[0-1][0-9])|(12[0-8])))';
+      pattern '(([^:]+:){6}(([^:]+:[^:]+)|(.*\..*)))|((([^:]+:)*[^:]+)?::(([^:]+:)*[^:]+)?)(/.+)';
+    }
+    description
+      "This type represents an IPv6 multicast group prefix,
+       which is in the range of FF00::/8.";
+  }
+  typedef ip-multicast-group-address-prefix {
+    type union {
+      type ipv4-multicast-group-address-prefix;
+      type ipv6-multicast-group-address-prefix;
+    }
+    description
+      "The IP-Multicast-Group-Address-Prefix type represents an IP multicast address
+       prefix and is IP version neutral. The format of the textual representations implies the IP
+       version. It includes a prefix-length, separated by a '/' sign.";
+  }
+  typedef ipv4-multicast-group-address {
+    type ipv4-address {
+      pattern '(2((2[4-9])|(3[0-9]))\.).*';
+    }
+    description
+      "This type represents an IPv4 multicast group address,
+       which is in the range of 224.0.0.0 to 239.255.255.255.";
+    reference
+      "RFC 1112: Host Extensions for IP Multicasting.";
+  }
+  typedef ipv6-multicast-group-address {
+    type ipv6-address {
+      pattern '(([fF]{2}[0-9a-fA-F]{2}):).*';
+    }
+    description
+      "This type represents an IPv6 multicast group address,
+       which is in the range of ff00::/8.";
+    reference
+      "RFC 4291: IP Version 6 Addressing Architecture.  Section 2.7.
+       RFC 7346: IPv6 Multicast Address Scopes.";
+  }
+  typedef ip-multicast-group-address {
+    type union {
+      type ipv4-multicast-group-address;
+      type ipv6-multicast-group-address;
+    }
+    description
+      "This type represents a version-neutral IP multicast group
+       address.  The format of the textual representation implies
+       the IP version.";
+  }
+  typedef masked-ip-address {
+    vr-api:pattern-stable;
+    type union {
+      type masked-ipv4-address;
+      type masked-ipv6-address;
+    }
+    description
+      "A masked IPv4 or IPv6 address: address and prefix of that subnet.";
+  }
+  typedef ip-range {
+    vr-api:pattern-stable;
+    type union {
+      type ipv4-range;
+      type ipv6-range;
+    }
+    description
+      "An IPv4 or IPv6 address range, in the form addr-addr.";
+  }
+  typedef port-number {
+    type uint16;
+    description
+      "A 16-bit port number used by a transport protocol such as TCP
+       or UDP.";
+    reference
+      "RFC 768 User Datagram Protocol
+       RFC 793 Transmission Control Protocol";
+  }
+  typedef dscp {
+    type uint8 {
+      range "0..63";
+    }
+    description
+      "A differentiated services code point (DSCP) marking within the
+       IP header.";
+    reference
+      "RFC 2474 Definition of the Differentiated Services Field
+                 (DS Field) in the IPv4 and IPv6 Headers";
+  }
+  typedef as-number {
+    type union {
+      type uint32 {
+        range "1..4294967295";
+      }
+      type string {
+        vrouter-extensions:nc-cli-shortdesc "<0-65535.0-65535>";
+        pattern '(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])' {
+          error-message
+            "AS dot should be in the form [0..65535].[0..65535].";
+        }
+        pattern '^0\.0$' {
+          modifier invert-match;
+          error-message
+            "AS dot can't be equal to 0.0.";
+        }
+      }
+    }
+    description
+      "A numeric identifier for an autonomous system (AS). An AS is a
+       single domain, under common administrative control, which forms
+       a unit of routing policy. Autonomous systems can be assigned a
+       2-byte identifier, or a 4-byte identifier which may have public
+       or private scope. Private ASNs are assigned from dedicated
+       ranges. Public ASNs are assigned from ranges allocated by IANA
+       to the regional internet registries (RIRs).";
+    reference
+      "RFC 1930 Guidelines for creation, selection, and registration
+                of an Autonomous System (AS)
+       RFC 4271 A Border Gateway Protocol 4 (BGP-4)";
+  }
+  typedef mpls-label {
+    type uint32 {
+      range "16..1048575";
+    }
+    description
+      "The 20-bit label value in an MPLS label stack as specified
+       in RFC 3032. This label value does not include the
+       encodings of traffic class and time to live (TTL).
+       The label range specified by this type is for general use,
+       with special-purpose MPLS label values excluded.";
+  }
+  typedef port-ranges {
+    type string {
+      vrouter-extensions:nc-cli-shortdesc "<port-range>";
+      pattern '[0-9]+(-[0-9]+)?(,[0-9]+(-[0-9]+)?)*' {
+        error-message
+          "Invalid port range format. Example: '21,22,1024-2048'";
+      }
+    }
+    description
+      "A comma-separated list of ports or ports ranges.
+       Examples: '21,22,1024-2048'.";
+  }
+}

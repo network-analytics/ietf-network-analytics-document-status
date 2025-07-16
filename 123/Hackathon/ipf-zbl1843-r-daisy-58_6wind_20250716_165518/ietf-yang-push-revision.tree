@@ -1,0 +1,29 @@
+module: ietf-yang-push-revision
+
+  augment /sn:establish-subscription/sn:input:
+    +---w module-version-config* [module-name] {yang-push-revision-supported}?
+       +---w module-name       yang:yang-identifier
+       +---w revision?         rev:revision-date
+       +---w revision-label?   ysver:version
+  augment /sn:modify-subscription/sn:input:
+    +---w module-version-config* [module-name] {yang-push-revision-supported}?
+       +---w module-name       yang:yang-identifier
+       +---w revision?         rev:revision-date
+       +---w revision-label?   ysver:version
+  augment /sn:subscription-started:
+    +--ro module-version* [module-name] {yang-push-revision-supported}?
+    |  +--ro module-name       yang:yang-identifier
+    |  +--ro revision          rev:revision-date
+    |  +--ro revision-label?   ysver:version
+    +--ro yang-library-content-id?   -> /yanglib:yang-library/content-id {yang-push-revision-supported}?
+  augment /sn:subscription-modified:
+    +--ro module-version* [module-name] {yang-push-revision-supported}?
+    |  +--ro module-name       yang:yang-identifier
+    |  +--ro revision          rev:revision-date
+    |  +--ro revision-label?   ysver:version
+    +--ro yang-library-content-id?   -> /yanglib:yang-library/content-id {yang-push-revision-supported}?
+  augment /sn:subscriptions/sn:subscription:
+    +--rw module-version-config* [module-name] {yang-push-revision-supported}?
+       +--rw module-name       yang:yang-identifier
+       +--rw revision?         rev:revision-date
+       +--rw revision-label?   ysver:version

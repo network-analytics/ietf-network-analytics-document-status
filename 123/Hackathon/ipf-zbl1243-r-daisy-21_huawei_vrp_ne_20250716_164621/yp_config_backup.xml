@@ -1,0 +1,5 @@
+
+		<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+			<enable-notification-envelope xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</enable-notification-envelope>
+		</subscriptions>
+	

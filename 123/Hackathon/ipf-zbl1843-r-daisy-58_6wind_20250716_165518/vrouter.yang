@@ -1,0 +1,227 @@
+module vrouter {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter";
+  prefix vrouter;
+  import extra-conditions {
+    prefix ext-cond;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-extensions {
+    prefix vr-ext;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter data model.";
+  revision 2022-08-01 {
+    description
+      "Add the vrfs rpc.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  feature product-license {
+    description
+      "This feature requires a valid product license.";
+  }
+  feature cgnat-license {
+    description
+      "This feature requires a valid CG-NAT application license.";
+  }
+  feature ipsec-license {
+    description
+      "This feature requires a valid IPsec application license.";
+  }
+  typedef vrf-name {
+    type union {
+      type enumeration {
+        enum "main" {
+          description
+            "The main vrf.";
+        }
+      }
+      type string {
+        pattern '[-_a-zA-Z0-9]+' {
+          error-message
+            "vrf name should only contain alphanumerical
+             characters, underscores and dashes.";
+        }
+      }
+    }
+    description
+      "The vrf name.";
+  }
+  typedef l3vrf-name {
+    type string {
+      pattern '[-_a-zA-Z0-9]{1,15}' {
+        error-message
+          "vrf name should only contain alphanumerical
+           characters, underscores and dashes.";
+      }
+    }
+    description
+      "The l3vrf name.";
+  }
+  container config {
+    vr-api:tree-removed "hypervisor";
+    description
+      "6WIND vRouter configuration.";
+    list vrf {
+      ext-cond:unique-values "vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='name'] | *[local-name()='interface']/*/*[local-name()='name'] | vrouter:l3vrf/vrouter:name" {
+        error-message
+          "The interface name must be unique in a vrf, and must not be a l3vrf name.";
+      }
+      vr-api:extension-added "extra-conditions:unique-values \"vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='name'] | *[local-name()='interface']/*/*[local-name()='name'] | vrouter:l3vrf/vrouter:name\"";
+      ext-cond:unique-values "vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='link-interface']/*[local-name()='slave'] | vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='name'] | *[local-name()='interface']/*/*[local-name()='link-interface']/*[local-name()='slave']" {
+        error-message
+          "An interface in a l3vrf can not be part of a bridge or a lag port.";
+      }
+      vr-api:extension-added "extra-conditions:unique-values \"vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='link-interface']/*[local-name()='slave'] | vrouter:l3vrf/*[local-name()='interface']/*/*[local-name()='name'] | *[local-name()='interface']/*/*[local-name()='link-interface']/*[local-name()='slave']\"";
+      key "name";
+      description
+        "Vrf list.";
+      leaf name {
+        type vrouter:vrf-name;
+        description
+          "The vrf name. 'all' is reserved by the system and should be avoided.";
+      }
+      list l3vrf {
+        key "name";
+        description
+          "L3vrf list.";
+        leaf name {
+          type vrouter:l3vrf-name;
+          must ". != 'all' and . != 'default'" {
+            error-message
+              "This l3vrf name is reserved.";
+          }
+          description
+            "The l3vrf name.";
+        }
+        leaf description {
+          type string {
+            length "1..255";
+          }
+          description
+            "The l3vrf description.";
+        }
+        leaf table-id {
+          type uint32;
+          must 'count(../../l3vrf/table-id[text()=current()]) = 1' {
+            error-message
+              "The l3vrf name must be unique.";
+          }
+          must '. != 0 and . != 253 and . != 254 and . != 255' {
+            error-message
+              "This table id is reserved.";
+          }
+          mandatory true;
+          description
+            "The table used for this l3vrf.";
+        }
+      }
+    }
+  }
+  container state {
+    vr-api:tree-removed "hypervisor";
+    config false;
+    description
+      "6WIND vRouter operational state data.";
+    list vrf {
+      key "name";
+      description
+        "Vrf list.";
+      leaf name {
+        type union {
+          type enumeration {
+            enum "main" {
+              description
+                "The main vrf.";
+            }
+          }
+          type string;
+        }
+        description
+          "The vrf name.";
+      }
+      list l3vrf {
+        key "name";
+        description
+          "L3vrf list.";
+        leaf name {
+          vr-ext:pushed;
+          type string;
+          description
+            "The l3vrf name.";
+        }
+        leaf description {
+          type string;
+          description
+            "The l3vrf description.";
+        }
+        leaf table-id {
+          type uint32;
+          description
+            "The table used for this l3vrf.";
+        }
+      }
+    }
+  }
+  rpc show-vrfs {
+    vr-ext:nc-cli-text-output;
+    vr-ext:feature "product";
+    vr-ext:nc-cli-show "vrfs";
+    vr-api:internal;
+    description
+      "Show VRFs on the machine.";
+    output {
+      leaf-list vrf {
+        type vrf-name;
+        description
+          "VRF name.";
+      }
+    }
+  }
+  rpc show-l3vrfs {
+    vr-ext:nc-cli-text-output;
+    vr-ext:feature "product";
+    vr-ext:nc-cli-show "l3vrfs";
+    vr-api:internal;
+    description
+      "Show L3VRFs on the machine.";
+    input {
+      leaf vrf {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+        type string;
+        default "main";
+        description
+          "VRF to look into.";
+      }
+    }
+    output {
+      list l3vrf {
+        description
+          "L3VRF list.";
+        leaf name {
+          type string;
+          description
+            "L3VRF name.";
+        }
+        leaf description {
+          type string;
+          description
+            "L3VRF description.";
+        }
+      }
+    }
+  }
+}

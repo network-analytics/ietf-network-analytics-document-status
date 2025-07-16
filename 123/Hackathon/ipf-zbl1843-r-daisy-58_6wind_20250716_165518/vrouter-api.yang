@@ -1,0 +1,134 @@
+module vrouter-api {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/api";
+  prefix vrouter-api;
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter API extensions.";
+  revision 2019-11-08 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  extension internal {
+    description
+      "Extend a node to declare it as 'internal API'.
+       This means that there is no guarantee of backward-compatibility for it
+       and all its children.";
+  }
+  extension base-type-removed {
+    argument typename;
+    description
+      "Extend a leaf to inform that a previously valid type was removed.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension bit-removed {
+    argument bitname;
+    description
+      "Extend a leaf to inform that a previously valid bit value was removed.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension child-removed {
+    argument relative-path;
+    description
+      "Extend a container or list to inform that one of its children which was
+       not declared as 'obsolete' was removed from the model.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension tree-removed {
+    argument relative-path;
+    description
+      "Extend a container or list to inform that one of its containers or lists
+       and all the tree under it which was not declared as obsolete was removed
+       from the model. Possibly breaking backward-compatibility with existing
+       configurations. This extension is used once for the root node to remove,
+       instead of using the `child-removed` extension for all the nodes of the
+       tree under the root node .";
+  }
+  extension config-false-added {
+    description
+      "Extend a previously 'configurable' container, list, leaf or leaf-list
+       to inform that it is now read-only.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension enum-removed {
+    argument enumname;
+    description
+      "Extend a leaf to inform that a previously valid enum value was removed.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension extension-added {
+    argument ext-name-and-arg;
+    description
+      "Extend a container, list, leaf or leaf-list to inform that an extension
+       was added to it which brings restrictions on the contents of the node.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension key-added {
+    argument key-name;
+    description
+      "Extend a list to inform that its 'key' statement was modified by adding
+       the specified key name; possibly breaking backward-compatibility with
+       existing configurations.";
+  }
+  extension key-removed {
+    argument key-name;
+    description
+      "Extend a list to inform that its 'key' statement was modified by removing
+       the specified key name; possibly breaking backward-compatibility with
+       existing configurations.";
+  }
+  extension length-added {
+    argument length-arg;
+    description
+      "Extend a leaf to inform that a new string length restriction was added.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension mandatory-added {
+    description
+      "Extend a previously optional leaf to inform that it is now mandatory.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension must-added {
+    argument condition;
+    description
+      "Extend a container, list, leaf or leaf-list to inform that a new must
+       condition was added to it.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension node-type-added {
+    argument keyword;
+    description
+      "Extend a container, list, leaf or leaf-list to inform that its node type
+       has changed.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension node-type-removed {
+    argument keyword;
+    description
+      "Extend a container, list, leaf or leaf-list to inform that its node type
+       has changed.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension pattern-added {
+    argument pattern-value;
+    description
+      "Extend a leaf to inform that a new string pattern restriction was added.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension range-added {
+    argument range-value;
+    description
+      "Extend a leaf to inform that a new numeric range restriction was added.
+       Possibly breaking backward-compatibility with existing configurations.";
+  }
+  extension pattern-stable {
+    description
+      "Extend a typedef to inform that any modification to patterns is
+       guaranteed to be backward compatible.";
+  }
+}

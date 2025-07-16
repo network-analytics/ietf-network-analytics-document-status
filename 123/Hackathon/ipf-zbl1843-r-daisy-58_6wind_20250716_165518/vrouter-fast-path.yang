@@ -1,0 +1,2784 @@
+module vrouter-fast-path {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/fast-path";
+  prefix vrouter-fast-path;
+  import vrouter {
+    prefix vrouter;
+  }
+  import vrouter-system {
+    prefix vrouter-system;
+  }
+  import vrouter-types {
+    prefix vr-types;
+  }
+  import vrouter-commands {
+    prefix vr-cmd;
+  }
+  import vrouter-extensions {
+    prefix vr-ext;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-inet-types {
+    prefix vr-inet;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter fast path model.";
+  revision 2025-04-07 {
+    description
+      "Add software RSS.";
+    reference
+      "";
+  }
+  revision 2025-03-06 {
+    description
+      "Deprecate qos-max-classes replaced by qos-max-queues.
+       Deprecate qos-max-filters replaced by qos-max-classifiers.";
+    reference
+      "";
+  }
+  revision 2023-08-07 {
+    description
+      "Deprecate ip4-max-neigh and ip6-max-neigh replaced by ip-max-neigh.";
+    reference
+      "";
+  }
+  revision 2023-06-06 {
+    description
+      "Deprecate octeontx and dpdk-pmd crypto support.";
+    reference
+      "";
+  }
+  revision 2022-11-23 {
+    description
+      "Add MPLS egress priority mapping parameters.";
+    reference
+      "";
+  }
+  revision 2022-11-10 {
+    description
+      "Add IPsec hash table runtime parameters.";
+    reference
+      "";
+  }
+  revision 2022-03-31 {
+    description
+      "Add bridge runtime parameters.";
+    reference
+      "";
+  }
+  revision 2022-03-28 {
+    description
+      "Add QoS runtinme parameters.";
+    reference
+      "";
+  }
+  revision 2021-12-20 {
+    description
+      "Add traffic mirroring.";
+    reference
+      "";
+  }
+  revision 2021-11-16 {
+    description
+      "Deprecate coremask for qos.";
+    reference
+      "";
+  }
+  revision 2021-10-17 {
+    description
+      "Modify the vxlan-max-port range.";
+    reference
+      "";
+  }
+  revision 2021-04-12 {
+    description
+      "Deprecate ip-max-8-table and ip-cur-8-table.";
+    reference
+      "";
+  }
+  revision 2021-02-11 {
+    description
+      "Add ipv4-pre-ipsec-fragmentation and ipv6-pre-ipsec-fragmentation in
+       advanced container.";
+    reference
+      "";
+  }
+  revision 2020-12-02 {
+    description
+      "Add hardware-queue-map.";
+    reference
+      "";
+  }
+  revision 2020-11-25 {
+    description
+      "Add netfilter cache for IPv4 and IPv6 in the advanced container.";
+    reference
+      "";
+  }
+  revision 2020-07-10 {
+    description
+      "Add the reserve-hugepages leaf to the advanced container.";
+    reference
+      "";
+  }
+  revision 2019-07-01 {
+    description
+      "Add cores for QoS.";
+    reference
+      "";
+  }
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  feature fp-arp {
+    description
+      "Fast path ARP module is enabled.";
+  }
+  feature virtual-port {
+    description
+      "The fast path supports virtual ports.";
+  }
+  identity fastpath {
+    base vr-types:SERVICE_LOG_ID;
+    description
+      "Fast path service.";
+  }
+  identity fp-cpu-usage {
+    base vr-types:METRIC;
+    description
+      "The list of busy percentage per fast path CPU.";
+  }
+  identity fp-cp-protect-stats {
+    base vr-types:METRIC;
+    description
+      "The control plane protection module statistics per network interface.";
+  }
+  identity fp-gro-stats {
+    base vr-types:METRIC;
+    description
+      "The GRO module statistics per network interface.";
+  }
+  identity fp-status {
+    base vr-types:METRIC;
+    description
+      "The fast path status.";
+  }
+  identity fp-filling {
+    base vr-types:METRIC;
+    description
+      "The fast path filling.";
+  }
+  identity fp-conntrack-stats {
+    base vr-types:METRIC;
+    description
+      "The fast path conntrack statistics.";
+  }
+  identity fp-ports-stats {
+    base vr-types:METRIC;
+    description
+      "The list of fast path statistics per port.";
+  }
+  grouping fast-path-advanced-config {
+    description
+      "Advanced configuration for fast path.";
+    container advanced {
+      description
+        "Advanced configuration for fast path.";
+      leaf nb-mbuf {
+        type string {
+          vr-ext:nc-cli-shortdesc "<nb-mbuf>";
+          pattern '\+?[0-9]+(,\+?[0-9]+)*' {
+            error-message
+              "Format for number of mbuf is '[+]<int>(,[+]<int>)*'.";
+          }
+        }
+        description
+          "Number of mbufs (network packet descriptors). The value can be
+           an integer representing the total number of mbufs, an integer
+           prefixed with '+' representing the number of mbufs to add to
+           the automatic value. In case of NUMA, the value can be a
+           per-socket list. If unset, nb-mbuf is determined automatically.";
+      }
+      leaf fp-memory {
+        vr-ext:nc-cli-truncated-description;
+        type string {
+          vr-ext:nc-cli-shortdesc "<fp-memory>";
+          pattern '\+?[0-9]+(,\+?[0-9]+)*' {
+            error-message
+              "Format for fp-memory is '[+]<int>(,[+]<int>)*'.";
+          }
+        }
+        description
+          "Override the amount of fast path DPDK memory in hugepages. The
+           value can be:
+           - an integer that specifies the amount of memory accross all NUMA nodes in MB (example:
+             4096),
+           - an integer prefixed by '+' that specifies the amount of memory accross all NUMA nodes
+             in MB to be added to the amount calculated automatically (example: +1024),
+           - a list of integers, representing the amount of memory in MB to use on each NUMA node
+             (example: 4096,4096),
+           - a list of integers prefixed with a '+': in this case, each per-node amount will be
+             added to the automatic value for this node (example: +1024,+1024).";
+      }
+      leaf machine-memory {
+        type uint32;
+        units "megabytes";
+        description
+          "Calculate the memory that will be used by the fast path
+           (hugepages, shm, mallocs...) so it can run on a machine with
+           this amount of physical memory.";
+      }
+      leaf mainloop-sleep-delay {
+        vr-api:range-added "0..500";
+        type uint16 {
+          range "0..500";
+        }
+        units "microseconds";
+        description
+          "If set, add a sleep time after each idle mainloop turn. This will
+           drastically decrease performance. If the value is 0, it means it is
+           disabled.";
+      }
+      leaf offload {
+        type boolean;
+        description
+          "Enable or disabled advanced offload features such as TSO, L4
+           checksum offloading, or offload information forwarding from a
+           guest to the NIC through a virtual interface. If unset, use
+           default product configuration.";
+      }
+      leaf vlan-strip {
+        type boolean;
+        description
+          "Strip the VLAN header from incoming frames if supported by the
+           hardware. By default, vlan stripping feature is disabled.";
+      }
+      leaf power-mode {
+        type enumeration {
+          enum "eco" {
+            description
+              "Optimized for power consumption.";
+          }
+          enum "performance" {
+            description
+              "Optimized for latency and performance.";
+          }
+        }
+        description
+          "Set the energy model of the fast path. By default, the performance
+           model is used. It changes the default value of mainloop-sleep-delay
+           and frequency-scaling.";
+      }
+      leaf frequency-scaling {
+        type boolean;
+        description
+          "Enable frequency scaling if available on the platform. Enabled by default if
+           power-mode is set to 'eco'.";
+      }
+      leaf intercore-ring-size {
+        type uint16;
+        description
+          "Set the size of the intercore rings, used by dataplane cores
+           to send messages to another dataplane core. The default size
+           depends on the product.";
+      }
+      leaf software-txq {
+        type uint16;
+        must
+          ". = 64 or . = 128 or . = 256 or . = 512 or . = 1024 or . = 2048 or
+                       . = 4096 or . = 8192 or . = 16384 or . = 32768" {
+          error-message
+            "The size of software Tx queue must be a power of 2
+             greater or equal to 64.";
+        }
+        description
+          "Set the default size of Tx software queue. This field
+           must be a power of 2. Default is 0 (no software queue).";
+      }
+      leaf mask-irq {
+        type boolean;
+        default "true";
+        description
+          "Mask IRQ on fast path cores to reduce latency
+           and increase zero-loss performance.";
+      }
+      leaf nb-rxd {
+        type uint16;
+        description
+          "Set the default number of Rx hardware descriptors for
+           Ethernet ports. The value must be accepted by all devices
+           on the system. If unset, an automatic value is used.";
+      }
+      leaf nb-txd {
+        type uint16;
+        description
+          "Set the default number of Tx hardware descriptors for
+           Ethernet ports. The value must be accepted by all devices
+           on the system. If unset, an automatic value is used.";
+      }
+      leaf fpvi-nb-rxd-txd {
+        type uint16;
+        description
+          "Set the number of Rx and Tx descriptors for FPVI (Fast Path Virtual Interface)
+           ports. These ports are used for local Control Plane traffic. Increase the value if there
+           is a large amount of Control Plane traffic. If unset, an automatic value is used.";
+      }
+      leaf fpvi-queues {
+        type uint16 {
+          range "1..8";
+        }
+        description
+          "Set the number of queues used for FPVI (Fast Path Virtual Interface) ports. These ports
+           are used for local Control Plane traffic. Increase the value if there is a large amount
+           of Control Plane traffic. If unset, an automatic value is used.";
+      }
+      leaf reserve-hugepages {
+        type boolean;
+        description
+          "Enable or disable the automatic huge pages allocation by
+           the fast path. When disabled, the user is responsible for
+           providing enough huge pages for the fast path to start.
+           If value is unset, it is disabled by default when running
+           in a container, else it is enabled.";
+      }
+      leaf arp {
+        if-feature "fp-arp";
+        type boolean;
+        default "true";
+        description
+          "Enable or disable the fast path ARP management.
+           The fast path arp parameters can be displayed using
+           'show fast-path arp parameters'.";
+      }
+      leaf ndp {
+        if-feature "fp-arp";
+        type boolean;
+        default "true";
+        description
+          "Enable or disable the fast path NDP management.
+           The fast path NDP parameters can be displayed using
+           'show fast-path ndp parameters'.";
+      }
+      leaf ipv4-netfilter-cache {
+        type boolean;
+        default "true";
+        description
+          "Enable or disable the IPv4 netfilter cache.";
+      }
+      leaf ipv6-netfilter-cache {
+        type boolean;
+        default "true";
+        description
+          "Enable or disable the IPv6 netfilter cache.";
+      }
+      list hardware-queue-map {
+        vr-ext:nc-cli-one-liner;
+        key "port index queue";
+        description
+          "Hardware queue map used to change the destination queue according the hash computed on the packet from the RSS function.";
+        leaf port {
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-network-ports:network-port[vrouter-network-ports:type='physical']/vrouter-network-ports:name";
+          type vr-types:pci-port-name;
+          must 'count(../../../port[.=string(current())]) = 1' {
+            error-message
+              "Port must be managed by fast path";
+          }
+          description
+            "Reference to a physical network port.";
+        }
+        leaf index {
+          type uint16;
+          description
+            "Hardware queue map table index.";
+        }
+        leaf queue {
+          type uint16;
+          description
+            "Destination Rx queue.";
+        }
+      }
+      leaf ipv4-pre-ipsec-fragmentation {
+        type enumeration {
+          enum "always" {
+            description
+              "Pre IPsec fragmentation is always performed.";
+          }
+          enum "check-df-bit" {
+            description
+              "Pre IPsec fragmentation is performed only if the don't fragment
+               bit is not set on the inner packet. Applies only to IPv4 inner packets.";
+          }
+          enum "off" {
+            description
+              "Post IPsec fragmentation is performed.";
+          }
+        }
+        default "off";
+        description
+          "Configure IPv4 pre IPsec fragmentation. When enabled, this behavior
+           helps releasing pressure on the decrypting device, as the reassembly
+           will be done on the destination host of the inner packet instead of
+           the decrypting device. It applies only in tunnel mode.";
+      }
+      leaf ipv6-pre-ipsec-fragmentation {
+        type enumeration {
+          enum "always" {
+            description
+              "Pre IPsec fragmentation is always performed.";
+          }
+          enum "check-df-bit" {
+            description
+              "Pre IPsec fragmentation is performed only if the don't fragment
+               bit is not set on the inner packet. Applies only to IPv4 inner packets.";
+          }
+          enum "off" {
+            description
+              "Post IPsec fragmentation is performed.";
+          }
+        }
+        default "off";
+        description
+          "Configure IPv6 pre IPsec fragmentation. When enabled, this behavior
+           helps releasing pressure on the decrypting device, as the reassembly
+           will be done on the destination host of the inner packet instead of
+           the decrypting device. It applies only in tunnel mode.";
+      }
+      leaf ipv6-lpm-long-prefix-optimization {
+        type boolean;
+        default "false";
+        description
+          "Enable the IPv6 longest prefix match algorithm optimization. It improves
+           the next hop lookup performance for routes with a long prefix.";
+      }
+      list mpls-egress-priority-mapping {
+        vr-ext:nc-cli-show-key-name;
+        vr-ext:nc-cli-one-liner;
+        key "from";
+        description
+          "Map the priority associated with the packet on a MPLS EXP. See the
+           set-priority firewall action for configuring explicitly packet priority.";
+        leaf from {
+          type uint32 {
+            range "0..63";
+          }
+          description
+            "Priority to translate from.";
+        }
+        leaf to {
+          type uint8 {
+            range "1..7";
+          }
+          mandatory true;
+          description
+            "MPLS priority to translate to.";
+        }
+      }
+      leaf hash-seed {
+        type string {
+          vr-ext:nc-cli-shortdesc "<0x1-0xffffffff>";
+          pattern '0x[1-9a-fA-F][0-9a-fA-F]{0,7}';
+        }
+        description
+          "Set a custom hash seed.";
+      }
+      list numa-aware {
+        key "name";
+        description
+          "Enable or disable the fast path numa awareness for a protocol.";
+        leaf name {
+          type enumeration {
+            enum "lag" {
+              description
+                "Lag protocol.";
+            }
+          }
+          description
+            "Protocol name.";
+        }
+        leaf enabled {
+          type boolean;
+          default "true";
+          description
+            "Enable for this protocol.";
+        }
+      }
+    }
+  }
+  grouping fast-path-crypto-config {
+    description
+      "Fast path crypto configuration.";
+    container crypto {
+      description
+        "Fast path crypto configuration.";
+      leaf driver {
+        type enumeration {
+          enum "multibuffer" {
+            description
+              "Intel multibuffer library.";
+          }
+          enum "quickassist" {
+            description
+              "Intel quickassist.";
+          }
+          enum "openssl" {
+            description
+              "Openssl generic crypto.";
+          }
+          enum "armv8" {
+            description
+              "ARMv8 accelerated crypto.";
+          }
+          enum "dpdk-pmd" {
+            status obsolete {
+              vr-ext:status-obsoleted-release "24q3";
+              vr-ext:status-deprecated-revision "2023-06-06";
+              vr-ext:status-description "replaced by armv8.";
+            }
+            description
+              "DPDK crypto PMD.";
+          }
+          enum "octeontxcpt" {
+            status obsolete {
+              vr-ext:status-obsoleted-release "24q3";
+              vr-ext:status-deprecated-revision "2023-06-06";
+              vr-ext:status-description "Octeon TX is not supported anymore.";
+            }
+            description
+              "Marvell Octeon TX.";
+          }
+          enum "octeontx2cpt" {
+            description
+              "Marvell Octeon TX2.";
+          }
+        }
+        description
+          "Crypto driver. If unset, select automatically.";
+      }
+      leaf offload-core-mask {
+        type union {
+          type vr-types:coremask;
+          type enumeration {
+            enum "none" {
+              description
+                "Disable crypto offload.";
+            }
+          }
+        }
+        description
+          "Fast path cores that can do crypto operations for other fast
+           path cores. It must be included in fast path mask. The crypto
+           offloading is always done on cores in the same NUMA node.";
+      }
+      leaf nb-session {
+        type uint32;
+        description
+          "Maximum number of cryptographic sessions.";
+      }
+      leaf nb-buffer {
+        type uint32;
+        description
+          "Maximum number of cryptographic buffers, representing
+           the maximum number of in-flight operations, either being
+           processed by the asynchronous crypto engine, or waiting in
+           crypto device queues.";
+      }
+    }
+  }
+  grouping fast-path-limits-max-params {
+    description
+      "Fast path limits maximum parameters.";
+    leaf fp-max-if {
+      vr-api:range-added "256..50000";
+      vr-ext:metric-alias "interfaces-max";
+      type uint32 {
+        range "256..50000";
+      }
+      description
+        "Maximum number of interfaces. It includes physical ports and
+         virtual interfaces like gre, vlan, ...";
+    }
+    leaf fp-max-vrf {
+      vr-api:range-added "1..2176";
+      vr-ext:metric-alias "vrf-max";
+      type uint32 {
+        range "1..2176";
+      }
+      description
+        "Maximum number of VRFs.";
+    }
+    leaf ip-max-neigh {
+      vr-ext:metric-alias "neighbors-max";
+      type uint32 {
+        range "16..400000";
+      }
+      description
+        "Maximum number of IP neighbors.";
+    }
+    leaf ip-max-nexthop-groups {
+      type uint32 {
+        range "16..16384";
+      }
+      description
+        "Maximum number of nexthop groups.";
+    }
+    leaf ip4-max-addr {
+      type uint32 {
+        range "16..4000000";
+      }
+      description
+        "Maximum number of IPv4 addresses.";
+    }
+    leaf ip4-max-route {
+      vr-api:range-added "16..8000000";
+      vr-ext:metric-alias "routes-ipv4-max";
+      type uint32 {
+        range "16..8000000";
+      }
+      description
+        "Maximum number of IPv4 routes.";
+    }
+    leaf ip4-max-neigh {
+      type uint32 {
+        range "16..400000";
+      }
+      status obsolete {
+        vr-ext:status-obsoleted-release "24q3";
+        vr-ext:status-deprecated-revision "2023-09-27";
+        vr-ext:status-description "Replaced by ip-max-neigh. The fast-path now has one list of neighbors\nfor both IPv4 and IPv6. If ip-max-neigh is not set, the maximum value\nof ip4-max-neigh and ip6-max-neigh is used to set the fast-path\n--mod-opt=ip:--max-neigh option.";
+      }
+      description
+        "Maximum number of IPv4 neighbors.";
+    }
+    leaf ip6-max-addr {
+      type uint32 {
+        range "16..4000000";
+      }
+      description
+        "Maximum number of IPv6 addresses.";
+    }
+    leaf ip6-max-route {
+      vr-api:range-added "16..8000000";
+      vr-ext:metric-alias "routes-ipv6-max";
+      type uint32 {
+        range "16..8000000";
+      }
+      description
+        "Maximum number of IPv6 routes.";
+    }
+    leaf ip6-max-neigh {
+      type uint32 {
+        range "16..400000";
+      }
+      status obsolete {
+        vr-ext:status-obsoleted-release "24q3";
+        vr-ext:status-deprecated-revision "2023-09-27";
+        vr-ext:status-description "Replaced by ip-max-neigh. The fast-path now has one list of neighbors\nfor both IPv4 and IPv6. If ip-max-neigh is not set, the maximum value\nof ip4-max-neigh and ip6-max-neigh is used to set the fast-path\n--mod-opt=ip:--max-neigh option.";
+      }
+      description
+        "Maximum number of IPv6 neighbors.";
+    }
+    leaf pbr-max-rule {
+      vr-ext:metric-alias "pbr-rules-max";
+      type uint32 {
+        range "16..400000";
+      }
+      description
+        "Maximum number of PBR rules.";
+    }
+    leaf filter4-max-rule {
+      vr-api:range-added "16..60000";
+      vr-ext:metric-alias "filter-ipv4-rules-max";
+      type uint32 {
+        range "16..60000";
+      }
+      description
+        "Maximum number of IPv4 Netfilter rules.";
+    }
+    leaf filter6-max-rule {
+      vr-api:range-added "16..60000";
+      vr-ext:metric-alias "filter-ipv6-rules-max";
+      type uint32 {
+        range "16..60000";
+      }
+      description
+        "Maximum number of IPv6 Netfilter rules.";
+    }
+    leaf filter4-max-ct {
+      vr-api:range-added "16..10000000";
+      vr-ext:metric-alias "conntracks-ipv4-max";
+      type uint32 {
+        range "16..10000000";
+      }
+      description
+        "Maximum number of IPv4 Netfilter conntracks.";
+    }
+    leaf filter6-max-ct {
+      vr-api:range-added "16..10000000";
+      vr-ext:metric-alias "conntracks-ipv6-max";
+      type uint32 {
+        range "16..10000000";
+      }
+      description
+        "Maximum number of IPv6 Netfilter conntracks.";
+    }
+    leaf filter-max-ipset {
+      type uint32 {
+        range "0..1000";
+      }
+      description
+        "Maximum number of ipsets per VRF.";
+    }
+    leaf filter-max-ipset-entry {
+      vr-api:range-added "0..1000000";
+      vr-ext:metric-alias "ipsets-max";
+      type uint32 {
+        range "0..1000000";
+      }
+      description
+        "Maximum number of entries per ipset.";
+    }
+    leaf filter-bridge-max-rule {
+      vr-ext:metric-alias "filterbridge-rules-max";
+      type uint32 {
+        range "0..40000";
+      }
+      description
+        "Maximum number of bridge filter rules.";
+    }
+    leaf vxlan-max-port {
+      vr-api:range-added "1..128";
+      vr-ext:metric-alias "vxlan-port-max";
+      type uint32 {
+        range "1..128";
+      }
+      description
+        "Maximum number of (VXLAN destination port, VRF) pairs.";
+    }
+    leaf vxlan-max-if {
+      vr-ext:metric-alias "vxlan-interfaces-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of VXLAN interfaces.";
+    }
+    leaf vxlan-max-fdb {
+      vr-ext:metric-alias "vxlan-fdb-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of VXLAN forwarding database entries.";
+    }
+    leaf reass4-max-queue {
+      type uint32 {
+        range "0..10000000";
+      }
+      description
+        "Maximum number of simultaneous reassembly procedures for IPv4.";
+    }
+    leaf reass6-max-queue {
+      type uint32 {
+        range "0..10000000";
+      }
+      description
+        "Maximum number of simultaneous reassembly procedures for IPv6.";
+    }
+    leaf ipsec-max-sp {
+      vr-ext:metric-alias "ipsec-sp-max";
+      type uint32 {
+        range "0..400000";
+      }
+      description
+        "Maximum number of IPv4 and IPv6 IPsec SPs.";
+    }
+    leaf ipsec-sp-hash-slots {
+      type uint32 {
+        range "1..800000";
+      }
+      description
+        "Number of slots in the IPsec SP hash table. The actual number of slots
+         is rounded to the next power of two.";
+    }
+    leaf ipsec-max-sa {
+      vr-ext:metric-alias "ipsec-sa-max";
+      type uint32 {
+        range "0..400000";
+      }
+      description
+        "Maximum number of IPv4 and IPv6 IPsec SAs.";
+    }
+    leaf ipsec-sa-hash-slots {
+      type uint32 {
+        range "1..800000";
+      }
+      description
+        "Number of slots in the IPsec SA hash table. The actual number of slots
+         is rounded to the next power of two.";
+    }
+    leaf ip-max-lpm-table {
+      type uint32;
+      description
+        "Maximum number of IPv4 and IPv6 tables.";
+    }
+    leaf ip-max-lpm-memory {
+      type uint32;
+      units "megabytes";
+      description
+        "Amount of memory reserved for IPv4 and IPv6 LPM tree.";
+    }
+    leaf filter-max-cache {
+      type uint32 {
+        range "1..100000000";
+      }
+      description
+        "Maximum number of IPv4 flows stored in filter cache.";
+    }
+    leaf filter6-max-cache {
+      type uint32 {
+        range "0..100000000";
+      }
+      description
+        "Maximum number of IPv6 flows stored in filter cache.";
+    }
+    leaf vlan-max-if {
+      vr-ext:metric-alias "vlan-interfaces-max";
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of VLAN interfaces.";
+    }
+    leaf vlan-lower-max-if {
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of interfaces supporting one or more vlan(s).";
+    }
+    leaf macvlan-max-if {
+      vr-ext:metric-alias "macvlan-interfaces-max";
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of MACVLAN (VRRP) interfaces.";
+    }
+    leaf gre-max-if {
+      vr-ext:metric-alias "gre-interfaces-max";
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of GRE interfaces.";
+    }
+    leaf svti-max-if {
+      vr-ext:metric-alias "svti-interfaces-max";
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of SVTI interfaces.";
+    }
+    leaf pppoe-max-channel {
+      vr-ext:metric-alias "pppoe-sessions-max";
+      type uint32 {
+        range "16..50000";
+      }
+      description
+        "Maximum number of PPPoE channels.";
+    }
+    leaf ipoe-max-session {
+      vr-ext:metric-alias "ipoe-sessions-max";
+      type uint32 {
+        range "16..100000";
+      }
+      description
+        "Maximum number of IPoE sessions.";
+    }
+    leaf mpls-max-label {
+      type uint8 {
+        range "1..30";
+      }
+      description
+        "Maximum number of MPLS labels in a route.";
+    }
+    leaf mpls-max-route {
+      type uint32 {
+        range "1..1048576";
+      }
+      description
+        "Maximum number of pure MPLS routes.";
+    }
+    leaf mpls-max-lwt {
+      type uint32 {
+        range "1..1048576";
+      }
+      description
+        "Maximum number of MPLS lightweight tunnels. One is needed for each IP route doing MPLS encapsulation.";
+    }
+    leaf qos-max-schedulers {
+      vr-ext:metric-alias "qos-sched-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of interfaces with QoS enabled.";
+    }
+    leaf qos-max-classifiers {
+      vr-ext:metric-alias "qos-classifier-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of QoS classifier.";
+    }
+    leaf qos-max-filters {
+      vr-ext:metric-alias "qos-filter-max";
+      vr-api:must-added "not(../qos-max-classifiers)";
+      type uint32 {
+        range "0..50000";
+      }
+      must 'not(../qos-max-classifiers)' {
+        error-message
+          "qos-max-filters is deprecated. Do not use qos-max-filters and qos-max-classifiers at the same time.";
+      }
+      status deprecated {
+        vr-ext:status-obsoleted-release "25q3";
+        vr-ext:status-deprecated-revision "2025-03-06";
+        vr-ext:status-description "qos-max-filters is deprecated. It has been replaced by qos-max-classifiers.";
+        vr-ext:status-replacement "../qos-max-classifiers";
+      }
+      description
+        "Maximum number of QoS filter rules.";
+    }
+    leaf qos-max-queues {
+      vr-ext:metric-alias "qos-queue-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of QoS queues.";
+    }
+    leaf qos-max-classes {
+      vr-ext:metric-alias "qos-class-max";
+      vr-api:must-added "not(../qos-max-queues)";
+      type uint32 {
+        range "0..50000";
+      }
+      must 'not(../qos-max-queues)' {
+        error-message
+          "qos-max-classes is deprecated. Do not use qos-max-classes and qos-max-queues at the same time.";
+      }
+      status deprecated {
+        vr-ext:status-obsoleted-release "25q3";
+        vr-ext:status-deprecated-revision "2025-03-06";
+        vr-ext:status-description "qos-max-classes is deprecated. It has been replaced by qos-max-queues.";
+        vr-ext:status-replacement "../qos-max-queues";
+      }
+      description
+        "Maximum number of QoS classes.";
+    }
+    leaf qos-max-policies {
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of QoS policies.";
+    }
+    leaf qos-max-selectors {
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of QoS selectors.";
+    }
+    leaf qos-max-packets {
+      type uint32 {
+        range "0..1000000000";
+      }
+      description
+        "Maximum number of packets in the QoS.";
+    }
+    leaf bridge-max-if {
+      vr-ext:metric-alias "bridge-interfaces-max";
+      type uint32 {
+        range "1..50000";
+      }
+      description
+        "Maximum number of bridge interfaces.";
+    }
+    leaf bridge-max-ports {
+      vr-ext:metric-alias "bridge-ports-max";
+      type uint32 {
+        range "1..50000";
+      }
+      description
+        "Maximum number of bridge slave ports.";
+    }
+    leaf bridge-max-fdb {
+      vr-ext:metric-alias "bridge-fdb-max";
+      type uint32 {
+        range "1..50000";
+      }
+      description
+        "Maximum number of bridge forwarding database entries.";
+    }
+    leaf fp-max-conntracks {
+      vr-ext:metric-alias "fp-conntracks-max";
+      type uint32 {
+        range "1..4294967295";
+      }
+      description
+        "Maximum number of fast-path firewall conntracks.";
+    }
+    leaf gtp-max-if {
+      vr-ext:metric-alias "gtp-interfaces-max";
+      type uint32 {
+        range "0..50000";
+      }
+      description
+        "Maximum number of GTP interfaces.";
+    }
+    leaf gtp-max-pdp {
+      vr-ext:metric-alias "gtp-pdp-max";
+      type uint32 {
+        range "1..100000000";
+      }
+      description
+        "Maximum number of GTP tunnels the data plane can handle.";
+    }
+    leaf gtp-max-qos-flow {
+      vr-ext:metric-alias "gtp-qos-flow-max";
+      type uint32 {
+        range "1..100000000";
+      }
+      description
+        "Maximum number of QoS policies that can be allocated globally.";
+    }
+    leaf gtp-max-qos-policy {
+      vr-ext:metric-alias "gtp-qos-policy-max";
+      type uint32 {
+        range "1..100000000";
+      }
+      description
+        "Maximum number of GTP QoS policies that can be allocated globally.";
+    }
+    leaf tc-max-policers {
+      type uint32 {
+        range "0..1000000";
+      }
+      description
+        "Maximum number of tc policers.";
+    }
+    leaf pmtud-max-entries {
+      type uint32 {
+        range "0..1000000";
+      }
+      description
+        "Maximum number of path MTU discovery cache entries that can be
+         allocated globally.";
+    }
+    leaf lawful-interception-max {
+      type uint32 {
+        range "0..65535";
+      }
+      description
+        "Maximum number of Lawful Interceptions.";
+    }
+  }
+  grouping fast-path-limits {
+    description
+      "Global runtime limits for fast path.";
+    container limits {
+      description
+        "Global runtime limits for fast path.";
+      uses fast-path-limits-max-params;
+    }
+  }
+  grouping fast-path-limits-state {
+    description
+      "Global runtime limits for fast path.";
+    container limits {
+      vr-ext:pushed-state-metric "fp-filling";
+      vr-ext:pushed;
+      description
+        "Global runtime limits for fast path.";
+      leaf fp-cur-if {
+        vr-ext:metric-alias "interfaces-current";
+        type uint32;
+        description
+          "Current number of interfaces. It includes physical ports and
+           virtual interfaces like gre, vlan, ...";
+      }
+      leaf fp-cur-vrf {
+        vr-ext:metric-alias "vrf-current";
+        type uint32;
+        description
+          "Current number of VRFs.";
+      }
+      leaf ip-cur-neigh {
+        vr-ext:metric-alias "neighbors-current";
+        type uint32;
+        description
+          "Current number of IPv4 and IPv6 neighbors.";
+      }
+      leaf ip-cur-nexthop-groups {
+        type uint32;
+        description
+          "Current number of nexthop groups.";
+      }
+      leaf ip4-cur-addr {
+        type uint32;
+        description
+          "Current number of IPv4 addresses.";
+      }
+      leaf ip4-cur-route {
+        vr-ext:metric-alias "routes-ipv4-current";
+        type uint32;
+        description
+          "Current number of IPv4 routes.";
+      }
+      leaf ip4-cur-neigh {
+        type uint32;
+        status obsolete {
+          vr-ext:status-obsoleted-release "24q3";
+          vr-ext:status-deprecated-revision "2023-09-27";
+          vr-ext:status-description "Replaced by ip-cur-neigh. The fast-path now has one list of neighbors\nfor both IPv4 and IPv6.";
+        }
+        description
+          "Current number of IPv4 neighbors.";
+      }
+      leaf ip6-cur-addr {
+        type uint32;
+        description
+          "Current number of IPv6 addresses.";
+      }
+      leaf ip6-cur-route {
+        vr-ext:metric-alias "routes-ipv6-current";
+        type uint32;
+        description
+          "Current number of IPv6 routes.";
+      }
+      leaf ip6-cur-neigh {
+        type uint32;
+        status obsolete {
+          vr-ext:status-obsoleted-release "24q3";
+          vr-ext:status-deprecated-revision "2023-09-27";
+          vr-ext:status-description "Replaced by ip-cur-neigh. The fast-path now has one list of neighbors\nfor both IPv4 and IPv6.";
+        }
+        description
+          "Current number of IPv6 neighbors.";
+      }
+      leaf pbr-cur-rule {
+        vr-ext:metric-alias "pbr-rules-current";
+        type uint32;
+        description
+          "Current number of PBR rules.";
+      }
+      leaf filter4-cur-rule {
+        vr-ext:metric-alias "filter-ipv4-rules-current";
+        type uint32;
+        description
+          "Current number of IPv4 Netfilter rules.";
+      }
+      leaf filter6-cur-rule {
+        vr-ext:metric-alias "filter-ipv6-rules-current";
+        type uint32;
+        description
+          "Current number of IPv6 Netfilter rules.";
+      }
+      leaf filter4-cur-ct {
+        vr-ext:metric-alias "conntracks-ipv4-current";
+        type uint32;
+        description
+          "Current number of IPv4 Netfilter conntracks.";
+      }
+      leaf filter6-cur-ct {
+        vr-ext:metric-alias "conntracks-ipv6-current";
+        type uint32;
+        description
+          "Current number of IPv6 Netfilter conntracks.";
+      }
+      leaf filter-cur-ipset {
+        vr-ext:metric-alias "ipsets-current";
+        type uint32;
+        description
+          "Current number of ipsets per VRF.";
+      }
+      leaf vxlan-cur-port {
+        vr-ext:metric-alias "vxlan-port-current";
+        type uint32;
+        description
+          "Current number of (VXLAN destination port, VRF) pairs.";
+      }
+      leaf vxlan-cur-if {
+        vr-ext:metric-alias "vxlan-interfaces-current";
+        type uint32;
+        description
+          "Current number of VXLAN interfaces.";
+      }
+      leaf vxlan-cur-fdb {
+        vr-ext:metric-alias "vxlan-fdb-current";
+        type uint32;
+        description
+          "Current number of VXLAN forwarding database entries.";
+      }
+      leaf ipsec-cur-sp {
+        vr-ext:metric-alias "ipsec-sp-current";
+        type uint32;
+        description
+          "Current number of IPv4 and IPv6 IPsec SPs.";
+      }
+      leaf ipsec-cur-sa {
+        vr-ext:metric-alias "ipsec-sa-current";
+        type uint32;
+        description
+          "Current number of IPv4 and IPv6 IPsec SAs.";
+      }
+      leaf ip-cur-lpm-table {
+        type uint32;
+        description
+          "Current number of IPv4 and IPv6 tables.";
+      }
+      leaf ip-cur-lpm-memory {
+        type uint32;
+        units "megabytes";
+        description
+          "Current amount of memory reserved for IPv4 and IPv6 LPM tree.";
+      }
+      leaf vlan-cur-if {
+        vr-ext:metric-alias "vlan-interfaces-current";
+        type uint32;
+        description
+          "Current number of VLAN interfaces.";
+      }
+      leaf vlan-lower-cur-if {
+        type uint32;
+        description
+          "Current number of interfaces supporting one or more vlan(s).";
+      }
+      leaf macvlan-cur-if {
+        vr-ext:metric-alias "macvlan-interfaces-current";
+        type uint32;
+        description
+          "Current number of MACVLAN (VRRP) interfaces.";
+      }
+      leaf gre-cur-if {
+        vr-ext:metric-alias "gre-interfaces-current";
+        type uint32;
+        description
+          "Current number of GRE interfaces.";
+      }
+      leaf svti-cur-if {
+        vr-ext:metric-alias "svti-interfaces-current";
+        type uint32;
+        description
+          "Current number of SVTI interfaces.";
+      }
+      leaf pppoe-cur-channel {
+        vr-ext:metric-alias "pppoe-sessions-current";
+        type uint32;
+        description
+          "Current number of PPPoE interfaces.";
+      }
+      leaf ipoe-cur-session {
+        vr-ext:metric-alias "ipoe-sessions-current";
+        type uint32;
+        description
+          "Current number of IPoE sessions.";
+      }
+      leaf mpls-cur-route {
+        type uint32;
+        description
+          "Current number of pure MPLS routes.";
+      }
+      leaf mpls-cur-lwt {
+        type uint32;
+        description
+          "Current number of MPLS lightweight tunnels. One is needed for each IP route doing MPLS encapsulation.";
+      }
+      leaf qos-cur-schedulers {
+        vr-ext:metric-alias "qos-sched-current";
+        type uint32;
+        description
+          "Current number of interfaces with QoS enabled.";
+      }
+      leaf qos-cur-classifiers {
+        vr-ext:metric-alias "qos-classifier-current";
+        type uint32;
+        description
+          "Current number of QoS classifiers.";
+      }
+      leaf qos-cur-filters {
+        vr-ext:metric-alias "qos-filter-current";
+        type uint32;
+        status deprecated {
+          vr-ext:status-obsoleted-release "25q3";
+          vr-ext:status-deprecated-revision "2025-03-06";
+          vr-ext:status-description "qos-cur-filters is deprecated. It has been replaced by qos-cur-classifiers.";
+          vr-ext:status-replacement "../qos-cur-classifiers";
+        }
+        description
+          "Current number of QoS filter rules.";
+      }
+      leaf qos-cur-queues {
+        vr-ext:metric-alias "qos-queue-current";
+        type uint32;
+        description
+          "Current number of QoS queues.";
+      }
+      leaf qos-cur-classes {
+        vr-ext:metric-alias "qos-class-current";
+        type uint32;
+        status deprecated {
+          vr-ext:status-obsoleted-release "25q3";
+          vr-ext:status-deprecated-revision "2025-03-06";
+          vr-ext:status-description "qos-cur-classes is deprecated. It has been replaced by qos-cur-queues.";
+          vr-ext:status-replacement "../qos-cur-queues";
+        }
+        description
+          "Current number of QoS classes.";
+      }
+      leaf qos-cur-policies {
+        type uint32;
+        description
+          "Current number of QoS policies.";
+      }
+      leaf qos-cur-selectors {
+        type uint32;
+        description
+          "Current number of QoS selectors.";
+      }
+      leaf bridge-cur-if {
+        vr-ext:metric-alias "bridge-interfaces-current";
+        type uint32;
+        description
+          "Current number of bridge interfaces.";
+      }
+      leaf bridge-cur-ports {
+        vr-ext:metric-alias "bridge-ports-current";
+        type uint32;
+        description
+          "Current number of bridge slave ports.";
+      }
+      leaf bridge-cur-fdb {
+        vr-ext:metric-alias "bridge-fdb-current";
+        type uint32;
+        description
+          "Current number of bridge forwarding database entries.";
+      }
+      leaf fp-cur-conntracks {
+        vr-ext:metric-alias "fp-conntracks-current";
+        type uint32;
+        description
+          "Current number of fast-path firewall conntracks.";
+      }
+      leaf gtp-cur-if {
+        vr-ext:metric-alias "gtp-interfaces-current";
+        type uint32;
+        description
+          "Current number of GTP interfaces.";
+      }
+      leaf gtp-cur-pdp {
+        vr-ext:metric-alias "gtp-pdp-current";
+        type uint32;
+        description
+          "Current number of GTP tunnels.";
+      }
+      leaf gtp-cur-qos-flow {
+        vr-ext:metric-alias "gtp-qos-flow-current";
+        type uint32;
+        description
+          "Current number of GTP QoS flows.";
+      }
+      leaf gtp-cur-qos-policy {
+        vr-ext:metric-alias "gtp-qos-policy-current";
+        type uint32;
+        description
+          "Current number of GTP QoS policies.";
+      }
+      leaf tc-cur-policers {
+        type uint32;
+        description
+          "Current number of tc policers.";
+      }
+      leaf pmtud-cur-entries {
+        type uint32;
+        description
+          "Current number of pmtud cached entries.";
+      }
+      leaf lawful-interception-cur {
+        type uint32;
+        description
+          "Current number of lawful interceptions.";
+      }
+      uses fast-path-limits-max-params;
+    }
+  }
+  grouping linux-sync {
+    description
+      "Advanced tuning for fast path / Linux synchronization.";
+    container linux-sync {
+      must "count(disable[.='conntrack']) = 0 or count(disable[.='nat']) = 1" {
+        error-message
+          "Nat cannot work without conntrack.";
+      }
+      must "count(disable[.='firewall']) = 0 or count(disable[.='conntrack']) = 1" {
+        error-message
+          "Conntrack cannot work without firewall.";
+      }
+      must "count(disable[.='ipsec']) = 0 or count(disable[.='svti']) = 1" {
+        error-message
+          "SVTI cannot work wirout IPsec.";
+      }
+      description
+        "Advanced tuning for fast path / Linux synchronization.";
+      leaf fpm-socket-size {
+        type uint32 {
+          range "4096..268435456";
+        }
+        units "bytes";
+        default "2097152";
+        description
+          "Buffer size of the socket used to communicate between the
+           cache manager and the fast path manager.";
+      }
+      leaf nl-socket-size {
+        type uint32 {
+          range "4096..268435456";
+        }
+        units "bytes";
+        default "67108864";
+        description
+          "Buffer size of the cache manager netlink socket.";
+      }
+      leaf ipset-dump-delay {
+        type uint32;
+        units "seconds";
+        default "1";
+        description
+          "Delay period for polling the ipset content.";
+      }
+      leaf-list disable {
+        type enumeration {
+          enum "bpf" {
+            description
+              "Disable BPF synchronization (used by traffic capture).";
+          }
+          enum "bridge" {
+            description
+              "Disable bridge interface synchronization.";
+          }
+          enum "conntrack" {
+            description
+              "Disable connection tracking synchronization.";
+          }
+          enum "firewall" {
+            description
+              "Disable firewall synchronization.";
+          }
+          enum "gre" {
+            description
+              "Disable GRE interface synchronization.";
+          }
+          enum "ipip" {
+            description
+              "Disable IP in IP interface synchronization.";
+          }
+          enum "ipsec" {
+            description
+              "Disable IPsec synchronization.";
+          }
+          enum "ipset4" {
+            description
+              "Disable IPv4 ipset synchronization (used by firewall IPv4 address/network groups).";
+          }
+          enum "ipset6" {
+            description
+              "Disable IPv6 ipset synchronization (used by firewall IPv6 address/network groups).";
+          }
+          enum "ipv6" {
+            description
+              "Disable IPv6 synchronization.";
+          }
+          enum "lag" {
+            description
+              "Disable LAG interface synchronization.";
+          }
+          enum "macvlan" {
+            description
+              "Disable MACVLAN interface synchronization (used by VRRP).";
+          }
+          enum "mpls" {
+            description
+              "Disable MPLS synchronization.";
+          }
+          enum "nat" {
+            description
+              "Disable NAT synchronization.";
+          }
+          enum "svti" {
+            description
+              "Disable SVTI interface synchronization.";
+          }
+          enum "vlan" {
+            description
+              "Disable VLAN interface synchronization.";
+          }
+          enum "vxlan" {
+            description
+              "Disable VXLAN interface synchronization.";
+          }
+        }
+        description
+          "Disable synchronization for specific modules.";
+      }
+    }
+  }
+  grouping fast-path-config {
+    description
+      "Configuration for fast path.";
+    leaf-list port {
+      vr-api:pattern-added "pci-(d[0-9]+)?(b[0-9]+)(s[0-9]+)(f[0-9]+)?(p[0-9]+)?";
+      vr-api:pattern-added "dt-(.+)";
+      vr-api:pattern-added "hv-(.+)";
+      vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-network-ports:network-port[vrouter-network-ports:type='physical']/vrouter-network-ports:name";
+      type union {
+        type vr-types:pci-port-name;
+        type vr-types:device-tree-port-name;
+        type vr-types:hyper-v-port-name;
+        type vr-types:auxiliary-port-name;
+      }
+      description
+        "A physical network port managed by the fast path.";
+    }
+    container virtual-port {
+      if-feature "virtual-port";
+      description
+        "The virtual network ports managed by the fast path.";
+    }
+    leaf max-virtual-ports {
+      if-feature "virtual-port";
+      type uint16;
+      must ". >= count(../vrouter-fast-path:virtual-port/*) - count(../vrouter-fast-path:virtual-port/*[local-name()='infrastructure'])" {
+        error-message
+          "The maximum number virtual ports must be greater or equal to the count of configured
+           virtual ports, excepting infrastructure ports.";
+      }
+      default "0";
+      description
+        "Maximum number of dynamic virtual ports (excepting infrastructure ports).
+         Modifying this parameter will restart the fast path.";
+    }
+    container core-mask {
+      description
+        "Dedicate cores to fast path or exception path.";
+      leaf fast-path {
+        vr-api:pattern-added "count:[0-9]+(,[0-9]+)*";
+        type union {
+          type enumeration {
+            enum "max" {
+              description
+                "Dedicate the maximum number of cores to the fast path.";
+            }
+            enum "half" {
+              description
+                "Dedicate half of the cores to the fast path.";
+            }
+            enum "min" {
+              description
+                "Dedicate the minimum number of cores to the fast path.";
+            }
+          }
+          type string {
+            vr-ext:nc-cli-shortdesc "count:<cores-count>";
+            pattern 'count:[0-9]+(,[0-9]+)*' {
+              error-message
+                "Invalid cores count. Examples: 'count:8', 'count:4,0'.";
+            }
+          }
+          type vr-types:coremask;
+        }
+        description
+          "List of cores dedicated to fast path. It can be a comma-separated list of cores or
+           core ranges (example: '1,4-7,10-12'), or a per-socket number of logical cores (examples:
+           'count:8' to dedicate 8 cores for the fast path on any socket, 'count:4,0' to dedicate
+           4 cores on socket 0).";
+      }
+      leaf exception {
+        type vr-types:coremask;
+        description
+          "Unused, reserved for future uses.";
+      }
+      leaf linux-to-fp {
+        type vr-types:coremask;
+        description
+          "Fast path cores that can receive packets from Linux. It must
+           be included in fast path mask. If unset, all fast path cores can
+           receive packets from Linux.";
+      }
+      leaf port {
+        vr-ext:nc-cli-shortdesc "<core-port-map>";
+        type string {
+          pattern 'c[0-9]+=[0-9]+(:[0-9]+)*(/c[0-9]+=[0-9]+(:[0-9]+)*)*' {
+            error-message
+              "Invalid core port mapping. Example: 'c1=0:1/c2=2/c3=0:1:2'.";
+          }
+        }
+        description
+          "Map fast path cores with network ports, specifying which
+             logical cores poll which ports. Example:
+             'c1=0:1/c2=2/c3=0:1:2' means the logical core 1 polls the
+             port 0 and 1, the core 2 polls the port 2, and the core 3
+             polls the ports 0, 1, and 2. If unset, each port is polled
+             by all the logical cores of the same socket.";
+      }
+    }
+  }
+  grouping pmtud {
+    description
+      "Configuration for path MTU discovery.";
+    container pmtud {
+      presence "Makes Path MTU Discovery available";
+      description
+        "Path MTU discovery configuration.";
+      leaf enabled {
+        type boolean;
+        default "true";
+        description
+          "Enable the path MTU discovery.";
+      }
+      leaf cache-lifetime {
+        type uint32 {
+          range "1..120";
+        }
+        units "minutes";
+        default "10";
+        description
+          "Cache entries lifetime.";
+      }
+    }
+  }
+  grouping cp-protection-config {
+    description
+      "Configuration for control plane protection.";
+    container cp-protection {
+      description
+        "Control plane protection configuration.";
+      leaf budget {
+        type int16 {
+          range "0..100";
+        }
+        default "10";
+        description
+          "Maximum CPU usage allowed for Control Plane Protection in percent.";
+      }
+    }
+  }
+  grouping mirror-traffic {
+    description
+      "Mirror traffic.";
+    container mirror-traffic {
+      description
+        "Mirror traffic.";
+      list from {
+        vr-ext:nc-cli-one-liner;
+        vr-ext:nc-cli-show-key-name;
+        must
+          "(../from[interface=current()/interface and vrf=current()/vrf and (type='ingress' or type='egress')] and
+           not(../from[interface=current()/interface and vrf=current()/vrf and (type='both')])) or
+           (not(../from[interface=current()/interface and vrf=current()/vrf and (type='ingress' or type='egress')]) and
+           ../from[interface=current()/interface and vrf=current()/vrf and (type='both')])" {
+          error-message
+            "The source (from[vrf]/from[interface]) cannot be defined with a type
+             both and another type (ingress or egress).";
+        }
+        must 'not (../from/to[interface=current()/interface and vrf=current()/vrf])' {
+          error-message
+            "A source cannot be a destination.";
+        }
+        key "interface vrf type";
+        description
+          "The source of mirroring.";
+        leaf interface {
+          vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:name";
+          type vr-types:ifname;
+          description
+            "The interface that is mirrored.";
+        }
+        leaf vrf {
+          vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter:name";
+          type vrouter:vrf-name;
+          description
+            "The VRF of the mirrored interface.";
+        }
+        leaf type {
+          type union {
+            type string;
+            type enumeration {
+              enum "ingress" {
+                description
+                  "Mirror only incoming traffic.";
+              }
+              enum "egress" {
+                description
+                  "Mirror only outgoing traffic.";
+              }
+              enum "both" {
+                description
+                  "Mirror both incoming and outgoing traffic.";
+              }
+            }
+          }
+          description
+            "The type of traffic to mirror.";
+        }
+        container to {
+          vr-ext:nc-cli-one-liner;
+          description
+            "The destination of mirroring.";
+          leaf interface {
+            vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:name";
+            type vr-types:ifname;
+            mandatory true;
+            description
+              "The interface that is mirrored.";
+          }
+          leaf vrf {
+            vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter:name";
+            type vrouter:vrf-name;
+            mandatory true;
+            description
+              "The VRF of the mirrored interface.";
+          }
+        }
+      }
+    }
+  }
+  grouping software-rss-config {
+    description
+      "Configuration for software RSS.";
+    list software-rss {
+      key "port";
+      description
+        "Software RSS configuration.
+         Each entry specifies the fastpath port enabling software RSS,
+         the RX core mask and the list of enabled protocols.";
+      leaf port {
+        vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter-network-ports:network-port[vrouter-network-ports:type='physical']/vrouter-network-ports:name";
+        type union {
+          type vr-types:pci-port-name;
+          type vr-types:device-tree-port-name;
+          type vr-types:hyper-v-port-name;
+        }
+        must 'count(../../port[.=string(current())]) = 1' {
+          error-message
+            "Port must be managed by the fast path.";
+        }
+        description
+          "A physical network port managed by the fast path.";
+      }
+      leaf rx-mask {
+        type union {
+          type vr-types:coremask;
+          type enumeration {
+            enum "all" {
+              description
+                "All fast path cores.";
+            }
+          }
+        }
+        mandatory true;
+        description
+          "List of cores. It must be included in the fast path mask.";
+      }
+      leaf-list protocols {
+        type enumeration {
+          enum "pppoe" {
+            description
+              "PPP over Ethernet.";
+          }
+        }
+        min-elements 1;
+        description
+          "List of supported protocols.";
+      }
+    }
+  }
+  grouping rpc-conntrack-input-direction {
+    description
+      "Direction parameters for conntracks rpc.";
+    leaf source {
+      type union {
+        type vr-inet:ipv4-address {
+          vr-ext:nc-cli-shortdesc "<ipv4-address>";
+        }
+        type vr-inet:ipv6-address {
+          vr-ext:nc-cli-shortdesc "<ipv6-address>";
+        }
+      }
+      description
+        "Filter conntracks with this source address.";
+    }
+    leaf destination {
+      type union {
+        type vr-inet:ipv4-address {
+          vr-ext:nc-cli-shortdesc "<ipv4-address>";
+        }
+        type vr-inet:ipv6-address {
+          vr-ext:nc-cli-shortdesc "<ipv6-address>";
+        }
+      }
+      description
+        "Filter conntracks with this destination address.";
+    }
+    choice protocol-choice {
+      description
+        "Set the protocol and its associated property.";
+      case tcp {
+        container tcp {
+          presence "Filter on TCP protocol.";
+          description
+            "Filter on TCP protocol.";
+          leaf source-port {
+            type uint16;
+            description
+              "Filter on the source port.";
+          }
+          leaf destination-port {
+            type uint16;
+            description
+              "Filter on the destination port.";
+          }
+        }
+      }
+      case udp {
+        container udp {
+          presence "Filter on UDP protocol.";
+          description
+            "Filter on UDP protocol.";
+          leaf source-port {
+            type uint16;
+            description
+              "Filter on the source port.";
+          }
+          leaf destination-port {
+            type uint16;
+            description
+              "Filter on the destination port.";
+          }
+        }
+      }
+      case icmp {
+        container icmp {
+          presence "Filter on ICMP protocol.";
+          description
+            "Filter on ICMP protocol.";
+          leaf icmp-id {
+            type uint16;
+            description
+              "Filter on ICMP id.";
+          }
+        }
+      }
+      case icmpv6 {
+        container icmpv6 {
+          presence "Filter on ICMPv6 protocol.";
+          description
+            "Filter on ICMPv6 protocol.";
+          leaf icmp-id {
+            type uint16;
+            description
+              "Filter on ICMPv6 id.";
+          }
+        }
+      }
+      case gre {
+        container gre {
+          presence "Filter on GRE protocol.";
+          description
+            "Filter on GRE protocol.";
+          leaf key {
+            type uint32;
+            description
+              "Filter on GRE key.";
+          }
+        }
+      }
+    }
+  }
+  grouping rpc-conntrack-input-rule {
+    description
+      "Input parameters for conntrack rule filter rpc.";
+    leaf direction {
+      type enumeration {
+        enum "ingress" {
+          description
+            "Filter on ingress rule or interface.";
+        }
+        enum "egress" {
+          description
+            "Filter on egress rule or interface.";
+        }
+      }
+      description
+        "Specify filtered direction for interface, rule userid and rule name.";
+    }
+    leaf interface {
+      vr-ext:nc-cli-completion-xpath "/vrouter:config/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:name";
+      type vr-types:ifname;
+      description
+        "Filter on conntrack interface, according to direction if specified.";
+    }
+    leaf userid {
+      type uint32;
+      description
+        "Filter on rule userid, according to direction if specified.";
+    }
+    leaf name {
+      type string;
+      description
+        "Filter on rule name, according to direction if specified.";
+    }
+  }
+  grouping rpc-conntrack-input {
+    description
+      "Input parameters for conntracks rpc.";
+    leaf vrf {
+      vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+      type string;
+      default "main";
+      description
+        "Set the VRF.";
+    }
+    choice direction-choice {
+      description
+        "Set the direction and its associated property.";
+      case origin {
+        container origin {
+          description
+            "Filter only on origin conntracks.";
+          uses rpc-conntrack-input-direction;
+          uses rpc-conntrack-input-rule;
+        }
+      }
+      case reply {
+        container reply {
+          description
+            "Filter only on reply conntracks.";
+          uses rpc-conntrack-input-direction;
+          uses rpc-conntrack-input-rule;
+        }
+      }
+    }
+  }
+  grouping rpc-generic-alg-statistics {
+    description
+      "Generic ALG statistics.";
+    leaf connection-associations {
+      type uint64;
+      description
+        "Number of connections associated with the ALG port.";
+    }
+    leaf connection-usage {
+      type uint64;
+      description
+        "Number of connections used by the ALG.";
+    }
+    leaf connection-disassociations {
+      type uint64;
+      description
+        "Number of connections disassociated/released of the ALG.";
+    }
+  }
+  augment "/vrouter:config/vrouter-system:system" {
+    description
+      "Fast path configuration.";
+    container fast-path {
+      vr-ext:feature "product";
+      presence "Makes fast-path available";
+      description
+        "Fast path configuration.";
+      leaf enabled {
+        type boolean;
+        default "true";
+        description
+          "Enable or disable the fast path.";
+      }
+      uses fast-path-config;
+      uses cp-protection-config;
+      uses fast-path-crypto-config;
+      uses fast-path-advanced-config;
+      uses software-rss-config;
+      uses fast-path-limits;
+      uses linux-sync;
+      uses mirror-traffic;
+      uses pmtud;
+    }
+  }
+  augment "/vrouter:state/vrouter-system:system" {
+    description
+      "Fast path configuration.";
+    container fast-path {
+      vr-ext:feature "product";
+      presence "Makes fast path available";
+      description
+        "Top-level container for fast path.";
+      leaf enabled {
+        vr-ext:pushed;
+        type union {
+          type boolean;
+          type enumeration {
+            enum "failed" {
+              description
+                "Service has failed.";
+            }
+            enum "starting" {
+              description
+                "Service is starting.";
+            }
+            enum "stopping" {
+              description
+                "Service is stopping.";
+            }
+          }
+        }
+        description
+          "Fast path state.";
+      }
+      uses fast-path-config;
+      list cpu-usage {
+        vr-ext:pushed-state-metric "fp-cpu-usage";
+        key "cpu";
+        description
+          "The list of busy percentage per CPU.";
+        leaf cpu {
+          vr-ext:pushed;
+          type string;
+          description
+            "The CPU number.";
+        }
+        leaf busy {
+          vr-ext:pushed;
+          type uint16;
+          description
+            "The busy percentage.";
+        }
+      }
+      uses cp-protection-config;
+      uses fast-path-crypto-config;
+      uses fast-path-advanced-config;
+      uses software-rss-config;
+      uses fast-path-limits-state;
+      uses linux-sync;
+      uses mirror-traffic;
+      uses pmtud;
+    }
+  }
+  rpc show-fast-path-cpu-usage {
+    vr-ext:feature "product";
+    vr-ext:nc-cli-show "fast-path cpu-usage";
+    vr-api:internal;
+    description
+      "Show the fast path CPU usage.";
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc show-metric-fp-ports-stats {
+    vr-api:internal;
+    vr-ext:rpc-metric "fp-ports-stats";
+    description
+      "Kpi for fp-ports-stats.";
+    input {
+      list interface {
+        key "vrf name";
+        description
+          "Display only those interfaces.";
+        leaf vrf {
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter:name";
+          type vrouter:vrf-name;
+          description
+            "The VRF where the interface is located.";
+        }
+        leaf name {
+          vr-ext:nc-cli-completion-xpath "/vrouter:state/vrouter:vrf/vrouter-interface:interface/*/*[local-name()='name']";
+          type vr-types:ifname;
+          description
+            "The interface name.";
+        }
+      }
+    }
+    output {
+      list interface {
+        key "vrf name";
+        description
+          "The list of interfaces with their associated counters.";
+        leaf vrf {
+          type string;
+          description
+            "The interface VRF.";
+        }
+        leaf name {
+          type string;
+          description
+            "The interface name.";
+        }
+        container cp-protection {
+          vr-ext:rpc-metric "fp-cp-protect-stats";
+          description
+            "The control plane protection statistics.";
+          leaf rx-control-plane-kept {
+            type uint64;
+            description
+              "When the Rx ring filling reaches a threshold, packets are inspected
+               by the Control Plane Protection mechanism. This statistic is incremented
+               for packets recognized as CP packets, which are kept and processed by
+               the stack.";
+          }
+          leaf rx-control-plane-overrun {
+            type uint64;
+            description
+              "When CPU consumption used by Control Plane Protection exceeds a
+               threshold, this system is disabled. This statistic is incremented for
+               each Rx packet not analyzed by Control Plane Protection due to CPU
+               overload.";
+          }
+          leaf rx-control-plane-passthrough {
+            type uint64;
+            description
+              "When Control Plane Protection is enabled, this statistic is
+               incremented for each packet received when machine is not
+               overloaded. These packets are processed normally.";
+          }
+          leaf rx-data-plane-drop {
+            type uint64;
+            description
+              "When the Rx ring filling reaches a threshold, packets are inspected
+               by the Control Plane Protection mechanism. This statistic is
+               incremented for packets recognized as DP packets, which are dropped.";
+          }
+          leaf tx-control-plane-kept {
+            type uint64;
+            description
+              "When the Tx ring filling reaches a threshold, packets are inspected
+               by the Control Plane Protection mechanism. This statistic is
+               incremented for packets recognized as CP packets, which are sent on
+               the wire.";
+          }
+          leaf tx-control-plane-overrun {
+            type uint64;
+            description
+              "When CPU consumption used by Control Plane Protection exceeds a
+               threshold, this system is disabled. This statistic is incremented for
+               each Tx packet not analyzed by Control Plane Protection due to CPU
+               overload.";
+          }
+          leaf tx-control-plane-passthrough {
+            type uint64;
+            description
+              "When Control Plane Protection is enabled, this statistic is
+               incremented for each packet transmitted on a link that is not
+               overloaded. These packets are sent normally.";
+          }
+          leaf tx-data-plane-drop {
+            type uint64;
+            description
+              "When the Tx ring filling reaches a threshold, packets are inspected
+               by the Control Plane Protection mechanism. This statistic is incremented
+               for packets recognized as DP packets, which are dropped.";
+          }
+        }
+        container gro {
+          vr-ext:rpc-metric "fp-gro-stats";
+          description
+            "The generic receive offload statistics.";
+          leaf current-contexts {
+            type uint64;
+            description
+              "The current number of GRO contexts in processing.";
+          }
+          leaf flushed-contexts {
+            type uint64;
+            description
+              "The number of GRO contexts flushed before timeout.";
+          }
+          leaf timeout-contexts {
+            type uint64;
+            description
+              "The number of GRO contexts flushed by timeout.";
+          }
+          leaf done {
+            type uint64;
+            description
+              "The number of packets merged by GRO module.";
+          }
+          leaf in {
+            type uint64;
+            description
+              "The number of packets entering GRO module.";
+          }
+          leaf out {
+            type uint64;
+            description
+              "The number of packets exiting GRO module.";
+          }
+          leaf per-reassembly-mean {
+            type uint64;
+            description
+              "The mean of packets per GRO reassembly.";
+          }
+        }
+        list statistic {
+          vr-ext:metric-value-list "name value";
+          key "name";
+          description
+            "The driver vendor specific NIC statistics (rx_*, tx_*, etc).";
+          leaf name {
+            type string;
+            description
+              "The statistic name.";
+          }
+          leaf value {
+            type uint64;
+            description
+              "The statistic value.";
+          }
+        }
+      }
+    }
+  }
+  rpc show-metric-fast-path-status {
+    vr-ext:rpc-metric "fp-status";
+    vr-api:internal;
+    description
+      "Kpi for fp-status.";
+    output {
+      leaf value {
+        type uint8;
+        description
+          "The Fast Path status in number.
+           0 - ok, 1 - loaded, 2 - stopped, 3 - bad.";
+      }
+    }
+  }
+  rpc show-fast-path-ports {
+    vr-ext:feature "product";
+    vr-ext:nc-cli-text-output;
+    vr-ext:nc-cli-show "fast-path ports";
+    vr-api:internal;
+    description
+      "Show the fast path handled ports.";
+    output {
+      list port {
+        key "id";
+        description
+          "List of fast-path ports.";
+        leaf id {
+          type uint32;
+          description
+            "Fast-path port identifier.";
+        }
+        leaf name {
+          type string;
+          description
+            "Physical port name.";
+        }
+        leaf interface {
+          type vr-types:ifname;
+          description
+            "Interface name.";
+        }
+        leaf vrf {
+          type vrouter:vrf-name;
+          description
+            "VRF name on which the port is configured.";
+        }
+        leaf driver {
+          type string;
+          description
+            "Port driver name.";
+        }
+      }
+    }
+  }
+  rpc show-fast-path-table-usage {
+    vr-ext:feature "product";
+    vr-ext:nc-cli-show "fast-path table-usage";
+    vr-api:internal;
+    description
+      "Show the fastpath table usage.";
+    output {
+      uses vr-cmd:long-cmd-status;
+      uses vr-cmd:long-cmd-output;
+    }
+  }
+  rpc show-fast-path-arp-parameters {
+    vr-ext:nc-cli-text-output;
+    vr-ext:nc-cli-show "fast-path arp parameters";
+    vr-api:internal;
+    description
+      "Show the fast path ARP parameters.";
+    output {
+      leaf max-queue {
+        type uint32;
+        description
+          "Maximum number of packets queued for the whole address resolution engine
+           (IPv4 and IPv6).";
+      }
+      leaf garbage-collector-threshold {
+        type uint32;
+        description
+          "When the number of neighbors reaches this threshold, every stale entry
+           older than 60 seconds is removed.";
+      }
+      list vrf {
+        key "name";
+        description
+          "List of vrf's.";
+        leaf name {
+          type string;
+          description
+            "VRF name.";
+        }
+        list interface {
+          key "name";
+          description
+            "List of interfaces on the given VRF.";
+          leaf name {
+            type string;
+            description
+              "Interface name.";
+          }
+          leaf enabled {
+            type boolean;
+            description
+              "True if fast path ARP is enabled.";
+          }
+          leaf reachable-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which an ARP entry may stay in 'reachable' state, before
+               becoming 'stale'.";
+          }
+          leaf delay-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration before sending an ARP Request when exiting the state STALE.";
+          }
+          leaf fail-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which an ARP entry may stay in a 'fail' state, before being deleted.
+               Fail state begins when the fast path encountered some error with a specific ARP entry.";
+          }
+          leaf stale-attempts {
+            type uint8;
+            description
+              "Maximum number of times that a 'stale' state ARP entry can timeout before being deleted.";
+          }
+          leaf stale-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "This value multiplied by 'stale-attempts' is the maximum duration for which an ARP entry
+               may stay in a ‘stale’ state.";
+          }
+          leaf probe-attempts {
+            type uint8;
+            description
+              "Maximum number of ARP requests sent for a target IPv4 address.";
+          }
+          leaf probe-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which the fast path should wait for a response to
+               an ARP request.";
+          }
+          leaf max-queue {
+            type uint16;
+            description
+              "Maximum number of packets queued for a target IPv4 address.";
+          }
+          leaf reply-mode {
+            type enumeration {
+              enum "all" {
+                description
+                  "Reply to all requests.";
+              }
+              enum "interface" {
+                description
+                  "Reply to request if the requested IP address
+                   is configured on the incoming interface.";
+              }
+              enum "subnet" {
+                description
+                  "Reply to request if the requester is in the
+                   configured subnet of the requested IP address.";
+              }
+              enum "non-local" {
+                description
+                  "Do not reply to requests for host scope
+                   IP addresses (not implemented).";
+              }
+              enum "none" {
+                description
+                  "Do not reply to any request.";
+              }
+            }
+            description
+              "Specifies requests for which a reply is sent.";
+          }
+          leaf port-filter {
+            type boolean;
+            description
+              "True if fast path ARP should filter packets for which the reverse path port
+               differs from the incoming port.";
+          }
+          leaf accept-gratuitous {
+            type boolean;
+            description
+              "True if fast path should update its ARP cache based on received gratuitous ARP packets.
+               Gratuitous ARP packets are used by hosts to update others system's ARP caches.";
+          }
+          leaf notify-gratuitous {
+            type boolean;
+            description
+              "True if the fast path should send gratuitous packets to other hosts when its
+               own IP-to-MAC mapping is changed.";
+          }
+          leaf proxy {
+            type boolean;
+            description
+              "True if proxy for the fast path ARP is enabled. It allows to respond to ARP
+               requests for another IP address, using the current host MAC address. If it is
+               enabled, the fast path ensures routing to the destination IP.";
+          }
+        }
+      }
+    }
+  }
+  rpc show-fast-path-ndp-parameters {
+    vr-ext:nc-cli-text-output;
+    vr-ext:nc-cli-show "fast-path ndp parameters";
+    vr-api:internal;
+    description
+      "Show the fast path NDP parameters.";
+    output {
+      leaf max-queue {
+        type uint32;
+        description
+          "Maximum number of packets queued for the whole address resolution engine
+           (IPv4 and IPv6).";
+      }
+      leaf garbage-collector-threshold {
+        type uint32;
+        description
+          "When the number of neighbors reaches this threshold, every entry
+           older than 60 seconds is removed.";
+      }
+      leaf garbage-collector-aggressive-threshold {
+        type uint32;
+        description
+          "When the number of neighbors reaches this threshold, every entry
+           older than 5 seconds is removed.";
+      }
+      list vrf {
+        key "name";
+        description
+          "List of VRF.";
+        leaf name {
+          type string;
+          description
+            "VRF name.";
+        }
+        list interface {
+          key "name";
+          description
+            "List of interfaces on the given VRF.";
+          leaf name {
+            type string;
+            description
+              "Interface name.";
+          }
+          leaf enabled {
+            type boolean;
+            description
+              "True if fast path NDP is enabled.";
+          }
+          leaf reachable-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which an NDP entry may stay in 'reachable' state, before
+               becoming 'stale'.";
+          }
+          leaf delay-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration before sending an NDP Request when exiting the state STALE.";
+          }
+          leaf fail-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which an NDP entry may stay in a 'fail' state, before being deleted.
+               Fail state begins when the fast path encountered some error with a specific NDP entry.";
+          }
+          leaf probe-attempts {
+            type uint8;
+            description
+              "Maximum number of NDP requests sent for a target IPv6 address.";
+          }
+          leaf probe-timeout {
+            type uint32;
+            units "milliseconds";
+            description
+              "Maximum duration for which the fast path should wait for a response to
+               an NDP request.";
+          }
+          leaf max-queue {
+            type uint16;
+            description
+              "Maximum number of packets queued for a target IPv6 address.";
+          }
+        }
+      }
+    }
+  }
+  rpc flush-fast-path-conntrack {
+    vr-ext:nc-cli-flush "fast-path conntrack";
+    vr-api:internal;
+    description
+      "Flush fast-path conntracks.";
+    input {
+      uses rpc-conntrack-input;
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc show-fast-path-conntrack {
+    vr-ext:nc-cli-show "fast-path conntrack";
+    vr-api:internal;
+    description
+      "Show fast-path conntracks.";
+    input {
+      leaf max-conntrack {
+        type uint16 {
+          range "1..1000";
+        }
+        description
+          "Number of conntracks to show.";
+      }
+      uses rpc-conntrack-input;
+    }
+    output {
+      uses vr-cmd:cmd-output-buffer;
+    }
+  }
+  rpc flush-fast-path-conntrack-statistics {
+    vr-ext:nc-cli-flush "fast-path conntrack statistics";
+    description
+      "Reset statistics.";
+  }
+  rpc show-fast-path-conntrack-statistics {
+    vr-ext:nc-cli-show "fast-path conntrack statistics";
+    vr-ext:rpc-metric "fp-conntrack-stats";
+    vr-api:internal;
+    description
+      "Show fp-firewall and CG-NAT conntrack statistics.";
+    output {
+      container conntrack {
+        description
+          "Conntrack statistics.";
+        leaf allocations {
+          vr-ext:metric-alias "allocations";
+          type uint64;
+          description
+            "Number of conntrack allocations.";
+        }
+        leaf reverse-connections {
+          vr-ext:metric-alias "reverse-connections";
+          type uint64;
+          description
+            "Number of conntracks tracking a reverse connection.";
+        }
+        leaf destructions {
+          vr-ext:metric-alias "destructions";
+          type uint64;
+          description
+            "Number of conntrack destructions.";
+        }
+        leaf allocation-failures {
+          vr-ext:metric-alias "allocation-failures";
+          type uint64;
+          description
+            "Number of conntrack allocation failures.";
+        }
+        leaf duplicate-races {
+          vr-ext:metric-alias "duplicate-races";
+          type uint64;
+          description
+            "Number of attempts to create a duplicate conntrack. This race occurs when a CPU
+             attempts to create a new conntrack that has already been created by another CPU
+             in the meantime.";
+        }
+      }
+      container dropped-packets {
+        description
+          "Invalid and dropped packet statistics.";
+        container tcp {
+          description
+            "TCP invalid packet statistics.";
+          leaf non-syn-first-packet {
+            vr-ext:metric-alias "tcp-non-syn-first-packet-drops";
+            type uint64;
+            description
+              "Number of TCP conntracks failed due to a non-SYN first packet.";
+          }
+          leaf invalid-sequence-order-rst {
+            vr-ext:metric-alias "tcp-invalid-sequence-order-rst-packet-drops";
+            type uint64;
+            description
+              "Number of dropped out-of-order TCP RST packets (See RFC 5961).";
+          }
+          leaf invalid-state-transition {
+            vr-ext:metric-alias "tcp-invalid-state-transition-packet-drops";
+            type uint64;
+            description
+              "Number of TCP packets dropped due to invalid transitions in the TCP
+               state machine based on the packet's TCP flags.";
+          }
+          leaf out-of-upper-bound-window {
+            vr-ext:metric-alias "tcp-out-of-upper-bound-window-packet-drops";
+            type uint64;
+            description
+              "Number of dropped out-of window TCP packets (upper boundary).";
+          }
+          leaf out-of-lower-bound-window {
+            vr-ext:metric-alias "tcp-out-of-lower-bound-window-packet-drops";
+            type uint64;
+            description
+              "Number of dropped out-of window TCP packets (lower boundary).";
+          }
+          leaf out-of-window-ack {
+            vr-ext:metric-alias "tcp-out-of-window-ack-packet-drops";
+            type uint64;
+            description
+              "Number of TCP ACK packets dropped for acknowledging unsent packets.";
+          }
+        }
+        container ip {
+          description
+            "IP invalid packet statistics.";
+          leaf malformed-header {
+            vr-ext:metric-alias "malformed-ip-header-packet-drops";
+            type uint64;
+            description
+              "Number of packets dropped due to a malformed IP header.";
+          }
+        }
+      }
+    }
+  }
+  rpc show-fast-path-alg-statistics {
+    vr-ext:nc-cli-show "fast-path alg statistics";
+    vr-ext:feature "product";
+    vr-api:internal;
+    description
+      "Show fp-firewall and CG-NAT ALG statistics.";
+    output {
+      container alg {
+        description
+          "ALG statistics.";
+        container dns {
+          description
+            "ALG DNS statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container ftp {
+          description
+            "ALG FTP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container tftp {
+          description
+            "ALG TFTP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container rtsp {
+          description
+            "ALG RTSP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container pptp {
+          description
+            "ALG PPTP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container sip-tcp {
+          description
+            "ALG SIP TCP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container sip-udp {
+          description
+            "ALG SIP UDP statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container h323-ras {
+          description
+            "ALG H323 RAS statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container h323-q931 {
+          description
+            "ALG H323 Q931 statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+        container h323-h245 {
+          description
+            "ALG H323 H245 statistics.";
+          uses rpc-generic-alg-statistics;
+        }
+      }
+    }
+  }
+  rpc flush-fast-path-alg-statistics {
+    vr-ext:nc-cli-flush "fast-path alg statistics";
+    vr-ext:feature "product";
+    vr-api:internal;
+    description
+      "Reset statistics.";
+  }
+  rpc show-fast-path-hash-seed {
+    vr-ext:nc-cli-show "fast-path hash-seed";
+    vr-api:internal;
+    description
+      "Show the fast-path hash seed.";
+    output {
+      leaf hash-seed {
+        type string;
+        description
+          "Hash seed of the fast path.";
+      }
+    }
+  }
+}

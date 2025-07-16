@@ -1,0 +1,321 @@
+module vrouter-commands {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/commands";
+  prefix vrouter-commands;
+  import vrouter-extensions {
+    prefix ext;
+  }
+  import vrouter-api {
+    prefix vr-api;
+  }
+  import vrouter-inet-types {
+    prefix vr-inet;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter background commands management.";
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  grouping long-cmd-output {
+    description
+      "Long command output.";
+    uses cmd-output-buffer;
+    leaf exit-code {
+      ext:nc-cli-command-stopped;
+      ext:nc-cli-hidden;
+      type int8;
+      description
+        "The exit code of the command. If defined, it means that the command
+         is stopped and that its uid cannot be used anymore.";
+    }
+  }
+  grouping cmd-output-buffer {
+    description
+      "Command output buffer.";
+    leaf buffer {
+      ext:nc-cli-stdout;
+      ext:nc-cli-hidden;
+      type string;
+      description
+        "Command output buffer since last request.";
+    }
+  }
+  grouping long-cmd-status {
+    description
+      "Long command status.";
+    leaf status-rpc {
+      ext:nc-cli-hidden;
+      ext:status-rpc;
+      type string;
+      description
+        "XML data to be sent as NETCONF RPC body to get further status
+         for this background command.";
+    }
+    leaf refresh-rpc {
+      ext:nc-cli-hidden;
+      ext:refresh-rpc;
+      type string;
+      description
+        "XML data to be sent as NETCONF RPC body to keep a background
+         command running.";
+    }
+    leaf stop-rpc {
+      ext:nc-cli-hidden;
+      ext:stop-rpc;
+      type string;
+      description
+        "XML data to be sent as NETCONF RPC body to stop this background
+         command.";
+    }
+  }
+  grouping long-api-cmd-input {
+    description
+      "Long API command input.";
+    leaf uid {
+      ext:nc-cli-hidden;
+      type uint64;
+      description
+        "The identifier of the command for subsequent calls.";
+    }
+  }
+  grouping long-api-cmd-output {
+    description
+      "Long API command output.";
+    uses long-cmd-status;
+    uses long-cmd-output;
+    leaf dump-start {
+      ext:nc-cli-dump-start;
+      ext:nc-cli-hidden;
+      type uint32;
+      description
+        "The start of the dump for this call.";
+    }
+    leaf dump-end {
+      ext:nc-cli-dump-end;
+      ext:nc-cli-hidden;
+      type uint32;
+      description
+        "The end of the dump for this call.";
+    }
+    leaf uid {
+      ext:nc-cli-hidden;
+      type uint64;
+      description
+        "The identifier of the command for subsequent calls.";
+    }
+  }
+  rpc convert-to-text {
+    vr-api:internal;
+    description
+      "Convert rpc api output to text.";
+    input {
+      leaf input {
+        type string;
+        mandatory true;
+        description
+          "The params of the initial rpc.";
+      }
+      leaf output {
+        type string;
+        mandatory true;
+        description
+          "The output buffer to be converted.";
+      }
+    }
+    output {
+      uses cmd-output-buffer {
+        description
+          "The api output converted to human readable text.";
+      }
+    }
+  }
+  rpc get-command-status {
+    vr-api:internal;
+    description
+      "Get further status of a command running in the background.";
+    input {
+      leaf uid {
+        type uint64;
+        mandatory true;
+        description
+          "The identifier of the command.";
+      }
+    }
+    output {
+      uses long-cmd-output;
+    }
+  }
+  rpc refresh-command {
+    vr-api:internal;
+    description
+      "Refresh a command ttl running in the background.";
+    input {
+      leaf uid {
+        type uint64;
+        mandatory true;
+        description
+          "The identifier of the command.";
+      }
+    }
+    output {
+      uses long-cmd-output;
+    }
+  }
+  rpc stop-command {
+    vr-api:internal;
+    description
+      "Stop a background command.";
+    input {
+      leaf uid {
+        type uint64;
+        mandatory true;
+        description
+          "The identifier of the command to stop.";
+      }
+    }
+    output {
+      uses long-cmd-output;
+    }
+  }
+  rpc import-command {
+    description
+      "Import VSR configuration file from a specific endpoint.";
+    input {
+      leaf vrf {
+        type string;
+        default "main";
+        description
+          "The VRF to use to connect to the server.";
+      }
+      leaf url {
+        type string;
+        description
+          "URL (ex: ftp://user:password@server/path/to/file).";
+      }
+      leaf file {
+        type string;
+        description
+          "The name of the config file to import.";
+      }
+      leaf source {
+        type vr-inet:ip-address;
+        description
+          "The source address used to reach the remote machine.";
+      }
+    }
+    output {
+      uses long-cmd-status;
+      uses long-cmd-output;
+    }
+  }
+  rpc export-command {
+    description
+      "Export VSR configuration file to a specific endpoint.";
+    input {
+      leaf vrf {
+        type string;
+        default "main";
+        description
+          "The VRF to use to connect to the server.";
+      }
+      leaf url {
+        type string;
+        description
+          "URL (ex: ftp://user:password@server/path/to/file).";
+      }
+      leaf file {
+        type string;
+        description
+          "The name of the config file to export.";
+      }
+      leaf source {
+        type vr-inet:ip-address;
+        description
+          "The source address used to reach the remote machine.";
+      }
+    }
+    output {
+      uses long-cmd-status;
+      uses long-cmd-output;
+    }
+  }
+  rpc get-completion {
+    vr-api:internal;
+    description
+      "Get completion.";
+    output {
+      leaf buffer {
+        type string;
+        description
+          "The command output buffer.";
+      }
+    }
+  }
+  rpc get-features {
+    ext:nc-cli-cmd "get-features";
+    ext:nc-cli-ignore-audit;
+    description
+      "Get features.";
+    output {
+      list feature {
+        key "name";
+        description
+          "The list of features on the device.";
+        leaf name {
+          type string;
+          description
+            "The name of the feature.";
+        }
+        leaf enabled {
+          type boolean;
+          description
+            "The status of the feature.";
+        }
+      }
+    }
+  }
+  rpc show-summary {
+    ext:nc-cli-show "summary";
+    vr-api:internal;
+    description
+      "Show a summary of the system state.";
+    output {
+      uses cmd-output-buffer;
+    }
+  }
+  rpc show-commands {
+    ext:nc-cli-text-output;
+    ext:nc-cli-show "commands";
+    description
+      "Show all available nc-cli commands with the corresponding yang path.";
+    output {
+      list command {
+        key "path";
+        description
+          "The list of nc-cli commands.";
+        leaf path {
+          type string;
+          description
+            "The RPC path.";
+        }
+        leaf nc-cli-command {
+          type string;
+          description
+            "The corresponding nc-cli command name.";
+        }
+        leaf protected {
+          type boolean;
+          description
+            "True if the RPC is protected.";
+        }
+      }
+    }
+  }
+}

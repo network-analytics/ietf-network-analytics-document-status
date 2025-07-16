@@ -1,0 +1,1304 @@
+module vrouter-ip {
+  yang-version 1.1;
+  namespace "urn:6wind:vrouter/ip";
+  prefix vrouter-ip;
+  import vrouter-api {
+    prefix vrouter-api;
+  }
+  import vrouter-extensions {
+    prefix vrouter-extensions;
+  }
+  import vrouter-inet-types {
+    prefix vr-inet;
+  }
+  import vrouter-if-types {
+    prefix vr-if;
+  }
+  organization
+    "6WIND";
+  contact
+    "6WIND support - <support@6wind.com>";
+  description
+    "6WIND vRouter IP groups definitions for interfaces.";
+  revision 2018-10-03 {
+    description
+      "Initial version.";
+    reference
+      "";
+  }
+  typedef ip-address-origin {
+    type enumeration {
+      enum "OTHER" {
+        description
+          "None of the following.";
+      }
+      enum "STATIC" {
+        description
+          "Indicates that the address has been statically
+           configured - for example, using NETCONF or a Command Line
+           Interface.";
+      }
+      enum "DHCP" {
+        description
+          "Indicates an address that has been assigned to this
+           system by a DHCP server.";
+      }
+      enum "LINK_LAYER" {
+        description
+          "Indicates an address created by IPv6 stateless
+           autoconfiguration that embeds a link-layer address in its
+           interface identifier.";
+      }
+      enum "RANDOM" {
+        description
+          "Indicates an address chosen by the system at
+           random, e.g., an IPv4 address within 169.254/16, an
+           RFC 4941 temporary address, or an RFC 7217 semantically
+           opaque address.";
+        reference
+          "RFC 4941: Privacy Extensions for Stateless Address
+                    Autoconfiguration in IPv6
+           RFC 7217: A Method for Generating Semantically Opaque
+                    Interface Identifiers with IPv6 Stateless
+                    Address Autoconfiguration (SLAAC)";
+      }
+    }
+    description
+      "The origin of an address.";
+  }
+  typedef dhcp-request {
+    type enumeration {
+      enum "subnet-mask" {
+        description
+          "Client's subnet mask.";
+      }
+      enum "broadcast-address" {
+        description
+          "Broadcast address in use on the client's subnet.";
+      }
+      enum "time-offset" {
+        description
+          "Offset of the client's subnet in seconds from UTC.";
+      }
+      enum "routers" {
+        description
+          "List of IP addresses for routers on the client's subnet.";
+      }
+      enum "domain-name" {
+        description
+          "Domain name used when resolving hostnames with DNS.";
+      }
+      enum "domain-search" {
+        description
+          "Domain search list used when resolving hostnames with DNS.";
+      }
+      enum "domain-name-servers" {
+        description
+          "List of DNS name servers available to the client.";
+      }
+      enum "host-name" {
+        description
+          "Name of the client.";
+      }
+      enum "nis-domain" {
+        description
+          "Name of the client's NIS (Sun Network Information Services) domain.";
+      }
+      enum "nis-servers" {
+        description
+          "List of IP addresses indicating NIS servers available to the client.";
+      }
+      enum "ntp-servers" {
+        description
+          "List of IP addresses indicating NTP servers available to the client.";
+      }
+      enum "interface-mtu" {
+        description
+          "MTU to use on this interface.";
+      }
+      enum "netbios-name-servers" {
+        description
+          "List of RFC 1001/1002 NBNS name servers.";
+      }
+      enum "netbios-scope" {
+        description
+          "NetBIOS over TCP/IP scope parameter for the client.";
+      }
+    }
+    description
+      "Available DHCP requests.";
+  }
+  typedef dhcp6-request {
+    type enumeration {
+      enum "name-servers" {
+        description
+          "Instruct clients about locally available recursive DNS servers.";
+      }
+      enum "domain-search" {
+        description
+          "Specifies the client's domain search path to be applied to recursive DNS queries.";
+      }
+      enum "fqdn" {
+        description
+          "Specifies the client's fully qualified domain name.";
+      }
+      enum "unicast" {
+        description
+          "The unicast option is provided by DHCPv6 servers which are willing (or prefer) to
+           receive Renew packets from their clients by exchanging UDP unicasts with them.";
+      }
+      enum "sntp-servers" {
+        description
+          "Specifies a list of local SNTP servers available for the client to synchronize their clocks.";
+      }
+    }
+    description
+      "Available DHCPv6 requests.";
+  }
+  typedef neighbor-state {
+    type enumeration {
+      enum "incomplete" {
+        description
+          "Address resolution is in progress, and the link-layer address of the
+           neighbor has not yet been determined.";
+      }
+      enum "reachable" {
+        description
+          "The neighbor is known to have been reachable recently (within tens of
+           seconds ago).";
+      }
+      enum "stale" {
+        description
+          "The neighbor is no longer known to be reachable, but until traffic is
+           sent to the neighbor no attempt should be made to verify its
+           reachability.";
+      }
+      enum "delay" {
+        description
+          "The neighbor is no longer known to be reachable, and traffic has
+           recently been sent to the neighbor.";
+      }
+      enum "probe" {
+        description
+          "The neighbor is no longer known to be reachable, and unicast Neighbor
+           Solicitation probes are being sent to verify reachability.";
+      }
+      enum "failed" {
+        description
+          "The neighbor is no longer configured due to a deletion operation.";
+      }
+      enum "permanent" {
+        description
+          "The neighbor has been statically configured.";
+      }
+      enum "other" {
+        description
+          "The neighbor state is none of the above.";
+      }
+    }
+    description
+      "The Neighbor Unreachability Detection state of this entry.";
+  }
+  grouping ipv4-address-state {
+    description
+      "State variables for IPv4 addresses on the interface.";
+    leaf origin {
+      type ip-address-origin;
+      description
+        "The origin of this address, e.g., statically configured,
+         assigned by DHCP, etc..";
+    }
+  }
+  grouping ipv6-address-state {
+    description
+      "Per-address operational state data for IPv6 interfaces.";
+    leaf origin {
+      type ip-address-origin;
+      description
+        "The origin of this address, e.g., static, dhcp, etc.";
+    }
+    leaf status {
+      type enumeration {
+        enum "PREFERRED" {
+          description
+            "This is a valid address that can appear as the
+             destination or source address of a packet.";
+        }
+        enum "DEPRECATED" {
+          description
+            "This is a valid but deprecated address that should
+             no longer be used as a source address in new
+             communications, but packets addressed to such an
+             address are processed as expected.";
+        }
+        enum "INVALID" {
+          description
+            "This isn't a valid address, and it shouldn't appear
+             as the destination or source address of a packet.";
+        }
+        enum "INACCESSIBLE" {
+          description
+            "The address is not accessible because the interface
+             to which this address is assigned is not
+             operational.";
+        }
+        enum "UNKNOWN" {
+          description
+            "The status cannot be determined for some reason.";
+        }
+        enum "TENTATIVE" {
+          description
+            "The uniqueness of the address on the link is being
+             verified.  Addresses in this state should not be
+             used for general communication and should only be
+             used to determine the uniqueness of the address.";
+        }
+        enum "DUPLICATE" {
+          description
+            "The address has been determined to be non-unique on
+             the link and so must not be used.";
+        }
+        enum "OPTIMISTIC" {
+          description
+            "The address is available for use, subject to
+             restrictions, while its uniqueness on a link is
+             being verified.";
+        }
+      }
+      description
+        "The status of an address.  Most of the states correspond
+         to states from the IPv6 Stateless Address
+         Autoconfiguration protocol.";
+      reference
+        "RFC 4293: Management Information Base for the
+                    Internet Protocol (IP)
+                    - IpAddressStatusTC
+          RFC 4862: IPv6 Stateless Address Autoconfiguration";
+    }
+  }
+  grouping ipv4-address-config {
+    description
+      "Per IPv4 adresss configuration data for the
+       interface.";
+    leaf ip {
+      type union {
+        type vr-inet:ipv4-address;
+        type vr-inet:masked-ipv4-address;
+      }
+      description
+        "The IPv4 address on the interface and optionally its prefix.";
+    }
+  }
+  grouping ipv4-address-config-with-peer {
+    description
+      "Per-address configuration data for IPv4 interfaces with peer address.";
+    uses ipv4-address-config;
+    leaf peer {
+      type vr-inet:ipv4-address;
+      must 'not(contains(../ip, "/"))' {
+        error-message
+          "If a peer is defined the local address cannot provide a prefix";
+      }
+      description
+        "The IPv4 address of the remote endpoint for point to point interfaces.";
+    }
+  }
+  grouping dhcp-client-config {
+    description
+      "Configuration data for DHCP client interfaces.";
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Enable or disable DHCP.";
+    }
+    leaf timeout {
+      type uint32;
+      default "60";
+      description
+        "Time before deciding that it's not going to be able to contact a server.";
+    }
+    leaf retry {
+      type uint32;
+      default "300";
+      description
+        "Time before trying again to contact a DHCP server.";
+    }
+    leaf select-timeout {
+      type uint32;
+      default "0";
+      description
+        "Time at which the client stops waiting for other offers from servers.";
+    }
+    leaf reboot {
+      type uint32;
+      default "10";
+      description
+        "Time after trying to reacquire its old address before trying to discover a new address.";
+    }
+    leaf initial-interval {
+      type uint32;
+      default "10";
+      description
+        "Time between the first attempt to reach a server and the second attempt to reach a server.";
+    }
+    leaf dhcp-lease-time {
+      type uint32;
+      default "7200";
+      description
+        "Requested lease time.";
+    }
+    leaf dhcp-client-identifier-ascii {
+      type string;
+      description
+        "DHCP client identifier (ASCII).";
+    }
+    leaf dhcp-client-identifier-hexa {
+      type string {
+        pattern '[a-fA-F0-9:]+';
+      }
+      description
+        "DHCP client identifier (hexadecimal).";
+    }
+    leaf host-name {
+      type string;
+      description
+        "DHCP client name.";
+    }
+  }
+  grouping dhcp-client-state {
+    description
+      "Operational state data for DHCP client interfaces.";
+    container current-lease {
+      description
+        "Current lease.";
+      leaf fixed-address {
+        type vr-inet:ipv4-address;
+        description
+          "The IPv4 address on the interface.";
+      }
+      leaf renew {
+        type string;
+        description
+          "Time at which the client should begin trying to contact its server to renew its lease.";
+      }
+      leaf rebind {
+        type string;
+        description
+          "Time at which the client should begin to try to contact any dhcp server to renew its lease.";
+      }
+      leaf expire {
+        type string;
+        description
+          "Time at which the client must stop using a lease if it has not been able to renew it.";
+      }
+    }
+  }
+  grouping ipv4-ip-neighbor-config {
+    description
+      "Per IPv4 neighbor configuration data for ip interface.";
+    leaf ip {
+      type vr-inet:ipv4-address;
+      description
+        "The IPv4 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-inet:ip-address;
+      mandatory true;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+  }
+  grouping ipv4-neighbor-config {
+    description
+      "Per IPv4 neighbor configuration data.";
+    leaf ip {
+      type vr-inet:ipv4-address;
+      description
+        "The IPv4 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-if:mac-address;
+      mandatory true;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+  }
+  grouping ipv4-per-interface-parameters {
+    description
+      "IPv4 advanced parameters that can be configured per interface.";
+    leaf send-redirects {
+      type boolean;
+      description
+        "Send ICMP redirect if host is on the same network than gateway.";
+    }
+    leaf accept-redirects {
+      type boolean;
+      description
+        "Accept redirect when acting as a host. It is always disabled when
+         acting as a router. Must be activated at vrf or system level too to be
+         activated.";
+    }
+    leaf accept-source-route {
+      type boolean;
+      description
+        "Accept packets with source route option. Must be activated at vrf or
+         system level too to be activated.";
+    }
+    leaf arp-accept-gratuitous {
+      type enumeration {
+        enum "never" {
+          description
+            "Drop ARP gratuitous packets.";
+        }
+        enum "always" {
+          description
+            "Accept ARP gratuitous packets.";
+        }
+      }
+      description
+        "Define the ARP stack behavior when receiving a gratuitous ARP packet.";
+    }
+    leaf arp-announce {
+      type enumeration {
+        enum "any" {
+          description
+            "Use any local address, configured on any interface.";
+        }
+        enum "avoid-not-in-subnet" {
+          vrouter-extensions:nc-cli-truncated-description;
+          description
+            "Try to avoid local addresses that are not in the target's subnet
+             for this interface. This mode is useful when target hosts reachable
+             via this interface require the source IP address in ARP requests to
+             be part of their logical network configured on the receiving
+             interface. When we generate the request we will check all our
+             subnets that include the target IP and will preserve the source
+             address if it is from such subnet. If there is no such subnet we
+             select source address according to the rules for level 2, 'best-local'.";
+        }
+        enum "best-local" {
+          vrouter-extensions:nc-cli-truncated-description;
+          description
+            "Always use the best local address for this target. In this mode we
+             ignore the source address in the IP packet and try to select local
+             address that we prefer for talks with the target host. Such local
+             address is selected by looking for primary IP addresses on all our
+             subnets on the outgoing interface that include the target IP
+             address. If no suitable local address is found we select the first
+             local address we have on the outgoing interface or on all other
+             interfaces, with the hope we will receive reply for our request and
+             even sometimes no matter the source IP address we announce.";
+        }
+      }
+      description
+        "Define different restriction levels for announcing the local source IP
+         address from IP packets in ARP requests sent on interface.
+         Increasing the restriction level gives more chance for receiving answer
+         from the resolved target while decreasing the level announces more
+         valid sender's information.";
+    }
+    leaf arp-filter {
+      type boolean;
+      description
+        "Allows to have multiple network interfaces on the same subnet, and have
+         the ARPs for each interface be answered based on whether or not the
+         kernel would route a packet from the ARP'd IP out that interface
+         (therefore you must use source based routing for this to work). In
+         other words it allows control of which cards (usually 1) will respond
+         to an arp request.";
+    }
+    leaf arp-ignore {
+      type enumeration {
+        enum "any" {
+          description
+            "Reply for any local target IP address, configured on any
+             interface.";
+        }
+        enum "check-interface" {
+          description
+            "Reply only if the target IP address is local address configured on
+             the incoming interface.";
+        }
+        enum "check-interface-and-subnet" {
+          description
+            "Reply only if the target IP address is local address configured on
+             the incoming interface and both with the sender's IP address are
+             part from same subnet on this interface.";
+        }
+        enum "ignore-scope" {
+          description
+            "Do not reply for local addresses configured with scope host, only
+             resolutions for global and link addresses are replied.";
+        }
+        enum "ignore-all" {
+          description
+            "Do not reply for all local addresses.";
+        }
+      }
+      description
+        "Define different modes for sending replies in response to
+         received ARP requests that resolve local target IP addresses.";
+    }
+    leaf arp-proxy {
+      type boolean;
+      description
+        "Enable ARP proxy.";
+    }
+    leaf log-invalid-addresses {
+      type boolean;
+      description
+        "Log packets with impossible addresses.";
+    }
+  }
+  grouping ipv4-parameters {
+    description
+      "IPv4 advanced parameters.";
+    leaf forwarding {
+      type boolean;
+      description
+        "Enable IP forwarding.";
+    }
+    uses ipv4-per-interface-parameters {
+      refine "accept-redirects" {
+        description
+          "Accept redirect when acting as a host. It is always disabled when
+           acting as a router.";
+      }
+      refine "accept-source-route" {
+        description
+          "Accept packets with source route option.";
+      }
+    }
+  }
+  grouping vrouter-ipv4-common-config {
+    description
+      "Common parameters for the IPv4 address family.";
+    list address {
+      vrouter-extensions:nc-cli-one-liner;
+      key "ip";
+      description
+        "The list of configured IPv4 addresses on the interface.";
+      uses ipv4-address-config-with-peer;
+    }
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Controls whether IPv4 is enabled or disabled on this
+         interface.  When IPv4 is enabled, this interface is
+         connected to an IPv4 stack, and the interface can send
+         and receive IPv4 packets.";
+    }
+  }
+  grouping vrouter-network-stack-parameters {
+    description
+      "Common network stack parameters.";
+    container network-stack {
+      description
+        "Network stack parameters for this interface.";
+      container ipv4 {
+        description
+          "IPv4 parameters.";
+        uses ipv4-per-interface-parameters;
+      }
+      container ipv6 {
+        description
+          "IPv6 parameters.";
+        uses ipv6-per-interface-parameters;
+      }
+      container neighbor {
+        description
+          "Neighbor parameters.";
+        uses neighbor-per-interface-parameters;
+      }
+    }
+  }
+  grouping vrouter-ipv4-config {
+    description
+      "Top-level configuration for IPv4 interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-config;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv4 addresses to
+            link-layer addresses.
+            Entries in this list are used as static entries in the
+            ARP Cache.";
+        reference
+          "RFC 826: An Ethernet Address Resolution Protocol";
+        uses vrouter-ip:ipv4-neighbor-config;
+      }
+      container dhcp {
+        must 'count(dhcp-client-identifier-ascii) + count(dhcp-client-identifier-hexa) <= 1' {
+          error-message
+            "At maximum one of dhcp-client-identifier-ascii or dhcp-client-identifier-hexa must be specified";
+        }
+        presence "Enables DHCP on this interface.";
+        description
+          "DHCP client configuration.";
+        uses dhcp-client-config;
+        leaf-list request {
+          type dhcp-request;
+          default "subnet-mask";
+          default "broadcast-address";
+          default "time-offset";
+          default "routers";
+          default "domain-name";
+          default "domain-search";
+          default "domain-name-servers";
+          default "host-name";
+          default "nis-domain";
+          default "nis-servers";
+          default "ntp-servers";
+          default "interface-mtu";
+          description
+            "DHCP requests.";
+        }
+      }
+    }
+  }
+  grouping vrouter-ipv4-ptp-config {
+    description
+      "Top-level configuration for IPv4 point to point interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-config;
+    }
+  }
+  grouping vrouter-ipv4-ptm-config {
+    description
+      "Top-level configuration for IPv4 point to multipoint interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-config;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv4 addresses to
+            link-layer addresses.";
+        uses vrouter-ip:ipv4-ip-neighbor-config;
+      }
+    }
+  }
+  grouping ipv4-ip-neighbor-state {
+    description
+      "Per-neighbor state for IPv4 interfaces for ip interface.";
+    leaf ip {
+      type vr-inet:ipv4-address;
+      description
+        "The IPv4 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-inet:ip-address;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+    leaf state {
+      type neighbor-state;
+      mandatory true;
+      description
+        "The state of this neighbor entry.";
+    }
+  }
+  grouping ipv4-neighbor-state {
+    description
+      "Per-neighbor state for IPv4 interfaces.";
+    leaf ip {
+      type vr-inet:ipv4-address;
+      description
+        "The IPv4 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-if:mac-address;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+    leaf state {
+      type neighbor-state;
+      mandatory true;
+      description
+        "The state of this neighbor entry.";
+    }
+  }
+  grouping vrouter-ipv4-common-state {
+    description
+      "Common arameters for the IPv4 address family.";
+    list address {
+      vrouter-extensions:nc-cli-one-liner;
+      key "ip";
+      description
+        "The list of configured IPv4 addresses on the interface.";
+      uses ipv4-address-config-with-peer;
+      uses ipv4-address-state;
+    }
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Controls whether IPv4 is enabled or disabled on this
+         interface.  When IPv4 is enabled, this interface is
+         connected to an IPv4 stack, and the interface can send
+         and receive IPv4 packets.";
+    }
+  }
+  grouping vrouter-ipv4-state {
+    description
+      "Top-level state for IPv4 interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-state;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv4 addresses to
+            link-layer addresses.
+            Entries in this list are used as static entries in the
+            ARP Cache.";
+        reference
+          "RFC 826: An Ethernet Address Resolution Protocol";
+        uses vrouter-ip:ipv4-neighbor-state;
+      }
+      container dhcp {
+        description
+          "DHCP client configuration.";
+        uses dhcp-client-config;
+        uses dhcp-client-state;
+        leaf-list request {
+          type dhcp-request;
+          description
+            "DHCP requests.";
+        }
+      }
+    }
+  }
+  grouping vrouter-ipv4-ptp-state {
+    description
+      "Top-level state for IPv4 point to point interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-state;
+    }
+  }
+  grouping vrouter-ipv4-ptm-state {
+    description
+      "Top-level state for IPv4 point to point interfaces.";
+    container ipv4 {
+      description
+        "Parameters for the IPv4 address family.";
+      uses vrouter-ipv4-common-state;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv4 addresses to
+            link-layer addresses.";
+        uses vrouter-ip:ipv4-ip-neighbor-state;
+      }
+    }
+  }
+  grouping ipv6-address-config {
+    description
+      "Per-address configuration data for IPv6 interfaces.";
+    leaf ip {
+      type union {
+        type vr-inet:ipv6-address;
+        type vr-inet:masked-ipv6-address;
+      }
+      description
+        "The IPv6 address on the interface.";
+    }
+  }
+  grouping ipv6-address-config-with-peer {
+    description
+      "Per-address configuration data for IPv6 interfaces with peer address.";
+    uses ipv6-address-config;
+    leaf peer {
+      type vr-inet:ipv6-address;
+      must 'not(contains(../ip, "/"))' {
+        error-message
+          "If a peer is defined the local address cannot provide a prefix";
+      }
+      description
+        "The IPv6 address of the remote endpoint for point to point interfaces.";
+    }
+  }
+  grouping ipv6-ip-neighbor-config {
+    description
+      "Per IPv6 neighbor configuration data for ip interface.";
+    leaf ip {
+      type vr-inet:ipv6-address;
+      description
+        "The IPv6 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-inet:ip-address;
+      mandatory true;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+  }
+  grouping ipv6-neighbor-config {
+    description
+      "Per-neighbor configuration data for IPv6 interfaces.";
+    leaf ip {
+      type vr-inet:ipv6-address;
+      description
+        "The IPv6 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-if:mac-address;
+      mandatory true;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+  }
+  grouping neighbor-per-interface-parameters {
+    description
+      "ARP/NDP advanced parameters that can be configured per interface.";
+    leaf ipv4-base-reachable-time {
+      type uint32;
+      units "seconds";
+      description
+        "Time during which an IPv4 neighbor entry stays reachable.";
+    }
+    leaf ipv6-base-reachable-time {
+      type uint32;
+      units "seconds";
+      description
+        "Time during which an IPv6 neighbor entry stays reachable.";
+    }
+  }
+  grouping ipv6-per-interface-parameters {
+    description
+      "IPv6 advanced parameters that can be configured per interface.";
+    leaf autoconfiguration {
+      type boolean;
+      description
+        "Autoconfigure addresses using Prefix Information in Router
+         Advertisements.";
+    }
+    leaf accept-duplicate-address-detection {
+      type enumeration {
+        enum "never" {
+          description
+            "Disable DAD.";
+        }
+        enum "always" {
+          description
+            "Enable DAD.";
+        }
+        enum "disable-ipv6-on-dad-fail" {
+          description
+            "Enable DAD, and disable IPv6 operation if MAC-based duplicate link-local address has been found.";
+        }
+      }
+      description
+        "Accept Duplicate Address Detection (DAD).";
+    }
+    leaf accept-router-advert {
+      type enumeration {
+        enum "never" {
+          description
+            "Do not accept Router Advertisements.";
+        }
+        enum "norouter-mode" {
+          description
+            "Accept Router Advertisements if forwarding is disabled.";
+        }
+        enum "always" {
+          description
+            "Accept Router Advertisements even if forwarding is enabled.";
+        }
+      }
+      description
+        "Accept Router Advertisements.";
+    }
+    leaf accept-redirects {
+      type boolean;
+      description
+        "Accept redirect when acting as a host. It is always disabled when
+         acting as a router.";
+    }
+    leaf accept-segment-routing {
+      type boolean;
+      description
+        "Accept Segment Routing IPv6 packets.";
+    }
+    leaf accept-source-route {
+      type boolean;
+      description
+        "Accept packets with source route option.";
+    }
+    leaf router-solicitations {
+      type int16 {
+        range "-1..8192";
+      }
+      description
+        "Number of Router Solicitations to send until assuming no
+         routers are present.";
+    }
+    leaf use-temporary-addresses {
+      type enumeration {
+        enum "never" {
+          description
+            "Disable Privacy Extensions, i.e. use the public address, subnet
+             prefix/interface id, where interface id is always the same.";
+        }
+        enum "prefer-public-addresses" {
+          description
+            "Enable Privacy Extensions, but prefer public addresses over
+             temporary addresses.";
+        }
+        enum "always" {
+          description
+            "Enable Privacy Extensions and prefer temporary addresses over
+             public addresses.";
+        }
+      }
+      description
+        "Preference for Privacy Extensions (RFC4941). Not applied to
+         point-to-point and loopback devices (always 0).";
+    }
+  }
+  grouping ipv6-parameters {
+    description
+      "IPv6 advanced parameters.";
+    leaf forwarding {
+      type boolean;
+      description
+        "Enable IPv6 forwarding.";
+    }
+    leaf max-cached-routes {
+      type uint32;
+      description
+        "Maximum number of ipv6 cached routes.";
+    }
+    uses ipv6-per-interface-parameters;
+  }
+  grouping vrouter-ipv6-common-config {
+    description
+      "Common Parameters for the IPv6 address family.";
+    list address {
+      vrouter-extensions:nc-cli-one-liner;
+      key "ip";
+      description
+        "The list of configured IPv6 addresses on the interface.";
+      uses ipv6-address-config-with-peer;
+    }
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Controls whether IPv6 is enabled or disabled on this
+         interface.  When IPv6 is enabled, this interface is
+         connected to an IPv6 stack, and the interface can send
+         and receive IPv6 packets.";
+    }
+  }
+  grouping dhcp6-client-config {
+    description
+      "Configuration data for DHCPv6 client interfaces.";
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Enable or disable DHCPv6.";
+    }
+    leaf timeout {
+      type uint32;
+      default "60";
+      description
+        "Time before deciding that it's not going to be able to contact a server.";
+    }
+    leaf retry {
+      type uint32;
+      default "300";
+      description
+        "Time before trying again to contact a DHCPv6 server.";
+    }
+    leaf select-timeout {
+      type uint32;
+      default "0";
+      description
+        "Time at which the client stops waiting for other offers from servers.";
+    }
+    leaf reboot {
+      type uint32;
+      default "10";
+      description
+        "Time after trying to reacquire its old address before trying to discover a new address.";
+    }
+    leaf initial-interval {
+      type uint32;
+      default "10";
+      description
+        "Time between the first attempt to reach a server and the second attempt to reach a server.";
+    }
+    leaf dhcp-client-identifier-ascii {
+      type string;
+      description
+        "DHCPv6 client identifier (ASCII).";
+    }
+    leaf dhcp-client-identifier-hexa {
+      type string {
+        pattern '[a-fA-F0-9:]+';
+      }
+      description
+        "DHCPv6 client identifier (hexadecimal).";
+    }
+    leaf host-name {
+      type string;
+      description
+        "DHCPv6 client name.";
+    }
+    leaf query-ia-address {
+      type boolean;
+      default "true";
+      description
+        "Enable or disable identity association for non-temporary addresses
+         (IA_NA) queries.";
+    }
+    leaf prefix-delegation {
+      type boolean;
+      default "false";
+      description
+        "Enable or disable prefix delegation.";
+    }
+  }
+  grouping dhcp6-client-state {
+    description
+      "Operational state data for DHCPv6 client interfaces.";
+    container current-lease {
+      description
+        "Current lease.";
+      leaf ia-address {
+        type vr-inet:ipv6-address;
+        description
+          "The IPv6 address on the interface.";
+      }
+      leaf renew {
+        type string;
+        description
+          "Time at which the client should begin trying to contact its server to renew its lease.";
+      }
+      leaf rebind {
+        type string;
+        description
+          "Time at which the client should begin to try to contact any dhcp server to renew its lease.";
+      }
+      leaf start {
+        type uint32;
+        units "seconds";
+        description
+          "Time at which the IPv6 address has been assigned (in seconds since EPOCH).";
+      }
+      leaf preferred-lifetime {
+        type uint32;
+        units "seconds";
+        description
+          "Preferred lifetime of the lease.";
+      }
+      leaf max-lifetime {
+        type uint32;
+        units "seconds";
+        description
+          "Maximum lifetime of the lease.";
+      }
+    }
+  }
+  grouping vrouter-ipv6-config {
+    description
+      "Top-level configuration for IPv6 interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-config;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "List of IPv6 neighbors.";
+        uses vrouter-ip:ipv6-neighbor-config;
+      }
+      container dhcp {
+        vrouter-api:must-added "query-ia-address = 'true' or prefix-delegation = 'true'";
+        must 'count(dhcp-client-identifier-ascii) + count(dhcp-client-identifier-hexa) <= 1' {
+          error-message
+            "At maximum one of dhcp-client-identifier-ascii or dhcp-client-identifier-hexa must be specified";
+        }
+        must "query-ia-address = 'true' or prefix-delegation = 'true'" {
+          error-message
+            "At least an address or a prefix must be requested.";
+        }
+        presence "Enables DHCPv6 on this interface.";
+        description
+          "DHCPv6 client configuration.";
+        uses dhcp6-client-config;
+        leaf-list request {
+          type dhcp6-request;
+          default "name-servers";
+          default "domain-search";
+          description
+            "DHCPv6 requests.";
+        }
+      }
+    }
+  }
+  grouping vrouter-ipv6-ptp-config {
+    description
+      "Top-level configuration for IPv6 point to point interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-config;
+    }
+  }
+  grouping vrouter-ipv6-ptm-config {
+    description
+      "Top-level configuration for IPv6 point to multipoint interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-config;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv6 addresses to
+            link-layer addresses.";
+        uses vrouter-ip:ipv6-ip-neighbor-config;
+      }
+    }
+  }
+  grouping ipv6-ip-neighbor-state {
+    description
+      "Per-neighbor state for IPv6 interfaces for ip interface.";
+    leaf ip {
+      type vr-inet:ipv6-address;
+      description
+        "The IPv6 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-inet:ip-address;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+    leaf state {
+      type neighbor-state;
+      mandatory true;
+      description
+        "The state of this neighbor entry.";
+    }
+  }
+  grouping ipv6-neighbor-state {
+    description
+      "Per-neighbor state for IPv6 interfaces.";
+    leaf ip {
+      type vr-inet:ipv6-address;
+      description
+        "The IPv6 address of the neighbor node.";
+    }
+    leaf link-layer-address {
+      type vr-if:mac-address;
+      description
+        "The link-layer address of the neighbor node.";
+    }
+    leaf router {
+      type boolean;
+      default "false";
+      description
+        "Indicates that the neighbor node acts as a router.";
+    }
+    leaf state {
+      type neighbor-state;
+      mandatory true;
+      description
+        "The state of this neighbor entry.";
+    }
+  }
+  grouping vrouter-ipv6-common-state {
+    description
+      "Common Parameters for the IPv6 address family.";
+    list address {
+      vrouter-extensions:nc-cli-one-liner;
+      key "ip";
+      description
+        "The list of configured IPv6 addresses on the interface.";
+      uses ipv6-address-config-with-peer;
+      uses ipv6-address-state;
+    }
+    leaf enabled {
+      type boolean;
+      default "true";
+      description
+        "Controls whether IPv6 is enabled or disabled on this
+         interface.  When IPv6 is enabled, this interface is
+         connected to an IPv6 stack, and the interface can send
+         and receive IPv6 packets.";
+    }
+  }
+  grouping vrouter-ipv6-state {
+    description
+      "Top-level state for IPv6 interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-state;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "List of IPv6 neighbors.";
+        uses vrouter-ip:ipv6-neighbor-state;
+      }
+      container dhcp {
+        description
+          "DHCPv6 client configuration.";
+        uses dhcp6-client-config;
+        uses dhcp6-client-state;
+        leaf-list request {
+          type dhcp6-request;
+          description
+            "DHCPv6 requests.";
+        }
+      }
+    }
+  }
+  grouping vrouter-ipv6-ptp-state {
+    description
+      "Top-level state for IPv6 point to point interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-state;
+    }
+  }
+  grouping vrouter-ipv6-ptm-state {
+    description
+      "Top-level state for IPv6 point to multipoint interfaces.";
+    container ipv6 {
+      description
+        "Parameters for the IPv6 address family.";
+      uses vrouter-ipv6-common-state;
+      list neighbor {
+        vrouter-extensions:nc-cli-one-liner;
+        key "ip";
+        description
+          "A list of mappings from IPv6 addresses to
+            link-layer addresses.";
+        uses vrouter-ip:ipv6-ip-neighbor-state;
+      }
+    }
+  }
+}

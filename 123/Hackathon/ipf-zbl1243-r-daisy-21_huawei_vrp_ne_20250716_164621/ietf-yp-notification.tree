@@ -1,0 +1,5 @@
+module: ietf-yp-notification
+
+  augment /sn:subscriptions:
+    +--rw enable-notification-envelope?   boolean
+    +--rw metadata
