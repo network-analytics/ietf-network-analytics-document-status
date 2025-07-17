@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:c44f0caf-c578-4a4c-96d4-a28eb1038e7c">
+	<data>
+		<system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+			<datastore-capabilities>
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:startup</datastore>
+				<per-node-capabilities>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>4294967295</max-nodes-per-update>
+						<periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+						<minimum-update-period>0</minimum-update-period>
+						<on-change-supported>config-changes state-changes</on-change-supported>
+						<minimum-dampening-period>0</minimum-dampening-period>
+						<supported-excluded-change-type>all</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+			</datastore-capabilities>
+			<datastore-capabilities>
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running</datastore>
+				<per-node-capabilities>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>4294967295</max-nodes-per-update>
+						<periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+						<minimum-update-period>0</minimum-update-period>
+						<on-change-supported>config-changes state-changes</on-change-supported>
+						<minimum-dampening-period>0</minimum-dampening-period>
+						<supported-excluded-change-type>all</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+			</datastore-capabilities>
+			<datastore-capabilities>
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:candidate</datastore>
+				<per-node-capabilities>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>4294967295</max-nodes-per-update>
+						<periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+						<minimum-update-period>0</minimum-update-period>
+						<on-change-supported>config-changes state-changes</on-change-supported>
+						<minimum-dampening-period>0</minimum-dampening-period>
+						<supported-excluded-change-type>all</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+			</datastore-capabilities>
+			<datastore-capabilities>
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+				<per-node-capabilities>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>4294967295</max-nodes-per-update>
+						<periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+						<minimum-update-period>0</minimum-update-period>
+						<on-change-supported>config-changes state-changes</on-change-supported>
+						<minimum-dampening-period>0</minimum-dampening-period>
+						<supported-excluded-change-type>all</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+			</datastore-capabilities>
+			<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+				<max-nodes-per-update>4294967295</max-nodes-per-update>
+				<periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+				<minimum-update-period>0</minimum-update-period>
+				<on-change-supported>config-changes state-changes</on-change-supported>
+				<minimum-dampening-period>0</minimum-dampening-period>
+				<supported-excluded-change-type>all</supported-excluded-change-type>
+				<yang-push-module-revision-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">true</yang-push-module-revision-supported>
+				<yang-push-observation-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-observation">true</yang-push-observation-supported>
+				<transport-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-transport-capabilities">
+					<transport-capability>
+						<transport-protocol xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport-protocol>
+						<security-protocol>dtls12</security-protocol>
+						<security-protocol>dtls13</security-protocol>
+						<encoding-format xmlns:sn="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">sn:encode-json</encoding-format>
+						<encoding-format xmlns:sn="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">sn:encode-xml</encoding-format>
+						<encoding-format xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:encode-cbor</encoding-format>
+					</transport-capability>
+				</transport-capabilities>
+			</subscription-capabilities>
+		</system-capabilities>
+	</data>
+</rpc-reply>

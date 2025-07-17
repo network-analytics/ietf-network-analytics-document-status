@@ -1,0 +1,22 @@
+Failed to retrieve YANG Push configuration.
+--- TEST 1: netconf_get_sw_version - FAILED: get-version.xml not found for vendor 6wind in ./vendors/6wind/get-version.xml 
+nor in base folder ./vendors/get-version.xml. 
+This seems a generic or vendor specific test not supported by the 
+seleceted vendor 6wind.
+Error: a bytes-like object is required, not 'NoneType'
+Error in NC config: Node "receiver-instance" to be deleted does not exist.
+Error: Node "receiver-instance" to be deleted does not exist.
+Error during get-ietf-notification-capabilities.xml: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:82ce3def-cbc9-4955-acd3-c09bd17e4f7e">
+	<data/>
+</rpc-reply>
+--- TEST 4: netconf_get_ietf_notification_capabilities - FAILED: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:82ce3def-cbc9-4955-acd3-c09bd17e4f7e">
+	<data/>
+</rpc-reply>
+Error in NC RPC: The requested module was not found.
+Error during get-schema-ietf-notification-transport-capabilities.xml: The requested module was not found.
+--- TEST 10: netconf_get_schema_ietf_notification_transport_capabilities - FAILED: The requested module was not found.
+Error: a bytes-like object is required, not 'NoneType'
+Error in NC config: Node "receiver-instance" to be deleted does not exist.
+Error: Node "receiver-instance" to be deleted does not exist.

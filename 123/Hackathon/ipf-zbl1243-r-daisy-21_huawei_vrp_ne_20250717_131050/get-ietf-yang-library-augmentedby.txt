@@ -1,0 +1,3027 @@
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:cb2a2275-2f4b-4fad-a2ee-9261646bbf6d">
+	<data>
+		<yang-library xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+			<module-set>
+				<name>config-module</name>
+				<module>
+					<name>openconfig-acl</name>
+				</module>
+				<module>
+					<name>openconfig-interfaces</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-openconfig-qos-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-vlan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-transceiver</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-port</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-tunnel</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-ip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-ethernet</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-aggregate</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-lacp</name>
+				</module>
+				<module>
+					<name>openconfig-lldp</name>
+				</module>
+				<module>
+					<name>openconfig-network-instance</name>
+				</module>
+				<module>
+					<name>openconfig-platform</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-transceiver</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-psu</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-port</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-linecard</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-fan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-platform-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-alarms</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-routing-policy</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-ospf-policy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-isis-policy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-bgp-policy</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-spanning-tree</name>
+				</module>
+				<module>
+					<name>openconfig-system</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-system-grpc</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-telemetry</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-openconfig-telemetry-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-aaa</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-user-manage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-rui</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-aaa-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-acl</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-acl-ucl</augmented-by>
+				</module>
+				<module>
+					<name>huawei-acl-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-apn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-apn-isolation</augmented-by>
+				</module>
+				<module>
+					<name>huawei-arp</name>
+				</module>
+				<module>
+					<name>huawei-arp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bd</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-bd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mirror</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macacc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-flapping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipv6-nd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bd-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-arp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bfd</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd-static-vpws</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd-static-vpls</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd-static-mpls-te</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bfd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-vpnv4mcast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-vpntarget</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-srpolicy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-rpd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-routing-table</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-mvpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-mdt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-link-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-l2vpnad</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-ipv6-srpolicy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-flow</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-epe</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bgp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-lsp</name>
+				</module>
+				<module>
+					<name>huawei-bier</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bier-fwd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bier-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bier-fwd</name>
+				</module>
+				<module>
+					<name>huawei-bier-fwd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bier-global</name>
+				</module>
+				<module>
+					<name>huawei-bmp</name>
+				</module>
+				<module>
+					<name>huawei-bras-auto-save</name>
+				</module>
+				<module>
+					<name>huawei-bras-auto-save-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-basic-access</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-bras</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-wlan-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-web-authen</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-vas</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-user-manage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-static-user</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-pppox-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-multicast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-local-backup</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-ipv6-basic-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-http-redirect</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-dot1x-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-dhcpv6-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-dhcp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-cgn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-auto-save</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-basic-access-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-cgn</name>
+				</module>
+				<module>
+					<name>huawei-bras-cgn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-chasten</name>
+				</module>
+				<module>
+					<name>huawei-bras-chasten-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-cu-agent</name>
+				</module>
+				<module>
+					<name>huawei-bras-cu-agent-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcp-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcp-access-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcp-server</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcp-server-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcpv6-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcpv6-access-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-dhcpv6-server</name>
+				</module>
+				<module>
+					<name>huawei-bras-diameter</name>
+				</module>
+				<module>
+					<name>huawei-bras-dot1x-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-dynacl</name>
+				</module>
+				<module>
+					<name>huawei-bras-health-center</name>
+				</module>
+				<module>
+					<name>huawei-bras-health-center-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-http-redirect</name>
+				</module>
+				<module>
+					<name>huawei-bras-https-redirect</name>
+				</module>
+				<module>
+					<name>huawei-bras-https-redirect-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv4-address-manage</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-user-manage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-ipv6-address-manage</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-ipv4-address-manage-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv6-address-manage</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv6-address-manage-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv6-basic-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-l2tp-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-l2tp-access-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-layer3-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-local-backup</name>
+				</module>
+				<module>
+					<name>huawei-bras-multicast</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-multicast-fwd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-multicast-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-multicast-fwd</name>
+				</module>
+				<module>
+					<name>huawei-bras-pppox-access</name>
+				</module>
+				<module>
+					<name>huawei-bras-pppox-access-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-python-script</name>
+				</module>
+				<module>
+					<name>huawei-bras-python-script-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-qos</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-bras</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-qos-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-rui</name>
+				</module>
+				<module>
+					<name>huawei-bras-said</name>
+				</module>
+				<module>
+					<name>huawei-bras-static-user</name>
+				</module>
+				<module>
+					<name>huawei-bras-static-user-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-user-manage</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-soc-bras</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-user-manage-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-user-statistic</name>
+				</module>
+				<module>
+					<name>huawei-bras-user-statistic-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-vas</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-https-redirect</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-http-redirect</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-vas-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-vpn</name>
+				</module>
+				<module>
+					<name>huawei-bras-web-authen</name>
+				</module>
+				<module>
+					<name>huawei-bras-web-authen-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-wlan-access</name>
+				</module>
+				<module>
+					<name>huawei-capture</name>
+				</module>
+				<module>
+					<name>huawei-capture-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cfg</name>
+				</module>
+				<module>
+					<name>huawei-cfg-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cgn</name>
+				</module>
+				<module>
+					<name>huawei-cgn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cgn-dslite</name>
+				</module>
+				<module>
+					<name>huawei-cgn-dslite-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cgn-map</name>
+				</module>
+				<module>
+					<name>huawei-cgn-nat444</name>
+				</module>
+				<module>
+					<name>huawei-cgn-nat444-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cgn-nat64</name>
+				</module>
+				<module>
+					<name>huawei-cgn-nat64-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cli</name>
+				</module>
+				<module>
+					<name>huawei-cli-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-1588v2</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-1588v2-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-phy</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-phy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-ptpadapt</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-ptpadapt-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cpudefend</name>
+				</module>
+				<module>
+					<name>huawei-cpudefend-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-crypto</name>
+				</module>
+				<module>
+					<name>huawei-crypto-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cusp-agent</name>
+				</module>
+				<module>
+					<name>huawei-dcn</name>
+				</module>
+				<module>
+					<name>huawei-dcn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-debug</name>
+				</module>
+				<module>
+					<name>huawei-debug-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-device-lock</name>
+				</module>
+				<module>
+					<name>huawei-devm</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-y1731-statistics</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-soc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-sflow</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-pfc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-board</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ppp-net</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pic</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pbr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-netstream</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicore</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward-devm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mirror</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-loadbalance</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2tpv3-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-host-defend</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fwd-engine</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flowspec-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fim-devm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fib</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-driver</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cpudefend</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clockboard</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-pppox-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-https-redirect</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-dhcpv6-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-devm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-dhcp</name>
+				</module>
+				<module>
+					<name>huawei-dhcp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-dhcpv6</name>
+				</module>
+				<module>
+					<name>huawei-dhcpv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-direct-route-vlink</name>
+				</module>
+				<module>
+					<name>huawei-direct-route-vlink-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-dns</name>
+				</module>
+				<module>
+					<name>huawei-driver</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pic</augmented-by>
+				</module>
+				<module>
+					<name>huawei-driver-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-dsa</name>
+				</module>
+				<module>
+					<name>huawei-dsvpn-nhrp</name>
+				</module>
+				<module>
+					<name>huawei-dsvpn-nhrp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-eai-service</name>
+				</module>
+				<module>
+					<name>huawei-eai-service-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ecc</name>
+				</module>
+				<module>
+					<name>huawei-efm</name>
+				</module>
+				<module>
+					<name>huawei-efm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-emdi</name>
+				</module>
+				<module>
+					<name>huawei-emdi-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-erps</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-erps-fwd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-erps-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-esqm</name>
+				</module>
+				<module>
+					<name>huawei-esqm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ethernet</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vlan-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-smartlink</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mstp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macacc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-flapping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2pt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gvrp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fim-ethernet</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ethernet-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-erps</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-vpn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ethernet-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-etrunk</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rbs</augmented-by>
+				</module>
+				<module>
+					<name>huawei-etrunk-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-evpl</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-evpl</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpl-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-evpl-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-evpn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-flapping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-evpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-evpn-srv6</name>
+				</module>
+				<module>
+					<name>huawei-evpn-srv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fei</name>
+				</module>
+				<module>
+					<name>huawei-fei-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fib</name>
+				</module>
+				<module>
+					<name>huawei-fib-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-flexe</name>
+				</module>
+				<module>
+					<name>huawei-flexe-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-flow-recognition</name>
+				</module>
+				<module>
+					<name>huawei-flowspec</name>
+				</module>
+				<module>
+					<name>huawei-flowspec-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-flowspec-forward</name>
+				</module>
+				<module>
+					<name>huawei-flowspec-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fm</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-driver-fm</augmented-by>
+				</module>
+				<module>
+					<name>huawei-fm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ftpc</name>
+				</module>
+				<module>
+					<name>huawei-ftpc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ftps</name>
+				</module>
+				<module>
+					<name>huawei-gre-fwd</name>
+				</module>
+				<module>
+					<name>huawei-gre-fwd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-grpc</name>
+				</module>
+				<module>
+					<name>huawei-grpc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-gvrp</name>
+				</module>
+				<module>
+					<name>huawei-hips</name>
+				</module>
+				<module>
+					<name>huawei-hips-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-host-defend</name>
+				</module>
+				<module>
+					<name>huawei-host-defend-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-http</name>
+				</module>
+				<module>
+					<name>huawei-http-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-hwtacacs</name>
+				</module>
+				<module>
+					<name>huawei-hwtacacs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-interfaces-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-acm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-routing-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-snmp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-subscribed-notifications-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifit</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifit-statistics</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifit-common</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ifm</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-y1731</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vrrp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vlan-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vlan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-tunnel-management</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-stamp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-sflow</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-routing</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rbs</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-pfc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-eth-bn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ppp-net</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pp4</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pic</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pbr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3-statistics</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-netstream</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-net-slice</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-bas</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-monitor-group</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mirror</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macsec</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macacc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-loopdetect</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-loadbalance</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-lldp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-lacp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-vll-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2cpmanagement</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipv6-nd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ippmmgr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifm-trunk</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifm-fr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifit-common</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-host-defend</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gre-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gre</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flowspec-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flow-recognition</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fim-ifm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ethernet</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-esqm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-emdi</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-efm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-direct-route-vlink</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcpv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dcn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cpudefend</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clocksync-ptpadapt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clocksync-phy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clocksync-gps</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clocksync-comm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-clocksync-1588v2</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-nat444</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-pppox-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-cu-agent</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bfd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-arp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-apn-isolation</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ifm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifm-trunk</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pic</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-lacp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fim-ifmtrunk</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ifm-trunk-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ippmmgr</name>
+				</module>
+				<module>
+					<name>huawei-ippmmgr-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ipsec</name>
+				</module>
+				<module>
+					<name>huawei-ipsec-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ipv6-nd</name>
+				</module>
+				<module>
+					<name>huawei-ipv6-nd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-isis</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-isis-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-isis-sr</augmented-by>
+				</module>
+				<module>
+					<name>huawei-isis-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-keychain</name>
+				</module>
+				<module>
+					<name>huawei-keychain-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2cpmanagement</name>
+				</module>
+				<module>
+					<name>huawei-l2cpmanagement-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2pt</name>
+				</module>
+				<module>
+					<name>huawei-l2pt-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2tpv3</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-l2vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mstp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macacc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-flapping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-lpt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-vpls-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-vll-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-extension</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2protocol-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcp-l2vpn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-l2vpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l3-multicast</name>
+				</module>
+				<module>
+					<name>huawei-l3-multicast-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l3vpn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-routing</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ospfv2</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mvpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-isis</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-direct-route-vlink</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-ipv4-address-manage</augmented-by>
+				</module>
+				<module>
+					<name>huawei-l3vpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-lacp</name>
+				</module>
+				<module>
+					<name>huawei-lacp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-license</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-board</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pic</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-macsec</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fim-lcs</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-driver</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-pcp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-dslite</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-apn-license</augmented-by>
+				</module>
+				<module>
+					<name>huawei-license-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-lldp</name>
+				</module>
+				<module>
+					<name>huawei-lldp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-lmp</name>
+				</module>
+				<module>
+					<name>huawei-loadbalance</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward-devm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ippmmgr</augmented-by>
+				</module>
+				<module>
+					<name>huawei-loadbalance-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-loopdetect</name>
+				</module>
+				<module>
+					<name>huawei-loopdetect-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mac</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-mac-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mac-flapping</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-macsec</name>
+				</module>
+				<module>
+					<name>huawei-macsec-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-masterkey</name>
+				</module>
+				<module>
+					<name>huawei-masterkey-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mc-timestamp-refresh</name>
+				</module>
+				<module>
+					<name>huawei-mirror</name>
+				</module>
+				<module>
+					<name>huawei-mirror-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-monitor-group</name>
+				</module>
+				<module>
+					<name>huawei-mpls</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pp4</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-static</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-ldp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-lsp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-mpls-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-in-udp</name>
+				</module>
+				<module>
+					<name>huawei-mpls-res</name>
+				</module>
+				<module>
+					<name>huawei-mplsoam</name>
+				</module>
+				<module>
+					<name>huawei-mplsoam-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mplstpoam</name>
+				</module>
+				<module>
+					<name>huawei-mplstpoam-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mstp</name>
+				</module>
+				<module>
+					<name>huawei-mstp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-multicast</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pim</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-msdp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld</augmented-by>
+				</module>
+				<module>
+					<name>huawei-multicast-forward</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-forward-ext</augmented-by>
+				</module>
+				<module>
+					<name>huawei-multicast-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mvpn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mvpn-forward</augmented-by>
+				</module>
+				<module>
+					<name>huawei-mvpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mvpn-forward</name>
+				</module>
+				<module>
+					<name>huawei-nd</name>
+				</module>
+				<module>
+					<name>huawei-nd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-net-slice</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+				</module>
+				<module>
+					<name>huawei-net-slice-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-netconf</name>
+				</module>
+				<module>
+					<name>huawei-netconf-client</name>
+				</module>
+				<module>
+					<name>huawei-netconf-client-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-netstream</name>
+				</module>
+				<module>
+					<name>huawei-netstream-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-network-instance</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vrrp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vaccess-master</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-te</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-segment-routing</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rpki</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ripng</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-l3vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pp6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pp4</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pim</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ospfv3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ospfv2</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-msdp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l3vpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l3-multicast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-isis</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipv6-policy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ifit-common</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-if-ip</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gre</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flowspec</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flex-algo</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-direct-route-vlink</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bmp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-apn-isolation</augmented-by>
+				</module>
+				<module>
+					<name>huawei-nqa</name>
+				</module>
+				<module>
+					<name>huawei-nqa-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ntp</name>
+				</module>
+				<module>
+					<name>huawei-ntp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-nvo3</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-nvo3</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nvo3-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-nvo3-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oammgr</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-efm-bfd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-vrrp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-interface</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-evpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-efm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-cfm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-cfm-bfd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-oam-bfd-interface</augmented-by>
+				</module>
+				<module>
+					<name>huawei-openconfig-acl-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-interfaces-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-lacp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-lldp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-network-instance-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-platform-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-routing-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-spanning-tree-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-system-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ops</name>
+				</module>
+				<module>
+					<name>huawei-ops-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ospfv2</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ospfv2-sr</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ospfv2-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ospfv3</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ospfv3-srv6</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ospfv3-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-patch</name>
+				</module>
+				<module>
+					<name>huawei-patch-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pbr</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pbr-l2vpn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-pbr-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pcc</name>
+				</module>
+				<module>
+					<name>huawei-pcep</name>
+				</module>
+				<module>
+					<name>huawei-pic</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-wdm</augmented-by>
+				</module>
+				<module>
+					<name>huawei-pic-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pki</name>
+				</module>
+				<module>
+					<name>huawei-pki-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pm</name>
+				</module>
+				<module>
+					<name>huawei-pm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-port-group</name>
+				</module>
+				<module>
+					<name>huawei-port-group-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pp4</name>
+				</module>
+				<module>
+					<name>huawei-pp4-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pp6</name>
+				</module>
+				<module>
+					<name>huawei-pp6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qppb</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-apn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pbr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mirror</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mc-timestamp-refresh</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-vll-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-nat64</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-nat444</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cgn-dslite</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-vas</augmented-by>
+				</module>
+				<module>
+					<name>huawei-qos-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-eth-bn</name>
+				</module>
+				<module>
+					<name>huawei-qos-eth-bn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-radius</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-vas</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-qos</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-radius-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-radius-proxy</name>
+				</module>
+				<module>
+					<name>huawei-rbs</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-rui</augmented-by>
+				</module>
+				<module>
+					<name>huawei-rbs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-route-monitor-group</name>
+				</module>
+				<module>
+					<name>huawei-route-monitor-group-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-routing-nqa</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l3vpn-mpls</augmented-by>
+				</module>
+				<module>
+					<name>huawei-routing-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing-policy</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-routing-policy-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-routing-policy-acl</augmented-by>
+				</module>
+				<module>
+					<name>huawei-routing-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-rpki</name>
+				</module>
+				<module>
+					<name>huawei-rpki-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-rsa</name>
+				</module>
+				<module>
+					<name>huawei-said-frame</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-forward</augmented-by>
+				</module>
+				<module>
+					<name>huawei-said-frame-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-sflow</name>
+				</module>
+				<module>
+					<name>huawei-sflow-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-sm2</name>
+				</module>
+				<module>
+					<name>huawei-smartlink</name>
+				</module>
+				<module>
+					<name>huawei-smartlink-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-snmp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-fm</augmented-by>
+				</module>
+				<module>
+					<name>huawei-snmp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-soc</name>
+				</module>
+				<module>
+					<name>huawei-soc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-socket</name>
+				</module>
+				<module>
+					<name>huawei-software</name>
+				</module>
+				<module>
+					<name>huawei-software-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-srpolicy</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-srv6</augmented-by>
+				</module>
+				<module>
+					<name>huawei-srpolicy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-sshc</name>
+				</module>
+				<module>
+					<name>huawei-sshc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-sshs</name>
+				</module>
+				<module>
+					<name>huawei-sshs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ssl</name>
+				</module>
+				<module>
+					<name>huawei-ssl-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-stamp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-stamp-period-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-stamp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-syslog</name>
+				</module>
+				<module>
+					<name>huawei-syslog-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-system</name>
+				</module>
+				<module>
+					<name>huawei-system-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-system-event-management</name>
+				</module>
+				<module>
+					<name>huawei-system-event-management-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-te</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-te-interface</augmented-by>
+				</module>
+				<module>
+					<name>huawei-te-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-telnetc</name>
+				</module>
+				<module>
+					<name>huawei-telnets</name>
+				</module>
+				<module>
+					<name>huawei-tftpc</name>
+				</module>
+				<module>
+					<name>huawei-time-range</name>
+				</module>
+				<module>
+					<name>huawei-tm</name>
+				</module>
+				<module>
+					<name>huawei-tm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-trafficmng</name>
+				</module>
+				<module>
+					<name>huawei-trafficmng-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-trustem</name>
+				</module>
+				<module>
+					<name>huawei-trustem-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-tty</name>
+				</module>
+				<module>
+					<name>huawei-tty-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-tunnel-management</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-tunnel6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-tunnel-management-ext</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipsec</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gre</augmented-by>
+				</module>
+				<module>
+					<name>huawei-tunnel-management-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-tunnel6</name>
+				</module>
+				<module>
+					<name>huawei-twamp</name>
+				</module>
+				<module>
+					<name>huawei-twamp-controller</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-twamp-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-twamp-controller-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-twamp-responder</name>
+				</module>
+				<module>
+					<name>huawei-twamp-responder-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-unicast-forward</name>
+				</module>
+				<module>
+					<name>huawei-unicast-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-unicast-fwd-srv6</name>
+				</module>
+				<module>
+					<name>huawei-unicast-fwd-srv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vaccess</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vaccess-master</augmented-by>
+				</module>
+				<module>
+					<name>huawei-vaccess-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vcchassis</name>
+				</module>
+				<module>
+					<name>huawei-virtual-system</name>
+				</module>
+				<module>
+					<name>huawei-virtual-system-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-virtual-system-if</name>
+				</module>
+				<module>
+					<name>huawei-vlan</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac-flapping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mac</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2-multicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igmp-mld-snooping</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcpv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dhcp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-arp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-vlan-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vrrp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipsec-rbs</augmented-by>
+				</module>
+				<module>
+					<name>huawei-vrrp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vsm</name>
+				</module>
+				<module>
+					<name>huawei-vsm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vty</name>
+				</module>
+				<module>
+					<name>huawei-vty-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vxlan-path-detect</name>
+				</module>
+				<module>
+					<name>huawei-vxlan-path-detect-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-warranty</name>
+				</module>
+				<module>
+					<name>huawei-wdm</name>
+				</module>
+				<module>
+					<name>huawei-wdm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-xpl</name>
+				</module>
+				<module>
+					<name>huawei-y1731</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-y1731-statistics</augmented-by>
+				</module>
+				<module>
+					<name>huawei-y1731-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ztp</name>
+				</module>
+				<module>
+					<name>ietf-interfaces</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-network-instance</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-ip</augmented-by>
+				</module>
+				<module>
+					<name>ietf-netconf-acm</name>
+				</module>
+				<module>
+					<name>ietf-routing</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-ipv4-unicast-routing</augmented-by>
+				</module>
+				<module>
+					<name>ietf-snmp</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-snmp-ext</augmented-by>
+				</module>
+				<module>
+					<name>ietf-subscribed-notifications</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-notification</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-push</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-subscribed-notif-receivers</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-distributed-notif</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-subscribed-notif-ext</augmented-by>
+				</module>
+				<module>
+					<name>ietf-system</name>
+				</module>
+			</module-set>
+			<module-set>
+				<name>state-module</name>
+				<module>
+					<name>openconfig-alarms</name>
+				</module>
+				<module>
+					<name>openconfig-bgp</name>
+				</module>
+				<module>
+					<name>openconfig-bgp-policy</name>
+				</module>
+				<module>
+					<name>openconfig-if-aggregate</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-vlan</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-if-ethernet</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-vlan</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-aggregate</augmented-by>
+				</module>
+				<module>
+					<name>openconfig-if-ip</name>
+				</module>
+				<module>
+					<name>openconfig-if-tunnel</name>
+				</module>
+				<module>
+					<name>openconfig-local-routing</name>
+				</module>
+				<module>
+					<name>openconfig-messages</name>
+				</module>
+				<module>
+					<name>openconfig-keychain</name>
+				</module>
+				<module>
+					<name>openconfig-isis-policy</name>
+				</module>
+				<module>
+					<name>openconfig-ospf-policy</name>
+				</module>
+				<module>
+					<name>openconfig-platform-ext</name>
+				</module>
+				<module>
+					<name>openconfig-platform-fan</name>
+				</module>
+				<module>
+					<name>openconfig-platform-linecard</name>
+				</module>
+				<module>
+					<name>openconfig-platform-port</name>
+				</module>
+				<module>
+					<name>openconfig-platform-psu</name>
+				</module>
+				<module>
+					<name>openconfig-platform-transceiver</name>
+				</module>
+				<module>
+					<name>openconfig-system-grpc</name>
+				</module>
+				<module>
+					<name>openconfig-vlan</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">openconfig-if-ip</augmented-by>
+				</module>
+				<module>
+					<name>huawei-acl-notification</name>
+				</module>
+				<module>
+					<name>huawei-acl-ucl</name>
+				</module>
+				<module>
+					<name>huawei-acl-ucl-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-apn-isolation</name>
+				</module>
+				<module>
+					<name>huawei-apn-license</name>
+				</module>
+				<module>
+					<name>huawei-arp-notification</name>
+				</module>
+				<module>
+					<name>huawei-bd-ext</name>
+				</module>
+				<module>
+					<name>huawei-bfd-ext</name>
+				</module>
+				<module>
+					<name>huawei-bfd-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bfd-notification</name>
+				</module>
+				<module>
+					<name>huawei-bfd-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-mpls-te</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-mpls-te-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-vpls</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-vpls-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-vpws</name>
+				</module>
+				<module>
+					<name>huawei-bfd-static-vpws-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-epe</name>
+				</module>
+				<module>
+					<name>huawei-bgp-epe-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-evpn</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-evpn-srv6</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bgp-evpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-flow</name>
+				</module>
+				<module>
+					<name>huawei-bgp-flow-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-ipv6-srpolicy</name>
+				</module>
+				<module>
+					<name>huawei-bgp-ipv6-srpolicy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-l2vpnad</name>
+				</module>
+				<module>
+					<name>huawei-bgp-l2vpnad-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-link-state</name>
+				</module>
+				<module>
+					<name>huawei-bgp-link-state-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-mdt</name>
+				</module>
+				<module>
+					<name>huawei-bgp-mdt-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-mvpn</name>
+				</module>
+				<module>
+					<name>huawei-bgp-mvpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-notification</name>
+				</module>
+				<module>
+					<name>huawei-bgp-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-routing-table</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-vpnv4mcast</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-vpntarget</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-srpolicy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-rpd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-mvpn</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-mdt</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-link-state</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-l2vpnad</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-ipv6-srpolicy</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-flow</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-evpn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bgp-routing-table-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-rpc</name>
+				</module>
+				<module>
+					<name>huawei-bgp-rpc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-rpd</name>
+				</module>
+				<module>
+					<name>huawei-bgp-rpd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-srpolicy</name>
+				</module>
+				<module>
+					<name>huawei-bgp-srv6</name>
+				</module>
+				<module>
+					<name>huawei-bgp-srv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bgp-vpntarget</name>
+				</module>
+				<module>
+					<name>huawei-bgp-vpnv4mcast</name>
+				</module>
+				<module>
+					<name>huawei-bgp-vpnv4mcast-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bier-notification</name>
+				</module>
+				<module>
+					<name>huawei-bras-cu-agent-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-cu-controller</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-pppox-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-ipv6-address-manage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-ipv4-address-manage</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-bras-cu-controller-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-diameter-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-diameter-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-https-redirect-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv4-address-manage-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv4-manage-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv6-address-manage-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-ipv6-manage-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-bras-l2tp-access-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-rui-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-user-manage-notif</name>
+				</module>
+				<module>
+					<name>huawei-bras-user-manage-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cfg-ext</name>
+				</module>
+				<module>
+					<name>huawei-cfg-notification</name>
+				</module>
+				<module>
+					<name>huawei-cfg-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cgn-pcp</name>
+				</module>
+				<module>
+					<name>huawei-clockboard</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-comm</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-gps</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-gps-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-notification</name>
+				</module>
+				<module>
+					<name>huawei-clocksync-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-codesign</name>
+				</module>
+				<module>
+					<name>huawei-codesign-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cpudefend-notification</name>
+				</module>
+				<module>
+					<name>huawei-cpudefend-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-cusp-agent-notif</name>
+				</module>
+				<module>
+					<name>huawei-dcn-notification</name>
+				</module>
+				<module>
+					<name>huawei-dcn-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-devm-vnf</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-soc</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-qos-board</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pbr</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-loadbalance</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-cpudefend</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-l2tp-access</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-cu-controller</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bras-basic-access</augmented-by>
+				</module>
+				<module>
+					<name>huawei-devm-vnf-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-dhcp-l2vpn</name>
+				</module>
+				<module>
+					<name>huawei-dhcp-notification</name>
+				</module>
+				<module>
+					<name>huawei-dhcp-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-diagnostic-tools</name>
+				</module>
+				<module>
+					<name>huawei-diagnostic-tools-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-driver-fm</name>
+				</module>
+				<module>
+					<name>huawei-eai-service-notification</name>
+				</module>
+				<module>
+					<name>huawei-eai-service-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-efm-notification</name>
+				</module>
+				<module>
+					<name>huawei-emdi-notification</name>
+				</module>
+				<module>
+					<name>huawei-erps-fwd</name>
+				</module>
+				<module>
+					<name>huawei-erps-notification</name>
+				</module>
+				<module>
+					<name>huawei-ethernet-ext</name>
+				</module>
+				<module>
+					<name>huawei-ethernet-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-evpl-ext</name>
+				</module>
+				<module>
+					<name>huawei-evpl-notification</name>
+				</module>
+				<module>
+					<name>huawei-evpn-ext</name>
+				</module>
+				<module>
+					<name>huawei-evpn-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-evpn-notification</name>
+				</module>
+				<module>
+					<name>huawei-file-operation</name>
+				</module>
+				<module>
+					<name>huawei-file-operation-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fim-devm</name>
+				</module>
+				<module>
+					<name>huawei-fim-devm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fim-ethernet</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifm</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifm-notification</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifm-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifmtrunk</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifmtrunk-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-fim-ifmtrunk-notif</name>
+				</module>
+				<module>
+					<name>huawei-fim-lcs</name>
+				</module>
+				<module>
+					<name>huawei-fim-lcs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-flex-algo</name>
+				</module>
+				<module>
+					<name>huawei-flexe-notification</name>
+				</module>
+				<module>
+					<name>huawei-flowspec-forward-notif</name>
+				</module>
+				<module>
+					<name>huawei-fwd-engine</name>
+				</module>
+				<module>
+					<name>huawei-fwd-engine-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-gre</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-gre-fwd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dsvpn-nhrp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-gre-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-hips-notification</name>
+				</module>
+				<module>
+					<name>huawei-hips-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-iana-tls-cipher-suite-algs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-connectionless-oam-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-connectionless-oam-methods-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-connless-oam-meth-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-distributed-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-hardware-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-ip-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-ipv4-uni-routing-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-keystore-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-monitoring-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-nmda-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-nmda-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-netconf-notifications-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-network-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-network-instance-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-notif-capabilities-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-snmp-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-sub-notif-recv-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-subscribed-notif-ext</name>
+				</module>
+				<module>
+					<name>huawei-ietf-system-capabilities-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-tls-common-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-truststore-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-udp-notif-transport-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-yang-library-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-yang-push-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ietf-yp-observation-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-if-ip</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-nd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-if-ip-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifit-common</name>
+				</module>
+				<module>
+					<name>huawei-ifit-common-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifit-fwd-notification</name>
+				</module>
+				<module>
+					<name>huawei-ifit-notification</name>
+				</module>
+				<module>
+					<name>huawei-ifit-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifit-statistics</name>
+				</module>
+				<module>
+					<name>huawei-ifit-statistics-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifm-fr</name>
+				</module>
+				<module>
+					<name>huawei-ifm-notification</name>
+				</module>
+				<module>
+					<name>huawei-ifm-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifm-phy-notification</name>
+				</module>
+				<module>
+					<name>huawei-ifm-phy-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ifm-trunk-notification</name>
+				</module>
+				<module>
+					<name>huawei-ifm-trunk-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-notification</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-snooping</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-snooping-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-snooping-notification</name>
+				</module>
+				<module>
+					<name>huawei-igmp-mld-snooping-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-igp</name>
+				</module>
+				<module>
+					<name>huawei-ip</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-vrrp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rgm</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-pp6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ipv6-nd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ip-statistics</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ip-cga</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-arp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-ip-cga</name>
+				</module>
+				<module>
+					<name>huawei-ip-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ip-statistics</name>
+				</module>
+				<module>
+					<name>huawei-ipsec-rbs</name>
+				</module>
+				<module>
+					<name>huawei-ipsec-rbs-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ipsec-smart-link</name>
+				</module>
+				<module>
+					<name>huawei-ipsec-smart-link-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ipv6-policy</name>
+				</module>
+				<module>
+					<name>huawei-isis-notification</name>
+				</module>
+				<module>
+					<name>huawei-isis-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-isis-sr</name>
+				</module>
+				<module>
+					<name>huawei-isis-srv6</name>
+				</module>
+				<module>
+					<name>huawei-isis-srv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-kpi</name>
+				</module>
+				<module>
+					<name>huawei-l2-multicast-forward</name>
+				</module>
+				<module>
+					<name>huawei-l2-multicast-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2protocol-fwd</name>
+				</module>
+				<module>
+					<name>huawei-l2protocol-fwd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2tpv3-forward</name>
+				</module>
+				<module>
+					<name>huawei-l2tpv3-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-aps-notification</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-extension</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-extension-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-notification</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-vll-ext</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-vll-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-vpls-ext</name>
+				</module>
+				<module>
+					<name>huawei-l2vpn-vpls-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-l3vpn-mpls</name>
+				</module>
+				<module>
+					<name>huawei-l3vpn-notification</name>
+				</module>
+				<module>
+					<name>huawei-l3vpn-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-license-notification</name>
+				</module>
+				<module>
+					<name>huawei-license-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-link-heartbeat</name>
+				</module>
+				<module>
+					<name>huawei-lldp-notification</name>
+				</module>
+				<module>
+					<name>huawei-lldp-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-loadbalance-notification</name>
+				</module>
+				<module>
+					<name>huawei-loadbalance-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-lpt</name>
+				</module>
+				<module>
+					<name>huawei-mac-flapping-notif</name>
+				</module>
+				<module>
+					<name>huawei-mac-fwd</name>
+				</module>
+				<module>
+					<name>huawei-mac-fwd-notification</name>
+				</module>
+				<module>
+					<name>huawei-macacc</name>
+				</module>
+				<module>
+					<name>huawei-macm</name>
+				</module>
+				<module>
+					<name>huawei-macm-notification</name>
+				</module>
+				<module>
+					<name>huawei-macsec-notification</name>
+				</module>
+				<module>
+					<name>huawei-mc-fwd-notification</name>
+				</module>
+				<module>
+					<name>huawei-mc-fwd-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mc-timestamp-refresh-notif</name>
+				</module>
+				<module>
+					<name>huawei-module-management</name>
+				</module>
+				<module>
+					<name>huawei-module-management-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-forward</name>
+				</module>
+				<module>
+					<name>huawei-mpls-forward-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-forward-devm</name>
+				</module>
+				<module>
+					<name>huawei-mpls-forward-devm-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-in-udp6</name>
+				</module>
+				<module>
+					<name>huawei-mpls-in-udp6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-ldp</name>
+				</module>
+				<module>
+					<name>huawei-mpls-ldp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-notification</name>
+				</module>
+				<module>
+					<name>huawei-mpls-static</name>
+				</module>
+				<module>
+					<name>huawei-mpls-static-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-rsvp-interface</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te-cr-static</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te-bfd</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te-auto-tunnel</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-forward</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-extension</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-igp</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-bgp-lsp</augmented-by>
+				</module>
+				<module>
+					<name>huawei-mpls-te-auto-tunnel</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te-auto-tunnel-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te-bfd</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te-bfd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te-cr-static</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-l2vpn-extension</augmented-by>
+				</module>
+				<module>
+					<name>huawei-mpls-te-cr-static-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mpls-te-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-mplsoam-fwd-notif</name>
+				</module>
+				<module>
+					<name>huawei-mplstpoam-fwd-notif</name>
+				</module>
+				<module>
+					<name>huawei-msdp</name>
+				</module>
+				<module>
+					<name>huawei-mstp-notification</name>
+				</module>
+				<module>
+					<name>huawei-mstp-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-multicast-bas</name>
+				</module>
+				<module>
+					<name>huawei-multicast-bas-notif</name>
+				</module>
+				<module>
+					<name>huawei-multicast-forward-ext</name>
+				</module>
+				<module>
+					<name>huawei-multicore</name>
+				</module>
+				<module>
+					<name>huawei-nd-notification</name>
+				</module>
+				<module>
+					<name>huawei-nd-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-net-slice-notification</name>
+				</module>
+				<module>
+					<name>huawei-netconf-client-notif</name>
+				</module>
+				<module>
+					<name>huawei-netconf-client-notif-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-netconf-notif</name>
+				</module>
+				<module>
+					<name>huawei-netconf-proxy</name>
+				</module>
+				<module>
+					<name>huawei-netconf-sync</name>
+				</module>
+				<module>
+					<name>huawei-netconf-sync-notif</name>
+				</module>
+				<module>
+					<name>huawei-notifications-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-nqa-notification</name>
+				</module>
+				<module>
+					<name>huawei-nqa-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-nvo3-notification</name>
+				</module>
+				<module>
+					<name>huawei-nvo3-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-nvo3-statistics</name>
+				</module>
+				<module>
+					<name>huawei-nvo3-statistics-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oam-bfd-interface</name>
+				</module>
+				<module>
+					<name>huawei-oam-bfd-interface-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-bfd</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-bfd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-cfm</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-efm</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-evpn</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-evpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-interface</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-interface-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oam-cfm-vrrp</name>
+				</module>
+				<module>
+					<name>huawei-oam-efm-bfd</name>
+				</module>
+				<module>
+					<name>huawei-oam-efm-bfd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oc-platform-linecard-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-oc-platform-transceiver-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-alarms-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-bgp-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-bgp-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-if-aggregate-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-if-ethernet-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-if-ip-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-if-tunnel-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-isis-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-keychain-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-local-routing-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-messages-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-ospf-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-platform-port-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-platform-psu-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-qos-ext</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-system-grpc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-ext</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-telemetry-ext-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-openconfig-vlan-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ospfv2-notification</name>
+				</module>
+				<module>
+					<name>huawei-ospfv2-sr</name>
+				</module>
+				<module>
+					<name>huawei-ospfv2-sr-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ospfv2-sr-notif</name>
+				</module>
+				<module>
+					<name>huawei-ospfv3-notification</name>
+				</module>
+				<module>
+					<name>huawei-ospfv3-srv6</name>
+				</module>
+				<module>
+					<name>huawei-pbr-l2vpn</name>
+				</module>
+				<module>
+					<name>huawei-pbr-notification</name>
+				</module>
+				<module>
+					<name>huawei-pbr-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pcc-notification</name>
+				</module>
+				<module>
+					<name>huawei-pic-notification</name>
+				</module>
+				<module>
+					<name>huawei-pic-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pim</name>
+				</module>
+				<module>
+					<name>huawei-pim-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pim-notification</name>
+				</module>
+				<module>
+					<name>huawei-pim-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-pki-notification</name>
+				</module>
+				<module>
+					<name>huawei-pki-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ppp-net</name>
+				</module>
+				<module>
+					<name>huawei-ppp-net-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-apn</name>
+				</module>
+				<module>
+					<name>huawei-qos-bd</name>
+				</module>
+				<module>
+					<name>huawei-qos-bd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-board</name>
+				</module>
+				<module>
+					<name>huawei-qos-board-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-bras</name>
+				</module>
+				<module>
+					<name>huawei-qos-bras-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-eth-bn-notif</name>
+				</module>
+				<module>
+					<name>huawei-qos-evpl</name>
+				</module>
+				<module>
+					<name>huawei-qos-evpn</name>
+				</module>
+				<module>
+					<name>huawei-qos-l2vpn</name>
+				</module>
+				<module>
+					<name>huawei-qos-l3vpn</name>
+				</module>
+				<module>
+					<name>huawei-qos-l3vpn-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-notification</name>
+				</module>
+				<module>
+					<name>huawei-qos-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qos-nvo3</name>
+				</module>
+				<module>
+					<name>huawei-qos-pfc</name>
+				</module>
+				<module>
+					<name>huawei-qos-pfc-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-qppb</name>
+				</module>
+				<module>
+					<name>huawei-qppb-notification</name>
+				</module>
+				<module>
+					<name>huawei-rgm</name>
+				</module>
+				<module>
+					<name>huawei-rip</name>
+				</module>
+				<module>
+					<name>huawei-rip-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-ripng</name>
+				</module>
+				<module>
+					<name>huawei-ripng-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing-adjust-policy</name>
+				</module>
+				<module>
+					<name>huawei-routing-adjust-policy-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing-adjust-topo</name>
+				</module>
+				<module>
+					<name>huawei-routing-adjust-topo-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing-notification</name>
+				</module>
+				<module>
+					<name>huawei-routing-nqa</name>
+				</module>
+				<module>
+					<name>huawei-routing-nqa-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-routing-policy-acl</name>
+				</module>
+				<module>
+					<name>huawei-routing-policy-ext</name>
+				</module>
+				<module>
+					<name>huawei-rpki-notification</name>
+				</module>
+				<module>
+					<name>huawei-rsvp-interface</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-mpls-te-bfd</augmented-by>
+				</module>
+				<module>
+					<name>huawei-rsvp-interface-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-segment-routing</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-srpolicy</augmented-by>
+				</module>
+				<module>
+					<name>huawei-segment-routing-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-segment-routing-notif</name>
+				</module>
+				<module>
+					<name>huawei-soc-bras</name>
+				</module>
+				<module>
+					<name>huawei-soc-notification</name>
+				</module>
+				<module>
+					<name>huawei-soc-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-software-notification</name>
+				</module>
+				<module>
+					<name>huawei-software-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-srpolicy-notification</name>
+				</module>
+				<module>
+					<name>huawei-srv6</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-unicast-fwd-srv6</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-te-flow-group</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-srpolicy</augmented-by>
+				</module>
+				<module>
+					<name>huawei-srv6-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-srv6-notification</name>
+				</module>
+				<module>
+					<name>huawei-ssl-notification</name>
+				</module>
+				<module>
+					<name>huawei-stamp-period-statistics</name>
+				</module>
+				<module>
+					<name>huawei-system-notification</name>
+				</module>
+				<module>
+					<name>huawei-system-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-system-resources-usage</name>
+				</module>
+				<module>
+					<name>huawei-te-flow-group</name>
+				</module>
+				<module>
+					<name>huawei-te-flow-group-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-te-interface</name>
+				</module>
+				<module>
+					<name>huawei-te-interface-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-tpm-remote-attestation</name>
+				</module>
+				<module>
+					<name>huawei-tunnel-management-ext</name>
+				</module>
+				<module>
+					<name>huawei-twamp-controller-notif</name>
+				</module>
+				<module>
+					<name>huawei-twamp-fwd-notification</name>
+				</module>
+				<module>
+					<name>huawei-twamp-responder-notif</name>
+				</module>
+				<module>
+					<name>huawei-twamp-statistics</name>
+				</module>
+				<module>
+					<name>huawei-unicast-fwd-notification</name>
+				</module>
+				<module>
+					<name>huawei-unicast-fwd-notification-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vaccess-master</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-flexe</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-dcn</augmented-by>
+				</module>
+				<module>
+					<name>huawei-vaccess-master-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-vlan-fwd</name>
+				</module>
+				<module>
+					<name>huawei-vlan-fwd-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>huawei-warranty-notification</name>
+				</module>
+				<module>
+					<name>huawei-y1731-notification</name>
+				</module>
+				<module>
+					<name>huawei-y1731-statistics</name>
+				</module>
+				<module>
+					<name>huawei-y1731-statistics-deviations-OC-NE-M2K-B</name>
+				</module>
+				<module>
+					<name>ietf-netconf</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-netconf-with-defaults</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-netconf-nmda</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-netconf-ext</augmented-by>
+				</module>
+				<module>
+					<name>notifications</name>
+				</module>
+				<module>
+					<name>nc-notifications</name>
+				</module>
+				<module>
+					<name>iana-tls-cipher-suite-algs</name>
+				</module>
+				<module>
+					<name>ietf-connectionless-oam</name>
+				</module>
+				<module>
+					<name>ietf-connectionless-oam-methods</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-connectionless-oam-methods-ext</augmented-by>
+				</module>
+				<module>
+					<name>ietf-distributed-notif</name>
+				</module>
+				<module>
+					<name>ietf-hardware</name>
+				</module>
+				<module>
+					<name>ietf-ip</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-network-instance</augmented-by>
+				</module>
+				<module>
+					<name>ietf-ipv4-unicast-routing</name>
+				</module>
+				<module>
+					<name>ietf-keystore</name>
+				</module>
+				<module>
+					<name>ietf-netconf-monitoring</name>
+				</module>
+				<module>
+					<name>ietf-netconf-nmda</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">huawei-ietf-netconf-nmda-ext</augmented-by>
+				</module>
+				<module>
+					<name>ietf-netconf-notifications</name>
+				</module>
+				<module>
+					<name>ietf-netconf-with-defaults</name>
+				</module>
+				<module>
+					<name>ietf-network</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-connectionless-oam</augmented-by>
+				</module>
+				<module>
+					<name>ietf-network-instance</name>
+				</module>
+				<module>
+					<name>ietf-notification-capabilities</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-observation</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-notification</augmented-by>
+				</module>
+				<module>
+					<name>ietf-subscribed-notif-receivers</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-udp-notif-transport</augmented-by>
+				</module>
+				<module>
+					<name>ietf-system-capabilities</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-notification-capabilities</augmented-by>
+				</module>
+				<module>
+					<name>ietf-tls-common</name>
+				</module>
+				<module>
+					<name>ietf-truststore</name>
+				</module>
+				<module>
+					<name>ietf-udp-notif-transport</name>
+				</module>
+				<module>
+					<name>ietf-yang-library</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yang-library-augmentedby</augmented-by>
+				</module>
+				<module>
+					<name>ietf-yang-library-augmentedby</name>
+				</module>
+				<module>
+					<name>ietf-yang-push</name>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-yp-observation</augmented-by>
+					<augmented-by xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library-augmentedby">ietf-distributed-notif</augmented-by>
+				</module>
+				<module>
+					<name>ietf-yang-schema-mount</name>
+				</module>
+				<module>
+					<name>ietf-yp-notification</name>
+				</module>
+				<module>
+					<name>ietf-yp-observation</name>
+				</module>
+			</module-set>
+		</yang-library>
+	</data>
+</rpc-reply>
