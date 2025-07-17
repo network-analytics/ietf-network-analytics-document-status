@@ -2,19 +2,19 @@
 Error in NC config: This receiver does not exist.
 Error: This receiver does not exist.
 Error during get-ietf-notification-capabilities.xml: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:03cad5c8-ed48-4468-8cb8-ad9f457dcf36">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4fe0e18b-4943-46ce-a0be-7550ae1aa4cb">
 	<data/>
 </rpc-reply>
 --- TEST 4: netconf_get_ietf_notification_capabilities - FAILED: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:03cad5c8-ed48-4468-8cb8-ad9f457dcf36">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4fe0e18b-4943-46ce-a0be-7550ae1aa4cb">
 	<data/>
 </rpc-reply>
 Error during get-ietf-system-capabilities.xml: Received empty response for get-ietf-system-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:963d34d4-9171-4079-8f9c-271223b55e10">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4099d012-743b-449f-a2f5-4cbed1ca1a26">
 	<data/>
 </rpc-reply>
 --- TEST 5: netconf_get_ietf_system_capabilities - FAILED: Received empty response for get-ietf-system-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:963d34d4-9171-4079-8f9c-271223b55e10">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4099d012-743b-449f-a2f5-4cbed1ca1a26">
 	<data/>
 </rpc-reply>
 --- TEST 9: netconf_get_and_validate_yang_library - FAILED: YANGLINT STDERR: libyang err : Unsatisfied pattern - "2025-4-27" does not conform to "\d{4}-\d{2}-\d{2}". (/ietf-yang-library:yang-library/module-set[name='state-module']/module[name='huawei-ietf-udp-notif-transport-deviations-OC-NE-M2K-B']/revision) (line 3959)
@@ -242,7 +242,7 @@ libyang err : Invalid leafref value "openconfig-platform-port" - no target insta
 libyang err : Invalid leafref value "openconfig-platform-transceiver" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[3])
 libyang err : Invalid leafref value "openconfig-vlan" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[2])
 libyang err : Invalid leafref value "huawei-openconfig-qos-ext" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[1])
-YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.xml".
+YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.xml".
 
 Error in NC RPC: The requested schema does not exist.
 Error during get-schema-ietf-notification-transport-capabilities.xml: The requested schema does not exist.

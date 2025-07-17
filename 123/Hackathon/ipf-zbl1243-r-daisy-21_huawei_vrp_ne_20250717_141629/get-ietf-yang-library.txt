@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:c86dfef7-e1c0-4f37-bf74-e78cc8125d52">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:bdfa20da-3009-4a3f-82a9-b0798cba4081">
 	<data>
 		<yang-library xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
 			<content-id>3228521764</content-id>

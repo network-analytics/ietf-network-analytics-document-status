@@ -1,12 +1,12 @@
 NOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
-Executing tcpdump on 10.212.242.2: ssh -i ~/.ssh/dsy_sys dsy_sys@10.212.242.2 sudo tcpdump -s 0 -U -n -w - -i ens224 'host 203.0.113.21' -vvNOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
+Executing tcpdump on 10.212.242.3: ssh -i ~/.ssh/dsy_sys dsy_sys@10.212.242.3 sudo tcpdump -s 0 -U -n -w - -i ens224 'host 203.0.113.21' -vvNOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
 
-Executing kcat on 10.212.242.2: ssh -i ~/.ssh/dsy_sys -tt dsy_sys@10.212.242.2 'kcat -q -F /etc/daisy/kafka/kcat.conf -o end -t daisy.ietf.device-json-raw | jq -c | grep 203.0.113.21'
+Executing kcat on 10.212.242.3: ssh -i ~/.ssh/dsy_sys -tt dsy_sys@10.212.242.3 'kcat -q -F /etc/daisy/kafka/kcat.conf -o end -t daisy.ietf.device-json-raw | jq -c | grep 203.0.113.21'
 [32m+------------------------------------------------+[0m
 [32m| --- Backup current YANG Push configuration --- |[0m
 [32m+------------------------------------------------+[0m
 Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
-YANG Push configuration backup saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/yp_config_backup.xml.
+YANG Push configuration backup saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/yp_config_backup.xml.
 [32m+--------------------------------------------------------------------+[0m
 [32m| Running tests for vendor: huawei_vrp_ne and hostname: 203.0.113.21 |[0m
 [32m+--------------------------------------------------------------------+[0m
@@ -23,7 +23,7 @@ XML file: ./vendors/huawei_vrp_ne/get-version.xml
 [32m| -- Get SW version subscriptions |[0m
 [32m+---------------------------------+[0m
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9c9dc45c-c9e5-415f-a1e2-fbdf433b29e1">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:eaab4c2a-0a11-4bca-a670-0619bed903a9">
 	<data/>
 </rpc-reply>
 --- TEST 1: netconf_get_sw_version - FAILED: No version (empty response)
@@ -72,11 +72,11 @@ Description (docstring): YANG Push test for get-ietf-notification-capabilities.x
 [32m+-----------------------------------------------+[0m
 Using XML file: get-ietf-notification-capabilities.xml in base path: ./vendors/get-ietf-notification-capabilities.xml
 Error during get-ietf-notification-capabilities.xml: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:03cad5c8-ed48-4468-8cb8-ad9f457dcf36">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4fe0e18b-4943-46ce-a0be-7550ae1aa4cb">
 	<data/>
 </rpc-reply>
 --- TEST 4: netconf_get_ietf_notification_capabilities - FAILED: Received empty response for get-ietf-notification-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:03cad5c8-ed48-4468-8cb8-ad9f457dcf36">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4fe0e18b-4943-46ce-a0be-7550ae1aa4cb">
 	<data/>
 </rpc-reply>
 
@@ -90,11 +90,11 @@ Description (docstring): YANG Push test for get-ietf-system-capabilities.xml
 [32m+-----------------------------------------+[0m
 Using XML file: get-ietf-system-capabilities.xml in base path: ./vendors/get-ietf-system-capabilities.xml
 Error during get-ietf-system-capabilities.xml: Received empty response for get-ietf-system-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:963d34d4-9171-4079-8f9c-271223b55e10">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4099d012-743b-449f-a2f5-4cbed1ca1a26">
 	<data/>
 </rpc-reply>
 --- TEST 5: netconf_get_ietf_system_capabilities - FAILED: Received empty response for get-ietf-system-capabilities.xml. Result: <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:963d34d4-9171-4079-8f9c-271223b55e10">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4099d012-743b-449f-a2f5-4cbed1ca1a26">
 	<data/>
 </rpc-reply>
 
@@ -107,7 +107,7 @@ Description (docstring): YANG Push test for get-ietf-yang-library.xml
 [32m| -- Get get-ietf-yang-library.xml |[0m
 [32m+----------------------------------+[0m
 Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.txt Size: 590532 bytes
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.txt Size: 590532 bytes
 --- TEST 6: netconf_get_ietf_yang_library - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ Description (docstring): YANG Push test for get-ietf-yang-library-augmentedby.xm
 [32m| -- Get get-ietf-yang-library-augmentedby.xml |[0m
 [32m+----------------------------------------------+[0m
 Using XML file: get-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-ietf-yang-library-augmentedby.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library-augmentedby.txt Size: 117412 bytes
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library-augmentedby.txt Size: 117412 bytes
 --- TEST 7: netconf_get_ietf_yang_library_augmentedby - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ Description (docstring): YANG Push test for get-schema-list.xml
 [32m| -- Get get-schema-list.xml |[0m
 [32m+----------------------------+[0m
 Using XML file: get-schema-list.xml in base path: ./vendors/get-schema-list.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-schema-list.txt Size: 263901 bytes
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-schema-list.txt Size: 263901 bytes
 --- TEST 8: netconf_get_schema_list - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -197,7 +197,7 @@ module: ietf-yang-library
     x---n yang-library-change
        x---- module-set-id    -> /yanglib:modules-state/yanglib:module-set-id
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-library.tree (2145 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-library.tree (2145 bytes)
 Getting YANG module schema for ietf-yang-library-augmentedby
 XPATH/schema-node:None
 module: ietf-yang-library-augmentedby
@@ -207,18 +207,18 @@ module: ietf-yang-library-augmentedby
   augment /yanglib:modules-state/yanglib:module:
     +---u augmented-by
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-library-augmentedby.tree (201 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-library-augmentedby.tree (201 bytes)
 Getting YANG module schema for ietf-datastores
 XPATH/schema-node:None
 module: ietf-datastores
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-datastores.tree (24 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-datastores.tree (24 bytes)
 Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
 [32m+--------------------------------------------+[0m
 [32m| -- Get ./vendors/get-ietf-yang-library.xml |[0m
 [32m+--------------------------------------------+[0m
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.xml Size: 590312 bytes
-Running command: yanglint ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-datastores.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-library.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-library-augmentedby.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.xml
+File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.xml Size: 590312 bytes
+Running command: yanglint ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-datastores.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-library.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-library-augmentedby.yang ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.xml
 Error validating YANG Library: YANGLINT STDERR: libyang err : Unsatisfied pattern - "2025-4-27" does not conform to "\d{4}-\d{2}-\d{2}". (/ietf-yang-library:yang-library/module-set[name='state-module']/module[name='huawei-ietf-udp-notif-transport-deviations-OC-NE-M2K-B']/revision) (line 3959)
 libyang err : Invalid union value "2025-4-27" - no matching subtype found:
     libyang 2 - string, version 1: Unsatisfied pattern - "2025-4-27" does not conform to "\d{4}-\d{2}-\d{2}".
@@ -444,7 +444,7 @@ libyang err : Invalid leafref value "openconfig-platform-port" - no target insta
 libyang err : Invalid leafref value "openconfig-platform-transceiver" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[3])
 libyang err : Invalid leafref value "openconfig-vlan" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[2])
 libyang err : Invalid leafref value "huawei-openconfig-qos-ext" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[1])
-YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.xml".
+YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.xml".
 
 --- TEST 9: netconf_get_and_validate_yang_library - FAILED: YANGLINT STDERR: libyang err : Unsatisfied pattern - "2025-4-27" does not conform to "\d{4}-\d{2}-\d{2}". (/ietf-yang-library:yang-library/module-set[name='state-module']/module[name='huawei-ietf-udp-notif-transport-deviations-OC-NE-M2K-B']/revision) (line 3959)
 libyang err : Invalid union value "2025-4-27" - no matching subtype found:
@@ -671,7 +671,7 @@ libyang err : Invalid leafref value "openconfig-platform-port" - no target insta
 libyang err : Invalid leafref value "openconfig-platform-transceiver" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[3])
 libyang err : Invalid leafref value "openconfig-vlan" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[2])
 libyang err : Invalid leafref value "huawei-openconfig-qos-ext" - no target instance "../../yanglib:module/yanglib:name" with the same value. (/ietf-yang-library:yang-library/module-set[name='config-module']/module[name='openconfig-interfaces']/ietf-yang-library-augmentedby:augmented-by[1])
-YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/get-ietf-yang-library.xml".
+YANGLINT[E]: Failed to parse input data file "./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/get-ietf-yang-library.xml".
 
 
  --------------------------------------------------------------------------------
@@ -696,11 +696,11 @@ Description (docstring): MVP1 tests for get-schema-ietf-udp-notif-transport.xml
 [32m| -- Get get-schema-ietf-udp-notif-transport.xml |[0m
 [32m+------------------------------------------------+[0m
 Using XML file: get-schema-ietf-udp-notif-transport.xml in base path: ./vendors/get-schema-ietf-udp-notif-transport.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-udp-notif-transport.tree (0 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-udp-notif-transport.tree (0 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-udp-notif-transport.yang:10: error: module "ietf-subscribed-notif-receivers" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-udp-notif-transport.yang:16: error: module "ietf-udp-client" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-udp-notif-transport.yang:21: error: module "ietf-tls-client" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-udp-notif-transport.yang:10: error: module "ietf-subscribed-notif-receivers" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-udp-notif-transport.yang:16: error: module "ietf-udp-client" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-udp-notif-transport.yang:21: error: module "ietf-tls-client" not found in search path
 
 
 --- TEST 11: netconf_get_schema_ietf_udp_notif_transport - SUCCESS
@@ -714,7 +714,7 @@ Description (docstring): MVP1 tests for get-schema-ietf-yang-library-augmentedby
 [32m| -- Get get-schema-ietf-yang-library-augmentedby.xml |[0m
 [32m+-----------------------------------------------------+[0m
 Using XML file: get-schema-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-schema-ietf-yang-library-augmentedby.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-library-augmentedby.tree (265 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-library-augmentedby.tree (265 bytes)
 module: ietf-yang-library-augmentedby
 
   augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
@@ -733,7 +733,7 @@ Description (docstring): MVP1 tests for get-schema-ietf-yang-push.xml
 [32m| -- Get get-schema-ietf-yang-push.xml |[0m
 [32m+--------------------------------------+[0m
 Using XML file: get-schema-ietf-yang-push.xml in base path: ./vendors/get-schema-ietf-yang-push.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yang-push.tree (6248 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yang-push.tree (6248 bytes)
 module: ietf-yang-push
 
   augment /sn:establish-subscription/sn:input:
@@ -907,11 +907,11 @@ Description (docstring): MVP1 tests for get-schema-ietf-yp-notification.xml
 [32m| -- Get get-schema-ietf-yp-notification.xml |[0m
 [32m+--------------------------------------------+[0m
 Using XML file: get-schema-ietf-yp-notification.xml in base path: ./vendors/get-schema-ietf-yp-notification.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-notification.tree (128 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-notification.tree (128 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-notification.yang:20: error: module "ietf-system-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-notification.yang:26: error: module "ietf-notification-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-notification.yang:26: warning: imported module "ietf-notification-capabilities" not used
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-notification.yang:20: error: module "ietf-system-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-notification.yang:26: error: module "ietf-notification-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-notification.yang:26: warning: imported module "ietf-notification-capabilities" not used
 
 module: ietf-yp-notification
 
@@ -930,11 +930,11 @@ Description (docstring): MVP1 tests for get-schema-ietf-yp-observation.xml
 [32m| -- Get get-schema-ietf-yp-observation.xml |[0m
 [32m+-------------------------------------------+[0m
 Using XML file: get-schema-ietf-yp-observation.xml in base path: ./vendors/get-schema-ietf-yp-observation.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-observation.tree (260 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-observation.tree (260 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-observation.yang:16: error: module "ietf-system-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-observation.yang:22: error: module "ietf-notification-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-yp-observation.yang:22: warning: imported module "ietf-notification-capabilities" not used
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-observation.yang:16: error: module "ietf-system-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-observation.yang:22: error: module "ietf-notification-capabilities" not found in search path
+./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-yp-observation.yang:22: warning: imported module "ietf-notification-capabilities" not used
 
 module: ietf-yp-observation
 
@@ -969,7 +969,7 @@ Getting YANG module schema for ietf-system-capabilities
 [32m+-------------------------------------+[0m
 [32m| -- Get YANG Modules from the device |[0m
 [32m+-------------------------------------+[0m
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-system-capabilities.tree (366 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-system-capabilities.tree (366 bytes)
 module: ietf-system-capabilities
   +--ro system-capabilities
      +--ro datastore-capabilities* [datastore]
@@ -1114,7 +1114,7 @@ Using XML file: get-schema-ietf-interfaces-yang.xml in base path: ./vendors/get-
 [32m+-------------------------------------------------------+[0m
 [32m| -- Get: ./vendors/get-schema-ietf-interfaces-yang.xml |[0m
 [32m+-------------------------------------------------------+[0m
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/ietf-interfaces.tree (2915 bytes)
+PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/ietf-interfaces.tree (2915 bytes)
 module: ietf-interfaces
   +--rw interfaces
   |  +--rw interface* [name]
@@ -1451,7 +1451,7 @@ module: huawei-ifm
        +---w input
           +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/huawei-ifm.tree (12834 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/huawei-ifm.tree (12834 bytes)
 --- TEST 23: netconf_yang_schema_tree - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -1592,62 +1592,62 @@ Error: This receiver does not exist.
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | yangpush_delete_receivers                                   | PASS     | 0.11s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_ietf_notification_capabilities                  | FAIL     | 0.11s      | Received empty response for get-ietf-not... |
+| netconf_get_ietf_notification_capabilities                  | FAIL     | 0.10s      | Received empty response for get-ietf-not... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_ietf_system_capabilities                        | FAIL     | 0.10s      | Received empty response for get-ietf-sys... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_ietf_yang_library                               | PASS     | 5.08s      |                                             |
+| netconf_get_ietf_yang_library                               | PASS     | 5.15s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_ietf_yang_library_augmentedby                   | PASS     | 0.87s      |                                             |
+| netconf_get_ietf_yang_library_augmentedby                   | PASS     | 0.90s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_list                                     | PASS     | 6.95s      |                                             |
+| netconf_get_schema_list                                     | PASS     | 6.92s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_and_validate_yang_library                       | FAIL     | 6.93s      | YANGLINT STDERR: libyang err : Unsatisfi... |
+| netconf_get_and_validate_yang_library                       | FAIL     | 6.75s      | YANGLINT STDERR: libyang err : Unsatisfi... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_notification_transport_capabilities | FAIL     | 0.03s      | The requested schema does not exist....     |
+| netconf_get_schema_ietf_notification_transport_capabilities | FAIL     | 0.02s      | The requested schema does not exist....     |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_udp_notif_transport                 | PASS     | 0.63s      |                                             |
+| netconf_get_schema_ietf_udp_notif_transport                 | PASS     | 0.60s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_library_augmentedby            | PASS     | 0.55s      |                                             |
+| netconf_get_schema_ietf_yang_library_augmentedby            | PASS     | 0.38s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_push                           | PASS     | 0.69s      |                                             |
+| netconf_get_schema_ietf_yang_push                           | PASS     | 0.58s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_push_revision                  | FAIL     | 0.11s      | The requested schema does not exist....     |
+| netconf_get_schema_ietf_yang_push_revision                  | FAIL     | 0.01s      | The requested schema does not exist....     |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_notification                     | PASS     | 0.62s      |                                             |
+| netconf_get_schema_ietf_yp_notification                     | PASS     | 0.58s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_observation                      | PASS     | 0.69s      |                                             |
+| netconf_get_schema_ietf_yp_observation                      | PASS     | 0.58s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_transport_capabilities           | FAIL     | 0.04s      | The requested schema does not exist....     |
+| netconf_get_schema_ietf_yp_transport_capabilities           | FAIL     | 0.09s      | The requested schema does not exist....     |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_system_capabilities_yang            | PASS     | 0.52s      |                                             |
+| netconf_get_schema_ietf_system_capabilities_yang            | PASS     | 0.47s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_add_receiver                                       | PASS     | 11.01s     |                                             |
+| yangpush_add_receiver                                       | PASS     | 10.97s     |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_ietf_interface                                     | FAIL     | 0.02s      | Unexpected element: datastore-xpath-filt... |
+| yangpush_ietf_interface                                     | FAIL     | 0.01s      | Unexpected element: datastore-xpath-filt... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_vendor_interface                                   | PASS     | 70.53s     |                                             |
+| yangpush_vendor_interface                                   | PASS     | 70.60s     |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_schema_ietf_interfaces_yang                     | PASS     | 0.45s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_yang_schema_tree                                    | PASS     | 0.52s      |                                             |
+| netconf_yang_schema_tree                                    | PASS     | 0.53s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_get_subscriptions                                  | PASS     | 0.09s      |                                             |
+| yangpush_get_subscriptions                                  | PASS     | 0.10s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_delete_all_subscriptions_and_receivers              | PASS     | 1.14s      |                                             |
+| netconf_delete_all_subscriptions_and_receivers              | PASS     | 1.16s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | yangpush_post_test_cleanup                                  | PASS     | 0.22s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-Size of file is : 1380 bytes
-Size of file (./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/kafka_output.json) is : 30535 bytes
+Size of file is : 25640 bytes
+Size of file (./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/kafka_output.json) is : 27988 bytes
 Selected test sequences: []
-Results saved in ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050
+Results saved in ./results/ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629
 
 Results directory tree:
-ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_131050/
-    stdout.log (192297 bytes)
-    udp_notif_capture.pcap (1380 bytes)
-    kafka_output.json (30535 bytes)
+ipf-zbl1243-r-daisy-21_huawei_vrp_ne_20250717_141629/
+    stdout.log (192298 bytes)
+    udp_notif_capture.pcap (25640 bytes)
+    kafka_output.json (27988 bytes)
     yp_config_backup.xml (231 bytes)
     yp_test.log (64047 bytes)
     get-ietf-yang-library.txt (590532 bytes)
