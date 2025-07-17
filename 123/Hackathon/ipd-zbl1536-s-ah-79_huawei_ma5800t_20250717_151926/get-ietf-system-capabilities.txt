@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:91b19ae0-8a92-4a58-9925-a22996ed4fad">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:553d0ee5-8856-4dee-89d9-a997f23e452b">
 	<data>
 		<system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
 			<datastore-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">

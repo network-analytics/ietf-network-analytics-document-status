@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:a38fab9e-e10e-4cba-bc9b-606bb7734f01">
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d14e63e9-243f-4723-aac9-f25f553e954f">
 	<data>
 		<netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
 			<schemas>

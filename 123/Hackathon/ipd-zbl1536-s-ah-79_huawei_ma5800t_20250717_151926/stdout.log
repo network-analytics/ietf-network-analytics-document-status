@@ -1,12 +1,12 @@
 NOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
-Executing tcpdump on 10.212.242.3: ssh -i ~/.ssh/dsy_sys dsy_sys@10.212.242.3 sudo tcpdump -s 0 -U -n -w - -i ens192 'host 10.190.64.79' -vvNOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
+Executing tcpdump on 10.212.242.2: ssh -i ~/.ssh/dsy_sys dsy_sys@10.212.242.2 sudo tcpdump -s 0 -U -n -w - -i ens192 'host 10.190.64.79' -vvNOTE: make sure the ssh keys of the server is already trusted in your system. Login once manually to ensure this!
 
-Executing kcat on 10.212.242.3: ssh -i ~/.ssh/dsy_sys -tt dsy_sys@10.212.242.3 'kcat -q -F /etc/daisy/kafka/kcat.conf -o end -t daisy.ietf.device-json-raw | jq -c | grep 10.190.64.79'
+Executing kcat on 10.212.242.2: ssh -i ~/.ssh/dsy_sys -tt dsy_sys@10.212.242.2 'kcat -q -F /etc/daisy/kafka/kcat.conf -o end -t daisy.ietf.device-json-raw | jq -c | grep 10.190.64.79'
 [32m+------------------------------------------------+[0m
 [32m| --- Backup current YANG Push configuration --- |[0m
 [32m+------------------------------------------------+[0m
 Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subscriptions.xml
-YANG Push configuration backup saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/yp_config_backup.xml.
+YANG Push configuration backup saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/yp_config_backup.xml.
 [32m+---------------------------------------------------------------------+[0m
 [32m| Running tests for vendor: huawei_ma5800t and hostname: 10.190.64.79 |[0m
 [32m+---------------------------------------------------------------------+[0m
@@ -81,7 +81,7 @@ Description (docstring): YANG Push test for get-ietf-system-capabilities.xml
 [32m| -- Get get-ietf-system-capabilities.xml |[0m
 [32m+-----------------------------------------+[0m
 Using XML file: get-ietf-system-capabilities.xml in base path: ./vendors/get-ietf-system-capabilities.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-ietf-system-capabilities.txt Size: 2867 bytes
+File saved: ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-ietf-system-capabilities.txt Size: 2867 bytes
 --- TEST 5: netconf_get_ietf_system_capabilities - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ Description (docstring): YANG Push test for get-ietf-yang-library.xml
 [32m| -- Get get-ietf-yang-library.xml |[0m
 [32m+----------------------------------+[0m
 Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-ietf-yang-library.txt Size: 287225 bytes
+File saved: ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-ietf-yang-library.txt Size: 287225 bytes
 --- TEST 6: netconf_get_ietf_yang_library - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ Description (docstring): YANG Push test for get-ietf-yang-library-augmentedby.xm
 [32m| -- Get get-ietf-yang-library-augmentedby.xml |[0m
 [32m+----------------------------------------------+[0m
 Using XML file: get-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-ietf-yang-library-augmentedby.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-ietf-yang-library-augmentedby.txt Size: 42832 bytes
+File saved: ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-ietf-yang-library-augmentedby.txt Size: 42832 bytes
 --- TEST 7: netconf_get_ietf_yang_library_augmentedby - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ Description (docstring): YANG Push test for get-schema-list.xml
 [32m| -- Get get-schema-list.xml |[0m
 [32m+----------------------------+[0m
 Using XML file: get-schema-list.xml in base path: ./vendors/get-schema-list.xml
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-schema-list.txt Size: 198851 bytes
+File saved: ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-schema-list.txt Size: 198851 bytes
 --- TEST 8: netconf_get_schema_list - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -183,7 +183,7 @@ module: ietf-yang-library
     x---n yang-library-change
        x---- module-set-id    -> /yanglib:modules-state/yanglib:module-set-id
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-library.tree (2145 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-library.tree (2145 bytes)
 Getting YANG module schema for ietf-yang-library-augmentedby
 XPATH/schema-node:None
 module: ietf-yang-library-augmentedby
@@ -191,18 +191,18 @@ module: ietf-yang-library-augmentedby
   augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
     +--rw augmented-by*   -> ../../yanglib:module/yanglib:name
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-library-augmentedby.tree (169 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-library-augmentedby.tree (169 bytes)
 Getting YANG module schema for ietf-datastores
 XPATH/schema-node:None
 module: ietf-datastores
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-datastores.tree (24 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-datastores.tree (24 bytes)
 Using XML file: get-ietf-yang-library.xml in base path: ./vendors/get-ietf-yang-library.xml
 [32m+--------------------------------------------+[0m
 [32m| -- Get ./vendors/get-ietf-yang-library.xml |[0m
 [32m+--------------------------------------------+[0m
-File saved: ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-ietf-yang-library.xml Size: 287056 bytes
-Running command: yanglint ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-datastores.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-library.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-library-augmentedby.yang ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/get-ietf-yang-library.xml
+File saved: ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-ietf-yang-library.xml Size: 287056 bytes
+Running command: yanglint ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-datastores.yang ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-library.yang ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-library-augmentedby.yang ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/get-ietf-yang-library.xml
 --- TEST 9: netconf_get_and_validate_yang_library - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -227,13 +227,13 @@ Description (docstring): MVP1 tests for get-schema-ietf-udp-notif-transport.xml
 [32m| -- Get get-schema-ietf-udp-notif-transport.xml |[0m
 [32m+------------------------------------------------+[0m
 Using XML file: get-schema-ietf-udp-notif-transport.xml in base path: ./vendors/get-schema-ietf-udp-notif-transport.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.tree (0 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.tree (0 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.yang:10: error: module "ietf-subscribed-notif-receivers" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.yang:16: error: module "ietf-udp-client" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.yang:21: error: module "ietf-tls-client" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.yang:26: error: module "ietf-tls-common" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-udp-notif-transport.yang:26: warning: imported module "ietf-tls-common" not used
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.yang:10: error: module "ietf-subscribed-notif-receivers" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.yang:16: error: module "ietf-udp-client" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.yang:21: error: module "ietf-tls-client" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.yang:26: error: module "ietf-tls-common" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-udp-notif-transport.yang:26: warning: imported module "ietf-tls-common" not used
 
 
 --- TEST 11: netconf_get_schema_ietf_udp_notif_transport - SUCCESS
@@ -247,7 +247,7 @@ Description (docstring): MVP1 tests for get-schema-ietf-yang-library-augmentedby
 [32m| -- Get get-schema-ietf-yang-library-augmentedby.xml |[0m
 [32m+-----------------------------------------------------+[0m
 Using XML file: get-schema-ietf-yang-library-augmentedby.xml in base path: ./vendors/get-schema-ietf-yang-library-augmentedby.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-library-augmentedby.tree (161 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-library-augmentedby.tree (161 bytes)
 module: ietf-yang-library-augmentedby
 
   augment /yanglib:yang-library/yanglib:module-set/yanglib:module:
@@ -264,7 +264,7 @@ Description (docstring): MVP1 tests for get-schema-ietf-yang-push.xml
 [32m| -- Get get-schema-ietf-yang-push.xml |[0m
 [32m+--------------------------------------+[0m
 Using XML file: get-schema-ietf-yang-push.xml in base path: ./vendors/get-schema-ietf-yang-push.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push.tree (6248 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push.tree (6248 bytes)
 module: ietf-yang-push
 
   augment /sn:establish-subscription/sn:input:
@@ -425,13 +425,13 @@ Description (docstring): MVP1 tests for get-schema-ietf-yang-push-revision.xml
 [32m| -- Get get-schema-ietf-yang-push-revision.xml |[0m
 [32m+-----------------------------------------------+[0m
 Using XML file: get-schema-ietf-yang-push-revision.xml in base path: ./vendors/get-schema-ietf-yang-push-revision.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.tree (1563 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.tree (1563 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.yang:10: error: module "ietf-yang-revisions" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.yang:22: error: module "ietf-yang-semver" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.yang:33: error: module "ietf-system-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.yang:39: error: module "ietf-notification-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yang-push-revision.yang:39: warning: imported module "ietf-notification-capabilities" not used
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.yang:10: error: module "ietf-yang-revisions" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.yang:22: error: module "ietf-yang-semver" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.yang:33: error: module "ietf-system-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.yang:39: error: module "ietf-notification-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yang-push-revision.yang:39: warning: imported module "ietf-notification-capabilities" not used
 
 module: ietf-yang-push-revision
 
@@ -474,11 +474,11 @@ Description (docstring): MVP1 tests for get-schema-ietf-yp-notification.xml
 [32m| -- Get get-schema-ietf-yp-notification.xml |[0m
 [32m+--------------------------------------------+[0m
 Using XML file: get-schema-ietf-yp-notification.xml in base path: ./vendors/get-schema-ietf-yp-notification.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-notification.tree (269 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-notification.tree (269 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-notification.yang:20: error: module "ietf-system-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-notification.yang:26: error: module "ietf-notification-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-notification.yang:26: warning: imported module "ietf-notification-capabilities" not used
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-notification.yang:20: error: module "ietf-system-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-notification.yang:26: error: module "ietf-notification-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-notification.yang:26: warning: imported module "ietf-notification-capabilities" not used
 
 module: ietf-yp-notification
 
@@ -503,11 +503,11 @@ Description (docstring): MVP1 tests for get-schema-ietf-yp-observation.xml
 [32m| -- Get get-schema-ietf-yp-observation.xml |[0m
 [32m+-------------------------------------------+[0m
 Using XML file: get-schema-ietf-yp-observation.xml in base path: ./vendors/get-schema-ietf-yp-observation.xml
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-observation.tree (260 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-observation.tree (260 bytes)
 PYANG STDERR:
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-observation.yang:15: error: module "ietf-system-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-observation.yang:21: error: module "ietf-notification-capabilities" not found in search path
-./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-yp-observation.yang:21: warning: imported module "ietf-notification-capabilities" not used
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-observation.yang:15: error: module "ietf-system-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-observation.yang:21: error: module "ietf-notification-capabilities" not found in search path
+./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-yp-observation.yang:21: warning: imported module "ietf-notification-capabilities" not used
 
 module: ietf-yp-observation
 
@@ -542,7 +542,7 @@ Getting YANG module schema for ietf-system-capabilities
 [32m+-------------------------------------+[0m
 [32m| -- Get YANG Modules from the device |[0m
 [32m+-------------------------------------+[0m
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-system-capabilities.tree (366 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-system-capabilities.tree (366 bytes)
 module: ietf-system-capabilities
   +--ro system-capabilities
      +--ro datastore-capabilities* [datastore]
@@ -629,7 +629,7 @@ Overridden XML: <subscriptions
     </receivers>
     <periodic
       xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
-      <period>6000</period>
+      <period>500</period>
       <anchor-time>2025-01-01T00:00:30Z</anchor-time>
     </periodic>
   </subscription>
@@ -637,7 +637,7 @@ Overridden XML: <subscriptions
     <receiver-instance>
       <name>DAISYYPTEST</name>
         <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
-          <remote-address>10.212.242.3</remote-address>
+          <remote-address>10.212.242.2</remote-address>
           <remote-port>10003</remote-port>
           <enable-segmentation>true</enable-segmentation>
           <max-segment-size>1400</max-segment-size>
@@ -645,6 +645,7 @@ Overridden XML: <subscriptions
     </receiver-instance>
   </receiver-instances>
 </subscriptions>
+
 [32m+--------------------------------------------------------------------------+[0m
 [32m| -- Config: ./vendors/huawei_ma5800t/config-yp-periodic-hua-interface.xml |[0m
 [32m+--------------------------------------------------------------------------+[0m
@@ -663,7 +664,7 @@ Using XML file: get-schema-ietf-interfaces-yang.xml in base path: ./vendors/get-
 [32m+-------------------------------------------------------+[0m
 [32m| -- Get: ./vendors/get-schema-ietf-interfaces-yang.xml |[0m
 [32m+-------------------------------------------------------+[0m
-PYANG TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/ietf-interfaces.tree (2915 bytes)
+PYANG TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/ietf-interfaces.tree (2915 bytes)
 module: ietf-interfaces
   +--rw interfaces
   |  +--rw interface* [name]
@@ -1000,7 +1001,7 @@ module: huawei-ifm
        +---w input
           +---w if-name    -> /ifm:ifm/ifm:interfaces/ifm:interface/ifm:name
 
-YANGLINT TREE OUTPUT saved to ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/huawei-ifm.tree (12834 bytes)
+YANGLINT TREE OUTPUT saved to ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/huawei-ifm.tree (12834 bytes)
 --- TEST 23: netconf_yang_schema_tree - SUCCESS
 
  --------------------------------------------------------------------------------
@@ -1035,7 +1036,7 @@ Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subs
 					</receiver>
 				</receivers>
 				<periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
-					<period>6000</period>
+					<period>500</period>
 					<anchor-time>2025-01-01T00:00:30Z</anchor-time>
 				</periodic>
 			</subscription>
@@ -1043,7 +1044,7 @@ Using XML file: get-ietf-subscriptions.xml in base path: ./vendors/get-ietf-subs
 				<receiver-instance xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
 					<name>DAISYYPTEST</name>
 					<udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
-						<remote-address>10.212.242.3</remote-address>
+						<remote-address>10.212.242.2</remote-address>
 						<remote-port>10003</remote-port>
 						<enable-segmentation>true</enable-segmentation>
 						<max-segment-size>1400</max-segment-size>
@@ -1122,56 +1123,56 @@ Error: Receiver instance not exist.
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_ietf_yang_library                               | PASS     | 0.62s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_ietf_yang_library_augmentedby                   | PASS     | 0.31s      |                                             |
+| netconf_get_ietf_yang_library_augmentedby                   | PASS     | 0.28s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_list                                     | PASS     | 0.51s      |                                             |
+| netconf_get_schema_list                                     | PASS     | 0.55s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_and_validate_yang_library                       | PASS     | 1.21s      |                                             |
+| netconf_get_and_validate_yang_library                       | PASS     | 1.13s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_schema_ietf_notification_transport_capabilities | FAIL     | 0.06s      | The value "ietf-notification-transport-c... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_udp_notif_transport                 | PASS     | 0.60s      |                                             |
+| netconf_get_schema_ietf_udp_notif_transport                 | PASS     | 0.66s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_library_augmentedby            | PASS     | 0.41s      |                                             |
+| netconf_get_schema_ietf_yang_library_augmentedby            | PASS     | 0.43s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_push                           | PASS     | 0.60s      |                                             |
+| netconf_get_schema_ietf_yang_push                           | PASS     | 0.67s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yang_push_revision                  | PASS     | 0.61s      |                                             |
+| netconf_get_schema_ietf_yang_push_revision                  | PASS     | 0.58s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_notification                     | PASS     | 0.49s      |                                             |
+| netconf_get_schema_ietf_yp_notification                     | PASS     | 0.61s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_observation                      | PASS     | 0.84s      |                                             |
+| netconf_get_schema_ietf_yp_observation                      | PASS     | 0.76s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_get_schema_ietf_yp_transport_capabilities           | FAIL     | 0.04s      | The value "ietf-yp-transport-capabilitie... |
+| netconf_get_schema_ietf_yp_transport_capabilities           | FAIL     | 0.07s      | The value "ietf-yp-transport-capabilitie... |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_schema_ietf_system_capabilities_yang            | PASS     | 0.49s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_add_receiver                                       | PASS     | 10.31s     |                                             |
+| yangpush_add_receiver                                       | PASS     | 10.32s     |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_ietf_interface                                     | FAIL     | 0.04s      | The subscription filter is invalid....      |
+| yangpush_ietf_interface                                     | FAIL     | 0.05s      | The subscription filter is invalid....      |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_vendor_interface                                   | PASS     | 70.35s     |                                             |
+| yangpush_vendor_interface                                   | PASS     | 70.37s     |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
 | netconf_get_schema_ietf_interfaces_yang                     | PASS     | 0.52s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_yang_schema_tree                                    | PASS     | 0.68s      |                                             |
+| netconf_yang_schema_tree                                    | PASS     | 0.61s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_get_subscriptions                                  | PASS     | 0.10s      |                                             |
+| yangpush_get_subscriptions                                  | PASS     | 0.11s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| netconf_delete_all_subscriptions_and_receivers              | PASS     | 0.61s      |                                             |
+| netconf_delete_all_subscriptions_and_receivers              | PASS     | 0.62s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-| yangpush_post_test_cleanup                                  | PASS     | 0.24s      |                                             |
+| yangpush_post_test_cleanup                                  | PASS     | 0.25s      |                                             |
 +-------------------------------------------------------------+----------+------------+---------------------------------------------+
-Size of file is : 2312 bytes
-Size of file (./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/kafka_output.json) is : 0 bytes
+Size of file is : 164960 bytes
+Size of file (./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/kafka_output.json) is : 185883 bytes
 Selected test sequences: []
-Results saved in ./results/ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110
+Results saved in ./results/ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926
 
 Results directory tree:
-ipf-zbl1243-r-daisy-21_huawei_ma5800t_20250717_142110/
-    stdout.log (68053 bytes)
-    udp_notif_capture.pcap (2312 bytes)
-    kafka_output.json (0 bytes)
+ipd-zbl1536-s-ah-79_huawei_ma5800t_20250717_151926/
+    stdout.log (67936 bytes)
+    udp_notif_capture.pcap (164960 bytes)
+    kafka_output.json (185883 bytes)
     yp_config_backup.xml (231 bytes)
     yp_test.log (1492 bytes)
     get-ietf-system-capabilities.txt (2867 bytes)
