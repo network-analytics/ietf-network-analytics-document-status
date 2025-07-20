@@ -1,0 +1,13 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+      <name>DAISY</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+          <remote-address>10.212.241.3</remote-address>
+          <remote-port>10003</remote-port>
+          <enable-segmentation>true</enable-segmentation>
+          <max-segment-size>1400</max-segment-size>
+        </udp-notif-receiver>
+    </receiver-instance>
+  </receiver-instances>
+</subscriptions>

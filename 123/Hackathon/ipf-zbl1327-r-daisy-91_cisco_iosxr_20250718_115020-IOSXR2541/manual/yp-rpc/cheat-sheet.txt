@@ -1,0 +1,155 @@
+Interactive Login
+netconf-console2 --host=10.215.132.91 --port=830 --db=running -i --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa
+
+Get Capabilities for Systems and Datastore Update Notifications (RFC 9196)
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --rpc=get-systems-capa.xml > ciscoiosxr-yangpush-udpnotif-20250627-0815-capabilities.xml
+
+Get YANG Library (RFC 8525)
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --rpc=get-yang-library.xml > ciscoiosxr-yangpush-udpnotif-20250627-0815-library.xml
+
+Get YANG-Push subscriptions (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --rpc=get-yp-subscription.xml
+
+Create YANG-Push receiver (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-subscription-receiver.xml --commit
+
+Create YANG-Push subscriptions (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-subscription-periodical.xml --commit
+
+Create YANG-Push subscriptions (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-subscription-onchange.xml --commit
+
+Delete YANG-Push receiver (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-receiver-delete.xml --commit
+
+Delete YANG-Push subscriptions (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-subscription-periodical-delete.xml --commit
+
+Delete YANG-Push subscriptions (RFC 8639, RFC 8641)
+netconf-console2 --host=10.215.132.91 --port=830 --db=candidate --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --edit-config=edit-config-yp-subscription-onchange-delete.xml --commit
+
+
+Obtain all YANG modules relevant for YANG-Push subscription
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-interfaces > openconfig-interfaces.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-lldp > openconfig-lldp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-lacp > openconfig-lacp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-interfaces > ietf-interfaces.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-yang-types > openconfig-yang-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-types > openconfig-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-extensions > openconfig-extensions.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-transport-types > openconfig-transport-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-platform-types > openconfig-platform-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-lldp-types > openconfig-lldp-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-types > ietf-yang-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-subscribed-notifications > ietf-subscribed-notifications.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-push-revision > ietf-yang-push-revision.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-push > ietf-yang-push.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-udp-notif-transport > ietf-udp-notif-transport.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-subscribed-notif-receivers > ietf-subscribed-notif-receivers.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-udp-client > ietf-udp-client.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-tls-client > ietf-tls-client.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-crypto-types > ietf-crypto-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-truststore > ietf-truststore.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-keystore > ietf-keystore.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-tls-common > ietf-tls-common.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=iana-tls-cipher-suite-algs > iana-tls-cipher-suite-algs.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-netconf-acm > ietf-netconf-acm.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-network-instance > ietf-network-instance.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-ip > ietf-ip.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-restconf > ietf-restconf.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-revisions > ietf-yang-revisions.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-semver > ietf-yang-semver.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-library > ietf-yang-library.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-datastores > ietf-datastores.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-system-capabilities > ietf-system-capabilities.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-notification-capabilities > ietf-notification-capabilities.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yang-patch > ietf-yang-patch.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=Cisco-IOS-XR-openconfig-interfaces-stats-ext > Cisco-IOS-XR-openconfig-interfaces-stats-ext.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=ietf-yp-observation > ietf-yp-observation.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-network-instance > openconfig-network-instance.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-network-instance-types > openconfig-network-instance-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-isis > openconfig-isis.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp > openconfig-bgp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-policy-types > openconfig-policy-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-routing-policy > openconfig-routing-policy.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-inet-types > openconfig-inet-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-local-routing > openconfig-local-routing.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bfd > openconfig-bfd.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-network-instance-l3 > openconfig-network-instance-l3.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp > openconfig-rib-bgp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-types > openconfig-bgp-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-errors > openconfig-bgp-errors.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp-tables > openconfig-rib-bgp-tables.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-evpn-types > openconfig-evpn-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp-attributes > openconfig-rib-bgp-attributes.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp-types > openconfig-rib-bgp-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-segment-routing-types > openconfig-segment-routing-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-types > openconfig-mpls-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp-shared-attributes > openconfig-rib-bgp-shared-attributes.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-rib-bgp-table-attributes > openconfig-rib-bgp-table-attributes.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-common > openconfig-bgp-common.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-common-multiprotocol > openconfig-bgp-common-multiprotocol.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-common-structure > openconfig-bgp-common-structure.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-peer-group > openconfig-bgp-peer-group.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-neighbor > openconfig-bgp-neighbor.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-bgp-global > openconfig-bgp-global.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls > openconfig-mpls.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-rsvp > openconfig-mpls-rsvp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-ldp > openconfig-mpls-ldp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-segment-routing > openconfig-segment-routing.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-srte-policy > openconfig-srte-policy.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft > openconfig-aft.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-ipv4 > openconfig-aft-ipv4.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-ipv6 > openconfig-aft-ipv6.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-common > openconfig-aft-common.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-types > openconfig-aft-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-mpls > openconfig-aft-mpls.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-pf > openconfig-aft-pf.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-packet-match-types > openconfig-packet-match-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-ethernet > openconfig-aft-ethernet.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-aft-state-synced > openconfig-aft-state-synced.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=cisco-semver > cisco-semver.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-te > openconfig-mpls-te.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-sr > openconfig-mpls-sr.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pcep > openconfig-pcep.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-keychain > openconfig-keychain.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-keychain-types > openconfig-keychain-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-igp > openconfig-mpls-igp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-mpls-static > openconfig-mpls-static.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-vlan > openconfig-vlan.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-vlan-types > openconfig-vlan-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-if-ethernet > openconfig-if-ethernet.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=iana-if-type > iana-if-type.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-if-aggregate > openconfig-if-aggregate.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-if-types > openconfig-if-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2 > openconfig-ospfv2.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2-global > openconfig-ospfv2-global.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospf-types > openconfig-ospf-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2-common > openconfig-ospfv2-common.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2-area > openconfig-ospfv2-area.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2-area-interface > openconfig-ospfv2-area-interface.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-ospfv2-lsdb > openconfig-ospfv2-lsdb.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-policy-forwarding > openconfig-policy-forwarding.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pf-forwarding-policies > openconfig-pf-forwarding-policies.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-packet-match > openconfig-packet-match.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-defined-sets > openconfig-defined-sets.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pf-path-groups > openconfig-pf-path-groups.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pf-interfaces > openconfig-pf-interfaces.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-isis-types > openconfig-isis-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-isis-lsp > openconfig-isis-lsp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-isis-lsdb-types > openconfig-isis-lsdb-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-isis-routing > openconfig-isis-routing.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pim > openconfig-pim.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-pim-types > openconfig-pim-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-acl > openconfig-acl.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-igmp > openconfig-igmp.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-igmp-types > openconfig-igmp-types.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-evpn > openconfig-evpn.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=openconfig-network-instance-l2 > openconfig-network-instance-l2.yang
+netconf-console2 --host=10.215.132.91 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/pmacct/netconf/id_rsa --get-schema=Cisco-IOS-XR-openconfig-bgp-ext > Cisco-IOS-XR-openconfig-bgp-ext.yang
+
+
+
+tcpdump -i ens192 -vvv -n host 10.215.132.91 and port 10003 -w ciscoiosxr-yangpush-udpnotif-20250720-0705.pcap
+
+kcat -F /etc/daisy/kafka/kcat.conf -o end -t daisy.dev.device-json-raw | grep 'ipf-zbl1327-r-daisy-91'

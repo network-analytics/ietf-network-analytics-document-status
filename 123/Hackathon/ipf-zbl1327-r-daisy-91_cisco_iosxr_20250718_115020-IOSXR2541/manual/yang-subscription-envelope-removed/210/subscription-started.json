@@ -1,0 +1,20 @@
+{
+    "ietf-subscribed-notifications:subscription-started": {
+        "id": 210,
+        "ietf-yang-push:datastore": "ietf-datastores:operational",
+        "ietf-yang-push:datastore-xpath-filter": "openconfig-interfaces:interfaces/interface/state/counters",
+        "transport": "ietf-udp-notif-transport:udp-notif",
+        "ietf-yang-push-revision:module-version": [
+            {
+                "module-name": "openconfig-interfaces",
+                "revision": "2022-10-25"
+            }
+        ],
+        "ietf-yang-push-revision:yang-library-content-id": "6d13bafd8fd1dc21aa8932d1199b369794881393",
+        "encoding": "encode-json",
+        "ietf-yang-push:periodic": {
+            "period": 3000,
+            "anchor-time": "2025-01-01T00:00:30+00:00"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "ietf-yang-push:push-update": {
+        "id": 211,
+        "ietf-yp-observation:timestamp": "2025-07-18T09:51:00.000Z",
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "datastore-contents": {
+            "openconfig-interfaces:interfaces": {
+                "interface": [
+                    {
+                        "name": "TenGigE0/0/0/16",
+                        "subinterfaces": {
+                            "subinterface": [
+                                {
+                                    "index": 13,
+                                    "state": {
+                                        "counters": {
+                                            "in-octets": "10642737",
+                                            "in-pkts": "52494",
+                                            "in-unicast-pkts": "52488",
+                                            "in-broadcast-pkts": "2",
+                                            "in-multicast-pkts": "4",
+                                            "in-discards": "1",
+                                            "in-errors": "0",
+                                            "in-unknown-protos": "0",
+                                            "in-fcs-errors": "0",
+                                            "out-octets": "5783980",
+                                            "out-pkts": "30480",
+                                            "out-unicast-pkts": "30466",
+                                            "out-broadcast-pkts": "1",
+                                            "out-multicast-pkts": "13",
+                                            "out-discards": "0",
+                                            "out-errors": "0",
+                                            "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                                "last-read-time": "1752832252018"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

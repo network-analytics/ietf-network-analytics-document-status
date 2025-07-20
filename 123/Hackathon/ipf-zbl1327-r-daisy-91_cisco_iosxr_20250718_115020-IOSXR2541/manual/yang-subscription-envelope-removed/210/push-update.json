@@ -1,0 +1,1287 @@
+{
+    "ietf-yang-push:push-update": {
+        "id": 210,
+        "ietf-yp-observation:timestamp": "2025-07-18T09:51:00.002Z",
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "datastore-contents": {
+            "openconfig-interfaces:interfaces": {
+                "interface": [
+                    {
+                        "name": "Null0",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether5791",
+                        "state": {
+                            "counters": {
+                                "in-octets": "13819547",
+                                "in-pkts": "54804",
+                                "in-unicast-pkts": "54660",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "144",
+                                "in-discards": "2494",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "5915004",
+                                "out-pkts": "20186",
+                                "out-unicast-pkts": "19884",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "302",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether7991",
+                        "state": {
+                            "counters": {
+                                "in-octets": "3326299",
+                                "in-pkts": "15446",
+                                "in-unicast-pkts": "15297",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "149",
+                                "in-discards": "9",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "4094814",
+                                "out-pkts": "10814",
+                                "out-unicast-pkts": "10565",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "249",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251469"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "MgmtEth0/RP0/CPU0/0",
+                        "state": {
+                            "counters": {
+                                "in-octets": "176117",
+                                "in-pkts": "1849",
+                                "in-unicast-pkts": "964",
+                                "in-broadcast-pkts": "558",
+                                "in-multicast-pkts": "327",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "331815",
+                                "out-pkts": "1155",
+                                "out-unicast-pkts": "1155",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "MgmtEth0/RP1/CPU0/0",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "HundredGigE0/0/0/37",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251468"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "HundredGigE0/0/0/10",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251469"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "HundredGigE0/0/0/36",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251469"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "HundredGigE0/0/0/11",
+                        "state": {
+                            "counters": {
+                                "in-octets": "3326299",
+                                "in-pkts": "15446",
+                                "in-unicast-pkts": "15297",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "149",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "4094814",
+                                "out-pkts": "10814",
+                                "out-unicast-pkts": "10565",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "249",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251469"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/26",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/27",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/28",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/29",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/30",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/31",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/32",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/33",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/34",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/35",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/12",
+                        "state": {
+                            "counters": {
+                                "in-octets": "7588217",
+                                "in-pkts": "29879",
+                                "in-unicast-pkts": "29777",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "102",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "2366654",
+                                "out-pkts": "9955",
+                                "out-unicast-pkts": "9924",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "31",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251471"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/13",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/14",
+                        "state": {
+                            "counters": {
+                                "in-octets": "261559",
+                                "in-pkts": "786",
+                                "in-unicast-pkts": "768",
+                                "in-broadcast-pkts": "2",
+                                "in-multicast-pkts": "16",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "4885671",
+                                "out-pkts": "23555",
+                                "out-unicast-pkts": "23540",
+                                "out-broadcast-pkts": "1",
+                                "out-multicast-pkts": "14",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/15",
+                        "state": {
+                            "counters": {
+                                "in-octets": "553119",
+                                "in-pkts": "3646",
+                                "in-unicast-pkts": "3628",
+                                "in-broadcast-pkts": "2",
+                                "in-multicast-pkts": "16",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "12051961",
+                                "out-pkts": "22934",
+                                "out-unicast-pkts": "22918",
+                                "out-broadcast-pkts": "1",
+                                "out-multicast-pkts": "15",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/16",
+                        "state": {
+                            "counters": {
+                                "in-octets": "10581110",
+                                "in-pkts": "52176",
+                                "in-unicast-pkts": "52151",
+                                "in-broadcast-pkts": "2",
+                                "in-multicast-pkts": "23",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "5749338",
+                                "out-pkts": "30297",
+                                "out-unicast-pkts": "30271",
+                                "out-broadcast-pkts": "1",
+                                "out-multicast-pkts": "25",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/17",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/18",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/19",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/20",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251472"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/21",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/24",
+                        "state": {
+                            "counters": {
+                                "in-octets": "6231330",
+                                "in-pkts": "24925",
+                                "in-unicast-pkts": "24883",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "42",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "3548350",
+                                "out-pkts": "10231",
+                                "out-unicast-pkts": "9960",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "271",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/25",
+                        "state": {
+                            "counters": {
+                                "in-octets": "24248",
+                                "in-pkts": "234",
+                                "in-unicast-pkts": "7",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "227",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "4145320",
+                                "out-pkts": "19946",
+                                "out-unicast-pkts": "19917",
+                                "out-broadcast-pkts": "2",
+                                "out-multicast-pkts": "27",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/40",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/41",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/42",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/43",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/44",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/45",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/46",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/47",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251473"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/0",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/1",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/2",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/3",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/4",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/5",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/6",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/7",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/22",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "TenGigE0/0/0/23",
+                        "state": {
+                            "counters": {
+                                "in-octets": "0",
+                                "in-pkts": "0",
+                                "in-unicast-pkts": "0",
+                                "in-broadcast-pkts": "0",
+                                "in-multicast-pkts": "0",
+                                "in-discards": "0",
+                                "in-errors": "0",
+                                "in-unknown-protos": "0",
+                                "in-fcs-errors": "0",
+                                "out-octets": "0",
+                                "out-pkts": "0",
+                                "out-unicast-pkts": "0",
+                                "out-broadcast-pkts": "0",
+                                "out-multicast-pkts": "0",
+                                "out-discards": "0",
+                                "out-errors": "0",
+                                "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                    "last-read-time": "1752832251474"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
