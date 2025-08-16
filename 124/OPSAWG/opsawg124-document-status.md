@@ -1,10 +1,10 @@
 ## OPSAWG Working Group
 
-IETF 122 Meeting minutes
-https://notes.ietf.org/notes-ietf-122-opsawg#
+IETF 123 Meeting minutes
+https://notes.ietf.org/notes-ietf-123-opsawg#
 
-IETF 122 Meeting session
-https://datatracker.ietf.org/meeting/122/session/opsawg
+IETF 123 Meeting session
+https://datatracker.ietf.org/meeting/123/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
