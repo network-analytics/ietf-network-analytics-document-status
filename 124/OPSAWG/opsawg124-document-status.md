@@ -18,7 +18,7 @@ https://datatracker.ietf.org/meeting/123/session/opsawg
 * ** Tasks**: Greg Mirsky (Performance Metrics designated expert) on behalf of David Dong (IANA) https://mailarchive.ietf.org/arch/msg/opsawg/AevMRV-bbq7qDZpq8yaF9Kpev_g/
 * ** Tasks**: Gorry Fairhurst (Transport AD) https://mailarchive.ietf.org/arch/msg/opsawg/AYEDwx4u7i-1yegK5_85KuqS4Qc/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-18&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-19.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-20&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-21.txt
 
 ### draft-netana-opsawg-ipfix-gpon-gem
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
