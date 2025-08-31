@@ -8,7 +8,7 @@ https://datatracker.ietf.org/meeting/123/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Merged IESG inputs from Linda Dunbar (Secdir), Deb Cooley (SEC AD), Mohamed Boucadair and Mahesh Jethanandani (OPS AD), Mike Bishop (Web & Internet Transport AD), Tim Wicinski (INT Review) and partially from Éric Vyncke's (INT AD) in -21 which is not published yet. Not merged are inputs from Gunter Van de Velde (RTG AD), Greg Mirsky (Performance Metrics designated expert) and Gorry Fairhurst (Transport AD). 
+* **State**: Merged IESG inputs from Linda Dunbar (Secdir), Deb Cooley (SEC AD), Mohamed Boucadair and Mahesh Jethanandani (OPS AD), Mike Bishop (Web & Internet Transport AD), Tim Wicinski (INT Review), Éric Vyncke's (INT AD), Gunter Van de Velde (RTG AD), Greg Mirsky (Performance Metrics designated expert) and Gorry Fairhurst (Transport AD) in -21 which is not published yet. Alex and Benoit review pending.
 * ** Tasks**: Deb Cooley (SEC AD) https://mailarchive.ietf.org/arch/msg/opsawg/v2W7-6_VqJqHIl395zxenFcej84/
 * ** Tasks**: Mohamed Boucadair (OPS AD) https://mailarchive.ietf.org/arch/msg/opsawg/XIqfcN5WK8N4B6VAsJ_Oe7qhmh0/
 * ** Tasks**: Mike Bishop (Web & Internet Transport AD) https://mailarchive.ietf.org/arch/msg/opsawg/rpDkeCu9ijt6tqyN0zMEhkTrPYY/
