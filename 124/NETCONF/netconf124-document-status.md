@@ -44,4 +44,4 @@ https://datatracker.ietf.org/meeting/123/session/netconf
 * **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities. -08 merged input from Jian Ping on example. Merged input from Rob on revision-label change to revision to reflect semver document changes.
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-nmop#2-Message-Broker-Telemetry-Message-10-min
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-08&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/refs/heads/main/draft-ietf-netconf-yang-notifications-versioning-09.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-09
