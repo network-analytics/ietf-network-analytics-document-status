@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/123/session/netconf
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22 and pending.
+* **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-21&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-22.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-22&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-23.txt
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
@@ -37,7 +37,7 @@ https://datatracker.ietf.org/meeting/123/session/netconf
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/EGM6ZBhh_wqKu0ZrxlOXBBPMrWM/
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-netconf?view
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-ietf-netconf-notif-envelope-02.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-ietf-netconf-notif-envelope-03.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
