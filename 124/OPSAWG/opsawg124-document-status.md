@@ -8,7 +8,7 @@ https://datatracker.ietf.org/meeting/123/session/opsawg
 
 ### draft-ietf-opsawg-ipfix-on-path-telemetry
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
-* **State**: Merged IESG inputs from Linda Dunbar (Secdir), Deb Cooley (SEC AD), Mohamed Boucadair and Mahesh Jethanandani (OPS AD), Mike Bishop (Web & Internet Transport AD), Tim Wicinski (INT Review), Éric Vyncke's (INT AD), Gunter Van de Velde (RTG AD), Greg Mirsky (Performance Metrics designated expert) and Gorry Fairhurst (Transport AD) in -21 which is not published yet. Alex and Benoit review pending.
+* **State**: Merged IESG inputs from Linda Dunbar (Secdir), Deb Cooley (SEC AD), Mohamed Boucadair and Mahesh Jethanandani (OPS AD), Mike Bishop (Web & Internet Transport AD), Tim Wicinski (INT Review), Éric Vyncke's (INT AD), Gunter Van de Velde (RTG AD), Greg Mirsky (Performance Metrics designated expert) and Gorry Fairhurst (Transport AD) in -21 which is not published yet. Merged input from Benoit in -22.
 * ** Tasks**: Deb Cooley (SEC AD) https://mailarchive.ietf.org/arch/msg/opsawg/v2W7-6_VqJqHIl395zxenFcej84/
 * ** Tasks**: Mohamed Boucadair (OPS AD) https://mailarchive.ietf.org/arch/msg/opsawg/XIqfcN5WK8N4B6VAsJ_Oe7qhmh0/
 * ** Tasks**: Mike Bishop (Web & Internet Transport AD) https://mailarchive.ietf.org/arch/msg/opsawg/rpDkeCu9ijt6tqyN0zMEhkTrPYY/
@@ -18,7 +18,7 @@ https://datatracker.ietf.org/meeting/123/session/opsawg
 * ** Tasks**: Greg Mirsky (Performance Metrics designated expert) on behalf of David Dong (IANA) https://mailarchive.ietf.org/arch/msg/opsawg/AevMRV-bbq7qDZpq8yaF9Kpev_g/
 * ** Tasks**: Gorry Fairhurst (Transport AD) https://mailarchive.ietf.org/arch/msg/opsawg/AYEDwx4u7i-1yegK5_85KuqS4Qc/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-21
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-21&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-22.txt
 
 ### draft-netana-opsawg-ipfix-gpon-gem
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
