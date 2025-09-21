@@ -21,6 +21,12 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/USAk1v1jmFWe-61r3FAdJ2_GjQI/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-02
 
+### draft-netana-nmop-yang-message-broker-message-key
+* **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-message-broker-message-key/
+* **State**: Initial publication with -00 with merged input from Alex. Ahmed and Benoit pending.
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-message-broker-message-key-00
+
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
 * **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05.
@@ -33,11 +39,11 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
-* **State**: Presented -02 at NMOP 122. Merged terminology input from Adrian (https://mailarchive.ietf.org/arch/msg/nmop/ufL-6RdA09pR7gzxHaNtSb-a-54/), Updated YANG modules. Added "template" and "season" into ietf-network-anomaly-symptom-cbl and maintenance related information into ietf-network-anomaly-service-topology, Added in Section 4.4 Apache AVRO data model translation, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Added normative reference to Service Model, RFC 8969 and descried service model context, Added Cosmos Bright Lights in Implementation status section
+* **State**: Presented -02 at NMOP 122. Merged terminology input from Adrian (https://mailarchive.ietf.org/arch/msg/nmop/ufL-6RdA09pR7gzxHaNtSb-a-54/), Updated YANG modules. Added "template" and "season" into ietf-network-anomaly-symptom-cbl and maintenance related information into ietf-network-anomaly-service-topology, Added in Section 4.4 Apache AVRO data model translation, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Added normative reference to Service Model, RFC 8969 and descried service model context, Added Cosmos Bright Lights in Implementation status section. Added vpn-network-termination grouping in -04.
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-nmop#3-Anomaly-semantics-and-lifecycle-10-min
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/Qb2w6ABl6i5fd5N0g5hVIT_YVmo/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-network-anomaly-semantics-03
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-04.txt
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
