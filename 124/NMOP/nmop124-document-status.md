@@ -8,18 +8,18 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
-* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname to hostname in -09 (not published).
+* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar in -09 (not published).
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-08&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-kafka-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-09.txt
 
 ### draft-netana-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
-* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02. Merged input from Rob on changing leaf and module grouping names in -02
+* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02. Merged input from Rob on changing leaf and module grouping names in -02. Replaced RabitMQ with Apache Pulsar in -03 (not published).
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-nmop#2-Message-Broker-Telemetry-Message-10-min
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/uyraumNT5U_ZopzVqQcT_Sx2cjo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/USAk1v1jmFWe-61r3FAdJ2_GjQI/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-02
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-message-broker-telemetry-message/refs/heads/main/draft-ietf-nmop-message-broker-telemetry-message-03.txt
 
 ### draft-netana-nmop-yang-message-broker-message-key
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-message-broker-message-key/
