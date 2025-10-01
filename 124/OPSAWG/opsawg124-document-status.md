@@ -10,7 +10,7 @@ https://datatracker.ietf.org/meeting/123/session/opsawg
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-on-path-telemetry/
 * **State**: Merged input from Benoit and Greg in -22 and removed passive in -23.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-ietf-opsawg-ipfix-on-path-telemetry
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-23&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-23.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-on-path-telemetry-22&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-opsawg-ipfix-on-path-telemetry/refs/heads/main/draft-ietf-opsawg-ipfix-on-path-telemetry-23.txt
 
 ### draft-netana-opsawg-ipfix-gpon-gem
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
