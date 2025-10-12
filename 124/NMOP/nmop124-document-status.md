@@ -23,9 +23,9 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-netana-nmop-yang-message-broker-message-key
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-message-broker-message-key/
-* **State**: Initial publication with -00 with merged input from Alex. Ahmed and Benoit pending.
+* **State**: Initial publication with -00 with merged input from Alex. Merged input from Benoit in -01. Ahmed pending.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-message-broker-message-key-00
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-message-broker-message-key-00&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-message-broker-message-key/refs/heads/main/draft-netana-nmop-yang-message-broker-message-key-01.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
