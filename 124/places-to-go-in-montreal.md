@@ -16,6 +16,9 @@ https://www.upstairsjazz.com/
 McKibbin’s
 https://www.mckibbinsirishpub.com/
 
+Bootlegger Cocktail Bar & Cuisine Montréal
+https://barbootlegger.com/
+
 
 ### Cocktail Bars
 
@@ -27,6 +30,9 @@ https://www.cloakroombarmtl.com/
 
 Gokudo
 https://gokudo.ca/
+
+Snowbird Tiki Bar
+https://www.snowbirdtikibar.com/
 
 
 ### Restaurants
@@ -45,6 +51,9 @@ https://yoka.ca/
 
 Gyubee Japanese Grill
 https://www.gyubeejapanesegrill.com/
+
+Gyu-Kaku Japanese BBQ
+http://www.gyu-kaku.com/montreal
 
 
 ### Pubs
