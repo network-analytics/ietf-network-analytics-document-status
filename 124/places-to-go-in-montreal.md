@@ -34,6 +34,9 @@ https://gokudo.ca/
 Snowbird Tiki Bar
 https://www.snowbirdtikibar.com/
 
+Milky Way Cocktail Bar
+https://www.milkywaycocktails.com/
+
 
 ### Restaurants
 
