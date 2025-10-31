@@ -58,6 +58,9 @@ https://www.gyubeejapanesegrill.com/
 Gyu-Kaku Japanese BBQ
 http://www.gyu-kaku.com/montreal
 
+Otto Yakitori Izakaya
+https://resy.com/cities/montreal-qc/venues/otto-yakitori
+
 
 ### Pubs
 
