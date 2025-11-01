@@ -61,6 +61,9 @@ http://www.gyu-kaku.com/montreal
 Otto Yakitori Izakaya
 https://resy.com/cities/montreal-qc/venues/otto-yakitori
 
+Kyodai Izakaya
+https://www.kyodaiizakaya.ca/
+
 
 ### Pubs
 
