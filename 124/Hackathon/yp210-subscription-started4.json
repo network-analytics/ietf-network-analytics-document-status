@@ -1,0 +1,77 @@
+{
+    "ietf-telemetry-message:message": {
+        "data-collection-manifest": {
+            "name": "netgauze-yang-push@ietf-col-left01",
+            "os-type": "Red Hat Enterprise Linux",
+            "os-version": "8.10",
+            "software-flavor": "release",
+            "software-version": "0.7.0 (cba5eb90)",
+            "vendor": "NetGauze"
+        },
+        "network-operator-metadata": {
+            "labels": [
+                {
+                    "name": "pkey",
+                    "string-value": "unknown"
+                },
+                {
+                    "name": "nkey",
+                    "string-value": "unknown"
+                }
+            ]
+        },
+        "payload": {
+            "ietf-yp-notification:envelope": {
+                "contents": {
+                    "ietf-subscribed-notifications:subscription-started": {
+                        "encoding": "ietf-subscribed-notifications:encode-json",
+                        "id": 210,
+                        "ietf-yang-push-revision:module-version": [
+                            {
+                                "module-name": "openconfig-interfaces",
+                                "revision": "2022-10-25"
+                            }
+                        ],
+                        "ietf-yang-push-revision:yang-library-content-id": "6d13bafd8fd1dc21aa8932d1199b369794881393",
+                        "ietf-yang-push:datastore": "ietf-datastores:operational",
+                        "ietf-yang-push:datastore-xpath-filter": "openconfig-interfaces:interfaces/interface/state/counters",
+                        "ietf-yang-push:periodic": {
+                            "anchor-time": "2025-01-01T00:00:30Z",
+                            "period": 3000
+                        },
+                        "transport": "ietf-udp-notif-transport:udp-notif"
+                    }
+                },
+                "event-time": "2025-07-18T09:50:49.505Z",
+                "hostname": "ipf-zbl1327-r-daisy-91",
+                "sequence-number": 0
+            }
+        },
+        "telemetry-message-metadata": {
+            "collection-timestamp": "2025-07-18T09:50:49.503566119Z",
+            "export-address": "203.0.113.91",
+            "export-port": 31513,
+            "ietf-yang-push-telemetry-message:yang-push-subscription": {
+                "datastore": "ietf-datastores:operational",
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "id": 210,
+                "module-version": [
+                    {
+                        "module-name": "openconfig-interfaces",
+                        "revision": "2022-10-25"
+                    }
+                ],
+                "periodic": {
+                    "anchor-time": "2025-01-01T00:00:30Z",
+                    "period": 3000
+                },
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "xpath-filter": "openconfig-interfaces:interfaces/interface/state/counters",
+                "yang-library-content-id": "6d13bafd8fd1dc21aa8932d1199b369794881393"
+            },
+            "node-export-timestamp": "2025-07-18T09:50:49.505Z",
+            "notification-event": "log",
+            "session-protocol": "yang-push"
+        }
+    }
+}
