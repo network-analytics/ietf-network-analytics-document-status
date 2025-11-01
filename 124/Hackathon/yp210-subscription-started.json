@@ -1,11 +1,4 @@
 {
-  "seq": 0,
-  "timestamp": "2025-10-31 11:30:04.812151",
-  "telemetry_node": "71.19.157.107",
-  "telemetry_node_port": 31513,
-  "event_type": "log_init"
-}
-{
   "ietf-telemetry-message:message": {
     "data-collection-manifest": {
       "vendor": "pmacct",
