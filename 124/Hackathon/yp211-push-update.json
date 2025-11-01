@@ -1,0 +1,491 @@
+{
+  "ietf-telemetry-message:message": {
+    "data-collection-manifest": {
+      "vendor": "pmacct",
+      "name": "default",
+      "software-version": "1.7.10-git",
+      "software-flavor": "20251029-0 (7c22e2cf)"
+    },
+    "payload": {
+      "ietf-yp-notification:envelope": {
+        "event-time": "2025-07-18T09:51:00.019Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 2,
+        "contents": {
+          "ietf-yang-push:push-update": {
+            "id": 210,
+            "ietf-yp-observation:timestamp": "2025-07-18T09:51:00.019Z",
+            "ietf-yp-observation:point-in-time": "current-accounting",
+            "datastore-contents": {
+              "openconfig-interfaces:interfaces": {
+                "interface": [
+                  {
+                    "name": "Bundle-Ether5791",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Bundle-Ether7991",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "HundredGigE0/0/0/10",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "HundredGigE0/0/0/11",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "HundredGigE0/0/0/36",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "HundredGigE0/0/0/37",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Loopback0",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Loopback10",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "2"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Loopback13",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Loopback2",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MgmtEth0/RP0/CPU0/0",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MgmtEth0/RP1/CPU0/0",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "Null0",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/0",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/1",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/12",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/13",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/14",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "3"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/15",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "3"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/16",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/17",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/18",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/19",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/2",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/20",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/21",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/22",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/23",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/24",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/25",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "1"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/26",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/27",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/28",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/29",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/3",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/30",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/31",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/32",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/33",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/34",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/35",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/4",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/40",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/41",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/42",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/43",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/44",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/45",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/46",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/47",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/5",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/6",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  },
+                  {
+                    "name": "TenGigE0/0/0/7",
+                    "state": {
+                      "counters": {
+                        "carrier-transitions": "0"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "network-operator-metadata": {
+      "labels": [
+        {
+          "name": "seq",
+          "anydata-values": 4
+        },
+        {
+          "name": "serialization",
+          "string-value": "json"
+        }
+      ]
+    },
+    "telemetry-message-metadata": {
+      "notification-event": "log",
+      "session-protocol": "yang-push",
+      "collection-timestamp": "2025-10-31 11:30:15.341641",
+      "export-address": "71.19.157.107",
+      "export-port": 31513,
+      "ietf-yang-push-telemetry-message:yang-push-subscription": {
+        "id": 210,
+        "ietf-yang-push:datastore": "ietf-datastores:operational",
+        "ietf-yang-push:datastore-xpath-filter": "openconfig-interfaces:interfaces/interface/state/counters",
+        "transport": "ietf-udp-notif-transport:udp-notif",
+        "ietf-yang-push-revision:module-version": [
+          {
+            "module-name": "openconfig-interfaces",
+            "revision": "2022-10-25"
+          }
+        ],
+        "ietf-yang-push-revision:yang-library-content-id": "6d13bafd8fd1dc21aa8932d1199b369794881393",
+        "encoding": "encode-json",
+        "ietf-yang-push:periodic": {
+          "period": 3000,
+          "anchor-time": "2025-01-01T00:00:30+00:00"
+        }
+      }
+    }
+  }
+}
