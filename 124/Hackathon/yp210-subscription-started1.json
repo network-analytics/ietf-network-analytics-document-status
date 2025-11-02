@@ -1,0 +1,56 @@
+{
+  "ietf-telemetry-message:message": {
+    "data-collection-manifest": {
+      "vendor": "pmacct",
+      "name": "default",
+      "software-version": "1.7.10-git",
+      "software-flavor": "20251029-0 (7c22e2cf)"
+    },
+    "payload": {
+      "ietf-yp-notification:envelope": {
+        "event-time": "2025-07-18T09:50:49.505Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 0,
+        "contents": {
+          "ietf-subscribed-notifications:subscription-started": {
+            "id": 210,
+            "ietf-yang-push:datastore": "ietf-datastores:operational",
+            "ietf-yang-push:datastore-xpath-filter": "openconfig-interfaces:interfaces/interface/state/counters",
+            "transport": "ietf-udp-notif-transport:udp-notif",
+            "ietf-yang-push-revision:module-version": [
+              {
+                "module-name": "openconfig-interfaces",
+                "revision": "2022-10-25"
+              }
+            ],
+            "ietf-yang-push-revision:yang-library-content-id": "6d13bafd8fd1dc21aa8932d1199b369794881393",
+            "encoding": "encode-json",
+            "ietf-yang-push:periodic": {
+              "period": 3000,
+              "anchor-time": "2025-01-01T00:00:30+00:00"
+            }
+          }
+        }
+      }
+    },
+    "network-operator-metadata": {
+      "labels": [
+        {
+          "name": "seq",
+          "string-values": "1"
+        },
+        {
+          "name": "serialization",
+          "string-value": "json"
+        }
+      ]
+    },
+    "telemetry-message-metadata": {
+      "notification-event": "log",
+      "session-protocol": "yang-push",
+      "collection-timestamp": "2025-10-31 11:30:04.812151",
+      "export-address": "71.19.157.107",
+      "export-port": 31513
+    }
+  }
+}
