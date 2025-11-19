@@ -14,9 +14,9 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-ietf-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
-* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02. Merged input from Rob on changing leaf and module grouping names in -02. Replaced RabitMQ with Apache Pulsar and addressed YANG doctors review in -03.
+* **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02. Merged input from Rob on changing leaf and module grouping names in -02. Replaced RabitMQ with Apache Pulsar and addressed YANG doctors review in -03. Merged input from Paolo and updated implementation status section in -04.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-03
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-message-broker-telemetry-message-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-message-broker-telemetry-message/refs/heads/main/draft-ietf-nmop-message-broker-telemetry-message-04.txt
 
 ### draft-netana-nmop-yang-message-broker-message-key
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-message-broker-message-key/
@@ -44,7 +44,7 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad in -04, work in progress.
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04, work in progress.
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-nmop#3-Anomaly-semantics-and-lifecycle-10-min
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/Qb2w6ABl6i5fd5N0g5hVIT_YVmo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/3OUH3Hagi_2WRITaj833oqIOWfw/
