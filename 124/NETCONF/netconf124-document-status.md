@@ -11,7 +11,7 @@ https://datatracker.ietf.org/meeting/123/session/netconf
 * **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/0FwQWSxxi64r-i5AyqjskRvXC0M/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-23
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-23&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-24.txt
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
@@ -49,4 +49,5 @@ https://datatracker.ietf.org/meeting/123/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
 * **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities. -08 merged input from Jian Ping on example. Merged input from Rob on revision-label change to revision to reflect semver document changes in -09.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
+* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/rf8LsLx5UxEQkyns-_eSE_fq0yE/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-09
