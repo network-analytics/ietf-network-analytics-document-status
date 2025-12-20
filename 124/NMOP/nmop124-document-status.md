@@ -26,13 +26,13 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05.
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05. Merged input from Ruediger in -06 and -07.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/Qb2w6ABl6i5fd5N0g5hVIT_YVmo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/dj1XlB4KNiK090t0fnxQibTJxXo/
 * **Tasks**: Add description Apache Iceberg integration
 * **Tasks**: https://github.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/issues/4
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-06.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-07.txt
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
@@ -49,4 +49,4 @@ https://datatracker.ietf.org/meeting/123/session/nmop
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/Qb2w6ABl6i5fd5N0g5hVIT_YVmo/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/3OUH3Hagi_2WRITaj833oqIOWfw/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-04.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-05.txt
