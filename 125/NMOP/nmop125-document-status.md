@@ -32,7 +32,7 @@ https://datatracker.ietf.org/meeting/124/session/nmop
 * **Tasks**: Add description Apache Iceberg integration
 * **Tasks**: https://github.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/issues/4
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-07.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=draft-ietf-nmop-network-anomaly-architecture-06&url2=draft-ietf-nmop-network-anomaly-architecture-07&difftype=--html
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
