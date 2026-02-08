@@ -1,0 +1,45 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+      <name>DAISY2</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+          <remote-address>10.212.242.71</remote-address>
+          <remote-port>10100</remote-port>
+          <enable-segmentation>true</enable-segmentation>
+          <max-segment-size>1436</max-segment-size>
+        </udp-notif-receiver>
+    </receiver-instance>
+  </receiver-instances>
+  <subscription>
+    <id>100</id>
+    <datastore
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+      xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational
+    </datastore>
+    <datastore-xpath-filter
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+      xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type"
+      xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']/if:statistics
+    </datastore-xpath-filter>
+    <dscp>0</dscp>
+    <transport
+      xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif
+    </transport>
+    <encoding>encode-json</encoding>
+    <purpose />
+    <source-interface>vlan-sub-interface.0.9.3.0.2</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref
+          xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2
+        </receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+</subscriptions>

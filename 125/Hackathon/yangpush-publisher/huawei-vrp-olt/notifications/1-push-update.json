@@ -1,0 +1,207 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-22T06:10:29.718Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 1,
+                "ietf-yp-observation:timestamp": "2026-01-22T06:10:29.718Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 3021116856,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "ethernetCsmacd.0.9.0",
+                                "statistics": {
+                                    "out-octets": "16209",
+                                    "in-octets": "19449",
+                                    "huawei-interface-statistics-mgt:out-pkts": "101",
+                                    "huawei-interface-statistics-mgt:in-pkts": "175",
+                                    "out-discards": 0,
+                                    "in-discards": 49,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 2,
+                                        "in-rate": 2,
+                                        "out-peak-rate": 27,
+                                        "in-peak-rate": 19
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 1
+                                }
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.1",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "out-discards": 0,
+                                    "in-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 0
+                                }
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.2",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "out-discards": 0,
+                                    "in-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 0
+                                }
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.3",
+                                "statistics": {
+                                    "out-octets": "28236",
+                                    "in-octets": "21749",
+                                    "huawei-interface-statistics-mgt:out-pkts": "110",
+                                    "huawei-interface-statistics-mgt:in-pkts": "103",
+                                    "out-discards": 0,
+                                    "in-discards": 1,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 3,
+                                        "in-rate": 2,
+                                        "out-peak-rate": 53,
+                                        "in-peak-rate": 61
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 1
+                                }
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.4",
+                                "statistics": {
+                                    "out-octets": "31883",
+                                    "in-octets": "21344",
+                                    "huawei-interface-statistics-mgt:out-pkts": "349",
+                                    "huawei-interface-statistics-mgt:in-pkts": "207",
+                                    "out-discards": 0,
+                                    "in-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 4,
+                                        "in-rate": 2,
+                                        "out-peak-rate": 9,
+                                        "in-peak-rate": 5
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 1
+                                }
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.5",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "out-discards": 0,
+                                    "in-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-alignment-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:out-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-fragment-pkts": "0",
+                                    "huawei-interface-statistics-mgt:out-jabber-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-jabber-pkts": "0",
+                                    "out-errors": 0,
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:change-times": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
