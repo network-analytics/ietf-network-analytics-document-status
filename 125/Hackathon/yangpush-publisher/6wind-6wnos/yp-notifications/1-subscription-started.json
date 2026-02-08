@@ -1,0 +1,30 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2025-03-04T07:11:33.690820884+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6,
+        "notification-contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 12345678,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/state/vrf/interface/physical[name='ens192']/counters",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "purpose": "send notifications",
+                "ietf-distributed-notif:message-publisher-ids": [
+                    0
+                ],
+                "ietf-yang-push:periodic": {
+                    "period": 3000
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "vrouter-interface",
+                        "revision": "2024-04-22"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "3625735881"
+            }
+        }
+    }
+}

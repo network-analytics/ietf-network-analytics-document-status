@@ -1,0 +1,38 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+      <name>DAISY2</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+          <remote-address>10.212.242.2</remote-address>
+          <remote-port>10100</remote-port>
+          <enable-segmentation>true</enable-segmentation>
+          <max-segment-size>1400</max-segment-size>
+        </udp-notif-receiver>
+    </receiver-instance>
+  </receiver-instances>
+  <subscription>
+    <id>100</id>
+    <datastore
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
+      xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational
+    </datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters
+		</datastore-xpath-filter>
+    <dscp>0</dscp>
+    <encoding>encode-json</encoding>
+    <source-address>203.0.113.58</source-address>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref
+          xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2
+        </receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+</subscriptions>

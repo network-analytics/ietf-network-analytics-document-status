@@ -1,0 +1,53 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2025-12-17T12:35:30.000Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 2,
+                "ietf-yp-observation:timestamp": "2025-12-17T12:35:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "TenGigE0/0/0/16",
+                                "subinterfaces": {
+                                    "subinterface": [
+                                        {
+                                            "index": 13,
+                                            "state": {
+                                                "counters": {
+                                                    "in-octets": "61794948",
+                                                    "in-pkts": "304709",
+                                                    "in-unicast-pkts": "304704",
+                                                    "in-broadcast-pkts": "1",
+                                                    "in-multicast-pkts": "4",
+                                                    "in-discards": "2",
+                                                    "in-errors": "0",
+                                                    "in-unknown-protos": "0",
+                                                    "in-fcs-errors": "0",
+                                                    "out-octets": "33561269",
+                                                    "out-pkts": "176888",
+                                                    "out-unicast-pkts": "176868",
+                                                    "out-broadcast-pkts": "2",
+                                                    "out-multicast-pkts": "18",
+                                                    "out-discards": "0",
+                                                    "out-errors": "0",
+                                                    "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                                        "last-read-time": "1765974922201"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

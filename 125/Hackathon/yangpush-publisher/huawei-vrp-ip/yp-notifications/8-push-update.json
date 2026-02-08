@@ -1,0 +1,648 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-20T08:16:33.401Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 8,
+                "ietf-yp-observation:timestamp": "2026-01-20T08:16:30.365Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Virtual-Template0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "NULL0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "138303671",
+                                    "in-unicast-pkts": "166138",
+                                    "in-broadcast-pkts": "24780",
+                                    "in-multicast-pkts": "1184847",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "17399464",
+                                    "out-unicast-pkts": "29798",
+                                    "out-broadcast-pkts": "617",
+                                    "out-multicast-pkts": "37558",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "HP-GE1/3/0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "10862842838",
+                                    "in-unicast-pkts": "32896747",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "46309299",
+                                    "in-discards": 0,
+                                    "in-errors": 2172982,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "22022378501",
+                                    "out-unicast-pkts": "73059847",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "18248090",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/1",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/2",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "13018208712",
+                                    "in-unicast-pkts": "67781154",
+                                    "in-broadcast-pkts": "2",
+                                    "in-multicast-pkts": "37556",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "6272879294",
+                                    "out-unicast-pkts": "32631201",
+                                    "out-broadcast-pkts": "1",
+                                    "out-multicast-pkts": "37567",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/3",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/5",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/6",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/8",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/9",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/10",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/11",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/12",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/13",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/14",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/15",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/16",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/17",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/18",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/19",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/20",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/21",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/22",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/23",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/24",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/25",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/26",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/27",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/28",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/29",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/1/30",
+                                "statistics": {
+                                    "discontinuity-time": "2026-01-07T06:46:41Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

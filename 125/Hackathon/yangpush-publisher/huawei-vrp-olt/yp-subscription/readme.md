@@ -10,10 +10,10 @@ netconf-console2 --host=10.190.64.79 --port=830 --db=running --user=daisy1 --pri
 
 ### Netconf Create YANG-Push subscriptions with receiver
 ```
-netconf-console2 --host=10.190.64.79 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-dev-env --edit-config=edit-config-yp-subscription-receiver-periodical-add.xml
+netconf-console2 --host=10.190.64.79 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-dev-env --edit-config=edit-config-yp-subscription-receiver-add.xml
 ```
 
 ### Netconf Delete YANG-Push subscriptions with receiver
 ```
-netconf-console2 --host=10.190.64.79 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-dev-env --edit-config=edit-config-yp-subscription-receiver-periodical-delete.xml
+netconf-console2 --host=10.190.64.79 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-dev-env --edit-config=edit-config-yp-subscription-receiver-delete.xml
 ```

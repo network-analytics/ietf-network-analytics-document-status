@@ -1,0 +1,41 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2025-03-04T07:11:34.002993569+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 7,
+        "notification-contents": {
+            "ietf-yang-push:push-update": {
+                "id": 2,
+                "datastore-contents": {
+                    "vrouter:state": {
+                        "vrf": [
+                            {
+                                "name": "main",
+                                "vrouter-interface:interface": {
+                                    "physical": [
+                                        {
+                                            "name": "ens192",
+                                            "counters": {
+                                                "in-octets": "97793",
+                                                "in-unicast-pkts": "389",
+                                                "in-discards": "138",
+                                                "in-errors": "0",
+                                                "out-octets": "533967",
+                                                "out-unicast-pkts": "3158",
+                                                "out-discards": "0",
+                                                "out-errors": "0"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2025-03-04T07:11:34.003631140+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}

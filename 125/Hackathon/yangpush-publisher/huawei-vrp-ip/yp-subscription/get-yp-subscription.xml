@@ -6,14 +6,19 @@
           <name>DAISY2</name>
         </receiver-instance>
       </receiver-instances>
+		  <filters xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+        <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <filter-id>STATEINTERFACE2</filter-id>
+        </selection-filter>
+        <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <filter-id>STATSINTERFACE2</filter-id>
+        </selection-filter>			
+		  </filters>
       <subscription xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
         <id>100</id>
       </subscription>
       <subscription xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
         <id>101</id>
-      </subscription>
-      <subscription xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <id>102</id>
       </subscription>
     </subscriptions>
   </filter>

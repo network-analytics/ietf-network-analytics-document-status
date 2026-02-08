@@ -1,0 +1,205 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-22T06:20:30.250Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 2,
+                "ietf-yp-observation:timestamp": "2026-01-22T06:20:30.250Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "gpon.0.1.0",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "40394024",
+                                    "in-octets": "35473487",
+                                    "huawei-interface-statistics-mgt:out-pkts": "170140",
+                                    "huawei-interface-statistics-mgt:in-pkts": "170578",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 539,
+                                        "in-rate": 98,
+                                        "out-peak-rate": 539,
+                                        "in-peak-rate": 98,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.1",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.2",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.3",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.4",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.5",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.6",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            },
+                            {
+                                "name": "gpon.0.1.7",
+                                "type": "ianaift:gpon",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
