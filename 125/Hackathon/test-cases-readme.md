@@ -1,11 +1,11 @@
-## YANG-Push Receiver - YANG Schema Retrieval
+## 1. YANG-Push Receiver - YANG Schema Retrieval
 
 https://datatracker.ietf.org/doc/html/draft-ietf-nmop-yang-message-broker-integration-10#section-4.3 describes that once new YANG-Push subscription is established all subscription related YANG schemas are obtained from YANG-Push publisher and cached locally. The dependencies include: imports, augments, deviations and features being used for each YANG module.
 
 
-### Netgauze Implementation
+### 1.1 Netgauze Implementation
 
-In /var/cache/netgauze/yang-schemas/ for each unique YANG schema tree a new directory is being automatically created and named after a locally generated cache contend-id. Within the subdirectory modules all netconf <get-schema> collected YANG modules are stored and with yang-lib.xml a YANG library context is being generated automatically. The subscription-info.json describes the relation between YANG-Push publisher node, YANG-Push subscription id, YANG library content-id of the YANG-Push publisher and the receiver and the YANG-Push subscription started metadata describing which xpath in which datastore and list of directly imported YANG modules. See below an example for YANG library cache contend-id 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827.
+In `/var/cache/netgauze/yang-schemas/` for each unique YANG schema tree a new directory is being automatically created and named after a locally generated cache contend-id. Within the subdirectory modules all netconf `<get-schema>` collected YANG modules are stored and with `yang-lib.xml` a YANG library context is being generated automatically. The `subscription-info.json` describes the relation between YANG-Push publisher node, YANG-Push subscription id, YANG library content-id of the YANG-Push publisher and the receiver and the YANG-Push subscription started metadata describing which xpath in which datastore and list of directly imported YANG modules. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827`.
 
 ```
 [root@dev-col-left01 ~]# cd  /var/cache/netgauze/yang_schemas/06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
