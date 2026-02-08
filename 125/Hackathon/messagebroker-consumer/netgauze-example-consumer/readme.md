@@ -572,4 +572,4 @@ root@daisy-playground-rh8 [ /opt/NetGauze-bin ] () # RUST_LOG=kafka_yang_consume
 
 ### 6.1 NetGauze Impediments
 
-Schema validation only supports validation of first YANG structure, in this case the telemetra-message message structure and doesnt perform andydata validation if it is in a YANG structure. This constrain are with libyang 4.2.2 and has been adressed in libyang 4.9.1 but not yet integrated into NetGauze.
+Schema validation only supports validation of first YANG structure, in this case the telemetry-message message structure and doesn't perform andydata validation if it is in such a nested YANG structure. These constrains are with libyang 4.2.2 and has been addressed in libyang 4.9.1 but not yet integrated into NetGauze.
