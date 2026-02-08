@@ -38,3 +38,8 @@ Describe how YANG Telemetry Message schema validation is performed.
 ```
 example output
 ```
+
+
+### 6.1 Ciena Blue Planet Workflow Engine Impediments
+
+Please describe if present
