@@ -1,14 +1,14 @@
 ## 1. YANG-Push Receiver - Per YANG-Push Subscription YANG Schema Retrieval
 
-https://datatracker.ietf.org/doc/html/draft-ietf-nmop-yang-message-broker-integration-10#section-4.3 describes that once new YANG-Push subscription is established all subscription related YANG schemas are obtained from YANG-Push publisher and cached locally. The dependencies include: imports, augments, deviations and features being used for each YANG module. YANG library is used to determine dependencies on augments, deviations and features where YANG modules are used to determine their imports.
+https://datatracker.ietf.org/doc/html/draft-ietf-nmop-yang-message-broker-integration-10#section-4.3 describes that once a new YANG-Push subscription is established all subscription related YANG schemas are obtained from YANG-Push publisher and cached locally. The dependencies include: imports, augments, deviations and features being used for each YANG module. YANG library is used to determine dependencies on augments, deviations and features where YANG modules are used to determine their imports.
 
 
-### 1.1 Netgauze Implementation
+### 1.1 NetGauze Implementation
 
-In `/var/cache/netgauze/yang-schemas/` for each unique YANG schema tree a new directory is being automatically created and named after a locally generated cache contend-id. Within the subdirectory modules all netconf `<get-schema>` collected YANG modules are stored and with `yang-lib.xml` a YANG library context is being generated automatically. The `subscription-info.json` describes the relation between YANG-Push publisher node, YANG-Push subscription id, YANG library content-id of the YANG-Push publisher and the receiver and the YANG-Push subscription started metadata describing which xpath in which datastore and list of directly imported YANG modules. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827`.
+In `/var/cache/NetGauze/yang-schemas/` for each unique YANG schema tree a new directory is being automatically created and named after a locally generated cache contend-id. Within the subdirectory modules all netconf `<get-schema>` collected YANG modules are stored and with `yang-lib.xml` a YANG library context is being generated automatically. The `subscription-info.json` describes the relation between YANG-Push publisher node, YANG-Push subscription id, YANG library content-id of the YANG-Push publisher and the receiver and the YANG-Push subscription started metadata describing which xpath in which datastore and list of directly imported YANG modules. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827`.
 
 ```
-[root@dev-col-left01 ~]# cd  /var/cache/netgauze/yang_schemas/06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
+[root@dev-col-left01 ~]# cd  /var/cache/NetGauze/yang_schemas/06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
 [root@dev-col-left01 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827]# ll
 total 160
 drwxr-xr-x 2 root root  20480 Jan 22 14:43 modules
@@ -144,16 +144,16 @@ drwxr-xr-x 2 root root  20480 Jan 22 14:43 modules
 Based on previously collected YANG modules and generated YANG schema tree and YANG library context, YANG schema validation is performed on received YANG-Push notifications. For anydata YANG nodes, https://datatracker.ietf.org/doc/html/draft-ietf-netmod-yang-anydata-validation-00#section-5 is applied.
 
 
-### 2.1 Netgauze Implementation
+### 2.1 NetGauze Implementation
 
-In `/var/log/netgauze/` `netgauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG-Push notification message-id from which originated YANG-Push publisher node, publishing process id and subscription-id was successfully validated against YANG schema with xpath subscription context. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG-Push subscription id 1 and 2.
+In `/var/log/NetGauze/` `NetGauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG-Push notification message-id from which originated YANG-Push publisher node, publishing process id and subscription-id was successfully validated against YANG schema with xpath subscription context. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG-Push subscription id 1 and 2.
 
 ```
-[root@dev-col-left01 netgauze]# tail -f netgauze-udpnotif-yangpush-left.log | grep 10.190.64.79 | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e validated
+[root@dev-col-left01 NetGauze]# tail -f NetGauze-udpnotif-yangpush-left.log | grep 10.190.64.79 | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e validated
 
-2026-02-03T09:10:06.067292Z TRACE netgauze_yang_push::validation: Successfully validated YANG-Push message using draft-ietf-netconf-notif-envelope peer=10.190.64.79:10100 message_id=5834 publisher_id=3021116856 subscription_id=1 router_content_id="22851" target={ datastore: ietf-datastores:operational, datastore-xpath-filter: /ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics } cached_content_id="06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827"
+2026-02-03T09:10:06.067292Z TRACE NetGauze_yang_push::validation: Successfully validated YANG-Push message using draft-ietf-netconf-notif-envelope peer=10.190.64.79:10100 message_id=5834 publisher_id=3021116856 subscription_id=1 router_content_id="22851" target={ datastore: ietf-datastores:operational, datastore-xpath-filter: /ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics } cached_content_id="06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827"
 
-2026-02-03T09:10:06.112048Z TRACE netgauze_yang_push::validation: Successfully validated YANG-Push message using draft-ietf-netconf-notif-envelope peer=10.190.64.79:10100 message_id=5835 publisher_id=3021116856 subscription_id=2 router_content_id="22851" target={ datastore: ietf-datastores:operational, datastore-xpath-filter: /ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics } cached_content_id="06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827"
+2026-02-03T09:10:06.112048Z TRACE NetGauze_yang_push::validation: Successfully validated YANG-Push message using draft-ietf-netconf-notif-envelope peer=10.190.64.79:10100 message_id=5835 publisher_id=3021116856 subscription_id=2 router_content_id="22851" target={ datastore: ietf-datastores:operational, datastore-xpath-filter: /ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics } cached_content_id="06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827"
 ```
 
 
@@ -162,27 +162,27 @@ In `/var/log/netgauze/` `netgauze-udpnotif-yangpush-left.log` shows for each YAN
 Based on previously collected YANG modules and YANG library context, YANG schemas are registered with YANG feature metadata in YANG Schema registry according to https://datatracker.ietf.org/doc/html/draft-ietf-nmop-yang-message-broker-integration-10#section-4.4. YANG schema registry issues for each YANG module a Message Broker a unique schema id. The schema id at the top of the YANG schema tree is used as schema id in the message metadata at the YANG message producer when the Network Telemetry Message is being serialized.
 
 
-### 3.1 Netgauze Implementation
+### 3.1 NetGauze Implementation
 
-In `/var/log/netgauze/` `netgauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG schema id was being generated. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG Schema id `516`.
+In `/var/log/NetGauze/` `NetGauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG schema id was being generated. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG Schema id `516`.
 
 ```
-[root@ietf-col-left01 netgauze]# tail -f netgauze-udpnotif-yangpush-left.log | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e schemaID
-2026-02-03T09:27:00.056244Z TRACE netgauze_collector::publishers::kafka_yang: Found schemaID 516 for contentID 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
+[root@ietf-col-left01 NetGauze]# tail -f NetGauze-udpnotif-yangpush-left.log | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e schemaID
+2026-02-03T09:27:00.056244Z TRACE NetGauze_collector::publishers::kafka_yang: Found schemaID 516 for contentID 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
 ```
 
 ## 4. YANG Message Broker Consumer - YANG Schema Collection
 
 With the consumption of YANG Network Telemetry messages the schema id at the top of the YANG schema tree is being learned. The YANG schema and YANG feature metadata with all their related YANG schemas and YANG feature metadatas are being obtained and cached locally.
 
-### 4.1 Netgauze Implementation
+### 4.1 NetGauze Implementation
 
-In `/opt/netgauze-bin/kafka-yang-consumer-cache/` for each YANG schema id a dedicated folder is dynamically created when the YANG Message Broker Consumer `/opt/netgauze-bin/kafka-yang-consumer` is consuming from topic. Within the subdirectory modules all YANG schema registry obtained YANG modules are stored and with `yang-lib.xml` a YANG library context is being generated automatically. The `subscription-info.json` can be ignored for the moment. Below an example for YANG schema id 527.
+In `/opt/NetGauze-bin/kafka-yang-consumer-cache/` for each YANG schema id a dedicated folder is dynamically created when the YANG Message Broker Consumer `/opt/NetGauze-bin/kafka-yang-consumer` is consuming from topic. Within the subdirectory modules all YANG schema registry obtained YANG modules are stored and with `yang-lib.xml` a YANG library context is being generated automatically. The `subscription-info.json` can be ignored for the moment. Below an example for YANG schema id 527.
 
 ```
-root@daisy-playground-rh8 [ /opt/netgauze-bin/kafka-yang-consumer-cache ] () # cd schema-id-527
+root@daisy-playground-rh8 [ /opt/NetGauze-bin/kafka-yang-consumer-cache ] () # cd schema-id-527
 modules  subscriptions-info.json  yang-lib.xml
-root@daisy-playground-rh8 [ /opt/netgauze-bin/kafka-yang-consumer-cache/schema-id-527 ] () # ll
+root@daisy-playground-rh8 [ /opt/NetGauze-bin/kafka-yang-consumer-cache/schema-id-527 ] () # ll
 total 104K
 drwxr-xr-x  3 root     root       72 Feb  3 11:02 .
 drwxr-xr-x 23 taarole8 taarole8 4.0K Feb  3 13:38 ..
@@ -196,12 +196,12 @@ drwxr-xr-x  2 root     root      24K Feb  3 11:02 modules
 With the previously obtained YANG schemas a YANG schema tree is being generated for message schema validation.
 
 
-### 5.1 Netgauze Implementation
+### 5.1 NetGauze Implementation
 
 With below yanglint validation command the YANG module from the YANG-Push xpath subscription (xpath is ietf-alarms:alarm-notification in this example) and the ietf-telemetry-message YANG module with the YANG structure reference is used to build the YANG schema tree.
 
 ```
-root@daisy-playground-rh8 [ /opt/netgauze-bin/kafka-yang-consumer-cache/schema-id-527 ] () # yanglint -f tree ietf-alarms@2019-09-11.yang ietf-telemetry-message@2025-10-19.yang -Y yang-lib.xml -p modules -t ext -k  ietf-telemetry-message:structure:message
+root@daisy-playground-rh8 [ /opt/NetGauze-bin/kafka-yang-consumer-cache/schema-id-527 ] () # yanglint -f tree ietf-alarms@2019-09-11.yang ietf-telemetry-message@2025-10-19.yang -Y yang-lib.xml -p modules -t ext -k  ietf-telemetry-message:structure:message
 libyang warn: YANG version 1.1 expects all includes in main module, includes in submodules (bbf-xponani-ani-body) are not necessary.
 libyang warn: YANG version 1.1 expects all includes in main module, includes in submodules (bbf-xponani-v-enet-body) are not necessary.
 libyang warn: YANG version 1.1 expects all includes in main module, includes in submodules (bbf-xpongemtcont-traffic-descriptor-profile-body) are not necessary.
@@ -732,12 +732,12 @@ module: ietf-telemetry-message
 With the previously generated YANG schema tree, YANG Telemetry Message schema validation is performed.
 
 
-### 6.1 Netgauze Implementation
+### 6.1 NetGauze Implementation
 
 Below shows the YANG Message Broker message consumption for schema id `527`. It details the topic offset, YANG schema id and message key (currently the YANG-Push publisher node IP address), the message itself and wherever the message was validated successfully or not.
 
 ```
-root@daisy-playground-rh8 [ /opt/netgauze-bin ] () # RUST_LOG=kafka_yang_consumer=debug,info ./kafka-yang-consumer -c librdkafka-sbd.json -s https://schema-registry-sc.olt.stage.sbd.corproot.net --group daisy.dev. -t daisy.dev.device-yang-raw -n 1000 | grep "10.190.64.79" | grep -e 'schema_id: 527'
-2026-02-03T10:02:28.021308Z DEBUG kafka_yang_consumer: Message Payload [partition: 0, offset: 96087394, key: "10.190.64.79", schema_id: 527]: {"ietf-telemetry-message:message":{"data-collection-manifest":{"name":"devcolleft01netgauzeudpnotifyangpushleft","os-type":"Red Hat Enterprise Linux","os-version":"8.10","software-flavor":"release","software-version":"0.9.0 (9eb309f6)","vendor":"NetGauze","vendor-pen":3746},"network-operator-metadata":{"labels":[{"name":"platform_id","string-value":"FANO"},{"name":"node_id","string-value":"ipd-zbl1536-s-ah-79"}]},"payload":{"ietf-yp-notification:envelope":{"contents":{"ietf-yang-push:push-change-update":{"datastore-changes":{"yang-patch":{"edit":[{"edit-id":"0","operation":"merge","target":"/ietf-alarms:alarm-notification","value":{"ietf-alarms:alarm-notification":{"alarm-text":"The managing user of the equipment logout or logon","alarm-type-qualifier":"daisy1.SSH.10.212.242.71.Log on","an-alarm-management:alarm-name":"The managing user of the equipment logout or logon","an-alarm-management:notification-serial-id":78673,"huawei-alarm-type-an:alarm-type-id":"hw-alarm-type-an:managing-user-login-logout","ietf-alarms-x733:additional-information":[{"identifier":"Alarm-id","information":"239312897","significant":true},{"identifier":"Alarm-class","information":"security","significant":true},{"identifier":"Alarm-sn","information":"75917","significant":true},{"identifier":"Alarm-format","information":"system","significant":true},{"identifier":"User name","information":"daisy1","significant":true},{"identifier":"Log mode","information":"SSH","significant":true},{"identifier":"IP","information":"10.212.242.71","significant":true},{"identifier":"State","information":"Log on","significant":true}],"ietf-alarms-x733:event-type":"environmental-alarm","ietf-alarms-x733:probable-cause":234881026,"ietf-alarms-x733:probable-cause-string":"The maintenance user logs in to the system, logs out of the system, or fails to log in to the system","ietf-alarms-x733:proposed-repair-actions":"No need to deal with it","perceived-severity":"minor","resource":"system","time":"2026-02-03T10:02:11Z"}}}],"patch-id":"318"}},"id":27,"ietf-distributed-notif:message-publisher-id":3021116856,"ietf-yp-observation:point-in-time":"state-changed","ietf-yp-observation:timestamp":"2026-02-03T10:02:11.110Z"}},"event-time":"2026-02-03T10:02:11.440Z","hostname":"ipd-zbl1536-s-ah-79","sequence-number":319}},"telemetry-message-metadata":{"collection-timestamp":"2026-02-03T10:02:11.447919067Z","export-address":"10.190.64.79","export-port":10100,"node-export-timestamp":"2026-02-03T10:02:11.440Z","notification-event":"log","session-protocol":"yang-push"}}}
+root@daisy-playground-rh8 [ /opt/NetGauze-bin ] () # RUST_LOG=kafka_yang_consumer=debug,info ./kafka-yang-consumer -c librdkafka-sbd.json -s https://schema-registry-sc.olt.stage.sbd.corproot.net --group daisy.dev. -t daisy.dev.device-yang-raw -n 1000 | grep "10.190.64.79" | grep -e 'schema_id: 527'
+2026-02-03T10:02:28.021308Z DEBUG kafka_yang_consumer: Message Payload [partition: 0, offset: 96087394, key: "10.190.64.79", schema_id: 527]: {"ietf-telemetry-message:message":{"data-collection-manifest":{"name":"devcolleft01NetGauzeudpnotifyangpushleft","os-type":"Red Hat Enterprise Linux","os-version":"8.10","software-flavor":"release","software-version":"0.9.0 (9eb309f6)","vendor":"NetGauze","vendor-pen":3746},"network-operator-metadata":{"labels":[{"name":"platform_id","string-value":"FANO"},{"name":"node_id","string-value":"ipd-zbl1536-s-ah-79"}]},"payload":{"ietf-yp-notification:envelope":{"contents":{"ietf-yang-push:push-change-update":{"datastore-changes":{"yang-patch":{"edit":[{"edit-id":"0","operation":"merge","target":"/ietf-alarms:alarm-notification","value":{"ietf-alarms:alarm-notification":{"alarm-text":"The managing user of the equipment logout or logon","alarm-type-qualifier":"daisy1.SSH.10.212.242.71.Log on","an-alarm-management:alarm-name":"The managing user of the equipment logout or logon","an-alarm-management:notification-serial-id":78673,"huawei-alarm-type-an:alarm-type-id":"hw-alarm-type-an:managing-user-login-logout","ietf-alarms-x733:additional-information":[{"identifier":"Alarm-id","information":"239312897","significant":true},{"identifier":"Alarm-class","information":"security","significant":true},{"identifier":"Alarm-sn","information":"75917","significant":true},{"identifier":"Alarm-format","information":"system","significant":true},{"identifier":"User name","information":"daisy1","significant":true},{"identifier":"Log mode","information":"SSH","significant":true},{"identifier":"IP","information":"10.212.242.71","significant":true},{"identifier":"State","information":"Log on","significant":true}],"ietf-alarms-x733:event-type":"environmental-alarm","ietf-alarms-x733:probable-cause":234881026,"ietf-alarms-x733:probable-cause-string":"The maintenance user logs in to the system, logs out of the system, or fails to log in to the system","ietf-alarms-x733:proposed-repair-actions":"No need to deal with it","perceived-severity":"minor","resource":"system","time":"2026-02-03T10:02:11Z"}}}],"patch-id":"318"}},"id":27,"ietf-distributed-notif:message-publisher-id":3021116856,"ietf-yp-observation:point-in-time":"state-changed","ietf-yp-observation:timestamp":"2026-02-03T10:02:11.110Z"}},"event-time":"2026-02-03T10:02:11.440Z","hostname":"ipd-zbl1536-s-ah-79","sequence-number":319}},"telemetry-message-metadata":{"collection-timestamp":"2026-02-03T10:02:11.447919067Z","export-address":"10.190.64.79","export-port":10100,"node-export-timestamp":"2026-02-03T10:02:11.440Z","notification-event":"log","session-protocol":"yang-push"}}}
 2026-02-03T10:02:28.662404Z DEBUG kafka_yang_consumer: Message validation PASSED - partition: 0, offset: 96087394, key: "10.190.64.79", schema_id: 527
 ```
