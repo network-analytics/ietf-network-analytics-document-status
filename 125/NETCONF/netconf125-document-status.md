@@ -11,7 +11,7 @@ https://datatracker.ietf.org/meeting/124/session/netconf
 * **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23. Transport directorate review in -24. Gory and Qin's Transport directorate input adressed in -25, awaiting feedback.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/0FwQWSxxi64r-i5AyqjskRvXC0M/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-24&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-25.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-25
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
@@ -21,7 +21,7 @@ https://datatracker.ietf.org/meeting/124/session/netconf
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor not in -18.
+* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/KPMeO4X1kNmOqdhTIwQTxuEObx8/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-17&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-18.txt
@@ -36,13 +36,9 @@ https://datatracker.ietf.org/meeting/124/session/netconf
 
 ### draft-ietf-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
-* **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. Feedback from Rob to change from “The ‘contents’ element SHOULD be located at the end of notif envelope structure" to "MUST". -02 addresses Andy's comment on SID and Ahmeds comments on validated examples. -03 addresses comments from the working group last call. Merged input from Andy, Joe and Rob in -04. Working on -05 incorporating feedback from Benoit.
+* **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. Feedback from Rob to change from “The ‘contents’ element SHOULD be located at the end of notif envelope structure" to "MUST". -02 addresses Andy's comment on SID and Ahmeds comments on validated examples. -03 addresses comments from the working group last call. Merged input from Andy, Joe and Rob in -04. Feedback from Benoit merged in -05.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/es_AJ6-YxlNZzFPOJ8vzB5xt06Y/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/1mWjqY9sLvjwIIDQ4SmVzo6xc58/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/LsamfCpLvz7TXGRnVLFvjrNl7J0/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/cYL3o7jshoMPY78f0a8sAGQcYoA/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-ietf-netconf-notif-envelope-04.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-04
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/

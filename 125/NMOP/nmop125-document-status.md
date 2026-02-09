@@ -8,7 +8,7 @@ https://datatracker.ietf.org/meeting/124/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
-* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar and added streaming catalog in -09. Merged input from Reshad in -10.
+* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar and added streaming catalog in -09. Merged input from Reshad in -10. Requires review and updates in -11.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
 * **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-yang-message-broker-integration-10
 
@@ -22,7 +22,7 @@ https://datatracker.ietf.org/meeting/124/session/nmop
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-yang-message-broker-message-key/
 * **State**: Initial publication with -00 with merged input from Alex. Merged input from Benoit in -01 and input from Hellmar in -02. Adressed nits from Reshad in -03.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-message-broker-message-key-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-message-broker-message-key/refs/heads/main/draft-netana-nmop-yang-message-broker-message-key-03.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-yang-message-broker-message-key-03
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
@@ -32,7 +32,7 @@ https://datatracker.ietf.org/meeting/124/session/nmop
 * **Tasks**: Add description Apache Iceberg integration
 * **Tasks**: https://github.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/issues/4
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
-* **Diff**: https://author-tools.ietf.org/iddiff?url1=draft-ietf-nmop-network-anomaly-architecture-06&url2=draft-ietf-nmop-network-anomaly-architecture-07&difftype=--html
+* **Diff**: https://author-tools.ietf.org/iddiff?url1=draft-ietf-nmop-network-anomaly-architecture-07
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
@@ -40,7 +40,7 @@ https://datatracker.ietf.org/meeting/124/session/nmop
 * **Tasks**: https://notes.ietf.org/notes-ietf-123-nmop#3-Anomaly-semantics-and-lifecycle-10-min
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/Qb2w6ABl6i5fd5N0g5hVIT_YVmo/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-04&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-05.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-05
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
