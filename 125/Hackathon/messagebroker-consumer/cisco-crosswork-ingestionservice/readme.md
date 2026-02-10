@@ -2,7 +2,7 @@
 
 With the consumption of YANG Network Telemetry messages the schema id at the top of the YANG schema tree is being learned. The YANG schema and YANG feature metadata with all their related YANG schemas and YANG feature metadatas are being obtained and cached locally.
 
-### 4.1 Cisco Crosswork Workflow Engine Implementation
+### 4.1 Cisco Crosswork Ingestion Service Implementation
 
 Describe where the YANG schemas and YANG features are stored and if a YANG library context is being generated.
 
@@ -15,7 +15,7 @@ example output
 With the previously obtained YANG schemas a YANG schema tree is being generated for message schema validation.
 
 
-### 5.1 Cisco Crosswork Workflow Engine Implementation
+### 5.1 Cisco Crosswork Ingestion Service Implementation
 
 Generate YANG schema tree based on previously collected YANG modules and YANG features metadata.
 
@@ -30,7 +30,7 @@ example output
 With the previously generated YANG schema tree, YANG Telemetry Message schema validation is performed.
 
 
-### 6.1 Cisco Crosswork Workflow Engine Implementation
+### 6.1 Cisco Crosswork Ingestion Service Implementation
 
 Describe how YANG Telemetry Message schema validation is performed.
 
