@@ -19,6 +19,10 @@ https://nowshenzhen.com/directory/the-attic-park-hyatt/
 Cabin Barbecue
 http://www.muwubbq.com/
 
+Tan Yu 探鱼
+https://www.tanyuchina.com/en
+https://www.youtube.com/watch?v=bzJo0PRFGZs
+
 
 ### Pubs
 
