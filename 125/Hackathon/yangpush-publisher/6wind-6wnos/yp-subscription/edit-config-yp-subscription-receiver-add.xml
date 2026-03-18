@@ -12,21 +12,72 @@
   </receiver-instances>
   <subscription>
     <id>100</id>
-    <datastore
-      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push"
-      xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational
-    </datastore>
-    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">/state/vrf/interface/physical[name='ens192']/counters
-		</datastore-xpath-filter>
-    <dscp>0</dscp>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface</datastore-xpath-filter>
     <encoding>encode-json</encoding>
-    <source-address>203.0.113.58</source-address>
+    <source-address>10.212.242.58</source-address>
+    <source-vrf>MGMT-VRF</source-vrf>
     <receivers>
       <receiver>
         <name>DAISY2</name>
-        <receiver-instance-ref
-          xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2
-        </receiver-instance-ref>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>101</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware</datastore-xpath-filter>
+    <encoding>encode-json</encoding>
+    <source-address>10.212.242.58</source-address>
+    <source-vrf>MGMT-VRF</source-vrf>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>102</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:al="urn:ietf:params:xml:ns:yang:ietf-alarms">/al:alarms/alarm-list</datastore-xpath-filter>
+    <encoding>encode-json</encoding>
+    <source-address>10.212.242.58</source-address>
+    <source-vrf>MGMT-VRF</source-vrf>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>103</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp</datastore-xpath-filter>
+    <encoding>encode-json</encoding>
+    <source-address>10.212.242.58</source-address>
+    <source-vrf>MGMT-VRF</source-vrf>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
       </receiver>
     </receivers>
     <periodic

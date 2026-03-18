@@ -1,39 +1,73 @@
 {
     "ietf-yp-notification:envelope": {
-        "event-time": "2025-03-04T07:11:34.002993569+00:00",
+        "event-time": "2026-03-15T01:13:35.690139118+00:00",
         "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-        "sequence-number": 7,
-        "notification-contents": {
+        "sequence-number": 16022,
+        "contents": {
             "ietf-yang-push:push-update": {
-                "id": 2,
+                "id": 100,
                 "datastore-contents": {
-                    "vrouter:state": {
-                        "vrf": [
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
                             {
-                                "name": "main",
-                                "vrouter-interface:interface": {
-                                    "physical": [
-                                        {
-                                            "name": "ens192",
-                                            "counters": {
-                                                "in-octets": "97793",
-                                                "in-unicast-pkts": "389",
-                                                "in-discards": "138",
-                                                "in-errors": "0",
-                                                "out-octets": "533967",
-                                                "out-unicast-pkts": "3158",
-                                                "out-discards": "0",
-                                                "out-errors": "0"
-                                            }
-                                        }
-                                    ]
+                                "name": "ens160-MGMT-VRF",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "oper-status": "up",
+                                "if-index": 2,
+                                "phys-address": "00:50:56:82:4a:f1",
+                                "statistics": {
+                                    "in-octets": "59644711",
+                                    "in-unicast-pkts": "193691",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "out-octets": "227130272",
+                                    "out-unicast-pkts": "182580",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "ens192-main",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "oper-status": "up",
+                                "if-index": 18,
+                                "phys-address": "00:50:56:82:33:91",
+                                "statistics": {
+                                    "in-octets": "29669267733",
+                                    "in-unicast-pkts": "209945136",
+                                    "in-discards": 23305,
+                                    "in-errors": 0,
+                                    "out-octets": "21825530976",
+                                    "out-unicast-pkts": "107116458",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "ens224-main",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "oper-status": "down",
+                                "if-index": 4,
+                                "phys-address": "00:50:56:82:04:67",
+                                "statistics": {
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
                                 }
                             }
                         ]
                     }
                 },
                 "ietf-distributed-notif:message-publisher-id": 0,
-                "ietf-yp-observation:timestamp": "2025-03-04T07:11:34.003631140+00:00",
+                "ietf-yp-observation:timestamp": "2026-03-15T01:13:35.690363045+00:00",
                 "ietf-yp-observation:point-in-time": "current-accounting"
             }
         }

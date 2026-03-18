@@ -1,13 +1,13 @@
 {
     "ietf-yp-notification:envelope": {
-        "event-time": "2026-03-09T14:09:51.880484867+00:00",
+        "event-time": "2026-03-09T14:09:51.880754697+00:00",
         "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
-        "sequence-number": 259,
+        "sequence-number": 261,
         "contents": {
             "ietf-subscribed-notifications:subscription-started": {
-                "id": 100,
+                "id": 102,
                 "ietf-yang-push:datastore": "ietf-datastores:operational",
-                "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification",
                 "transport": "ietf-udp-notif-transport:udp-notif",
                 "encoding": "encode-json",
                 "ietf-distributed-notif:message-publisher-id": [
@@ -19,8 +19,8 @@
                 },
                 "ietf-yang-push-revision:module-version": [
                     {
-                        "module-name": "ietf-interfaces",
-                        "revision": "2018-02-20"
+                        "module-name": "ietf-alarms",
+                        "revision": "2019-09-11"
                     }
                 ],
                 "ietf-yang-push-revision:yang-library-content-id": "2387912431"
