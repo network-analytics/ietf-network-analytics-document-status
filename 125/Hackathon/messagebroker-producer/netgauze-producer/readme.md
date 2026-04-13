@@ -5,9 +5,9 @@ Based on previously collected YANG modules and YANG library context, YANG schema
 
 ### 3.1 NetGauze Implementation
 
-In `/var/log/NetGauze/` `NetGauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG schema id was being generated. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG Schema id `516`.
+In `/var/log/netgauze/netgauze-udpnotif-yangpush-left.log` shows for each YANG library cache contend-id which YANG schema id was being generated. See below an example for YANG library cache contend-id `06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827` and YANG Schema id `516`.
 
 ```
-[root@ietf-col-left01 NetGauze]# tail -f NetGauze-udpnotif-yangpush-left.log | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e schemaID
+[root@ietf-col-left01 NetGauze]# tail -f netgauze-udpnotif-yangpush-left.log | grep -e 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827 | grep -e schemaID
 2026-02-03T09:27:00.056244Z TRACE NetGauze_collector::publishers::kafka_yang: Found schemaID 516 for contentID 06bb7b0eac2786553a446740ed61659405d4e6d5fb4242f306234ee472c85827
 ```
