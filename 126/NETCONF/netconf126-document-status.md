@@ -24,7 +24,7 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/KPMeO4X1kNmOqdhTIwQTxuEObx8/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-18&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-19.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-netconf-distributed-notif-19
 
 ### draft-ietf-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
