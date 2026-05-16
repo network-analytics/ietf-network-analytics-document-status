@@ -1,19 +1,19 @@
 ### Netconf Interactive Login
 ```
-netconf-console2 --host=203.0.113.58 --port=830 --db=running -i --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env
+netconf-console2 =10.212.242.58 --ssh-config=/dev/null --port=830 --db=running -i --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env
 ```
 
 ### Netconf Get YANG-Push subscriptions
 ```
-netconf-console2 --host=203.0.113.58 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --rpc=get-yp-subscription.xml
+netconf-console2 =10.212.242.58 --ssh-config=/dev/null --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --rpc=get-yp-subscription.xml
 ```
 
 ### Netconf Create YANG-Push subscriptions with receiver
 ```
-netconf-console2 --host=203.0.113.58 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --edit-config=edit-config-yp-subscription-receiver-add.xml
+netconf-console2 =10.212.242.58 --ssh-config=/dev/null --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --edit-config=edit-config-yp-subscription-receiver-add.xml
 ```
 
 ### Netconf Delete YANG-Push subscriptions with receiver
 ```
-netconf-console2 --host=203.0.113.58 --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --edit-config=edit-config-yp-subscription-receiver-delete.xml
+netconf-console2 =10.212.242.58 --ssh-config=/dev/null --port=830 --db=running --user=daisy1 --privKeyFile=/etc/daisy/netgauze/netconf/id_rsa-ietf-env --edit-config=edit-config-yp-subscription-receiver-delete.xml
 ```
