@@ -1,0 +1,27 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-16T12:48:19.183585179+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 285911,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 103,
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "local-system-data": {
+                            "chassis-id-subtype": "mac-address",
+                            "chassis-id": "00:50:56:82:04:67",
+                            "system-name": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+                            "system-description": "Daisy",
+                            "system-capabilities-supported": "bridge wlan-access-point router station-only",
+                            "system-capabilities-enabled": "router"
+                        }
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-05-16T12:48:19.183715948+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}
