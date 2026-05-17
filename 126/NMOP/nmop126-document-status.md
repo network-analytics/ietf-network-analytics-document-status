@@ -10,7 +10,7 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
 * **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar and added streaming catalog in -09. Merged input from Reshad in -10. Requires review and updates in -12 based on Reshad's feedback and operational and security considerations.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-11&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-nmop-yang-message-broker-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-12.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-12
 
 ### draft-ietf-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
@@ -23,6 +23,12 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 * **State**: Initial publication with -00 with merged input from Alex. Merged input from Benoit in -01 and input from Hellmar in -02. Adressed nits from Reshad in -03. Adressing adoption call input from Rob, Olga and Michael in -04.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-message-key
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-message-key-01
+
+### draft-netana-nmop-message-broker-bmp-telemetry-msg
+* **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-message-broker-bmp-telemetry-msg/
+* **State**: xxx
+* **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-message-broker-bmp-telemetry-msg
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-bmp-telemetry-msg-02
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
