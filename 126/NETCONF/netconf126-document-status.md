@@ -10,7 +10,6 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
 * **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23. Transport directorate review in -24. Gory and Qin's Transport directorate input adressed in -25, awaiting feedback.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/0FwQWSxxi64r-i5AyqjskRvXC0M/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-25
 
 ### draft-ietf-netconf-udp-client-server
@@ -22,17 +21,14 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
 * **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/KPMeO4X1kNmOqdhTIwQTxuEObx8/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
 * **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-netconf-distributed-notif-19
 
 ### draft-ietf-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
-* **State**: Working group last call suceeded. Feedback from OPS directorate and YANG docters merged into -02, feedback pending. Feedback from Rob addressed in -03. Shepherd review addressed in -04. Feedback from Reshad addressed in -05.
+* **State**: Working group last call suceeded. Feedback from OPS directorate and YANG docters merged into -02, feedback pending. Feedback from Rob addressed in -03. Shepherd review addressed in -04. Feedback from Reshad addressed in -05. Adressed TSVART input from Tommy Pauly in -06.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yp-transport-capabilities
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/c2w8Xi9ySgGrh0MYYxhK0kZzM4U/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/dHtwqZAhMTUx6wiUZv9d3MlV-1M/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-05
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-06
 
 ### draft-ietf-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
@@ -45,4 +41,4 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities. -08 merged input from Jian Ping on example. Merged input from Rob on revision-label change to revision to reflect semver document changes in -09. Merged input from Robert Wills Yangdoctors in -10. Merged input from Reshad Rahman, Rob, Gabriele, Benoit and Alex in -11.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/rf8LsLx5UxEQkyns-_eSE_fq0yE/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-10&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/refs/heads/main/draft-ietf-netconf-yang-notifications-versioning-11.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-11
