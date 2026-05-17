@@ -1,0 +1,64 @@
+{
+    "ietf-telemetry-message:message": {
+        "telemetry-message-metadata": {
+            "node-export-timestamp": "2026-04-17T08:25:12.845Z",
+            "collection-timestamp": "2026-04-17T08:25:12.858502163Z",
+            "notification-event": "log",
+            "session-protocol": "yang-push",
+            "export-address": "10.190.64.79",
+            "export-port": 10100,
+            "ietf-yang-push-telemetry-message:yang-push-subscription": {
+                "id": 27,
+                "datastore": "ietf-datastores:operational",
+                "xpath-filter": "/ietf-alarms:alarm-notification",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "on-change": {
+                    "dampening-period": 500,
+                    "sync-on-start": false
+                },
+                "module": [
+                    {
+                        "name": "ietf-alarms",
+                        "revision": "2019-09-11"
+                    }
+                ],
+                "yang-library-content-id": "22934"
+            }
+        },
+        "data-collection-manifest": {
+            "name": "devcolleft01netgauzeudpnotifyangpushleft",
+            "vendor": "NetGauze",
+            "vendor-pen": 3746,
+            "software-version": "0.10.0 (edd3237c)",
+            "software-flavor": "release",
+            "os-version": "8.10",
+            "os-type": "Red Hat Enterprise Linux"
+        },
+        "network-operator-metadata": {
+            "labels": [
+                {
+                    "name": "node_id",
+                    "string-value": "ipd-zbl1536-s-ah-79"
+                },
+                {
+                    "name": "platform_id",
+                    "string-value": "FANO"
+                }
+            ]
+        },
+        "payload": {
+            "ietf-yp-notification:envelope": {
+                "contents": {
+                    "ietf-subscribed-notifications:subscription-terminated": {
+                        "id": 27,
+                        "reason": "ietf-subscribed-notifications:no-such-subscription"
+                    }
+                },
+                "event-time": "2026-04-17T08:25:12.845Z",
+                "hostname": "ipd-zbl1536-s-ah-79",
+                "sequence-number": 5
+            }
+        }
+    }
+}

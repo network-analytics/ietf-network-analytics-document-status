@@ -1,0 +1,95 @@
+{
+    "ietf-telemetry-message:message": {
+        "telemetry-message-metadata": {
+            "node-export-timestamp": "2026-04-17T08:25:25.195Z",
+            "collection-timestamp": "2026-04-17T08:25:25.207831752Z",
+            "notification-event": "log",
+            "session-protocol": "yang-push",
+            "export-address": "10.190.64.79",
+            "export-port": 10100,
+            "ietf-yang-push-telemetry-message:yang-push-subscription": {
+                "id": 1,
+                "datastore": "ietf-datastores:operational",
+                "xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30Z"
+                },
+                "module": [
+                    {
+                        "name": "iana-if-type",
+                        "revision": "2017-01-19"
+                    },
+                    {
+                        "name": "huawei-interface-statistics-mgt",
+                        "revision": "2025-08-14"
+                    },
+                    {
+                        "name": "ietf-interfaces",
+                        "revision": "2018-02-20"
+                    }
+                ],
+                "yang-library-content-id": "22934"
+            }
+        },
+        "data-collection-manifest": {
+            "name": "devcolleft01netgauzeudpnotifyangpushleft",
+            "vendor": "NetGauze",
+            "vendor-pen": 3746,
+            "software-version": "0.10.0 (edd3237c)",
+            "software-flavor": "release",
+            "os-version": "8.10",
+            "os-type": "Red Hat Enterprise Linux"
+        },
+        "network-operator-metadata": {
+            "labels": [
+                {
+                    "name": "node_id",
+                    "string-value": "ipd-zbl1536-s-ah-79"
+                },
+                {
+                    "name": "platform_id",
+                    "string-value": "FANO"
+                }
+            ]
+        },
+        "payload": {
+            "ietf-yp-notification:envelope": {
+                "contents": {
+                    "ietf-subscribed-notifications:subscription-started": {
+                        "dscp": 0,
+                        "encoding": "ietf-subscribed-notifications:encode-json",
+                        "id": 1,
+                        "ietf-yang-push-revision:module-version": [
+                            {
+                                "name": "iana-if-type",
+                                "revision": "2017-01-19"
+                            },
+                            {
+                                "name": "huawei-interface-statistics-mgt",
+                                "revision": "2025-08-14"
+                            },
+                            {
+                                "name": "ietf-interfaces",
+                                "revision": "2018-02-20"
+                            }
+                        ],
+                        "ietf-yang-push-revision:yang-library-content-id": "22934",
+                        "ietf-yang-push:datastore": "ietf-datastores:operational",
+                        "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics",
+                        "ietf-yang-push:periodic": {
+                            "anchor-time": "2025-01-01T00:00:30Z",
+                            "period": 6000
+                        },
+                        "transport": "ietf-udp-notif-transport:udp-notif"
+                    }
+                },
+                "event-time": "2026-04-17T08:25:25.195Z",
+                "hostname": "ipd-zbl1536-s-ah-79",
+                "sequence-number": 0
+            }
+        }
+    }
+}
