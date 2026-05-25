@@ -39,10 +39,10 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
-* **State**: Presented -02 at NMOP 122. Merged terminology input from Adrian (https://mailarchive.ietf.org/arch/msg/nmop/ufL-6RdA09pR7gzxHaNtSb-a-54/), Updated YANG modules. Added "template" and "season" into ietf-network-anomaly-symptom-cbl and maintenance related information into ietf-network-anomaly-service-topology, Added in Section 4.4 Apache AVRO data model translation, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Added normative reference to Service Model, RFC 8969 and descried service model context, Added Cosmos Bright Lights in Implementation status section. Added vpn-network-termination grouping in -04. Merged input from Ruediger in -05.
+* **State**: Presented -02 at NMOP 122. Merged terminology input from Adrian (https://mailarchive.ietf.org/arch/msg/nmop/ufL-6RdA09pR7gzxHaNtSb-a-54/), Updated YANG modules. Added "template" and "season" into ietf-network-anomaly-symptom-cbl and maintenance related information into ietf-network-anomaly-service-topology, Added in Section 4.4 Apache AVRO data model translation, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Added normative reference to Service Model, RFC 8969 and descried service model context, Added Cosmos Bright Lights in Implementation status section. Added vpn-network-termination grouping in -04. Merged input from Ruediger in -05. Merged input from Reshad in -06.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/ft0ifhrd6h6J47qXOgSoFWVKpoI/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-semantics
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-05
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-semantics-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-semantics/refs/heads/main/draft-ietf-nmop-network-anomaly-semantics-06.txt
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
