@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-integration
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-integration/
-* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar and added streaming catalog in -09. Merged input from Reshad in -10. Requires review and updates in -12 based on Reshad's feedback and operational and security considerations. Added YANG deviations in schema registry.
+* **State**: Presented -05 at NMOP 121, merged input from Paul Aitken and some editorial cleanup in-08, replaced syname with hostname and RabitMQ with Apache Pulsar and added streaming catalog in -09. Merged input from Reshad in -10. Requires review and updates in -12 based on Reshad's feedback and operational and security considerations. Added YANG deviations in schema registry in -13.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-integration
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-12
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-integration-12&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-nmop-yang-message-broker-integration/refs/heads/main/draft-ietf-nmop-yang-message-broker-integration-13.txt
 
 ### draft-ietf-message-broker-telemetry-message
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
