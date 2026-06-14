@@ -10,7 +10,7 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
 * **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23. Transport directorate review in -24. Gory and Qin's Transport directorate input adressed in -25, awaiting feedback.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-25
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-25&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-26.txt
 
 ### draft-ietf-netconf-udp-client-server
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-client-server/
