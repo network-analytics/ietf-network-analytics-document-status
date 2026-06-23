@@ -20,9 +20,9 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-yang-message-broker-message-key
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-message-key/
-* **State**: Initial publication with -00 with merged input from Alex. Merged input from Benoit in -01 and input from Hellmar in -02. Adressed nits from Reshad in -03. Adressing adoption call input from Rob, Olga and Michael in -04.
+* **State**: Initial publication with -00 with merged input from Alex. Merged input from Benoit in -01 and input from Hellmar in -02. Adressed nits from Reshad in -03. Adressing adoption call input from Rob, Olga and Michael in -04. Merged input from Ahmed in -02.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-yang-message-broker-message-key
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-message-key-01
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-yang-message-broker-message-key-01&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-yang-message-broker-message-key/refs/heads/main/draft-ietf-nmop-yang-message-broker-message-key-02.txt
 
 ### draft-netana-nmop-message-broker-bmp-telemetry-msg
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-message-broker-bmp-telemetry-msg/
