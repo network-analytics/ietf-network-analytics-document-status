@@ -1,0 +1,433 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-21T13:35:31.026Z",
+        "hostname": "ipf-zbl1312-r-ap-01",
+        "sequence-number": 4,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 9,
+                "ietf-yp-observation:timestamp": "2026-04-21T13:35:30.698Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16974839,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Virtual-Template0",
+                                "type": "iana-if-type:ppp",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 1,
+                                "speed": "64000"
+                            },
+                            {
+                                "name": "NULL0",
+                                "type": "iana-if-type:other",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 2
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 4,
+                                "phys-address": "8C:E5:EF:B7:18:4E",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "100GE0/3/0",
+                                "description": "ipt-zhb921-g-dae-01:HundredGigE0/0/0/10/3",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:20:02Z",
+                                "if-index": 6,
+                                "phys-address": "8C:E5:EF:B7:18:5E",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "100GE0/3/1",
+                                "description": "ipt-zhb921-o-dae-01:HundredGigE0/0/0/10/3",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:59Z",
+                                "if-index": 7,
+                                "phys-address": "8C:E5:EF:B7:18:5F",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "100GE0/3/2",
+                                "description": "hcc-zbl1321-r-lf-09 port Hu0/0/0/24",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:49Z",
+                                "if-index": 8,
+                                "phys-address": "8C:E5:EF:B7:18:60",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "100GE0/3/3",
+                                "description": "hcc-zbl1321-r-lf-11 port Hu0/0/0/24",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:48Z",
+                                "if-index": 9,
+                                "phys-address": "8C:E5:EF:B7:18:61",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/4",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 10,
+                                "phys-address": "8C:E5:EF:B7:18:62",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/5",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 11,
+                                "phys-address": "8C:E5:EF:B7:18:63",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/6",
+                                "description": "ipz-zbl1315-s-vi-50 Eth1/23",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 12,
+                                "phys-address": "8C:E5:EF:B7:18:64",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/7",
+                                "description": "ipz-zbl1315-s-vi-50 Eth1/24",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 13,
+                                "phys-address": "8C:E5:EF:B7:18:65",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/8",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 14,
+                                "phys-address": "8C:E5:EF:B7:18:66",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/9",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 15,
+                                "phys-address": "8C:E5:EF:B7:18:67",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/10",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 16,
+                                "phys-address": "8C:E5:EF:B7:18:68",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/11",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 17,
+                                "phys-address": "8C:E5:EF:B7:18:69",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/12",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 18,
+                                "phys-address": "8C:E5:EF:B7:18:6A",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/13",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 19,
+                                "phys-address": "8C:E5:EF:B7:18:6B",
+                                "speed": "10000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/14",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 20,
+                                "phys-address": "8C:E5:EF:B7:18:6C",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/15",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 21,
+                                "phys-address": "8C:E5:EF:B7:18:6D",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/16",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 22,
+                                "phys-address": "8C:E5:EF:B7:18:6E",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/17",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 23,
+                                "phys-address": "8C:E5:EF:B7:18:6F",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/18",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 24,
+                                "phys-address": "8C:E5:EF:B7:18:70",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/19",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 25,
+                                "phys-address": "8C:E5:EF:B7:18:71",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/20",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 26,
+                                "phys-address": "8C:E5:EF:B7:18:72",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/21",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 27,
+                                "phys-address": "8C:E5:EF:B7:18:73",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/22",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 28,
+                                "phys-address": "8C:E5:EF:B7:18:74",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/23",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 29,
+                                "phys-address": "8C:E5:EF:B7:18:75",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "Eth-Trunk103",
+                                "description": "hcc-zbl1321-r-lf-09 port Hu0/0/0/24",
+                                "type": "iana-if-type:ieee8023adLag",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:49Z",
+                                "if-index": 44,
+                                "phys-address": "8C:E5:EF:B7:18:4F",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "Eth-Trunk203",
+                                "description": "hcc-zbl1321-r-lf-11 port Hu0/0/0/24",
+                                "type": "iana-if-type:ieee8023adLag",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:48Z",
+                                "if-index": 45,
+                                "phys-address": "8C:E5:EF:B7:18:4F",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "LoopBack0",
+                                "description": "**SRv6 locator source**",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 46
+                            },
+                            {
+                                "name": "LoopBack1",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 47
+                            },
+                            {
+                                "name": "LoopBack2",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 48
+                            },
+                            {
+                                "name": "LoopBack3",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 52
+                            },
+                            {
+                                "name": "LoopBack4",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 56
+                            },
+                            {
+                                "name": "Eth-Trunk40151",
+                                "description": "ipt-zhb921-g-dae-01:Bundle-Ether4015",
+                                "type": "iana-if-type:ieee8023adLag",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:19:59Z",
+                                "if-index": 75,
+                                "phys-address": "8C:E5:EF:B7:18:4F",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "Eth-Trunk40152",
+                                "description": "ipt-zhb921-o-dae-01:Bundle-Ether4015",
+                                "type": "iana-if-type:ieee8023adLag",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-04-09T14:20:02Z",
+                                "if-index": 81,
+                                "phys-address": "8C:E5:EF:B7:18:4F",
+                                "speed": "100000000000"
+                            },
+                            {
+                                "name": "LoopBack100",
+                                "description": "**Daisy and management source**",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 82
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

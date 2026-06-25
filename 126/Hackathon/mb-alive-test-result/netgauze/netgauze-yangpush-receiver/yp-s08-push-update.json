@@ -1,0 +1,629 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-21T13:34:32.535Z",
+        "hostname": "ipf-zbl1312-r-ap-01",
+        "sequence-number": 5,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 8,
+                "ietf-yp-observation:timestamp": "2026-04-21T13:34:30.678Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16974839,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Virtual-Template0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "NULL0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "256644420",
+                                    "in-unicast-pkts": "1280426",
+                                    "in-broadcast-pkts": "142811",
+                                    "in-multicast-pkts": "1088161",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "4975655370",
+                                    "out-unicast-pkts": "4894179",
+                                    "out-broadcast-pkts": "321",
+                                    "out-multicast-pkts": "34407",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/3/0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:51Z",
+                                    "in-octets": "3095122203",
+                                    "in-unicast-pkts": "6663",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "21869433",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "1899671668",
+                                    "out-unicast-pkts": "38613",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "20877936",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/3/1",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:51Z",
+                                    "in-octets": "3099011602",
+                                    "in-unicast-pkts": "50507",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "21869538",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "1900293219",
+                                    "out-unicast-pkts": "38477",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "20878174",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/3/2",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:51Z",
+                                    "in-octets": "1825307507",
+                                    "in-unicast-pkts": "1130822",
+                                    "in-broadcast-pkts": "1",
+                                    "in-multicast-pkts": "20744031",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "4271543545",
+                                    "out-unicast-pkts": "2846526",
+                                    "out-broadcast-pkts": "2",
+                                    "out-multicast-pkts": "20749872",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "100GE0/3/3",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:51Z",
+                                    "in-octets": "1747951431",
+                                    "in-unicast-pkts": "738730",
+                                    "in-broadcast-pkts": "1",
+                                    "in-multicast-pkts": "20744025",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "2440919575",
+                                    "out-unicast-pkts": "497700",
+                                    "out-broadcast-pkts": "2",
+                                    "out-multicast-pkts": "20749895",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/4",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/5",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/6",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/7",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/8",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/9",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/10",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/11",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/12",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/13",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/14",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/15",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/16",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/17",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/18",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/19",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/20",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/21",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/22",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/3/23",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "Eth-Trunk103",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "1825309397",
+                                    "in-unicast-pkts": "1130822",
+                                    "in-broadcast-pkts": "1",
+                                    "in-multicast-pkts": "20744058",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "4271545435",
+                                    "out-unicast-pkts": "2846526",
+                                    "out-broadcast-pkts": "2",
+                                    "out-multicast-pkts": "20749899",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "Eth-Trunk203",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "1747953321",
+                                    "in-unicast-pkts": "738730",
+                                    "in-broadcast-pkts": "1",
+                                    "in-multicast-pkts": "20744052",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "2440921465",
+                                    "out-unicast-pkts": "497700",
+                                    "out-broadcast-pkts": "2",
+                                    "out-multicast-pkts": "20749922",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "LoopBack0",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "LoopBack1",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            },
+                            {
+                                "name": "LoopBack2",
+                                "statistics": {
+                                    "discontinuity-time": "2026-04-09T14:18:01Z",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-broadcast-pkts": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-discards": 0,
+                                    "in-errors": 0,
+                                    "in-unknown-protos": 0,
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0",
+                                    "out-broadcast-pkts": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-discards": 0,
+                                    "out-errors": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-21T13:32:30.777Z",
+        "hostname": "ipf-zbl1312-r-ap-01",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 1,
+                "ietf-yp-observation:timestamp": "2026-04-21T13:32:30.689Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16974839,
+                "datastore-contents": {
+                    "huawei-debug:debug": {
+                        "board-resouce-states": {
+                            "board-resouce-state": [
+                                {
+                                    "position": "3",
+                                    "entity-index": 16973825,
+                                    "board-name": "IPU 3",
+                                    "cpu-usage": 55,
+                                    "memory-total-size": 15855588,
+                                    "memory-used-size": 3769300,
+                                    "memory-usage": 23
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,446 @@
+Summary
+---
+YANG library issues
+--
+- YANG library defines iana-if-type as import-only and therefore YANG-Push subscription 9 can't be validated.
+- YANG library misses encode-json feature in ietf-subscribed-notifications and yang-push-revision-supported feature in ietf-yang-push-revision and therefore all subscription-started notifications can't be validated.
+
+YANG deviation issues
+--
+- Subscription-started and stream-filter are being deviated from ietf-subscribed-notifications and therefore all subscription-started notifications can't be validated.
+- module-version and yang-library-content-id YANG nodes are being deviated from ietf-yang-push-revision and therefore all subscription-started notifications can't be validated.
+- push-update, push-change-update, datastore and update-trigger YANG nodes are being deviated from ietf-yang-push and therefore all push-update and push-change-update notifications can't be validated.
+- message-publisher-id YANG node is being deviated from ietf-distributed-notif and therefore all push-update and push-change-update notifications can't be validated.
+
+YANG modules outdated
+---
+ietf-distributed-notif@2026-04-13.yang (2025-04-12)
+ietf-yp-notification@2025-12-24.yang (2025-06-04)
+ietf-yp-observation@2025-12-24.yang (2025-06-04)
+ietf-yang-push-revision@2025-12-07.yang (2025-08-29)
+
+
+Detail
+---
+module huawei-ietf-subscribed-notifications-deviations-OC-NE-M2K-B {
+  deviation "/sn:subscription-started" {
+    deviate not-supported;
+  }
+  deviation "/sn:filters/sn:stream-filter" {
+    deviate not-supported;
+  }
+
+module huawei-ietf-yang-push-revision-deviations-OC-NE-M2K-B {
+  deviation "/sn:subscription-started/ypr:module-version" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/ypr:yang-library-content-id" {
+    deviate not-supported;
+  }
+
+module huawei-ietf-yang-push-deviations-OC-NE-M2K-B {
+  deviation "/yp:push-update" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-change-update" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/sn:target/yp:datastore" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/yp:update-trigger" {
+    deviate not-supported;
+  }
+
+module huawei-ietf-distributed-notif-deviations-OC-NE-M2K-B {
+  deviation "/sn:subscription-started/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-update/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-change-update/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+
+<yang-library xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+  <module-set>
+    <name>ALL</name>
+    <module>
+      <name>ietf-subscribed-notifications</name>
+      <feature>encode-json</feature>
+    </module>
+    <module>
+      <name>ietf-yang-push-revision</name>
+			<feature>yang-push-revision-supported</feature>
+    </module>
+    <module>
+      <name>iana-if-type</name>
+      <revision>2017-01-19</revision>
+      <namespace>urn:ietf:params:xml:ns:yang:iana-if-type</namespace>
+    </module>
+
+
+
+
+cat 324ad7172c652c8c64e394d246b304158b122e8ffa6895f53c323dcb62a8600d/modules/huawei-ietf-subscribed-notifications-deviations-OC-NE-M2K-B@2025-02-24.yang 
+/*
+Copyright (C) 2025 Huawei Technologies Co., Ltd. All rights reserved.
+*/
+module huawei-ietf-subscribed-notifications-deviations-OC-NE-M2K-B {
+  namespace "urn:huawei:yang:huawei-ietf-subscribed-notifications-deviations-OC-NE-M2K-B";
+  prefix sn-devs-OC-NE-M2K-B;
+
+  import ietf-subscribed-notifications {
+    prefix sn;
+  }
+  import huawei-ifm {
+    prefix ifm;
+  }
+  import huawei-network-instance {
+    prefix hwni;
+  }
+
+  organization
+    "Huawei Technologies Co., Ltd.";
+  contact
+    "Huawei Industrial Base
+     Bantian, Longgang
+     Shenzhen 518129
+     People's Republic of China
+     Website: http://www.huawei.com
+     Email: support@huawei.com";
+  description
+    "This module defines deviation statements for ietf-subscribed-notifications module.";
+
+  revision 2025-02-24 {
+    description
+      "Initial revision.";
+    reference "Huawei private.";
+  }
+
+  deviation "/sn:establish-subscription/sn:input/sn:target/sn:stream/sn:stream-filter/sn:by-reference" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/sn:dscp" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/sn:weighting" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/sn:dependency" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/sn:target/sn:stream/sn:stream-filter/sn:by-reference" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-modified" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started" {
+    deviate not-supported;
+  }
+  deviation "/sn:filters/sn:stream-filter" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/sn:stream/sn:stream-filter/sn:by-reference" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/sn:stream/sn:configured-replay" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:weighting" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:dependency" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver/sn:sent-event-records" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver/sn:excluded-event-records" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver/sn:state" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver/sn:reset" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target" {
+    deviate replace {
+      mandatory false;
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/sn:stream/sn:stream-filter" {
+    deviate replace {
+      config false;
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:stop-time" {
+    deviate replace {
+      config false;
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:purpose" {
+    deviate replace {
+      type string {
+        length "1..127";
+      }
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:notification-message-origin/sn:interface-originated/sn:source-interface" {
+    deviate replace {
+      type leafref {
+        path "/ifm:ifm/ifm:interfaces/ifm:interface/ifm:name";
+      }
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:notification-message-origin/sn:address-originated/sn:source-vrf" {
+    deviate replace {
+      type leafref {
+        path "/hwni:network-instance/hwni:instances/hwni:instance/hwni:name";
+      }
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver" {
+    deviate replace {
+      min-elements 0;
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:receivers/sn:receiver/sn:name" {
+    deviate replace {
+      type string {
+        length "1..64";
+        pattern '[A-Za-z0-9]+';
+      }
+    }
+  }
+}
+
+
+  root@daisy-playground-rh8 [ /tmp/tmp-libyang-549/alive ] () # vi 324ad7172c652c8c64e394d246b304158b122e8ffa6895f53c323dcb62a8600d/modes/huawei-ietf-yang-push-revision-deviations-OC-NE-M2K-B@2025-02-24.yang
+/*
+Copyright (C) 2025 Huawei Technologies Co., Ltd. All rights reserved.
+*/
+module huawei-ietf-yang-push-revision-deviations-OC-NE-M2K-B {
+  yang-version 1.1;
+  namespace "urn:huawei:yang:huawei-ietf-yang-push-revision-deviations-OC-NE-M2K-B";
+  prefix ypr-devs-OC-NE-M2K-B;
+
+  import ietf-yang-push-revision {
+    prefix ypr;
+  }
+  import ietf-subscribed-notifications {
+    prefix sn;
+  }
+
+  organization
+    "Huawei Technologies Co., Ltd.";
+  contact
+    "Huawei Industrial Base
+     Bantian, Longgang
+     Shenzhen 518129
+     People's Republic of China
+     Website: http://www.huawei.com
+     Email: support@huawei.com";
+  description
+    "This module defines deviation statements for ietf-yang-push-revision module.";
+
+  revision 2025-02-24 {
+    description
+      "Initial revision.";
+    reference "Huawei private.";
+  }
+
+  deviation "/sn:establish-subscription/sn:input/ypr:module-version-config" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/ypr:module-version-config" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/ypr:module-version" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/ypr:yang-library-content-id" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-modified/ypr:module-version" {
+    deviate not-supported;
+  }
+	
+root@daisy-playground-rh8 [ /tmp/tmp-libyang-549/alive ] () # cat 324ad7172c652c8c64e394d246b304158b122e8ffa6895f53c323dcb62a8600d/modules/huawei-ietf-yang-push-deviations-OC-NE-M2K-B@2025-02-24.yang 
+/*
+Copyright (C) 2025 Huawei Technologies Co., Ltd. All rights reserved.
+*/
+module huawei-ietf-yang-push-deviations-OC-NE-M2K-B {
+  namespace "urn:huawei:yang:huawei-ietf-yang-push-deviations-OC-NE-M2K-B";
+  prefix yp-devs-OC-NE-M2K-B;
+
+  import ietf-yang-push {
+    prefix yp;
+  }
+  import ietf-subscribed-notifications {
+    prefix sn;
+  }
+  import ietf-datastores {
+    prefix ds;
+  }
+
+  organization
+    "Huawei Technologies Co., Ltd.";
+  contact
+    "Huawei Industrial Base
+     Bantian, Longgang
+     Shenzhen 518129
+     People's Republic of China
+     Website: http://www.huawei.com
+     Email: support@huawei.com";
+  description
+    "This module defines deviation statements for ietf-yang-push module.";
+
+  revision 2025-02-24 {
+    description
+      "Initial revision.";
+    reference "Huawei private.";
+  }
+
+  deviation "/yp:resync-subscription" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/yp:update-trigger/yp:on-change" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/sn:target/yp:datastore/yp:selection-filter/yp:by-reference" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:input/sn:target/yp:datastore/yp:selection-filter/yp:within-subscription/yp:filter-spec/yp:datastore-subtree-filter" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/yp:update-trigger/yp:on-change" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/sn:target/yp:datastore/yp:datastore" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/sn:target/yp:datastore/yp:selection-filter/yp:by-reference" {
+    deviate not-supported;
+  }
+  deviation "/sn:modify-subscription/sn:input/sn:target/yp:datastore/yp:selection-filter/yp:within-subscription/yp:filter-spec/yp:datastore-subtree-filter" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-update" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-change-update" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/yp:update-trigger" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-started/sn:target/yp:datastore" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-modified/yp:update-trigger" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-modified/sn:target/yp:datastore" {
+    deviate not-supported;
+  }
+  deviation "/sn:filters/yp:selection-filter/yp:filter-spec/yp:datastore-subtree-filter" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/yp:update-trigger/yp:on-change/yp:on-change/yp:sync-on-start" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/yp:update-trigger/yp:on-change/yp:on-change/yp:excluded-change" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/yp:datastore/yp:selection-filter/yp:within-subscription/yp:filter-spec/yp:datastore-subtree-filter" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscriptions/sn:subscription/yp:update-trigger/yp:periodic/yp:periodic/yp:period" {
+    deviate replace {
+      type uint32 {
+        range "1|10|50|90|100|500|1000|3000|6000|18000|30000|90000|180000";
+      }
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/yp:update-trigger/yp:periodic/yp:periodic/yp:anchor-time" {
+    deviate add {
+      must '../period>=6000';
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/yp:update-trigger/yp:on-change/yp:on-change/yp:dampening-period" {
+    deviate replace {
+      type uint32 {
+        range "0|10..6000";
+      }
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/yp:datastore/yp:datastore" {
+    deviate add {
+      must "derived-from-or-self(../yp:datastore, 'ds:operational')";
+    }
+  }
+  deviation "/sn:subscriptions/sn:subscription/sn:target/yp:datastore/yp:selection-filter/yp:within-subscription/yp:filter-spec" {
+    deviate replace {
+      config false;
+    }
+  }
+}
+
+
+cat 324ad7172c652c8c64e394d246b304158b122e8ffa6895f53c323dcb62a8600d/modules/huawei-ietf-distributed-notif-deviations-OC-NE-M2K-B@2025-02-24.yang 
+/*
+Copyright (C) 2025 Huawei Technologies Co., Ltd. All rights reserved.
+*/
+module huawei-ietf-distributed-notif-deviations-OC-NE-M2K-B {
+  yang-version 1.1;
+  namespace "urn:huawei:yang:huawei-ietf-distributed-notif-deviations-OC-NE-M2K-B";
+  prefix dn-devs-OC-NE-M2K-B;
+
+  import ietf-distributed-notif {
+    prefix dn;
+  }
+  import ietf-yang-push {
+    prefix yp;
+  }
+  import ietf-subscribed-notifications {
+    prefix sn;
+  }
+
+  organization
+    "Huawei Technologies Co., Ltd.";
+  contact
+    "Huawei Industrial Base
+     Bantian, Longgang
+     Shenzhen 518129
+     People's Republic of China
+     Website: http://www.huawei.com
+     Email: support@huawei.com";
+  description
+    "This module defines deviation statements for ietf-distributed-notif module.";
+
+  revision 2025-02-24 {
+    description
+      "Initial revision.";
+    reference "Huawei private.";
+  }
+
+  deviation "/sn:subscription-started/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/sn:subscription-modified/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/sn:establish-subscription/sn:output/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-update/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+  deviation "/yp:push-change-update/dn:message-publisher-id" {
+    deviate not-supported;
+  }
+}
