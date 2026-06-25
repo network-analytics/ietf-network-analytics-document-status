@@ -196,11 +196,11 @@ udp_notif:
 
 #### 2.3 Install Pre Obtained NetGauze Cache Content
 
-Download https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-receiver/fano-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for FANO.
+Download https://github.com/network-analytics/ietf-network-analytics-document-status/blob/main/126/Hackathon/mb-fano-test-result/netgauze/netgauze-yangpush-receiver/fano-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for FANO.
 
-https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-receiver/alive-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for ALIVE.
+https://github.com/network-analytics/ietf-network-analytics-document-status/blob/main/126/Hackathon/mb-alive-test-result/netgauze/netgauze-yangpush-receiver/alive-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for ALIVE.
 
-https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-receiver/titan-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for TITAN.
+https://github.com/network-analytics/ietf-network-analytics-document-status/blob/main/126/Hackathon/mb-titan-test-result/netgauze/netgauze-yangpush-receiver/titan-netgauze-receiver-cache-content.tar.gz to obtain the YANG-Push Receiver cache content for TITAN.
 
 At the YANG-Push Receiver, extract the content into /var/cache/netgauze/yang_schemas to get the following folder structure (yang module files in modules sub-directory ommited for brevity)
 
@@ -285,11 +285,11 @@ For instructions on how to run the collector, refer to the [collector crate READ
 
 ### Step 3 – Reproduce YANG-Push Notifications from Packet Captured
 
-Download https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-publisher/ipd-zbl1536-s-ah-79-yp-20260416-1435.pcap to obtain the YANG-Push notification packet capture for FANO.
+Download https://github.com/network-analytics/ietf-network-analytics-document-status/tree/main/126/Hackathon/mb-fano-test-result/netgauze/netgauze-yangpush-publisher to obtain the YANG-Push notification packet capture for FANO.
 
-https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-publisher/ipf-zbl1312-r-ap-01-yp-20260421-1531.pcap to obtain the YANG-Push notification packet capture for ALIVE.
+https://github.com/network-analytics/ietf-network-analytics-document-status/tree/main/126/Hackathon/mb-alive-test-result/netgauze/netgauze-yangpush-publisher to obtain the YANG-Push notification packet capture for ALIVE.
 
-https://github.com/network-analytics/arrcus-arcos-yangpush/tree/main/mb-fano-test-result/arrcus-arciq/netgauze-yangpush-publisher/ipf-zbl1327-r-daisy-91-yp-20260424-1338.pcap to obtain the YANG-Push notification packet capture for TITAN.
+https://github.com/network-analytics/ietf-network-analytics-document-status/tree/main/126/Hackathon/mb-titan-test-result/netgauze/netgauze-yangpush-publisher to obtain the YANG-Push notification packet capture for TITAN.
 
 Use [traffic-reproducer](https://github.com/network-analytics/traffic-reproducer) to replay the Swisscom provided packet capture towards the running NetGauze YANG-Push Receiver. You are however free to use any other tool you prefer (e.g. `tcpreplay`).
 
@@ -349,7 +349,7 @@ For full usage instructions and available options, refer to the [official README
 
 ### Step 4 – Reproduce Telemetery Mockup Messages
 
-Install kcat https://github.com/edenhill/kcat. In https://github.com/network-analytics/cisco-iosxr-yangpush/tree/main/mb-test-cases you will find test json Network Telemetry messages which are from a YANG schema validation perspective invalid, and commands how to simulate a YANG Message Broker Producer.
+Install kcat https://github.com/edenhill/kcat. In https://github.com/network-analytics/ietf-network-analytics-document-status/tree/main/126/Hackathon/mb-test-cases you will find test json Network Telemetry messages which are from a YANG schema validation perspective invalid, and commands how to simulate a YANG Message Broker Producer.
 
 ---
 
