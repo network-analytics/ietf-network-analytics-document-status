@@ -64,7 +64,7 @@ The test setup consists of the following system components and workflow
 
 > **Note:** The example below provides a minimal single-node Docker Compose setup to get you started quickly. You should adapt it to match your own infrastructure, security requirements, and operational practices.
 
-> **Imporant:** considering increasing the max heap memory cap (see below SCHEMA_REGISTRY_HEAP_OPTS parameter for the schema-reg container) for the JVM as otherwise you might observee out-of-memory errors. The schema-registry with the yang plugin will need to load big yang module to do the schema comparison and thus needs more memory than with standard schema-registry use cases.
+> **Imporant:** considering increasing the max heap memory cap (see below SCHEMA_REGISTRY_HEAP_OPTS parameter for the schema-reg container) for the JVM as otherwise you might observee out-of-memory errors. The schema-registry with the yang plugin (https://github.com/network-analytics/yang-kafka-integration) will need to load big yang module to do the schema comparison and thus needs more memory than with standard schema-registry use cases.
 
 Create a file called `docker-compose.kafka.yml`:
 
