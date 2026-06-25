@@ -26,9 +26,9 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-netana-nmop-message-broker-bmp-telemetry-msg
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-message-broker-bmp-telemetry-msg/
-* **State**: xxx
+* **State**: Presented -02 at IETF 125, refactor by importing ietf-bgp instead of redefining submodules, and add cababilities support to peer-up, add tlvs from RFC7854, RFC6069, draft-ietf-grow-bmp-path-marking-tlv, and draft-ietf-grow-bmp-tlv, add bgp open fields, refactor on message key and topic name to accommodate message ordering for -03.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-message-broker-bmp-telemetry-msg
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-bmp-telemetry-msg-02
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-bmp-telemetry-msg-02&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-message-broker-bmp-telemetry-message/refs/heads/main/draft-netana-nmop-message-broker-bmp-telemetry-msg-03.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
