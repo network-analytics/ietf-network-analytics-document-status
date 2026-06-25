@@ -1,0 +1,61 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance>
+      <name>DAISY2</name>
+        <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+          <remote-address>2A02:A90:4007::9:1</remote-address>
+          <remote-port>10003</remote-port>
+          <enable-segmentation>true</enable-segmentation>
+          <max-segment-size>1436</max-segment-size>
+        </udp-notif-receiver>
+    </receiver-instance>
+  </receiver-instances>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEINTERFACE2</filter-id>
+    <datastore-xpath-filter xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface/if:statistics</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSINTERFACE2</filter-id>
+    <datastore-xpath-filter xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface</datastore-xpath-filter>
+  </selection-filter>
+  <subscription>
+    <id>100</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEINTERFACE2</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-address>2001:DB8:48::1</source-address>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>101</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSINTERFACE2</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-address>2001:DB8:48::1</source-address>
+    <receivers>
+      <receiver>
+        <name>DAISY2</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+</subscriptions>

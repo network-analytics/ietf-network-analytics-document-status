@@ -1,0 +1,72 @@
+{
+  "ietf-yp-notification:envelope": {
+    "event-time": "2026-03-14T02:31:17.710130286+00:00",
+    "hostname": "r2",
+    "sequence-number": 4,
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "id": 205,
+        "datastore-contents": {
+          "openconfig-interfaces:interfaces": {
+            "interface": [
+              {
+                "name": "swp1",
+                "state": {
+                  "type": "iana-if-type:ethernetCsmacd",
+                  "mtu": 9000,
+                  "name": "swp1",
+                  "description": "describe-after",
+                  "ifindex": 312,
+                  "admin-status": "DOWN",
+                  "oper-status": "UP",
+                  "counters": {
+                    "in-octets": "2269371",
+                    "in-unicast-pkts": "15519",
+                    "in-discards": "0",
+                    "in-errors": "0",
+                    "out-octets": "4645589",
+                    "out-unicast-pkts": "38248",
+                    "out-discards": "0",
+                    "out-errors": "0",
+                    "arcos-openconfig-interfaces-augments:in-bits-rate": "0",
+                    "arcos-openconfig-interfaces-augments:in-pkts": "15519",
+                    "arcos-openconfig-interfaces-augments:out-bits-rate": "24",
+                    "arcos-openconfig-interfaces-augments:out-pkts": "38248"
+                  }
+                }
+              },
+              {
+                "name": "swp2",
+                "state": {
+                  "type": "iana-if-type:ethernetCsmacd",
+                  "mtu": 1526,
+                  "name": "swp2",
+                  "description": "",
+                  "ifindex": 314,
+                  "admin-status": "UP",
+                  "oper-status": "UP",
+                  "counters": {
+                    "in-octets": "746",
+                    "in-unicast-pkts": "7",
+                    "in-discards": "0",
+                    "in-errors": "0",
+                    "out-octets": "1023",
+                    "out-unicast-pkts": "9",
+                    "out-discards": "0",
+                    "out-errors": "0",
+                    "arcos-openconfig-interfaces-augments:in-bits-rate": "0",
+                    "arcos-openconfig-interfaces-augments:in-pkts": "7",
+                    "arcos-openconfig-interfaces-augments:out-bits-rate": "0",
+                    "arcos-openconfig-interfaces-augments:out-pkts": "9"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "ietf-yp-observation:timestamp": "2026-03-14T02:31:11.579746967+00:00",
+        "ietf-yp-observation:point-in-time": "current-accounting"
+      }
+    }
+  }
+}

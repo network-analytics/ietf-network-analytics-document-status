@@ -1,0 +1,632 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-20T08:16:34.491Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 9,
+                "ietf-yp-observation:timestamp": "2026-01-20T08:16:33.408Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Virtual-Template0",
+                                "type": "iana-if-type:ppp",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 1,
+                                "speed": "64000"
+                            },
+                            {
+                                "name": "NULL0",
+                                "type": "iana-if-type:other",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "if-index": 2
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-01-17T09:40:23Z",
+                                "if-index": 4,
+                                "phys-address": "24:46:E4:A8:4C:FA",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "HP-GE1/3/0",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 6,
+                                "phys-address": "24:46:E4:A8:53:AB",
+                                "speed": "1000000000"
+                            },
+                            {
+                                "name": "100GE0/1/0",
+                                "description": "ipf-zbl1326-r-daisy-79:HundredGigE0/0/0/2",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-01-20T02:35:27Z",
+                                "if-index": 7,
+                                "phys-address": "24:46:E4:A8:4D:0B",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/1",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 8,
+                                "phys-address": "24:46:E4:A8:4D:0C",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/2",
+                                "description": "ipf-zbl1327-r-daisy-81:100GE0/3/0",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "up",
+                                "last-change": "2026-01-07T06:50:22Z",
+                                "if-index": 9,
+                                "phys-address": "24:46:E4:A8:4D:0D",
+                                "speed": "100000000",
+                                "higher-layer-if": [
+                                    "100GE0/1/2.23"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/3",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 10,
+                                "phys-address": "24:46:E4:A8:4D:0E",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/5",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 12,
+                                "phys-address": "24:46:E4:A8:4D:10",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/6",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 13,
+                                "phys-address": "24:46:E4:A8:4D:11",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/8",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 15,
+                                "phys-address": "24:46:E4:A8:4D:13",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/9",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 16,
+                                "phys-address": "24:46:E4:A8:4D:14",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/10",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 17,
+                                "phys-address": "24:46:E4:A8:4D:15",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/11",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 18,
+                                "phys-address": "24:46:E4:A8:4D:16",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/12",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 19,
+                                "phys-address": "24:46:E4:A8:4D:17",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/13",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 20,
+                                "phys-address": "24:46:E4:A8:4D:18",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/14",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 21,
+                                "phys-address": "24:46:E4:A8:4D:19",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/15",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 22,
+                                "phys-address": "24:46:E4:A8:4D:1A",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/16",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 23,
+                                "phys-address": "24:46:E4:A8:4D:1B",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/17",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 24,
+                                "phys-address": "24:46:E4:A8:4D:1C",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/18",
+                                "description": "ipf-zbl1327-r-daisy-90:HundredGigE0/0/0/10",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "down",
+                                "oper-status": "down",
+                                "if-index": 25,
+                                "phys-address": "24:46:E4:A8:4D:1D",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/19",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 26,
+                                "phys-address": "24:46:E4:A8:4D:1E",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/20",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 27,
+                                "phys-address": "24:46:E4:A8:4D:1F",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/21",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 28,
+                                "phys-address": "24:46:E4:A8:4D:20",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/22",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 29,
+                                "phys-address": "24:46:E4:A8:4D:21",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/23",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 30,
+                                "phys-address": "24:46:E4:A8:4D:22",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/24",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 31,
+                                "phys-address": "24:46:E4:A8:4D:23",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/25",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 32,
+                                "phys-address": "24:46:E4:A8:4D:24",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/26",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 33,
+                                "phys-address": "24:46:E4:A8:4D:25",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/27",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 34,
+                                "phys-address": "24:46:E4:A8:4D:26",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/28",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 35,
+                                "phys-address": "24:46:E4:A8:4D:27",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/29",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 36,
+                                "phys-address": "24:46:E4:A8:4D:28",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/30",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 37,
+                                "phys-address": "24:46:E4:A8:4D:29",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/31",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 38,
+                                "phys-address": "24:46:E4:A8:4D:2A",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/32",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 39,
+                                "phys-address": "24:46:E4:A8:4D:2B",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/33",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 40,
+                                "phys-address": "24:46:E4:A8:4D:2C",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/34",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 41,
+                                "phys-address": "24:46:E4:A8:4D:2D",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/35",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 42,
+                                "phys-address": "24:46:E4:A8:4D:2E",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/36",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 43,
+                                "phys-address": "24:46:E4:A8:4D:2F",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/37",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 44,
+                                "phys-address": "24:46:E4:A8:4D:30",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/38",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 45,
+                                "phys-address": "24:46:E4:A8:4D:31",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/39",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 46,
+                                "phys-address": "24:46:E4:A8:4D:32",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/40",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 47,
+                                "phys-address": "24:46:E4:A8:4D:33",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/41",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 48,
+                                "phys-address": "24:46:E4:A8:4D:34",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/42",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 49,
+                                "phys-address": "24:46:E4:A8:4D:35",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/43",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 50,
+                                "phys-address": "24:46:E4:A8:4D:36",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/44",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 51,
+                                "phys-address": "24:46:E4:A8:4D:37",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/45",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 52,
+                                "phys-address": "24:46:E4:A8:4D:38",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/46",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 53,
+                                "phys-address": "24:46:E4:A8:4D:39",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/47",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 54,
+                                "phys-address": "24:46:E4:A8:4D:3A",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/48",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 55,
+                                "phys-address": "24:46:E4:A8:4D:3B",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/49",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 56,
+                                "phys-address": "24:46:E4:A8:4D:3C",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/50",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 57,
+                                "phys-address": "24:46:E4:A8:4D:3D",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/51",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 58,
+                                "phys-address": "24:46:E4:A8:4D:3E",
+                                "speed": "100000000"
+                            },
+                            {
+                                "name": "100GE0/1/52",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "enabled",
+                                "admin-status": "up",
+                                "oper-status": "down",
+                                "if-index": 59,
+                                "phys-address": "24:46:E4:A8:4D:3F",
+                                "speed": "100000000"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

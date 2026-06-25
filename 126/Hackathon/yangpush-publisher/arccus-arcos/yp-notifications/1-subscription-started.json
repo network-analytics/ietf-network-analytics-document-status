@@ -1,0 +1,26 @@
+{
+  "ietf-yp-notification:notification": {
+    "event-time": "2026-03-14T02:31:17.687304522Z",
+    "ietf-subscribed-notifications:subscription-started": {
+      "id": 205,
+      "target": {
+        "ietf-yang-push:datastore": {
+          "selection-filter": {
+            "within-subscription": {
+              "datastore-xpath-filter": "/openconfig-interfaces:interfaces/interface/state"
+            }
+          }
+        }
+      },
+      "encoding": "encode-json",
+      "transport": "ietf-udp-notif-transport:udp-notif",
+      "ietf-yp-versioning:module-version": [
+        {
+          "name": "openconfig-interfaces",
+          "revision": "2016-12-22"
+        }
+      ],
+      "ietf-yp-versioning:yang-library-content-id": "c07c43004798926f0ffdd5e3d6bdc16e"
+    }
+  }
+}

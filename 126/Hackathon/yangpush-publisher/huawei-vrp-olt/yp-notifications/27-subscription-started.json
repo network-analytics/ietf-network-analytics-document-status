@@ -1,0 +1,28 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-22T06:19:56.351Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 27,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification",
+                "dscp": 0,
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 500,
+                    "sync-on-start": false
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "ietf-alarms",
+                        "revision": "2019-09-11"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22851"
+            }
+        }
+    }
+}

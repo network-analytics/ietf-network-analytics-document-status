@@ -1,0 +1,85 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-01-22T06:20:36.871Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 27,
+                "ietf-yp-observation:timestamp": "2026-01-22T06:20:36.511Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "ietf-distributed-notif:message-publisher-id": 3021116856,
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "0",
+                        "edit": [
+                            {
+                                "edit-id": "0",
+                                "operation": "merge",
+                                "target": "/ietf-alarms:alarm-notification",
+                                "value": {
+                                    "ietf-alarms:alarm-notification": {
+                                        "resource": "system",
+                                        "huawei-alarm-type-an:alarm-type-id": "hw-alarm-type-an:managing-user-login-logout",
+                                        "alarm-type-qualifier": "daisy1.SSH.10.212.242.71.Log on",
+                                        "time": "2026-01-22T06:20:36Z",
+                                        "perceived-severity": "minor",
+                                        "alarm-text": "The managing user of the equipment logout or logon",
+                                        "an-alarm-management:notification-serial-id": 77619,
+                                        "an-alarm-management:alarm-name": "The managing user of the equipment logout or logon",
+                                        "ietf-alarms-x733:event-type": "environmental-alarm",
+                                        "ietf-alarms-x733:probable-cause": 234881026,
+                                        "ietf-alarms-x733:probable-cause-string": "The maintenance user logs in to the system, logs out of the system, or fails to log in to the system",
+                                        "ietf-alarms-x733:proposed-repair-actions": "No need to deal with it",
+                                        "ietf-alarms-x733:additional-information": [
+                                            {
+                                                "identifier": "Alarm-id",
+                                                "significant": true,
+                                                "information": "239312897"
+                                            },
+                                            {
+                                                "identifier": "Alarm-class",
+                                                "significant": true,
+                                                "information": "security"
+                                            },
+                                            {
+                                                "identifier": "Alarm-sn",
+                                                "significant": true,
+                                                "information": "74941"
+                                            },
+                                            {
+                                                "identifier": "Alarm-format",
+                                                "significant": true,
+                                                "information": "system"
+                                            },
+                                            {
+                                                "identifier": "User name",
+                                                "significant": true,
+                                                "information": "daisy1"
+                                            },
+                                            {
+                                                "identifier": "Log mode",
+                                                "significant": true,
+                                                "information": "SSH"
+                                            },
+                                            {
+                                                "identifier": "IP",
+                                                "significant": true,
+                                                "information": "10.212.242.71"
+                                            },
+                                            {
+                                                "identifier": "State",
+                                                "significant": true,
+                                                "information": "Log on"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
