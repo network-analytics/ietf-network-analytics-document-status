@@ -1,0 +1,1424 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-06-28T15:28:11.814911388+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 9,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 101,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "cpu:0",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 1,
+                                "description": "CPU",
+                                "hardware-rev": "6.85.7",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "enabled",
+                                    "usage-state": "unknown"
+                                }
+                            },
+                            {
+                                "name": "cpu:1",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 2,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "enabled",
+                                    "usage-state": "unknown"
+                                }
+                            },
+                            {
+                                "name": "cpu:10",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:100",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 67,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:101",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 68,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:102",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 69,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:103",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:104",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:105",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:106",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:107",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:108",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:109",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 70,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:11",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:110",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 71,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:111",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 72,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:112",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 73,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:113",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 74,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:114",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 75,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:115",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 76,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:116",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 77,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:117",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 78,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:118",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 79,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:119",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:12",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:120",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:121",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:122",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:123",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:124",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:125",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 80,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:126",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 81,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:127",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 82,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:13",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 10,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:14",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 11,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:15",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 12,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:16",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 13,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:17",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 14,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:18",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 15,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:19",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 16,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:2",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 5,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "enabled",
+                                    "usage-state": "unknown"
+                                }
+                            },
+                            {
+                                "name": "cpu:20",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 17,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:21",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 18,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:22",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 19,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:23",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:24",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:25",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:26",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:27",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:28",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:29",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 20,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:3",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 6,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "enabled",
+                                    "usage-state": "unknown"
+                                }
+                            },
+                            {
+                                "name": "cpu:30",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 21,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:31",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 22,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:32",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 23,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:33",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 24,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:34",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 25,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:35",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 26,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:36",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 27,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:37",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 28,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:38",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 29,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:39",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:4",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 7,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:40",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:41",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:42",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:43",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:44",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:45",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 30,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:46",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 31,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:47",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 32,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:48",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 33,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:49",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 34,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:5",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 8,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:50",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 35,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:51",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 36,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:52",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 37,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:53",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 38,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:54",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 39,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:55",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:56",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:57",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:58",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:59",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:6",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 9,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:60",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:61",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 40,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:62",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 41,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:63",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 42,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:64",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 43,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:65",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 44,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:66",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 45,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:67",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 46,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:68",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 47,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:69",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 48,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:7",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:70",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 49,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:71",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:72",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:73",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:74",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:75",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:76",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:77",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 50,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:78",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 51,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:79",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 52,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:8",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:80",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 53,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:81",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 54,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:82",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 55,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:83",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 56,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:84",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 57,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:85",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 58,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:86",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 59,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:87",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:88",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:89",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:9",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:90",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:91",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:92",
+                                "class": "iana-hardware:cpu",
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:93",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 60,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:94",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 61,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:95",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 62,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:96",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 63,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:97",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 64,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:98",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 65,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "cpu:99",
+                                "class": "iana-hardware:cpu",
+                                "physical-index": 66,
+                                "description": "CPU",
+                                "hardware-rev": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "model-name": "Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz",
+                                "state": {
+                                    "oper-state": "disabled"
+                                }
+                            },
+                            {
+                                "name": "disk",
+                                "class": "iana-hardware:storage-drive",
+                                "description": "ATA Disk",
+                                "serial-num": "00000000000000000001",
+                                "model-name": "VMware Virtual I",
+                                "state": {
+                                    "oper-state": "enabled",
+                                    "usage-state": "active"
+                                }
+                            },
+                            {
+                                "name": "ens224",
+                                "class": "iana-hardware:port",
+                                "description": "Ethernet interface",
+                                "software-rev": "vmxnet3 1.7.0.0-k-NAPI",
+                                "model-name": "VMXNET3 Ethernet Controller",
+                                "state": {
+                                    "oper-state": "enabled"
+                                }
+                            },
+                            {
+                                "name": "network",
+                                "class": "iana-hardware:port",
+                                "description": "Ethernet controller",
+                                "model-name": "VMXNET3 Ethernet Controller",
+                                "state": {
+                                    "oper-state": "enabled"
+                                }
+                            },
+                            {
+                                "name": "network",
+                                "class": "iana-hardware:port",
+                                "description": "Ethernet controller",
+                                "model-name": "VMXNET3 Ethernet Controller",
+                                "state": {
+                                    "oper-state": "enabled"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-06-28T15:28:11.816353484+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}
