@@ -32,10 +32,10 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
-* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05. Merged input from Ruediger in -06 and -07.
+* **State**: Presented -01 at IETF 121, merged input from Qin and Nacho, merged input from Adrian on terminology and Alex on editorial changes in -02. Replaced cause with trigger and add templates in patterns in -03 and changed Service Model reference from RFC 8309 to RFC8969 and merged input from Rüdiger and Reshad in -04. Merged editorial input from Paul and Reshad in -05. Merged input from Ruediger in -06 and -07. Moved SIMAP and Knowledge Graph references to informative in -08.
 * **Tasks**: Add description Apache Iceberg integration
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-architecture
-* **Diff**: https://author-tools.ietf.org/iddiff?url1=draft-ietf-nmop-network-anomaly-architecture-07
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-architecture-07&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-architecture/refs/heads/main/draft-ietf-nmop-network-anomaly-architecture-08.txt
 
 ### draft-ietf-nmop-network-anomaly-semantics
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-semantics/
@@ -46,7 +46,7 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments.
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments in -06.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/CWWGhCADia4YAhSaeDmrbyEnKC0/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-06.txt
