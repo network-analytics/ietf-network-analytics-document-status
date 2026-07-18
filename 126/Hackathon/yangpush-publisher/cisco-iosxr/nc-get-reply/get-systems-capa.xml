@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:598aee1c-75b5-4a4d-b6da-3fe608563839">
+ <data>
+  <system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+   <subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+    <max-nodes-per-update>4294967295</max-nodes-per-update>
+    <periodic-notifications-supported>state-changes</periodic-notifications-supported>
+    <minimum-update-period>3000</minimum-update-period>
+    <on-change-supported>state-changes</on-change-supported>
+    <notification-metadata xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">
+     <envelope>true</envelope>
+     <metadata>
+      <hostname-sequence-number>true</hostname-sequence-number>
+     </metadata>
+    </notification-metadata>
+    <transport-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-transport-capabilities">
+     <transport-capability>
+      <transport-protocol xmlns:idx="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">idx:udp-notif</transport-protocol>
+      <security-protocol>dtls12</security-protocol>
+      <encoding-format xmlns:idx="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">idx:encode-json</encoding-format>
+      <encoding-format xmlns:idx="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">idx:encode-cbor</encoding-format>
+     </transport-capability>
+    </transport-capabilities>
+    <yang-push-observation-time-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-observation">true</yang-push-observation-time-supported>
+    <yang-push-module-revision-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">true</yang-push-module-revision-supported>
+   </subscription-capabilities>
+  </system-capabilities>
+ </data>
+</rpc-reply>

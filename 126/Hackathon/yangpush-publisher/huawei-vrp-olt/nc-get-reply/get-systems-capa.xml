@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4e785dff-a88d-4235-8c98-19593752f28e">
+	<data>
+		<system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+			<datastore-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:running</datastore>
+			</datastore-capabilities>
+			<datastore-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+				<datastore xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:board']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:slot']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:backplane']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponift="urn:bbf:yang:bbf-xpon-if-type">/if:interfaces/if:interface[if:type='bbf-xponift:v-ani']/if:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-energy-mgnt-an="urn:huawei:yang:huawei-energy-management-an">/hw:hardware/hw:component/hw-energy-mgnt-an:energy-consumption</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponift="urn:bbf:yang:bbf-xpon-if-type">/if:interfaces/if:interface[if:type='bbf-xponift:channel-pair']/if:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:sensor']/hw:sensor-data[hw:value-type='celsius']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponift="urn:bbf:yang:bbf-xpon-if-type" xmlns:bbf-xpon-sm="urn:bbf:yang:bbf-xpon-statistics-management">/if:interfaces-state/if:interface[if:type='bbf-xponift:v-ani']/if:statistics/bbf-xpon-sm:xpon/bbf-xpon-sm:phy</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>6000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-xcvr-link']/bbf-hw-xcvr:transceiver-link</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-xcvr']/bbf-hw-xcvr:transceiver</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr-link']/bbf-hw-xcvr:transceiver-link</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>6000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr']/bbf-hw-xcvr:transceiver</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>6000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:chassis']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:local-system-data</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponani="urn:bbf:yang:bbf-xponani">/if:interfaces-state/if:interface/bbf-xponani:ani</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr']/bbf-hw-xcvr:transceiver</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>6000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']/if:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr-link']/bbf-hw-xcvr:transceiver-link/bbf-hw-xcvr:diagnostics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:sensor']/hw:sensor-data[hw:value-type='rpm']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr-link']/bbf-hw-xcvr:transceiver-link</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>6000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponift="urn:bbf:yang:bbf-xpon-if-type" xmlns:bbf-xpon-sm="urn:bbf:yang:bbf-xpon-statistics-management">/if:interfaces-state/if:interface[if:type='bbf-xponift:ani']/if:statistics/bbf-xpon-sm:xpon/bbf-xpon-sm:phy</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:gpon']/if:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hw-cpu="urn:bbf:yang:bbf-hardware-cpu">/hw:hardware/hw:component/bbf-hw-cpu:cpu-processor-data</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>30000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:gpon']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers" xmlns:bbf-xpon-xcvr-com="urn:bbf:yang:bbf-xpon-hardware-transceivers-common">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr']/bbf-hw-xcvr:transceiver/bbf-xpon-xcvr-com:module-state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers" xmlns:bbf-xpon-xcvr-com="urn:bbf:yang:bbf-xpon-hardware-transceivers-common">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr']/bbf-hw-xcvr:transceiver/bbf-xpon-xcvr-com:module-state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponani="urn:bbf:yang:bbf-xponani" xmlns:bbf-xpon-ani-state="urn:bbf:yang:bbf-xpon-ani-state">/if:interfaces-state/if:interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-uni-port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-chassis']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:fan']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-qos-tm-s="urn:bbf:yang:bbf-qos-traffic-mngt-state">/if:interfaces-state/if:interface/bbf-qos-tm-s:tm-root/bbf-qos-tm-s:queues/bbf-qos-tm-s:queue/bbf-qos-tm-s:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbfift="urn:bbf:yang:bbf-if-type">/if:interfaces/if:interface[if:type='bbfift:vlan-sub-interface']/if:statistics</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>500</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:port/lldp:remote-systems-data</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:board']/hw:state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<periodic-notifications-supported>state-changes</periodic-notifications-supported>
+						<minimum-update-period>360000</minimum-update-period>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:backplane']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers" xmlns:bbf-xpon-xcvr-com="urn:bbf:yang:bbf-xpon-hardware-transceivers-common">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr']/bbf-hw-xcvr:transceiver/bbf-xpon-xcvr-com:module-state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:board']/hw:state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:chassis']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types" xmlns:bbf-hw-xcvr="urn:bbf:yang:bbf-hardware-transceivers" xmlns:bbf-xpon-xcvr-com="urn:bbf:yang:bbf-xpon-hardware-transceivers-common">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr']/bbf-hw-xcvr:transceiver/bbf-xpon-xcvr-com:module-state</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:gpon']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:port/lldp:remote-systems-data</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware-state-change</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:local-system-data</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:al="urn:ietf:params:xml:ns:yang:ietf-alarms">/al:alarm-notification</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>0</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware-state-oper-enabled</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-ani-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:bbf-xponani="urn:bbf:yang:bbf-xponani" xmlns:bbf-xpon-ani-state="urn:bbf:yang:bbf-xpon-ani-state">/if:interfaces-state/if:interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:slot']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-uni-port']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:bbf-hwt="urn:bbf:yang:bbf-hardware-types">/hw:hardware/hw:component[hw:class='bbf-hwt:board']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ont-chassis']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">/if:interfaces/if:interface[if:type='ianaift:ethernetCsmacd']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:ianahw="urn:ietf:params:xml:ns:yang:iana-hardware">/hw:hardware/hw:component[hw:class='ianahw:fan']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware-state-oper-disabled</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:pon-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+				<per-node-capabilities>
+					<node-selector xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware" xmlns:hw-hw="urn:huawei:yang:huawei-hardware" xmlns:hw-hwt="urn:huawei:yang:huawei-hardware-types">/hw:hardware/hw:component[hw-hw:sub-class='hw-hwt:ethernetCsmacd-xcvr']</node-selector>
+					<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+						<max-nodes-per-update>2</max-nodes-per-update>
+						<on-change-supported>state-changes</on-change-supported>
+						<minimum-dampening-period>500</minimum-dampening-period>
+						<supported-excluded-change-type>none</supported-excluded-change-type>
+					</subscription-capabilities>
+				</per-node-capabilities>
+			</datastore-capabilities>
+			<subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+				<notification-metadata xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">
+					<metadata>
+						<hostname-sequence-number xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</hostname-sequence-number>
+					</metadata>
+					<notification-envelope xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</notification-envelope>
+				</notification-metadata>
+				<transport-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-transport-capabilities">
+					<transport-capability xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-transport-capabilities">
+						<transport-protocol xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport-protocol>
+						<encoding-format xmlns:sn="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">sn:encode-json</encoding-format>
+					</transport-capability>
+				</transport-capabilities>
+				<max-nodes-per-update xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">2</max-nodes-per-update>
+				<periodic-notifications-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">state-changes</periodic-notifications-supported>
+				<minimum-update-period xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">6000</minimum-update-period>
+				<on-change-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">state-changes</on-change-supported>
+				<minimum-dampening-period xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">1000</minimum-dampening-period>
+				<supported-excluded-change-type xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">all</supported-excluded-change-type>
+				<yang-push-module-revision-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push-revision">true</yang-push-module-revision-supported>
+				<yang-push-observation-supported xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-observation">true</yang-push-observation-supported>
+			</subscription-capabilities>
+		</system-capabilities>
+	</data>
+</rpc-reply>

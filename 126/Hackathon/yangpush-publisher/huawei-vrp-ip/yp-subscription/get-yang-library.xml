@@ -1,0 +1,8 @@
+<get xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <filter type="subtree">
+    <yang-library xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+    </yang-library>
+    <modules-state xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+    </modules-state>
+  </filter>
+</get>
