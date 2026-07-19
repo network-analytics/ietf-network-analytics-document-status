@@ -1,0 +1,3 @@
+Summary
+==========
+All the subscription started payloads cannot be validated due to outdated ietf-yang-push-revision yang module.
