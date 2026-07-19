@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2026-07-18T22:50:42.016384+00:00</eventTime>
+  <push-change-update xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <id>2</id>
+    <datastore-changes>
+      <yang-patch>
+        <patch-id>s2-p0</patch-id>
+        <comment>An example patch from data provider.</comment>
+        <edit>
+          <edit-id>dp-edit-1</edit-id>
+          <operation>replace</operation>
+          <target>/ietf-interfaces:interfaces/interface=eth0/enabled</target>
+          <value>
+            <enabled xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">true</enabled>
+          </value>
+        </edit>
+        <edit>
+          <edit-id>dp-edit-2</edit-id>
+          <operation>replace</operation>
+          <target>/ietf-interfaces:interfaces/interface=eth1/oper-status</target>
+          <value>
+            <oper-status xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">dormant</oper-status>
+          </value>
+        </edit>
+      </yang-patch>
+    </datastore-changes>
+  </push-change-update>
+</notification>
