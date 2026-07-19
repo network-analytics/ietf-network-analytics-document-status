@@ -16,4 +16,10 @@
   <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
     <id>103</id>
   </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>104</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>105</id>
+  </subscription>
 </subscriptions>
