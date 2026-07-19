@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+  <data>
+    <system-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-system-capabilities">
+      <subscription-capabilities xmlns="urn:ietf:params:xml:ns:yang:ietf-notification-capabilities">
+        <periodic-notifications-supported>config-changes state-changes</periodic-notifications-supported>
+        <on-change-supported>config-changes state-changes</on-change-supported>
+        <supported-excluded-change-type>none</supported-excluded-change-type>
+      </subscription-capabilities>
+    </system-capabilities>
+  </data>
+</rpc-reply>
