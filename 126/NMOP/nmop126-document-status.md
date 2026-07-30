@@ -26,9 +26,9 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-netana-nmop-message-broker-bmp-telemetry-msg
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-nmop-message-broker-bmp-telemetry-msg/
-* **State**: Presented -02 at IETF 125, refactor by importing ietf-bgp instead of redefining submodules, and add cababilities support to peer-up, add tlvs from RFC7854, RFC6069, draft-ietf-grow-bmp-path-marking-tlv, and draft-ietf-grow-bmp-tlv, add bgp open fields, refactor on message key and topic name to accommodate message ordering for -03. Received IANA and Reshad review to be adressed in -04.
+* **State**: Presented -02 at IETF 125, refactor by importing ietf-bgp instead of redefining submodules, and add cababilities support to peer-up, add tlvs from RFC7854, RFC6069, draft-ietf-grow-bmp-path-marking-tlv, and draft-ietf-grow-bmp-tlv, add bgp open fields, refactor on message key and topic name to accommodate message ordering for -03. Adressed IANA and Reshad review in -04.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-netana-nmop-message-broker-bmp-telemetry-msg
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=/draft-netana-nmop-message-broker-bmp-telemetry-msg-03
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-netana-nmop-message-broker-bmp-telemetry-msg-03&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-message-broker-bmp-telemetry-message/refs/heads/main/draft-netana-nmop-message-broker-bmp-telemetry-msg-04.txt
 
 ### draft-ietf-nmop-network-anomaly-architecture
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-architecture/
@@ -46,7 +46,7 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments in -06. Received IANA review to be addressed in -07.
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments in -06. Adressed IANA review in -07.
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/CWWGhCADia4YAhSaeDmrbyEnKC0/
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-06
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-06&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-nmop-network-anomaly-lifecycle/refs/heads/main/draft-ietf-nmop-network-anomaly-lifecycle-07.txt
