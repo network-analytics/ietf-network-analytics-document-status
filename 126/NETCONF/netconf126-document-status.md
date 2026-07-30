@@ -34,8 +34,8 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
 * **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. Feedback from Rob to change from “The ‘contents’ element SHOULD be located at the end of notif envelope structure" to "MUST". -02 addresses Andy's comment on SID and Ahmeds comments on validated examples. -03 addresses comments from the working group last call. Merged input from Andy, Joe and Rob in -04. Feedback from Leonardo Rodoni shepherd review merged in -05. YANG doctors early reviews from Jürgen and Ebben received to be addressed in -06.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/Dpj3fsltAisnVoa2gETjAruRRqA/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/Dpj3fsltAisnVoa2gETjAruRRqA/
+* **Tasks**: https://mailarchive.ietf.org/arch/msg/yang-doctors/SLlO1gewIN51Ptm1W8U5I2tRzLE/
+* **Tasks**: https://mailarchive.ietf.org/arch/msg/yang-doctors/9S011rUTNor9TDNfiHClqhq7Q9o/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-ietf-netconf-notif-envelope-06.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
