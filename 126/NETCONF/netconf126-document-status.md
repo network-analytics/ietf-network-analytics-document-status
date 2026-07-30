@@ -36,7 +36,7 @@ https://datatracker.ietf.org/meeting/125/session/netconf
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/Dpj3fsltAisnVoa2gETjAruRRqA/
 * **Tasks**: https://mailarchive.ietf.org/arch/msg/netconf/Dpj3fsltAisnVoa2gETjAruRRqA/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-05
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-notif-envelope-05&url_2=https://raw.githubusercontent.com/network-analytics/draft-ahuang-netconf-notif-yang/refs/heads/master/draft-ietf-netconf-notif-envelope-06.txt
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
