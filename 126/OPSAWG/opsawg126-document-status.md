@@ -8,6 +8,6 @@ https://datatracker.ietf.org/meeting/125/session/opsawg
 
 ### draft-netana-opsawg-ipfix-gpon-gem
 * **URL**: https://datatracker.ietf.org/doc/draft-netana-opsawg-ipfix-gpon-gem/
-* **State**: Present -00 at CCAMP interim on April 10th. -01 addresses input from Paul and Amanda on PTI subregistry. Feedback received from CCAMP chairs that OPSAWG would be preferred for working group adoption. OPSWAG adoption succeed and -00 submitted. Feedback from Nuno in -01 merged. Added ingress/egress notion in -02. Added XG-PON and examples in -03. Received IANA review to be addressed in -04.
+* **State**: Present -00 at CCAMP interim on April 10th. -01 addresses input from Paul and Amanda on PTI subregistry. Feedback received from CCAMP chairs that OPSAWG would be preferred for working group adoption. OPSWAG adoption succeed and -00 submitted. Feedback from Nuno in -01 merged. Added ingress/egress notion in -02. Added XG-PON and examples in -03. Received Paul claude review to be addressed in -04.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/opsawg/?q=draft-netana-opsawg-ipfix-gpon-gem
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-opsawg-ipfix-gpon-gem-03
