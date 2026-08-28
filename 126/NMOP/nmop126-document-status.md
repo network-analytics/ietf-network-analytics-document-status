@@ -16,7 +16,7 @@ https://datatracker.ietf.org/meeting/125/session/nmop
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-message-broker-telemetry-message/
 * **State**: Presenting -00 at NMOP 122, initial version, received feedback from Alex and Rob. Use platform-details grouping from ietf-platform-manifest and clarify with ietf-platform-manifest authors leaf meaning. Merge input from adoption call in -01. Merged input from Reshad in -02. Merged input from Rob on changing leaf and module grouping names in -02. Replaced RabitMQ with Apache Pulsar and addressed YANG doctors review in -03. Merged input from Paolo and updated implementation status section in -04.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-message-broker-telemetry-message
-* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-message-broker-telemetry-message-04
+* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-nmop-message-broker-telemetry-message-05
 
 ### draft-ietf-nmop-yang-message-broker-message-key
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-yang-message-broker-message-key/
