@@ -14,9 +14,9 @@ https://datatracker.ietf.org/meeting/126/session/netconf
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19. Merged input from SECDIR review in -20 and Paul Aitken in -21. Addressed comments from Mahesh in -22.
+* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19. Merged input from SECDIR review in -20 and Paul Aitken in -21. Addressed comments from Mahesh in -22 and -23.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-22
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-23
 
 ### draft-ietf-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
@@ -35,6 +35,6 @@ https://datatracker.ietf.org/meeting/126/session/netconf
 
 ### draft-ietf-netconf-yang-notifications-versioning
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yang-notifications-versioning/
-* **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities. -08 merged input from Jian Ping on example. Merged input from Rob on revision-label change to revision to reflect semver document changes in -09. Merged input from Robert Wills Yangdoctors in -10. Merged input from Reshad Rahman, Rob, Gabriele, Benoit and Alex in -11. Adressed comments from Mahesh Jethanandani in -15, changed normative behaviour after reboot when subscription criteria is no longer met.
+* **State**: Presented -05 at NETCONF 120, updated implementation status section in -06. -07 contains yang-library-content-id and RFC 9196 capabilities. -08 merged input from Jian Ping on example. Merged input from Rob on revision-label change to revision to reflect semver document changes in -09. Merged input from Robert Wills Yangdoctors in -10. Merged input from Reshad Rahman, Rob, Gabriele, Benoit and Alex in -11. Adressed comments from Mahesh Jethanandani in -15, changed normative behaviour after reboot when subscription criteria is no longer met. Merged comments from Andy, Saumya, Christer (GENART) and Dave(SECDIR) in -17, removing after reboot and updating operational considerations section. 
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yang-notifications-versioning
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yang-notifications-versioning-14&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-yang-notifications-versioning/refs/heads/main/draft-ietf-netconf-yang-notifications-versioning-15.txt
+* **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-netconf-yang-notifications-versioning-17
