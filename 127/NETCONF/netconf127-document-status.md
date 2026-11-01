@@ -22,15 +22,14 @@ https://datatracker.ietf.org/meeting/126/session/netconf
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
 * **State**: Working group last call suceeded. Feedback from OPS directorate and YANG docters merged into -02, feedback pending. Feedback from Rob addressed in -03. Shepherd review addressed in -04. Feedback from Reshad addressed in -05. Adressed TSVART input from Tommy Pauly in -06. Addressed SecDir from Christian in -07.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yp-transport-capabilities
-* **Task**: https://mailarchive.ietf.org/arch/msg/netconf/ZsmMgC4UfcZs4GALFbbNTrYH2dA/
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-07
+* **Task**: https://mailarchive.ietf.org/arch/msg/netconf/tDT2Q-eBcNGpjSdg2LTKoGX-Q_s/
+* **Task**: https://mailarchive.ietf.org/arch/msg/gen-art/DDEftV8mYQPPUwWLbuXivbTAfUw/
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-07&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-netconf-yang-push-transport-capabilities/refs/heads/main/draft-ietf-netconf-yp-transport-capabilities-08.txt
 
 ### draft-ietf-netconf-notif-envelope
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-notif-envelope/
 * **State**: Presented draft-ietf-netconf-notif-envelope-01 at NETCONF 122. Feedback from Rob to change from “The ‘contents’ element SHOULD be located at the end of notif envelope structure" to "MUST". -02 addresses Andy's comment on SID and Ahmeds comments on validated examples. -03 addresses comments from the working group last call. Merged input from Andy, Joe and Rob in -04. Feedback from Leonardo Rodoni shepherd review merged in -05. YANG doctors early reviews from Jürgen and Ebben received to be addressed in -06.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-notif-envelope
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/yang-doctors/SLlO1gewIN51Ptm1W8U5I2tRzLE/
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/yang-doctors/9S011rUTNor9TDNfiHClqhq7Q9o/
 * **Diff**: https://author-tools.ietf.org/iddiff?url2=draft-ietf-netconf-notif-envelope-07
 
 ### draft-ietf-netconf-yang-notifications-versioning
