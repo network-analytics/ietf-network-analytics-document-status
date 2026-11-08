@@ -65,7 +65,7 @@ In-N-Out Burger
 https://locations.in-n-out.com/154
 
 Benihana - San Francisco
-https://www.benihana.com/locations/san-francisco/?utm_source=google&utm_medium=organic&utm_campaign=gbp
+https://www.benihana.com/locations/san-francisco/
 
 Marrakech Moroccan Restaurant & Mediterranean Grill
 https://www.marrakechsf.com/
