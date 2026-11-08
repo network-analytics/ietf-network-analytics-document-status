@@ -25,6 +25,12 @@ https://www.shebapianolounge.com/
 Boom Boom Room
 https://www.boomboomroom.com/
 
+The Royale
+https://www.theroyalesf.com/
+
+Stookey’s Blue Room
+https://www.stookeysblueroom.com/
+
 
 ### Cocktail Bars
 
@@ -72,6 +78,16 @@ https://www.marrakechsf.com/
 
 Pier 23 Cafe Restaurant & Bar
 https://www.pier23cafe.com/menu-pier23
+
+Ryoko's Japanese Restaurant & Bar
+https://www.ryokos-sf.com/
+
+
+### Breakfast
+
+Pinecrest Diner
+https://pinecrestdiner.com/
+
 
 
 
