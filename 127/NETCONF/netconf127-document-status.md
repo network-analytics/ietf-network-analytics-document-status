@@ -14,16 +14,15 @@ https://datatracker.ietf.org/meeting/126/session/netconf
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
-* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19. Merged input from SECDIR review in -20 and Paul Aitken in -21. Addressed comments from Mahesh in -22 and -23.
+* **State**: Presented -10 at NETCONF 121.  Working group last call concluded. Shepherd review pending. Feedback from YANG doctor in -14 and OPS directorate in -15 and -16 addressed. Adressing feedback from Mahesh in -17 and minor nit in -18. Merged input from Joel Halpern and Yingzhen Qu in -19. Merged input from SECDIR review in -20 and Paul Aitken in -21. Addressed comments from Mahesh in -22 and -23. Merged input from Gorry and Mike in -24 and -25.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-distributed-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-23
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-distributed-notif-24&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-distributed-notif/refs/heads/master/draft-ietf-netconf-distributed-notif-25.txt
 
 ### draft-ietf-netconf-yp-transport-capabilities
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-yp-transport-capabilities/
 * **State**: Working group last call suceeded. Feedback from OPS directorate and YANG docters merged into -02, feedback pending. Feedback from Rob addressed in -03. Shepherd review addressed in -04. Feedback from Reshad addressed in -05. Adressed TSVART input from Tommy Pauly in -06. Addressed SecDir from Christian in -07.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-yp-transport-capabilities
-* **Task**: https://mailarchive.ietf.org/arch/msg/netconf/tDT2Q-eBcNGpjSdg2LTKoGX-Q_s/
-* **Task**: https://mailarchive.ietf.org/arch/msg/gen-art/DDEftV8mYQPPUwWLbuXivbTAfUw/
+* **Task**: https://mailarchive.ietf.org/arch/msg/netconf/FrI4rKXX7mJY72uBe0zF0JYzkBk/
 * **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-yp-transport-capabilities-07&url_2=https://raw.githubusercontent.com/network-analytics/draft-netana-netconf-yang-push-transport-capabilities/refs/heads/main/draft-ietf-netconf-yp-transport-capabilities-08.txt
 
 ### draft-ietf-netconf-notif-envelope
