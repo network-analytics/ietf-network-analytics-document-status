@@ -1,0 +1,26 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:36:33.399Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 21,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "openconfig-lacp:lacp/interfaces/interface/members/member/state",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "openconfig-lacp",
+                        "revision": "2023-12-11"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "e55065688274ce7929be18bd0cafec9ff96a0b91",
+                "encoding": "encode-json",
+                "ietf-yang-push:on-change": {
+                    "sync-on-start": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:43.490Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 14,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy",
+                "dscp": 0,
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-yang-push:periodic": {
+                    "period": 30000,
+                    "anchor-time": "2025-01-01T00:00:30Z"
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "bbf-xpon-if-type",
+                        "revision": "2020-10-13"
+                    },
+                    {
+                        "module-name": "bbf-xpon-statistics-management",
+                        "revision": "2024-09-05"
+                    },
+                    {
+                        "module-name": "ietf-interfaces",
+                        "revision": "2018-02-20"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22934"
+            }
+        }
+    }
+}

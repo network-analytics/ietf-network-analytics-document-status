@@ -1,0 +1,49 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:31.033Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 123,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 210,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.998Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-l2tp-access:bras-l2tp-access": {
+                        "lac-tunnels": {
+                            "lac-tunnel": [
+                                {
+                                    "local-id": 8193,
+                                    "local-name": "TEST_138.187.22.62_tunnel1",
+                                    "remote-id": 2,
+                                    "remote-name": "lns1",
+                                    "status": "Up",
+                                    "local-ip-address": "138.187.22.62",
+                                    "local-port": 1701,
+                                    "remote-ip-address": "10.192.105.10",
+                                    "remote-port": 1701,
+                                    "recall-ip-address": "0.0.0.0",
+                                    "vrf": 6
+                                },
+                                {
+                                    "local-id": 24577,
+                                    "local-name": "TEST_138.187.22.63_tunnel1",
+                                    "remote-id": 1,
+                                    "remote-name": "lns1",
+                                    "status": "Up",
+                                    "local-ip-address": "138.187.22.63",
+                                    "local-port": 1701,
+                                    "remote-ip-address": "10.192.105.10",
+                                    "remote-port": 1701,
+                                    "recall-ip-address": "0.0.0.0",
+                                    "vrf": 6
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:31.623Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 126,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 209,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.970Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-ifm:ifm": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Eth-Trunk1.20",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 9600
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.30",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.40",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 400
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.50",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 200
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.20",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.30",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.40",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.50",
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "is-static-user-exist": false,
+                                                "is-selected": false,
+                                                "increased-user-num": 0,
+                                                "access-number": 0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

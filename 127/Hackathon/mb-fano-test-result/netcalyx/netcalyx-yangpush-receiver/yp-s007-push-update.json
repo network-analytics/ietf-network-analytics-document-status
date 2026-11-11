@@ -1,0 +1,73 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:53:42.800Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1597,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 7,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:53:30.100Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 3021116866,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "transceiver-link.0.19.0.eth",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 0,
+                                        "power-dbm": {
+                                            "transmit": -5000,
+                                            "receive": -4000
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.19.2.eth",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 0,
+                                        "power-dbm": {
+                                            "transmit": -5000,
+                                            "receive": -1141
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.19.6.eth",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 0,
+                                        "power-dbm": {
+                                            "transmit": -2958,
+                                            "receive": -737
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.19.7.eth",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 0,
+                                        "power-dbm": {
+                                            "transmit": -5000,
+                                            "receive": -481
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

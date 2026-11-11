@@ -1,0 +1,44 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:52.790Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 25,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']",
+                "dscp": 0,
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 500,
+                    "sync-on-start": true
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "bbf-hardware-types",
+                        "revision": "2023-12-15"
+                    },
+                    {
+                        "module-name": "ietf-hardware",
+                        "revision": "2018-03-13"
+                    },
+                    {
+                        "module-name": "iana-hardware",
+                        "revision": "2018-03-13"
+                    },
+                    {
+                        "module-name": "ietf-inet-types",
+                        "revision": "2013-07-15"
+                    },
+                    {
+                        "module-name": "ietf-yang-types",
+                        "revision": "2013-07-15"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22934"
+            }
+        }
+    }
+}

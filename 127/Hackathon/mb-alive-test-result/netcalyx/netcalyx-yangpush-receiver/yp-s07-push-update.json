@@ -1,0 +1,73 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:51:36.334Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 79,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 7,
+                "ietf-yp-observation:timestamp": "2026-09-10T11:51:31.140Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "hardware": {
+                        "component": [
+                            {
+                                "name": "IPU 1",
+                                "sensor-data": {
+                                    "value": 3360,
+                                    "value-type": "volts-DC",
+                                    "value-scale": "units",
+                                    "value-precision": 0,
+                                    "oper-status": "ok",
+                                    "units-display": "mV",
+                                    "value-timestamp": "2026-09-10T11:51:34Z",
+                                    "value-update-rate": 5000
+                                }
+                            },
+                            {
+                                "name": "FAN 4",
+                                "sensor-data": {
+                                    "value": 6885,
+                                    "value-type": "rpm",
+                                    "value-scale": "units",
+                                    "value-precision": 0,
+                                    "oper-status": "ok",
+                                    "units-display": "rpm",
+                                    "value-timestamp": "2026-09-10T11:51:34Z",
+                                    "value-update-rate": 5000
+                                }
+                            },
+                            {
+                                "name": "FAN 5",
+                                "sensor-data": {
+                                    "value": 6885,
+                                    "value-type": "rpm",
+                                    "value-scale": "units",
+                                    "value-precision": 0,
+                                    "oper-status": "ok",
+                                    "units-display": "rpm",
+                                    "value-timestamp": "2026-09-10T11:51:34Z",
+                                    "value-update-rate": 5000
+                                }
+                            },
+                            {
+                                "name": "FAN 6",
+                                "sensor-data": {
+                                    "value": 6885,
+                                    "value-type": "rpm",
+                                    "value-scale": "units",
+                                    "value-precision": 0,
+                                    "oper-status": "ok",
+                                    "units-display": "rpm",
+                                    "value-timestamp": "2026-09-10T11:51:34Z",
+                                    "value-update-rate": 5000
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

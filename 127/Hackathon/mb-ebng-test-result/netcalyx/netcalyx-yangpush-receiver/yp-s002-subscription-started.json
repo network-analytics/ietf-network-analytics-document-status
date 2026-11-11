@@ -1,0 +1,29 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:30.663Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 2,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 2,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/huawei-bras-user-manage:bras-user-manage/access-tables/access-table/access-user-basic-info",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    16843793
+                ],
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "huawei-bras-user-manage",
+                        "revision": "2026-06-17"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "190100522",
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 0
+                }
+            }
+        }
+    }
+}

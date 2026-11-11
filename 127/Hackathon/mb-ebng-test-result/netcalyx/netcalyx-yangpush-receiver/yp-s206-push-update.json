@@ -1,0 +1,53 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:30.953Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 106,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 206,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.948Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-user-statistic:bras-user-statistic": {
+                        "access-user": {
+                            "summary": {
+                                "by-vpn-instances": {
+                                    "by-vpn-instance": [
+                                        {
+                                            "vpn-instance": "SCS1",
+                                            "rbp-state": "slave",
+                                            "normal-number": 0,
+                                            "rui-local-number": 9600,
+                                            "rui-remote-number": 0,
+                                            "radius-auth-number": 9600,
+                                            "radius-proxy-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "local-auth-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 9600
+                                        },
+                                        {
+                                            "vpn-instance": "SCS1_CGN",
+                                            "rbp-state": "slave",
+                                            "normal-number": 0,
+                                            "rui-local-number": 20,
+                                            "rui-remote-number": 0,
+                                            "radius-auth-number": 20,
+                                            "radius-proxy-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "local-auth-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 20
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

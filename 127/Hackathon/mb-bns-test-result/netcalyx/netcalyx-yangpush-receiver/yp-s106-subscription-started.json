@@ -1,0 +1,37 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:21:28.782898995+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6420,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 106,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/vrouter:state/vrouter-tracker:tracker/icmp-rtt",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    0
+                ],
+                "ietf-yang-push:periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30+00:00"
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "vrouter-pm",
+                        "revision": "2023-11-28"
+                    },
+                    {
+                        "name": "vrouter-tracker",
+                        "revision": "2023-10-26"
+                    },
+                    {
+                        "name": "vrouter",
+                        "revision": "2022-08-01"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "964707179"
+            }
+        }
+    }
+}

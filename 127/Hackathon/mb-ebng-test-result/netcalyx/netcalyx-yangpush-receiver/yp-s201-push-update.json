@@ -1,0 +1,71 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:30.943Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 104,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 201,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.924Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-dhcp-server:bras-dhcp-server": {
+                        "dhcp-servers": {
+                            "dhcp-server": [
+                                {
+                                    "ip-address": "138.187.24.15",
+                                    "vpn-instance": "RADIUS_DHCP",
+                                    "statistics": {
+                                        "send-packets": 1394771,
+                                        "receive-packets": 1319829,
+                                        "error-packets": 0,
+                                        "limit-number": 0,
+                                        "timeout-packets": 629,
+                                        "latest-send-time": "2026-10-08T15:57:00Z",
+                                        "lastest-receive-time": "2026-10-09T13:58:57Z",
+                                        "discover-packets": 42866,
+                                        "request-packets": 1335252,
+                                        "decline-packets": 0,
+                                        "release-packets": 16653,
+                                        "inform-packets": 0,
+                                        "offer-packets": 21265,
+                                        "ack-packets": 1298479,
+                                        "nak-packets": 85,
+                                        "bootp-requset-packets": 0,
+                                        "bootp-ack-packets": 0,
+                                        "force-renew-packets": 0
+                                    }
+                                },
+                                {
+                                    "ip-address": "138.187.24.35",
+                                    "vpn-instance": "RADIUS_DHCP",
+                                    "statistics": {
+                                        "send-packets": 1386686,
+                                        "receive-packets": 1321188,
+                                        "error-packets": 0,
+                                        "limit-number": 0,
+                                        "timeout-packets": 629,
+                                        "latest-send-time": "2026-10-08T15:57:00Z",
+                                        "lastest-receive-time": "2026-10-09T13:58:57Z",
+                                        "discover-packets": 42866,
+                                        "request-packets": 1327109,
+                                        "decline-packets": 0,
+                                        "release-packets": 16711,
+                                        "inform-packets": 0,
+                                        "offer-packets": 21336,
+                                        "ack-packets": 1299573,
+                                        "nak-packets": 279,
+                                        "bootp-requset-packets": 0,
+                                        "bootp-ack-packets": 0,
+                                        "force-renew-packets": 0
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

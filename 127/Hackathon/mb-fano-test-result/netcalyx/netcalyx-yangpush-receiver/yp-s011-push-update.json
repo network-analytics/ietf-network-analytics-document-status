@@ -1,0 +1,86 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:00:15.40Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 317,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 11,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:15.40Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "transceiver-link.0.1.0.0.0.fiftyg-tdm",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 4900,
+                                        "power-dbm": {
+                                            "transmit": 1013,
+                                            "receive": -1403
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.1.0.1.0.fiftyg-tdm",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 4800,
+                                        "power-dbm": {
+                                            "transmit": 895,
+                                            "receive": -1542
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.1.0.2.0.unknown",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 1600,
+                                        "power-dbm": {
+                                            "transmit": 606,
+                                            "receive": -2214
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.1.0.3.0.unknown",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 3300,
+                                        "power-dbm": {
+                                            "transmit": 651,
+                                            "receive": -2207
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver-link.0.1.0.4.0.xgs",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 1700,
+                                        "power-dbm": {
+                                            "transmit": 614,
+                                            "receive": -3000
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

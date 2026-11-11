@@ -1,0 +1,714 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T13:24:36.203Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 73,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 14,
+                "ietf-yp-observation:timestamp": "2026-09-10T13:24:30.694Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "NetEngine 8000 F2C frame",
+                                "class": "iana-hardware:chassis",
+                                "physical-index": 16777216,
+                                "description": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 1,
+                                "hardware-rev": "NA",
+                                "software-rev": "VRP (R) software, Version 8.260(CN), RELEASE 0000",
+                                "is-fru": false,
+                                "contains-child": [
+                                    "IPU slot 1",
+                                    "POWER slot 2",
+                                    "POWER slot 3",
+                                    "FAN slot 4",
+                                    "FAN slot 5",
+                                    "FAN slot 6",
+                                    "CLK slot 9"
+                                ],
+                                "uri": [
+                                    "urn:clei:\\0",
+                                    "urn:item-code:\\0",
+                                    "urn:issue-number:\\0",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "IPU slot 1",
+                                "class": "iana-hardware:container",
+                                "physical-index": 16842752,
+                                "description": "IPU slot 1",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 1,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "IPU 1"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "POWER slot 2",
+                                "class": "iana-hardware:container",
+                                "physical-index": 16908288,
+                                "description": "POWER slot 2",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 2,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "POWER 2"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "POWER slot 3",
+                                "class": "iana-hardware:container",
+                                "physical-index": 16973824,
+                                "description": "POWER slot 3",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 3,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "POWER 3"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "FAN slot 4",
+                                "class": "iana-hardware:container",
+                                "physical-index": 17039360,
+                                "description": "FAN slot 4",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 4,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "FAN 4"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "FAN slot 5",
+                                "class": "iana-hardware:container",
+                                "physical-index": 17104896,
+                                "description": "FAN slot 5",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 5,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "FAN 5"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "FAN slot 6",
+                                "class": "iana-hardware:container",
+                                "physical-index": 17170432,
+                                "description": "FAN slot 6",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 6,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "FAN 6"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "CLK slot 9",
+                                "class": "iana-hardware:container",
+                                "physical-index": 17367040,
+                                "description": "CLK slot 9",
+                                "parent": "NetEngine 8000 F2C frame",
+                                "parent-rel-pos": 9,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "CLK 9"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "IPU 1",
+                                "class": "iana-hardware:module",
+                                "physical-index": 16842753,
+                                "description": "NetEngine 8000 F2C Integrated Chassis Components(Port-side Intake, excluding power module)",
+                                "parent": "IPU slot 1",
+                                "parent-rel-pos": 1,
+                                "hardware-rev": "LPU PCB ver GPR16KQ56CQB REV A, NPU PCB ver GPR16KQ56CQA REV A",
+                                "firmware-rev": "LPU EPLD ver 101, FPGA ver 100, NPU EPLD1 ver 101, EPLD2 ver 101, FPGA1 ver 101, FPGA2 ver 100",
+                                "software-rev": "BootROM ver 20.77",
+                                "serial-num": "1024A9458553",
+                                "mfg-name": "Huawei",
+                                "model-name": "CR8B0BKP2CF1",
+                                "is-fru": false,
+                                "mfg-date": "2024-10-31T00:00:00Z",
+                                "contains-child": [
+                                    "GPR16KQ56CQS 0/1",
+                                    "CFCARD slot 1/0",
+                                    "GigabitEthernet1/2/0",
+                                    "GigabitEthernet1/2/1",
+                                    "GigabitEthernet1/0/0",
+                                    "HP-GE1/3/0",
+                                    "FLEXE_VPICE 0/58",
+                                    "FLEXE_VPICE 0/59"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:02355TSR",
+                                    "urn:issue-number:00",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "GigabitEthernet1/0/0",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16851201,
+                                "description": "GigabitEthernet0/0/0",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 0,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "GigabitEthernet1/2/0",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847617,
+                                "description": "GigabitEthernet1/2/0",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 6,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "GigabitEthernet1/2/1",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847618,
+                                "description": "GigabitEthernet1/2/1",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 7,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "CFCARD slot 1/0",
+                                "class": "iana-hardware:container",
+                                "physical-index": 16843008,
+                                "description": "CFCARD slot 1/0",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 61,
+                                "is-fru": false,
+                                "contains-child": [
+                                    "CFCARD 1/0"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "CLK 9",
+                                "class": "iana-hardware:module",
+                                "physical-index": 17367041,
+                                "description": "CLK 9",
+                                "parent": "CLK slot 9",
+                                "parent-rel-pos": 1,
+                                "firmware-rev": "FPGA ver 256, DSP ver 30502015",
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "HP-GE1/3/0",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16872449,
+                                "description": "HP-GE1/3/0",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 10,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "CFCARD 1/0",
+                                "class": "iana-hardware:module",
+                                "physical-index": 16847104,
+                                "description": "CFCARD 1/0",
+                                "parent": "CFCARD slot 1/0",
+                                "parent-rel-pos": 0,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "GPR16KQ56CQS 0/1",
+                                "class": "iana-hardware:module",
+                                "physical-index": 16842754,
+                                "description": "16-Port 400GBase-QSFPDD + 56-Port 100GBase-QSFP28",
+                                "parent": "IPU 1",
+                                "parent-rel-pos": 1,
+                                "hardware-rev": "GPR16KQ56CQS REV A",
+                                "firmware-rev": "FPGA ver 101, CHIP ver 100",
+                                "model-name": "GPR16KQ56CQS",
+                                "is-fru": false,
+                                "contains-child": [
+                                    "100GE0/1/0",
+                                    "100GE0/1/1",
+                                    "100GE0/1/2",
+                                    "100GE0/1/3",
+                                    "100GE0/1/5",
+                                    "100GE0/1/6",
+                                    "100GE0/1/8",
+                                    "100GE0/1/9",
+                                    "100GE0/1/10",
+                                    "100GE0/1/11",
+                                    "100GE0/1/12",
+                                    "100GE0/1/13",
+                                    "100GE0/1/14",
+                                    "100GE0/1/15",
+                                    "100GE0/1/16",
+                                    "100GE0/1/17",
+                                    "100GE0/1/18",
+                                    "100GE0/1/19",
+                                    "100GE0/1/20",
+                                    "100GE0/1/21",
+                                    "100GE0/1/22",
+                                    "100GE0/1/23",
+                                    "100GE0/1/24",
+                                    "100GE0/1/25",
+                                    "100GE0/1/26",
+                                    "100GE0/1/27",
+                                    "100GE0/1/28",
+                                    "100GE0/1/29",
+                                    "100GE0/1/30",
+                                    "100GE0/1/31",
+                                    "100GE0/1/32",
+                                    "100GE0/1/33",
+                                    "100GE0/1/34",
+                                    "100GE0/1/35",
+                                    "100GE0/1/36",
+                                    "100GE0/1/37",
+                                    "100GE0/1/38",
+                                    "100GE0/1/39",
+                                    "100GE0/1/40",
+                                    "100GE0/1/41",
+                                    "100GE0/1/42",
+                                    "100GE0/1/43",
+                                    "100GE0/1/44",
+                                    "100GE0/1/45",
+                                    "100GE0/1/46",
+                                    "100GE0/1/47",
+                                    "100GE0/1/48",
+                                    "100GE0/1/49",
+                                    "100GE0/1/50",
+                                    "100GE0/1/51",
+                                    "100GE0/1/52",
+                                    "100GE0/1/53",
+                                    "100GE0/1/54",
+                                    "100GE0/1/55",
+                                    "100GE0/1/56",
+                                    "100GE0/1/57",
+                                    "100GE0/1/58",
+                                    "100GE0/1/59",
+                                    "100GE0/1/60",
+                                    "100GE0/1/61",
+                                    "100GE0/1/62",
+                                    "100GE0/1/63",
+                                    "100GE0/1/64",
+                                    "100GE0/1/65",
+                                    "100GE0/1/66",
+                                    "100GE0/1/67",
+                                    "100GE0/1/68",
+                                    "100GE0/1/69",
+                                    "100GE0/1/70",
+                                    "100GE0/1/71",
+                                    "GigabitEthernet0/1/4:3",
+                                    "GigabitEthernet0/1/4:2",
+                                    "GigabitEthernet0/1/4:1",
+                                    "GigabitEthernet0/1/4:0",
+                                    "GigabitEthernet0/1/7:3",
+                                    "GigabitEthernet0/1/7:2",
+                                    "GigabitEthernet0/1/7:1",
+                                    "GigabitEthernet0/1/7:0"
+                                ],
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/0",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847105,
+                                "description": "100Gb/s-1310nm-LC-10km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 0,
+                                "serial-num": "SOZ131L2090",
+                                "mfg-name": "HUAWEI-R",
+                                "is-fru": false,
+                                "mfg-date": "2015-01-01T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/1",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847106,
+                                "description": "100GE0/1/1",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 1,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/2",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847107,
+                                "description": "100Gb/s-1310nm-LC-10km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 2,
+                                "serial-num": "SOZ131L2011",
+                                "mfg-name": "HUAWEI-R",
+                                "is-fru": false,
+                                "mfg-date": "2015-01-01T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/3",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847108,
+                                "description": "100GE0/1/3",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 3,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/5",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847110,
+                                "description": "100GE0/1/5",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 5,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/6",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847111,
+                                "description": "40Gb/s-1307nm-MPO 1x12-10km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 6,
+                                "serial-num": "OPM25041JYJ",
+                                "mfg-name": "CISCO-OPLINK",
+                                "is-fru": false,
+                                "mfg-date": "2021-02-02T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/8",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847113,
+                                "description": "40Gb/s-1310nm-MPO 1x12-10km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 8,
+                                "serial-num": "1537A-20026",
+                                "mfg-name": "INNOLIGHT",
+                                "is-fru": false,
+                                "mfg-date": "2015-09-08T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/9",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847114,
+                                "description": "100GE0/1/9",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 9,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/10",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847115,
+                                "description": "40Gb/s-1310nm-MPO 1x12-10km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 10,
+                                "serial-num": "1537A-20030",
+                                "mfg-name": "INNOLIGHT",
+                                "is-fru": false,
+                                "mfg-date": "2015-09-08T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/11",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847116,
+                                "description": "100GE0/1/11",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 11,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/12",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847117,
+                                "description": "100GE0/1/12",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 12,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/13",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847118,
+                                "description": "100GE0/1/13",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 13,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/14",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847119,
+                                "description": "100GE0/1/14",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 14,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/15",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847120,
+                                "description": "100GE0/1/15",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 15,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/16",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847121,
+                                "description": "100GE0/1/16",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 16,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/17",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847122,
+                                "description": "100GE0/1/17",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 17,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/18",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847123,
+                                "description": "100Gb/s-1310nm-LC-2km(SMF)",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 18,
+                                "serial-num": "SOZF31IG0143",
+                                "mfg-name": "CISCOSOLIDOPTICS",
+                                "is-fru": false,
+                                "mfg-date": "2024-07-30T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/19",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847124,
+                                "description": "100GE0/1/19",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 19,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/20",
+                                "class": "iana-hardware:port",
+                                "physical-index": 16847125,
+                                "description": "100GE0/1/20",
+                                "parent": "GPR16KQ56CQS 0/1",
+                                "parent-rel-pos": 20,
+                                "is-fru": false,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "www.huawei.com"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

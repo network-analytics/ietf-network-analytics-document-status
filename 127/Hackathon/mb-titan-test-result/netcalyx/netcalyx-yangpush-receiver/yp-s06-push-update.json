@@ -1,0 +1,602 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.002Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 6,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.002Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-platform:components": {
+                        "component": [
+                            {
+                                "name": "Optics0/0/0/0",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "WTD",
+                                        "vendor-part": "RTXM228-401",
+                                        "vendor-rev": "1.0 ",
+                                        "serial-no": "HC220400180542",
+                                        "date-code": "2022-05-03T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/1",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCO-FINISAR",
+                                        "vendor-part": "FTLX1474D3BCL-C1",
+                                        "vendor-rev": "A   ",
+                                        "serial-no": "FNS18502BPH",
+                                        "date-code": "2014-12-13T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/2",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/3",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/4",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/5",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/6",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/7",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/10",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/11",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:QSFP28",
+                                        "vendor": "CISCO-CISCO",
+                                        "vendor-part": "800-46714-02",
+                                        "vendor-rev": "C0",
+                                        "serial-no": "FBN2728A1J9",
+                                        "date-code": "2023-07-19T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.32"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/12",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCO-OPNEXT,INC",
+                                        "vendor-part": "TRS5021EN-S101",
+                                        "vendor-rev": "0000",
+                                        "serial-no": "ONT175005D6",
+                                        "date-code": "2013-12-12T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/13",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/14",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCO-FINISAR",
+                                        "vendor-part": "FTLX1474D3BCL-CS",
+                                        "vendor-rev": "A   ",
+                                        "serial-no": "FNS16120WLN",
+                                        "date-code": "2012-03-24T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/15",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCO-FINISAR",
+                                        "vendor-part": "FTLX1474D3BCL-CS",
+                                        "vendor-rev": "A   ",
+                                        "serial-no": "FNS17381G4F",
+                                        "date-code": "2013-09-18T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/16",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCO-FINISAR",
+                                        "vendor-part": "FTLX1474D3BCL-CS",
+                                        "vendor-rev": "A   ",
+                                        "serial-no": "FNS161215L9",
+                                        "date-code": "2012-03-24T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/17",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/18",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/19",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/20",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/21",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/22",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/23",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/24",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "Mikrotik",
+                                        "vendor-part": "S+31DLC10D",
+                                        "vendor-rev": "A   ",
+                                        "serial-no": "STT31151000473",
+                                        "date-code": "2015-03-21T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/25",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "PRESENT",
+                                        "form-factor": "openconfig-transport-types:SFP_PLUS",
+                                        "vendor": "CISCOSOLIDOPTICS",
+                                        "vendor-part": "SFP-10G-LR-SO",
+                                        "vendor-rev": "1.0 ",
+                                        "serial-no": "SOP131L017396",
+                                        "date-code": "2024-01-15T00:00:00Z+00:00",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": "0.33"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/26",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/27",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/28",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/29",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/30",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/31",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/32",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/33",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/34",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/35",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/36",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/37",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/40",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/41",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/42",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/43",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/44",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/45",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/46",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Optics0/0/0/47",
+                                "openconfig-platform-transceiver:transceiver": {
+                                    "state": {
+                                        "present": "NOT_PRESENT",
+                                        "fault-condition": false,
+                                        "supply-voltage": {
+                                            "instant": ""
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

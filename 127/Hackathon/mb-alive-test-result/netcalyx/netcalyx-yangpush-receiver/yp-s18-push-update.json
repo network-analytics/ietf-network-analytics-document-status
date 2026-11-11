@@ -1,0 +1,103 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T13:25:31.662Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 116,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 18,
+                "ietf-yp-observation:timestamp": "2026-09-10T13:25:30.654Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "port": [
+                            {
+                                "name": "GigabitEthernet0/0/0",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 21743,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "5017-ff40-6e00",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "Gi1/0/47",
+                                        "port-desc": "**zbl-ms-vlan*136**",
+                                        "system-name": "ipx-zbl-ms-136-2.bblab.ch",
+                                        "system-description": "Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(7)E13, RELEASE SOFTWARE (fc3)\nTechnical Support: http://www.cisco.com/techsupport\nCopyright (c) 1986-2025 by Cisco Systems, Inc.\nCompiled Mon 15-Sep-25 13:00 by mcpre",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-capabilities-enabled": "bridge router"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/0",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 148702263,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "748f-c255-6901",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "HundredGigE0/0/0/2",
+                                        "system-name": "ipf-zbl1326-r-daisy-79",
+                                        "system-description": "25.1.1, 8000",
+                                        "system-capabilities-supported": "router",
+                                        "system-capabilities-enabled": "router"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/2",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 159740625,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "30fb-b8e6-679d",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "100GE0/3/0",
+                                        "system-name": "ipf-zbl1327-r-daisy-81",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-capabilities-enabled": "bridge router"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "GigabitEthernet0/1/4:0",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 28382,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "3ca3-7e2c-7e96",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "GigabitEthernet0/8/0",
+                                        "port-desc": "ipf-zbl1327-r-daisy-48:GigabitEthernet0/1/4:0",
+                                        "system-name": "ipf-zbl1327-r-daisy-57",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NetEngine 8000 V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 M8\r\n",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-capabilities-enabled": "bridge router"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

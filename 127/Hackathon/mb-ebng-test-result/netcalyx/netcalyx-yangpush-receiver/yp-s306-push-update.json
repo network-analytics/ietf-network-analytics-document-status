@@ -1,0 +1,311 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:34.703Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 140,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 306,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:33.804Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-debug:debug": {
+                        "board-cpu-core-infos": {
+                            "board-cpu-core-info": [
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 0,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 29,
+                                    "cpu-core-5sec-usage": 29,
+                                    "cpu-core-1min-usage": 23,
+                                    "cpu-core-5min-usage": 16,
+                                    "cpu-core-max-usage": 72,
+                                    "cpu-core-max-usage-time": "2026-09-10T09:21:25Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 1,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 11,
+                                    "cpu-core-5sec-usage": 13,
+                                    "cpu-core-1min-usage": 18,
+                                    "cpu-core-5min-usage": 10,
+                                    "cpu-core-max-usage": 71,
+                                    "cpu-core-max-usage-time": "2026-09-27T11:01:36Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 2,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 22,
+                                    "cpu-core-5sec-usage": 21,
+                                    "cpu-core-1min-usage": 18,
+                                    "cpu-core-5min-usage": 13,
+                                    "cpu-core-max-usage": 63,
+                                    "cpu-core-max-usage-time": "2026-09-09T13:22:14Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 3,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 23,
+                                    "cpu-core-5sec-usage": 25,
+                                    "cpu-core-1min-usage": 25,
+                                    "cpu-core-5min-usage": 16,
+                                    "cpu-core-max-usage": 64,
+                                    "cpu-core-max-usage-time": "2026-09-01T08:42:18Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 4,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 29,
+                                    "cpu-core-5sec-usage": 30,
+                                    "cpu-core-1min-usage": 24,
+                                    "cpu-core-5min-usage": 16,
+                                    "cpu-core-max-usage": 99,
+                                    "cpu-core-max-usage-time": "2026-09-10T09:23:55Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 5,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 20,
+                                    "cpu-core-5sec-usage": 22,
+                                    "cpu-core-1min-usage": 21,
+                                    "cpu-core-5min-usage": 22,
+                                    "cpu-core-max-usage": 99,
+                                    "cpu-core-max-usage-time": "2026-09-09T13:21:24Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 6,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 24,
+                                    "cpu-core-5sec-usage": 21,
+                                    "cpu-core-1min-usage": 35,
+                                    "cpu-core-5min-usage": 35,
+                                    "cpu-core-max-usage": 99,
+                                    "cpu-core-max-usage-time": "2026-09-09T13:35:54Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 7,
+                                    "core-type": "control-plane",
+                                    "cpu-core-current-usage": 32,
+                                    "cpu-core-5sec-usage": 33,
+                                    "cpu-core-1min-usage": 24,
+                                    "cpu-core-5min-usage": 16,
+                                    "cpu-core-max-usage": 64,
+                                    "cpu-core-max-usage-time": "2026-09-09T13:20:14Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 8,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 9,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 10,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 1,
+                                    "cpu-core-5min-usage": 1,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 11,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 12,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 13,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 14,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 15,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 16,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 17,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 18,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 19,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 77,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 20,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 79,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 21,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 79,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 22,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 79,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                },
+                                {
+                                    "position": "1",
+                                    "cpu": "0",
+                                    "core-id": 23,
+                                    "core-type": "data-plane",
+                                    "cpu-core-current-usage": 0,
+                                    "cpu-core-5sec-usage": 0,
+                                    "cpu-core-1min-usage": 0,
+                                    "cpu-core-5min-usage": 0,
+                                    "cpu-core-max-usage": 79,
+                                    "cpu-core-max-usage-time": "2026-08-23T03:43:00Z"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

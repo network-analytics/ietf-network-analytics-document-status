@@ -1,0 +1,30 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:55:35.600Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 319,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 17,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:29.830Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "sensor.celsius.0.1",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "celsius",
+                                    "value": 38,
+                                    "units-display": "celsius"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

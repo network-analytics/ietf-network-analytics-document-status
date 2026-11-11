@@ -1,0 +1,74 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:36:55.107Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 5,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 25,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:36:55.107Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "1",
+                        "edit": [
+                            {
+                                "edit-id": "1",
+                                "operation": "replace",
+                                "target": "/openconfig-network-instance:network-instances/network-instance[name='DEFAULT']/protocols/protocol[identifier='BGP'][name='default']/bgp/neighbors/neighbor[neighbor-address='138.187.58.2']/state",
+                                "value": {
+                                    "openconfig-network-instance:state": {
+                                        "neighbor-address": "138.187.58.2",
+                                        "enabled": true,
+                                        "peer-as": 64496,
+                                        "peer-type": "EXTERNAL",
+                                        "send-community": "NONE",
+                                        "session-state": "ACTIVE",
+                                        "last-established": "1777398080576055000",
+                                        "established-transitions": "1",
+                                        "supported-capabilities": [
+                                            "ASN32",
+                                            "MPBGP"
+                                        ],
+                                        "messages": {
+                                            "sent": {
+                                                "UPDATE": "10",
+                                                "NOTIFICATION": "67514",
+                                                "last-notification-time": "1778222187144625000",
+                                                "last-notification-error-code": "CEASE",
+                                                "last-notification-error-subcode": "ADMINISTRATIVE_SHUTDOWN"
+                                            },
+                                            "received": {
+                                                "UPDATE": "0",
+                                                "NOTIFICATION": "1",
+                                                "last-notification-time": "1777398080576033000",
+                                                "last-notification-error-code": "CEASE",
+                                                "last-notification-error-subcode": "ADMINISTRATIVE_SHUTDOWN"
+                                            }
+                                        },
+                                        "queues": {
+                                            "input": 0,
+                                            "output": 0
+                                        },
+                                        "dynamically-configured": false,
+                                        "Cisco-IOS-XR-openconfig-bgp-ext:cisco": {
+                                            "in-bytes": 0,
+                                            "out-bytes": 0,
+                                            "connection-down-count": 1,
+                                            "dmz-link-bandwidth": 0,
+                                            "previous-connection-state": "IDLE",
+                                            "all-msg-rx-count": 135736,
+                                            "last-msg-rx-timestamp": "2562918674664508",
+                                            "all-msg-tx-count": 135556,
+                                            "last-msg-tx-timestamp": "2562918675286316"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

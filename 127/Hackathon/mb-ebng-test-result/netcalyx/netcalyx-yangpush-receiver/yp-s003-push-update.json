@@ -1,0 +1,83 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:36.203Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 12763,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 3,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:58:36.213Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-user-manage:bras-user-manage": {
+                        "access-tables": {
+                            "access-table": [
+                                {
+                                    "access-index": 170293,
+                                    "access-user-edsg-infos": {
+                                        "access-user-edsg-info": [
+                                            {
+                                                "msiserviceindex": 0,
+                                                "active-flag": "yes",
+                                                "service-name": "v_spl_scs1_be_40m_8m"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "access-index": 170293,
+                                    "access-user-edsg-infos": {
+                                        "access-user-edsg-info": [
+                                            {
+                                                "msiserviceindex": 1,
+                                                "active-flag": "yes",
+                                                "service-name": "v_spl_scs1_be2_500m"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "access-index": 170293,
+                                    "access-user-edsg-infos": {
+                                        "access-user-edsg-info": [
+                                            {
+                                                "msiserviceindex": 2,
+                                                "active-flag": "yes",
+                                                "service-name": "v_spl_scs1_pb"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "access-index": 170293,
+                                    "access-user-edsg-infos": {
+                                        "access-user-edsg-info": [
+                                            {
+                                                "msiserviceindex": 3,
+                                                "active-flag": "yes",
+                                                "service-name": "v_spl_scs1_pa"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "access-index": 170293,
+                                    "access-user-edsg-infos": {
+                                        "access-user-edsg-info": [
+                                            {
+                                                "msiserviceindex": 4,
+                                                "active-flag": "yes",
+                                                "service-name": "v_spl_scs1_rt_10m"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

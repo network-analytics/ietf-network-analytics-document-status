@@ -1,0 +1,826 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:53.120Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 25,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:52:53.110Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-distributed-notif:message-publisher-id": 3021116857,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "board.0.10",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26530140,
+                                "description": "Manufactured Board,MA5800T,HA01UPLA-G,Main Processing Board,1*1",
+                                "parent": "slot.0.10",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.10.0",
+                                    "port.0.10.1",
+                                    "port.0.10.2",
+                                    "port.0.10.3",
+                                    "port.0.10.4",
+                                    "port.0.10.5",
+                                    "container.0.10.0",
+                                    "container.0.10.1",
+                                    "sensor.temperature.board.0.10",
+                                    "cpu.0.10",
+                                    "storage-drive.0.10"
+                                ],
+                                "hardware-rev": "PCB-V: HA01UPLA  VER B  Mab-V: 0000",
+                                "software-rev": "MA5800TV100R025C10",
+                                "serial-num": "102465381401",
+                                "mfg-name": "Huawei",
+                                "model-name": "HA01UPLA",
+                                "alias": "HA01UPLA_0_10",
+                                "is-fru": true,
+                                "mfg-date": "2024-06-05T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302054967",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:53:00Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.9",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26528580,
+                                "description": "Manufactured Board,MA5800T,HA01UPLA-G,Main Processing Board,1*1",
+                                "parent": "slot.0.9",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.9.0",
+                                    "port.0.9.1",
+                                    "port.0.9.2",
+                                    "port.0.9.3",
+                                    "port.0.9.4",
+                                    "port.0.9.5",
+                                    "container.0.9.0",
+                                    "container.0.9.1",
+                                    "sensor.temperature.board.0.9"
+                                ],
+                                "hardware-rev": "PCB-V: HA01UPLA  VER B  Mab-V: 0000",
+                                "software-rev": "MA5800TV100R025C10",
+                                "serial-num": "102447423147",
+                                "mfg-name": "Huawei",
+                                "model-name": "HA01UPLA",
+                                "alias": "HA01UPLA_0_9",
+                                "is-fru": true,
+                                "mfg-date": "2024-04-26T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302054967",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:56:51Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "hot-standby"
+                                }
+                            },
+                            {
+                                "name": "board.0.1",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26516100,
+                                "description": "Manufactured Board,MA5800,H901HXHD,8-port 50GS-PON & XGS-PON Combo OLT Interface Board,1*1",
+                                "parent": "slot.0.1",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.1.0",
+                                    "port.0.1.1",
+                                    "port.0.1.2",
+                                    "port.0.1.3",
+                                    "port.0.1.4",
+                                    "port.0.1.5",
+                                    "port.0.1.6",
+                                    "port.0.1.7",
+                                    "sensor.temperature.board.0.1"
+                                ],
+                                "hardware-rev": "PCB-V: H901HXHD VER A  Mab-V: 0000",
+                                "software-rev": "1002(2026-9-7)",
+                                "serial-num": "102545156555",
+                                "mfg-name": "Huawei",
+                                "model-name": "H901HXHD",
+                                "alias": "H901HXHD_0_1",
+                                "is-fru": true,
+                                "mfg-date": "2025-04-08T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302047423",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T12:05:46Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.2",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26517660,
+                                "description": "Finished Board,MA5800,H905XSHF,16-port Advanced XGS-PON OLT Interface Board",
+                                "parent": "slot.0.2",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.2.0",
+                                    "port.0.2.1",
+                                    "port.0.2.2",
+                                    "port.0.2.3",
+                                    "port.0.2.4",
+                                    "port.0.2.5",
+                                    "port.0.2.6",
+                                    "port.0.2.7",
+                                    "port.0.2.8",
+                                    "port.0.2.9",
+                                    "port.0.2.10",
+                                    "port.0.2.11",
+                                    "port.0.2.12",
+                                    "port.0.2.13",
+                                    "port.0.2.14",
+                                    "port.0.2.15",
+                                    "sensor.temperature.board.0.2"
+                                ],
+                                "hardware-rev": "PCB-V: H905XSHF VER A  Mab-V: 0001",
+                                "software-rev": "1002(2026-9-7)",
+                                "serial-num": "1024C5780147",
+                                "mfg-name": "Huawei",
+                                "model-name": "H905XSHF",
+                                "alias": "H905XSHF_0_2",
+                                "is-fru": true,
+                                "mfg-date": "2024-12-04T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:03034PMC",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T12:06:36Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.3",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26519220,
+                                "description": "",
+                                "parent": "slot.0.3",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_3",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:31Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.4",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26520780,
+                                "description": "",
+                                "parent": "slot.0.4",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_4",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:33Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.5",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26522340,
+                                "description": "",
+                                "parent": "slot.0.5",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_5",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:35Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.6",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26523900,
+                                "description": "",
+                                "parent": "slot.0.6",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_6",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:37Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.7",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26525460,
+                                "description": "",
+                                "parent": "slot.0.7",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_7",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:40Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.8",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26527020,
+                                "description": "",
+                                "parent": "slot.0.8",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_8",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:44Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.11",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26531700,
+                                "description": "",
+                                "parent": "slot.0.11",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_11",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:45Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.12",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26533260,
+                                "description": "",
+                                "parent": "slot.0.12",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_12",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:46Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.13",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26534820,
+                                "description": "",
+                                "parent": "slot.0.13",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_13",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:48Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.14",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26536380,
+                                "description": "",
+                                "parent": "slot.0.14",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_14",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:49Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.15",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26537940,
+                                "description": "",
+                                "parent": "slot.0.15",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_15",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:51Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.16",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26539500,
+                                "description": "",
+                                "parent": "slot.0.16",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_16",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:52Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.17",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26541060,
+                                "description": "",
+                                "parent": "slot.0.17",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                ],
+                                "hardware-rev": "H901DPWA",
+                                "software-rev": "",
+                                "serial-num": "",
+                                "mfg-name": "",
+                                "model-name": "H901DPWA",
+                                "alias": "H901DPWA_0_17",
+                                "is-fru": true,
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:",
+                                    "urn:issue-number:",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:53Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.18",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26542620,
+                                "description": "Manufactured Board,MA5800,H905OGHK,48-port advanced GE/FE optical interface card,1*1",
+                                "parent": "slot.0.18",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.18.0",
+                                    "port.0.18.1",
+                                    "port.0.18.2",
+                                    "port.0.18.3",
+                                    "port.0.18.4",
+                                    "port.0.18.5",
+                                    "port.0.18.6",
+                                    "port.0.18.7",
+                                    "port.0.18.8",
+                                    "port.0.18.9",
+                                    "port.0.18.10",
+                                    "port.0.18.11",
+                                    "port.0.18.12",
+                                    "port.0.18.13",
+                                    "port.0.18.14",
+                                    "port.0.18.15",
+                                    "port.0.18.16",
+                                    "port.0.18.17",
+                                    "port.0.18.18",
+                                    "port.0.18.19",
+                                    "port.0.18.20",
+                                    "port.0.18.21",
+                                    "port.0.18.22",
+                                    "port.0.18.23",
+                                    "port.0.18.24",
+                                    "port.0.18.25",
+                                    "port.0.18.26",
+                                    "port.0.18.27",
+                                    "port.0.18.28",
+                                    "port.0.18.29",
+                                    "port.0.18.30",
+                                    "port.0.18.31",
+                                    "port.0.18.32",
+                                    "port.0.18.33",
+                                    "port.0.18.34",
+                                    "port.0.18.35",
+                                    "port.0.18.36",
+                                    "port.0.18.37",
+                                    "port.0.18.38",
+                                    "port.0.18.39",
+                                    "port.0.18.40",
+                                    "port.0.18.41",
+                                    "port.0.18.42",
+                                    "port.0.18.43",
+                                    "port.0.18.44",
+                                    "port.0.18.45",
+                                    "port.0.18.46",
+                                    "port.0.18.47",
+                                    "sensor.temperature.board.0.18"
+                                ],
+                                "hardware-rev": "PCB-V: H905OGHK VER A  Mab-V: 0000",
+                                "software-rev": "1002(2026-9-7)",
+                                "serial-num": "10254B168167",
+                                "mfg-name": "Huawei",
+                                "model-name": "H905OGHK",
+                                "alias": "H905OGHK_0_18",
+                                "is-fru": true,
+                                "mfg-date": "2025-06-26T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302069931",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T12:04:45Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.19",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26544180,
+                                "description": "Manufactured Board,MA5800,H905OGHK,48-port advanced GE/FE optical interface card,1*1",
+                                "parent": "slot.0.19",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "port.0.19.0",
+                                    "port.0.19.1",
+                                    "port.0.19.2",
+                                    "port.0.19.3",
+                                    "port.0.19.4",
+                                    "port.0.19.5",
+                                    "port.0.19.6",
+                                    "port.0.19.7",
+                                    "port.0.19.8",
+                                    "port.0.19.9",
+                                    "port.0.19.10",
+                                    "port.0.19.11",
+                                    "port.0.19.12",
+                                    "port.0.19.13",
+                                    "port.0.19.14",
+                                    "port.0.19.15",
+                                    "port.0.19.16",
+                                    "port.0.19.17",
+                                    "port.0.19.18",
+                                    "port.0.19.19",
+                                    "port.0.19.20",
+                                    "port.0.19.21",
+                                    "port.0.19.22",
+                                    "port.0.19.23",
+                                    "port.0.19.24",
+                                    "port.0.19.25",
+                                    "port.0.19.26",
+                                    "port.0.19.27",
+                                    "port.0.19.28",
+                                    "port.0.19.29",
+                                    "port.0.19.30",
+                                    "port.0.19.31",
+                                    "port.0.19.32",
+                                    "port.0.19.33",
+                                    "port.0.19.34",
+                                    "port.0.19.35",
+                                    "port.0.19.36",
+                                    "port.0.19.37",
+                                    "port.0.19.38",
+                                    "port.0.19.39",
+                                    "port.0.19.40",
+                                    "port.0.19.41",
+                                    "port.0.19.42",
+                                    "port.0.19.43",
+                                    "port.0.19.44",
+                                    "port.0.19.45",
+                                    "port.0.19.46",
+                                    "port.0.19.47",
+                                    "sensor.temperature.board.0.19"
+                                ],
+                                "hardware-rev": "PCB-V: H905OGHK VER A  Mab-V: 0000",
+                                "software-rev": "1002(2026-9-7)",
+                                "serial-num": "10253A754884",
+                                "mfg-name": "Huawei",
+                                "model-name": "H905OGHK",
+                                "alias": "H905OGHK_0_19",
+                                "is-fru": true,
+                                "mfg-date": "2025-06-26T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302069931",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T12:04:05Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.20",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26545740,
+                                "description": "Manufactured Board,MA5800T-X17,HA01PDLB,MA5800T-X17 High-configuration power adapter board,1*1",
+                                "parent": "slot.0.20",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "sensor.temperature.board.0.20"
+                                ],
+                                "hardware-rev": "HA01PDLB",
+                                "software-rev": "",
+                                "serial-num": "102447385300",
+                                "mfg-name": "Huawei",
+                                "model-name": "HA01PDLB",
+                                "alias": "HA01PDLB_0_20",
+                                "is-fru": true,
+                                "mfg-date": "2024-04-17T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302053070",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:06Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            },
+                            {
+                                "name": "board.0.21",
+                                "class": "bbf-hardware-types:board",
+                                "physical-index": 26547300,
+                                "description": "Manufactured Board,MA5800T-X17,HA01PDLB,MA5800T-X17 High-configuration power adapter board,1*1",
+                                "parent": "slot.0.21",
+                                "parent-rel-pos": 0,
+                                "contains-child": [
+                                    "sensor.temperature.board.0.21"
+                                ],
+                                "hardware-rev": "HA01PDLB",
+                                "software-rev": "",
+                                "serial-num": "102447385311",
+                                "mfg-name": "Huawei",
+                                "model-name": "HA01PDLB",
+                                "alias": "HA01PDLB_0_21",
+                                "is-fru": true,
+                                "mfg-date": "2024-04-17T00:00:00Z",
+                                "uri": [
+                                    "urn:clei:",
+                                    "urn:item-code:0302053070",
+                                    "urn:issue-number:00",
+                                    "https://www.huawei.com"
+                                ],
+                                "state": {
+                                    "state-last-changed": "2026-10-19T11:52:11Z",
+                                    "alarm-state": "",
+                                    "admin-state": "unlocked",
+                                    "oper-state": "normal",
+                                    "usage-state": "active",
+                                    "standby-state": "providing-service"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

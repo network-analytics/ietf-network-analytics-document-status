@@ -1,0 +1,95 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:52.990Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 23,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:52:52.990Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-distributed-notif:message-publisher-id": 3021116857,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces-state": {
+                        "interface": [
+                            {
+                                "name": "ani.0.1.0.0",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:06:15.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.1",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-down-cause": "losi-or-lobi",
+                                        "last-down-time": "2026-10-19T12:56:16.60Z",
+                                        "last-up-time": "2026-10-19T12:57:25.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.2",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:09:20.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.3",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:09:20.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.4",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:06:43.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.2.1.0",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:09:27.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.2.1.1",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:09:28.60Z"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.2.1.2",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "run-state": "up",
+                                        "last-up-time": "2026-10-19T12:09:28.60Z"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

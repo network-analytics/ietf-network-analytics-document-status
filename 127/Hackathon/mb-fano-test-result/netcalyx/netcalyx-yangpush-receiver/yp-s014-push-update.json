@@ -1,0 +1,86 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:55:40.130Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 311,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 14,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:40.120Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces-state": {
+                        "interface": [
+                            {
+                                "name": "ani.0.1.0.0",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "17",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "277237211971",
+                                            "corrected-fec-bytes": "8"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.1",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "283",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "270991988269",
+                                            "corrected-fec-bytes": "141"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.2",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "0",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "481937280000",
+                                            "corrected-fec-bytes": "0"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.3",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "895",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "481937280000",
+                                            "corrected-fec-bytes": "895"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.4",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "39827426997",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "23163545843",
+                                            "corrected-fec-bytes": "41951059421"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

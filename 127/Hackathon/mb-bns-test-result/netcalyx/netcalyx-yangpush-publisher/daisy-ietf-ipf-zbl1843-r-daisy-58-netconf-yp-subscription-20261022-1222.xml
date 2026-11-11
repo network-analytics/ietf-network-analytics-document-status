@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9b418e19-8844-4fee-a363-078428affd9a">
+  <data>
+    <streams xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+      <stream>
+        <name>NETCONF</name>
+        <description>Default NETCONF stream containing notifications from all the modules. Replays only notifications for modules that support replay.</description>
+        <replay-support/>
+      </stream>
+      <stream>
+        <name>ietf-yang-library</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>sysrepo-notifications</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-netconf-notifications</name>
+        <description>Stream with all notifications of a module.</description>
+        <replay-support/>
+        <replay-log-creation-time>2026-10-16T18:42:25.336161096+00:00</replay-log-creation-time>
+      </stream>
+      <stream>
+        <name>ietf-bfd-ip-mh</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-bfd-lag</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-bfd-ip-sh</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>nc-notifications</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-network-instance</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-subscribed-notifications</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-yang-push</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>netopeer-notifications</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ieee802-dot1ab-lldp</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+      <stream>
+        <name>ietf-alarms</name>
+        <description>Stream with all notifications of a module.</description>
+        <replay-support/>
+        <replay-log-creation-time>2026-10-16T18:42:29.266893200+00:00</replay-log-creation-time>
+      </stream>
+      <stream>
+        <name>ietf-hardware</name>
+        <description>Stream with all notifications of a module.</description>
+      </stream>
+    </streams>
+    <subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+      <subscription>
+        <id>100</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>1</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <dampening-period>500</dampening-period>
+          <sync-on-start>true</sync-on-start>
+        </on-change>
+      </subscription>
+      <subscription>
+        <id>101</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface/if:statistics</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>2</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>102</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>1</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <dampening-period>500</dampening-period>
+          <sync-on-start>true</sync-on-start>
+        </on-change>
+      </subscription>
+      <subscription>
+        <id>103</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware/hw:component/hw:sensor-data</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>2</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>104</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:al="urn:ietf:params:xml:ns:yang:ietf-alarms">/al:alarms/al:alarm-list</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>1</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <dampening-period>500</dampening-period>
+          <sync-on-start>true</sync-on-start>
+        </on-change>
+      </subscription>
+      <subscription>
+        <id>105</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>invalid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <dampening-period>500</dampening-period>
+          <sync-on-start>true</sync-on-start>
+        </on-change>
+      </subscription>
+      <subscription>
+        <id>106</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:vrouter="urn:6wind:vrouter" xmlns:vrouter-tracker="urn:6wind:vrouter/tracker">/vrouter:state/vrouter-tracker:tracker/vrouter-tracker:icmp-rtt</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>DAISY2</name>
+            <sent-event-records>2</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY2</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>300</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface/if:oper-status</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>LEONARDO</name>
+            <sent-event-records>1361</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">LEONARDO</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30+00:00</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>301</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface[if:name='eth0']/if:oper-status</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>LEONARDO</name>
+            <sent-event-records>1361</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">LEONARDO</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30+00:00</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>302</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:vrouter="urn:6wind:vrouter" xmlns:vrouter-interface="urn:6wind:vrouter/interface">/vrouter:state/vrouter:vrf/vrouter:l3vrf/vrouter-interface:interface/vrouter-interface:physical/vrouter-interface:oper-status</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>LEONARDO</name>
+            <sent-event-records>1</sent-event-records>
+            <excluded-event-records>81482</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">LEONARDO</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <dampening-period>500</dampening-period>
+          <sync-on-start>true</sync-on-start>
+        </on-change>
+      </subscription>
+      <subscription>
+        <id>303</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:vrouter="urn:6wind:vrouter" xmlns:vrouter-interface="urn:6wind:vrouter/interface">/vrouter:state/vrouter:vrf/vrouter-interface:interface/vrouter-interface:physical[vrouter-interface:name='ens192']/vrouter-interface:oper-status</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>LEONARDO</name>
+            <sent-event-records>1356</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">LEONARDO</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30+00:00</anchor-time>
+        </periodic>
+      </subscription>
+      <subscription>
+        <id>304</id>
+        <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+        <datastore-xpath-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:vrouter="urn:6wind:vrouter" xmlns:vrouter-interface="urn:6wind:vrouter/interface" xmlns:vrouter-loopback="urn:6wind:vrouter/loopback">/vrouter:state/vrouter:vrf/vrouter:l3vrf/vrouter-interface:interface/vrouter-loopback:loopback/vrouter-loopback:oper-status</datastore-xpath-filter>
+        <encoding>encode-json</encoding>
+        <source-vrf>MGMT-VRF</source-vrf>
+        <source-address>10.212.242.58</source-address>
+        <configured-subscription-state>valid</configured-subscription-state>
+        <receivers>
+          <receiver>
+            <name>LEONARDO</name>
+            <sent-event-records>1356</sent-event-records>
+            <excluded-event-records>0</excluded-event-records>
+            <state>active</state>
+            <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">LEONARDO</receiver-instance-ref>
+          </receiver>
+        </receivers>
+        <message-publisher-id xmlns="urn:ietf:params:xml:ns:yang:ietf-distributed-notif">0</message-publisher-id>
+        <periodic xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+          <period>6000</period>
+          <anchor-time>2025-01-01T00:00:30+00:00</anchor-time>
+        </periodic>
+      </subscription>
+      <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+        <receiver-instance>
+          <name>DAISY2</name>
+          <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+            <remote-address>10.212.242.2</remote-address>
+            <remote-port>10100</remote-port>
+            <enable-segmentation>true</enable-segmentation>
+            <max-segment-size>1436</max-segment-size>
+          </udp-notif-receiver>
+        </receiver-instance>
+        <receiver-instance>
+          <name>LEONARDO</name>
+          <udp-notif-receiver xmlns="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">
+            <remote-address>10.212.242.69</remote-address>
+            <remote-port>10100</remote-port>
+            <enable-segmentation>true</enable-segmentation>
+            <max-segment-size>1436</max-segment-size>
+          </udp-notif-receiver>
+        </receiver-instance>
+      </receiver-instances>
+    </subscriptions>
+  </data>
+</rpc-reply>

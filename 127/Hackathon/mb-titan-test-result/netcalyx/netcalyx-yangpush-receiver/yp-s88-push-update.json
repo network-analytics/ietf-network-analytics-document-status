@@ -1,0 +1,694 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-24T11:41:30.003Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 3,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 88,
+                "ietf-yp-observation:timestamp": "2026-04-24T11:41:30.003Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np": {
+                        "nodes": {
+                            "node": [
+                                {
+                                    "node-name": "0/0/CPU0",
+                                    "nps": {
+                                        "np": [
+                                            {
+                                                "np-name": "np0",
+                                                "counters": {
+                                                    "np-counter": [
+                                                        {
+                                                            "counter-index": 97,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Pkt trace to fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 98,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Pkt trace from host inject"
+                                                        },
+                                                        {
+                                                            "counter-index": 181,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 LL hash lookup miss on egress"
+                                                        },
+                                                        {
+                                                            "counter-index": 235,
+                                                            "counter-value": "3435330",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "L2 aging scan not enabled"
+                                                        },
+                                                        {
+                                                            "counter-index": 317,
+                                                            "counter-value": "233987218",
+                                                            "rate": 171,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "MAPT - TBPG Event"
+                                                        },
+                                                        {
+                                                            "counter-index": 372,
+                                                            "counter-value": "125112",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "SNF packet sampled ingress"
+                                                        },
+                                                        {
+                                                            "counter-index": 380,
+                                                            "counter-value": "206074439",
+                                                            "rate": 150,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG L2 mailbox events"
+                                                        },
+                                                        {
+                                                            "counter-index": 381,
+                                                            "counter-value": "3435330",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG MAC scan events"
+                                                        },
+                                                        {
+                                                            "counter-index": 382,
+                                                            "counter-value": "13188764116",
+                                                            "rate": 9620,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG stat events"
+                                                        },
+                                                        {
+                                                            "counter-index": 446,
+                                                            "counter-value": "3",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Egress UIDB in down state"
+                                                        },
+                                                        {
+                                                            "counter-index": 526,
+                                                            "counter-value": "617",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 receive adjacency"
+                                                        },
+                                                        {
+                                                            "counter-index": 563,
+                                                            "counter-value": "15944",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Inject invalid length"
+                                                        },
+                                                        {
+                                                            "counter-index": 579,
+                                                            "counter-value": "5194",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Invalid frame or TCAM miss"
+                                                        },
+                                                        {
+                                                            "counter-index": 595,
+                                                            "counter-value": "4",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "L2 egress LAG no match drop"
+                                                        },
+                                                        {
+                                                            "counter-index": 711,
+                                                            "counter-value": "2",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Pre-route PIT lookup missed"
+                                                        },
+                                                        {
+                                                            "counter-index": 781,
+                                                            "counter-value": "1305566",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "CLNS multicast from fabric pre-route"
+                                                        },
+                                                        {
+                                                            "counter-index": 785,
+                                                            "counter-value": "49394",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 NHID inject from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 787,
+                                                            "counter-value": "2463215",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 789,
+                                                            "counter-value": "35",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 inward"
+                                                        },
+                                                        {
+                                                            "counter-index": 794,
+                                                            "counter-value": "827764",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 NHID inject from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 796,
+                                                            "counter-value": "4232214",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 798,
+                                                            "counter-value": "40089",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 link-local from fabric pre-route"
+                                                        },
+                                                        {
+                                                            "counter-index": 800,
+                                                            "counter-value": "22865",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 multicast from fabric pre-route"
+                                                        },
+                                                        {
+                                                            "counter-index": 804,
+                                                            "counter-value": "16304392",
+                                                            "rate": 12,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Inject to fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 805,
+                                                            "counter-value": "4444277",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Inject to port"
+                                                        },
+                                                        {
+                                                            "counter-index": 807,
+                                                            "counter-value": "1986909",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "MPLS from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 811,
+                                                            "counter-value": "16304",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Pre-route punt request"
+                                                        },
+                                                        {
+                                                            "counter-index": 1433,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 ingress length error"
+                                                        },
+                                                        {
+                                                            "counter-index": 1503,
+                                                            "counter-value": "3467",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "ARP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1518,
+                                                            "counter-value": "91333",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Bundle protocol"
+                                                        },
+                                                        {
+                                                            "counter-index": 1524,
+                                                            "counter-value": "22840",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags"
+                                                        },
+                                                        {
+                                                            "counter-index": 1587,
+                                                            "counter-value": "13699652",
+                                                            "rate": 10,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "ICMP generation needed"
+                                                        },
+                                                        {
+                                                            "counter-index": 1605,
+                                                            "counter-value": "3653438",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 BFD"
+                                                        },
+                                                        {
+                                                            "counter-index": 1611,
+                                                            "counter-value": "3602665",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IFIB"
+                                                        },
+                                                        {
+                                                            "counter-index": 1695,
+                                                            "counter-value": "22843",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags RSP active"
+                                                        },
+                                                        {
+                                                            "counter-index": 1698,
+                                                            "counter-value": "22843",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags RSP standby"
+                                                        },
+                                                        {
+                                                            "counter-index": 1701,
+                                                            "counter-value": "2919713",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "NetIO RP to LC CPU"
+                                                        },
+                                                        {
+                                                            "counter-index": 1743,
+                                                            "counter-value": "125112",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "NetFlow"
+                                                        },
+                                                        {
+                                                            "counter-index": 1776,
+                                                            "counter-value": "274112",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "LLDP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1794,
+                                                            "counter-value": "2430409",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "NetIO LC to RSP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1986,
+                                                            "counter-value": "3",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "ICMPv6 generation needed"
+                                                        },
+                                                        {
+                                                            "counter-index": 2019,
+                                                            "counter-value": "3",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 incomplete Tx adjacency"
+                                                        },
+                                                        {
+                                                            "counter-index": 4097,
+                                                            "counter-value": "503002070",
+                                                            "rate": 367,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Received from Line"
+                                                        },
+                                                        {
+                                                            "counter-index": 4098,
+                                                            "counter-value": "495550795",
+                                                            "rate": 362,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to Fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 4099,
+                                                            "counter-value": "427025558",
+                                                            "rate": 312,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Received from Fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 4100,
+                                                            "counter-value": "428550110",
+                                                            "rate": 313,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to Line"
+                                                        },
+                                                        {
+                                                            "counter-index": 4101,
+                                                            "counter-value": "20838366",
+                                                            "rate": 15,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Host Inject Received"
+                                                        },
+                                                        {
+                                                            "counter-index": 4102,
+                                                            "counter-value": "26868433",
+                                                            "rate": 19,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Host Punt Transmit"
+                                                        },
+                                                        {
+                                                            "counter-index": 4105,
+                                                            "counter-value": "28392988",
+                                                            "rate": 21,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Received at iGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4106,
+                                                            "counter-value": "28392988",
+                                                            "rate": 21,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Transmit by iGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4107,
+                                                            "counter-value": "28392988",
+                                                            "rate": 21,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Received at Egress"
+                                                        },
+                                                        {
+                                                            "counter-index": 4108,
+                                                            "counter-value": "455418543",
+                                                            "rate": 332,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to TM from eGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4109,
+                                                            "counter-value": "455418543",
+                                                            "rate": 332,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to L2"
+                                                        },
+                                                        {
+                                                            "counter-index": 4112,
+                                                            "counter-value": "32184260380",
+                                                            "rate": 23474,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Internal generated by PDMA"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "np-name": "np1",
+                                                "counters": {
+                                                    "np-counter": [
+                                                        {
+                                                            "counter-index": 235,
+                                                            "counter-value": "3435329",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "L2 aging scan not enabled"
+                                                        },
+                                                        {
+                                                            "counter-index": 317,
+                                                            "counter-value": "233987175",
+                                                            "rate": 171,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "MAPT - TBPG Event"
+                                                        },
+                                                        {
+                                                            "counter-index": 372,
+                                                            "counter-value": "23928",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "SNF packet sampled ingress"
+                                                        },
+                                                        {
+                                                            "counter-index": 380,
+                                                            "counter-value": "206074401",
+                                                            "rate": 150,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG L2 mailbox events"
+                                                        },
+                                                        {
+                                                            "counter-index": 381,
+                                                            "counter-value": "3435329",
+                                                            "rate": 3,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG MAC scan events"
+                                                        },
+                                                        {
+                                                            "counter-index": 382,
+                                                            "counter-value": "13188761710",
+                                                            "rate": 9620,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "TBPG stat events"
+                                                        },
+                                                        {
+                                                            "counter-index": 446,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Egress UIDB in down state"
+                                                        },
+                                                        {
+                                                            "counter-index": 526,
+                                                            "counter-value": "13699648",
+                                                            "rate": 10,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 receive adjacency"
+                                                        },
+                                                        {
+                                                            "counter-index": 579,
+                                                            "counter-value": "5192",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Invalid frame or TCAM miss"
+                                                        },
+                                                        {
+                                                            "counter-index": 640,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "L2 on L3 ingress UIDB with linestatus down"
+                                                        },
+                                                        {
+                                                            "counter-index": 641,
+                                                            "counter-value": "24",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "L2 on L3 ingress unknown protocol"
+                                                        },
+                                                        {
+                                                            "counter-index": 794,
+                                                            "counter-value": "218",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 NHID inject from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 796,
+                                                            "counter-value": "2",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 from fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 804,
+                                                            "counter-value": "218",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Inject to fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 805,
+                                                            "counter-value": "1612510",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Inject to port"
+                                                        },
+                                                        {
+                                                            "counter-index": 1500,
+                                                            "counter-value": "22838",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "CDP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1503,
+                                                            "counter-value": "63",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "ARP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1518,
+                                                            "counter-value": "45675",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Bundle protocol"
+                                                        },
+                                                        {
+                                                            "counter-index": 1524,
+                                                            "counter-value": "22840",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags"
+                                                        },
+                                                        {
+                                                            "counter-index": 1548,
+                                                            "counter-value": "685076",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "MSTP"
+                                                        },
+                                                        {
+                                                            "counter-index": 1611,
+                                                            "counter-value": "219203",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IFIB"
+                                                        },
+                                                        {
+                                                            "counter-index": 1695,
+                                                            "counter-value": "22843",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags RSP active"
+                                                        },
+                                                        {
+                                                            "counter-index": 1698,
+                                                            "counter-value": "22843",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Diags RSP standby"
+                                                        },
+                                                        {
+                                                            "counter-index": 1743,
+                                                            "counter-value": "23928",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "NetFlow"
+                                                        },
+                                                        {
+                                                            "counter-index": 1776,
+                                                            "counter-value": "91242",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "LLDP"
+                                                        },
+                                                        {
+                                                            "counter-index": 2004,
+                                                            "counter-value": "1",
+                                                            "rate": 0,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv4 incomplete Tx adjacency"
+                                                        },
+                                                        {
+                                                            "counter-index": 2019,
+                                                            "counter-value": "109597086",
+                                                            "rate": 80,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "IPv6 incomplete Tx adjacency"
+                                                        },
+                                                        {
+                                                            "counter-index": 4097,
+                                                            "counter-value": "96961260",
+                                                            "rate": 71,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Received from Line"
+                                                        },
+                                                        {
+                                                            "counter-index": 4098,
+                                                            "counter-value": "82197708",
+                                                            "rate": 60,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to Fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 4099,
+                                                            "counter-value": "150696699",
+                                                            "rate": 110,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Received from Fabric"
+                                                        },
+                                                        {
+                                                            "counter-index": 4100,
+                                                            "counter-value": "42712121",
+                                                            "rate": 31,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to Line"
+                                                        },
+                                                        {
+                                                            "counter-index": 4101,
+                                                            "counter-value": "1686446",
+                                                            "rate": 1,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Host Inject Received"
+                                                        },
+                                                        {
+                                                            "counter-index": 4102,
+                                                            "counter-value": "110753638",
+                                                            "rate": 81,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Host Punt Transmit"
+                                                        },
+                                                        {
+                                                            "counter-index": 4105,
+                                                            "counter-value": "2769060",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Received at iGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4106,
+                                                            "counter-value": "2769060",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Transmit by iGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4107,
+                                                            "counter-value": "2769060",
+                                                            "rate": 2,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Local Loopback Received at Egress"
+                                                        },
+                                                        {
+                                                            "counter-index": 4108,
+                                                            "counter-value": "153465759",
+                                                            "rate": 112,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to TM from eGTR"
+                                                        },
+                                                        {
+                                                            "counter-index": 4109,
+                                                            "counter-value": "153465759",
+                                                            "rate": 112,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Transmit to L2"
+                                                        },
+                                                        {
+                                                            "counter-index": 4112,
+                                                            "counter-value": "32184257809",
+                                                            "rate": 23474,
+                                                            "counter-type": "UNKNOWN",
+                                                            "counter-name": "Internal generated by PDMA"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

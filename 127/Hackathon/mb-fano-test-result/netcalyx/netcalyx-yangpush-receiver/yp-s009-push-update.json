@@ -1,0 +1,52 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:55:30.570Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 941,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 9,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:30.570Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923969,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "transceiver-link.0.2.1.xgs",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:pon-xcvr-link",
+                                "bbf-hardware-transceivers:transceiver-link": {
+                                    "diagnostics": {
+                                        "tx-bias": 8000,
+                                        "power-dbm": {
+                                            "transmit": 528
+                                        },
+                                        "huawei-hardware:sd": false,
+                                        "huawei-hardware:idle-rssi": -4000,
+                                        "bbf-hardware-transceivers-xpon:rssi-onu": [
+                                            {
+                                                "detected-serial-number": "ARCA0b903856",
+                                                "rssi": -1446,
+                                                "v-ani-ref": "gpon.0.2.1.0"
+                                            },
+                                            {
+                                                "detected-serial-number": "ARCA0bed5a62",
+                                                "rssi": -1759,
+                                                "v-ani-ref": "gpon.0.2.1.1"
+                                            },
+                                            {
+                                                "detected-serial-number": "ARCA24181d60",
+                                                "rssi": -1591,
+                                                "v-ani-ref": "gpon.0.2.1.2"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

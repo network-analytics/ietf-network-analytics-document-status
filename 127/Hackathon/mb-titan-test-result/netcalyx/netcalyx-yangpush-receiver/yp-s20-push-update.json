@@ -1,0 +1,42 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.000Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 20,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Bundle-Ether5791",
+                                    "state": {
+                                        "name": "Bundle-Ether5791",
+                                        "interval": "SLOW",
+                                        "lacp-mode": "ACTIVE",
+                                        "system-id-mac": "ac:bc:d9:73:d8:45",
+                                        "system-priority": 32768
+                                    }
+                                },
+                                {
+                                    "name": "Bundle-Ether7991",
+                                    "state": {
+                                        "name": "Bundle-Ether7991",
+                                        "interval": "SLOW",
+                                        "lacp-mode": "ACTIVE",
+                                        "system-id-mac": "ac:bc:d9:73:d8:45",
+                                        "system-priority": 32768
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:29.683Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 4,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 104,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ieee802-dot1ab-lldp:lldp/local-system-data",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    16843793
+                ],
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "ieee802-dot1ab-lldp",
+                        "revision": "2022-03-15"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "190100522",
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 0
+                }
+            }
+        }
+    }
+}

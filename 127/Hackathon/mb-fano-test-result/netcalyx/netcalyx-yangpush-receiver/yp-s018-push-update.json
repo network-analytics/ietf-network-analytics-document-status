@@ -1,0 +1,93 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:00:33.420Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 18,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:33.420Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 3021116857,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "sensor.rpm.0.0",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2535,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.0.1",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2535,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.1.0",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2520,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.1.1",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2535,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.2.0",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2550,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.2.1",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2595,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.3.0",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2535,
+                                    "units-display": "times/minute"
+                                }
+                            },
+                            {
+                                "name": "sensor.rpm.3.1",
+                                "class": "iana-hardware:sensor",
+                                "sensor-data": {
+                                    "value-type": "rpm",
+                                    "value": 2595,
+                                    "units-display": "times/minute"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

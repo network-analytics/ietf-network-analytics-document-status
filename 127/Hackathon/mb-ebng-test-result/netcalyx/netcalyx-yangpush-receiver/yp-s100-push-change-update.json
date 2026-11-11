@@ -1,0 +1,39 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:57.453Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 59,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 100,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:58:57.452Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "0",
+                        "edit": [
+                            {
+                                "edit-id": "edit1",
+                                "operation": "merge",
+                                "target": "/ietf-alarms:alarm-notification",
+                                "value": {
+                                    "ietf-alarms:alarm-notification": {
+                                        "resource": "",
+                                        "alarm-type-id": "LLDP_REMTABLECHANGE",
+                                        "alt-resource": [
+                                            "1.0.8802.1.1.2.0.0.1"
+                                        ],
+                                        "time": "2026-10-09T13:58:57+02:00",
+                                        "perceived-severity": "warning",
+                                        "alarm-text": "LLDP neighbor information was changed. (Added=0, Deleted=0, Dropped=0, Aged=2)"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:01:30.000Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 2,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 4,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:01:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-platform:components": {
+                        "component": [
+                            {
+                                "name": "0/PT0-PM0",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:enabled": true,
+                                        "openconfig-platform-psu:capacity": "RMgAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Input Current",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-current": "P4AAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Output Current",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-current": "QXAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Output Power",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-power": "QzYAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Input Voltage",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-voltage": "Q2EAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Output Voltage",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-voltage": "QUAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:enabled": true,
+                                        "openconfig-platform-psu:capacity": "RMgAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Input Current",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-current": "P4AAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Output Current",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-current": "QZAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Output Power",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-power": "Q1wAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Input Voltage",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-voltage": "Q2IAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Output Voltage",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-voltage": "QUAAAA=="
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

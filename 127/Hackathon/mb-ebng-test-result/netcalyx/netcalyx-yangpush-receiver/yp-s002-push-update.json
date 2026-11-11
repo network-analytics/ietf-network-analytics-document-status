@@ -1,0 +1,106 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:30.803Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 11,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 2,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:58:30.804Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-user-manage:bras-user-manage": {
+                        "access-tables": {
+                            "access-table": [
+                                {
+                                    "access-index": 169988,
+                                    "access-user-basic-info": {
+                                        "access-user-name": "scaling@bluewin_lns1.ch",
+                                        "access-port-type": "ppp",
+                                        "access-sub-slot-number": 0,
+                                        "access-port-number": 1,
+                                        "access-vlan-id": 33032245,
+                                        "access-ipaddress": "255.255.255.255",
+                                        "access-mac-address": "0005-0002-1014",
+                                        "access-start-time": "2026-10-08 15:53:45 DST",
+                                        "access-basic-ip-type": "000",
+                                        "access-ipv6-wait-delay": 30,
+                                        "rui-type": "rui-local",
+                                        "access-type": "PPPoE",
+                                        "used-flag": "yes",
+                                        "used-type": "invalid",
+                                        "username-rd": "no",
+                                        "domain-name": "v_dom_ppp_whs",
+                                        "domainname-rd": "no",
+                                        "backup-state": "local",
+                                        "ipv6-backup-state": "none",
+                                        "rbp-state": "master",
+                                        "out-bound-slot": 0,
+                                        "port-limit": 0,
+                                        "port-limit-rd": "no",
+                                        "vpnname-rd": "no",
+                                        "inboundvpnname-rd": "no",
+                                        "ipv6vpnname-rd": "no",
+                                        "ipv6inboundvpnname-rd": "no",
+                                        "usr-ipaddr-mask": "0.0.0.0",
+                                        "usr-ipaddr-mask-rd": "no",
+                                        "gate-way-addr": "0.0.0.0",
+                                        "gate-way-addr-rd": "no",
+                                        "framed-route": "0.0.0.0",
+                                        "framed-route-mask-len": 0,
+                                        "next-ip": "0.0.0.0",
+                                        "meric": 0,
+                                        "metric": 0,
+                                        "frame-route-rd": "no",
+                                        "frame-route-num": 0,
+                                        "ipv6lla-addr-pre": "::",
+                                        "ipv6lla-addr-prefix": "::/0",
+                                        "ipv6-addr-pre-rd": "no",
+                                        "ipv6-addr": "::",
+                                        "ipv6-addr-rd": "no",
+                                        "ipv6-pd-addr-pre": "::",
+                                        "ipv6-pd-addr-prefix": "::/0",
+                                        "ipv6-pd-addr-pre-rd": "no",
+                                        "frame-v6-route-ipaddr": "::",
+                                        "frame-v6-route-ipaddr-prefix-len": 0,
+                                        "frame-v6-route-rd": "no",
+                                        "frame-v6-route-num": 0,
+                                        "dhcpserver-ip": "0.0.0.0",
+                                        "v6-addr-assign-mode": "none",
+                                        "ralink-prefix": "no",
+                                        "ipv6-cp-receive-user-interface-id": 0,
+                                        "agent-circuit-id": "ipd-zba504-s-ch-01/-2101",
+                                        "agent-remote-id": "AC0.005.042.101",
+                                        "ip4-leas-coa0-flg": "no",
+                                        "ip4-leas-rds-flg": "no",
+                                        "ip4-ori-leas": 0,
+                                        "ip4-rem-leas": 0,
+                                        "ip4-rem-leas-rds": "no",
+                                        "ip6-leas-rds-flg": "no",
+                                        "ip6-leas-end-tim": 0,
+                                        "ip6-rem-leas": 0,
+                                        "ip6-rem-leas-rds": "no",
+                                        "usr-grp-rds-flg": "no",
+                                        "nxt-hop": "255.255.255.255",
+                                        "nxt-hop-rds-flg": "no",
+                                        "ip6-plcy-addr": "::",
+                                        "ip6-plcy-addr-rds": "no",
+                                        "map-ipv4-addr": "0.0.0.0",
+                                        "map-ipv4-prefix-addr": "0.0.0.0",
+                                        "map-ipv4-prefix-len": 0,
+                                        "map-psid": 0,
+                                        "map-psid-offet": 0,
+                                        "nat-ipaddr": "0.0.0.0",
+                                        "nat-start-port": 0,
+                                        "nat-end-port": 0
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

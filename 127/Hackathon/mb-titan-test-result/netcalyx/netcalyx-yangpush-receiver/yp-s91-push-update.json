@@ -1,0 +1,77 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-26T14:11:30.002Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 5,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 91,
+                "ietf-yp-observation:timestamp": "2026-10-26T14:11:30.002Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "Cisco-IOS-XR-ptp-oper:ptp": {
+                        "Cisco-IOS-XR-ptp-pd-oper:platform": {
+                            "servo": {
+                                "lock-status": 2,
+                                "running": true,
+                                "device-status": "PHASE_LOCKED",
+                                "log-level": 0,
+                                "phase-accuracy-last": "0",
+                                "num-sync-timestamp": 4411970,
+                                "num-delay-timestamp": 4447550,
+                                "num-set-time": 1,
+                                "num-step-time": 1,
+                                "num-adjust-freq": 2206418,
+                                "num-adjust-freq-time": 0,
+                                "last-adjust-freq": 1,
+                                "last-step-time": 47825000,
+                                "num-discard-sync-timestamp": 0,
+                                "num-discard-delay-timestamp": 0,
+                                "last-set-time": {
+                                    "second": 1792747782,
+                                    "nano-second": 0
+                                },
+                                "flagof-last-set-time": false,
+                                "last-received-t1": {
+                                    "second": 1793023926,
+                                    "nano-second": 975500069
+                                },
+                                "last-received-t2": {
+                                    "second": 1793023926,
+                                    "nano-second": 975500705
+                                },
+                                "last-received-t3": {
+                                    "second": 1793023926,
+                                    "nano-second": 996112693
+                                },
+                                "last-received-t4": {
+                                    "second": 1793023926,
+                                    "nano-second": 996113329
+                                },
+                                "pre-received-t1": {
+                                    "second": 1793023926,
+                                    "nano-second": 913000069
+                                },
+                                "pre-received-t2": {
+                                    "second": 1793023926,
+                                    "nano-second": 913000705
+                                },
+                                "pre-received-t3": {
+                                    "second": 1793023926,
+                                    "nano-second": 936091092
+                                },
+                                "pre-received-t4": {
+                                    "second": 1793023926,
+                                    "nano-second": 936091729
+                                },
+                                "offset-from-master": "0",
+                                "mean-path-delay": "636",
+                                "servo-mode": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

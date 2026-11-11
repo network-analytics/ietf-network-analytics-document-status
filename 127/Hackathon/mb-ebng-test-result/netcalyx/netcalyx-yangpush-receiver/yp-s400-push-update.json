@@ -1,0 +1,587 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:37.623Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 157,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 400,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:34.714Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-ifm:ifm": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Virtual-Template0",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "NULL0",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "GigabitEthernet0/0/0",
+                                    "common-statistics": {
+                                        "in-bit-rate": "8106"
+                                    }
+                                },
+                                {
+                                    "name": "HP-GE1/3/0",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/8",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/9",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/10",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/11",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/12",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/13",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/14",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/15",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/16",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/17",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/18",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/19",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/20",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/21",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/22",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/23",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/24",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/25",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/26",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/27",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/28",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/29",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/30",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/31",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/32",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/33",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/34",
+                                    "common-statistics": {
+                                        "in-bit-rate": "17516"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/35",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/44",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/45",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/46",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/47",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/48",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/49",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/50",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/51",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/52",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/53",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/54",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/55",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/56",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/57",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/58",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/59",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/60",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/61",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/62",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/63",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/64",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/65",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/66",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/67",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/68",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/69",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/70",
+                                    "common-statistics": {
+                                        "in-bit-rate": "1303"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/71",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/2",
+                                    "common-statistics": {
+                                        "in-bit-rate": "1777"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/6",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/38",
+                                    "common-statistics": {
+                                        "in-bit-rate": "515055"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/42",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1",
+                                    "common-statistics": {
+                                        "in-bit-rate": "1777"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2",
+                                    "common-statistics": {
+                                        "in-bit-rate": "465807"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk50",
+                                    "common-statistics": {
+                                        "in-bit-rate": "18475"
+                                    }
+                                },
+                                {
+                                    "name": "Virtual-Template1",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack10",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack11",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack12",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1001",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1002",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1003",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack2000",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack0",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack31",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.20",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.30",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.40",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.50",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4033",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4031",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.20",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.30",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.40",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.50",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4033",
+                                    "common-statistics": {
+                                        "in-bit-rate": "508464"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4031",
+                                    "common-statistics": {
+                                        "in-bit-rate": "8864"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4030",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4032",
+                                    "common-statistics": {
+                                        "in-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4030",
+                                    "common-statistics": {
+                                        "in-bit-rate": "7904"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4032",
+                                    "common-statistics": {
+                                        "in-bit-rate": "8424"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

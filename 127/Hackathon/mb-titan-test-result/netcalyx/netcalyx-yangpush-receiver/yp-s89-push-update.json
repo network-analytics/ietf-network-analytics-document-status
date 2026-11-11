@@ -1,0 +1,57 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-26T14:11:30.000Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 5,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 89,
+                "ietf-yp-observation:timestamp": "2026-10-26T14:11:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "Cisco-IOS-XR-ptp-oper:ptp": {
+                        "advertised-clock": {
+                            "clock-properties": {
+                                "clock-id": "9567906204342090177",
+                                "priority1": 128,
+                                "priority2": 10,
+                                "class": 6,
+                                "accuracy": 33,
+                                "offset-log-variance": 20061,
+                                "steps-removed": 5,
+                                "time-source": "gps",
+                                "utc-offset": {
+                                    "current-offset": 37,
+                                    "offset-valid": true
+                                },
+                                "frequency-traceable": true,
+                                "time-traceable": true,
+                                "timescale": "ptp",
+                                "leap-seconds": "none",
+                                "receiver": {
+                                    "clock-id": "7208122254257213440",
+                                    "port-number": 1
+                                },
+                                "is-receiver-valid": true,
+                                "sender": {
+                                    "clock-id": "11881370438467845889",
+                                    "port-number": 5
+                                },
+                                "is-sender-valid": true,
+                                "local": false,
+                                "configured-clock-class": 0,
+                                "configured-priority": 10,
+                                "is-alternate-master": false
+                            },
+                            "domain": 24,
+                            "time-source-configured": false,
+                            "received-time-source": "internal-oscillator",
+                            "timescale-configured": false,
+                            "received-timescale": "ptp"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:00:32.560Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 15,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:32.550Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 3021116857,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "chassis.0",
+                                "huawei-energy-management-an:energy-consumption": {
+                                    "total-energy-consumption": 14955,
+                                    "average-power": 573567,
+                                    "max-power": 577332,
+                                    "min-power": 569909,
+                                    "average-voltage": 53500,
+                                    "max-voltage": 53500,
+                                    "min-voltage": 53500,
+                                    "average-current": 10,
+                                    "max-current": 10,
+                                    "min-current": 10,
+                                    "saved-power": 0,
+                                    "temperature": 2800
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

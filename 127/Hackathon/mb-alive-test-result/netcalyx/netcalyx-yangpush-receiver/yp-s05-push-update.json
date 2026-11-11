@@ -1,0 +1,71 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:50:31.085Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 25,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 5,
+                "ietf-yp-observation:timestamp": "2026-09-10T11:50:31.090Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "huawei-devm:devm": {
+                        "ports": {
+                            "port": [
+                                {
+                                    "position": "0/1/0",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                            "tx-power": "Tx Power Total:   7.23dBm",
+                                            "rx-power": "Rx Power Total:  -7.81dBm,"
+                                        }
+                                    }
+                                },
+                                {
+                                    "position": "0/1/1",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "position": "0/1/2",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                            "tx-power": "Tx Power Total:   6.73dBm",
+                                            "rx-power": "Rx Power Total:   6.55dBm,"
+                                        }
+                                    }
+                                },
+                                {
+                                    "position": "0/1/3",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "position": "0/1/5",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "position": "0/1/6",
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                            "tx-power": "Tx Power Total:   3.19dBm",
+                                            "rx-power": "Rx Power Total: -33.97dBm,"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

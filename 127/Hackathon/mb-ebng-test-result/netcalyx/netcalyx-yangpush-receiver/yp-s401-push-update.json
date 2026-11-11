@@ -1,0 +1,587 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:44.833Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 179,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 401,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:36.716Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-ifm:ifm": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Virtual-Template0",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "NULL0",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "GigabitEthernet0/0/0",
+                                    "common-statistics": {
+                                        "out-bit-rate": "1324882"
+                                    }
+                                },
+                                {
+                                    "name": "HP-GE1/3/0",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/8",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/9",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/10",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/11",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/12",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/13",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/14",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/15",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/16",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/17",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/18",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/19",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/20",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/21",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/22",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/23",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/24",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/25",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/26",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/27",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/28",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/29",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/30",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/31",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/32",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/33",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/34",
+                                    "common-statistics": {
+                                        "out-bit-rate": "8943"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/35",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/44",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/45",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/46",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/47",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/48",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/49",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/50",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/51",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/52",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/53",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/54",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/55",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/56",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/57",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/58",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/59",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/60",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/61",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/62",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/63",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/64",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/65",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/66",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/67",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/68",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/69",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/70",
+                                    "common-statistics": {
+                                        "out-bit-rate": "10902"
+                                    }
+                                },
+                                {
+                                    "name": "100GE0/1/71",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/2",
+                                    "common-statistics": {
+                                        "out-bit-rate": "3798"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/6",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/38",
+                                    "common-statistics": {
+                                        "out-bit-rate": "640861"
+                                    }
+                                },
+                                {
+                                    "name": "400GE0/1/42",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1",
+                                    "common-statistics": {
+                                        "out-bit-rate": "3798"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2",
+                                    "common-statistics": {
+                                        "out-bit-rate": "548888"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk50",
+                                    "common-statistics": {
+                                        "out-bit-rate": "19583"
+                                    }
+                                },
+                                {
+                                    "name": "Virtual-Template1",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack10",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack11",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack12",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1001",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1002",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1003",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack2000",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack0",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack1",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "LoopBack31",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.20",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.30",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.40",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.50",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4033",
+                                    "common-statistics": {
+                                        "out-bit-rate": "77004"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4031",
+                                    "common-statistics": {
+                                        "out-bit-rate": "112"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.20",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.30",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.40",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.50",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4033",
+                                    "common-statistics": {
+                                        "out-bit-rate": "499728"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4031",
+                                    "common-statistics": {
+                                        "out-bit-rate": "56"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4030",
+                                    "common-statistics": {
+                                        "out-bit-rate": "1116"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk1.4032",
+                                    "common-statistics": {
+                                        "out-bit-rate": "27764"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4030",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                },
+                                {
+                                    "name": "Eth-Trunk2.4032",
+                                    "common-statistics": {
+                                        "out-bit-rate": "0"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

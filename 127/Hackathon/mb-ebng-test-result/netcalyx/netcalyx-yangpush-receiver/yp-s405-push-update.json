@@ -1,0 +1,27 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:44.623Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 178,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 405,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:43.021Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "local-system-data": {
+                            "chassis-id-subtype": "mac-address",
+                            "chassis-id": "60ce-417b-4205",
+                            "system-name": "ipt-lss923-a-mbi-05",
+                            "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.260 (NetEngine 8000 V800R026C00SPC300T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 F2C\r\n",
+                            "system-capabilities-supported": "bridge router",
+                            "system-capabilities-enabled": "bridge router"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

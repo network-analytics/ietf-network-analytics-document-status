@@ -1,0 +1,38 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:22:12.789589173+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6429,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 106,
+                "datastore-contents": {
+                    "vrouter:state": {
+                        "vrouter-tracker:tracker": {
+                            "vrouter-pm:icmp-rtt": [
+                                {
+                                    "name": "daisy-ce",
+                                    "address": "192.0.2.12",
+                                    "vrf": "main",
+                                    "l3vrf": "A9",
+                                    "source": "192.0.2.58",
+                                    "interface": "vlan-584",
+                                    "period": 60000,
+                                    "count": 10,
+                                    "timestamp": "1970-01-01 00:00:00.000000",
+                                    "min-rtt": 0,
+                                    "max-rtt": 0,
+                                    "average-rtt": 0,
+                                    "loss-ratio": 100
+                                }
+                            ]
+                        }
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-10-22T10:22:12.789697096+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}

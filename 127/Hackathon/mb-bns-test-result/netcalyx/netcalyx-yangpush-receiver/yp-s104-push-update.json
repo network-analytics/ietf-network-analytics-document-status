@@ -1,0 +1,519 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:21:28.771404656+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6423,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 104,
+                "datastore-contents": {
+                    "ietf-alarms:alarms": {
+                        "alarm-list": {
+                            "number-of-alarms": 18,
+                            "last-changed": "2026-10-20T17:54:11.467444+00:00",
+                            "alarm": [
+                                {
+                                    "resource": "/system/fast-path/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "fast-path",
+                                    "time-created": "2026-10-20T17:53:39.787816+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:46.325293+00:00",
+                                    "last-changed": "2026-10-20T17:53:56.385341+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The fast-path service is up as configured.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:56.385341+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The fast-path service is up as configured."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:46.325293+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The fast-path service is down when configured up."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.787805+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The fast-path service is unknown when configured up."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/lldp/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "lldp",
+                                    "time-created": "2026-10-20T17:53:39.800834+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.800823+00:00",
+                                    "last-changed": "2026-10-20T17:53:43.329983+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The lldp service is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:43.329983+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The lldp service is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.800823+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The lldp service is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/loopback[name=\"lo0\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "loopback",
+                                    "time-created": "2026-10-20T17:53:39.809414+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.809404+00:00",
+                                    "last-changed": "2026-10-20T17:53:43.384353+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The lo0 loopback is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:43.384353+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The lo0 loopback is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.809404+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The lo0 loopback is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/l3vrf[name=\"A9\"]/interface/loopback[name=\"Loopback-A9\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "loopback",
+                                    "time-created": "2026-10-20T17:53:39.816433+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.816423+00:00",
+                                    "last-changed": "2026-10-20T17:53:44.331957+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The Loopback-A9 loopback is up as configured in vrf main l3vrf A9.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:44.331957+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The Loopback-A9 loopback is up as configured in vrf main l3vrf A9."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.816423+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The Loopback-A9 loopback is unknown when configured up in vrf main l3vrf A9."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"MGMT-VRF\"]/interface/physical[name=\"ens160\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "physical",
+                                    "time-created": "2026-10-20T17:53:39.830365+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.830355+00:00",
+                                    "last-changed": "2026-10-20T17:53:43.430281+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The ens160 physical is up as configured in vrf MGMT-VRF.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:43.430281+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ens160 physical is up as configured in vrf MGMT-VRF."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.830355+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ens160 physical is unknown when configured up in vrf MGMT-VRF."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/physical[name=\"ens192\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "physical",
+                                    "time-created": "2026-10-20T17:53:39.839659+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.336025+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.350676+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The ens192 physical is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.350676+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ens192 physical is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.336025+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ens192 physical is unknown when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:43.406646+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ens192 physical is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:42.424135+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ens192 physical is down when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.839647+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ens192 physical is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/snmp/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "snmp",
+                                    "time-created": "2026-10-20T17:53:39.850409+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.850397+00:00",
+                                    "last-changed": "2026-10-20T17:53:43.463255+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The snmp service is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:43.463255+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The snmp service is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.850397+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The snmp service is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"MGMT-VRF\"]/ssh-server/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "ssh-server",
+                                    "time-created": "2026-10-20T17:53:39.886374+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.886361+00:00",
+                                    "last-changed": "2026-10-20T17:53:43.507591+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The ssh-server service is up as configured in vrf MGMT-VRF.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:43.507591+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ssh-server service is up as configured in vrf MGMT-VRF."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.886361+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ssh-server service is unknown when configured up in vrf MGMT-VRF."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/ssh-server/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "ssh-server",
+                                    "time-created": "2026-10-20T17:53:39.895681+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.895669+00:00",
+                                    "last-changed": "2026-10-20T17:53:42.454309+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The ssh-server service is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:42.454309+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ssh-server service is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.895669+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ssh-server service is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/vlan[name=\"vlan-582\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "vlan",
+                                    "time-created": "2026-10-20T17:53:39.905770+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.346407+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.363372+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The vlan-582 vlan is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.363372+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-582 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.346407+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-582 vlan is unknown when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:43.568603+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-582 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.905757+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-582 vlan is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/vlan[name=\"vlan-583\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "vlan",
+                                    "time-created": "2026-10-20T17:53:39.914030+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.357886+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.374121+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The vlan-583 vlan is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.374121+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-583 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.357886+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-583 vlan is unknown when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:43.549970+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-583 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.914016+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-583 vlan is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/vlan[name=\"vlan-584\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "vlan",
+                                    "time-created": "2026-10-20T17:53:39.923568+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.350162+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.367261+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The vlan-584 vlan is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.367261+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-584 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.350162+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-584 vlan is unknown when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:43.596958+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-584 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.923554+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-584 vlan is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/interface/vlan[name=\"vlan-585\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "vlan",
+                                    "time-created": "2026-10-20T17:53:39.934956+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.354392+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.370756+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The vlan-585 vlan is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.370756+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-585 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.354392+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-585 vlan is unknown when configured up in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:43.528832+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-585 vlan is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.934941+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-585 vlan is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/l3vrf[name=\"A9\"]/interface/vlan[name=\"vlan-589\"]/enabled",
+                                    "alarm-type-id": "vrouter-alarm:link-alarm",
+                                    "alarm-type-qualifier": "vlan",
+                                    "time-created": "2026-10-20T17:53:39.943714+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.363519+00:00",
+                                    "last-changed": "2026-10-20T17:53:54.379413+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The vlan-589 vlan is up as configured in vrf main l3vrf A9.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:54.379413+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-589 vlan is up as configured in vrf main l3vrf A9."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.363519+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-589 vlan is unknown when configured up in vrf main l3vrf A9."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:44.416980+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The vlan-589 vlan is up as configured in vrf main l3vrf A9."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.943700+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The vlan-589 vlan is unknown when configured up in vrf main l3vrf A9."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/ipfix/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "ipfix",
+                                    "time-created": "2026-10-20T17:53:39.980846+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:39.980831+00:00",
+                                    "last-changed": "2026-10-20T17:53:56.397996+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The ipfix service is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:56.397996+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The ipfix service is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:39.980831+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The ipfix service is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/system/license/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "license",
+                                    "time-created": "2026-10-20T17:53:40.011231+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:42.483337+00:00",
+                                    "last-changed": "2026-10-20T17:53:47.368450+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The license service is up as configured.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:47.368450+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The license service is up as configured."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:42.483337+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The license service is down when configured up."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:40.011216+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The license service is unknown when configured up."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/system/license/online/connected",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "license-connected",
+                                    "time-created": "2026-10-20T17:53:40.021077+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:47.373586+00:00",
+                                    "last-changed": "2026-10-20T17:54:11.467444+00:00",
+                                    "perceived-severity": "warning",
+                                    "alarm-text": "The license server is reachable.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:54:11.467444+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The license server is reachable."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:47.373586+00:00",
+                                            "perceived-severity": "warning",
+                                            "alarm-text": "The licensing server has been unreachable for 0 days."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:40.021064+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The licensing server has been unreachable for an unknown time."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "resource": "/vrf[name=\"main\"]/routing/bgp/enabled",
+                                    "alarm-type-id": "vrouter-alarm:service-alarm",
+                                    "alarm-type-qualifier": "bgp",
+                                    "time-created": "2026-10-20T17:53:40.028834+00:00",
+                                    "is-cleared": true,
+                                    "last-raised": "2026-10-20T17:53:40.028818+00:00",
+                                    "last-changed": "2026-10-20T17:53:57.608245+00:00",
+                                    "perceived-severity": "major",
+                                    "alarm-text": "The bgp service is up as configured in vrf main.",
+                                    "status-change": [
+                                        {
+                                            "time": "2026-10-20T17:53:57.608245+00:00",
+                                            "perceived-severity": "cleared",
+                                            "alarm-text": "The bgp service is up as configured in vrf main."
+                                        },
+                                        {
+                                            "time": "2026-10-20T17:53:40.028818+00:00",
+                                            "perceived-severity": "major",
+                                            "alarm-text": "The bgp service is unknown when configured up in vrf main."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-10-22T10:21:28.788062672+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}

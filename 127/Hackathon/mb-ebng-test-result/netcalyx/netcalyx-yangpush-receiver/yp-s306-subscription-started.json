@@ -1,0 +1,30 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:58:29.693Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 32,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 306,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/huawei-debug:debug/board-cpu-core-infos/board-cpu-core-info",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    16843793
+                ],
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "huawei-debug",
+                        "revision": "2026-05-26"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "190100522",
+                "ietf-yang-push:periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30Z"
+                }
+            }
+        }
+    }
+}

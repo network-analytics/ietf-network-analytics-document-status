@@ -1,0 +1,32 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:31.643Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 127,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 215,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.626Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-cgn:cgn": {
+                        "session-table-usages": {
+                            "session-table-usage": [
+                                {
+                                    "slot": "1",
+                                    "engine": "NA",
+                                    "card": "NA",
+                                    "total-number": 2097152,
+                                    "used-number": 10,
+                                    "free-number": 2097142,
+                                    "usage": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

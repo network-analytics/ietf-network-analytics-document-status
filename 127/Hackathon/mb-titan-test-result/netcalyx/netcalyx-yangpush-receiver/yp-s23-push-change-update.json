@@ -1,0 +1,59 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:36:54.362Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 23,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:36:54.362Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "1",
+                        "edit": [
+                            {
+                                "edit-id": "1",
+                                "operation": "replace",
+                                "target": "/openconfig-network-instance:network-instances/network-instance[name='DEFAULT']/protocols/protocol[identifier='ISIS'][name='1']/isis/interfaces/interface[interface-id='Bundle-Ether5791']/levels/level[level-number='1']/adjacencies",
+                                "value": {
+                                    "openconfig-network-instance:adjacencies": {
+                                        "adjacency": {
+                                            "system-id": "0000.0000.0006",
+                                            "state": {
+                                                "system-id": "0000.0000.0006",
+                                                "neighbor-ipv4-address": "0.0.0.0",
+                                                "neighbor-ipv6-address": "fe80::3ea3:7eff:fe2c:7e96",
+                                                "neighbor-snpa": "3ca3.7e2c.7e96",
+                                                "local-extended-circuit-id": 149,
+                                                "neighbor-extended-circuit-id": 0,
+                                                "priority": 64,
+                                                "dis-system-id": "0000.0000.0091",
+                                                "neighbor-circuit-type": "LEVEL_1",
+                                                "adjacency-type": "LEVEL_1",
+                                                "adjacency-state": "DOWN",
+                                                "multi-topology": true,
+                                                "topology": [
+                                                    "IPV6_UNICAST"
+                                                ],
+                                                "restart-support": true,
+                                                "restart-suppress": false,
+                                                "restart-status": false,
+                                                "area-address": [
+                                                    "10"
+                                                ],
+                                                "nlpid": [
+                                                    "IPV6"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

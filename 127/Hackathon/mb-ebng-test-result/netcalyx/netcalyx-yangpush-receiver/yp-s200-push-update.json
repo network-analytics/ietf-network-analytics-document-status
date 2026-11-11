@@ -1,0 +1,68 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-09T11:59:30.933Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 103,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 200,
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.922Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "datastore-contents": {
+                    "huawei-bras-dhcp-access:bras-dhcp-access": {
+                        "dhcp-access-statistics": {
+                            "client-send-packets": 2696270,
+                            "received-discover-packets": 43397,
+                            "received-request-packets": 2619884,
+                            "bootp-request-packets": 0,
+                            "select-request-packets": 42601,
+                            "reboot-request-packets": 375,
+                            "renew-request-packets": 2575929,
+                            "rebind-request-packets": 251,
+                            "received-decline-packets": 0,
+                            "received-release-packets": 32989,
+                            "received-inform-packets": 0,
+                            "server-send-packets": 2641017,
+                            "received-offer-packets": 42601,
+                            "received-ack-packets": 2598052,
+                            "received-nak-packets": 364,
+                            "received-forcerenew-packets": 0,
+                            "forbidden-discover-packets": 0,
+                            "forbidden-request-packets": 0,
+                            "client-option-errors": 0,
+                            "client-hops-errors": 0,
+                            "client-hardware-type-errors": 0,
+                            "client-length-errors": 0,
+                            "client-mac-errors": 0,
+                            "client-null-mac-errors": 0,
+                            "client-sname-errors": 0,
+                            "client-boot-file-errors": 0,
+                            "server-option-errors": 0,
+                            "access-limit-packets": 0,
+                            "invalid-server-ip-offer-packets": 0,
+                            "invalid-server-ip-nak-packets": 0,
+                            "invalid-server-ip-nak-new-packets": 364,
+                            "server-hardware-type-errors": 0,
+                            "server-length-errors": 0,
+                            "server-mac-errors": 0,
+                            "server-sname-errors": 0,
+                            "server-bootfile-errors": 0,
+                            "confict-ip-offer-packets": 0,
+                            "confict-ip-ack-packets": 0,
+                            "sent-client-packets": 2640665,
+                            "sent-offer-packets": 42601,
+                            "sent-ack-packets": 2598052,
+                            "sent-nak-packets": 11,
+                            "sent-server-packets": 2781457,
+                            "sent-discover-packets": 85732,
+                            "sent-request-packets": 2662361,
+                            "sent-release-packets": 33364,
+                            "sent-decline-packets": 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

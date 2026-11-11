@@ -1,0 +1,91 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:55:45.510Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 318,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 13,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:45.510Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces-state": {
+                        "interface": [
+                            {
+                                "name": "v-ani.0.1.0.0",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "100577",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "63097472602",
+                                            "corrected-fec-bytes": "100589",
+                                            "huawei-interface-statistics-mgt:gem-frame-hec-errors": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.1",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "3496082",
+                                            "uncorrectable-fec-codewords": "2909",
+                                            "in-fec-codewords": "62678893104",
+                                            "corrected-fec-bytes": "6631499",
+                                            "huawei-interface-statistics-mgt:gem-frame-hec-errors": 9
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.2",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "0",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "153065923955",
+                                            "corrected-fec-bytes": "0",
+                                            "huawei-interface-statistics-mgt:gem-frame-hec-errors": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.3",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "0",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "153138908702",
+                                            "corrected-fec-bytes": "0",
+                                            "huawei-interface-statistics-mgt:gem-frame-hec-errors": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.4",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-codewords": "74187008",
+                                            "uncorrectable-fec-codewords": "0",
+                                            "in-fec-codewords": "153806200354",
+                                            "corrected-fec-bytes": "74250620",
+                                            "huawei-interface-statistics-mgt:gem-frame-hec-errors": 0
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

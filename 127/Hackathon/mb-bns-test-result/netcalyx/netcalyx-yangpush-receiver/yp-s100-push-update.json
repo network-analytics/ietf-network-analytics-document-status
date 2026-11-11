@@ -1,0 +1,29 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:21:26.940755692+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6421,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 100,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Loopback-A9-main",
+                                "type": "iana-if-type:softwareLoopback",
+                                "enabled": true,
+                                "oper-status": "up",
+                                "if-index": 12,
+                                "phys-address": "f2:b0:6b:db:60:45"
+                            }
+                        ]
+                    }
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-10-22T10:21:28.783096647+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.003Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 22,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.003Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Bundle-Ether5791",
+                                    "members": {
+                                        "member": [
+                                            {
+                                                "interface": "TenGigE0/0/0/12",
+                                                "state": {
+                                                    "interface": "TenGigE0/0/0/12",
+                                                    "port-priority": 32768,
+                                                    "activity": "ACTIVE",
+                                                    "timeout": "LONG",
+                                                    "synchronization": "IN_SYNC",
+                                                    "aggregatable": true,
+                                                    "collecting": true,
+                                                    "distributing": true,
+                                                    "system-id": "ac:bc:d9:73:d8:45",
+                                                    "oper-key": 5791,
+                                                    "partner-id": "3c:a3:7e:2c:7e:96",
+                                                    "partner-key": 40769,
+                                                    "port-num": 2,
+                                                    "partner-port-num": 1,
+                                                    "last-change": "0",
+                                                    "counters": {
+                                                        "lacp-in-pkts": "85328",
+                                                        "lacp-out-pkts": "85232",
+                                                        "lacp-rx-errors": "0",
+                                                        "lacp-unknown-errors": "0",
+                                                        "lacp-errors": "0",
+                                                        "lacp-timeout-transitions": "0"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "interface": "TenGigE0/0/0/24",
+                                                "state": {
+                                                    "interface": "TenGigE0/0/0/24",
+                                                    "port-priority": 32768,
+                                                    "activity": "ACTIVE",
+                                                    "timeout": "LONG",
+                                                    "synchronization": "IN_SYNC",
+                                                    "aggregatable": true,
+                                                    "collecting": true,
+                                                    "distributing": true,
+                                                    "system-id": "ac:bc:d9:73:d8:45",
+                                                    "oper-key": 5791,
+                                                    "partner-id": "3c:a3:7e:2c:7e:96",
+                                                    "partner-key": 40769,
+                                                    "port-num": 1,
+                                                    "partner-port-num": 2,
+                                                    "last-change": "0",
+                                                    "counters": {
+                                                        "lacp-in-pkts": "85328",
+                                                        "lacp-out-pkts": "85232",
+                                                        "lacp-rx-errors": "0",
+                                                        "lacp-unknown-errors": "0",
+                                                        "lacp-errors": "0",
+                                                        "lacp-timeout-transitions": "0"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "Bundle-Ether7991",
+                                    "members": {
+                                        "member": [
+                                            {
+                                                "interface": "HundredGigE0/0/0/11",
+                                                "state": {
+                                                    "interface": "HundredGigE0/0/0/11",
+                                                    "port-priority": 32768,
+                                                    "activity": "ACTIVE",
+                                                    "timeout": "LONG",
+                                                    "synchronization": "IN_SYNC",
+                                                    "aggregatable": true,
+                                                    "collecting": true,
+                                                    "distributing": true,
+                                                    "system-id": "ac:bc:d9:73:d8:45",
+                                                    "oper-key": 7991,
+                                                    "partner-id": "74:8f:c2:55:69:06",
+                                                    "partner-key": 7991,
+                                                    "port-num": 3,
+                                                    "partner-port-num": 1,
+                                                    "last-change": "0",
+                                                    "counters": {
+                                                        "lacp-in-pkts": "85281",
+                                                        "lacp-out-pkts": "85213",
+                                                        "lacp-rx-errors": "0",
+                                                        "lacp-unknown-errors": "0",
+                                                        "lacp-errors": "0",
+                                                        "lacp-timeout-transitions": "0"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

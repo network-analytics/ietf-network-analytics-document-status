@@ -1,0 +1,30 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:48:45.496Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 2,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 2,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/huawei-devm:devm/chassiss/chassis/huawei-driver:power-supply-attribute",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    16843789
+                ],
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "huawei-driver",
+                        "revision": "2026-06-16"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "2300156437",
+                "ietf-yang-push:periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30Z"
+                }
+            }
+        }
+    }
+}

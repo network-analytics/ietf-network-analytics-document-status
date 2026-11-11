@@ -1,0 +1,21 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-24T11:39:14.068Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 17,
+                "ietf-yp-observation:timestamp": "2026-04-24T11:39:14.068Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "state": {
+                            "system-priority": 32768
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
