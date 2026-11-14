@@ -1,0 +1,80 @@
+{
+  "partition": 0,
+  "offset": 47803,
+  "headers": {
+    "schema-id": "1696",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-26T14:06:43.740Z",
+        "collection-timestamp": "2026-11-12T06:09:40.218682085Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 55548,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 84,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "Cisco-IOS-XR-qos-ma-oper",
+              "revision": "2025-08-26"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+              "encoding": "ietf-subscribed-notifications:encode-json",
+              "id": 84,
+              "ietf-yang-push-revision:module-version": [
+                {
+                  "name": "Cisco-IOS-XR-qos-ma-oper",
+                  "revision": "2025-08-26"
+                }
+              ],
+              "ietf-yang-push-revision:yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3",
+              "ietf-yang-push:datastore": "ietf-datastores:operational",
+              "ietf-yang-push:datastore-xpath-filter": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
+              "ietf-yang-push:periodic": {
+                "anchor-time": "2025-01-01T00:00:30Z",
+                "period": 6000
+              },
+              "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+          },
+          "event-time": "2026-10-26T14:06:43.740Z",
+          "hostname": "ipt-age923-b-aac-01",
+          "sequence-number": 0
+        }
+      }
+    }
+  }
+}

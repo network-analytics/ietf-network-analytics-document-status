@@ -1,0 +1,139 @@
+{
+  "schemaType": "YANG",
+  "schema": "module ietf-telemetry-message {\n  yang-version 1.1;\n  namespace \"urn:ietf:params:xml:ns:yang:ietf-telemetry-message\";\n  prefix tm;\n\n  import ietf-yang-types {\n    prefix yang;\n    reference\n      \"RFC 6991: Common YANG Data Types\";\n  }\n  import ietf-inet-types {\n    prefix inet;\n    reference\n      \"RFC 6991: Common YANG Data Types\";\n  }\n  import ietf-platform-manifest {\n    prefix p-mf;\n    reference\n      \"draft-ietf-opsawg-collected-data-manifest: A Data Manifest for\n       Contextualized Telemetry Data\";\n  }\n  import ietf-yang-structure-ext {\n    prefix sx;\n    reference\n      \"RFC 8791: YANG Data Structure Extensions\";\n  }\n\n  organization\n    \"IETF Draft\";\n  contact\n    \"Author:    Ahmed Elhassany\n                <mailto:ahmed.elhassany@swisscom.com>\n\n                Thomas Graf\n                <mailto:thomas.graf@swisscom.com>\";\n  description\n    \"This YANG module defines an extensible message schema to be used at\n     data collection to transform Network Telemetry messages towards\n     external systems such as Message Brokers.\n\n     Copyright (c) 2025 IETF Trust and the persons identified as\n       authors of the code.  All rights reserved.\n\n     Redistribution and use in source and binary forms, with or without\n     modification, is permitted pursuant to, and subject to the license\n     terms contained in, the Revised BSD License set forth in Section\n     4.c of the IETF Trust's Legal Provisions Relating to IETF Documents\n     (https://trustee.ietf.org/license-info).\n\n     This version of this YANG module is part of RFC XXXX; see the RFC\n     itself for full legal notices.\";\n\n  revision 2025-10-19 {\n    description\n      \"Initial revision.\";\n    reference\n      \"RFC XXXX\";\n  }\n\n  identity session-protocol {\n    description\n      \"Base identity to represent session protocols.\";\n  }\n\n  identity yang-push {\n    base session-protocol;\n    description\n      \"YANG-Push in RFC 8640 or RFC 8641 or RFC 8650.\";\n    reference\n      \"RFC 8640, RFC 8641, RFC 8650: YANG-Push Events and Notifications\n       for Datastores.\";\n  }\n\n  identity netconf {\n    base session-protocol;\n    description\n      \"NETCONF GET RPC as described in RFC 6241.\";\n    reference\n      \"RFC 6241: NETCONF GET RPC.\";\n  }\n\n  identity restconf {\n    base session-protocol;\n    description\n      \"RESTCONF HTTP GET as described in RFC 8040.\";\n    reference\n      \"RFC 8040: HTTP GET.\";\n  }\n\n  feature network-node-manifest {\n    description\n      \"This feature indicates the network node manifest support.\";\n  }\n\n  feature data-collection-manifest {\n    description\n      \"This feature indicates the data collection manifest support.\";\n  }\n\n  typedef telemetry-notification-event-type {\n    type enumeration {\n      enum log {\n        description\n          \"Collector is reporting the event as it arrived from the\n           network element.\";\n      }\n      enum update {\n        description\n          \"Collector has updated an entry inside its local cache.\n           This could be triggered by an event from the network for\n           instance interface operational status changed or an internal\n           event in the collector, such as a timer triggered to referesh\n           old enteries.\";\n      }\n      enum delete {\n        description\n          \"Collector has deleted an entry from its local cache.\";\n      }\n    }\n    description\n      \"Type of event reported by the collector.\";\n  }\n\n  typedef telemetry-session-protocol-type {\n    type identityref {\n      base session-protocol;\n    }\n    description\n      \"Network Telemetry protocol used to deliver the notification\n       between the network node and the data collector.\";\n  }\n\n  sx:structure message {\n    description\n      \"Telemetry message used within the Data Mesh\";\n    container network-node-manifest {\n      if-feature \"network-node-manifest\";\n      description\n        \"Contains the Data Manifest about the network node that\n         exported Network Telemetry data.\";\n      uses p-mf:platform-details;\n    }\n    container telemetry-message-metadata {\n      description\n        \"contains the session information about the session between the\n         collector and the network node and the publishing process\n         of the collector.\";\n      leaf node-export-timestamp {\n        type yang:date-and-time;\n        description\n          \"Timestamp when the Network Telemetry data has been exported\n           from network element. This can be obtained in YANG-Push from\n           event-time defined in draft-ietf-netconf-notif-envelope or\n           in IPFIX from the export time in the message header as\n           defined in RFC 7011 or in BMP from the timestamp in The\n           per-peer header as defined in RFC 7854.\";\n      }\n      leaf collection-timestamp {\n        type yang:date-and-time;\n        mandatory true;\n        description\n          \"Timestamp when the data collector collected the Network\n           Telemetry data from the network element.\";\n      }\n      leaf notification-event {\n        type telemetry-notification-event-type;\n        mandatory true;\n        description\n          \"Describes wherever the notification was received and forwarded\n           from the network node or generated or removed from the data\n           collector state cache.\";\n      }\n      leaf sequence-number {\n        type yang:counter32;\n        description\n          \"Unique unique sequence number for each published telemetry\n           message by the collector. The initial number is 1 and\n           counts up by 1 at every published telemetry message\n           until it reaches 4294967295 and wraps around.\";\n      }\n      leaf session-protocol {\n        type telemetry-session-protocol-type;\n        mandatory true;\n        description\n          \"Session protocol used to collect the Network Telemetry data\n           from the network node.\";\n      }\n      leaf export-address {\n        type inet:host;\n        mandatory true;\n        description\n          \"Network node IP address from where the Network Telemetry data\n           was exported from.\";\n      }\n      leaf export-port {\n        type inet:port-number;\n        description\n          \"Network node transport port number from where the Network\n           Telemetry data was exported.\";\n      }\n      leaf collection-address {\n        type inet:host;\n        description\n          \"Data collector IP address at which the Network Telemetry\n           data was collected.\";\n      }\n      leaf collection-port {\n        type inet:port-number;\n        description\n          \"Data collector transport port number at which the Network\n           Telemetry data was collected.\";\n      }\n    }\n    container data-collection-manifest {\n      if-feature \"data-collection-manifest\";\n      description\n        \"Contains the Data Manifest of the data collector which\n         collected the Network Telemetry data.\";\n      uses p-mf:platform-details;\n    }\n    container network-operator-metadata {\n      description\n        \"Network operator specific metadata added by the Network\n         Telemetry data collection.\";\n      list labels {\n        key \"name\";\n        description\n          \"Abritrary labels assigned by the data collector.\";\n        leaf name {\n          type string {\n            length \"1..max\";\n          }\n          description\n            \"Label name.\";\n        }\n        choice value {\n          mandatory true;\n          description\n            \"label value\";\n          choice number-choice {\n            description\n              \"Number value\";\n            leaf number-value {\n              type uint64;\n              description\n                \"Number value\";\n            }\n          }\n          choice string-choice {\n            description\n              \"String value\";\n            leaf string-value {\n              type string;\n              description\n                \"String value\";\n            }\n          }\n          choice anydata-choice {\n            description\n              \"YANG anydata value\";\n            anydata anydata-values {\n              description\n                \"anydata yang\";\n            }\n          }\n        }\n      }\n    }\n    anydata payload {\n      description\n        \"Message or notification received from network element.\";\n    }\n  }\n}",
+  "references": [
+    {
+      "name": "Cisco-IOS-XR-freqsync-oper",
+      "subject": "netcalyx.labCisco-IOS-XR-freqsync-oper",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-interfaces-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-interfaces-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-ip-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-ip-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-keystore-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-keystore-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-netconf-acm-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-netconf-acm-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-network-instance-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-network-instance-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-notification-capabilities-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-notification-capabilities-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-subscribed-notifications-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-subscribed-notifications-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-system-capabilities-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-system-capabilities-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-tls-common-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-tls-common-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-truststore-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-truststore-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-udp-notif-transport-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-udp-notif-transport-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-yang-library-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-yang-library-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-yang-push-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-yang-push-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-yang-push-revision-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-yang-push-revision-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-yang-schema-mount-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-yang-schema-mount-deviations",
+      "version": 1
+    },
+    {
+      "name": "cisco-xr-ietf-yp-notification-deviations",
+      "subject": "netcalyx.labcisco-xr-ietf-yp-notification-deviations",
+      "version": 1
+    },
+    {
+      "name": "ietf-inet-types",
+      "subject": "netcalyx.labietf-inet-types",
+      "version": 1
+    },
+    {
+      "name": "ietf-platform-manifest",
+      "subject": "netcalyx.labietf-platform-manifest",
+      "version": 1
+    },
+    {
+      "name": "ietf-yang-library-augmentedby",
+      "subject": "netcalyx.labietf-yang-library-augmentedby",
+      "version": 4
+    },
+    {
+      "name": "ietf-yang-push-telemetry-message",
+      "subject": "netcalyx.labietf-yang-push-telemetry-message",
+      "version": 5
+    },
+    {
+      "name": "ietf-yang-structure-ext",
+      "subject": "netcalyx.labietf-yang-structure-ext",
+      "version": 1
+    },
+    {
+      "name": "ietf-yang-types",
+      "subject": "netcalyx.labietf-yang-types",
+      "version": 1
+    },
+    {
+      "name": "ietf-yp-observation",
+      "subject": "netcalyx.labietf-yp-observation",
+      "version": 5
+    },
+    {
+      "name": "ietf-yp-transport-capabilities",
+      "subject": "netcalyx.labietf-yp-transport-capabilities",
+      "version": 4
+    }
+  ],
+  "metadata": {
+    "tags": {
+      "features": [
+        "data-collection-manifest",
+        "network-node-manifest"
+      ]
+    }
+  }
+}

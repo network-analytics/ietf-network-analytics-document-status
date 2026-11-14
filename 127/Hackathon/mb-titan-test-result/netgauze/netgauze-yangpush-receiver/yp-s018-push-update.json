@@ -1,0 +1,21 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "state": {
+                            "system-priority": 32768
+                        }
+                    }
+                },
+                "id": 18,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.000Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

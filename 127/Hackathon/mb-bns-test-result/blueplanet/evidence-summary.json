@@ -1,0 +1,77 @@
+{
+  "server": "10.190.33.167",
+  "date": "2026-11-11",
+  "topic": "telemetry-yang",
+  "partition": 0,
+  "start_offset": 47781,
+  "end_offset_exclusive": 47799,
+  "new_records": 18,
+  "subscription_ids_with_records": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "schema_ids": [
+    1588,
+    1589,
+    1591
+  ],
+  "message_types": [
+    "push-update",
+    "subscription-started"
+  ],
+  "sample_count": 8,
+  "schema_reference_versions": 40,
+  "blueplanet_consumer_validation": "Latest validated consumer result is the Nov 13 run in blueplanet_consumer_nov13_run; 18 records, 12 passed, 6 failed, and 0 leafref failures.",
+  "blueplanet_consumer_nov13_run": {
+    "date": "2026-11-13",
+    "topic": "telemetry-yang",
+    "partition": 0,
+    "start_offset": 52051,
+    "end_offset_exclusive": 52069,
+    "records": 18,
+    "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+    "collection_timestamp_start": "2026-11-13T07:20:36.420176343Z",
+    "collection_timestamp_end": "2026-11-13T07:21:12.291107065Z",
+    "payload_capture": {
+      "records_extracted": 18,
+      "schema_validation_enabled": false,
+      "note": "Raw capture STATUS markers are parse-only and are not used as validation outcomes."
+    },
+    "validated_outcome": {
+      "records": 18,
+      "passed": 12,
+      "failed": 6,
+      "subscription_started": {
+        "records": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "push_update": {
+        "records": 13,
+        "passed": 7,
+        "failed": 6
+      },
+      "failure": {
+        "subscription_id": 101,
+        "schema_id": 1589,
+        "offsets": [52057, 52059, 52061, 52063, 52065, 52067],
+        "sequence_numbers": [6899, 6906, 6913, 6920, 6927, 6934],
+        "error_tag": "data-missing",
+        "error_message": "missing mandatory schema node:if:statistics",
+        "interfaces": ["Loopback-A9-main", "Loppback-A9-A9"]
+      },
+      "leafref_failures": 0,
+      "outcome_source": "Previously verified BNS Java/AWE validation result, aligned with the payload identities extracted from the Nov 13 capture log."
+    }
+  },
+  "replay_udp_packets_sent": 60,
+  "replay_exit_code": 0,
+  "registry_failures": "YANG provider parsing errors and HTTP 422 for vrouter-aaa; response body and underlying exception not retained in the Registry log extract",
+  "receiver_validation_failures": [
+    "subscription 100: unresolved iana-if-type:softwareLoopback identityref",
+    "subscription 104: unresolved vrouter-alarm:service-alarm identityref"
+  ]
+}

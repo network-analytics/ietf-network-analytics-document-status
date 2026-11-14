@@ -1,0 +1,42 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "Bundle-Ether1000",
+                                    "state": {
+                                        "interval": "SLOW",
+                                        "lacp-mode": "ACTIVE",
+                                        "name": "Bundle-Ether1000",
+                                        "system-id-mac": "64:08:64:96:d0:86",
+                                        "system-priority": 32768
+                                    }
+                                },
+                                {
+                                    "name": "Bundle-Ether4000",
+                                    "state": {
+                                        "interval": "SLOW",
+                                        "lacp-mode": "ACTIVE",
+                                        "name": "Bundle-Ether4000",
+                                        "system-id-mac": "64:08:64:96:d0:86",
+                                        "system-priority": 32768
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 19,
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:06:57.872Z"
+            }
+        },
+        "event-time": "2026-10-26T14:06:57.872Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

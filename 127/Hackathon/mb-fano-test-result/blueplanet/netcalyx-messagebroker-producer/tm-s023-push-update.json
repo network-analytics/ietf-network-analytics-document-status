@@ -1,0 +1,156 @@
+{
+  "partition": 0,
+  "offset": 1551,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T14:52:52.990Z",
+        "collection-timestamp": "2026-11-05T11:50:31.334215829Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 23,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "on-change": {
+            "dampening-period": 500,
+            "sync-on-start": true
+          },
+          "module": [
+            {
+              "name": "bbf-xponani",
+              "revision": "2025-02-15"
+            },
+            {
+              "name": "bbf-xpon-ani-state",
+              "revision": "2025-12-16"
+            },
+            {
+              "name": "ietf-interfaces",
+              "revision": "2018-02-20"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "ietf-interfaces:interfaces-state": {
+                  "interface": [
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:06:15.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.1.0.0"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-down-cause": "losi-or-lobi",
+                          "last-down-time": "2026-10-19T12:56:16.60Z",
+                          "last-up-time": "2026-10-19T12:57:25.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.1.0.1"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:09:20.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.1.0.2"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:09:20.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.1.0.3"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:06:43.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.1.0.4"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:09:27.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.2.1.0"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:09:28.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.2.1.1"
+                    },
+                    {
+                      "bbf-xponani:ani": {
+                        "bbf-xpon-ani-state:running-info": {
+                          "last-up-time": "2026-10-19T12:09:28.60Z",
+                          "run-state": "up"
+                        }
+                      },
+                      "name": "ani.0.2.1.2"
+                    }
+                  ]
+                }
+              },
+              "id": 23,
+              "ietf-distributed-notif:message-publisher-id": 3021116857,
+              "ietf-yp-observation:point-in-time": "initial-state",
+              "ietf-yp-observation:timestamp": "2026-10-20T14:52:52.990Z"
+            }
+          },
+          "event-time": "2026-10-20T14:52:52.990Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 1
+        }
+      }
+    }
+  }
+}

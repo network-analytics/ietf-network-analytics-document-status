@@ -1,0 +1,113 @@
+{
+  "partition": 0,
+  "offset": 1553,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T14:52:52.790Z",
+        "collection-timestamp": "2026-11-05T11:50:32.890808369Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 25,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "on-change": {
+            "dampening-period": 500,
+            "sync-on-start": true
+          },
+          "module": [
+            {
+              "name": "bbf-hardware-types",
+              "revision": "2023-12-15"
+            },
+            {
+              "name": "ietf-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "iana-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "ietf-inet-types",
+              "revision": "2013-07-15"
+            },
+            {
+              "name": "ietf-yang-types",
+              "revision": "2013-07-15"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+              "dscp": 0,
+              "encoding": "ietf-subscribed-notifications:encode-json",
+              "id": 25,
+              "ietf-yang-push-revision:module-version": [
+                {
+                  "name": "bbf-hardware-types",
+                  "revision": "2023-12-15"
+                },
+                {
+                  "name": "ietf-hardware",
+                  "revision": "2018-03-13"
+                },
+                {
+                  "name": "iana-hardware",
+                  "revision": "2018-03-13"
+                },
+                {
+                  "name": "ietf-inet-types",
+                  "revision": "2013-07-15"
+                },
+                {
+                  "name": "ietf-yang-types",
+                  "revision": "2013-07-15"
+                }
+              ],
+              "ietf-yang-push-revision:yang-library-content-id": "22934",
+              "ietf-yang-push:datastore": "ietf-datastores:operational",
+              "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']",
+              "ietf-yang-push:on-change": {
+                "dampening-period": 500,
+                "sync-on-start": true
+              },
+              "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+          },
+          "event-time": "2026-10-20T14:52:52.790Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 0
+        }
+      }
+    }
+  }
+}

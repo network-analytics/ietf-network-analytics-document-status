@@ -1,0 +1,57 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 328,
+                                        "temperature": 3100
+                                    },
+                                    "huawei-hardware:module-sub-type": "n2",
+                                    "huawei-hardware:module-type": "xgs-pon"
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:pon-xcvr",
+                                "name": "transceiver.0.2.1"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 326,
+                                        "temperature": 3500
+                                    },
+                                    "huawei-hardware:module-sub-type": "n2",
+                                    "huawei-hardware:module-type": "xgs-pon"
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:pon-xcvr",
+                                "name": "transceiver.0.2.3"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 327,
+                                        "temperature": 3100
+                                    },
+                                    "huawei-hardware:module-sub-type": "n2",
+                                    "huawei-hardware:module-type": "xgs-pon"
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:pon-xcvr",
+                                "name": "transceiver.0.2.4"
+                            }
+                        ]
+                    }
+                },
+                "id": 8,
+                "ietf-distributed-notif:message-publisher-id": 4227923969,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:30.570Z"
+            }
+        },
+        "event-time": "2026-10-20T14:55:30.570Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 318
+    }
+}

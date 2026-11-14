@@ -1,0 +1,63 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-user-manage:bras-user-manage": {
+                        "access-tables": {
+                            "access-table": [
+                                {
+                                    "access-index": 169984,
+                                    "access-interface": "Eth-Trunk1.40",
+                                    "access-slot": "0",
+                                    "access-slot-number": 0,
+                                    "cevlan-end": 2101,
+                                    "cevlan-start": 2101,
+                                    "pevlan-end": 500,
+                                    "pevlan-start": 500
+                                },
+                                {
+                                    "access-index": 169985,
+                                    "access-interface": "Eth-Trunk1.40",
+                                    "access-slot": "0",
+                                    "access-slot-number": 0,
+                                    "cevlan-end": 2101,
+                                    "cevlan-start": 2101,
+                                    "pevlan-end": 501,
+                                    "pevlan-start": 501
+                                },
+                                {
+                                    "access-index": 169986,
+                                    "access-interface": "Eth-Trunk1.40",
+                                    "access-slot": "0",
+                                    "access-slot-number": 0,
+                                    "cevlan-end": 2101,
+                                    "cevlan-start": 2101,
+                                    "pevlan-end": 502,
+                                    "pevlan-start": 502
+                                },
+                                {
+                                    "access-index": 169987,
+                                    "access-interface": "Eth-Trunk1.40",
+                                    "access-slot": "0",
+                                    "access-slot-number": 0,
+                                    "cevlan-end": 2101,
+                                    "cevlan-start": 2101,
+                                    "pevlan-end": 503,
+                                    "pevlan-start": 503
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 1,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:58:35.141Z"
+            }
+        },
+        "event-time": "2026-10-09T11:58:35.133Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 10207
+    }
+}

@@ -1,0 +1,89 @@
+{
+  "partition": 0,
+  "offset": 1542,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T14:52:43.670Z",
+        "collection-timestamp": "2026-11-05T11:50:29.411552555Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 18,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 30000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "ietf-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "iana-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+              "dscp": 0,
+              "encoding": "ietf-subscribed-notifications:encode-json",
+              "id": 18,
+              "ietf-yang-push-revision:module-version": [
+                {
+                  "name": "ietf-hardware",
+                  "revision": "2018-03-13"
+                },
+                {
+                  "name": "iana-hardware",
+                  "revision": "2018-03-13"
+                }
+              ],
+              "ietf-yang-push-revision:yang-library-content-id": "22934",
+              "ietf-yang-push:datastore": "ietf-datastores:operational",
+              "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']",
+              "ietf-yang-push:periodic": {
+                "anchor-time": "2025-01-01T00:00:30Z",
+                "period": 30000
+              },
+              "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+          },
+          "event-time": "2026-10-20T14:52:43.670Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 0
+        }
+      }
+    }
+  }
+}

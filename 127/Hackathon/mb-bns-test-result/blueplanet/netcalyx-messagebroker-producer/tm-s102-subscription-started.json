@@ -1,0 +1,82 @@
+{
+  "partition": 0,
+  "offset": 47783,
+  "headers": {
+    "schema-id": "1588",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-22T11:24:33.159645124Z",
+        "collection-timestamp": "2026-11-11T10:11:50.098111474Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 48563,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 102,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-hardware:hardware",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "on-change": {
+            "dampening-period": 500,
+            "sync-on-start": true
+          },
+          "module": [
+            {
+              "name": "ietf-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "964707179"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+              "encoding": "ietf-subscribed-notifications:encode-json",
+              "id": 102,
+              "ietf-distributed-notif:message-publisher-id": [
+                0
+              ],
+              "ietf-yang-push-revision:module-version": [
+                {
+                  "name": "ietf-hardware",
+                  "revision": "2018-03-13"
+                }
+              ],
+              "ietf-yang-push-revision:yang-library-content-id": "964707179",
+              "ietf-yang-push:datastore": "ietf-datastores:operational",
+              "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware",
+              "ietf-yang-push:on-change": {
+                "dampening-period": 500,
+                "sync-on-start": true
+              }
+            }
+          },
+          "event-time": "2026-10-22T11:24:33.159645124Z",
+          "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+          "sequence-number": 6888
+        }
+      }
+    }
+  }
+}

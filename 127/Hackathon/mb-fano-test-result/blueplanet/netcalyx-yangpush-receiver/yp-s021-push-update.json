@@ -1,0 +1,289 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "datastore-contents": {
+          "ietf-interfaces:interfaces": {
+            "interface": [
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879056384,
+                "last-change": "2026-10-19T12:06:12.0Z",
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.0",
+                "oper-status": "up",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879056640,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.1",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879056896,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.2",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879057152,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.3",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879057408,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.4",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879057664,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.5",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879057920,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.6",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879058176,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.1.7",
+                "oper-status": "down",
+                "speed": "49766400000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879064576,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.0",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879064832,
+                "last-change": "2026-10-19T12:09:26.0Z",
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.1",
+                "oper-status": "up",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879065088,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.2",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879065344,
+                "last-change": "2026-10-19T13:25:16.0Z",
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.3",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879065600,
+                "last-change": "2026-10-19T13:25:17.0Z",
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.4",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879065856,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.5",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879066112,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.6",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879066368,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.7",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879066624,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.8",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879066880,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.9",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879067136,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.10",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879067392,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.11",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879067648,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.12",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879067904,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.13",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879068160,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.14",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              },
+              {
+                "admin-status": "up",
+                "description": "",
+                "enabled": true,
+                "if-index": 1879068416,
+                "link-up-down-trap-enable": "disabled",
+                "name": "gpon.0.2.15",
+                "oper-status": "down",
+                "speed": "9953280000",
+                "type": "iana-if-type:gpon"
+              }
+            ]
+          }
+        },
+        "id": 21,
+        "ietf-distributed-notif:message-publisher-id": 3021116857,
+        "ietf-yp-observation:point-in-time": "initial-state",
+        "ietf-yp-observation:timestamp": "2026-10-20T14:52:52.710Z"
+      }
+    },
+    "event-time": "2026-10-20T14:52:52.710Z",
+    "hostname": "ipd-zbl1536-s-ah-79",
+    "sequence-number": 1
+  }
+}

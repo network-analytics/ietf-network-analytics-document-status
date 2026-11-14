@@ -1,0 +1,32 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-subscribed-notifications:subscription-started": {
+        "dscp": 0,
+        "encoding": "ietf-subscribed-notifications:encode-json",
+        "id": 15,
+        "ietf-yang-push-revision:module-version": [
+          {
+            "name": "ietf-hardware",
+            "revision": "2018-03-13"
+          },
+          {
+            "name": "huawei-energy-management-an",
+            "revision": "2025-12-16"
+          }
+        ],
+        "ietf-yang-push-revision:yang-library-content-id": "22934",
+        "ietf-yang-push:datastore": "ietf-datastores:operational",
+        "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/huawei-energy-management-an:energy-consumption",
+        "ietf-yang-push:periodic": {
+          "anchor-time": "2025-01-01T00:00:30Z",
+          "period": 30000
+        },
+        "transport": "ietf-udp-notif-transport:udp-notif"
+      }
+    },
+    "event-time": "2026-10-20T14:52:43.530Z",
+    "hostname": "ipd-zbl1536-s-ah-79",
+    "sequence-number": 0
+  }
+}

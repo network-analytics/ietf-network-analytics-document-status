@@ -1,0 +1,90 @@
+{
+  "partition": 0,
+  "offset": 47815,
+  "headers": {
+    "schema-id": "1684",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-26T14:07:30.002Z",
+        "collection-timestamp": "2026-11-12T06:09:53.697732164Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 55548,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 81,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "Cisco-IOS-XR-nto-misc-oper",
+              "revision": "2022-01-25"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "Cisco-IOS-XR-nto-misc-oper:memory-summary": {
+                  "nodes": {
+                    "node": [
+                      {
+                        "node-name": "0/RP0/CPU0",
+                        "summary": {
+                          "boot-ram-size": "0",
+                          "flash-system": "0",
+                          "free-application-memory": "10885079040",
+                          "free-physical-memory": "10885079040",
+                          "image-memory": "4194304",
+                          "io-memory": "0",
+                          "page-size": 4096,
+                          "ram-memory": "16407437312",
+                          "reserved-memory": "0",
+                          "system-ram-memory": "16407437312"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "id": 81,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.002Z"
+            }
+          },
+          "event-time": "2026-10-26T14:07:30.002Z",
+          "hostname": "ipt-age923-b-aac-01",
+          "sequence-number": 1
+        }
+      }
+    }
+  }
+}

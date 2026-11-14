@@ -1,0 +1,26 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "datastore-changes": {
+                    "yang-patch": {
+                        "edit": [
+                            {
+                                "edit-id": "1",
+                                "operation": "delete",
+                                "target": "/openconfig-lacp:lacp/interfaces/interface[name='Bundle-Ether4000']/state"
+                            }
+                        ],
+                        "patch-id": "1"
+                    }
+                },
+                "id": 19,
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:09:59.148Z"
+            }
+        },
+        "event-time": "2026-10-26T14:09:59.164Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 2
+    }
+}

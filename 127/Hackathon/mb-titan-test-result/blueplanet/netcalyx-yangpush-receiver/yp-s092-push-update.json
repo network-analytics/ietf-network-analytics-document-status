@@ -1,0 +1,57 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "datastore-contents": {
+          "Cisco-IOS-XR-ptp-oper:ptp": {
+            "advertised-clock": {
+              "clock-properties": {
+                "accuracy": 33,
+                "class": 6,
+                "clock-id": "9567906204342090177",
+                "configured-clock-class": 0,
+                "configured-priority": 10,
+                "frequency-traceable": true,
+                "is-alternate-master": false,
+                "is-receiver-valid": true,
+                "is-sender-valid": true,
+                "leap-seconds": "none",
+                "local": false,
+                "offset-log-variance": 20061,
+                "priority1": 128,
+                "priority2": 10,
+                "receiver": {
+                  "clock-id": "7208122254257213440",
+                  "port-number": 1
+                },
+                "sender": {
+                  "clock-id": "11881370438467845889",
+                  "port-number": 5
+                },
+                "steps-removed": 5,
+                "time-source": "gps",
+                "time-traceable": true,
+                "timescale": "ptp",
+                "utc-offset": {
+                  "current-offset": 37,
+                  "offset-valid": true
+                }
+              },
+              "domain": 24,
+              "received-time-source": "internal-oscillator",
+              "received-timescale": "ptp",
+              "time-source-configured": false,
+              "timescale-configured": false
+            }
+          }
+        },
+        "id": 92,
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.006Z"
+      }
+    },
+    "event-time": "2026-10-26T14:07:30.006Z",
+    "hostname": "ipt-age923-b-aac-01",
+    "sequence-number": 1
+  }
+}

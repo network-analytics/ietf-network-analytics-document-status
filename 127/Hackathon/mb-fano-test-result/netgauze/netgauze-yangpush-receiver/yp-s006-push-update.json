@@ -1,0 +1,61 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 334,
+                                        "temperature": 2662
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr",
+                                "name": "transceiver.0.19.0"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 330,
+                                        "temperature": 2815
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr",
+                                "name": "transceiver.0.19.2"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 332,
+                                        "temperature": 3857
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr",
+                                "name": "transceiver.0.19.6"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 332,
+                                        "temperature": 3857
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ethernetCsmacd-xcvr",
+                                "name": "transceiver.0.19.7"
+                            }
+                        ]
+                    }
+                },
+                "id": 6,
+                "ietf-distributed-notif:message-publisher-id": 3021116866,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-20T14:53:29.820Z"
+            }
+        },
+        "event-time": "2026-10-20T14:53:42.620Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1597
+    }
+}

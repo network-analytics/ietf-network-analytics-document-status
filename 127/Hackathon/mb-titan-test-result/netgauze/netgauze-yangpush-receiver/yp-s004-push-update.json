@@ -1,0 +1,118 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-platform:components": {
+                        "component": [
+                            {
+                                "name": "0/PM0",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:capacity": "RCKAAA==",
+                                        "openconfig-platform-psu:enabled": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:capacity": "RCKAAA==",
+                                        "openconfig-platform-psu:enabled": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM0-Input_Curr",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-current": "PwAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM0-Output_Curr",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-current": "QQZmZg=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM0-Output_Power",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-power": "QsoAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM0-Input_Vol",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-voltage": "Q2JMzQ=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM0-Output_Vol",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-voltage": "QUAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1-Input_Curr",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-current": "AAAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1-Output_Curr",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-current": "AAAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1-Output_Power",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-power": "AAAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1-Input_Vol",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:input-voltage": "AAAAAA=="
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PM1-Output_Vol",
+                                "power-supply": {
+                                    "state": {
+                                        "openconfig-platform-psu:output-voltage": "AAAAAA=="
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "id": 4,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.003Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.003Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

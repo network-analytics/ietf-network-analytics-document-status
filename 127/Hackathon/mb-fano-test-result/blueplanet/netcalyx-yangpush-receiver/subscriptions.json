@@ -1,0 +1,3799 @@
+[
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 1,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 5,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-qos-traffic-mngt-state:tm-root/queues/queue/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-qos-traffic-mngt-state",
+        "revision": "2021-06-02"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 16,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/bbf-hardware-cpu:cpu-processor-data"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-cpu",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 15,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/huawei-energy-management-an:energy-consumption"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-energy-management-an",
+        "revision": "2025-12-16"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 17,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='celsius']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 18,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 2,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 12,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:35Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 3,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:channel-pair']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 13,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:v-ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:45Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 26,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']/state"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 20,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 24,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 22,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 4,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:25Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 5,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-qos-traffic-mngt-state:tm-root/queues/queue/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-qos-traffic-mngt-state",
+        "revision": "2021-06-02"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 1,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 4,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:25Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 15,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/huawei-energy-management-an:energy-consumption"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-energy-management-an",
+        "revision": "2025-12-16"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 17,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='celsius']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 18,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 16,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/bbf-hardware-cpu:cpu-processor-data"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-cpu",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 12,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:35Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 14,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:40Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 14,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:40Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 13,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:v-ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:45Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 2,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 3,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:channel-pair']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 26,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']/state"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 20,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 22,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 24,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 23,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 23,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 21,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 23,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 24,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 19,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 18,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 20,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 22,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 25,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-inet-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-yang-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 4,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:25Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 26,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-inet-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-yang-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 5,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-qos-traffic-mngt-state:tm-root/queues/queue/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-qos-traffic-mngt-state",
+        "revision": "2021-06-02"
+      },
+      {
+        "name": "bbf-qos-traffic-mngt",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 12,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:35Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 21,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 16,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/bbf-hardware-cpu:cpu-processor-data"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "bbf-hardware-cpu",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 17,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='celsius']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 2,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 1,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 3,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:channel-pair']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 14,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:40Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 15,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/huawei-energy-management-an:energy-consumption"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-energy-management-an",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 13,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:v-ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:45Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 19,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 26,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']/state"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 21,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 25,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 22,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 20,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 21,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 19,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 25,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-inet-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-yang-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 23,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 24,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani/bbf-xpon-ani-state:running-info"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 26,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 360000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-inet-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-yang-types",
+        "revision": "2013-07-15"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 3,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:channel-pair']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 12,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:35Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 1,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 5,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-qos-traffic-mngt-state:tm-root/queues/queue/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-qos-traffic-mngt-state",
+        "revision": "2021-06-02"
+      },
+      {
+        "name": "bbf-qos-traffic-mngt",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 2,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-if-type",
+        "revision": "2017-01-19"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 16,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/bbf-hardware-cpu:cpu-processor-data"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "bbf-hardware-cpu",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 17,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='celsius']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 18,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='iana-hardware:sensor']/sensor-data[value-type='rpm']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "iana-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 15,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component/huawei-energy-management-an:energy-consumption"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-energy-management-an",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 14,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:40Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 13,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:v-ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:45Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 4,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:25Z"
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "huawei-interface-statistics-mgt",
+        "revision": "2025-08-14"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 25,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[class='bbf-hardware-types:board']"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": true
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-types",
+        "revision": "2023-12-15"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 12,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-xponani:ani"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xponani",
+        "revision": "2025-02-15"
+      },
+      {
+        "name": "bbf-xpon-ani-state",
+        "revision": "2025-12-16"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 14,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "38ef21388d946bb1170266638d3b9df74ed43c70bafd04f8471f0cfe0648b482",
+    "peer_ip": "10.190.33.167",
+    "id": 13,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces-state/interface[type='bbf-xpon-if-type:v-ani']/statistics/bbf-xpon-statistics-management:xpon/phy"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-xpon-if-type",
+        "revision": "2020-10-13"
+      },
+      {
+        "name": "bbf-xpon-statistics-management",
+        "revision": "2024-09-05"
+      },
+      {
+        "name": "ietf-interfaces",
+        "revision": "2018-02-20"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 6,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 7,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 9,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 8,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 6,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 7,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 10,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:20Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 11,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:15Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 11,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:15Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 10,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:20Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 9,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 8,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 8,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "huawei-xpon-hardware-transceivers",
+        "revision": "2025-09-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 9,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "bbf-hardware-transceivers-xpon",
+        "revision": "2024-04-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 11,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:15Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 10,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:20Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "huawei-xpon-hardware-transceivers",
+        "revision": "2025-09-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 7,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 6,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 6,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 10,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:20Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "huawei-xpon-hardware-transceivers",
+        "revision": "2025-09-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 11,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:15Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 8,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "huawei-xpon-hardware-transceivers",
+        "revision": "2025-09-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 7,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ethernetCsmacd-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 6000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 9,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "bbf-hardware-transceivers-xpon",
+        "revision": "2024-04-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 10,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "huawei-xpon-hardware-transceivers",
+        "revision": "2025-09-23"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "53af95641451c5b55472a760b3a8c3ef7f7654b1f054fa339059a6d53ad24061",
+    "peer_ip": "10.190.33.167",
+    "id": 11,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr-link']/bbf-hardware-transceivers:transceiver-link"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:periodic": {
+        "period": 30000,
+        "anchor-time": "2025-01-01T00:00:30Z"
+      }
+    },
+    "models": [
+      {
+        "name": "huawei-hardware",
+        "revision": "2025-11-13"
+      },
+      {
+        "name": "bbf-hardware-transceivers",
+        "revision": "2025-01-27"
+      },
+      {
+        "name": "ietf-hardware",
+        "revision": "2018-03-13"
+      },
+      {
+        "name": "huawei-hardware-types",
+        "revision": "2025-09-18"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "f0961ff3857c90ce887a98827636a4904aaec60b6b5e6109e74aadb703832521",
+    "peer_ip": "10.190.33.167",
+    "id": 27,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": false
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-alarms",
+        "revision": "2019-09-11"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "f0961ff3857c90ce887a98827636a4904aaec60b6b5e6109e74aadb703832521",
+    "peer_ip": "10.190.33.167",
+    "id": 27,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "purpose": "",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": false
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-alarms",
+        "revision": "2019-09-11"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "f0961ff3857c90ce887a98827636a4904aaec60b6b5e6109e74aadb703832521",
+    "peer_ip": "10.190.33.167",
+    "id": 27,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": false
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-alarms",
+        "revision": "2019-09-11"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  },
+  {
+    "cache_id": "f0961ff3857c90ce887a98827636a4904aaec60b6b5e6109e74aadb703832521",
+    "peer_ip": "10.190.33.167",
+    "id": 27,
+    "target": {
+      "ietf-yang-push:datastore": "ietf-datastores:operational",
+      "ietf-yang-push:datastore-xpath-filter": "/ietf-alarms:alarm-notification"
+    },
+    "transport": "ietf-udp-notif-transport:udp-notif",
+    "encoding": "ietf-subscribed-notifications:encode-json",
+    "update_trigger": {
+      "ietf-yang-push:on-change": {
+        "dampening-period": 500,
+        "sync-on-start": false
+      }
+    },
+    "models": [
+      {
+        "name": "ietf-alarms",
+        "revision": "2019-09-11"
+      },
+      {
+        "name": "ietf-subscribed-notifications"
+      }
+    ],
+    "content_id": "22934"
+  }
+]

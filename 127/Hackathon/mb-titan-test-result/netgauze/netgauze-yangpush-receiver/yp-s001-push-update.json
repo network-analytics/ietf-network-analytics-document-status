@@ -1,0 +1,1164 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Null0",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "0"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Bundle-Ether1000",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023628230"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "5030145",
+                                        "in-octets": "850145458",
+                                        "in-pkts": "6368801",
+                                        "in-unicast-pkts": "1338656",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "5030112",
+                                        "out-octets": "4581824946",
+                                        "out-pkts": "7822330",
+                                        "out-unicast-pkts": "2792218"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Bundle-Ether4000",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023628241"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "9991210",
+                                        "in-octets": "1108694201",
+                                        "in-pkts": "10159606",
+                                        "in-unicast-pkts": "168396",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "15298827",
+                                        "out-octets": "1535485244",
+                                        "out-pkts": "15467216",
+                                        "out-unicast-pkts": "168389"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "MgmtEth0/RP0/CPU0/0",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643361"
+                                        },
+                                        "in-broadcast-pkts": "71455",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "142097",
+                                        "in-octets": "24738171",
+                                        "in-pkts": "224549",
+                                        "in-unicast-pkts": "10997",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "682454059",
+                                        "out-pkts": "510679",
+                                        "out-unicast-pkts": "510679"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/38",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643231"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/34",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643232"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/33",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643232"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/32",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643232"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/31",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643232"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/30",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643233"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/29",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643233"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/28",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643234"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/26",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643235"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/25",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643235"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/24",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643236"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/23",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643236"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/22",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643236"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/21",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643237"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/20",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643237"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/19",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643237"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/18",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643238"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/17",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643238"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/16",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643238"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/15",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643239"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/13",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643239"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/37",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643240"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/36",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643240"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/35",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643240"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/14",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643241"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "710894",
+                                        "in-octets": "48340792",
+                                        "in-pkts": "710894",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "1124156",
+                                        "out-octets": "86234860",
+                                        "out-pkts": "1124156",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/12",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643241"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "11076857",
+                                        "in-octets": "1587770107",
+                                        "in-pkts": "11511171",
+                                        "in-unicast-pkts": "434314",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "16960727",
+                                        "out-octets": "1712708184",
+                                        "out-pkts": "17272930",
+                                        "out-unicast-pkts": "312203"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/39",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643242"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/43",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643242"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/42",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643242"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/41",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643243"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/40",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643243"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0/27",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643244"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "11612322",
+                                        "in-octets": "882666450",
+                                        "in-pkts": "11612322",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "4728590",
+                                        "out-octets": "340159805",
+                                        "out-pkts": "4728590",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/1",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643229"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/2",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643230"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "5030529",
+                                        "in-octets": "850204311",
+                                        "in-pkts": "6369196",
+                                        "in-unicast-pkts": "1338667",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "5030420",
+                                        "out-octets": "4581873635",
+                                        "out-pkts": "7822649",
+                                        "out-unicast-pkts": "2792229"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/0/0",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643231"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "4",
+                                        "in-octets": "276",
+                                        "in-pkts": "4",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "4",
+                                        "out-octets": "276",
+                                        "out-pkts": "4",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/0/1",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643244"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/3",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643229"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/0",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643245"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "276",
+                                        "in-pkts": "4",
+                                        "in-unicast-pkts": "4",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "276",
+                                        "out-pkts": "4",
+                                        "out-unicast-pkts": "4"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/1",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643246"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/2",
+                                "state": {
+                                    "counters": {
+                                        "Cisco-IOS-XR-openconfig-interfaces-stats-ext:cisco": {
+                                            "last-read-time": "1793023643246"
+                                        },
+                                        "in-broadcast-pkts": "0",
+                                        "in-discards": "0",
+                                        "in-errors": "0",
+                                        "in-fcs-errors": "0",
+                                        "in-multicast-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "in-unicast-pkts": "0",
+                                        "in-unknown-protos": "0",
+                                        "out-broadcast-pkts": "0",
+                                        "out-discards": "0",
+                                        "out-errors": "0",
+                                        "out-multicast-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0",
+                                        "out-unicast-pkts": "0"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "id": 1,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.003Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.003Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

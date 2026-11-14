@@ -1,0 +1,60 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-dhcpv6-access:bras-dhcpv6-access": {
+                        "dhcpv6-packets-statistics": {
+                            "received-advertise-packets-from-server": 0,
+                            "received-confirm-packets-from-client": 0,
+                            "received-decline-packets-from-client": 0,
+                            "received-invalid-client-duid-length": 0,
+                            "received-invalid-ia-option-length": 0,
+                            "received-invalid-packets": 0,
+                            "received-invalid-preference-option": 0,
+                            "received-invalid-server-duid": 0,
+                            "received-invalid-server-duid-length": 0,
+                            "received-invalid-udp-length": 0,
+                            "received-invalid-unicast-option": 0,
+                            "received-null-client-duid": 0,
+                            "received-null-ia-option": 0,
+                            "received-null-server-duid": 0,
+                            "received-other-invalid-packets": 0,
+                            "received-rebind-packets-from-client": 0,
+                            "received-reconfigure-from-client": 0,
+                            "received-release-packets-from-client": 66850,
+                            "received-renew-packets-from-client": 3394886,
+                            "received-reply-packets-from-server": 0,
+                            "received-request-packets-from-client": 28,
+                            "received-server-ip-inconsistent": 0,
+                            "received-solicit-packets-from-client": 77689,
+                            "received-total-packets": 3539453,
+                            "received-total-packets-from-client": 3539453,
+                            "received-total-packets-from-server": 0,
+                            "sent-advertise-packets-to-client": 13,
+                            "sent-confirm-packets-to-server": 0,
+                            "sent-decline-packets-to-server": 0,
+                            "sent-rebind-packets-to-server": 0,
+                            "sent-reconfigure-packets-to-client": 0,
+                            "sent-release-packets-to-server": 0,
+                            "sent-renew-packets-to-server": 0,
+                            "sent-reply-packets-to-client": 2190731,
+                            "sent-request-packets-to-server": 0,
+                            "sent-solicit-packets-to-server": 0,
+                            "sent-total-packets": 2190752,
+                            "sent-total-packets-to-client": 2190744,
+                            "sent-total-packets-to-server": 0
+                        }
+                    }
+                },
+                "id": 202,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.924Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:30.933Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 102
+    }
+}

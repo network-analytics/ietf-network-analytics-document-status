@@ -1,0 +1,108 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-lldp:lldp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "HundredGigE0/0/0/2",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipt-age923-a-aac-01#HundredGigE0/0/0/2",
+                                                "state": {
+                                                    "age": "248630",
+                                                    "chassis-id": "ecbb.780b.5787",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipt-age923-a-aac-01#HundredGigE0/0/0/2",
+                                                    "last-update": "28",
+                                                    "management-address": "2001:4d98:a100:a26:0:923:d:1",
+                                                    "management-address-type": "ipv6",
+                                                    "port-description": "ipt-age923-b-aac-01:HundredGigE0/0/0/2::",
+                                                    "port-id": "HundredGigE0/0/0/2",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "system-description": "25.4.2, 8000",
+                                                    "system-name": "ipt-age923-a-aac-01",
+                                                    "ttl": 120
+                                                }
+                                            },
+                                            {
+                                                "id": "ipt-age923-a-aac-01#Bundle-Ether1000",
+                                                "state": {
+                                                    "age": "248535",
+                                                    "chassis-id": "ecbb.780b.5787",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipt-age923-a-aac-01#Bundle-Ether1000",
+                                                    "last-update": "22",
+                                                    "management-address": "2001:4d98:a100:a26:0:923:d:1",
+                                                    "management-address-type": "ipv6",
+                                                    "port-description": "ipt-age923-b-aac-01:Bundle-Ether1000",
+                                                    "port-id": "Bundle-Ether1000",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "system-description": "25.4.2, 8000",
+                                                    "system-name": "ipt-age923-a-aac-01",
+                                                    "ttl": 120
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/12",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipt-aget923-a-aea-01#TenGigE0/0/0/27",
+                                                "state": {
+                                                    "age": "10530",
+                                                    "chassis-id": "a03d.6e86.8781",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipt-aget923-a-aea-01#TenGigE0/0/0/27",
+                                                    "last-update": "20",
+                                                    "management-address": "2001:4d98:a100:a27:0:923:f:1",
+                                                    "management-address-type": "ipv6",
+                                                    "port-description": "ipt-age923-b-aac-01:TenGigE0/0/0/12::",
+                                                    "port-id": "TenGigE0/0/0/27",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "system-description": "24.2.21, NCS540L",
+                                                    "system-name": "ipt-aget923-a-aea-01",
+                                                    "ttl": 120
+                                                }
+                                            },
+                                            {
+                                                "id": "ipt-aget923-a-aea-01#Bundle-Ether2100",
+                                                "state": {
+                                                    "age": "10512",
+                                                    "chassis-id": "a03d.6e86.8781",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipt-aget923-a-aea-01#Bundle-Ether2100",
+                                                    "last-update": "6",
+                                                    "management-address": "2001:4d98:a100:a27:0:923:f:1",
+                                                    "management-address-type": "ipv6",
+                                                    "port-description": "ipt-age923-b-aac-01:Bundle-Ether4000",
+                                                    "port-id": "Bundle-Ether2100",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "system-description": "24.2.21, NCS540L",
+                                                    "system-name": "ipt-aget923-a-aea-01",
+                                                    "ttl": 120
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 16,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.002Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.002Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

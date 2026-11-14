@@ -1,0 +1,85 @@
+{
+  "server": "10.190.33.167",
+  "date": "2026-11-12",
+  "topic": "telemetry-yang",
+  "hostname": "ipt-lss923-a-mbi-05",
+  "collector_window_utc": {
+    "start": "2026-11-12T16:40:53Z",
+    "end": "2026-11-12T16:46:43Z"
+  },
+  "kafka_observation": {
+    "partition": 0,
+    "start_offset": 50988,
+    "end_offset_exclusive": 51988,
+    "records": 1000,
+    "subscription_count": 44,
+    "schema_id": 630,
+    "schema_role": "default fallback after failed YANG Library fetch",
+    "push_updates": 854,
+    "push_change_updates": 83,
+    "subscription_started": 44,
+    "subscription_terminated": 19
+  },
+  "collector_events": {
+    "cache_misses": 44,
+    "ssh_connection_errors": 484,
+    "yang_library_fetch_failures": 44,
+    "default_schema_warnings": 1000,
+    "validation_drops_matching_extract_filter": 0,
+    "kafka_producer_errors_matching_extract_filter": 0
+  },
+  "replayed_router_content_id": "190100522",
+  "active_cache_subscription_content_id": "2300156437",
+  "netconf_fetch_target": "10.190.33.167:12345",
+  "blueplanet_consumer_validation": "Captured 1,000 payload attempts: 130 consumed and 870 deserialization failures; all failed records used schema ID 630",
+  "blueplanet_consumer_analysis": {
+    "log_path_on_awe_pod": "/bp2/data/consumer-ebng-validation.log",
+    "log_in_archive": false,
+    "validated_log_currently_present_on_awe_pod": false,
+    "deployed_0_0_6_shaded_jar_currently_present_on_awe_pod": false,
+    "per_payload_evidence_limit": "The original validated consumer log is unavailable. Detailed subscription counts and representative probes remain; exact raw payload and exception rows for every failed attempt are not retained.",
+    "deployed_jar_sha256": "91aae38f1ba72a0e964bc47de5d4defd402a4ca17e201c827e16b7c528be595b",
+    "attempts": 1000,
+    "consumed": 130,
+    "deserialization_failures": 870,
+    "failure_schema_ids": {
+      "630": 870
+    },
+    "schema_630_direct_references": 11,
+    "schema_630_recursive_subject_versions": 35,
+    "failure_class_counts": {
+      "payloads_advertising_modules_outside_schema_630_closure": 849,
+      "selected_ietf_interfaces_subtrees_missing_statistics": 21
+    },
+    "overlapping_payload_issues": {
+      "alarm_notification_in_yang_patch_values": 45,
+      "unqualified_hardware_roots": 10,
+      "failed_hardware_payloads_with_empty_uuid": 2,
+      "empty_uuid_components": 73,
+      "alarm_values_with_invalid_LLDP_REMTABLECHANGE_identity": 3
+    },
+    "registry_subject_http_status": {
+      "netcalyx.labietf-hardware": 200,
+      "netcalyx.labietf-alarms": 200,
+      "huawei-devm": 200,
+      "huawei-pic": 200,
+      "huawei-bras-user-statistic": 404
+    },
+    "same_payload_probe_examples": [
+      "Log lines 343 and 3156 fail under schema 630 and pass under schema 1555",
+      "Log line 2694 fails under schema 630 and passes under schema 1588",
+      "Log line 2355 changes from unknown-element under schema 630 to invalid empty uuid under schema 1588",
+      "Log line 3825 changes from unknown-element under schema 630 to invalid alarm-type-id under schema 1591"
+    ],
+    "probe_scope": "Representative payloads were differentially validated; not all 849 closure-mismatched payloads were replayed under alternate IDs. LLDP alternate-schema comparison did not complete."
+  },
+  "nov13_reaudit_status": {
+    "status": "excluded-not-comparable",
+    "audit_log_on_pod": "/bp2/data/ebng-audit-validated-2026-11-13.log",
+    "audit_serializer": "kafka-yang-json-schema-serializer-0.0.5.jar",
+    "deployed_validation_serializer": "kafka-yang-json-schema-serializer-0.0.6-shaded.jar",
+    "reason": "Different serializer artifact from the deployed Nov 12 consumer; its outcomes do not replace the validated 130-consumed/870-failed result."
+  },
+  "earlier_publisher_replay": "A separate 11:35 UTC replay reported 37337 UDP packets sent and exit code 0; see publisher README and log",
+  "limitations": "Receiver-side validation remains unestablished. Cross-schema validation supports the reported failure classes for representative payloads, not every closure-mismatched record. The original consumer log is no longer available on the AWE pod and was not copied into this evidence folder."
+}

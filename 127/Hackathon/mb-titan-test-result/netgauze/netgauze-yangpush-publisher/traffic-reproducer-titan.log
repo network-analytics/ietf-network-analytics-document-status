@@ -1,0 +1,3 @@
+sent 5000 packets (35 source ports)
+replayed 6075 packets from 35 source port(s) in 407.9s (time_factor 1.0), skipped 0
+|   Packet sent   |   0   |  0  |  0  |    6075    |      0      |      --      |       --      |

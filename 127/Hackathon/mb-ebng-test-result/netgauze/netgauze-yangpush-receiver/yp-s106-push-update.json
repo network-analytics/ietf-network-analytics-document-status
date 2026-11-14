@@ -1,0 +1,381 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "port": [
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/8",
+                                "port-id": "100GE0/1/8",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/9",
+                                "port-id": "100GE0/1/9",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/10",
+                                "port-id": "100GE0/1/10",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/11",
+                                "port-id": "100GE0/1/11",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/12",
+                                "port-id": "100GE0/1/12",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/13",
+                                "port-id": "100GE0/1/13",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/14",
+                                "port-id": "100GE0/1/14",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/15",
+                                "port-id": "100GE0/1/15",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/16",
+                                "port-id": "100GE0/1/16",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/17",
+                                "port-id": "100GE0/1/17",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/18",
+                                "port-id": "100GE0/1/18",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/19",
+                                "port-id": "100GE0/1/19",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/20",
+                                "port-id": "100GE0/1/20",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/21",
+                                "port-id": "100GE0/1/21",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/22",
+                                "port-id": "100GE0/1/22",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/23",
+                                "port-id": "100GE0/1/23",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/24",
+                                "port-id": "100GE0/1/24",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/25",
+                                "port-id": "100GE0/1/25",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/26",
+                                "port-id": "100GE0/1/26",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/27",
+                                "port-id": "100GE0/1/27",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/28",
+                                "port-id": "100GE0/1/28",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/29",
+                                "port-id": "100GE0/1/29",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/30",
+                                "port-id": "100GE0/1/30",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/31",
+                                "port-id": "100GE0/1/31",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/32",
+                                "port-id": "100GE0/1/32",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/33",
+                                "port-id": "100GE0/1/33",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/34",
+                                "port-id": "100GE0/1/34",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/35",
+                                "port-id": "100GE0/1/35",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/44",
+                                "port-id": "100GE0/1/44",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/45",
+                                "port-id": "100GE0/1/45",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/46",
+                                "port-id": "100GE0/1/46",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/47",
+                                "port-id": "100GE0/1/47",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/48",
+                                "port-id": "100GE0/1/48",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/49",
+                                "port-id": "100GE0/1/49",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/50",
+                                "port-id": "100GE0/1/50",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/51",
+                                "port-id": "100GE0/1/51",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/52",
+                                "port-id": "100GE0/1/52",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/53",
+                                "port-id": "100GE0/1/53",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/54",
+                                "port-id": "100GE0/1/54",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/55",
+                                "port-id": "100GE0/1/55",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/56",
+                                "port-id": "100GE0/1/56",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/57",
+                                "port-id": "100GE0/1/57",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/58",
+                                "port-id": "100GE0/1/58",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/59",
+                                "port-id": "100GE0/1/59",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/60",
+                                "port-id": "100GE0/1/60",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/61",
+                                "port-id": "100GE0/1/61",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/62",
+                                "port-id": "100GE0/1/62",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/63",
+                                "port-id": "100GE0/1/63",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/64",
+                                "port-id": "100GE0/1/64",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/65",
+                                "port-id": "100GE0/1/65",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/66",
+                                "port-id": "100GE0/1/66",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/67",
+                                "port-id": "100GE0/1/67",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/68",
+                                "port-id": "100GE0/1/68",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/69",
+                                "port-id": "100GE0/1/69",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/70",
+                                "port-id": "100GE0/1/70",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/71",
+                                "port-id": "100GE0/1/71",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "400GE0/1/2",
+                                "port-id": "400GE0/1/2",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "400GE0/1/6",
+                                "port-id": "400GE0/1/6",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "400GE0/1/38",
+                                "port-id": "400GE0/1/38",
+                                "port-id-subtype": "interface-name"
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "400GE0/1/42",
+                                "port-id": "400GE0/1/42",
+                                "port-id-subtype": "interface-name"
+                            }
+                        ]
+                    }
+                },
+                "id": 106,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:58:34.754Z"
+            }
+        },
+        "event-time": "2026-10-09T11:58:34.853Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 40
+    }
+}

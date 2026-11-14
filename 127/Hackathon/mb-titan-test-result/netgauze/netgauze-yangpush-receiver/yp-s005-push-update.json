@@ -1,0 +1,180 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-platform:components": {
+                        "component": [
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8670
+                                    }
+                                },
+                                "name": "0/FT0-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7620
+                                    }
+                                },
+                                "name": "0/FT0-Fan 1"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8700
+                                    }
+                                },
+                                "name": "0/FT1-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7650
+                                    }
+                                },
+                                "name": "0/FT1-Fan 1"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8640
+                                    }
+                                },
+                                "name": "0/FT2-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7680
+                                    }
+                                },
+                                "name": "0/FT2-Fan 1"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8670
+                                    }
+                                },
+                                "name": "0/FT3-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7680
+                                    }
+                                },
+                                "name": "0/FT3-Fan 1"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 4800
+                                    }
+                                },
+                                "name": "0/PM0-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 0
+                                    }
+                                },
+                                "name": "0/PM1-Fan 0"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8670
+                                    }
+                                },
+                                "name": "0/FT0-FAN_0 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7620
+                                    }
+                                },
+                                "name": "0/FT0-FAN_1 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8700
+                                    }
+                                },
+                                "name": "0/FT1-FAN_0 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7650
+                                    }
+                                },
+                                "name": "0/FT1-FAN_1 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8640
+                                    }
+                                },
+                                "name": "0/FT2-FAN_0 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7680
+                                    }
+                                },
+                                "name": "0/FT2-FAN_1 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 8670
+                                    }
+                                },
+                                "name": "0/FT3-FAN_0 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7680
+                                    }
+                                },
+                                "name": "0/FT3-FAN_1 Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 4800
+                                    }
+                                },
+                                "name": "0/PM0-Fan_0_Speed"
+                            },
+                            {
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 0
+                                    }
+                                },
+                                "name": "0/PM1-Fan_0_Speed"
+                            }
+                        ]
+                    }
+                },
+                "id": 5,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.001Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.001Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

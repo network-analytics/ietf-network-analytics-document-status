@@ -1,0 +1,158 @@
+WARNING: [bgp.py] use_2_bytes_asn: True
+INFO:root:udp_generic repro selectors: {'udp': {'dport': [10100]}}
+INFO:root:+---------------+------------+
+|     src_ip    |  repro_ip  |
++---------------+------------+
+| 10.212.242.58 | 127.0.0.58 |
++---------------+------------+
+INFO:root:####################
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      0      |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: 0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 0s   ][Running average: 0s]
+INFO:root:====================
+INFO:root:Reproducing pcap file '<integration-repo>/mb-bns-test-result/netgauze/netgauze-yangpush-publisher/daisy-ietf-ipf-zbl1843-r-daisy-58-yp-udpnotif-20261022-1324.pcap'...
+INFO:root:Preload is disabled
+INFO:root:[127.0.0.58][udp_generic] Opening socket with collector (simulating 10.212.242.58)
+INFO:root:####################
+INFO:root:Elapsed time: 1.0s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      42     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.005s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.009s   ][Running average: 1.406s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 3.003s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      45     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.712s   ][Running average: 1.968s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 5.005s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      45     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.712s   ][Running average: 1.968s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 7.007s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      48     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.615s   ][Running average: 1.936s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 9.01s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      51     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.515s   ][Running average: 1.885s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 11.012s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      51     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.515s   ][Running average: 1.885s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 13.015s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      54     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.416s   ][Running average: 1.835s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 15.017s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      57     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.321s   ][Running average: 1.787s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 17.019s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      57     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 2.321s   ][Running average: 1.787s]
+INFO:root:====================
+INFO:root:####################
+INFO:root:Elapsed time: 17.804s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      60     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 0.574s   ][Running average: 0.604s]
+INFO:root:====================
+INFO:root:No more pcap files...
+INFO:root:Closing sockets and stopping application...
+INFO:root:Shutting down report thread
+INFO:root:Reporter exited
+INFO:root:Printing last statistics
+INFO:root:####################
+INFO:root:Elapsed time: 19.522s
+INFO:root:+-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|      metric     | ipfix | bmp | bgp | udp_generic | tcp_generic | unknown peer | unknown proto |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+|   Packet sent   |   0   |  0  |  0  |      60     |      0      |      --      |       --      |
+| Packet filtered |   0   |  0  |  0  |      0      |      0      |      0       |       0       |
++-----------------+-------+-----+-----+-------------+-------------+--------------+---------------+
+INFO:root:Delay:	[Current: 0s   ][Running average: -0.0s]
+INFO:root:Queue size:	[Current: 0 pkt][Running average: 0 pkt]
+INFO:root:Sleep:	[Current: 0.574s   ][Running average: 0.604s]
+INFO:root:====================

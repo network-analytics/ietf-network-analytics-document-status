@@ -1,0 +1,97 @@
+{
+  "partition": 0,
+  "offset": 1528,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T14:52:43.100Z",
+        "collection-timestamp": "2026-11-05T11:50:29.409701498Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 4,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 30000,
+            "anchor-time": "2025-01-01T00:00:25Z"
+          },
+          "module": [
+            {
+              "name": "ietf-interfaces",
+              "revision": "2018-02-20"
+            },
+            {
+              "name": "bbf-xpon-if-type",
+              "revision": "2020-10-13"
+            },
+            {
+              "name": "huawei-interface-statistics-mgt",
+              "revision": "2025-08-14"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+              "dscp": 0,
+              "encoding": "ietf-subscribed-notifications:encode-json",
+              "id": 4,
+              "ietf-yang-push-revision:module-version": [
+                {
+                  "name": "ietf-interfaces",
+                  "revision": "2018-02-20"
+                },
+                {
+                  "name": "bbf-xpon-if-type",
+                  "revision": "2020-10-13"
+                },
+                {
+                  "name": "huawei-interface-statistics-mgt",
+                  "revision": "2025-08-14"
+                }
+              ],
+              "ietf-yang-push-revision:yang-library-content-id": "22934",
+              "ietf-yang-push:datastore": "ietf-datastores:operational",
+              "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics",
+              "ietf-yang-push:periodic": {
+                "anchor-time": "2025-01-01T00:00:25Z",
+                "period": 30000
+              },
+              "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+          },
+          "event-time": "2026-10-20T14:52:43.100Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 0
+        }
+      }
+    }
+  }
+}

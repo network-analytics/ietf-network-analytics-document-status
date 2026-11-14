@@ -1,0 +1,51 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 334,
+                                        "temperature": 4800
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "name": "transceiver.0.2.1.0.0"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 338,
+                                        "temperature": 4500
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "name": "transceiver.0.2.1.1.0"
+                            },
+                            {
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "supply-voltage": 334,
+                                        "temperature": 3900
+                                    }
+                                },
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "name": "transceiver.0.2.1.2.0"
+                            }
+                        ]
+                    }
+                },
+                "id": 10,
+                "ietf-distributed-notif:message-publisher-id": 4227923969,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:15.100Z"
+            }
+        },
+        "event-time": "2026-10-20T15:00:15.100Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 330
+    }
+}

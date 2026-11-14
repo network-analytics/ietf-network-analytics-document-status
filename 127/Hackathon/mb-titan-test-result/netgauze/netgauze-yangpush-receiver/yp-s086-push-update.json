@@ -1,0 +1,90 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "Cisco-IOS-XR-perf-meas-oper:performance-measurement": {
+                        "nodes": {
+                            "node": [
+                                {
+                                    "interfaces": {
+                                        "interface-delay": {
+                                            "interface-last-probes": {
+                                                "interface-last-probe": [
+                                                    {
+                                                        "delay-a-flag-set": false,
+                                                        "interface-name": "Bundle-Ether1000",
+                                                        "last-probe": {
+                                                            "packets-received": 10,
+                                                            "packets-sent": 10,
+                                                            "probe-start-timestamp": "1793023613342",
+                                                            "probe-values": {
+                                                                "average": 1,
+                                                                "maximum": 1,
+                                                                "minimum": 1,
+                                                                "variance": 0
+                                                            }
+                                                        },
+                                                        "loss-a-flag-set": false,
+                                                        "session-id": 4097,
+                                                        "timestamp-format": "ptp",
+                                                        "timestamp-source": "local-hardware"
+                                                    },
+                                                    {
+                                                        "delay-a-flag-set": false,
+                                                        "interface-name": "Bundle-Ether2000",
+                                                        "last-probe": {
+                                                            "packets-received": 0,
+                                                            "packets-sent": 0,
+                                                            "probe-start-timestamp": "0",
+                                                            "probe-values": {
+                                                                "average": 0,
+                                                                "maximum": 0,
+                                                                "minimum": 0,
+                                                                "variance": 0
+                                                            }
+                                                        },
+                                                        "loss-a-flag-set": false,
+                                                        "session-id": 4098,
+                                                        "timestamp-format": "ptp",
+                                                        "timestamp-source": "not-available"
+                                                    },
+                                                    {
+                                                        "delay-a-flag-set": false,
+                                                        "interface-name": "Bundle-Ether4000",
+                                                        "last-probe": {
+                                                            "packets-received": 10,
+                                                            "packets-sent": 10,
+                                                            "probe-start-timestamp": "1793023606882",
+                                                            "probe-values": {
+                                                                "average": 1,
+                                                                "maximum": 1,
+                                                                "minimum": 1,
+                                                                "variance": 0
+                                                            }
+                                                        },
+                                                        "loss-a-flag-set": false,
+                                                        "session-id": 4099,
+                                                        "timestamp-format": "ptp",
+                                                        "timestamp-source": "local-hardware"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "node": "0/RP0/CPU0"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 86,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.006Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.006Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

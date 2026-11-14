@@ -1,0 +1,86 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces-state": {
+                        "interface": [
+                            {
+                                "name": "ani.0.1.0.0",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-bytes": "8",
+                                            "corrected-fec-codewords": "17",
+                                            "in-fec-codewords": "277237211971",
+                                            "uncorrectable-fec-codewords": "0"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.1",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-bytes": "141",
+                                            "corrected-fec-codewords": "283",
+                                            "in-fec-codewords": "270991988269",
+                                            "uncorrectable-fec-codewords": "0"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.2",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-bytes": "0",
+                                            "corrected-fec-codewords": "0",
+                                            "in-fec-codewords": "481937280000",
+                                            "uncorrectable-fec-codewords": "0"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.3",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-bytes": "895",
+                                            "corrected-fec-codewords": "895",
+                                            "in-fec-codewords": "481937280000",
+                                            "uncorrectable-fec-codewords": "0"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.4",
+                                "statistics": {
+                                    "bbf-xpon-statistics-management:xpon": {
+                                        "phy": {
+                                            "corrected-fec-bytes": "41951059421",
+                                            "corrected-fec-codewords": "39827426997",
+                                            "in-fec-codewords": "23163545843",
+                                            "uncorrectable-fec-codewords": "0"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "id": 14,
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:40.120Z"
+            }
+        },
+        "event-time": "2026-10-20T14:55:40.130Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 311
+    }
+}

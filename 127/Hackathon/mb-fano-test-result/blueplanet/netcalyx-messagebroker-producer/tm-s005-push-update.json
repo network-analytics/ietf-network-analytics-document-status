@@ -1,0 +1,662 @@
+{
+  "partition": 0,
+  "offset": 1567,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T14:55:33.740Z",
+        "collection-timestamp": "2026-11-05T11:50:38.515116196Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 5,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-interfaces:interfaces-state/interface/bbf-qos-traffic-mngt-state:tm-root/queues/queue/statistics",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "bbf-qos-traffic-mngt-state",
+              "revision": "2021-06-02"
+            },
+            {
+              "name": "bbf-qos-traffic-mngt",
+              "revision": "2023-12-15"
+            },
+            {
+              "name": "ietf-interfaces",
+              "revision": "2018-02-20"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "ietf-interfaces:interfaces-state": {
+                  "interface": [
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 0,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 1,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 2,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 3,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 4,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 5,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 6,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 7,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.0.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 0,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 1,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 2,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 3,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 4,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 5,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 6,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 7,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.1.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 0,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.2.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 1,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.2.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 2,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.2.0"
+                    },
+                    {
+                      "bbf-qos-traffic-mngt-state:tm-root": {
+                        "queues": {
+                          "queue": [
+                            {
+                              "local-queue-id": 3,
+                              "statistics": {
+                                "green": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "total": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                },
+                                "yellow": {
+                                  "congestion-discard-frames": "0",
+                                  "out-frames": "0",
+                                  "out-octets": "0"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "name": "channel-termination.0.18.2.0"
+                    }
+                  ]
+                }
+              },
+              "id": 5,
+              "ietf-distributed-notif:message-publisher-id": 3021116865,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-20T14:55:33.740Z"
+            }
+          },
+          "event-time": "2026-10-20T14:55:33.740Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 31860
+        }
+      }
+    }
+  }
+}

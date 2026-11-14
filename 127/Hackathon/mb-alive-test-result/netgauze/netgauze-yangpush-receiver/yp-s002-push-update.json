@@ -1,0 +1,31 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-devm:devm": {
+                        "chassiss": {
+                            "chassis": [
+                                {
+                                    "huawei-driver:power-supply-attribute": {
+                                        "pm-input-voltage-110": "no",
+                                        "power-supply-average": 821,
+                                        "power-supply-limit": 3000
+                                    },
+                                    "position": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 2,
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-09-18T06:50:30.951Z"
+            }
+        },
+        "event-time": "2026-09-18T06:50:34.453Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 54
+    }
+}

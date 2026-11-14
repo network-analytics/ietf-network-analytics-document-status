@@ -1,0 +1,15 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {},
+                "id": 13,
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:06:57.743Z"
+            }
+        },
+        "event-time": "2026-10-26T14:06:57.743Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

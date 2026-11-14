@@ -1,0 +1,157 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-user-statistic:bras-user-statistic": {
+                        "access-user": {
+                            "summary": {
+                                "by-user-types": {
+                                    "by-user-type": [
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "slave",
+                                            "rui-local-number": 400,
+                                            "rui-remote-number": 200,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 600,
+                                            "user-type": "pppoe"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 9600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "slave",
+                                            "rui-local-number": 9600,
+                                            "rui-remote-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 9600,
+                                            "user-type": "dhcp"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "slave",
+                                            "rui-local-number": 400,
+                                            "rui-remote-number": 200,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 600,
+                                            "user-type": "lac"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 10,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "slave",
+                                            "rui-local-number": 4,
+                                            "rui-remote-number": 6,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 10,
+                                            "user-type": "ipv6"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 9600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "slave",
+                                            "rui-local-number": 9600,
+                                            "rui-remote-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 9600,
+                                            "user-type": "dual-stack"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "total",
+                                            "rui-local-number": 400,
+                                            "rui-remote-number": 200,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 600,
+                                            "user-type": "pppoe"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 9600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "total",
+                                            "rui-local-number": 9600,
+                                            "rui-remote-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 9600,
+                                            "user-type": "dhcp"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "total",
+                                            "rui-local-number": 400,
+                                            "rui-remote-number": 200,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 600,
+                                            "user-type": "lac"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 10,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "total",
+                                            "rui-local-number": 4,
+                                            "rui-remote-number": 6,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 10,
+                                            "user-type": "ipv6"
+                                        },
+                                        {
+                                            "local-auth-number": 0,
+                                            "no-auth-number": 0,
+                                            "normal-number": 0,
+                                            "radius-auth-number": 9600,
+                                            "radius-proxy-auth-number": 0,
+                                            "rbp-state": "total",
+                                            "rui-local-number": 9600,
+                                            "rui-remote-number": 0,
+                                            "tacacs-auth-number": 0,
+                                            "total-number": 9600,
+                                            "user-type": "dual-stack"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "id": 207,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.953Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.023Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 122
+    }
+}

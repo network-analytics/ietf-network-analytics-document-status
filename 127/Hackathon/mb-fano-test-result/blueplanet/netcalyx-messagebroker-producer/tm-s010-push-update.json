@@ -1,0 +1,120 @@
+{
+  "partition": 0,
+  "offset": 1880,
+  "headers": {
+    "schema-id": "985",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T15:00:15.100Z",
+        "collection-timestamp": "2026-11-05T11:51:06.654096425Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 10,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:ont-ani-xcvr']/bbf-hardware-transceivers:transceiver",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 30000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "huawei-hardware",
+              "revision": "2025-11-13"
+            },
+            {
+              "name": "ietf-hardware",
+              "revision": "2018-03-13"
+            },
+            {
+              "name": "huawei-hardware-types",
+              "revision": "2025-09-18"
+            },
+            {
+              "name": "huawei-xpon-hardware-transceivers",
+              "revision": "2025-09-23"
+            },
+            {
+              "name": "bbf-hardware-transceivers",
+              "revision": "2025-01-27"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "ietf-hardware:hardware": {
+                  "component": [
+                    {
+                      "bbf-hardware-transceivers:transceiver": {
+                        "diagnostics": {
+                          "supply-voltage": 334,
+                          "temperature": 4800
+                        }
+                      },
+                      "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                      "name": "transceiver.0.2.1.0.0"
+                    },
+                    {
+                      "bbf-hardware-transceivers:transceiver": {
+                        "diagnostics": {
+                          "supply-voltage": 338,
+                          "temperature": 4500
+                        }
+                      },
+                      "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                      "name": "transceiver.0.2.1.1.0"
+                    },
+                    {
+                      "bbf-hardware-transceivers:transceiver": {
+                        "diagnostics": {
+                          "supply-voltage": 334,
+                          "temperature": 3900
+                        }
+                      },
+                      "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                      "name": "transceiver.0.2.1.2.0"
+                    }
+                  ]
+                }
+              },
+              "id": 10,
+              "ietf-distributed-notif:message-publisher-id": 4227923969,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-20T15:00:15.100Z"
+            }
+          },
+          "event-time": "2026-10-20T15:00:15.100Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 330
+        }
+      }
+    }
+  }
+}

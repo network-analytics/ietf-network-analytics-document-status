@@ -1,0 +1,6 @@
+Titan replay evidence captured on 2026-11-12.
+The original replay stdout was not retained on the server.
+The Titan PCAP contains 6075 UDP packets and spans 407.914312 seconds.
+Kafka partition 0 contained 126 matching Titan records at offsets 47799-47924.
+These records establish partial producer output; the full replay completion/exit status was not directly captured.
+See evidence-summary.json and subscription-schema-summary.json for exact message/schema counts.

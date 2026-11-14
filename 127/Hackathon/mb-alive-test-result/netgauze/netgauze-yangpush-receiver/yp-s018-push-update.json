@@ -1,0 +1,103 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "port": [
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "GigabitEthernet0/0/0",
+                                "remote-systems-data": [
+                                    {
+                                        "chassis-id": "5017-ff40-6e00",
+                                        "chassis-id-subtype": "mac-address",
+                                        "port-desc": "**zbl-ms-vlan*136**",
+                                        "port-id": "Gi1/0/47",
+                                        "port-id-subtype": "interface-name",
+                                        "remote-changes": false,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "system-capabilities-enabled": "bridge router",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-description": "Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(7)E13, RELEASE SOFTWARE (fc3)\nTechnical Support: http://www.cisco.com/techsupport\nCopyright (c) 1986-2025 by Cisco Systems, Inc.\nCompiled Mon 15-Sep-25 13:00 by mcpre",
+                                        "system-name": "ipx-zbl-ms-136-2.bblab.ch",
+                                        "time-mark": 21743
+                                    }
+                                ]
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/0",
+                                "remote-systems-data": [
+                                    {
+                                        "chassis-id": "748f-c255-6901",
+                                        "chassis-id-subtype": "mac-address",
+                                        "port-id": "HundredGigE0/0/0/2",
+                                        "port-id-subtype": "interface-name",
+                                        "remote-changes": false,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "system-capabilities-enabled": "router",
+                                        "system-capabilities-supported": "router",
+                                        "system-description": "25.1.1, 8000",
+                                        "system-name": "ipf-zbl1326-r-daisy-79",
+                                        "time-mark": 148702263
+                                    }
+                                ]
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "100GE0/1/2",
+                                "remote-systems-data": [
+                                    {
+                                        "chassis-id": "30fb-b8e6-679d",
+                                        "chassis-id-subtype": "mac-address",
+                                        "port-id": "100GE0/3/0",
+                                        "port-id-subtype": "interface-name",
+                                        "remote-changes": false,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "system-capabilities-enabled": "bridge router",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                        "system-name": "ipf-zbl1327-r-daisy-81",
+                                        "time-mark": 226492724
+                                    }
+                                ]
+                            },
+                            {
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "name": "GigabitEthernet0/1/4:0",
+                                "remote-systems-data": [
+                                    {
+                                        "chassis-id": "3ca3-7e2c-7e96",
+                                        "chassis-id-subtype": "mac-address",
+                                        "port-desc": "ipf-zbl1327-r-daisy-48:GigabitEthernet0/1/4:0",
+                                        "port-id": "GigabitEthernet0/8/0",
+                                        "port-id-subtype": "interface-name",
+                                        "remote-changes": false,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "system-capabilities-enabled": "bridge router",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NetEngine 8000 V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 M8\r\n",
+                                        "system-name": "ipf-zbl1327-r-daisy-57",
+                                        "time-mark": 28382
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "id": 18,
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-09-18T06:50:38.719Z"
+            }
+        },
+        "event-time": "2026-09-18T06:50:39.243Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 61
+    }
+}

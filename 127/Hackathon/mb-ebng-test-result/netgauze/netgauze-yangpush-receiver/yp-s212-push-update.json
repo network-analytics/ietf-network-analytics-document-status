@@ -1,0 +1,41 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-l2tp-access:bras-l2tp-access": {
+                        "lac-tunnels": {
+                            "lac-tunnel": [
+                                {
+                                    "local-id": 8193,
+                                    "statistics": {
+                                        "active-session-num": 400,
+                                        "control-receive-num": 635,
+                                        "control-sent-num": 2128,
+                                        "retrans-mission-num": 5
+                                    }
+                                },
+                                {
+                                    "local-id": 24577,
+                                    "statistics": {
+                                        "active-session-num": 200,
+                                        "control-receive-num": 491,
+                                        "control-sent-num": 1763,
+                                        "retrans-mission-num": 5
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 212,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.030Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.693Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 129
+    }
+}

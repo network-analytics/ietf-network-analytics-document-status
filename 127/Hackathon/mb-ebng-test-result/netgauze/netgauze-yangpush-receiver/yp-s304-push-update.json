@@ -1,0 +1,62 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-devm:devm": {
+                        "ports": {
+                            "port": [
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {
+                                            "rx-power": "Rx Optical Power Total: 1.207dBm, ",
+                                            "tx-power": "Tx Optical Power Total: 8.317dBm"
+                                        }
+                                    },
+                                    "position": "0/1/2"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {}
+                                    },
+                                    "position": "0/1/6"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {}
+                                    },
+                                    "position": "0/1/8"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {}
+                                    },
+                                    "position": "0/1/9"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {}
+                                    },
+                                    "position": "0/1/10"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "optical-statistic": {}
+                                    },
+                                    "position": "0/1/20"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 304,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.019Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.013Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 112
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-ifm:ifm": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 9600,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk1.20"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 0,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk1.30"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 400,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk1.40"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 200,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk1.50"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 0,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk2.20"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 0,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk2.30"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 0,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk2.40"
+                                },
+                                {
+                                    "huawei-bras-basic-access:bas": {
+                                        "bas-interface": {
+                                            "information": {
+                                                "access-number": 0,
+                                                "increased-user-num": 0,
+                                                "is-selected": false,
+                                                "is-static-user-exist": false
+                                            }
+                                        }
+                                    },
+                                    "name": "Eth-Trunk2.50"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 209,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.970Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.623Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 126
+    }
+}

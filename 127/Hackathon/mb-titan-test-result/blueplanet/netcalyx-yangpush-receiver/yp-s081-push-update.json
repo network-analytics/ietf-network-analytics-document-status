@@ -1,0 +1,37 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "datastore-contents": {
+          "Cisco-IOS-XR-nto-misc-oper:memory-summary": {
+            "nodes": {
+              "node": [
+                {
+                  "node-name": "0/RP0/CPU0",
+                  "summary": {
+                    "boot-ram-size": "0",
+                    "flash-system": "0",
+                    "free-application-memory": "10885079040",
+                    "free-physical-memory": "10885079040",
+                    "image-memory": "4194304",
+                    "io-memory": "0",
+                    "page-size": 4096,
+                    "ram-memory": "16407437312",
+                    "reserved-memory": "0",
+                    "system-ram-memory": "16407437312"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "id": 81,
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.002Z"
+      }
+    },
+    "event-time": "2026-10-26T14:07:30.002Z",
+    "hostname": "ipt-age923-b-aac-01",
+    "sequence-number": 1
+  }
+}

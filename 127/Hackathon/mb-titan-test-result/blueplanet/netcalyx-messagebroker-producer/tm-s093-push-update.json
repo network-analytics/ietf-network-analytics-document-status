@@ -1,0 +1,155 @@
+{
+  "partition": 0,
+  "offset": 47813,
+  "headers": {
+    "schema-id": "1716",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-26T14:07:30.005Z",
+        "collection-timestamp": "2026-11-12T06:09:53.697639930Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 55548,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 93,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/Cisco-IOS-XR-ptp-oper:ptp/interfaces/interface",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "Cisco-IOS-XR-ptp-oper",
+              "revision": "2024-11-19"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "Cisco-IOS-XR-ptp-oper:ptp": {
+                  "interfaces": {
+                    "interface": [
+                      {
+                        "announce-timeout": 3,
+                        "communication-model": "multicast",
+                        "configured-port-state": "slave-only",
+                        "encapsulation": "ethernet",
+                        "event-cos": 6,
+                        "event-dscp": 46,
+                        "general-cos": 6,
+                        "general-dscp": 46,
+                        "interface-name": "GigabitEthernet0/0/0/27",
+                        "interface-type": "IFT_GETHERNET",
+                        "line-state": "im-state-up",
+                        "local-priority": 10,
+                        "log-announce-interval": -3,
+                        "log-min-delay-request-interval": -4,
+                        "log-sync-interval": -4,
+                        "mac-address": {
+                          "macaddr": "64:08:64:96:d0:2e"
+                        },
+                        "max-sync-rate": 128,
+                        "monitor-receiver": false,
+                        "monitor-sender": false,
+                        "port-number": 1,
+                        "port-state": "slave",
+                        "profile-interop": false,
+                        "supports-bvi-slave": false,
+                        "supports-ethernet": true,
+                        "supports-ipv4": true,
+                        "supports-ipv6": true,
+                        "supports-l2-encap": true,
+                        "supports-master": true,
+                        "supports-multicast": true,
+                        "supports-one-step": true,
+                        "supports-slave": true,
+                        "supports-source-ip": false,
+                        "supports-two-step": false,
+                        "supports-unicast": true,
+                        "two-step": false,
+                        "unicast-peers": 0
+                      },
+                      {
+                        "announce-timeout": 3,
+                        "communication-model": "multicast",
+                        "configured-port-state": "master-only",
+                        "encapsulation": "ethernet",
+                        "event-cos": 6,
+                        "event-dscp": 46,
+                        "general-cos": 6,
+                        "general-dscp": 46,
+                        "interface-name": "TenGigE0/0/0/12",
+                        "interface-type": "IFT_TENGETHERNET",
+                        "line-state": "im-state-up",
+                        "local-priority": 128,
+                        "log-announce-interval": -3,
+                        "log-min-delay-request-interval": -4,
+                        "log-sync-interval": -4,
+                        "mac-address": {
+                          "macaddr": "64:08:64:96:d0:1f"
+                        },
+                        "max-sync-rate": 128,
+                        "monitor-receiver": false,
+                        "monitor-sender": false,
+                        "port-number": 2,
+                        "port-state": "master",
+                        "profile-interop": false,
+                        "supports-bvi-slave": false,
+                        "supports-ethernet": true,
+                        "supports-ipv4": true,
+                        "supports-ipv6": true,
+                        "supports-l2-encap": true,
+                        "supports-master": true,
+                        "supports-multicast": true,
+                        "supports-one-step": true,
+                        "supports-slave": true,
+                        "supports-source-ip": false,
+                        "supports-two-step": false,
+                        "supports-unicast": true,
+                        "two-step": false,
+                        "unicast-peers": 0
+                      }
+                    ]
+                  }
+                }
+              },
+              "id": 93,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.005Z"
+            }
+          },
+          "event-time": "2026-10-26T14:07:30.005Z",
+          "hostname": "ipt-age923-b-aac-01",
+          "sequence-number": 1
+        }
+      }
+    }
+  }
+}

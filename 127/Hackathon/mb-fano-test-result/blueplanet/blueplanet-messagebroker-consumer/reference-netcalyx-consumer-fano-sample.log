@@ -1,0 +1,91 @@
+[2m2026-11-05T11:53:44.219950Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:44.220003Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220013Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Build Information * 
+[2m2026-11-05T11:53:44.220020Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220027Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Package Version:    0.3.0
+[2m2026-11-05T11:53:44.220034Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Commit Hash:        
+[2m2026-11-05T11:53:44.220041Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Commit Date:        
+[2m2026-11-05T11:53:44.220048Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Branch:             
+[2m2026-11-05T11:53:44.220055Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Tag:                
+[2m2026-11-05T11:53:44.220062Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Build Time:         2026-09-07 15:14:05 +00:00
+[2m2026-11-05T11:53:44.220069Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Rust Channel:       stable-x86_64-unknown-linux-gnu
+[2m2026-11-05T11:53:44.220077Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Rust Version:       rustc 1.98.1 (48a229cea 2026-09-01)
+[2m2026-11-05T11:53:44.220084Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Cargo Version:      cargo 1.98.1 (797e8a9bc 2026-08-05)
+[2m2026-11-05T11:53:44.220092Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220100Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:44.220106Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:44.220113Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220120Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Kafka YANG Consumer Configuration * 
+[2m2026-11-05T11:53:44.220128Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220135Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Kafka:
+[2m2026-11-05T11:53:44.220142Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Bootstrap servers: 10.190.33.167:9092
+[2m2026-11-05T11:53:44.220149Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Consumer:
+[2m2026-11-05T11:53:44.220156Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Topic: telemetry-yang
+[2m2026-11-05T11:53:44.220163Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Group ID: netcalyx-lab-validation-sample
+[2m2026-11-05T11:53:44.220170Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Offset: 1525
+[2m2026-11-05T11:53:44.220177Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Partitions: all
+[2m2026-11-05T11:53:44.220183Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Limit: 100 messages per partition
+[2m2026-11-05T11:53:44.220191Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Follow: no
+[2m2026-11-05T11:53:44.220203Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Schema Registry:
+[2m2026-11-05T11:53:44.220215Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   URL: http://127.0.0.1:8081
+[2m2026-11-05T11:53:44.220223Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Cache path: "consumer-cache"
+[2m2026-11-05T11:53:44.220231Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:44.220238Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:45.278936Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Partition 0: seeking to offset 1525
+[2m2026-11-05T11:53:45.279017Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Consumer assigned to 1 partition(s)
+
+[2m2026-11-05T11:53:45.286747Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Creating new YANG context for schema ID: 983
+[2m2026-11-05T11:53:45.636235Z[0m [32m INFO[0m [2mnetcalyx_yang_push::cache::storage[0m[2m:[0m saved YANG modules to disk [3mcontent_id[0m[2m=[0m"schema-id-983" [3mmodules_count[0m[2m=[0m355 [3mmodules_path[0m[2m=[0mconsumer-cache/schema-id-983/modules
+[2m2026-11-05T11:53:46.131514Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Successfully created YANG context for schema ID: 983
+
+[2m2026-11-05T11:53:46.131770Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1525, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.131955Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1526, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.132202Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1527, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.132367Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1528, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.132524Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1529, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.132568Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Creating new YANG context for schema ID: 985
+[2m2026-11-05T11:53:46.194443Z[0m [32m INFO[0m [2mnetcalyx_yang_push::cache::storage[0m[2m:[0m saved YANG modules to disk [3mcontent_id[0m[2m=[0m"schema-id-985" [3mmodules_count[0m[2m=[0m356 [3mmodules_path[0m[2m=[0mconsumer-cache/schema-id-985/modules
+[2m2026-11-05T11:53:46.772588Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Successfully created YANG context for schema ID: 985
+
+[2m2026-11-05T11:53:46.772942Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1530, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.773247Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1531, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.773484Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1532, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.773753Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1533, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.774042Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1534, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.774276Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1535, key: "10.190.33.167", schema_id: 985]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.774564Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1536, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.774807Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1537, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.775036Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1538, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.775239Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1539, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.775467Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1540, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.775691Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1541, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.775898Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1542, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.776112Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1543, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.779230Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1545, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.779474Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1546, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.779685Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1547, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.782991Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1550, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.783706Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1552, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.783958Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1553, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.784209Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1554, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:46.784291Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Creating new YANG context for schema ID: 993
+[2m2026-11-05T11:53:46.860983Z[0m [32m INFO[0m [2mnetcalyx_yang_push::cache::storage[0m[2m:[0m saved YANG modules to disk [3mcontent_id[0m[2m=[0m"schema-id-993" [3mmodules_count[0m[2m=[0m362 [3mmodules_path[0m[2m=[0mconsumer-cache/schema-id-993/modules
+[2m2026-11-05T11:53:47.444133Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Successfully created YANG context for schema ID: 993
+
+[2m2026-11-05T11:53:47.444466Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1555, key: "10.190.33.167", schema_id: 993]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:47.506882Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m All partitions reached limit, exiting
+[2m2026-11-05T11:53:47.507120Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:47.507128Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:47.507133Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Kafka YANG Consumer Statistics * 
+[2m2026-11-05T11:53:47.507137Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:47.507142Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Total messages processed:        100
+[2m2026-11-05T11:53:47.507146Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:47.507150Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Validation Summary:
+[2m2026-11-05T11:53:47.507154Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Passed:                      73
+[2m2026-11-05T11:53:47.507158Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Failed:                      27
+[2m2026-11-05T11:53:47.507162Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Context errors:              0
+[2m2026-11-05T11:53:47.507167Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   No schema-id (skipped):      0
+[2m2026-11-05T11:53:47.507171Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:47.507174Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Validation success rate:         73.00%
+[2m2026-11-05T11:53:47.507182Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:47.507186Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 

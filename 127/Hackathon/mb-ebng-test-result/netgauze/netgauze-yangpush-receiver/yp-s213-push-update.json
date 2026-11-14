@@ -1,0 +1,93 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-l2tp-access:bras-l2tp-access": {
+                        "lac-tunnel-statistics": {
+                            "lac-tunnel-statistic": [
+                                {
+                                    "l2tp-group-name": "default-lac",
+                                    "local-id": 8193,
+                                    "local-ip-address": "138.187.22.62",
+                                    "local-name": "TEST_138.187.22.62_tunnel1",
+                                    "receive-cdn-error-number": "0",
+                                    "receive-cdn-number": "0",
+                                    "receive-hello-error-number": "0",
+                                    "receive-hello-number": "234",
+                                    "receive-icrp-error-number": "0",
+                                    "receive-icrp-number": "400",
+                                    "receive-sccrp-error-number": "0",
+                                    "receive-sccrp-number": "1",
+                                    "receive-stopccn-error-number": "0",
+                                    "receive-stopccn-number": "0",
+                                    "receive-zlb-error-number": "0",
+                                    "receive-zlb-number": "1713",
+                                    "remote-ip-address": "10.192.105.10",
+                                    "rx-octets": "0",
+                                    "rx-octets-rate": 0,
+                                    "rx-packets": "0",
+                                    "rx-packets-rate": 0,
+                                    "send-cdn-number": "0",
+                                    "send-hello-number": "1326",
+                                    "send-iccn-number": "400",
+                                    "send-icrq-number": "400",
+                                    "send-scccn-number": "1",
+                                    "send-sccrq-number": "1",
+                                    "send-stopccn-number": "0",
+                                    "send-zlb-number": "57",
+                                    "tx-octets": "0",
+                                    "tx-octets-rate": 0,
+                                    "tx-packets": "0",
+                                    "tx-packets-rate": 0
+                                },
+                                {
+                                    "l2tp-group-name": "default-lac",
+                                    "local-id": 24577,
+                                    "local-ip-address": "138.187.22.63",
+                                    "local-name": "TEST_138.187.22.63_tunnel1",
+                                    "receive-cdn-error-number": "0",
+                                    "receive-cdn-number": "0",
+                                    "receive-hello-error-number": "0",
+                                    "receive-hello-number": "0",
+                                    "receive-icrp-error-number": "0",
+                                    "receive-icrp-number": "0",
+                                    "receive-sccrp-error-number": "0",
+                                    "receive-sccrp-number": "0",
+                                    "receive-stopccn-error-number": "0",
+                                    "receive-stopccn-number": "0",
+                                    "receive-zlb-error-number": "0",
+                                    "receive-zlb-number": "0",
+                                    "remote-ip-address": "10.192.105.10",
+                                    "rx-octets": "0",
+                                    "rx-octets-rate": 0,
+                                    "rx-packets": "0",
+                                    "rx-packets-rate": 0,
+                                    "send-cdn-number": "0",
+                                    "send-hello-number": "0",
+                                    "send-iccn-number": "0",
+                                    "send-icrq-number": "0",
+                                    "send-scccn-number": "0",
+                                    "send-sccrq-number": "0",
+                                    "send-stopccn-number": "0",
+                                    "send-zlb-number": "0",
+                                    "tx-octets": "0",
+                                    "tx-octets-rate": 0,
+                                    "tx-packets": "0",
+                                    "tx-packets-rate": 0
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 213,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.045Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.693Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 128
+    }
+}

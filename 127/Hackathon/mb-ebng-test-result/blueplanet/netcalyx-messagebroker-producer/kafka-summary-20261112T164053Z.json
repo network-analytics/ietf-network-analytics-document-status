@@ -1,0 +1,738 @@
+{
+  "partition": 0,
+  "start_offset": 50988,
+  "end_offset_exclusive": 51988,
+  "record_count": 1000,
+  "first_offset": 50988,
+  "last_offset": 51987,
+  "collection_timestamp_first": "2026-11-12T16:43:59.266208984Z",
+  "collection_timestamp_last": "2026-11-12T16:45:26.835989701Z",
+  "hosts": [
+    {
+      "hostname": "ipt-lss923-a-mbi-05",
+      "count": 1000
+    }
+  ],
+  "headers": [
+    {
+      "headers": "schema-id=630,content-type=application/yang.data+json",
+      "count": 1000
+    }
+  ],
+  "notifications": [
+    {
+      "notification": "ietf-subscribed-notifications:subscription-started",
+      "count": 44
+    },
+    {
+      "notification": "ietf-subscribed-notifications:subscription-terminated",
+      "count": 19
+    },
+    {
+      "notification": "ietf-yang-push:push-change-update",
+      "count": 83
+    },
+    {
+      "notification": "ietf-yang-push:push-update",
+      "count": 854
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription": 1,
+      "count": 100,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 99
+        }
+      ]
+    },
+    {
+      "subscription": 2,
+      "count": 100,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 99
+        }
+      ]
+    },
+    {
+      "subscription": 3,
+      "count": 100,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 99
+        }
+      ]
+    },
+    {
+      "subscription": 4,
+      "count": 2,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subscription": 100,
+      "count": 47,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-change-update",
+          "count": 45
+        }
+      ]
+    },
+    {
+      "subscription": 101,
+      "count": 25,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-change-update",
+          "count": 22
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subscription": 102,
+      "count": 17,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-change-update",
+          "count": 13
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subscription": 104,
+      "count": 2,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subscription": 105,
+      "count": 6,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-change-update",
+          "count": 3
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subscription": 106,
+      "count": 4,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subscription": 200,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 201,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 202,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 203,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 204,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 205,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 206,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 207,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 208,
+      "count": 32,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "subscription": 209,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 210,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 211,
+      "count": 12,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-subscribed-notifications:subscription-terminated",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 212,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 213,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 214,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 215,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 216,
+      "count": 5,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subscription": 217,
+      "count": 5,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subscription": 218,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 219,
+      "count": 31,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "subscription": 220,
+      "count": 41,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "subscription": 300,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 301,
+      "count": 41,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "subscription": 302,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 303,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 304,
+      "count": 100,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 99
+        }
+      ]
+    },
+    {
+      "subscription": 305,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 306,
+      "count": 11,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subscription": 400,
+      "count": 10,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "subscription": 401,
+      "count": 10,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "subscription": 402,
+      "count": 30,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "subscription": 403,
+      "count": 21,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "subscription": 404,
+      "count": 19,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "subscription": 405,
+      "count": 10,
+      "notifications": [
+        {
+          "notification": "ietf-subscribed-notifications:subscription-started",
+          "count": 1
+        },
+        {
+          "notification": "ietf-yang-push:push-update",
+          "count": 9
+        }
+      ]
+    }
+  ]
+}

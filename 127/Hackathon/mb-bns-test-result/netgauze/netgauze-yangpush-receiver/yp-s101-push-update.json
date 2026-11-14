@@ -1,0 +1,24 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Loopback-A9-main"
+                            }
+                        ]
+                    }
+                },
+                "id": 101,
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-22T11:25:17.717714370+00:00"
+            }
+        },
+        "event-time": "2026-10-22T11:25:17.717636556Z",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6899
+    }
+}

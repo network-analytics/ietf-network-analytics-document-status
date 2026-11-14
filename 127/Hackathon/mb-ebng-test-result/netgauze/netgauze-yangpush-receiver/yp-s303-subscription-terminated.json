@@ -1,0 +1,13 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-subscribed-notifications:subscription-terminated": {
+                "id": 303,
+                "reason": "no-such-subscription"
+            }
+        },
+        "event-time": "2026-10-09T12:08:43.005Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 703
+    }
+}

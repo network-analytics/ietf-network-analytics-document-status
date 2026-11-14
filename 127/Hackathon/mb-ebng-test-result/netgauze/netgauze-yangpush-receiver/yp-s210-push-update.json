@@ -1,0 +1,49 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-l2tp-access:bras-l2tp-access": {
+                        "lac-tunnels": {
+                            "lac-tunnel": [
+                                {
+                                    "local-id": 8193,
+                                    "local-ip-address": "138.187.22.62",
+                                    "local-name": "TEST_138.187.22.62_tunnel1",
+                                    "local-port": 1701,
+                                    "recall-ip-address": "0.0.0.0",
+                                    "remote-id": 2,
+                                    "remote-ip-address": "10.192.105.10",
+                                    "remote-name": "lns1",
+                                    "remote-port": 1701,
+                                    "status": "Up",
+                                    "vrf": 6
+                                },
+                                {
+                                    "local-id": 24577,
+                                    "local-ip-address": "138.187.22.63",
+                                    "local-name": "TEST_138.187.22.63_tunnel1",
+                                    "local-port": 1701,
+                                    "recall-ip-address": "0.0.0.0",
+                                    "remote-id": 1,
+                                    "remote-ip-address": "10.192.105.10",
+                                    "remote-name": "lns1",
+                                    "remote-port": 1701,
+                                    "status": "Up",
+                                    "vrf": 6
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 210,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:30.998Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.033Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 123
+    }
+}

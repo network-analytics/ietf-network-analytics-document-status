@@ -1,0 +1,90 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "datastore-contents": {
+          "Cisco-IOS-XR-ptp-oper:ptp": {
+            "nodes": {
+              "node": [
+                {
+                  "node-interface-foreign-masters": {
+                    "node-interface-foreign-master": [
+                      {
+                        "foreign-clock": [
+                          {
+                            "address": {
+                              "encapsulation": "ethernet",
+                              "mac-address": {
+                                "macaddr": "7c:41:a2:22:b3:b0"
+                              }
+                            },
+                            "communication-model": "multicast",
+                            "delay-asymmetry": 0,
+                            "foreign-clock": {
+                              "accuracy": 33,
+                              "class": 6,
+                              "clock-id": "9567906204342090177",
+                              "configured-clock-class": 0,
+                              "configured-priority": 0,
+                              "frequency-traceable": true,
+                              "is-alternate-master": false,
+                              "is-receiver-valid": true,
+                              "is-sender-valid": true,
+                              "leap-seconds": "none",
+                              "local": false,
+                              "offset-log-variance": 20061,
+                              "priority1": 128,
+                              "priority2": 10,
+                              "receiver": {
+                                "clock-id": "7208122254257213440",
+                                "port-number": 1
+                              },
+                              "sender": {
+                                "clock-id": "11881370438467845889",
+                                "port-number": 5
+                              },
+                              "steps-removed": 5,
+                              "time-source": "gps",
+                              "time-traceable": true,
+                              "timescale": "ptp",
+                              "utc-offset": {
+                                "current-offset": 37,
+                                "offset-valid": true
+                              }
+                            },
+                            "foreign-domain": 24,
+                            "is-dnu": false,
+                            "is-grandmaster": true,
+                            "is-known": true,
+                            "is-qualified": true,
+                            "ptsf-loss-announce": false,
+                            "ptsf-loss-sync": false,
+                            "time-known-for": 248612,
+                            "virtual-port-offset": "0"
+                          }
+                        ],
+                        "interface-name": "GigabitEthernet0/0/0/27",
+                        "port-number": 1
+                      },
+                      {
+                        "interface-name": "TenGigE0/0/0/12",
+                        "port-number": 2
+                      }
+                    ]
+                  },
+                  "node-name": "0/RP0/CPU0"
+                }
+              ]
+            }
+          }
+        },
+        "id": 90,
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "ietf-yp-observation:timestamp": "2026-10-26T14:08:30.002Z"
+      }
+    },
+    "event-time": "2026-10-26T14:08:30.002Z",
+    "hostname": "ipt-age923-b-aac-01",
+    "sequence-number": 2
+  }
+}

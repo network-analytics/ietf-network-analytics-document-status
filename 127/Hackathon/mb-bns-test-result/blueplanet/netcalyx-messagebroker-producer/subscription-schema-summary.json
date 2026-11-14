@@ -1,0 +1,58 @@
+[
+  {
+    "subscription_id": 100,
+    "schema_id": 1589,
+    "yang_library_content_id": "964707179",
+    "notification": "subscription-started",
+    "messages": 1
+  },
+  {
+    "subscription_id": 101,
+    "schema_id": 1589,
+    "yang_library_content_id": "964707179",
+    "notification": "push-update",
+    "messages": 6
+  },
+  {
+    "subscription_id": 101,
+    "schema_id": 1589,
+    "yang_library_content_id": "964707179",
+    "notification": "subscription-started",
+    "messages": 1
+  },
+  {
+    "subscription_id": 102,
+    "schema_id": 1588,
+    "yang_library_content_id": "964707179",
+    "notification": "push-update",
+    "messages": 1
+  },
+  {
+    "subscription_id": 102,
+    "schema_id": 1588,
+    "yang_library_content_id": "964707179",
+    "notification": "subscription-started",
+    "messages": 1
+  },
+  {
+    "subscription_id": 103,
+    "schema_id": 1588,
+    "yang_library_content_id": "964707179",
+    "notification": "push-update",
+    "messages": 6
+  },
+  {
+    "subscription_id": 103,
+    "schema_id": 1588,
+    "yang_library_content_id": "964707179",
+    "notification": "subscription-started",
+    "messages": 1
+  },
+  {
+    "subscription_id": 104,
+    "schema_id": 1591,
+    "yang_library_content_id": "964707179",
+    "notification": "subscription-started",
+    "messages": 1
+  }
+]

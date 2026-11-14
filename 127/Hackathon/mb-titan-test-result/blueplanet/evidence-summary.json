@@ -1,0 +1,107 @@
+{
+  "server": "10.190.33.167",
+  "date": "2026-11-12",
+  "topic": "telemetry-yang",
+  "partition": 0,
+  "start_offset": 47799,
+  "end_offset_exclusive": 47925,
+  "new_records": 126,
+  "hostname": "ipt-age923-b-aac-01",
+  "subscription_ids_with_records": [
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "schema_ids": [
+    1684,
+    1687,
+    1690,
+    1694,
+    1696,
+    1699,
+    1711,
+    1716,
+    1720
+  ],
+  "message_types": [
+    "push-update",
+    "subscription-started"
+  ],
+  "sample_count": 22,
+  "schema_reference_versions": 83,
+  "blueplanet_consumer_validation": "separate Java/AWE run documented in blueplanet-messagebroker-consumer/readme.md; not part of the NetCalyx replay validation",
+  "titan_consumer_nov13_run": {
+    "topic": "telemetry-yang",
+    "partition": 0,
+    "start_offset": 52069,
+    "end_offset_exclusive": 52132,
+    "records": 63,
+    "hostname": "ipt-age923-b-aac-01",
+    "collection_timestamp_start": "2026-11-13T10:44:29.872714343Z",
+    "collection_timestamp_end": "2026-11-13T10:45:10.413872562Z",
+    "read_only_audit": {
+      "group_id": "titan-audit-live-20261113",
+      "start_offset": 52069,
+      "auto_commit": false,
+      "deserialized_to_yang_document": 57,
+      "deserialization_failures": 6,
+      "leafref_failures": 0,
+      "event_outcomes": {
+        "ietf-subscribed-notifications:subscription-started": {
+          "records": 14,
+          "passed": 14,
+          "failed": 0
+        },
+        "ietf-yang-push:push-update": {
+          "records": 49,
+          "passed": 43,
+          "failed": 6
+        }
+      },
+      "failure": {
+        "event": "ietf-yang-push:push-update",
+        "subscription_id": 90,
+        "sequences": [2, 3, 4, 5, 6, 7],
+        "offsets": [52092, 52097, 52106, 52115, 52120, 52128],
+        "schema_id": 1716,
+        "exception": "NullPointerException: YangList.getKey() is null at org.yangcentral.yangkit.data.codec.json.ListDataJsonCodec.buildData(ListDataJsonCodec.java:28)",
+        "yang_path": "/Cisco-IOS-XR-ptp-oper:ptp/nodes/node/node-interface-foreign-masters"
+      }
+    },
+    "registry_evidence": {
+      "subject": "netcalyx.labCisco-IOS-XR-ptp-oper",
+      "version": 1,
+      "schema_module": "Cisco-IOS-XR-ptp-oper",
+      "operational_container": "ptp",
+      "operational_container_config": false,
+      "parent_list": "node-interface-foreign-master",
+      "parent_list_key": "interface-name",
+      "failed_nested_list": "foreign-clock",
+      "nested_list_key": null,
+      "yang_grouping": "PTP-IF-CLOCK-INFO",
+      "interpretation": "A keyless list is legal under config false. The YANGKit JSON list codec dereferences a missing key while processing the valid state list."
+    },
+    "test_group_unchanged": true,
+    "control_module_version_key_observed": "name",
+    "previous_missing_module_name_failure_reproduced": false
+  },
+  "replay_stdout_log": "not retained on server",
+  "pcap_udp_packets": 6075,
+  "pcap_duration_seconds": 407.914312,
+  "replay_completion": "not directly recorded; 126 matching Titan records were found after the prior BNS end offset",
+  "receiver_validation_errors": "306 captured validation-drop events across subscriptions 11, 15, 19, 21, 23, 25, 27, 83, 84, and 94; OpenConfig YANG Patch unknown-node errors, IOS XR policy-timestamp errors, and invalid enumeration",
+  "producer_errors": 195,
+  "registry_http_422": 390,
+  "registry_errors": "HTTP 422 for subject netcalyx.labCisco-IOS-XR-openconfig-platform-pipeline-counters-q200-ext (schema size 1334408); response body and parser cause were not captured"
+}

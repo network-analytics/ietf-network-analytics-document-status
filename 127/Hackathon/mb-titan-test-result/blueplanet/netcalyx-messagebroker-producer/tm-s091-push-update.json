@@ -1,0 +1,130 @@
+{
+  "partition": 0,
+  "offset": 47814,
+  "headers": {
+    "schema-id": "1716",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-26T14:07:30.006Z",
+        "collection-timestamp": "2026-11-12T06:09:53.697714725Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 55548,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 91,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/Cisco-IOS-XR-ptp-oper:ptp/Cisco-IOS-XR-ptp-pd-oper:platform/servo",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "Cisco-IOS-XR-ptp-oper",
+              "revision": "2024-03-19"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "Cisco-IOS-XR-ptp-oper:ptp": {
+                  "Cisco-IOS-XR-ptp-pd-oper:platform": {
+                    "servo": {
+                      "device-status": "PHASE_LOCKED",
+                      "flagof-last-set-time": false,
+                      "last-adjust-freq": 0,
+                      "last-received-t1": {
+                        "nano-second": 975500149,
+                        "second": 1793023686
+                      },
+                      "last-received-t2": {
+                        "nano-second": 975500785,
+                        "second": 1793023686
+                      },
+                      "last-received-t3": {
+                        "nano-second": 995974212,
+                        "second": 1793023686
+                      },
+                      "last-received-t4": {
+                        "nano-second": 995974849,
+                        "second": 1793023686
+                      },
+                      "last-set-time": {
+                        "nano-second": 0,
+                        "second": 1792747782
+                      },
+                      "last-step-time": 47825000,
+                      "lock-status": 2,
+                      "log-level": 0,
+                      "mean-path-delay": "636",
+                      "num-adjust-freq": 2204499,
+                      "num-adjust-freq-time": 0,
+                      "num-delay-timestamp": 4443679,
+                      "num-discard-delay-timestamp": 0,
+                      "num-discard-sync-timestamp": 0,
+                      "num-set-time": 1,
+                      "num-step-time": 1,
+                      "num-sync-timestamp": 4408130,
+                      "offset-from-master": "0",
+                      "phase-accuracy-last": "0",
+                      "pre-received-t1": {
+                        "nano-second": 912999989,
+                        "second": 1793023686
+                      },
+                      "pre-received-t2": {
+                        "nano-second": 913000625,
+                        "second": 1793023686
+                      },
+                      "pre-received-t3": {
+                        "nano-second": 932012133,
+                        "second": 1793023686
+                      },
+                      "pre-received-t4": {
+                        "nano-second": 932012769,
+                        "second": 1793023686
+                      },
+                      "running": true,
+                      "servo-mode": 1
+                    }
+                  }
+                }
+              },
+              "id": 91,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.006Z"
+            }
+          },
+          "event-time": "2026-10-26T14:07:30.006Z",
+          "hostname": "ipt-age923-b-aac-01",
+          "sequence-number": 1
+        }
+      }
+    }
+  }
+}

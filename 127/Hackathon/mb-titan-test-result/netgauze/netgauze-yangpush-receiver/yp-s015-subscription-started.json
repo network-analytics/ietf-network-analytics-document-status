@@ -1,0 +1,26 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "id": 15,
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "openconfig-lldp",
+                        "revision": "2018-11-21"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3",
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "openconfig-lldp:lldp/interfaces/interface/neighbors/neighbor/state",
+                "ietf-yang-push:on-change": {
+                    "sync-on-start": true
+                },
+                "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+        },
+        "event-time": "2026-10-26T14:06:57.791Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 0
+    }
+}

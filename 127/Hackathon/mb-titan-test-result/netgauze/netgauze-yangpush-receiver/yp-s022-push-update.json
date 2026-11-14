@@ -1,0 +1,92 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "openconfig-lacp:lacp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "members": {
+                                        "member": [
+                                            {
+                                                "interface": "HundredGigE0/0/0/2",
+                                                "state": {
+                                                    "activity": "ACTIVE",
+                                                    "aggregatable": true,
+                                                    "collecting": true,
+                                                    "counters": {
+                                                        "lacp-errors": "0",
+                                                        "lacp-in-pkts": "8282",
+                                                        "lacp-out-pkts": "8282",
+                                                        "lacp-rx-errors": "0",
+                                                        "lacp-timeout-transitions": "0",
+                                                        "lacp-unknown-errors": "0"
+                                                    },
+                                                    "distributing": true,
+                                                    "interface": "HundredGigE0/0/0/2",
+                                                    "last-change": "0",
+                                                    "oper-key": 1000,
+                                                    "partner-id": "ec:bb:78:0b:57:86",
+                                                    "partner-key": 1000,
+                                                    "partner-port-num": 2,
+                                                    "port-num": 2,
+                                                    "port-priority": 32768,
+                                                    "synchronization": "IN_SYNC",
+                                                    "system-id": "64:08:64:96:d0:86",
+                                                    "timeout": "LONG"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "name": "Bundle-Ether1000"
+                                },
+                                {
+                                    "members": {
+                                        "member": [
+                                            {
+                                                "interface": "TenGigE0/0/0/12",
+                                                "state": {
+                                                    "activity": "ACTIVE",
+                                                    "aggregatable": true,
+                                                    "collecting": true,
+                                                    "counters": {
+                                                        "lacp-errors": "0",
+                                                        "lacp-in-pkts": "8290",
+                                                        "lacp-out-pkts": "8287",
+                                                        "lacp-rx-errors": "0",
+                                                        "lacp-timeout-transitions": "0",
+                                                        "lacp-unknown-errors": "0"
+                                                    },
+                                                    "distributing": true,
+                                                    "interface": "TenGigE0/0/0/12",
+                                                    "last-change": "0",
+                                                    "oper-key": 4000,
+                                                    "partner-id": "a0:3d:6e:86:87:86",
+                                                    "partner-key": 2100,
+                                                    "partner-port-num": 2,
+                                                    "port-num": 1,
+                                                    "port-priority": 32768,
+                                                    "synchronization": "IN_SYNC",
+                                                    "system-id": "64:08:64:96:d0:86",
+                                                    "timeout": "LONG"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "name": "Bundle-Ether4000"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 22,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.004Z"
+            }
+        },
+        "event-time": "2026-10-26T14:07:30.004Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1
+    }
+}

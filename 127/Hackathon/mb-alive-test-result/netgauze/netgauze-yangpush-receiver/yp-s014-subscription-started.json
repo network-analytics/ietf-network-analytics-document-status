@@ -1,0 +1,30 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "id": 14,
+                "ietf-distributed-notif:message-publisher-id": [
+                    16843789
+                ],
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "ietf-hardware",
+                        "revision": "2018-03-13"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "2300156437",
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component",
+                "ietf-yang-push:periodic": {
+                    "anchor-time": "2025-01-01T00:00:30Z",
+                    "period": 6000
+                },
+                "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+        },
+        "event-time": "2026-09-18T06:49:19.044Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 11
+    }
+}

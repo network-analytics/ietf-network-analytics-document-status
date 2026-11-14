@@ -1,0 +1,295 @@
+{
+  "partition": 0,
+  "offset": 51534,
+  "headers": {
+    "schema-id": "630",
+    "content-type": "application/yang.data+json"
+  },
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-09T12:08:32.445Z",
+        "collection-timestamp": "2026-11-12T16:44:50.393614819Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 50690,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 220,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/huawei-cpudefend:cpudefend/cpcar/protocol-name-statisticss/protocol-name-statistics",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 6000,
+            "anchor-time": "2025-01-01T00:00:30Z"
+          },
+          "module": [
+            {
+              "name": "huawei-cpudefend",
+              "revision": "2026-05-29"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "190100522"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "huawei-cpudefend:cpudefend": {
+                  "cpcar": {
+                    "protocol-name-statisticss": {
+                      "protocol-name-statistics": [
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 9000000,
+                          "actual-cir": 19989,
+                          "configured-cbs": 9000000,
+                          "configured-cir": 20000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 1024,
+                          "passed-packets": "954893",
+                          "peak-rate": "2",
+                          "peak-rate-time": "2026-10-01T00:00:26Z",
+                          "priority": "cs7",
+                          "protocol-name": "whitelist-isis",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 600000,
+                          "actual-cir": 4000,
+                          "configured-cbs": 600000,
+                          "configured-cir": 4000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 512,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "whitelist-ldp",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 9000000,
+                          "actual-cir": 15998,
+                          "configured-cbs": 9000000,
+                          "configured-cir": 16000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 1024,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "whitelist-ospf",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 1300000,
+                          "actual-cir": 2000,
+                          "configured-cbs": 1000000,
+                          "configured-cir": 1500,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "602817",
+                          "peak-rate": "620",
+                          "peak-rate-time": "2026-10-07T11:59:12Z",
+                          "priority": "cs6",
+                          "protocol-name": "whitelist-radius",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 600000,
+                          "actual-cir": 4000,
+                          "configured-cbs": 600000,
+                          "configured-cir": 4000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 256,
+                          "passed-packets": "0",
+                          "priority": "ef",
+                          "protocol-name": "whitelist-rsvp",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 600000,
+                          "actual-cir": 4000,
+                          "configured-cbs": 600000,
+                          "configured-cir": 4000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "whitelistv6",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 22500000,
+                          "actual-cir": 120000,
+                          "configured-cbs": 22500000,
+                          "configured-cir": 120000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 1500,
+                          "passed-packets": "766755",
+                          "peak-rate": "2",
+                          "peak-rate-time": "2026-10-01T00:00:26Z",
+                          "priority": "cs7",
+                          "protocol-name": "whitelistv6-bgpv6",
+                          "slot": "1"
+                        },
+                        {
+                          "acl-denied-packets": "0",
+                          "actual-cbs": 9000000,
+                          "actual-cir": 15998,
+                          "configured-cbs": 9000000,
+                          "configured-cir": 16000,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 1024,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "whitelistv6-ospfv3",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 1600000,
+                          "actual-cir": 100,
+                          "configured-cbs": 1600000,
+                          "configured-cir": 100,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "hwtacacsv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 100000,
+                          "actual-cir": 512,
+                          "configured-cbs": 100000,
+                          "configured-cir": 512,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "lsppingv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 5120,
+                          "actual-cir": 100,
+                          "configured-cbs": 5120,
+                          "configured-cir": 512,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 512,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "pcep",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 1000000,
+                          "actual-cir": 256,
+                          "configured-cbs": 1000000,
+                          "configured-cir": 256,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "radiusv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 10000,
+                          "actual-cir": 100,
+                          "configured-cbs": 10000,
+                          "configured-cir": 200,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "syslogv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 1600000,
+                          "actual-cir": 100,
+                          "configured-cbs": 1600000,
+                          "configured-cir": 2600,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs7",
+                          "protocol-name": "vrrpv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 500000,
+                          "actual-cir": 100,
+                          "configured-cbs": 500000,
+                          "configured-cir": 256,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "web-auth-serverv6",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 1600000,
+                          "actual-cir": 100,
+                          "configured-cbs": 1600000,
+                          "configured-cir": 512,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 128,
+                          "passed-packets": "0",
+                          "priority": "ef",
+                          "protocol-name": "cusp",
+                          "slot": "1"
+                        },
+                        {
+                          "actual-cbs": 297000,
+                          "actual-cir": 3001,
+                          "configured-cbs": 51200,
+                          "configured-cir": 512,
+                          "dropped-packets": "0",
+                          "fixed-packet-length": 160,
+                          "passed-packets": "0",
+                          "priority": "cs6",
+                          "protocol-name": "dhcpv6-pppoe",
+                          "slot": "1"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "id": 220,
+              "ietf-distributed-notif:message-publisher-id": 16843793,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-09T12:08:31.850Z"
+            }
+          },
+          "event-time": "2026-10-09T12:08:32.445Z",
+          "hostname": "ipt-lss923-a-mbi-05",
+          "sequence-number": 662
+        }
+      }
+    }
+  }
+}

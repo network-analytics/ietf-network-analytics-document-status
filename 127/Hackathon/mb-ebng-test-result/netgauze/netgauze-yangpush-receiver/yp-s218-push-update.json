@@ -1,0 +1,275 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-ipv4-address-manage:bras-ipv4-address-manage": {
+                        "pool-usage-statistics": {
+                            "pool-usage-statistic": [
+                                {
+                                    "pool-name": "v_wscp_100.70.10.0_24",
+                                    "ratio": 0,
+                                    "total-num": 254,
+                                    "used-num": 1,
+                                    "vpn-name": "WSCP"
+                                },
+                                {
+                                    "pool-name": "v_wscp_100.70.110.0_24",
+                                    "ratio": 0,
+                                    "total-num": 254,
+                                    "used-num": 1,
+                                    "vpn-name": "WSCP"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.225.0.0_17",
+                                    "ratio": 14,
+                                    "total-num": 32768,
+                                    "used-num": 4816,
+                                    "vpn-name": "SCS1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.220.0.0_18",
+                                    "ratio": 29,
+                                    "total-num": 16384,
+                                    "used-num": 4764,
+                                    "vpn-name": "SCS1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.64.10.0_24",
+                                    "ratio": 7,
+                                    "total-num": 256,
+                                    "used-num": 20,
+                                    "vpn-name": "SCS1_CGN"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.230.10.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_CGN"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.229.252.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_SGU"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.70.30.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_SGU"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.221.96.0_20",
+                                    "ratio": 0,
+                                    "total-num": 4096,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.238.208.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.237.210.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.229.104.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.229.204.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.229.105.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.229.205.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.70.36.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_ESIP"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.70.136.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_ESIP"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.238.192.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.239.192.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.238.200.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.239.200.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.107.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.207.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.108.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.208.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.109.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_wig1_10.229.209.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "WIG1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.225.128.0_17",
+                                    "ratio": 0,
+                                    "total-num": 32768,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.220.64.0_18",
+                                    "ratio": 0,
+                                    "total-num": 16384,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.64.20.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_CGN"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.230.20.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_CGN"
+                                },
+                                {
+                                    "pool-name": "v_scs1_10.229.253.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_SGU"
+                                },
+                                {
+                                    "pool-name": "v_scs1_100.70.130.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SCS1_SGU"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.221.112.0_20",
+                                    "ratio": 0,
+                                    "total-num": 4096,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.238.216.0_21",
+                                    "ratio": 0,
+                                    "total-num": 2048,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                },
+                                {
+                                    "pool-name": "v_sun1_10.237.220.0_24",
+                                    "ratio": 0,
+                                    "total-num": 256,
+                                    "used-num": 0,
+                                    "vpn-name": "SUN1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 218,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.630Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:31.873Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 131
+    }
+}

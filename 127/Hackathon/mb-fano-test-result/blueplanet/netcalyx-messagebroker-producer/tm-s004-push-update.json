@@ -1,0 +1,172 @@
+{
+  "partition": 0,
+  "offset": 1963,
+  "headers": {
+    "schema-id": "983",
+    "content-type": "application/yang.data+json"
+  },
+  "key": "\"10.190.33.167\"",
+  "payload": {
+    "ietf-telemetry-message:message": {
+      "telemetry-message-metadata": {
+        "node-export-timestamp": "2026-10-20T15:01:10.410Z",
+        "collection-timestamp": "2026-11-05T11:51:12.183343937Z",
+        "notification-event": "log",
+        "session-protocol": "yang-push",
+        "export-address": "10.190.33.167",
+        "export-port": 45658,
+        "collection-address": "0.0.0.0",
+        "collection-port": 10000,
+        "ietf-yang-push-telemetry-message:yang-push-subscription": {
+          "id": 4,
+          "datastore": "ietf-datastores:operational",
+          "xpath-filter": "/ietf-interfaces:interfaces/interface[type='bbf-xpon-if-type:v-ani']/statistics",
+          "transport": "ietf-udp-notif-transport:udp-notif",
+          "encoding": "ietf-subscribed-notifications:encode-json",
+          "periodic": {
+            "period": 30000,
+            "anchor-time": "2025-01-01T00:00:25Z"
+          },
+          "module": [
+            {
+              "name": "ietf-interfaces",
+              "revision": "2018-02-20"
+            },
+            {
+              "name": "bbf-xpon-if-type",
+              "revision": "2020-10-13"
+            },
+            {
+              "name": "huawei-interface-statistics-mgt",
+              "revision": "2025-08-14"
+            },
+            {
+              "name": "ietf-subscribed-notifications"
+            }
+          ],
+          "yang-library-content-id": "22934"
+        }
+      },
+      "data-collection-manifest": {
+        "name": "lab-netcalyx-yang",
+        "vendor": "NetCalyx",
+        "vendor-pen": 3746,
+        "software-version": "0.3.0 ()",
+        "software-flavor": "release",
+        "os-version": "8.10",
+        "os-type": "Oracle Linux Server"
+      },
+      "payload": {
+        "ietf-yp-notification:envelope": {
+          "contents": {
+            "ietf-yang-push:push-update": {
+              "datastore-contents": {
+                "ietf-interfaces:interfaces": {
+                  "interface": [
+                    {
+                      "name": "v-ani.0.1.0.0",
+                      "statistics": {
+                        "huawei-interface-statistics-mgt:in-pkts": "5528",
+                        "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                        "huawei-interface-statistics-mgt:out-pkts": "2414",
+                        "huawei-interface-statistics-mgt:traffic": {
+                          "in-peak-rate": 0,
+                          "in-rate": 0,
+                          "out-peak-rate": 0,
+                          "out-rate": 0
+                        },
+                        "in-discards": 3911199084,
+                        "in-octets": "686079",
+                        "out-discards": 0,
+                        "out-octets": "282768"
+                      }
+                    },
+                    {
+                      "name": "v-ani.0.1.0.1",
+                      "statistics": {
+                        "huawei-interface-statistics-mgt:in-pkts": "0",
+                        "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                        "huawei-interface-statistics-mgt:out-pkts": "10",
+                        "huawei-interface-statistics-mgt:traffic": {
+                          "in-peak-rate": 0,
+                          "in-rate": 0,
+                          "out-peak-rate": 0,
+                          "out-rate": 0
+                        },
+                        "in-discards": 3911199084,
+                        "in-octets": "0",
+                        "out-discards": 0,
+                        "out-octets": "640"
+                      }
+                    },
+                    {
+                      "name": "v-ani.0.1.0.2",
+                      "statistics": {
+                        "huawei-interface-statistics-mgt:in-pkts": "63566",
+                        "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                        "huawei-interface-statistics-mgt:out-pkts": "93852",
+                        "huawei-interface-statistics-mgt:traffic": {
+                          "in-peak-rate": 0,
+                          "in-rate": 0,
+                          "out-peak-rate": 849,
+                          "out-rate": 3
+                        },
+                        "in-discards": 3911168257,
+                        "in-octets": "6572811",
+                        "out-discards": 0,
+                        "out-octets": "23786136"
+                      }
+                    },
+                    {
+                      "name": "v-ani.0.1.0.3",
+                      "statistics": {
+                        "huawei-interface-statistics-mgt:in-pkts": "13117",
+                        "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                        "huawei-interface-statistics-mgt:out-pkts": "12862",
+                        "huawei-interface-statistics-mgt:traffic": {
+                          "in-peak-rate": 0,
+                          "in-rate": 0,
+                          "out-peak-rate": 0,
+                          "out-rate": 0
+                        },
+                        "in-discards": 3911595923,
+                        "in-octets": "1176529",
+                        "out-discards": 0,
+                        "out-octets": "1095076"
+                      }
+                    },
+                    {
+                      "name": "v-ani.0.1.0.4",
+                      "statistics": {
+                        "huawei-interface-statistics-mgt:in-pkts": "0",
+                        "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                        "huawei-interface-statistics-mgt:out-pkts": "2",
+                        "huawei-interface-statistics-mgt:traffic": {
+                          "in-peak-rate": 0,
+                          "in-rate": 0,
+                          "out-peak-rate": 0,
+                          "out-rate": 0
+                        },
+                        "in-discards": 3911492228,
+                        "in-octets": "0",
+                        "out-discards": 0,
+                        "out-octets": "128"
+                      }
+                    }
+                  ]
+                }
+              },
+              "id": 4,
+              "ietf-distributed-notif:message-publisher-id": 4227923968,
+              "ietf-yp-observation:point-in-time": "current-accounting",
+              "ietf-yp-observation:timestamp": "2026-10-20T15:01:10.410Z"
+            }
+          },
+          "event-time": "2026-10-20T15:01:10.410Z",
+          "hostname": "ipd-zbl1536-s-ah-79",
+          "sequence-number": 318
+        }
+      }
+    }
+  }
+}

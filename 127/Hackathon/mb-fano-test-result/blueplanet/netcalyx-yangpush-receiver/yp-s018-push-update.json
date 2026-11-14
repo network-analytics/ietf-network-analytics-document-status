@@ -1,0 +1,93 @@
+{
+  "ietf-yp-notification:envelope": {
+    "contents": {
+      "ietf-yang-push:push-update": {
+        "datastore-contents": {
+          "ietf-hardware:hardware": {
+            "component": [
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.0.0",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2535,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.0.1",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2535,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.1.0",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2520,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.1.1",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2535,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.2.0",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2550,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.2.1",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2595,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.3.0",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2535,
+                  "value-type": "rpm"
+                }
+              },
+              {
+                "class": "iana-hardware:sensor",
+                "name": "sensor.rpm.3.1",
+                "sensor-data": {
+                  "units-display": "times/minute",
+                  "value": 2595,
+                  "value-type": "rpm"
+                }
+              }
+            ]
+          }
+        },
+        "id": 18,
+        "ietf-distributed-notif:message-publisher-id": 3021116857,
+        "ietf-yp-observation:point-in-time": "current-accounting",
+        "ietf-yp-observation:timestamp": "2026-10-20T15:00:33.420Z"
+      }
+    },
+    "event-time": "2026-10-20T15:00:33.420Z",
+    "hostname": "ipd-zbl1536-s-ah-79",
+    "sequence-number": 1
+  }
+}

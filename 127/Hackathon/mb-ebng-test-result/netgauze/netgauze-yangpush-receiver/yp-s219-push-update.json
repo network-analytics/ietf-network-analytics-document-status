@@ -1,0 +1,593 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-bras-ipv6-address-manage:bras-ipv6-address-manage": {
+                        "ipv6-pools": {
+                            "ipv6-pool": [
+                                {
+                                    "name": "v_ipv6_pool_scs1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_scs1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 65536,
+                                        "delegation-used-number": 9600,
+                                        "delegation-used-radio": 14,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_scs1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 65536,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_scs1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 65536,
+                                        "delegation-used-number": 25,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_scs1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 65536,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_scs1_sgu",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_scs1_sgu_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1_SGU"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_scs1_sgu_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1_SGU"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_scs1_sgu_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1_SGU"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_scs1_sgu_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SCS1_SGU"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_sdwan",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_sdwan_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 4096,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SDWAN"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_sdwan_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 4096,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SDWAN"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_sdwan_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 4096,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SDWAN"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_sdwan_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 4096,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SDWAN"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_sun1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_na_sun1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_sun1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_sun1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_sun1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_sun1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 32768,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_na_lss05_sun1_0",
+                                    "usage": {
+                                        "address-total-number": 1048575,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_na_lss05_sun1_1",
+                                    "usage": {
+                                        "address-total-number": 1048575,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_na_lsp05_sun1_0",
+                                    "usage": {
+                                        "address-total-number": 1048575,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_na_lsp05_sun1_1",
+                                    "usage": {
+                                        "address-total-number": 1048575,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "SUN1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_wig1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_wig1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "WIG1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_wig1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "WIG1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_wig1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "WIG1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_wig1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "WIG1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_iwa1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_iwa1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "IWA1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_iwa1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "IWA1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_iwa1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "IWA1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lsp05_iwa1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "IWA1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_bse1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 0,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "_public_"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_bse1_0",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "BSE1"
+                                    }
+                                },
+                                {
+                                    "name": "v_ipv6_pool_1_lss05_bse1_1",
+                                    "usage": {
+                                        "address-total-number": 0,
+                                        "address-used-number": 0,
+                                        "address-used-radio": 0,
+                                        "delegation-total-number": 4096,
+                                        "delegation-used-number": 0,
+                                        "delegation-used-radio": 0,
+                                        "ndra-total-number": 0,
+                                        "ndra-used-number": 0,
+                                        "ndra-used-radio": 0,
+                                        "vpn-instance": "BSE1"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 219,
+                "ietf-distributed-notif:message-publisher-id": 16843793,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-10-09T11:59:31.652Z"
+            }
+        },
+        "event-time": "2026-10-09T11:59:32.063Z",
+        "hostname": "ipt-lss923-a-mbi-05",
+        "sequence-number": 132
+    }
+}

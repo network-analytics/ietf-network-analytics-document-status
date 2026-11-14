@@ -1,0 +1,36 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "dscp": 0,
+                "encoding": "ietf-subscribed-notifications:encode-json",
+                "id": 2,
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "iana-if-type",
+                        "revision": "2017-01-19"
+                    },
+                    {
+                        "module-name": "huawei-interface-statistics-mgt",
+                        "revision": "2025-08-14"
+                    },
+                    {
+                        "module-name": "ietf-interfaces",
+                        "revision": "2018-02-20"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22934",
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:gpon']/statistics",
+                "ietf-yang-push:periodic": {
+                    "anchor-time": "2025-01-01T00:00:30Z",
+                    "period": 30000
+                },
+                "transport": "ietf-udp-notif-transport:udp-notif"
+            }
+        },
+        "event-time": "2026-10-20T14:52:43.300Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0
+    }
+}

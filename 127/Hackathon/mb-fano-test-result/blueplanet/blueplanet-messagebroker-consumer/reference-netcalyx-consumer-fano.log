@@ -1,0 +1,57 @@
+[2m2026-11-05T11:52:59.458871Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:52:59.458907Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.458913Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Build Information * 
+[2m2026-11-05T11:52:59.458917Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.458922Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Package Version:    0.3.0
+[2m2026-11-05T11:52:59.458926Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Commit Hash:        
+[2m2026-11-05T11:52:59.458930Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Commit Date:        
+[2m2026-11-05T11:52:59.458934Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Branch:             
+[2m2026-11-05T11:52:59.458938Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Tag:                
+[2m2026-11-05T11:52:59.458942Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Build Time:         2026-09-07 15:14:05 +00:00
+[2m2026-11-05T11:52:59.458946Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Rust Channel:       stable-x86_64-unknown-linux-gnu
+[2m2026-11-05T11:52:59.458950Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Rust Version:       rustc 1.98.1 (48a229cea 2026-09-01)
+[2m2026-11-05T11:52:59.458955Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Cargo Version:      cargo 1.98.1 (797e8a9bc 2026-08-05)
+[2m2026-11-05T11:52:59.458959Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.458963Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:52:59.458967Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:52:59.458971Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.458976Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Kafka YANG Consumer Configuration * 
+[2m2026-11-05T11:52:59.458980Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.458984Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Kafka:
+[2m2026-11-05T11:52:59.458988Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Bootstrap servers: 10.190.33.167:9092
+[2m2026-11-05T11:52:59.458992Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Consumer:
+[2m2026-11-05T11:52:59.458996Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Topic: telemetry-yang
+[2m2026-11-05T11:52:59.459000Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Group ID: netcalyx-lab-validation
+[2m2026-11-05T11:52:59.459004Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Offset: 1525
+[2m2026-11-05T11:52:59.459008Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Partitions: all
+[2m2026-11-05T11:52:59.459012Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Limit: 1 messages per partition
+[2m2026-11-05T11:52:59.459016Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Follow: no
+[2m2026-11-05T11:52:59.459025Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Schema Registry:
+[2m2026-11-05T11:52:59.459034Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   URL: http://127.0.0.1:8081
+[2m2026-11-05T11:52:59.459038Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Cache path: "consumer-cache"
+[2m2026-11-05T11:52:59.459043Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:52:59.459047Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:00.515617Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Partition 0: seeking to offset 1525
+[2m2026-11-05T11:53:00.515702Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Consumer assigned to 1 partition(s)
+
+[2m2026-11-05T11:53:00.523835Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Creating new YANG context for schema ID: 983
+[2m2026-11-05T11:53:00.894259Z[0m [32m INFO[0m [2mnetcalyx_yang_push::cache::storage[0m[2m:[0m saved YANG modules to disk [3mcontent_id[0m[2m=[0m"schema-id-983" [3mmodules_count[0m[2m=[0m355 [3mmodules_path[0m[2m=[0mconsumer-cache/schema-id-983/modules
+[2m2026-11-05T11:53:01.311398Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Successfully created YANG context for schema ID: 983
+
+[2m2026-11-05T11:53:01.311661Z[0m [31mERROR[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Message validation FAILED [partition: 0, offset: 1525, key: "10.190.33.167", schema_id: 983]: Node "name" not found as a child of "module-version" node.
+[2m2026-11-05T11:53:01.311672Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m All partitions reached limit, exiting
+[2m2026-11-05T11:53:01.311871Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:01.311876Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:01.311880Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m  * Kafka YANG Consumer Statistics * 
+[2m2026-11-05T11:53:01.311884Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:01.311888Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Total messages processed:        1
+[2m2026-11-05T11:53:01.311891Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:01.311895Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Validation Summary:
+[2m2026-11-05T11:53:01.311898Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Passed:                      0
+[2m2026-11-05T11:53:01.311902Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Failed:                      1
+[2m2026-11-05T11:53:01.311905Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   Context errors:              0
+[2m2026-11-05T11:53:01.311909Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m   No schema-id (skipped):      0
+[2m2026-11-05T11:53:01.311913Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 
+[2m2026-11-05T11:53:01.311916Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m Validation success rate:         0.00%
+[2m2026-11-05T11:53:01.311921Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m ═════════════════════════════════════════════════════════
+[2m2026-11-05T11:53:01.311925Z[0m [32m INFO[0m [2mnetcalyx_yang_consumer[0m[2m:[0m 

@@ -1,0 +1,205 @@
+{
+    "ietf-yp-notification:envelope": {
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "datastore-contents": {
+                    "huawei-devm:devm": {
+                        "ports": {
+                            "port": [
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "channels": {
+                                            "channel": [
+                                                {
+                                                    "bias": "53.100mA",
+                                                    "number": 0,
+                                                    "rx-power": "-15.45",
+                                                    "tx-power": "1.55",
+                                                    "wavelength": "1295.56nm"
+                                                },
+                                                {
+                                                    "bias": "51.372mA",
+                                                    "number": 1,
+                                                    "rx-power": "-15.95",
+                                                    "tx-power": "1.25",
+                                                    "wavelength": "1300.05nm"
+                                                },
+                                                {
+                                                    "bias": "53.100mA",
+                                                    "number": 2,
+                                                    "rx-power": "-14.37",
+                                                    "tx-power": "0.72",
+                                                    "wavelength": "1304.58nm"
+                                                },
+                                                {
+                                                    "bias": "53.100mA",
+                                                    "number": 3,
+                                                    "rx-power": "-11.26",
+                                                    "tx-power": "1.29",
+                                                    "wavelength": "1309.14nm"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": "0/1/0"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "channels": {
+                                            "channel": [
+                                                {
+                                                    "bias": "53.100mA",
+                                                    "number": 0,
+                                                    "rx-power": "0.83",
+                                                    "tx-power": "0.84",
+                                                    "wavelength": "1295.56nm"
+                                                },
+                                                {
+                                                    "bias": "52.128mA",
+                                                    "number": 1,
+                                                    "rx-power": "0.63",
+                                                    "tx-power": "0.75",
+                                                    "wavelength": "1300.05nm"
+                                                },
+                                                {
+                                                    "bias": "53.100mA",
+                                                    "number": 2,
+                                                    "rx-power": "-0.15",
+                                                    "tx-power": "0.36",
+                                                    "wavelength": "1304.58nm"
+                                                },
+                                                {
+                                                    "bias": "50.400mA",
+                                                    "number": 3,
+                                                    "rx-power": "0.69",
+                                                    "tx-power": "0.86",
+                                                    "wavelength": "1309.14nm"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": "0/1/2"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "channels": {
+                                            "channel": [
+                                                {
+                                                    "bias": "27.350mA",
+                                                    "number": 0,
+                                                    "rx-power": "-33.97",
+                                                    "tx-power": "-2.63",
+                                                    "wavelength": "1307nm"
+                                                },
+                                                {
+                                                    "bias": "27.332mA",
+                                                    "number": 1,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-2.80"
+                                                },
+                                                {
+                                                    "bias": "25.262mA",
+                                                    "number": 2,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-3.02"
+                                                },
+                                                {
+                                                    "bias": "26.942mA",
+                                                    "number": 3,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-2.82"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": "0/1/6"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "channels": {
+                                            "channel": [
+                                                {
+                                                    "bias": "47.002mA",
+                                                    "number": 0,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-0.82",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "46.822mA",
+                                                    "number": 1,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-1.58",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "47.032mA",
+                                                    "number": 2,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-1.10",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "46.672mA",
+                                                    "number": 3,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-0.50",
+                                                    "wavelength": "1310nm"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": "0/1/8"
+                                },
+                                {
+                                    "huawei-pic:optical-module": {
+                                        "channels": {
+                                            "channel": [
+                                                {
+                                                    "bias": "46.642mA",
+                                                    "number": 0,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-0.95",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "46.762mA",
+                                                    "number": 1,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-0.60",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "46.462mA",
+                                                    "number": 2,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "-0.03",
+                                                    "wavelength": "1310nm"
+                                                },
+                                                {
+                                                    "bias": "45.502mA",
+                                                    "number": 3,
+                                                    "rx-power": "-40.00",
+                                                    "tx-power": "0.03",
+                                                    "wavelength": "1310nm"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "position": "0/1/10"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "id": 4,
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-yp-observation:timestamp": "2026-09-18T06:50:30.952Z"
+            }
+        },
+        "event-time": "2026-09-18T06:50:39.613Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 64
+    }
+}
