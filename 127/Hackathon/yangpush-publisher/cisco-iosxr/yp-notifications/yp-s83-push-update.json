@@ -1,0 +1,16 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-24T11:41:30.002Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 3,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 83,
+                "ietf-yp-observation:timestamp": "2026-04-24T11:41:30.002Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                }
+            }
+        }
+    }
+}

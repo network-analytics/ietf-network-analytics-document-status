@@ -1,0 +1,51 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:00:15.100Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 330,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 10,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:15.100Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923969,
+                "datastore-contents": {
+                    "ietf-hardware:hardware": {
+                        "component": [
+                            {
+                                "name": "transceiver.0.2.1.0.0",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "temperature": 4800,
+                                        "supply-voltage": 334
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver.0.2.1.1.0",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "temperature": 4500,
+                                        "supply-voltage": 338
+                                    }
+                                }
+                            },
+                            {
+                                "name": "transceiver.0.2.1.2.0",
+                                "huawei-hardware:sub-class": "huawei-hardware-types:ont-ani-xcvr",
+                                "bbf-hardware-transceivers:transceiver": {
+                                    "diagnostics": {
+                                        "temperature": 3900,
+                                        "supply-voltage": 334
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

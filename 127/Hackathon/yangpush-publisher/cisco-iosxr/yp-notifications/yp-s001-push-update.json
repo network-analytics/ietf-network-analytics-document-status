@@ -1,0 +1,396 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-26T14:09:30.047Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 6,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 1,
+                "ietf-yp-observation:timestamp": "2026-10-26T14:09:30.047Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "Bundle-Ether1000",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Bundle-Ether2000",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Bundle-Ether4000",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "3"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "GigabitEthernet0/0/0/27",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/0/0",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/0/1",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/1",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/2",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/0",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/1",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/2",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/3/3",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Loopback0",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Loopback1",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "MgmtEth0/RP0/CPU0/0",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Null0",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/12",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "3"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/14",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/13",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/15",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/16",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/17",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/18",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/19",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/20",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/21",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/22",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/23",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/24",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/25",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/26",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/28",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/29",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/30",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/31",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/32",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/33",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/34",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/35",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/36",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/37",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/38",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/39",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/40",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/41",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/42",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "TwentyFiveGigE0/0/0/43",
+                                "state": {
+                                    "counters": {
+                                        "carrier-transitions": "0"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

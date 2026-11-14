@@ -1,0 +1,92 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.023Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 2,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 12,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.023Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "TenGigE0/0/0/0",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/1",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "HundredGigE0/0/0/11",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/12",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/14",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/15",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/16",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/24",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "TenGigE0/0/0/25",
+                                "state": {
+                                    "openconfig-platform-transceiver:physical-channel": [
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

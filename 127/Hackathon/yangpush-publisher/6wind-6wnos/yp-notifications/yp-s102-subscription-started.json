@@ -1,0 +1,29 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:21:28.782435868+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6417,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 102,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware",
+                "encoding": "encode-json",
+                "ietf-distributed-notif:message-publisher-id": [
+                    0
+                ],
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 500,
+                    "sync-on-start": true
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "name": "ietf-hardware",
+                        "revision": "2018-03-13"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "964707179"
+            }
+        }
+    }
+}

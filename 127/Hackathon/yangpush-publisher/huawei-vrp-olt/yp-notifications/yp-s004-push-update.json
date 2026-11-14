@@ -1,0 +1,111 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:01:10.410Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 318,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 4,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:01:10.410Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "v-ani.0.1.0.0",
+                                "statistics": {
+                                    "out-octets": "282768",
+                                    "in-octets": "686079",
+                                    "huawei-interface-statistics-mgt:out-pkts": "2414",
+                                    "huawei-interface-statistics-mgt:in-pkts": "5528",
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                                    "out-discards": 0,
+                                    "in-discards": 3911199084
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.1",
+                                "statistics": {
+                                    "out-octets": "640",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "10",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                                    "out-discards": 0,
+                                    "in-discards": 3911199084
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.2",
+                                "statistics": {
+                                    "out-octets": "23786136",
+                                    "in-octets": "6572811",
+                                    "huawei-interface-statistics-mgt:out-pkts": "93852",
+                                    "huawei-interface-statistics-mgt:in-pkts": "63566",
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 3,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 849,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                                    "out-discards": 0,
+                                    "in-discards": 3911168257
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.3",
+                                "statistics": {
+                                    "out-octets": "1095076",
+                                    "in-octets": "1176529",
+                                    "huawei-interface-statistics-mgt:out-pkts": "12862",
+                                    "huawei-interface-statistics-mgt:in-pkts": "13117",
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                                    "out-discards": 0,
+                                    "in-discards": 3911595923
+                                }
+                            },
+                            {
+                                "name": "v-ani.0.1.0.4",
+                                "statistics": {
+                                    "out-octets": "128",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "2",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-offline-times": 0,
+                                    "out-discards": 0,
+                                    "in-discards": 3911492228
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

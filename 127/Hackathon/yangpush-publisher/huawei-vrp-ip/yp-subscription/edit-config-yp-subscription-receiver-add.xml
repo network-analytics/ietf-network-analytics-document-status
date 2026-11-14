@@ -1,0 +1,827 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <enable-notification-envelope xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</enable-notification-envelope>
+<filters xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSBOARDRESOURCE</filter-id>
+    <datastore-xpath-filter xmlns:debug="urn:huawei:yang:huawei-debug">/debug:debug/debug:board-resouce-states/debug:board-resouce-state</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSPOWER</filter-id>
+    <datastore-xpath-filter xmlns:devm="urn:huawei:yang:huawei-devm" xmlns:driver="urn:huawei:yang:huawei-driver">/devm:devm/devm:chassiss/devm:chassis/driver:power-supply-attribute</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSPHYSICAL</filter-id>
+    <datastore-xpath-filter xmlns:devm="urn:huawei:yang:huawei-devm">/devm:devm/devm:physical-entitys/devm:physical-entity</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSOPTICALCHANNEL</filter-id>
+    <datastore-xpath-filter xmlns:devm="urn:huawei:yang:huawei-devm" xmlns:pic="urn:huawei:yang:huawei-pic">/devm:devm/devm:ports/devm:port/pic:optical-module/pic:channels/pic:channel</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSOPTICALSTATISTICS</filter-id>
+    <datastore-xpath-filter xmlns:devm="urn:huawei:yang:huawei-devm" xmlns:pic="urn:huawei:yang:huawei-pic">/devm:devm/devm:ports/devm:port/pic:optical-module/pic:optical-statistic</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEINTERFACE</filter-id>
+    <datastore-xpath-filter xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSINTERFACE</filter-id>
+    <datastore-xpath-filter xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEHARDWARE</filter-id>
+    <datastore-xpath-filter xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware/hw:component</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEHARDWARE2</filter-id>
+    <datastore-xpath-filter xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware/hw:component/hw:state</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSHARDWARE</filter-id>
+    <datastore-xpath-filter xmlns:hw="urn:ietf:params:xml:ns:yang:ietf-hardware">/hw:hardware/hw:component/hw:sensor-data</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELLDPLOCAL</filter-id>
+    <datastore-xpath-filter xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:local-system-data</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELLDPREMOTE</filter-id>
+    <datastore-xpath-filter xmlns:lldp="urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp">/lldp:lldp/lldp:port/lldp:remote-systems-data</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEALARM</filter-id>
+    <datastore-xpath-filter xmlns:al="urn:ietf:params:xml:ns:yang:ietf-alarms">/al:alarm-notification</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPSYSTEM</filter-id>
+    <datastore-xpath-filter xmlns:dot1ax="urn:ieee:std:802.1AX:yang:ieee802-dot1ax-linkagg">/dot1ax:linkagg/dot1ax:agg-system</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPKEYGROUP</filter-id>
+    <datastore-xpath-filter xmlns:dot1ax="urn:ieee:std:802.1AX:yang:ieee802-dot1ax-linkagg">/dot1ax:linkagg/dot1ax:key-group</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPINTERFACES</filter-id>
+    <datastore-xpath-filter xmlns:dot1ax="urn:ieee:std:802.1AX:yang:ieee802-dot1ax-linkagg" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface/dot1ax:aggport</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPLAG</filter-id>
+    <datastore-xpath-filter xmlns:dot1ax="urn:ieee:std:802.1AX:yang:ieee802-dot1ax-linkagg" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">/if:interfaces/if:interface/dot1ax:lag</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDSH</filter-id>
+    <datastore-xpath-filter xmlns:bfd-ip-sh="urn:ietf:params:xml:ns:yang:ietf-bfd-ip-sh">/bfd-ip-sh:singlehop-notification</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDMH</filter-id>
+    <datastore-xpath-filter xmlns:bfd-ip-mh="urn:ietf:params:xml:ns:yang:ietf-bfd-ip-mh">/bfd-ip-mh:multihop-notification</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDLAG</filter-id>
+    <datastore-xpath-filter xmlns:bfd-lag="urn:ietf:params:xml:ns:yang:ietf-bfd-lag">/bfd-lag:lag-notification</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISADJ</filter-id>
+    <datastore-xpath-filter xmlns:isis="urn:ietf:params:xml:ns:yang:ietf-isis">/isis:adjacency-state-change</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISINT</filter-id>
+    <datastore-xpath-filter xmlns:isis="urn:ietf:params:xml:ns:yang:ietf-isis">/isis:if-state-change</datastore-xpath-filter>
+  </selection-filter>
+  <selection-filter xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISDB</filter-id>
+    <datastore-xpath-filter xmlns:isis="urn:ietf:params:xml:ns:yang:ietf-isis">/isis:database-overload</datastore-xpath-filter>
+  </selection-filter>
+</filters>
+  <subscription>
+    <id>1</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSBOARDRESOURCE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>2</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSPOWER</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>3</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSPHYSICAL</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>4</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSOPTICALCHANNEL</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>5</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSOPTICALSTATISTICS</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>6</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSINTERFACE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>7</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATSHARDWARE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+		<encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <enable-notification-envelope xmlns="urn:ietf:params:xml:ns:yang:ietf-yp-notification">true</enable-notification-envelope>
+  <subscription>
+    <id>11</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEINTERFACE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>12</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEINTERFACE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>13</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEHARDWARE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>14</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEHARDWARE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>15</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEHARDWARE2</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>16</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEHARDWARE2</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>17</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELLDPLOCAL</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>18</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELLDPLOCAL</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>19</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELLDPREMOTE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>20</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELLDPREMOTE</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>21</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEALARM</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>22</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPSYSTEM</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>23</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPSYSTEM</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>24</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPKEYGROUP</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>25</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPKEYGROUP</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>26</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPINTERFACES</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>27</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPINTERFACES</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>28</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPLAG</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>29</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATELACPLAG</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>30</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDSH</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>31</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDSH</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>32</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDMH</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>33</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDMH</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>34</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDLAG</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>35</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEBFDLAG</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>36</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISADJ</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>37</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISADJ</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>38</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISINT</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>39</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISINT</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+  <subscription>
+    <id>40</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISDB</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <on-change xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <dampening-period>500</dampening-period>
+    </on-change>
+  </subscription>
+  <subscription>
+    <id>41</id>
+    <datastore xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push" xmlns:ds="urn:ietf:params:xml:ns:yang:ietf-datastores">ds:operational</datastore>
+    <selection-filter-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">STATEISISDB</selection-filter-ref>
+    <dscp>0</dscp>
+    <transport xmlns:unt="urn:ietf:params:xml:ns:yang:ietf-udp-notif-transport">unt:udp-notif</transport>
+                <encoding>encode-json</encoding>
+    <source-interface>Loopback0</source-interface>
+    <receivers>
+      <receiver>
+        <name>DAISY</name>
+        <receiver-instance-ref xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">DAISY</receiver-instance-ref>
+      </receiver>
+    </receivers>
+    <periodic
+      xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+      <period>6000</period>
+      <anchor-time>2025-01-01T00:00:30Z</anchor-time>
+    </periodic>
+  </subscription>
+</subscriptions>

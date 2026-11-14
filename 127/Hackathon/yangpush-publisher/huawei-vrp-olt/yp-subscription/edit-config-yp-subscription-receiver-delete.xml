@@ -1,0 +1,16 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <name>DAISY2</name>
+    </receiver-instance>
+  </receiver-instances>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>100</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>101</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>102</id>
+  </subscription>	
+</subscriptions>

@@ -1,0 +1,16 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-26T14:07:30.004Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 2,
+                "ietf-yp-observation:timestamp": "2026-10-26T14:07:30.004Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                }
+            }
+        }
+    }
+}

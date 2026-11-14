@@ -1,0 +1,161 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:55:35.60Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 318,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 12,
+                "ietf-yp-observation:timestamp": "2026-10-20T14:55:35.60Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces-state": {
+                        "interface": [
+                            {
+                                "name": "ani.0.1.0.0",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "online-duration": 96263,
+                                        "current-distance": "52"
+                                    },
+                                    "bbf-xpon-ani-state:base-info": {
+                                        "actual-nni-type": "rate50g50g"
+                                    },
+                                    "bbf-xpon-ani-state:version-info": {
+                                        "product-id": 959,
+                                        "standby-software-version": "V5R024C10",
+                                        "software-work-mode": "normal",
+                                        "customized-info": "COMMON",
+                                        "equipment-serial-number": "2198031455LDQ5001830",
+                                        "mac": "1C:3C:D4:A5:8D:E5",
+                                        "pbi-version": "OptiXstar M990 V500R024C10",
+                                        "host-name": "",
+                                        "product-description": "OptiXstar M990 Symmetric 50G GPON/Asymmetric 50G GPON Terminal (Class N1/PRODUCT ID:2198031455LDQ5001830)",
+                                        "support-xml-version": "1.3.0.0"
+                                    },
+                                    "detected-vendor-id": "HWTC",
+                                    "detected-equipment-id": "M990",
+                                    "detected-hardware-version": "3BF6.A",
+                                    "detected-active-software-version": "V5R024C10"
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.1",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "online-duration": 93190,
+                                        "current-distance": "52"
+                                    },
+                                    "bbf-xpon-ani-state:base-info": {
+                                        "actual-nni-type": "rate50g50g"
+                                    },
+                                    "bbf-xpon-ani-state:version-info": {
+                                        "product-id": 959,
+                                        "standby-software-version": "V5R024C10",
+                                        "software-work-mode": "normal",
+                                        "customized-info": "COMMON",
+                                        "equipment-serial-number": "2198031455LDQ4000669",
+                                        "mac": "C0:F9:B0:3E:D9:CD",
+                                        "pbi-version": "OptiXstar M990 V500R024C10",
+                                        "host-name": "",
+                                        "product-description": "OptiXstar M990 Symmetric 50G GPON/Asymmetric 50G GPON Terminal (Class N1/PRODUCT ID:2198031455LDQ4000669)",
+                                        "support-xml-version": "1.3.0.0"
+                                    },
+                                    "detected-vendor-id": "HWTC",
+                                    "detected-equipment-id": "M990",
+                                    "detected-hardware-version": "3BF6.A",
+                                    "detected-active-software-version": "V5R024C10"
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.2",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "online-duration": 96077,
+                                        "current-distance": "292"
+                                    },
+                                    "bbf-xpon-ani-state:base-info": {
+                                        "actual-nni-type": "rate10g10g"
+                                    },
+                                    "bbf-xpon-ani-state:version-info": {
+                                        "product-id": 2147483647,
+                                        "standby-software-version": "",
+                                        "software-work-mode": "normal",
+                                        "customized-info": "",
+                                        "equipment-serial-number": "",
+                                        "mac": "",
+                                        "pbi-version": "",
+                                        "host-name": "",
+                                        "product-description": "",
+                                        "support-xml-version": ""
+                                    },
+                                    "detected-vendor-id": "",
+                                    "detected-equipment-id": "IB300LTF7225-BH+",
+                                    "detected-hardware-version": "34PA01",
+                                    "detected-active-software-version": "050207P2141030"
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.3",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "online-duration": 96077,
+                                        "current-distance": "293"
+                                    },
+                                    "bbf-xpon-ani-state:base-info": {
+                                        "actual-nni-type": "rate10g10g"
+                                    },
+                                    "bbf-xpon-ani-state:version-info": {
+                                        "product-id": 2147483647,
+                                        "standby-software-version": "",
+                                        "software-work-mode": "normal",
+                                        "customized-info": "",
+                                        "equipment-serial-number": "",
+                                        "mac": "",
+                                        "pbi-version": "",
+                                        "host-name": "",
+                                        "product-description": "",
+                                        "support-xml-version": ""
+                                    },
+                                    "detected-vendor-id": "",
+                                    "detected-equipment-id": "IB400ARCL",
+                                    "detected-hardware-version": "30FA02",
+                                    "detected-active-software-version": "050207P2142030"
+                                }
+                            },
+                            {
+                                "name": "ani.0.1.0.4",
+                                "bbf-xponani:ani": {
+                                    "bbf-xpon-ani-state:running-info": {
+                                        "online-duration": 96234,
+                                        "current-distance": "80"
+                                    },
+                                    "bbf-xpon-ani-state:base-info": {
+                                        "actual-nni-type": "rate10g10g"
+                                    },
+                                    "bbf-xpon-ani-state:version-info": {
+                                        "product-id": 284,
+                                        "standby-software-version": "V3R019C00S919T",
+                                        "software-work-mode": "normal",
+                                        "customized-info": "COMMON",
+                                        "equipment-serial-number": "",
+                                        "mac": "",
+                                        "pbi-version": "",
+                                        "host-name": "",
+                                        "product-description": "EchoLife HN8255Ws XGS-PON Terminal (XGSN2/PRODUCT ID:2102311UVM6RHC000037/CHIP:00090020061016)",
+                                        "support-xml-version": "1.3.0.0"
+                                    },
+                                    "detected-vendor-id": "HWTC",
+                                    "detected-equipment-id": "HN8255Ws",
+                                    "detected-hardware-version": "11CB.A",
+                                    "detected-active-software-version": "V3R019C00S919T"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

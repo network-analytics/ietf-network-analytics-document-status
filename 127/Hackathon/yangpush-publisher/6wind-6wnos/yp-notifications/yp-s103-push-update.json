@@ -1,0 +1,17 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-22T10:30:30.643321816+00:00",
+        "hostname": "daisy-ietf-ipf-zbl1843-r-daisy-58",
+        "sequence-number": 6486,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 103,
+                "datastore-contents": {
+                },
+                "ietf-distributed-notif:message-publisher-id": 0,
+                "ietf-yp-observation:timestamp": "2026-10-22T10:30:30.643415782+00:00",
+                "ietf-yp-observation:point-in-time": "current-accounting"
+            }
+        }
+    }
+}

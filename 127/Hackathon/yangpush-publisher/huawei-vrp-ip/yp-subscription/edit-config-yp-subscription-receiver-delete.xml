@@ -1,0 +1,192 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <name>DAISY2</name>
+    </receiver-instance>
+  </receiver-instances>
+<filters xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSBOARDRESOURCE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSPOWER</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSPHYSICAL</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSOPTICALCHANNEL</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSOPTICALSTATISTICS</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEINTERFACE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSINTERFACE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEHARDWARE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEHARDWARE2</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATSHARDWARE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELLDPLOCAL</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELLDPREMOTE</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEALARM</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPSYSTEM</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPKEYGROUP</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPINTERFACES</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATELACPLAG</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDSH</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDMH</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEBFDLAG</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISADJ</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISINT</filter-id>
+  </selection-filter>
+  <selection-filter nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-push">
+    <filter-id>STATEISISDB</filter-id>
+  </selection-filter>
+</filters>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>1</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>2</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>3</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>4</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>5</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>6</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>7</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>11</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>12</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>13</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>14</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>15</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>16</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>17</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>18</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>19</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>20</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>21</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>22</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>23</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>24</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>25</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>26</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>27</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>28</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>29</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>30</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>31</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>32</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>33</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>34</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>35</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>36</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>37</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>38</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>39</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>40</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>41</id>
+  </subscription>
+</subscriptions>

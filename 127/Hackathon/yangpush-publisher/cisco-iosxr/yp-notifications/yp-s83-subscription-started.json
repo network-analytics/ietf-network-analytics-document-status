@@ -1,0 +1,27 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-04-24T11:38:49.111Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 83,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "Cisco-IOS-XR-qos-ma-oper",
+                        "revision": "2025-08-26"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "e55065688274ce7929be18bd0cafec9ff96a0b91",
+                "encoding": "encode-json",
+                "ietf-yang-push:periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30+00:00"
+                }
+            }
+        }
+    }
+}

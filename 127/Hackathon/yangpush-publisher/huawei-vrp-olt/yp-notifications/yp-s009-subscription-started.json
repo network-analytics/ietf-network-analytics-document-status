@@ -1,0 +1,44 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:43.300Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 9,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-hardware:hardware/component[huawei-hardware:sub-class='huawei-hardware-types:pon-xcvr-link']/bbf-hardware-transceivers:transceiver-link",
+                "dscp": 0,
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-yang-push:periodic": {
+                    "period": 30000,
+                    "anchor-time": "2025-01-01T00:00:30Z"
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "huawei-hardware",
+                        "revision": "2025-11-13"
+                    },
+                    {
+                        "module-name": "ietf-hardware",
+                        "revision": "2018-03-13"
+                    },
+                    {
+                        "module-name": "huawei-hardware-types",
+                        "revision": "2025-09-18"
+                    },
+                    {
+                        "module-name": "bbf-hardware-transceivers-xpon",
+                        "revision": "2024-04-23"
+                    },
+                    {
+                        "module-name": "bbf-hardware-transceivers",
+                        "revision": "2025-01-27"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22934"
+            }
+        }
+    }
+}

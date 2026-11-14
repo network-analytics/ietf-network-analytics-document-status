@@ -1,0 +1,67 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T07:02:30.000Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 81,
+                "ietf-yp-observation:timestamp": "2026-05-08T07:02:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "Cisco-IOS-XR-nto-misc-oper:memory-summary": {
+                        "nodes": {
+                            "node": [
+                                {
+                                    "node-name": "0/RP0/CPU0",
+                                    "summary": {
+                                        "page-size": 4096,
+                                        "ram-memory": "28111491072",
+                                        "free-physical-memory": "22942105600",
+                                        "system-ram-memory": "28111491072",
+                                        "free-application-memory": "22942105600",
+                                        "image-memory": "4194304",
+                                        "boot-ram-size": "0",
+                                        "reserved-memory": "0",
+                                        "io-memory": "0",
+                                        "flash-system": "0"
+                                    }
+                                },
+                                {
+                                    "node-name": "0/RP1/CPU0",
+                                    "summary": {
+                                        "page-size": 4096,
+                                        "ram-memory": "28111491072",
+                                        "free-physical-memory": "21570940928",
+                                        "system-ram-memory": "28111491072",
+                                        "free-application-memory": "21570940928",
+                                        "image-memory": "4194304",
+                                        "boot-ram-size": "0",
+                                        "reserved-memory": "0",
+                                        "io-memory": "0",
+                                        "flash-system": "0"
+                                    }
+                                },
+                                {
+                                    "node-name": "0/0/CPU0",
+                                    "summary": {
+                                        "page-size": 4096,
+                                        "ram-memory": "15052054528",
+                                        "free-physical-memory": "8304304128",
+                                        "system-ram-memory": "15052054528",
+                                        "free-application-memory": "8304304128",
+                                        "image-memory": "4194304",
+                                        "boot-ram-size": "0",
+                                        "reserved-memory": "0",
+                                        "io-memory": "0",
+                                        "flash-system": "0"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

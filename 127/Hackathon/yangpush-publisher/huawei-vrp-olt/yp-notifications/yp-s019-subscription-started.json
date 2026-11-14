@@ -1,0 +1,32 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T14:52:52.330Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 19,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "/ietf-interfaces:interfaces/interface[type='iana-if-type:ethernetCsmacd']",
+                "dscp": 0,
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "encoding": "encode-json",
+                "ietf-yang-push:on-change": {
+                    "dampening-period": 500,
+                    "sync-on-start": true
+                },
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "ietf-interfaces",
+                        "revision": "2018-02-20"
+                    },
+                    {
+                        "module-name": "iana-if-type",
+                        "revision": "2017-01-19"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "22934"
+            }
+        }
+    }
+}

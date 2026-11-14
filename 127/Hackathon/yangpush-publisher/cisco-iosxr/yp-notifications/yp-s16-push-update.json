@@ -1,0 +1,213 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.002Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 16,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.002Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-lldp:lldp": {
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "name": "HundredGigE0/0/0/11",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1326-r-daisy-79#HundredGigE0/0/0/1",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1326-r-daisy-79",
+                                                    "system-description": "25.1.1, 8000",
+                                                    "chassis-id": "748f.c255.6901",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1326-r-daisy-79#HundredGigE0/0/0/1",
+                                                    "age": "2559122",
+                                                    "last-update": "13",
+                                                    "ttl": 120,
+                                                    "port-id": "HundredGigE0/0/0/1",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:Hu0/0/0/11",
+                                                    "management-address": "2001:db8:11::1",
+                                                    "management-address-type": "ipv6"
+                                                }
+                                            },
+                                            {
+                                                "id": "ipf-zbl1326-r-daisy-79#Bundle-Ether7991",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1326-r-daisy-79",
+                                                    "system-description": "25.1.1, 8000",
+                                                    "chassis-id": "748f.c255.6901",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1326-r-daisy-79#Bundle-Ether7991",
+                                                    "age": "2559120",
+                                                    "last-update": "19",
+                                                    "ttl": 120,
+                                                    "port-id": "Bundle-Ether7991",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:BE7991",
+                                                    "management-address": "2001:db8:198:1002::1",
+                                                    "management-address-type": "ipv6"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/12",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1327-r-daisy-57#GigabitEthernet0/7/4",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1327-r-daisy-57",
+                                                    "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NetEngine 8000 V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 M8\r\n",
+                                                    "chassis-id": "3ca3.7e2c.7e96",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1327-r-daisy-57#GigabitEthernet0/7/4",
+                                                    "age": "944349",
+                                                    "last-update": "29",
+                                                    "ttl": 120,
+                                                    "port-id": "GigabitEthernet0/7/4",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:Te0/0/0/12",
+                                                    "management-address": "2001:db8:57::1",
+                                                    "management-address-type": "ipv6"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/14",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1243-r-daisy-22#GigabitEthernet0/3/12",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1243-r-daisy-22",
+                                                    "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                                    "chassis-id": "30fb.b8e6.67d9",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1243-r-daisy-22#GigabitEthernet0/3/12",
+                                                    "age": "2559189",
+                                                    "last-update": "23",
+                                                    "ttl": 120,
+                                                    "port-id": "GigabitEthernet0/3/12",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:TenGigE0/0/0/14",
+                                                    "management-address": "203.0.113.22",
+                                                    "management-address-type": "ipv4"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/15",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1243-r-daisy-21#GigabitEthernet0/3/12",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1243-r-daisy-21",
+                                                    "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                                    "chassis-id": "2065.8eba.2cd1",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1243-r-daisy-21#GigabitEthernet0/3/12",
+                                                    "age": "2559188",
+                                                    "last-update": "24",
+                                                    "ttl": 120,
+                                                    "port-id": "GigabitEthernet0/3/12",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "management-address": "203.0.113.21",
+                                                    "management-address-type": "ipv4"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/16",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1327-r-daisy-81#GigabitEthernet0/3/6",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1327-r-daisy-81",
+                                                    "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                                    "chassis-id": "30fb.b8e6.679d",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1327-r-daisy-81#GigabitEthernet0/3/6",
+                                                    "age": "944515",
+                                                    "last-update": "2",
+                                                    "ttl": 120,
+                                                    "port-id": "GigabitEthernet0/3/6",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "management-address": "2001:db8::11",
+                                                    "management-address-type": "ipv6"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/24",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipf-zbl1327-r-daisy-57#GigabitEthernet0/8/4",
+                                                "state": {
+                                                    "system-name": "ipf-zbl1327-r-daisy-57",
+                                                    "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NetEngine 8000 V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 M8\r\n",
+                                                    "chassis-id": "3ca3.7e2c.7e96",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipf-zbl1327-r-daisy-57#GigabitEthernet0/8/4",
+                                                    "age": "944349",
+                                                    "last-update": "28",
+                                                    "ttl": 120,
+                                                    "port-id": "GigabitEthernet0/8/4",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:Te0/0/0/24",
+                                                    "management-address": "2001:db8:57::1",
+                                                    "management-address-type": "ipv6"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "TenGigE0/0/0/25",
+                                    "neighbors": {
+                                        "neighbor": [
+                                            {
+                                                "id": "ipz-zbl1315-s-daisy-47.bblab.ch#Ethernet1/4",
+                                                "state": {
+                                                    "system-name": "ipz-zbl1315-s-daisy-47.bblab.ch",
+                                                    "system-description": "Cisco Nexus Operating System (NX-OS) Software 9.3(2)\nTAC support: http://www.cisco.com/tac\nCopyright (c) 2002-2019, Cisco Systems, Inc. All rights reserved.",
+                                                    "chassis-id": "a0b4.39da.822b",
+                                                    "chassis-id-type": "MAC_ADDRESS",
+                                                    "id": "ipz-zbl1315-s-daisy-47.bblab.ch#Ethernet1/4",
+                                                    "age": "2559193",
+                                                    "last-update": "11",
+                                                    "ttl": 120,
+                                                    "port-id": "Ethernet1/4",
+                                                    "port-id-type": "INTERFACE_NAME",
+                                                    "port-description": "ipf-zbl1327-r-daisy-91:Te0/0/0/25",
+                                                    "management-address": "10.215.131.47",
+                                                    "management-address-type": "ipv4"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

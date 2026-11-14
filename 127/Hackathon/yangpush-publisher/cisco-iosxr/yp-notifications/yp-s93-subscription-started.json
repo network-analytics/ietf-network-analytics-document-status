@@ -1,0 +1,27 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-26T14:06:43.770Z",
+        "hostname": "ipt-age923-b-aac-01",
+        "sequence-number": 0,
+        "contents": {
+            "ietf-subscribed-notifications:subscription-started": {
+                "id": 93,
+                "ietf-yang-push:datastore": "ietf-datastores:operational",
+                "ietf-yang-push:datastore-xpath-filter": "Cisco-IOS-XR-ptp-oper:ptp/interfaces/interface",
+                "transport": "ietf-udp-notif-transport:udp-notif",
+                "ietf-yang-push-revision:module-version": [
+                    {
+                        "module-name": "Cisco-IOS-XR-ptp-oper",
+                        "revision": "2024-11-19"
+                    }
+                ],
+                "ietf-yang-push-revision:yang-library-content-id": "62119e3c6576f04d616c2fa8e7c4bb89abc1f5a3",
+                "encoding": "encode-json",
+                "ietf-yang-push:periodic": {
+                    "period": 6000,
+                    "anchor-time": "2025-01-01T00:00:30+00:00"
+                }
+            }
+        }
+    }
+}

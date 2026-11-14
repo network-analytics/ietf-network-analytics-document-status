@@ -1,0 +1,84 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:48:58.256Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 17,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 17,
+                "ietf-yp-observation:timestamp": "2026-09-10T11:48:58.157Z",
+                "ietf-yp-observation:point-in-time": "initial-state",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-contents": {
+                    "ieee802-dot1ab-lldp:lldp": {
+                        "port": [
+                            {
+                                "name": "100GE0/1/0",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 148702263,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "748f-c255-6901",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "HundredGigE0/0/0/2",
+                                        "port-desc": "",
+                                        "system-name": "ipf-zbl1326-r-daisy-79",
+                                        "system-description": "25.1.1, 8000",
+                                        "system-capabilities-supported": "router",
+                                        "system-capabilities-enabled": "router"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "100GE0/1/2",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 20752,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "30fb-b8e6-679d",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "100GE0/3/0",
+                                        "port-desc": "",
+                                        "system-name": "ipf-zbl1327-r-daisy-81",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NE40E V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NE40E-M2K-B\r\n",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-capabilities-enabled": "bridge router"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "GigabitEthernet0/1/4:0",
+                                "dest-mac-address": "01-80-C2-00-00-0E",
+                                "remote-systems-data": [
+                                    {
+                                        "time-mark": 28382,
+                                        "remote-index": 1,
+                                        "remote-too-many-neighbors": false,
+                                        "remote-changes": false,
+                                        "chassis-id-subtype": "mac-address",
+                                        "chassis-id": "3ca3-7e2c-7e96",
+                                        "port-id-subtype": "interface-name",
+                                        "port-id": "GigabitEthernet0/8/0",
+                                        "port-desc": "ipf-zbl1327-r-daisy-48:GigabitEthernet0/1/4:0",
+                                        "system-name": "ipf-zbl1327-r-daisy-57",
+                                        "system-description": "Huawei Versatile Routing Platform Software\r\nVRP (R) software, Version 8.251 (NetEngine 8000 V800R025C10SPC500T)\r\nCopyright (C) 2012-2026 Huawei Technologies Co., Ltd.\r\nHUAWEI NetEngine 8000 M8\r\n",
+                                        "system-capabilities-supported": "bridge router",
+                                        "system-capabilities-enabled": "bridge router"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

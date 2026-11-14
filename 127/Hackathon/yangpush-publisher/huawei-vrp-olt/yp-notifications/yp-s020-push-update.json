@@ -1,0 +1,1051 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T16:00:31.300Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 20,
+                "ietf-yp-observation:timestamp": "2026-10-20T16:00:31.290Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 3021116857,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "ethernetCsmacd.0.9.0",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234954752,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.1",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234954816,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.2",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234954880,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.3",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234954944,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.4",
+                                "oper-status": "up",
+                                "description": "LAG_Port_A1",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "up",
+                                "last-change": "2026-10-19T13:02:02.68Z",
+                                "if-index": 234955008,
+                                "speed": "100000000000",
+                                "higher-layer-if": [
+                                    "ieee8023adLag.0.9.4"
+                                ],
+                                "lower-layer-if": [
+                                    "ethernetCsmacd.0.9.4",
+                                    "ethernetCsmacd.0.10.4"
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.9.5",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234955072,
+                                "speed": "100000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.0",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234962944,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.1",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234963008,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.2",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234963072,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.3",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234963136,
+                                "speed": "10000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.4",
+                                "oper-status": "up",
+                                "description": "LAG_Port_B1",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": true,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "up",
+                                "last-change": "2026-10-19T13:04:39.928Z",
+                                "if-index": 234963200,
+                                "speed": "100000000000",
+                                "higher-layer-if": [
+                                    "ieee8023adLag.0.9.4"
+                                ],
+                                "lower-layer-if": [
+                                    "ethernetCsmacd.0.9.4",
+                                    "ethernetCsmacd.0.10.4"
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.10.5",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T12:53:00.134Z",
+                                "if-index": 234963264,
+                                "speed": "100000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.0",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028480,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.1",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028544,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.2",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028608,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.3",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028672,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.4",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028736,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.5",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028800,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.6",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028864,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.7",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028928,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.8",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235028992,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.9",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235029056,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.10",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235029120,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.11",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235029184,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.12",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.208Z",
+                                "if-index": 235029248,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.13",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029312,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.14",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029376,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.15",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029440,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.16",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029504,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.17",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029568,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.18",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029632,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.19",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029696,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.20",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029760,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.21",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029824,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.22",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029888,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.23",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235029952,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.24",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235030016,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.25",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235030080,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.26",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.218Z",
+                                "if-index": 235030144,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.27",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030208,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.28",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030272,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.29",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030336,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.30",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030400,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.31",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030464,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.32",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030528,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.33",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030592,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.34",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030656,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.35",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030720,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.36",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030784,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.37",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030848,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.38",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030912,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.39",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.228Z",
+                                "if-index": 235030976,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.40",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031040,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.41",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031104,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.42",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031168,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.43",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031232,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.44",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031296,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.45",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031360,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.46",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031424,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.18.47",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:25.238Z",
+                                "if-index": 235031488,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.19.0",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:00.958Z",
+                                "if-index": 235036672,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.19.1",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:00.958Z",
+                                "if-index": 235036736,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.19.2",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:00.958Z",
+                                "if-index": 235036800,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            },
+                            {
+                                "name": "ethernetCsmacd.0.19.3",
+                                "oper-status": "down",
+                                "description": "",
+                                "type": "iana-if-type:ethernetCsmacd",
+                                "enabled": false,
+                                "link-up-down-trap-enable": "disabled",
+                                "admin-status": "down",
+                                "last-change": "2026-10-19T13:04:00.958Z",
+                                "if-index": 235036864,
+                                "speed": "1000000000",
+                                "higher-layer-if": [
+                                ],
+                                "lower-layer-if": [
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

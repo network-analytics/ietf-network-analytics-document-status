@@ -1,0 +1,47 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:50:50.164Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 53,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 11,
+                "ietf-yp-observation:timestamp": "2026-09-10T11:50:50.172Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "2",
+                        "edit": [
+                            {
+                                "edit-id": "edit1",
+                                "operation": "merge",
+                                "target": "/ietf-interfaces:interfaces/interface[name=100GE0/1/2]",
+                                "value": {
+                                    "interface": [
+                                        {
+                                            "name": "100GE0/1/2",
+                                            "description": "ipf-zbl1327-r-daisy-81:100GE0/3/0",
+                                            "type": "iana-if-type:ethernetCsmacd",
+                                            "enabled": true,
+                                            "link-up-down-trap-enable": "enabled",
+                                            "admin-status": "up",
+                                            "oper-status": "down",
+                                            "last-change": "2026-09-10T11:50:41Z",
+                                            "if-index": 9,
+                                            "phys-address": "24:46:E4:A8:4D:0D",
+                                            "higher-layer-if": [
+                                                "100GE0/1/2.23"
+                                            ],
+                                            "speed": "100000000"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

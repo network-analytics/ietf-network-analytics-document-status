@@ -1,0 +1,76 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-05-08T06:00:30.000Z",
+        "hostname": "ipf-zbl1327-r-daisy-91",
+        "sequence-number": 1,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 5,
+                "ietf-yp-observation:timestamp": "2026-05-08T06:00:30.000Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "datastore-contents": {
+                    "openconfig-platform:components": {
+                        "component": [
+                            {
+                                "name": "0/FT0-Fan Speed Sensor 0",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 6990
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/FT1-Fan Speed Sensor 0",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7020
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/FT2-Fan Speed Sensor 0",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 7020
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Fan 0 Speed",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 11008
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM0-Fan 1 Speed",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 9984
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Fan 0 Speed",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 10112
+                                    }
+                                }
+                            },
+                            {
+                                "name": "0/PT0-PM1-Fan 1 Speed",
+                                "fan": {
+                                    "state": {
+                                        "openconfig-platform-fan:speed": 10016
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

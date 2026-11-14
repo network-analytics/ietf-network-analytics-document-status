@@ -1,0 +1,405 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-10-20T15:00:40.360Z",
+        "hostname": "ipd-zbl1536-s-ah-79",
+        "sequence-number": 318,
+        "contents": {
+            "ietf-yang-push:push-update": {
+                "id": 3,
+                "ietf-yp-observation:timestamp": "2026-10-20T15:00:40.350Z",
+                "ietf-yp-observation:point-in-time": "current-accounting",
+                "ietf-distributed-notif:message-publisher-id": 4227923968,
+                "datastore-contents": {
+                    "ietf-interfaces:interfaces": {
+                        "interface": [
+                            {
+                                "name": "channel-pair.0.1.0.xgs",
+                                "statistics": {
+                                    "out-octets": "24877280",
+                                    "in-octets": "7745721",
+                                    "huawei-interface-statistics-mgt:out-pkts": "106675",
+                                    "huawei-interface-statistics-mgt:in-pkts": "76651",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 3,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 856,
+                                        "in-peak-rate": 67,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 3,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.0.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "283856",
+                                    "in-octets": "686015",
+                                    "huawei-interface-statistics-mgt:out-pkts": "2431",
+                                    "huawei-interface-statistics-mgt:in-pkts": "5529",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "1",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "1",
+                                    "in-errors": 2,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 5,
+                                        "in-peak-rate": 10,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 2,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.1.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.1.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.2.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.2.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.3.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.3.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.4.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.4.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.5.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.5.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.6.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.6.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.7.xgs",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            },
+                            {
+                                "name": "channel-pair.0.1.7.fiftyg-tdm",
+                                "statistics": {
+                                    "out-octets": "0",
+                                    "in-octets": "0",
+                                    "huawei-interface-statistics-mgt:out-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-pkts": "0",
+                                    "in-discards": 0,
+                                    "out-discards": 0,
+                                    "huawei-interface-statistics-mgt:in-crc-errors": "0",
+                                    "huawei-interface-statistics-mgt:in-oversized-pkts": "0",
+                                    "huawei-interface-statistics-mgt:in-undersized-pkts": "0",
+                                    "in-errors": 0,
+                                    "huawei-interface-statistics-mgt:traffic": {
+                                        "out-rate": 0,
+                                        "in-rate": 0,
+                                        "out-peak-rate": 0,
+                                        "in-peak-rate": 0,
+                                        "out-multicast-rate": 0
+                                    },
+                                    "huawei-interface-statistics-mgt:ont-online-counter": 0,
+                                    "huawei-interface-statistics-mgt:ont-offline-counter": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

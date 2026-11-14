@@ -1,0 +1,27 @@
+{
+    "ietf-yp-notification:envelope": {
+        "event-time": "2026-09-10T11:50:42.265Z",
+        "hostname": "ipf-zbl1327-r-daisy-48",
+        "sequence-number": 48,
+        "contents": {
+            "ietf-yang-push:push-change-update": {
+                "id": 17,
+                "ietf-yp-observation:timestamp": "2026-09-10T11:50:42.276Z",
+                "ietf-yp-observation:point-in-time": "state-changed",
+                "ietf-distributed-notif:message-publisher-id": 16843789,
+                "datastore-changes": {
+                    "yang-patch": {
+                        "patch-id": "1",
+                        "edit": [
+                            {
+                                "edit-id": "edit1",
+                                "operation": "delete",
+                                "target": "/ieee802-dot1ab-lldp:lldp/port[name=100GE0/1/2,dest-mac-address=01-80-C2-00-00-0E]/remote-systems-data[time-mark=20752,remote-index=1]"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

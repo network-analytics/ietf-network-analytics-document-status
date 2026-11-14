@@ -1,0 +1,112 @@
+<subscriptions xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications">
+  <receiver-instances xmlns="urn:ietf:params:xml:ns:yang:ietf-subscribed-notif-receivers">
+    <receiver-instance nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <name>DAISY2</name>
+    </receiver-instance>
+  </receiver-instances>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>11</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>12</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>13</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>14</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>15</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>16</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>17</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>18</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>19</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>20</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>21</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>22</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>23</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>25</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>27</id>
+  </subscription>
+	  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>1</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>2</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>3</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>4</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>5</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>6</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>81</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>82</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>83</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>84</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>85</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>86</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>87</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>88</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>89</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>90</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>91</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>92</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>93</id>
+  </subscription>
+  <subscription nc:operation="delete" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <id>94</id>
+  </subscription>
+</subscriptions>
