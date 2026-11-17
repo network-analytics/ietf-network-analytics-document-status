@@ -46,7 +46,6 @@ https://datatracker.ietf.org/meeting/126/session/nmop
 
 ### draft-ietf-nmop-network-anomaly-lifecycle
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-nmop-network-anomaly-lifecycle/
-* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments in -06. Adressed IANA review in -07.
-* **Tasks**: https://mailarchive.ietf.org/arch/msg/nmop/CWWGhCADia4YAhSaeDmrbyEnKC0/
+* **State**: Presented -02 at NMOP 122, Updated relevant-state YANG module with global uri, confidence-score, strategy and added anomalies container, Completed Security Considerations with draft-ietf-netmod-rfc8407bis-22#appendix-B, Merged terminology input from Adrian, merged terminology input from Adrian. Addressed some of the comments from Reshad and Paul in -04. Refined Confidence and Concern Score definitions and some minor YANG model fixes in -05. Adressing Reshad's comments in -06. Adressed IANA review in -07. Addressed yangdoctors review in -08.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/nmop/?q=draft-ietf-nmop-network-anomaly-lifecycle
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-07
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-nmop-network-anomaly-lifecycle-08

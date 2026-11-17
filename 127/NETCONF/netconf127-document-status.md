@@ -8,9 +8,9 @@ https://datatracker.ietf.org/meeting/126/session/netconf
 
 ### draft-ietf-netconf-udp-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-udp-notif/
-* **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23. Transport directorate review in -24. Gory and Qin's Transport directorate input adressed in -25. Adressed further feedback from Gorry in -26 and Med's AD review in -27 (review pending).
+* **State**: Shepherd and YANG doctor review input merged in -21. Opsdir review addressed in -22. Shepherd review addressed in -23. Transport directorate review in -24. Gory and Qin's Transport directorate input adressed in -25. Adressed further feedback from Gorry in -26 and Med's AD review in -27. Addressing Mahesh AD review.
 * **Mailinglist**: https://mailarchive.ietf.org/arch/browse/netconf/?q=draft-ietf-netconf-udp-notif
-* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-26&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-27.txt
+* **Diff**: https://author-tools.ietf.org/diff?doc_1=draft-ietf-netconf-udp-notif-27&url_2=https://raw.githubusercontent.com/network-analytics/draft-ietf-netconf-udp-notif/refs/heads/main/draft-ietf-netconf-udp-notif-28.txt
 
 ### draft-ietf-netconf-distributed-notif
 * **URL**: https://datatracker.ietf.org/doc/draft-ietf-netconf-distributed-notif/
